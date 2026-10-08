@@ -4168,7 +4168,7 @@
     "policySha256": "sha256:7199629fe908f7d078543aa82c4d23f3ca4a6c28afd02f6950c81a445f8a6dbc"
   },
   "status": "in_progress",
-  "currentPhase": "verification",
+  "currentPhase": "release",
   "phaseOrder": [
     "specification",
     "planning",
@@ -7478,7 +7478,7 @@
       "label": "Verification",
       "order": 4,
       "defaultAgent": "qa",
-      "status": "awaiting_approval",
+      "status": "approved",
       "requiredArtifact": {
         "path": "artifacts/verification/test-evidence.md",
         "kind": "test-evidence",
@@ -7584,8 +7584,8 @@
       "qualityCommands": [],
       "startedAt": "2026-10-08T16:50:38.871Z",
       "submittedAt": "2026-10-08T23:46:29.449Z",
-      "approvedAt": null,
-      "approvedBy": null,
+      "approvedAt": "2026-10-08T23:48:38.652Z",
+      "approvedBy": "ashokraj2011",
       "rejectedAt": null,
       "rejectedBy": null,
       "rejectionReason": null,
@@ -7668,7 +7668,104 @@
           "captureGap": "no-metered-session"
         }
       ],
-      "approvals": [],
+      "approvals": [
+        {
+          "decision": "approved",
+          "phase": "verification",
+          "at": "2026-10-08T23:48:38.652Z",
+          "actor": {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com",
+            "login": "ashokraj2011",
+            "githubLookup": "resolved"
+          },
+          "agent": "qa",
+          "authorityGroup": "quality-reviewers",
+          "identityAssurance": "configured-local",
+          "channel": "copilot-selection-receipt",
+          "generation": 1,
+          "artifactSha256": [
+            {
+              "path": "singularity/work-items/c-hex/artifacts/verification/test-evidence.md",
+              "sha256": "6785fb9aaac0a49fe27fc88a42c64e60a71b8801af337261f4d7ed587f46bcc0"
+            }
+          ],
+          "reviewPacketSha256": "16dd03a3dd082b436fcad472c5e850567325dde153683445fb5f359d187dc9c5",
+          "evidenceCommit": "eac51b6266d8d734d06a9629607247cd4971abd6",
+          "artifactSetSha256": "983261aab261e1300943fff8510864860d6f98e1a1179ae8369509b857c61532",
+          "architectureIntent": null,
+          "architectureDecision": null,
+          "actionContext": {
+            "phase": "verification",
+            "label": "Verification",
+            "generation": 1,
+            "submittedAt": "2026-10-08T23:46:29.449Z",
+            "artifacts": [
+              {
+                "path": "singularity/work-items/c-hex/artifacts/verification/test-evidence.md",
+                "sha256": "6785fb9aaac0a49fe27fc88a42c64e60a71b8801af337261f4d7ed587f46bcc0"
+              }
+            ],
+            "agentBriefs": [
+              {
+                "consumerPhase": "release",
+                "status": "ready",
+                "path": "singularity/work-items/c-hex/context/briefs/verification-gen1-for-release.json",
+                "renderedPath": "singularity/work-items/c-hex/context/briefs/verification-gen1-for-release.md",
+                "renderedSha256": "bed0349ea5cd038975a68b43ce842d5b6631728a84f7ba696eb810907dc331dc",
+                "integritySha256": "5808f733df21e46d931529cd2ba4608646daf1a7bad86b4eb9cba1866f21e893",
+                "documentId": "agent-brief-verification-gen1-release",
+                "documentPath": "singularity/work-items/c-hex/context/briefs/verification-gen1-for-release.md",
+                "documentSha256": "bed0349ea5cd038975a68b43ce842d5b6631728a84f7ba696eb810907dc331dc"
+              }
+            ],
+            "reviewPacketSha256": "16dd03a3dd082b436fcad472c5e850567325dde153683445fb5f359d187dc9c5",
+            "submittedSourceCommit": "df402e9479be7276317d84ea1c143051cd70e25a",
+            "planId": "b6df176a64d8b0f87f4b5045"
+          },
+          "upstream": {
+            "sha256": "sha256:d3523e30e9d3d08158e8ee81bac527fd2b08df6f741adfd45f92eb82e754217e",
+            "refs": [
+              {
+                "kind": "input",
+                "ref": "implementation",
+                "sha256": "sha256:43e0c8102ea4fa9e24265441da760bb45bda627bfde705a56baa59a130b4f895"
+              },
+              {
+                "kind": "input",
+                "ref": "planning",
+                "sha256": "sha256:39b613ecd7a6651b879418fb463695e1faa5feedcac6470e98400c83328ffff2"
+              },
+              {
+                "kind": "input",
+                "ref": "specification",
+                "sha256": "sha256:50c916d7b5f863fa53abda44ea77957dca655171683a58c797cd62b254c4d673"
+              },
+              {
+                "kind": "candidate",
+                "ref": "HEAD",
+                "sha256": "sha256:68618450e69ae2c21bcf31dc0770fb6112916e0d248b38b689cc630c384d44da"
+              },
+              {
+                "kind": "specification",
+                "ref": "records",
+                "sha256": "sha256:eaae45da750de5792940606202272b39358bc35907c04907db97fdad2de372c3"
+              },
+              {
+                "kind": "documents",
+                "ref": "verification",
+                "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+              },
+              {
+                "kind": "decisions",
+                "ref": "story",
+                "sha256": "sha256:cc50da61b8c97e44052165c139779d623edc8c8ca60966ea820ab38f1efb1c89"
+              }
+            ]
+          },
+          "selfApproval": true
+        }
+      ],
       "generationPublications": [
         {
           "generation": 1,
@@ -7691,12 +7788,14 @@
         {
           "path": "singularity/work-items/c-hex/artifacts/verification/test-evidence.md",
           "kind": "document",
-          "status": "pending",
+          "status": "approved",
           "exists": true,
-          "size": 24406,
-          "sha256": "6785fb9aaac0a49fe27fc88a42c64e60a71b8801af337261f4d7ed587f46bcc0",
+          "size": 28360,
+          "sha256": "d2bdc1a84451f3509ecc825096aa9973bdd7aae0787876a1c36fffdae16e060e",
           "registeredAt": "2026-10-08T22:03:34.601Z",
-          "updatedAt": "2026-10-08T23:46:29.451Z"
+          "updatedAt": "2026-10-08T23:48:38.655Z",
+          "approvedAt": "2026-10-08T23:48:38.652Z",
+          "approvedBy": "ashokraj2011"
         }
       ],
       "checks": [],
@@ -7771,7 +7870,7 @@
       "label": "Release",
       "order": 5,
       "defaultAgent": "qa",
-      "status": "not_started",
+      "status": "in_progress",
       "requiredArtifact": {
         "path": "artifacts/release/conformance.md",
         "kind": "conformance-report",
@@ -7848,7 +7947,7 @@
         }
       },
       "qualityCommands": [],
-      "startedAt": null,
+      "startedAt": "2026-10-08T23:48:38.652Z",
       "submittedAt": null,
       "approvedAt": null,
       "approvedBy": null,
@@ -8160,6 +8259,22 @@
       "event": "phase_submitted",
       "phase": "verification",
       "detail": "1 artifacts"
+    },
+    {
+      "at": "2026-10-08T23:48:38.652Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "work_interval_closed",
+      "phase": "verification",
+      "detail": "interval INT-verification-G1-002 closed after phase approval"
+    },
+    {
+      "at": "2026-10-08T23:48:38.652Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "phase_self_approved",
+      "phase": "verification",
+      "detail": "threshold reached; advanced to release"
     }
   ],
   "measurement": {
@@ -10247,6 +10362,114 @@
         },
         "createdAt": "2026-10-08T23:46:27.948Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "5be9ec10-98a3-4aec-8ecd-3ca2c4ec2006",
+        "type": "phase-approved",
+        "subject": {
+          "kind": "story",
+          "id": "c-hex",
+          "branch": "c-hex"
+        },
+        "phaseId": "verification",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": "quality-reviewers",
+        "payload": {
+          "decision": "approved",
+          "reviewPacketSha256": "16dd03a3dd082b436fcad472c5e850567325dde153683445fb5f359d187dc9c5",
+          "evidenceCommit": "eac51b6266d8d734d06a9629607247cd4971abd6",
+          "artifactSetSha256": "983261aab261e1300943fff8510864860d6f98e1a1179ae8369509b857c61532",
+          "witnessMappingsSha256": null
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-08T23:48:37.473Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "5be9ec10-98a3-4aec-8ecd-3ca2c4ec2006",
+        "eventType": "phase-approved",
+        "capabilityId": "myc1",
+        "subject": {
+          "branch": "c-hex",
+          "generation": 1,
+          "phase": "verification",
+          "workId": "c-hex",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": "quality-reviewers",
+        "payload": {
+          "capabilityMapSha256": "48d460384819a855dcd7909eb6cae48e7fd6ce01d82748c66cb46d3ea8170731",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "8603b630ebce6c8a7cabcc23f668f657bb84d84d9326d1545f5db42557025e04",
+          "lifecycleEventId": "5be9ec10-98a3-4aec-8ecd-3ca2c4ec2006",
+          "lifecyclePayload": {
+            "decision": "approved",
+            "reviewPacketSha256": "16dd03a3dd082b436fcad472c5e850567325dde153683445fb5f359d187dc9c5",
+            "evidenceCommit": "eac51b6266d8d734d06a9629607247cd4971abd6",
+            "artifactSetSha256": "983261aab261e1300943fff8510864860d6f98e1a1179ae8369509b857c61532",
+            "witnessMappingsSha256": null
+          },
+          "templateSha256": "31e8dc7c915c96c7bce79e3138af0537875f077350a13af5250e50c4c571728b",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "5be9ec10-98a3-4aec-8ecd-3ca2c4ec2006",
+            "type": "phase-approved",
+            "subject": {
+              "kind": "story",
+              "id": "c-hex",
+              "branch": "c-hex"
+            },
+            "phaseId": "verification",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": "quality-reviewers",
+            "payload": {
+              "decision": "approved",
+              "reviewPacketSha256": "16dd03a3dd082b436fcad472c5e850567325dde153683445fb5f359d187dc9c5",
+              "evidenceCommit": "eac51b6266d8d734d06a9629607247cd4971abd6",
+              "artifactSetSha256": "983261aab261e1300943fff8510864860d6f98e1a1179ae8369509b857c61532",
+              "witnessMappingsSha256": null
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-08T23:48:37.473Z"
+          }
+        },
+        "createdAt": "2026-10-08T23:48:37.480Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -10260,13 +10483,14 @@
       "sourceBaseCommit": "55582ba0bc01c5b4db38e8830c869722bed700f7",
       "escalationTarget": null,
       "path": "singularity/work-items/c-hex/context/work-intervals/verification-gen1-baseline.json",
-      "status": "reconciled",
+      "status": "closed",
       "finalReconciliation": {
         "reconciliationSha256": "4e2cdb1596ab5aa6fbd15c543a079ab80d44cebc2e935d3d4ef2d13d29eb551d",
         "path": "singularity/work-items/c-hex/context/work-intervals/reconciliations/4e2cdb1596ab5aa6fbd15c543a079ab80d44cebc2e935d3d4ef2d13d29eb551d.json",
         "targetHead": "df402e9479be7276317d84ea1c143051cd70e25a",
         "recordedAt": "2026-10-08T23:46:29.448Z"
-      }
+      },
+      "closedAt": "2026-10-08T23:48:38.652Z"
     },
     "history": [
       {

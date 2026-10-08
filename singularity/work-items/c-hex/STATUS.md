@@ -5,7 +5,7 @@
 - Capability: **calc** (`myc1`)
 - Capability map: `48d460384819a855dcd7909eb6cae48e7fd6ce01d82748c66cb46d3ea8170731`
 - Overall status: **in_progress**
-- Current phase: **verification**
+- Current phase: **release**
 
 | # | Phase | Governed agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
@@ -17,11 +17,14 @@
 |  | ⚠ self-approval | Ashok Raj via engineering-reviewers; agent developer | **warning** |  |  |  |
 | 4 | Convergence (`convergence`) | architect | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
-| 5 | Verification (`verification`) | qa | **awaiting_approval** | 1 | 0 | unavailable |
-| 6 | Release (`release`) | qa | **not_started** | 0 | 0 | unavailable |
+| 5 | Verification (`verification`) | qa | **approved** | 1 | 1 | unavailable |
+|  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
+| 6 | Release (`release`) | qa | **in_progress** | 0 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-10-08T23:48:38.652Z — **phase_self_approved** (verification) by ashokraj2011 · governed agent qa: threshold reached; advanced to release
+- 2026-10-08T23:48:38.652Z — **work_interval_closed** (verification) by ashokraj2011 · governed agent qa: interval INT-verification-G1-002 closed after phase approval
 - 2026-10-08T23:46:29.449Z — **phase_submitted** (verification) by ashokraj2011 · governed agent qa: 1 artifacts
 - 2026-10-08T23:46:29.448Z — **work_interval_reconciled** (verification) by system: aligned; 0 changed path(s)
 - 2026-10-08T22:03:36.699Z — **phase_generated** (verification) by ashokraj2011 · governed agent qa: generation 1
@@ -35,5 +38,3 @@
 - 2026-10-08T15:24:54.409Z — **work_interval_reconciled** (implementation) by system: review; 4 changed path(s)
 - 2026-10-08T15:21:00.086Z — **phase_generated** (implementation) by ashokraj2011 · governed agent developer: generation 1
 - 2026-10-08T15:20:31.818Z — **plan_amended** (implementation) by ashokraj2011 · governed agent developer: PAM-001: src/components/Header.jsx added to C-HEX:REQ-001. The existing app reaches browser modes through Header navigation, so REQ-001 requires the Hex Converter mode entry in this file.
-- 2026-10-08T14:26:28.258Z — **work_interval_started** (implementation) by system: baseline feea48774265 at 0a4144d590bf
-- 2026-10-08T14:26:28.243Z — **phase_self_approved** (planning) by ashokraj2011 · governed agent architect: threshold reached; advanced to implementation
