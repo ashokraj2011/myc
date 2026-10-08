@@ -4639,7 +4639,45 @@
       "artifactRegistrationRepairs": [],
       "artifacts": [],
       "checks": [],
-      "remoteOutputs": []
+      "remoteOutputs": [],
+      "generationIntent": {
+        "id": "2772a4bf-668e-4108-9bd7-85a354c3a417",
+        "generation": 1,
+        "status": "open",
+        "path": "singularity/work-items/c-hex/context/generation-start/implementation-gen1.json",
+        "receiptSha256": "sha256:e89ad4382838551cc6bab620cf5c89ccc8040d1ccb83deed37dda0e9c4889b45",
+        "baseline": {
+          "commit": "0a4144d590bf6a76702c1f47541a07ba4d6a9f27",
+          "tree": "5c5d1a224137ad86761ee5a1b95c36eeccc63f3f",
+          "initialChangeSetDigest": "sha256:bca2c12685d2eec64f6e90838c8807942914a48651250349a2ce5d8f570dd2f2",
+          "mode": "clean",
+          "previousGenerationCommit": null
+        },
+        "startedAt": "2026-10-08T14:27:52.180Z",
+        "startedBy": {
+          "actor": {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com",
+            "login": "ashokraj2011",
+            "githubLookup": "resolved"
+          },
+          "agent": "developer"
+        },
+        "publication": null
+      },
+      "authoringBaseline": {
+        "generation": 1,
+        "path": "artifacts/implementation/implementation-summary.md",
+        "fingerprint": "sha256:ae5dd3865f1f5fb14609e8d351ee2599f01655e37bcc1fa949cadb018f1f3290",
+        "bytes": 997
+      },
+      "inputContext": {
+        "generation": 1,
+        "path": "singularity/work-items/c-hex/context/inputs-implementation-gen1.json",
+        "sha256": "4364269a401ef30a89b166643ae59436785142d529bbcc267a936ec84fdaaa55",
+        "renderedSha256": "9308b6c90415f6a3d393185ad6a6761e78d5fa49b93c7e527d5f15d71c65d636",
+        "mode": "enforce"
+      }
     },
     "convergence": {
       "id": "convergence",
@@ -5166,6 +5204,14 @@
       "event": "work_interval_started",
       "phase": "implementation",
       "detail": "baseline feea48774265 at 0a4144d590bf"
+    },
+    {
+      "at": "2026-10-08T15:20:31.818Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "plan_amended",
+      "phase": "implementation",
+      "detail": "PAM-001: src/components/Header.jsx added to C-HEX:REQ-001. The existing app reaches browser modes through Header navigation, so REQ-001 requires the Hex Converter mode entry in this file."
     }
   ],
   "measurement": {
@@ -6320,6 +6366,108 @@
         },
         "createdAt": "2026-10-08T14:26:27.110Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "97e5c1a4-0dcd-4bde-a009-7479844437aa",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "c-hex",
+          "branch": "c-hex"
+        },
+        "phaseId": "implementation",
+        "generation": 0,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "decision": "plan",
+          "reviewPacketSha256": null,
+          "amendment": "PAM-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-08T15:20:30.837Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "97e5c1a4-0dcd-4bde-a009-7479844437aa",
+        "eventType": "decision-made",
+        "capabilityId": "myc1",
+        "subject": {
+          "branch": "c-hex",
+          "generation": 0,
+          "phase": "implementation",
+          "workId": "c-hex",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "capabilityMapSha256": "48d460384819a855dcd7909eb6cae48e7fd6ce01d82748c66cb46d3ea8170731",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "8603b630ebce6c8a7cabcc23f668f657bb84d84d9326d1545f5db42557025e04",
+          "lifecycleEventId": "97e5c1a4-0dcd-4bde-a009-7479844437aa",
+          "lifecyclePayload": {
+            "decision": "plan",
+            "reviewPacketSha256": null,
+            "amendment": "PAM-001"
+          },
+          "templateSha256": "cf46a21cdcb12035defbb5b6a74c7acd6c6d1e751556964f416f27bb5acb5482",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "97e5c1a4-0dcd-4bde-a009-7479844437aa",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "c-hex",
+              "branch": "c-hex"
+            },
+            "phaseId": "implementation",
+            "generation": 0,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "architecture-reviewers",
+            "payload": {
+              "decision": "plan",
+              "reviewPacketSha256": null,
+              "amendment": "PAM-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-08T15:20:30.837Z"
+          }
+        },
+        "createdAt": "2026-10-08T15:20:30.841Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -6432,6 +6580,23 @@
       "previousRevisionSha256": null,
       "at": "2026-10-08T13:00:45.759Z",
       "revisionSha256": "sha256:cb23e387351afa8de58c19be32d2a19bc4ee7055e22b41c821f5b6bb88a0dd9b"
+    }
+  ],
+  "planAmendments": [
+    {
+      "id": "PAM-001",
+      "changes": [
+        {
+          "kind": "add-location",
+          "clauseId": "C-HEX:REQ-001",
+          "path": "src/components/Header.jsx"
+        }
+      ],
+      "reason": "The existing app reaches browser modes through Header navigation, so REQ-001 requires the Hex Converter mode entry in this file.",
+      "actor": "ashokraj2011",
+      "authorityGroup": "architecture-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-10-08T15:20:31.818Z"
     }
   ]
 }
