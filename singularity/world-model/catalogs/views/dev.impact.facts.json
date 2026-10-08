@@ -2,269 +2,16 @@
   "facts": [
     {
       "assurance": "structurally-derived",
-      "claim": "src/utils/evaluator.js line 40 contains a lexical reference candidate to same-file declaration formatNumber at line 57; semantic resolution is unavailable.",
-      "claimSha256": "sha256:14b29d2754eba4d1fe103be6059827ec59a871da24b50a297003954e90013480",
-      "conflictsWith": [],
-      "derivationId": "DRV-c4cba4b5136e0d56",
-      "evidenceIds": [
-        "EV-3b10478f2225bcd4"
-      ],
-      "factSha256": "sha256:0a09c66b33f8286d19f074da32748d29067789f525ce7645d4002b6effd369b9",
-      "factType": "dependency-edge",
-      "id": "FACT-04936004559c063d",
-      "scopeStatus": "inside",
-      "status": "partial",
-      "subject": {
-        "id": "src/utils/evaluator.js:40->src/utils/evaluator.js#formatNumber",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "not-applicable",
-      "claim": null,
-      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
-      "conflictsWith": [],
-      "derivationId": "DRV-f84f7b4e8d7d2a91",
-      "evidenceIds": [],
-      "factSha256": "sha256:7bd1bffc92f81a5158de4f80077884e56e078a55064873ba2ffeb0d71fa842ad",
-      "factType": "structural-impact",
-      "id": "FACT-0d7ee2a0de4dfbec",
-      "reason": {
-        "attemptedProducer": "change-region",
-        "code": "NO_BASELINE",
-        "detail": "The pinned source revision has no exact first-parent baseline; structural-impact extraction is unavailable."
-      },
-      "scopeStatus": "inside",
-      "status": "unavailable",
-      "subject": {
-        "id": "change-region:structural-impact",
-        "kind": "analysis"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/components/FinancialCalculator.jsx imports the in-scope module src/utils/audio.js.",
-      "claimSha256": "sha256:a7196250dd5e04f56b0f6d35a05492e4315770e4b78e098c4609fb71896cad0a",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-7ea18bc2ab23d340"
-      ],
-      "factSha256": "sha256:0d60e9264d5a24c542f1ec478860a1ee4979295e3380316d56430b446c59390f",
-      "factType": "dependency-edge",
-      "id": "FACT-1b16f0eff4701fe3",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/components/FinancialCalculator.jsx->src/utils/audio.js",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/main.jsx imports the in-scope module src/App.jsx.",
-      "claimSha256": "sha256:afd7d800908cc799306df9a0be7424caab1fcbf6a07744da425ce1e50a10e0e1",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-4483d8eb2f06c59f"
-      ],
-      "factSha256": "sha256:e583180adb739b6a93f28535c31aeed163671e649c4cf47329a3abdacd2dfcbe",
-      "factType": "dependency-edge",
-      "id": "FACT-1d64e893630bf283",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/main.jsx->src/App.jsx",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/App.jsx imports the in-scope module src/components/FunctionGrapher.jsx.",
-      "claimSha256": "sha256:9a1637cd603f6bd8ae25793381e1ab9b36af6290516064d622571df71a41a6a9",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-37b78ece3bc1951b"
-      ],
-      "factSha256": "sha256:39f90f005211c90cc049a8f0b766747f5a2635b180c12d803c3efb7fe534341c",
-      "factType": "dependency-edge",
-      "id": "FACT-1e8b6e3f7ad4a258",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/App.jsx->src/components/FunctionGrapher.jsx",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "not-applicable",
-      "claim": null,
-      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
-      "conflictsWith": [],
-      "derivationId": "DRV-f84f7b4e8d7d2a91",
-      "evidenceIds": [],
-      "factSha256": "sha256:c80044cd7c65d96669c93121b5e5ec8f4e36bffc654e4201397fa0827852bbdd",
-      "factType": "changed-symbol",
-      "id": "FACT-2a47ea9aa7a7faf0",
-      "reason": {
-        "attemptedProducer": "change-region",
-        "code": "NO_BASELINE",
-        "detail": "The pinned source revision has no exact first-parent baseline; changed-symbol extraction is unavailable."
-      },
-      "scopeStatus": "inside",
-      "status": "unavailable",
-      "subject": {
-        "id": "change-region:changed-symbol",
-        "kind": "symbol"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/main.jsx imports the in-scope module src/index.css.",
-      "claimSha256": "sha256:baa1695fbe902c8e0ceb8ca9c30cc961a5aa7f6b73d3b18f1b2361e03ce14b4e",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-1cf9c9c454018eb9"
-      ],
-      "factSha256": "sha256:84cb0f19a405f6ba7d6e2f03b2bf5510d8f0731d450bc048246125b43dc84a3b",
-      "factType": "dependency-edge",
-      "id": "FACT-37d970fa8ab49841",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/main.jsx->src/index.css",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/components/KeyboardShortcutsModal.jsx imports the in-scope module src/utils/audio.js.",
-      "claimSha256": "sha256:eb61878717e96ad92d526c0485c191600b70fdd2fa9181d58cdc46886a8727f1",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-f3ed456dbc1062d5"
-      ],
-      "factSha256": "sha256:9864a94aedd8ed65124c3ea36c19df523dbf679f0f365b650aa136a2d151f4cf",
-      "factType": "dependency-edge",
-      "id": "FACT-40a8f4c796b0b1ba",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/components/KeyboardShortcutsModal.jsx->src/utils/audio.js",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/App.jsx imports the in-scope module src/components/Header.jsx.",
-      "claimSha256": "sha256:aaa3b359be29fc210e202395b1b516347788f80a809f6de45ab7d7027457833d",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-a922c8ddb5919651"
-      ],
-      "factSha256": "sha256:7ee7fbed6423c9aa9463c3d33e9bb731c590543b1e59bfb08cdeaefdb07fab93",
-      "factType": "dependency-edge",
-      "id": "FACT-471272c7e50a2fa2",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/App.jsx->src/components/Header.jsx",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/components/FinancialCalculator.jsx imports the in-scope module src/utils/evaluator.js.",
-      "claimSha256": "sha256:b3c7d2a600f9e83f6083da01c1ff3235e0b713e8f5666f51fc0f9b7d2463988b",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-2513bfc50ac5ccd0"
-      ],
-      "factSha256": "sha256:0ea8e5f0cc006ec2303fab898c0a244a1b27041fb5393c2f4d31ed31bbb1e94d",
-      "factType": "dependency-edge",
-      "id": "FACT-47da55e4b8d9f241",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/components/FinancialCalculator.jsx->src/utils/evaluator.js",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/utils/evaluator.js line 47 contains a lexical reference candidate to same-file declaration formatNumber at line 57; semantic resolution is unavailable.",
-      "claimSha256": "sha256:c6743598167aa4933d5070219680e9a349541e9fc5769f3db335e7e1d962009e",
-      "conflictsWith": [],
-      "derivationId": "DRV-c4cba4b5136e0d56",
-      "evidenceIds": [
-        "EV-e2c58a6cb3a7ffb9"
-      ],
-      "factSha256": "sha256:06149b3ea37dd73417c39657b7f1512290ccdf2203542c40682278fe0ee130af",
-      "factType": "dependency-edge",
-      "id": "FACT-4ccf9f07d43b1822",
-      "scopeStatus": "inside",
-      "status": "partial",
-      "subject": {
-        "id": "src/utils/evaluator.js:47->src/utils/evaluator.js#formatNumber",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/App.test.jsx imports the in-scope module src/App.jsx.",
-      "claimSha256": "sha256:f42d598031e4aa09073bb6b7b43c4628de6214751f9dbddac107a7253ddd9287",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-a28b55e93b0dd19f"
-      ],
-      "factSha256": "sha256:c814c15e387c8c465a06ea4eecb064d6d247fa0221293e93f9ca24276961aaf2",
-      "factType": "dependency-edge",
-      "id": "FACT-4d399a4689b597f6",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/App.test.jsx->src/App.jsx",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/components/Display.jsx imports the in-scope module src/utils/audio.js.",
-      "claimSha256": "sha256:1910a0e49a594a69ae9942736e209999486497b7d61dffb169189b993dfc843e",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-8c42de9354de7b57"
-      ],
-      "factSha256": "sha256:b5b2461c4ffa5eb67c646eb0d338cad4ae2769b38f3046f9ff6ffb9c8f1bff7b",
-      "factType": "dependency-edge",
-      "id": "FACT-5eba772636343601",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/components/Display.jsx->src/utils/audio.js",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
       "claim": "src/App.jsx imports the in-scope module src/components/Display.jsx.",
       "claimSha256": "sha256:d4d7109e77377f5b1a2668cff03090646fff0de99decf5c93553a74a3aa49fe6",
       "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
+      "derivationId": "DRV-292a2934fe80c58c",
       "evidenceIds": [
         "EV-04473b12a7a6bc49"
       ],
-      "factSha256": "sha256:d0859cc43763e6b229d36c629dba6ee85b4c27b3d38a31116d5a5a5397ed4b8e",
+      "factSha256": "sha256:f0571e827fec2e30d366475a0841c1f92ff0f58c7c05f605b6fa7c123b9cbd9f",
       "factType": "dependency-edge",
-      "id": "FACT-632112375d8928eb",
+      "id": "FACT-0318ed10c4707ed0",
       "scopeStatus": "inside",
       "status": "available",
       "subject": {
@@ -274,20 +21,134 @@
     },
     {
       "assurance": "structurally-derived",
-      "claim": "src/components/UnitConverter.jsx imports the in-scope module src/utils/audio.js.",
-      "claimSha256": "sha256:dc51ad8a8f91de87e9706b8e0ccd25505f7dadbe2a0c413f7b6ee502707cb294",
+      "claim": "src/components/UnitConverter.jsx imports the in-scope module src/utils/evaluator.js.",
+      "claimSha256": "sha256:5a99dae20dcc583f14c2dfe4087833773d7f2abbe016a8690b1267f19efb69ef",
       "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
+      "derivationId": "DRV-292a2934fe80c58c",
       "evidenceIds": [
-        "EV-c2febb0ac56ac102"
+        "EV-31f5fd9658b146cf"
       ],
-      "factSha256": "sha256:2d8c90f4b4a10a822cbf1ec793bf988bca5a0818992437e14b9577acb8bb1f9d",
+      "factSha256": "sha256:fbb4c856f7a061e911e0c212f871aa27aa3dcba519d8537509977385a08747b6",
       "factType": "dependency-edge",
-      "id": "FACT-735e59c0844bb25a",
+      "id": "FACT-0911dadcd7488633",
       "scopeStatus": "inside",
       "status": "available",
       "subject": {
-        "id": "src/components/UnitConverter.jsx->src/utils/audio.js",
+        "id": "src/components/UnitConverter.jsx->src/utils/evaluator.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/main.jsx imports the in-scope module src/index.css.",
+      "claimSha256": "sha256:baa1695fbe902c8e0ceb8ca9c30cc961a5aa7f6b73d3b18f1b2361e03ce14b4e",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-1cf9c9c454018eb9"
+      ],
+      "factSha256": "sha256:a79631abb6acac937ea3bfd86c70564f97b8243d42bee7adfed96756e41172ab",
+      "factType": "dependency-edge",
+      "id": "FACT-0d1c90e7e6e39848",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/main.jsx->src/index.css",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/components/KeyboardShortcutsModal.jsx.",
+      "claimSha256": "sha256:70d747d3e173b1b3bef9c163ccfa5528f60807a2d6cee6228c2b48ac730d97ff",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-5401cf9193ea416e"
+      ],
+      "factSha256": "sha256:a0ab36e65a5b3802164cdf2598f519668d6b1c36efa5d006f0c9faf7c8787609",
+      "factType": "dependency-edge",
+      "id": "FACT-1583fce5848d293d",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/components/KeyboardShortcutsModal.jsx",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/ScientificKeypad.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:8df28b00f55549827544c6ec154ce5caa87e705656742a2655ca6b676483fdf3",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-9e68d5e8a5f97ec7"
+      ],
+      "factSha256": "sha256:d218fbac85e76d0672de745ec2cfd5e605b35184befc205c7d8e7f8623ceb19f",
+      "factType": "dependency-edge",
+      "id": "FACT-18744653b8702cec",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/ScientificKeypad.jsx->src/utils/audio.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/components/FinancialCalculator.jsx.",
+      "claimSha256": "sha256:b6df43c549444531db85326bc1ffc1d598f1e630c43444ac5cc39f8d377adc94",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-1442171bdb53c747"
+      ],
+      "factSha256": "sha256:98e0d8f360f3a3c0e203444102909c441920844a67f949b0a8733007e5b66230",
+      "factType": "dependency-edge",
+      "id": "FACT-1e09995014c52cf4",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/components/FinancialCalculator.jsx",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/HistoryDrawer.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:fc8c994be54283ab403624474638f625c11f2defd702f2c8dd998af162064762",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-ad4a5bc004bf9aae"
+      ],
+      "factSha256": "sha256:e27d11ed9256ed4fb5cae266b7e54dccbc8a445cd779df30901972eb3d062459",
+      "factType": "dependency-edge",
+      "id": "FACT-205b0aacc89d7682",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/HistoryDrawer.jsx->src/utils/audio.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/components/StandardKeypad.jsx.",
+      "claimSha256": "sha256:df9bedf67921d36e549396d38bd98e456933894adbef6fb58992e33543d2265c",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-2818b14e3aa9774d"
+      ],
+      "factSha256": "sha256:c6778a8422c692dd1b96d14ba5982630569c606ce8a5d79712e3e1ed1ecf0c08",
+      "factType": "dependency-edge",
+      "id": "FACT-207e7d96f2e8dd39",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/components/StandardKeypad.jsx",
         "kind": "dependency-edge"
       }
     },
@@ -296,169 +157,11 @@
       "claim": null,
       "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
       "conflictsWith": [],
-      "derivationId": "DRV-f84f7b4e8d7d2a91",
+      "derivationId": "DRV-b84c927957ded541",
       "evidenceIds": [],
-      "factSha256": "sha256:897590b4720e5278fde04fac8ff03b6495ca48f21918b39776f287ac44b8e9ba",
-      "factType": "contract-change",
-      "id": "FACT-7a76e9c31747a8bd",
-      "reason": {
-        "attemptedProducer": "change-region",
-        "code": "NO_BASELINE",
-        "detail": "The pinned source revision has no exact first-parent baseline; contract-change extraction is unavailable."
-      },
-      "scopeStatus": "inside",
-      "status": "unavailable",
-      "subject": {
-        "id": "change-region:contract-change",
-        "kind": "contract"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/App.jsx imports the in-scope module src/utils/evaluator.js.",
-      "claimSha256": "sha256:b927e530087429b3b8ba0164f1060fdf206362871426f4ae6db4c5190f1a09ac",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-825c5be58b5acc9e"
-      ],
-      "factSha256": "sha256:0cb625e82c4a1e6063c21ce09738073f05102ae04c0239d1328353f57a9f97f1",
-      "factType": "dependency-edge",
-      "id": "FACT-7dc0c8dd8ccc80cd",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/App.jsx->src/utils/evaluator.js",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "not-applicable",
-      "claim": null,
-      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
-      "conflictsWith": [],
-      "derivationId": "DRV-f84f7b4e8d7d2a91",
-      "evidenceIds": [],
-      "factSha256": "sha256:0e8bcacfe599c161114895c97053bc4162e80536e6d7ed5187b826552fa783f9",
-      "factType": "test-impact",
-      "id": "FACT-8323cfb59822619b",
-      "reason": {
-        "attemptedProducer": "change-region",
-        "code": "NO_BASELINE",
-        "detail": "The pinned source revision has no exact first-parent baseline; test-impact extraction is unavailable."
-      },
-      "scopeStatus": "inside",
-      "status": "unavailable",
-      "subject": {
-        "id": "change-region:test-impact",
-        "kind": "test"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/components/ScientificKeypad.jsx imports the in-scope module src/components/StandardKeypad.jsx.",
-      "claimSha256": "sha256:a8043f379aee023f14f3c78ebf5a3f0e4f53a7f4cce4e1e4cd699a15edaa6774",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-5224f3c6a4a12a0c"
-      ],
-      "factSha256": "sha256:4abf1559f6ba731e943255ed49c02a0aaa158b0b6a25c172b714d4e5a1f809d7",
-      "factType": "dependency-edge",
-      "id": "FACT-850b0f651cd77623",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/components/ScientificKeypad.jsx->src/components/StandardKeypad.jsx",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/App.jsx imports the in-scope module src/utils/audio.js.",
-      "claimSha256": "sha256:d4e674892b255691a5dbee984d3be0f16d3cbec6de2a9733d745a5bc25d31dd7",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-f92388b1febdce82"
-      ],
-      "factSha256": "sha256:0f7cb3db838cad4d135473c6c81e993ea50fd63fa0980250e62f59c84cd27956",
-      "factType": "dependency-edge",
-      "id": "FACT-8c67b67d2e94c219",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/App.jsx->src/utils/audio.js",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/App.jsx imports the in-scope module src/components/HistoryDrawer.jsx.",
-      "claimSha256": "sha256:9abc968734f0c0cf0bcbde9e555b7d23c08a1bcd0c2e9af47bada26bd8d71194",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-626b53284318a4c4"
-      ],
-      "factSha256": "sha256:38c5f95caaf268c2a61c6404b5e98bf8fdadce83c92724067c17574600854f3c",
-      "factType": "dependency-edge",
-      "id": "FACT-955f5b5b56133671",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/App.jsx->src/components/HistoryDrawer.jsx",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/App.jsx imports the in-scope module src/components/UnitConverter.jsx.",
-      "claimSha256": "sha256:5109f5679a46a44a7f348d90cbdb9944afc16797959fd74ee2c95704b7c77aab",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-799a99fdc5788ea2"
-      ],
-      "factSha256": "sha256:6090cef30b97bc73e0e0aa08c24b43e6e7f7d0a3299590e4ebaf045f804b410c",
-      "factType": "dependency-edge",
-      "id": "FACT-9c6cb32f75585612",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/App.jsx->src/components/UnitConverter.jsx",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/utils/evaluator.js line 144 contains a lexical reference candidate to same-file declaration UNIT_TYPES at line 75; semantic resolution is unavailable.",
-      "claimSha256": "sha256:080267142273165038419572a63c3c9dbdb6998f2433465c97b2f391e1a18afa",
-      "conflictsWith": [],
-      "derivationId": "DRV-c4cba4b5136e0d56",
-      "evidenceIds": [
-        "EV-65f1a36ef98c1586"
-      ],
-      "factSha256": "sha256:76b971675c9b45585ab00f8e04d6e4e29a27c166409ffb5d6ec5fc89a59e5bc7",
-      "factType": "dependency-edge",
-      "id": "FACT-9e3ef3b8ff54aa62",
-      "scopeStatus": "inside",
-      "status": "partial",
-      "subject": {
-        "id": "src/utils/evaluator.js:144->src/utils/evaluator.js#UNIT_TYPES",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "not-applicable",
-      "claim": null,
-      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
-      "conflictsWith": [],
-      "derivationId": "DRV-d86ea7dff707c2e5",
-      "evidenceIds": [],
-      "factSha256": "sha256:54e06dd56c259400229566ee635550d13920cf22cf404e584ec9625256222578",
+      "factSha256": "sha256:b2b09aac1f94611140223d9b20371a0477c3fee49f53f00b724cbc3c94ba4fa9",
       "factType": "runtime-frequency",
-      "id": "FACT-b12e19189e01735a",
+      "id": "FACT-292f55b8eb34aa08",
       "reason": {
         "attemptedProducer": "required-fact-coverage",
         "code": "NO_RUNTIME_EVIDENCE",
@@ -473,96 +176,61 @@
     },
     {
       "assurance": "structurally-derived",
-      "claim": "src/components/StandardKeypad.jsx imports the in-scope module src/utils/audio.js.",
-      "claimSha256": "sha256:525e36db0b413d93ff0ef31086fe0b81117cb2e6c2f880043b03b15964bfcb05",
+      "claim": "src/utils/evaluator.js line 40 contains a lexical reference candidate to same-file declaration formatNumber at line 57; semantic resolution is unavailable.",
+      "claimSha256": "sha256:14b29d2754eba4d1fe103be6059827ec59a871da24b50a297003954e90013480",
       "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
+      "derivationId": "DRV-fa8e0da6829a83ee",
       "evidenceIds": [
-        "EV-cbdc058263cb4e6f"
+        "EV-3b10478f2225bcd4"
       ],
-      "factSha256": "sha256:f63134a0951d175de6802067643bd14ad2527376c51b736bac4a487f48198a8e",
+      "factSha256": "sha256:a1477168a90c3f102bdc6f474f9beac5d060304d14cc5c58e91c158dff9e3df6",
       "factType": "dependency-edge",
-      "id": "FACT-b2280917fa269406",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/components/StandardKeypad.jsx->src/utils/audio.js",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/utils/evaluator.test.js imports the in-scope module src/utils/evaluator.js.",
-      "claimSha256": "sha256:4043199deda0d7aa0afc2fba4baca3b06e449006542d424ae97ea7faab905ec9",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-cec729bdacddc9ed"
-      ],
-      "factSha256": "sha256:b9192a0da51cc8d6c3f2c204ca3d899c618f00b0d984151c143e7e04f1c35204",
-      "factType": "dependency-edge",
-      "id": "FACT-b55fae82c26bcbdf",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/utils/evaluator.test.js->src/utils/evaluator.js",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/components/ScientificKeypad.jsx imports the in-scope module src/utils/audio.js.",
-      "claimSha256": "sha256:8df28b00f55549827544c6ec154ce5caa87e705656742a2655ca6b676483fdf3",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-9e68d5e8a5f97ec7"
-      ],
-      "factSha256": "sha256:3c6276df4da01d6ebd7a48cab13adee3fa096772bff7aa8cf6985cfd2b1df51a",
-      "factType": "dependency-edge",
-      "id": "FACT-c04b25bbfd50bc4e",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/components/ScientificKeypad.jsx->src/utils/audio.js",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/App.jsx imports the in-scope module src/components/KeyboardShortcutsModal.jsx.",
-      "claimSha256": "sha256:70d747d3e173b1b3bef9c163ccfa5528f60807a2d6cee6228c2b48ac730d97ff",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-5401cf9193ea416e"
-      ],
-      "factSha256": "sha256:8ffd8823f2e3810609846bb6e36f6aac35c83a9259d9e2e41f1c191e74cce601",
-      "factType": "dependency-edge",
-      "id": "FACT-c35af4d620f54bc3",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/App.jsx->src/components/KeyboardShortcutsModal.jsx",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/utils/evaluator.js line 157 contains a lexical call candidate to same-file declaration formatNumber at line 57; semantic resolution is unavailable.",
-      "claimSha256": "sha256:26da035bc066b5941dafd88707ee546229dcf6324d9a932cc9d6608d337633ad",
-      "conflictsWith": [],
-      "derivationId": "DRV-c4cba4b5136e0d56",
-      "evidenceIds": [
-        "EV-59f389d599bbb24c"
-      ],
-      "factSha256": "sha256:5f2b765887b812dfaeeaa276bc5eb0d506e79ec580dabdc88762d9912bcc2283",
-      "factType": "dependency-edge",
-      "id": "FACT-ca777eee24e06d4c",
+      "id": "FACT-29dd08ba283e64c2",
       "scopeStatus": "inside",
       "status": "partial",
       "subject": {
-        "id": "src/utils/evaluator.js:157->src/utils/evaluator.js#formatNumber",
+        "id": "src/utils/evaluator.js:40->src/utils/evaluator.js#formatNumber",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-e8a2c3ea4b8d8589",
+      "evidenceIds": [],
+      "factSha256": "sha256:eef2498d5df32d1fc2872ee805d333ba7db11db3a91c74aa83afc8cb8b1bdc72",
+      "factType": "contract-change",
+      "id": "FACT-2c868a5d0e363bd5",
+      "reason": {
+        "attemptedProducer": "change-region",
+        "code": "NO_BASELINE",
+        "detail": "The pinned source revision has no exact first-parent baseline; contract-change extraction is unavailable."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "change-region:contract-change",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/UnitConverter.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:dc51ad8a8f91de87e9706b8e0ccd25505f7dadbe2a0c413f7b6ee502707cb294",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-c2febb0ac56ac102"
+      ],
+      "factSha256": "sha256:76f1dbf3a3f90558ae8ed39e4f851f453053be706f356c6de3a40035403a17cd",
+      "factType": "dependency-edge",
+      "id": "FACT-2d34bae4dfe49046",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/UnitConverter.jsx->src/utils/audio.js",
         "kind": "dependency-edge"
       }
     },
@@ -571,13 +239,13 @@
       "claim": "src/components/FunctionGrapher.jsx imports the in-scope module src/utils/audio.js.",
       "claimSha256": "sha256:c35a9e5fedee9414e1d576732b4e2fd6a4b6fbb22483f68fd5f6c4170e5b0ffb",
       "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
+      "derivationId": "DRV-292a2934fe80c58c",
       "evidenceIds": [
         "EV-3fa0072ee0d173fe"
       ],
-      "factSha256": "sha256:32e4477036f681bd6eed53220680c78277e4fb2ec593238f2f626636d871d7f7",
+      "factSha256": "sha256:92a1c26032558b133fa5884dbec1d027c7b4b1fe4beb19fa581a0e4a13a8eb4c",
       "factType": "dependency-edge",
-      "id": "FACT-d67006dd0eeb0a9e",
+      "id": "FACT-33747ac1970a39a3",
       "scopeStatus": "inside",
       "status": "available",
       "subject": {
@@ -587,20 +255,58 @@
     },
     {
       "assurance": "structurally-derived",
-      "claim": "src/components/Header.jsx imports the in-scope module src/utils/audio.js.",
-      "claimSha256": "sha256:2b21a0e898b86d32dbcac29e0f2457c8dadad47b3d6c5c786f22653dda9986d4",
+      "claim": "src/components/Display.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:1910a0e49a594a69ae9942736e209999486497b7d61dffb169189b993dfc843e",
       "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
+      "derivationId": "DRV-292a2934fe80c58c",
       "evidenceIds": [
-        "EV-809114f0b1eab1be"
+        "EV-8c42de9354de7b57"
       ],
-      "factSha256": "sha256:21a353dc3501eb50149a87daddf5175625b739a000273d57f0d5f3a40d7d64e3",
+      "factSha256": "sha256:5477db7b61496be0e8d332ca27a9ddcb14a76397a422dc5349e74fc648f2b7f4",
       "factType": "dependency-edge",
-      "id": "FACT-dcc73e72192670a8",
+      "id": "FACT-35be5a003fbb164e",
       "scopeStatus": "inside",
       "status": "available",
       "subject": {
-        "id": "src/components/Header.jsx->src/utils/audio.js",
+        "id": "src/components/Display.jsx->src/utils/audio.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/StandardKeypad.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:525e36db0b413d93ff0ef31086fe0b81117cb2e6c2f880043b03b15964bfcb05",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-cbdc058263cb4e6f"
+      ],
+      "factSha256": "sha256:50eaa62f609fb67ddffcff11092cc6edae9b432ced72f62789da060a458231fc",
+      "factType": "dependency-edge",
+      "id": "FACT-3f51e30855dad4cb",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/StandardKeypad.jsx->src/utils/audio.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/components/Header.jsx.",
+      "claimSha256": "sha256:aaa3b359be29fc210e202395b1b516347788f80a809f6de45ab7d7027457833d",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-a922c8ddb5919651"
+      ],
+      "factSha256": "sha256:a8ec89e416179adcb29c51ce97c3fa22c110f793a06cd850629f856b4f6c681d",
+      "factType": "dependency-edge",
+      "id": "FACT-489c01c6bc964b1d",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/components/Header.jsx",
         "kind": "dependency-edge"
       }
     },
@@ -609,13 +315,13 @@
       "claim": "src/utils/evaluator.js line 149 contains a lexical call candidate to same-file declaration formatNumber at line 57; semantic resolution is unavailable.",
       "claimSha256": "sha256:601e87d5e64e774e3a77de50fcf121cea0feecacf0f848e07ea039861f2036a6",
       "conflictsWith": [],
-      "derivationId": "DRV-c4cba4b5136e0d56",
+      "derivationId": "DRV-fa8e0da6829a83ee",
       "evidenceIds": [
         "EV-b4bd4c47c681b029"
       ],
-      "factSha256": "sha256:89a7830b8d64c9abe75f2d47f1f9edc13bb2f8e7a07f7f27f1ef7ab2e512c4a1",
+      "factSha256": "sha256:4927cf57d8d146e8266eb942b89607f6cfc9f953eac1be9ba9622037fc00104f",
       "factType": "dependency-edge",
-      "id": "FACT-e0e048cf24b8389e",
+      "id": "FACT-4c1dc67c81106c5d",
       "scopeStatus": "inside",
       "status": "partial",
       "subject": {
@@ -625,77 +331,80 @@
     },
     {
       "assurance": "structurally-derived",
-      "claim": "src/components/HistoryDrawer.jsx imports the in-scope module src/utils/audio.js.",
-      "claimSha256": "sha256:fc8c994be54283ab403624474638f625c11f2defd702f2c8dd998af162064762",
+      "claim": "src/components/ScientificKeypad.jsx imports the in-scope module src/components/StandardKeypad.jsx.",
+      "claimSha256": "sha256:a8043f379aee023f14f3c78ebf5a3f0e4f53a7f4cce4e1e4cd699a15edaa6774",
       "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
+      "derivationId": "DRV-292a2934fe80c58c",
       "evidenceIds": [
-        "EV-ad4a5bc004bf9aae"
+        "EV-5224f3c6a4a12a0c"
       ],
-      "factSha256": "sha256:651f4174fe1629e64692e662fa1d4b90eed74c475d50974596f10e65d44ad70d",
+      "factSha256": "sha256:cbe8a10401c8992b1146957106a90c4ee0899bfcef3254e774db9091c6506638",
       "factType": "dependency-edge",
-      "id": "FACT-e2ef0cf77cb4b016",
+      "id": "FACT-6145ce9656eb679d",
       "scopeStatus": "inside",
       "status": "available",
       "subject": {
-        "id": "src/components/HistoryDrawer.jsx->src/utils/audio.js",
+        "id": "src/components/ScientificKeypad.jsx->src/components/StandardKeypad.jsx",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-e8a2c3ea4b8d8589",
+      "evidenceIds": [],
+      "factSha256": "sha256:6d77bfc0042c5e0c2d291f34a17b5797ab9fba632441632910d8604da4dae569",
+      "factType": "structural-impact",
+      "id": "FACT-627b1cd4bb4bbff9",
+      "reason": {
+        "attemptedProducer": "change-region",
+        "code": "NO_BASELINE",
+        "detail": "The pinned source revision has no exact first-parent baseline; structural-impact extraction is unavailable."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "change-region:structural-impact",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/main.jsx imports the in-scope module src/App.jsx.",
+      "claimSha256": "sha256:afd7d800908cc799306df9a0be7424caab1fcbf6a07744da425ce1e50a10e0e1",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-4483d8eb2f06c59f"
+      ],
+      "factSha256": "sha256:3ccb3c84cea13ac04cb63da70fe067ec4d14623b41ca7ec288e5d27b04943bed",
+      "factType": "dependency-edge",
+      "id": "FACT-90c03c7f6beb79e9",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/main.jsx->src/App.jsx",
         "kind": "dependency-edge"
       }
     },
     {
       "assurance": "structurally-derived",
-      "claim": "src/App.jsx imports the in-scope module src/components/StandardKeypad.jsx.",
-      "claimSha256": "sha256:df9bedf67921d36e549396d38bd98e456933894adbef6fb58992e33543d2265c",
+      "claim": "src/components/Header.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:2b21a0e898b86d32dbcac29e0f2457c8dadad47b3d6c5c786f22653dda9986d4",
       "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
+      "derivationId": "DRV-292a2934fe80c58c",
       "evidenceIds": [
-        "EV-2818b14e3aa9774d"
+        "EV-809114f0b1eab1be"
       ],
-      "factSha256": "sha256:e631476713e96ec17a82c74db0543e431ec0a76d903953998204e3d44f99913a",
+      "factSha256": "sha256:f9384ce351914ff35850da7d01e591651d3248ac07070cf2dc9d8cdd4dc3313f",
       "factType": "dependency-edge",
-      "id": "FACT-e5d79ffde8734f49",
+      "id": "FACT-93617eca72b08882",
       "scopeStatus": "inside",
       "status": "available",
       "subject": {
-        "id": "src/App.jsx->src/components/StandardKeypad.jsx",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/components/UnitConverter.jsx imports the in-scope module src/utils/evaluator.js.",
-      "claimSha256": "sha256:5a99dae20dcc583f14c2dfe4087833773d7f2abbe016a8690b1267f19efb69ef",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-31f5fd9658b146cf"
-      ],
-      "factSha256": "sha256:dfedad4b28e9ca76eb93f2efe0b49df59f4beabb11aced4bb0f663a992870ba3",
-      "factType": "dependency-edge",
-      "id": "FACT-f002dcf50ac093a7",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/components/UnitConverter.jsx->src/utils/evaluator.js",
-        "kind": "dependency-edge"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/App.jsx imports the in-scope module src/components/FinancialCalculator.jsx.",
-      "claimSha256": "sha256:b6df43c549444531db85326bc1ffc1d598f1e630c43444ac5cc39f8d377adc94",
-      "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
-      "evidenceIds": [
-        "EV-1442171bdb53c747"
-      ],
-      "factSha256": "sha256:1003007333c50fee2016af503567e96d3b5dabfd752dd1f05da4726efaa35873",
-      "factType": "dependency-edge",
-      "id": "FACT-f90422fc244fb724",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/App.jsx->src/components/FinancialCalculator.jsx",
+        "id": "src/components/Header.jsx->src/utils/audio.js",
         "kind": "dependency-edge"
       }
     },
@@ -704,35 +413,326 @@
       "claim": "src/App.jsx imports the in-scope module src/components/ScientificKeypad.jsx.",
       "claimSha256": "sha256:d5df7d430436904ab4abcb6288ecaf1a124c9d9181e66547a23dbc600c4726c0",
       "conflictsWith": [],
-      "derivationId": "DRV-03fb9f52d6575e47",
+      "derivationId": "DRV-292a2934fe80c58c",
       "evidenceIds": [
         "EV-d0ee65552afd74f9"
       ],
-      "factSha256": "sha256:63ac1304a5790d6ae4e6b676aa024daaaa75278de2e210fd7c6cc11d934571b9",
+      "factSha256": "sha256:0bc4bc3e88d633ed07f494eebaeeec0356a72b73ac7907643d3db5e9cd329e3e",
       "factType": "dependency-edge",
-      "id": "FACT-fa29523a85b77cb9",
+      "id": "FACT-942ddf4672280cf8",
       "scopeStatus": "inside",
       "status": "available",
       "subject": {
         "id": "src/App.jsx->src/components/ScientificKeypad.jsx",
         "kind": "dependency-edge"
       }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.test.jsx imports the in-scope module src/App.jsx.",
+      "claimSha256": "sha256:f42d598031e4aa09073bb6b7b43c4628de6214751f9dbddac107a7253ddd9287",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-a28b55e93b0dd19f"
+      ],
+      "factSha256": "sha256:27bdbea9c0a77c16b5b9fc47aea4408f33f9162ffbb84ce59d63e0a39c4f1e22",
+      "factType": "dependency-edge",
+      "id": "FACT-954db4a3ab1f6d6d",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx->src/App.jsx",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/components/HistoryDrawer.jsx.",
+      "claimSha256": "sha256:9abc968734f0c0cf0bcbde9e555b7d23c08a1bcd0c2e9af47bada26bd8d71194",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-626b53284318a4c4"
+      ],
+      "factSha256": "sha256:8235e918682db60b48412588bba302e1dc3530b5067e3d00a76b9ccc5d040adf",
+      "factType": "dependency-edge",
+      "id": "FACT-97394fa1478a7953",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/components/HistoryDrawer.jsx",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/components/UnitConverter.jsx.",
+      "claimSha256": "sha256:5109f5679a46a44a7f348d90cbdb9944afc16797959fd74ee2c95704b7c77aab",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-799a99fdc5788ea2"
+      ],
+      "factSha256": "sha256:04e7d8ae7714e90f062c35c3630442e9449ba2928e91e942d6e8f5f18fa67e19",
+      "factType": "dependency-edge",
+      "id": "FACT-979db246e0690e73",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/components/UnitConverter.jsx",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-e8a2c3ea4b8d8589",
+      "evidenceIds": [],
+      "factSha256": "sha256:9307e3595d6f342efa13386f82a7084900c4b892f3768c62ade72422d8dc49b2",
+      "factType": "changed-symbol",
+      "id": "FACT-ab147404f8818f57",
+      "reason": {
+        "attemptedProducer": "change-region",
+        "code": "NO_BASELINE",
+        "detail": "The pinned source revision has no exact first-parent baseline; changed-symbol extraction is unavailable."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "change-region:changed-symbol",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js line 144 contains a lexical reference candidate to same-file declaration UNIT_TYPES at line 75; semantic resolution is unavailable.",
+      "claimSha256": "sha256:080267142273165038419572a63c3c9dbdb6998f2433465c97b2f391e1a18afa",
+      "conflictsWith": [],
+      "derivationId": "DRV-fa8e0da6829a83ee",
+      "evidenceIds": [
+        "EV-65f1a36ef98c1586"
+      ],
+      "factSha256": "sha256:5179937aeba7c4d063fcee1726693654f652497d9f45330843b32e9402a0d276",
+      "factType": "dependency-edge",
+      "id": "FACT-aba5254ad57b9064",
+      "scopeStatus": "inside",
+      "status": "partial",
+      "subject": {
+        "id": "src/utils/evaluator.js:144->src/utils/evaluator.js#UNIT_TYPES",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/KeyboardShortcutsModal.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:eb61878717e96ad92d526c0485c191600b70fdd2fa9181d58cdc46886a8727f1",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-f3ed456dbc1062d5"
+      ],
+      "factSha256": "sha256:233482a9282cfb8a9052900f2f2bb9126e5d7b7f899048843a42cdffcf5f561c",
+      "factType": "dependency-edge",
+      "id": "FACT-b27c53d49fac8f57",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/KeyboardShortcutsModal.jsx->src/utils/audio.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js line 47 contains a lexical reference candidate to same-file declaration formatNumber at line 57; semantic resolution is unavailable.",
+      "claimSha256": "sha256:c6743598167aa4933d5070219680e9a349541e9fc5769f3db335e7e1d962009e",
+      "conflictsWith": [],
+      "derivationId": "DRV-fa8e0da6829a83ee",
+      "evidenceIds": [
+        "EV-e2c58a6cb3a7ffb9"
+      ],
+      "factSha256": "sha256:be35031521c09e71fc53f0f6f4830d4dea3f233b0461fbadf7d260df67fddcd7",
+      "factType": "dependency-edge",
+      "id": "FACT-b50709f2d13956ca",
+      "scopeStatus": "inside",
+      "status": "partial",
+      "subject": {
+        "id": "src/utils/evaluator.js:47->src/utils/evaluator.js#formatNumber",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/FinancialCalculator.jsx imports the in-scope module src/utils/evaluator.js.",
+      "claimSha256": "sha256:b3c7d2a600f9e83f6083da01c1ff3235e0b713e8f5666f51fc0f9b7d2463988b",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-2513bfc50ac5ccd0"
+      ],
+      "factSha256": "sha256:77871d95f8637f77348c8272e1a3f058f3fcadfd49c93fdd2135d85273e97701",
+      "factType": "dependency-edge",
+      "id": "FACT-b57c462315f1502f",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FinancialCalculator.jsx->src/utils/evaluator.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.test.js imports the in-scope module src/utils/evaluator.js.",
+      "claimSha256": "sha256:4043199deda0d7aa0afc2fba4baca3b06e449006542d424ae97ea7faab905ec9",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-cec729bdacddc9ed"
+      ],
+      "factSha256": "sha256:149e2d32973b98ac9c737da6ebf4abe0739d3a165ae5b74a27be3eead14a3114",
+      "factType": "dependency-edge",
+      "id": "FACT-bf6ec4fb307dc84e",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js->src/utils/evaluator.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/components/FunctionGrapher.jsx.",
+      "claimSha256": "sha256:9a1637cd603f6bd8ae25793381e1ab9b36af6290516064d622571df71a41a6a9",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-37b78ece3bc1951b"
+      ],
+      "factSha256": "sha256:fa00ce38a09a3651b593847220c714e7cddfb962a246072af0d5aad329d9a1f2",
+      "factType": "dependency-edge",
+      "id": "FACT-c7648461bab8cd66",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/components/FunctionGrapher.jsx",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/utils/evaluator.js.",
+      "claimSha256": "sha256:b927e530087429b3b8ba0164f1060fdf206362871426f4ae6db4c5190f1a09ac",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-825c5be58b5acc9e"
+      ],
+      "factSha256": "sha256:4ba2038ac8ecb8e39697ef2d78f84429a5971b5240f3b5ef03acce757a3238c9",
+      "factType": "dependency-edge",
+      "id": "FACT-cb2055e9af69cd61",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/utils/evaluator.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:d4e674892b255691a5dbee984d3be0f16d3cbec6de2a9733d745a5bc25d31dd7",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-f92388b1febdce82"
+      ],
+      "factSha256": "sha256:e45362ba2dd06ee435780f4c6682a5403eda6eb6163d2b5fc7a7584f7fcfffdc",
+      "factType": "dependency-edge",
+      "id": "FACT-d6e47bf7f2e74147",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/utils/audio.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/FinancialCalculator.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:a7196250dd5e04f56b0f6d35a05492e4315770e4b78e098c4609fb71896cad0a",
+      "conflictsWith": [],
+      "derivationId": "DRV-292a2934fe80c58c",
+      "evidenceIds": [
+        "EV-7ea18bc2ab23d340"
+      ],
+      "factSha256": "sha256:eabde2a2f6994bab01f1291ead8900048aabfafb685f9f63762d036f06fd2239",
+      "factType": "dependency-edge",
+      "id": "FACT-de2f2175235eed5f",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FinancialCalculator.jsx->src/utils/audio.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js line 157 contains a lexical call candidate to same-file declaration formatNumber at line 57; semantic resolution is unavailable.",
+      "claimSha256": "sha256:26da035bc066b5941dafd88707ee546229dcf6324d9a932cc9d6608d337633ad",
+      "conflictsWith": [],
+      "derivationId": "DRV-fa8e0da6829a83ee",
+      "evidenceIds": [
+        "EV-59f389d599bbb24c"
+      ],
+      "factSha256": "sha256:bc6e6f36ac0716b796a19f0489b5be65ee096f0ee8dd4efa5343397a5a508132",
+      "factType": "dependency-edge",
+      "id": "FACT-e7e158d340fb78d2",
+      "scopeStatus": "inside",
+      "status": "partial",
+      "subject": {
+        "id": "src/utils/evaluator.js:157->src/utils/evaluator.js#formatNumber",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-e8a2c3ea4b8d8589",
+      "evidenceIds": [],
+      "factSha256": "sha256:8139797d9e1671c8bcc0b02115ea25f12747782270d54316962ffed075690500",
+      "factType": "test-impact",
+      "id": "FACT-ef8cfc451ff25ac4",
+      "reason": {
+        "attemptedProducer": "change-region",
+        "code": "NO_BASELINE",
+        "detail": "The pinned source revision has no exact first-parent baseline; test-impact extraction is unavailable."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "change-region:test-impact",
+        "kind": "test"
+      }
     }
   ],
   "kind": "world-model-view-fact-ledger",
-  "ledgerSha256": "sha256:099954ff66f9f15ba9e898f17828fc05ed631c74fadcd551f16f9c90e524b2a5",
+  "ledgerSha256": "sha256:926c94ed41cabacc0ead2fc02a80af6605bd6d5ed60049fa9eac1be990b11c29",
   "materialContradictionFactIds": [],
   "requiredFactIds": [
-    "FACT-04936004559c063d",
-    "FACT-2a47ea9aa7a7faf0",
-    "FACT-7a76e9c31747a8bd"
+    "FACT-0318ed10c4707ed0",
+    "FACT-2c868a5d0e363bd5",
+    "FACT-ab147404f8818f57"
   ],
   "requiredUnavailableFactIds": [
-    "FACT-b12e19189e01735a"
+    "FACT-292f55b8eb34aa08"
   ],
   "schemaVersion": 1,
   "selectionPolicySha256": "sha256:37166a1569ba1984c1e05117a6cf4b98f18186789a3e4d16797189e4f23685bc",
-  "sourceLedgerSha256": "sha256:c11bce8eba769cafec1178f4603177bd486866f1287cf8abc83a9d746b478574",
+  "sourceLedgerSha256": "sha256:c7aac34e9738edcc2947a2c20e1149bb95a821c6c1fc1f1e15eeea1f548965eb",
   "viewId": "dev.impact",
   "viewSpecSha256": "sha256:533e81e352ca8e38a12024424901e82668735ea5a638f7d5c85e30723ca24c41",
   "viewVersion": 4
