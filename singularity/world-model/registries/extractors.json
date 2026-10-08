@@ -1,0 +1,982 @@
+{
+  "kind": "world-model-extractor-registry",
+  "manifests": [
+    {
+      "evidenceKinds": [
+        "call-edge",
+        "file",
+        "reference-edge"
+      ],
+      "factTypes": [
+        "dependency-analysis",
+        "dependency-edge"
+      ],
+      "failure": {
+        "internalError": "refuse",
+        "parseFailure": "partial-or-unavailable",
+        "unsupportedLanguage": "unavailable"
+      },
+      "id": "call-reference-edge",
+      "inputs": {
+        "scopeManifest": "required",
+        "sourceManifest": "required"
+      },
+      "kind": "world-model-extractor-manifest",
+      "languages": [
+        "c",
+        "cpp",
+        "csharp",
+        "go",
+        "java",
+        "javascript",
+        "kotlin",
+        "php",
+        "python",
+        "ruby",
+        "rust",
+        "swift",
+        "typescript"
+      ],
+      "manifestSha256": "sha256:aedf7ab398792ceb440ab35d76cd41d4e982db29d63fd7e266749864e7788eb7",
+      "outputs": {
+        "derivationRecords": true,
+        "evidenceCatalogEntries": true,
+        "factLedgerEntries": true
+      },
+      "permissions": {
+        "model": "never",
+        "network": "none",
+        "writes": "derived-store-only"
+      },
+      "producer": {
+        "implementationSha256": "sha256:dc54bedc91bc250e2564c5111e5e14384562d0b7b5ea1700b89bb83046047696",
+        "kind": "deterministic-module",
+        "parser": {
+          "grammarSha256": "sha256:bf4a2fa8203d7b06a1e98ead6b4924c9e6161ca8e91570c4da5ca28bf55da195",
+          "id": "closed-local-call-reference-candidates",
+          "version": "1.0.0"
+        }
+      },
+      "schemaVersion": 1,
+      "tests": {
+        "conformanceReceiptSha256": "sha256:cbdc23a8125c45c379e0b59f0c5c89738a8101efba08fa84e8517eb5959bad44"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "evidenceKinds": [
+        "configuration-object",
+        "interface-implementation",
+        "signature",
+        "symbol",
+        "test-symbol-binding"
+      ],
+      "factTypes": [
+        "changed-symbol",
+        "contract-change",
+        "structural-impact",
+        "test-impact"
+      ],
+      "failure": {
+        "internalError": "refuse",
+        "parseFailure": "partial-or-unavailable",
+        "unsupportedLanguage": "unavailable"
+      },
+      "id": "change-region",
+      "inputs": {
+        "scopeManifest": "required",
+        "sourceManifest": "required"
+      },
+      "kind": "world-model-extractor-manifest",
+      "languages": [
+        "c",
+        "cpp",
+        "csharp",
+        "go",
+        "java",
+        "javascript",
+        "kotlin",
+        "php",
+        "python",
+        "ruby",
+        "rust",
+        "swift",
+        "typescript"
+      ],
+      "manifestSha256": "sha256:9833bde291cd0202ef13b99373598d3a59987e2d7f4d620085bbfb678369f055",
+      "outputs": {
+        "derivationRecords": true,
+        "evidenceCatalogEntries": true,
+        "factLedgerEntries": true
+      },
+      "permissions": {
+        "model": "never",
+        "network": "none",
+        "writes": "derived-store-only"
+      },
+      "producer": {
+        "implementationSha256": "sha256:c80064ac4ca8babf143ae124132c3cf5538fa75bfc356b4520275d2a1aea5dc9",
+        "kind": "deterministic-module",
+        "parser": {
+          "grammarSha256": "sha256:b6bc0df2f23d719f375b57d1b4ee34db76807ac6a855af6d0096510fa2bb4206",
+          "id": "git-zero-context-current-ranges",
+          "version": "1.0.0"
+        }
+      },
+      "schemaVersion": 1,
+      "tests": {
+        "conformanceReceiptSha256": "sha256:8baa701cae6cfb53b043b3b05054a5dfb0be428d6fa591ff3c5e982156faf10e"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "evidenceKinds": [
+        "clause-binding"
+      ],
+      "factTypes": [
+        "clause-binding"
+      ],
+      "failure": {
+        "internalError": "refuse",
+        "parseFailure": "partial-or-unavailable",
+        "unsupportedLanguage": "unavailable"
+      },
+      "id": "clause-code-binding",
+      "inputs": {
+        "scopeManifest": "required",
+        "sourceManifest": "required"
+      },
+      "kind": "world-model-extractor-manifest",
+      "languages": [
+        "c",
+        "cpp",
+        "csharp",
+        "go",
+        "java",
+        "javascript",
+        "kotlin",
+        "php",
+        "python",
+        "ruby",
+        "rust",
+        "swift",
+        "typescript"
+      ],
+      "manifestSha256": "sha256:3157e3f71496b6601296cdf90df2ff003ea8c97024029e074f3e00ce80c0932e",
+      "outputs": {
+        "derivationRecords": true,
+        "evidenceCatalogEntries": true,
+        "factLedgerEntries": true
+      },
+      "permissions": {
+        "model": "never",
+        "network": "none",
+        "writes": "derived-store-only"
+      },
+      "producer": {
+        "implementationSha256": "sha256:3f441876c117cc29da495a89f2aff794827075a72ea6a08c1544832050b22db6",
+        "kind": "deterministic-module",
+        "parser": {
+          "grammarSha256": "sha256:42ee4b9ff2aa5f0024c4cc18f6576e57a3f30cf1f6d2e989ef3d5f9916b2ee26",
+          "id": "explicit-clause-comment-tags",
+          "version": "1.2.0"
+        }
+      },
+      "schemaVersion": 1,
+      "tests": {
+        "conformanceReceiptSha256": "sha256:abd6eb1c866864c2b935428576ce4f844fb6128ad4b6c4c9992d6eb0909d5c16"
+      },
+      "version": "1.2.0"
+    },
+    {
+      "evidenceKinds": [
+        "configuration-object",
+        "file"
+      ],
+      "factTypes": [
+        "configuration-object"
+      ],
+      "failure": {
+        "internalError": "refuse",
+        "parseFailure": "partial-or-unavailable",
+        "unsupportedLanguage": "unavailable"
+      },
+      "id": "configuration-object",
+      "inputs": {
+        "scopeManifest": "required",
+        "sourceManifest": "required"
+      },
+      "kind": "world-model-extractor-manifest",
+      "languages": [
+        "json",
+        "properties",
+        "toml",
+        "yaml"
+      ],
+      "manifestSha256": "sha256:2900bac9f697d51f7c100c52e069b886074161a4a0c19c7e108b89d71a7bef97",
+      "outputs": {
+        "derivationRecords": true,
+        "evidenceCatalogEntries": true,
+        "factLedgerEntries": true
+      },
+      "permissions": {
+        "model": "never",
+        "network": "none",
+        "writes": "derived-store-only"
+      },
+      "producer": {
+        "implementationSha256": "sha256:37286ed7be0c3165d9e2cd83d3a74d07e74e8876bdfd9f2fb687f0668c11d76c",
+        "kind": "deterministic-module",
+        "parser": {
+          "grammarSha256": "sha256:920c8c3bf199840cfea7ba0be89a7d0fd05f8cdd1379602124c6c467ba4c5ffc",
+          "id": "closed-configuration-object",
+          "version": "1.0.0"
+        }
+      },
+      "schemaVersion": 1,
+      "tests": {
+        "conformanceReceiptSha256": "sha256:2f416b46b04ab08c1ad741679587f6e4b680231074e86e2c57a992d00fd90918"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "evidenceKinds": [
+        "human-confirmed-record"
+      ],
+      "factTypes": [
+        "business-glossary",
+        "business-meaning"
+      ],
+      "failure": {
+        "internalError": "refuse",
+        "parseFailure": "partial-or-unavailable",
+        "unsupportedLanguage": "unavailable"
+      },
+      "id": "human-confirmed-knowledge-import",
+      "inputs": {
+        "scopeManifest": "required",
+        "sourceManifest": "required"
+      },
+      "kind": "world-model-extractor-manifest",
+      "languages": [
+        "json"
+      ],
+      "manifestSha256": "sha256:b6fd0cec5799a7315781dda03c3ca424ffe2d582355310e3f48b095a979c9657",
+      "outputs": {
+        "derivationRecords": true,
+        "evidenceCatalogEntries": true,
+        "factLedgerEntries": true
+      },
+      "permissions": {
+        "model": "never",
+        "network": "none",
+        "writes": "derived-store-only"
+      },
+      "producer": {
+        "implementationSha256": "sha256:b74044bc6c1d696cabb06e62151bb2b44908ade3437cfbf2e12bd84b426712a0",
+        "kind": "deterministic-module",
+        "parser": {
+          "grammarSha256": "sha256:9c393fda5eeffda5bb531ef5e84b4f6ecce861bf2787c0a6371ab75deb090a50",
+          "id": "sealed-human-confirmed-business-knowledge",
+          "version": "1.0.0"
+        }
+      },
+      "schemaVersion": 1,
+      "tests": {
+        "conformanceReceiptSha256": "sha256:2dbefeaa62afd19480a74d1368db867e26965f0f150c832ce4582d538ddc3b8c"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "evidenceKinds": [
+        "dependency-edge",
+        "import"
+      ],
+      "factTypes": [
+        "dependency-analysis",
+        "dependency-edge",
+        "import-dependency"
+      ],
+      "failure": {
+        "internalError": "refuse",
+        "parseFailure": "partial-or-unavailable",
+        "unsupportedLanguage": "unavailable"
+      },
+      "id": "import-dependency",
+      "inputs": {
+        "scopeManifest": "required",
+        "sourceManifest": "required"
+      },
+      "kind": "world-model-extractor-manifest",
+      "languages": [
+        "c",
+        "cpp",
+        "csharp",
+        "go",
+        "java",
+        "javascript",
+        "kotlin",
+        "php",
+        "python",
+        "ruby",
+        "rust",
+        "swift",
+        "typescript"
+      ],
+      "manifestSha256": "sha256:599b23234ba54cf5d4a9488b10745dbc91d716199af1592c06229db246f65dc0",
+      "outputs": {
+        "derivationRecords": true,
+        "evidenceCatalogEntries": true,
+        "factLedgerEntries": true
+      },
+      "permissions": {
+        "model": "never",
+        "network": "none",
+        "writes": "derived-store-only"
+      },
+      "producer": {
+        "implementationSha256": "sha256:e5a9f3e6f8fecfd2fce62083919a8bee7c8f9ee56d8eebe3348c1775ee195a13",
+        "kind": "deterministic-module",
+        "parser": {
+          "grammarSha256": "sha256:d3205cbe92fa118b9caae24b28b599e821512e2ca5e32af6fdc4ee524537a75c",
+          "id": "sflow-polyglot-lexical-imports",
+          "version": "3.0.0"
+        }
+      },
+      "schemaVersion": 1,
+      "tests": {
+        "conformanceReceiptSha256": "sha256:676cfd25efa02b0a0a726fb861343ea03f883ed9730fa227cf0996ff43baf6e2"
+      },
+      "version": "1.2.0"
+    },
+    {
+      "evidenceKinds": [
+        "configuration-object",
+        "interface-implementation",
+        "signature"
+      ],
+      "factTypes": [
+        "consumer-dependency",
+        "implementation",
+        "interface",
+        "protocol-field",
+        "schema-contract"
+      ],
+      "failure": {
+        "internalError": "refuse",
+        "parseFailure": "partial-or-unavailable",
+        "unsupportedLanguage": "unavailable"
+      },
+      "id": "interface-contract",
+      "inputs": {
+        "scopeManifest": "required",
+        "sourceManifest": "required"
+      },
+      "kind": "world-model-extractor-manifest",
+      "languages": [
+        "c",
+        "cpp",
+        "csharp",
+        "go",
+        "java",
+        "javascript",
+        "kotlin",
+        "php",
+        "python",
+        "ruby",
+        "rust",
+        "swift",
+        "typescript"
+      ],
+      "manifestSha256": "sha256:47344a899ccb7890f62483dedc10eb623d18767a194956a50865d1ce7ea0e26c",
+      "outputs": {
+        "derivationRecords": true,
+        "evidenceCatalogEntries": true,
+        "factLedgerEntries": true
+      },
+      "permissions": {
+        "model": "never",
+        "network": "none",
+        "writes": "derived-store-only"
+      },
+      "producer": {
+        "implementationSha256": "sha256:95121f7da24e6151d6e281cf92ecc00d38f3984b290567045d91d984660f3c97",
+        "kind": "deterministic-module",
+        "parser": {
+          "grammarSha256": "sha256:f3af01c1e51cb56838e0006f97c2414c07f866b13cd19d7b190e7ff5dcc4c612",
+          "id": "closed-interface-contract",
+          "version": "2.0.0"
+        }
+      },
+      "schemaVersion": 1,
+      "tests": {
+        "conformanceReceiptSha256": "sha256:21b03c8c3123648b1ac4616d9db50030c1f14e5094cb3110a6db2ff4d8fc53b1"
+      },
+      "version": "1.1.0"
+    },
+    {
+      "evidenceKinds": [
+        "file"
+      ],
+      "factTypes": [
+        "language-detected"
+      ],
+      "failure": {
+        "internalError": "refuse",
+        "parseFailure": "partial-or-unavailable",
+        "unsupportedLanguage": "unavailable"
+      },
+      "id": "language-detection",
+      "inputs": {
+        "scopeManifest": "required",
+        "sourceManifest": "required"
+      },
+      "kind": "world-model-extractor-manifest",
+      "languages": [
+        "c",
+        "cpp",
+        "csharp",
+        "go",
+        "java",
+        "javascript",
+        "kotlin",
+        "php",
+        "python",
+        "ruby",
+        "rust",
+        "swift",
+        "typescript"
+      ],
+      "manifestSha256": "sha256:ba0e53c50dd9e5b26f5b1a52e148dfb4dd5a0f9e208e14f5c79250a65280a6b1",
+      "outputs": {
+        "derivationRecords": true,
+        "evidenceCatalogEntries": true,
+        "factLedgerEntries": true
+      },
+      "permissions": {
+        "model": "never",
+        "network": "none",
+        "writes": "derived-store-only"
+      },
+      "producer": {
+        "implementationSha256": "sha256:c52f9883a4c6cb372445d4dc187ddeff31faef5ede4f994b267559f0872f0b04",
+        "kind": "deterministic-module",
+        "parser": {
+          "grammarSha256": "sha256:5900173ecd9706a46497b0c7d63acabdd796658b6bc8c7cab926afc2cd87c595",
+          "id": "closed-extension-map",
+          "version": "1.0.0"
+        }
+      },
+      "schemaVersion": 1,
+      "tests": {
+        "conformanceReceiptSha256": "sha256:572d44385a4d520db217411ff243772b5485e7ba0dbd9d84dcb4769787b0639a"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "evidenceKinds": [],
+      "factTypes": [
+        "business-glossary",
+        "business-meaning",
+        "change-frequency",
+        "changed-symbol",
+        "clause-binding",
+        "complexity-metric",
+        "condition-expression",
+        "configuration-object",
+        "consumer-dependency",
+        "contract-change",
+        "dependency-analysis",
+        "dependency-degree",
+        "dependency-edge",
+        "export",
+        "file-exists",
+        "implementation",
+        "import-dependency",
+        "incident-mapping",
+        "interface",
+        "language-detected",
+        "maintainer-record",
+        "ownership-concentration",
+        "protocol-field",
+        "rule-definition",
+        "runtime-frequency",
+        "runtime-guarantee",
+        "schema-contract",
+        "signature",
+        "structural-impact",
+        "symbol-exists",
+        "symbol-index",
+        "test-identity",
+        "test-impact"
+      ],
+      "failure": {
+        "internalError": "refuse",
+        "parseFailure": "partial-or-unavailable",
+        "unsupportedLanguage": "unavailable"
+      },
+      "id": "legacy-migration-resolution",
+      "inputs": {
+        "scopeManifest": "required",
+        "sourceManifest": "required"
+      },
+      "kind": "world-model-extractor-manifest",
+      "languages": [],
+      "manifestSha256": "sha256:150be2d97d8df93261e66bd561ab76158285833003fe2f2f5881e8f64efb2a94",
+      "outputs": {
+        "derivationRecords": true,
+        "evidenceCatalogEntries": true,
+        "factLedgerEntries": true
+      },
+      "permissions": {
+        "model": "never",
+        "network": "none",
+        "writes": "derived-store-only"
+      },
+      "producer": {
+        "implementationSha256": "sha256:177f9f77bed4b4a23edaae2864c9d0dc2385c585faf4159fdf91dc812cf8c429",
+        "kind": "deterministic-module",
+        "parser": {
+          "grammarSha256": "sha256:e8426d3db185089df62b72c5299f6bc88148ab8d60510de97d8d0ba97cc07970",
+          "id": "legacy-claim-digest-resolution",
+          "version": "1.0.0"
+        }
+      },
+      "schemaVersion": 1,
+      "tests": {
+        "conformanceReceiptSha256": "sha256:06853ffc908fcd84bf69c4124c61a9416bd89994e0b14f1f0ab79de24d2eeadc"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "evidenceKinds": [
+        "configuration-object"
+      ],
+      "factTypes": [
+        "maintainer-record",
+        "ownership-concentration"
+      ],
+      "failure": {
+        "internalError": "refuse",
+        "parseFailure": "partial-or-unavailable",
+        "unsupportedLanguage": "unavailable"
+      },
+      "id": "ownership-maintainer-record",
+      "inputs": {
+        "scopeManifest": "required",
+        "sourceManifest": "required"
+      },
+      "kind": "world-model-extractor-manifest",
+      "languages": [
+        "codeowners"
+      ],
+      "manifestSha256": "sha256:d0b7926f6bee00d0195cc0fe7908f1cf1dba7ee9ef8a405ae6f21bb2dd64ebd3",
+      "outputs": {
+        "derivationRecords": true,
+        "evidenceCatalogEntries": true,
+        "factLedgerEntries": true
+      },
+      "permissions": {
+        "model": "never",
+        "network": "none",
+        "writes": "derived-store-only"
+      },
+      "producer": {
+        "implementationSha256": "sha256:9e9081cecbda54a83341f773a78f4c1cdb4809620be65099ea3b8ff62b378990",
+        "kind": "deterministic-module",
+        "parser": {
+          "grammarSha256": "sha256:f679b25d0d46abf14b69801895f0b5c0e644c5f83e69dbc46f1cba41a8e17791",
+          "id": "closed-codeowners-records",
+          "version": "1.0.0"
+        }
+      },
+      "schemaVersion": 1,
+      "tests": {
+        "conformanceReceiptSha256": "sha256:613eca27e83d11a65f44db095438ea18a4746fadc311c15a76941be4f6f29a3a"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "evidenceKinds": [
+        "file"
+      ],
+      "factTypes": [
+        "file-exists"
+      ],
+      "failure": {
+        "internalError": "refuse",
+        "parseFailure": "partial-or-unavailable",
+        "unsupportedLanguage": "unavailable"
+      },
+      "id": "repository-files",
+      "inputs": {
+        "scopeManifest": "required",
+        "sourceManifest": "required"
+      },
+      "kind": "world-model-extractor-manifest",
+      "languages": [],
+      "manifestSha256": "sha256:abb391477f23ac0b17818d4e5aa186c0fde49f45a31952f6f3fec874844a526f",
+      "outputs": {
+        "derivationRecords": true,
+        "evidenceCatalogEntries": true,
+        "factLedgerEntries": true
+      },
+      "permissions": {
+        "model": "never",
+        "network": "none",
+        "writes": "derived-store-only"
+      },
+      "producer": {
+        "implementationSha256": "sha256:dfab961d8655c701b2a3bb265fead1901d8b920b665b5ebbee8ea8294158bac0",
+        "kind": "deterministic-module",
+        "parser": {
+          "grammarSha256": "sha256:d05cd756ec8093267c3eddc428e5195e48b5cf31d6eb47463503195b621bed9f",
+          "id": "pinned-git-tree-projection",
+          "version": "1.0.0"
+        }
+      },
+      "schemaVersion": 1,
+      "tests": {
+        "conformanceReceiptSha256": "sha256:41b474ca1c58aff97851ab4f2a48e495e599ccf8fb6834ea83f91b99905c39c7"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "evidenceKinds": [],
+      "factTypes": [
+        "business-meaning",
+        "change-frequency",
+        "changed-symbol",
+        "complexity-metric",
+        "consumer-dependency",
+        "contract-change",
+        "dependency-degree",
+        "dependency-edge",
+        "implementation",
+        "incident-mapping",
+        "interface",
+        "ownership-concentration",
+        "protocol-field",
+        "rule-definition",
+        "runtime-frequency",
+        "runtime-guarantee",
+        "schema-contract",
+        "signature"
+      ],
+      "failure": {
+        "internalError": "refuse",
+        "parseFailure": "partial-or-unavailable",
+        "unsupportedLanguage": "unavailable"
+      },
+      "id": "required-fact-coverage",
+      "inputs": {
+        "scopeManifest": "required",
+        "sourceManifest": "required"
+      },
+      "kind": "world-model-extractor-manifest",
+      "languages": [],
+      "manifestSha256": "sha256:26851dd2fbd444a58368a42aa5e179886f974abae2eaf98afbb5ed10b128d90f",
+      "outputs": {
+        "derivationRecords": true,
+        "evidenceCatalogEntries": true,
+        "factLedgerEntries": true
+      },
+      "permissions": {
+        "model": "never",
+        "network": "none",
+        "writes": "derived-store-only"
+      },
+      "producer": {
+        "implementationSha256": "sha256:9d7ab8f9a1339b05bf1af5666eda53111618658d42e3fed08c0bcd4089a2a543",
+        "kind": "deterministic-module",
+        "parser": {
+          "grammarSha256": "sha256:e3456f4fa48e3d23bdd4009c8037da23aea451986f3270596d7cf8eb8b2214e1",
+          "id": "closed-fact-requirement-coverage",
+          "version": "1.0.0"
+        }
+      },
+      "schemaVersion": 1,
+      "tests": {
+        "conformanceReceiptSha256": "sha256:ecdf50b04c204c1c5e30b563d81ef701d349c8d2e16e389a221474ff66f46140"
+      },
+      "version": "1.0.1"
+    },
+    {
+      "evidenceKinds": [
+        "condition-expression",
+        "file",
+        "rule-object"
+      ],
+      "factTypes": [
+        "condition-expression",
+        "rule-definition"
+      ],
+      "failure": {
+        "internalError": "refuse",
+        "parseFailure": "partial-or-unavailable",
+        "unsupportedLanguage": "unavailable"
+      },
+      "id": "rule-definition",
+      "inputs": {
+        "scopeManifest": "required",
+        "sourceManifest": "required"
+      },
+      "kind": "world-model-extractor-manifest",
+      "languages": [
+        "json",
+        "yaml"
+      ],
+      "manifestSha256": "sha256:04431ad4bc177626b9f36c8f4a64703bceb9443efdc5572196c828da88d9c3c9",
+      "outputs": {
+        "derivationRecords": true,
+        "evidenceCatalogEntries": true,
+        "factLedgerEntries": true
+      },
+      "permissions": {
+        "model": "never",
+        "network": "none",
+        "writes": "derived-store-only"
+      },
+      "producer": {
+        "implementationSha256": "sha256:47524e951eaa564037652c12b5ed8145a49ac9cfce31b3fdaffa0a81d856bcb4",
+        "kind": "deterministic-module",
+        "parser": {
+          "grammarSha256": "sha256:cae5ed1950cfc286a17f0d4c839b8c5c4414ed87d161e2c38cab6b033dc73bb4",
+          "id": "closed-rule-object",
+          "version": "1.0.0"
+        }
+      },
+      "schemaVersion": 1,
+      "tests": {
+        "conformanceReceiptSha256": "sha256:084d2d4faad0d9079fe5376aaac025ccacbd2e5ea4d4310b928ab873bb2de08b"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "evidenceKinds": [
+        "runtime-observation"
+      ],
+      "factTypes": [
+        "runtime-frequency"
+      ],
+      "failure": {
+        "internalError": "refuse",
+        "parseFailure": "partial-or-unavailable",
+        "unsupportedLanguage": "unavailable"
+      },
+      "id": "runtime-observation-import",
+      "inputs": {
+        "scopeManifest": "required",
+        "sourceManifest": "required"
+      },
+      "kind": "world-model-extractor-manifest",
+      "languages": [
+        "json"
+      ],
+      "manifestSha256": "sha256:d1cba2616badbc7a97d511f11a86e9c0dcb2d8c6c3b6e16663bc071816a00dd3",
+      "outputs": {
+        "derivationRecords": true,
+        "evidenceCatalogEntries": true,
+        "factLedgerEntries": true
+      },
+      "permissions": {
+        "model": "never",
+        "network": "none",
+        "writes": "derived-store-only"
+      },
+      "producer": {
+        "implementationSha256": "sha256:580150198f8fde33b192cd44dc18cabb98758aa11addfd183fcfeeed2fc846dd",
+        "kind": "deterministic-module",
+        "parser": {
+          "grammarSha256": "sha256:40a911877c44aafef2e1beca9f5dbba803bb7c1048666f98f385d6b18fdffe8e",
+          "id": "sealed-runtime-frequency-observations",
+          "version": "1.0.0"
+        }
+      },
+      "schemaVersion": 1,
+      "tests": {
+        "conformanceReceiptSha256": "sha256:073ce679965ba1ed8b8434d2a8a524b6da269a5dcf9288422b4445bae8e2e4fa"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "evidenceKinds": [
+        "export",
+        "signature"
+      ],
+      "factTypes": [
+        "export",
+        "signature"
+      ],
+      "failure": {
+        "internalError": "refuse",
+        "parseFailure": "partial-or-unavailable",
+        "unsupportedLanguage": "unavailable"
+      },
+      "id": "signature-and-export",
+      "inputs": {
+        "scopeManifest": "required",
+        "sourceManifest": "required"
+      },
+      "kind": "world-model-extractor-manifest",
+      "languages": [
+        "c",
+        "cpp",
+        "csharp",
+        "go",
+        "java",
+        "javascript",
+        "kotlin",
+        "php",
+        "python",
+        "ruby",
+        "rust",
+        "swift",
+        "typescript"
+      ],
+      "manifestSha256": "sha256:c04df6ccb534255f7f8e409e6ac17e54b08fbd4496189c7ed87fbc51569e1baf",
+      "outputs": {
+        "derivationRecords": true,
+        "evidenceCatalogEntries": true,
+        "factLedgerEntries": true
+      },
+      "permissions": {
+        "model": "never",
+        "network": "none",
+        "writes": "derived-store-only"
+      },
+      "producer": {
+        "implementationSha256": "sha256:9a481fa851645b622196851886185d064ba64f95888e8ffa488c7e0120802bfb",
+        "kind": "deterministic-module",
+        "parser": {
+          "grammarSha256": "sha256:14322292e4bb7578157b9d0606562c53a378ede245e9ff361cea0912dce8fd44",
+          "id": "closed-structural-signature",
+          "version": "1.0.0"
+        }
+      },
+      "schemaVersion": 1,
+      "tests": {
+        "conformanceReceiptSha256": "sha256:1a65d01dbd2133ffe5581f55b7ec2a8fdeac0dafbe0d5e900fe779a4dfe4b923"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "evidenceKinds": [
+        "symbol"
+      ],
+      "factTypes": [
+        "symbol-exists",
+        "symbol-index"
+      ],
+      "failure": {
+        "internalError": "refuse",
+        "parseFailure": "partial-or-unavailable",
+        "unsupportedLanguage": "unavailable"
+      },
+      "id": "symbol-skeleton",
+      "inputs": {
+        "scopeManifest": "required",
+        "sourceManifest": "required"
+      },
+      "kind": "world-model-extractor-manifest",
+      "languages": [
+        "c",
+        "cpp",
+        "csharp",
+        "go",
+        "java",
+        "javascript",
+        "kotlin",
+        "php",
+        "python",
+        "ruby",
+        "rust",
+        "swift",
+        "typescript"
+      ],
+      "manifestSha256": "sha256:de9f4abd9539305b7b1a61cb582b2a60811f034246fd4106bb48ee1040328d82",
+      "outputs": {
+        "derivationRecords": true,
+        "evidenceCatalogEntries": true,
+        "factLedgerEntries": true
+      },
+      "permissions": {
+        "model": "never",
+        "network": "none",
+        "writes": "derived-store-only"
+      },
+      "producer": {
+        "implementationSha256": "sha256:c8a7657b3cff621b0b614de9f95ed101dae324215e561a47df74ceede16a043d",
+        "kind": "deterministic-module",
+        "parser": {
+          "grammarSha256": "sha256:5aae30cd5887f7424f42533403fcc06ccaa85d4456a0c11846e8330a29cab459",
+          "id": "sflow-polyglot-lexical-symbols",
+          "version": "3.0.0"
+        }
+      },
+      "schemaVersion": 1,
+      "tests": {
+        "conformanceReceiptSha256": "sha256:98c637d9e3efc79d72f87da39378dfa6c13649edc4d720a142731c7fc988c4bf"
+      },
+      "version": "1.2.0"
+    },
+    {
+      "evidenceKinds": [
+        "test-identity"
+      ],
+      "factTypes": [
+        "test-identity"
+      ],
+      "failure": {
+        "internalError": "refuse",
+        "parseFailure": "partial-or-unavailable",
+        "unsupportedLanguage": "unavailable"
+      },
+      "id": "test-identity",
+      "inputs": {
+        "scopeManifest": "required",
+        "sourceManifest": "required"
+      },
+      "kind": "world-model-extractor-manifest",
+      "languages": [
+        "csharp",
+        "go",
+        "java",
+        "javascript",
+        "kotlin",
+        "php",
+        "python",
+        "ruby",
+        "rust",
+        "typescript"
+      ],
+      "manifestSha256": "sha256:cdd116d408585087a1878c7eaee42fdd0e616c779e1c0688b7d9f82dffb3b1d3",
+      "outputs": {
+        "derivationRecords": true,
+        "evidenceCatalogEntries": true,
+        "factLedgerEntries": true
+      },
+      "permissions": {
+        "model": "never",
+        "network": "none",
+        "writes": "derived-store-only"
+      },
+      "producer": {
+        "implementationSha256": "sha256:70e16df28fc6d4d6e5708bd758a220a7b06f403cb98a7c1b64f12f4d73401c95",
+        "kind": "deterministic-module",
+        "parser": {
+          "grammarSha256": "sha256:a6cd7161a2d8b961355d1fceae1ee6babcd8fc0b8953723335f9a913cb30ad65",
+          "id": "closed-test-identity",
+          "version": "1.0.0"
+        }
+      },
+      "schemaVersion": 1,
+      "tests": {
+        "conformanceReceiptSha256": "sha256:30fd88a44940290327131cd3040e9df966d0429ba903ad44eb3d1c07800f45ca"
+      },
+      "version": "1.0.0"
+    }
+  ],
+  "registrySha256": "sha256:9e45bc71bcd604dc123657bbe796a528254ab2da272c2e13acc388ea3caefe8b",
+  "schemaVersion": 1
+}

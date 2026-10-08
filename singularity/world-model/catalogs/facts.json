@@ -1,0 +1,4491 @@
+{
+  "extractorRegistrySha256": "sha256:9e45bc71bcd604dc123657bbe796a528254ab2da272c2e13acc388ea3caefe8b",
+  "facts": [
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-8b5a3b15e01bf7b3",
+      "evidenceIds": [],
+      "factSha256": "sha256:5abbdc047d7207e911fa2f634466389d76efde850d53d094da66b5a5910aac2e",
+      "factType": "changed-symbol",
+      "id": "FACT-00b06cf6b6b3dcfa",
+      "reason": {
+        "attemptedProducer": "change-region",
+        "code": "NO_BASELINE",
+        "detail": "The pinned source revision has no exact first-parent baseline; changed-symbol extraction is unavailable."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "change-region:changed-symbol",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-7eb690154721d6bd",
+      "evidenceIds": [],
+      "factSha256": "sha256:5938cf085e902c7b17ab884b1bd2483e48f11b2deb92cdcd6e0fedbfe829c438",
+      "factType": "runtime-frequency",
+      "id": "FACT-01b08e390745938f",
+      "reason": {
+        "attemptedProducer": "required-fact-coverage",
+        "code": "NO_RUNTIME_EVIDENCE",
+        "detail": "No registered deterministic producer supplied runtime-frequency for dev.impact@4 within the pinned scope."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "dev.impact@4:runtime-frequency",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/components/FinancialCalculator.jsx.",
+      "claimSha256": "sha256:b6df43c549444531db85326bc1ffc1d598f1e630c43444ac5cc39f8d377adc94",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-1442171bdb53c747"
+      ],
+      "factSha256": "sha256:5f8f41ce4b5e883fdf7efe199195c1906cb9b308f77ed59f497bead3cc9bc3fd",
+      "factType": "dependency-edge",
+      "id": "FACT-0201f43f517c608f",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/components/FinancialCalculator.jsx",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "public/icons.svg exists as a 100644 Git blob with 5031 bytes.",
+      "claimSha256": "sha256:6d21b7a5e3958378aa0869f513b7d156c563eb85566c1bd215ff7db250775952",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-e324fac57b517373"
+      ],
+      "factSha256": "sha256:5306bfdb7a7e788678788d1ed2d6f58edb969bc67df7d56ceb60ef45cef62f0c",
+      "factType": "file-exists",
+      "id": "FACT-02c963de1cff1236",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "public/icons.svg",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/components/StandardKeypad.jsx exists as a 100644 Git blob with 6382 bytes.",
+      "claimSha256": "sha256:d7ab0fc0c84143d69c3dbe48c75e65eb4d1cd34c75c2d88a0c92ad379d5487fd",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-7ed0c9c6d21fad20"
+      ],
+      "factSha256": "sha256:a0d939a57ff36a6d409052dafee3bf46c52ffc1f095d9fb2941831a5489e6533",
+      "factType": "file-exists",
+      "id": "FACT-039fce9faa5c4a51",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/StandardKeypad.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/audio.js declares export const playSound at line 18.",
+      "claimSha256": "sha256:21875c1a9b7ee75618c0a398656b3de536b8d312a70f6988f805ad8cac218b9d",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-9374ac66621f3028"
+      ],
+      "factSha256": "sha256:129a8d2b33f6983396629a02d968e0e70c4c3cff468635fb474202cf1b717c51",
+      "factType": "signature",
+      "id": "FACT-04ebc705a8a45eb4",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/audio.js#playSound",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/main.jsx exists as a 100644 Git blob with 229 bytes.",
+      "claimSha256": "sha256:abb20f1b08d3cb5cfe6a446fa0fa7aeeaad17546155756fc4406e35360e6e2ba",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-4f95f0869594f9dc"
+      ],
+      "factSha256": "sha256:3ab31c2d1713a56965313e19bb6de8e95dca468be3e233e541e27e044cd2b88b",
+      "factType": "file-exists",
+      "id": "FACT-05fed5eceb72a129",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/main.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js declares export const calculateTip at line 200.",
+      "claimSha256": "sha256:355e0e07b1ab8dbaa13ca727498c74c13a0b1969d0722500ffc2e95560793927",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-64a8d3a93f656059"
+      ],
+      "factSha256": "sha256:d28bc7a21e8dd1e4ce3b6ddc12e19d81dead4e778cdd22667b49b457d28463dd",
+      "factType": "signature",
+      "id": "FACT-06001a6ae9045380",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#calculateTip",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-7eb690154721d6bd",
+      "evidenceIds": [],
+      "factSha256": "sha256:4848cf1591eaa40a1de1fd92b2b612a5860df3c7a6ce4e66561b4c46c811612c",
+      "factType": "protocol-field",
+      "id": "FACT-06b92ea324a8de92",
+      "reason": {
+        "attemptedProducer": "required-fact-coverage",
+        "code": "NO_REGISTERED_PRODUCER",
+        "detail": "No registered deterministic producer supplied protocol-field for arch.contracts@4 within the pinned scope."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "arch.contracts@4:protocol-field",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "vite.config.js exists as a 100644 Git blob with 262 bytes.",
+      "claimSha256": "sha256:502c768cf98e5365361c1064de503032b76320c4123dd888d88e53d8868788ce",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-838969db01a35c56"
+      ],
+      "factSha256": "sha256:3a55758403570d7cc9187f1fd6b9869e32803a37c2adf002fe0b3ca9c45dca3b",
+      "factType": "file-exists",
+      "id": "FACT-0756f91e21d19811",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "vite.config.js",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/FunctionGrapher.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:c35a9e5fedee9414e1d576732b4e2fd6a4b6fbb22483f68fd5f6c4170e5b0ffb",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-3fa0072ee0d173fe"
+      ],
+      "factSha256": "sha256:b180fdc6cfd27ede69b1999210b86417f1e1cd54d428b619fbf5b41ba6516140",
+      "factType": "dependency-edge",
+      "id": "FACT-0891f818bc2ec4d1",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FunctionGrapher.jsx->src/utils/audio.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "AC-003 is explicitly bound to src/utils/evaluator.test.js at line 6.",
+      "claimSha256": "sha256:f63f3324bfda3cda47c4b6c46e637f4df32e6c39db5fc144b02909e69f98ec88",
+      "conflictsWith": [],
+      "derivationId": "DRV-856d200f81fa9587",
+      "evidenceIds": [
+        "EV-e755efa41535dd5a"
+      ],
+      "factSha256": "sha256:b15d27a5bc0528d05fce87a8362bb418ac22507b716d0ed28ced5859b2119309",
+      "factType": "clause-binding",
+      "id": "FACT-08baa7e4977bd19b",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "AC-003@src/utils/evaluator.test.js:6",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/build.test.js declares import target vitest.",
+      "claimSha256": "sha256:e55c33a19e282fc174c8a42353a501ccb36773f9fd9cb221743b53c57a468d45",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-ec3bc266659085ff"
+      ],
+      "factSha256": "sha256:d6701dec08f3a128dbf9111a85533e06e3e803a8e3f5dec4af7233a5fbe53735",
+      "factType": "import-dependency",
+      "id": "FACT-08fbbe1cf5c19147",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/build.test.js->vitest",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/HistoryDrawer.jsx declares export const HistoryDrawer at line 5.",
+      "claimSha256": "sha256:a5892111c15c6beeafe10b4c4dfcb342f86aa4a5908549421ed9347151220d28",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-17d137c1d4567b39"
+      ],
+      "factSha256": "sha256:d69246a80922f46eb13060b4f6900b495597f7dc706d8bf9d67cd455bfd9400d",
+      "factType": "signature",
+      "id": "FACT-09b84f56a3736dc3",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/HistoryDrawer.jsx#HistoryDrawer",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/StandardKeypad.jsx declares import target react.",
+      "claimSha256": "sha256:2b2af1ad9a07490b05d25ceca6aa7cb77c0282c346efcecacfae7691f1cf79ea",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-4eb91907a435113d"
+      ],
+      "factSha256": "sha256:ca42e8242ad30f5b8f2d58efe315c793b39ec335793d4dcc447606dd5d3c0ad3",
+      "factType": "import-dependency",
+      "id": "FACT-0b669fa47fdfaaf8",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/StandardKeypad.jsx->react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-7eb690154721d6bd",
+      "evidenceIds": [],
+      "factSha256": "sha256:a75cfca0c4a687ebd7dd2c38c56f0f063ae58e12178413c802b0c5c68fc8322e",
+      "factType": "schema-contract",
+      "id": "FACT-0b75256947ec9954",
+      "reason": {
+        "attemptedProducer": "required-fact-coverage",
+        "code": "NO_REGISTERED_PRODUCER",
+        "detail": "No registered deterministic producer supplied schema-contract for arch.contracts@4 within the pinned scope."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "arch.contracts@4:schema-contract",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/components/HistoryDrawer.jsx exists as a 100644 Git blob with 4203 bytes.",
+      "claimSha256": "sha256:bf4874da9d4511ed3ec3a749b0ca41bf309da62fdf9069ceffee715edd18339d",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-4116697068617a95"
+      ],
+      "factSha256": "sha256:2fa3dbcd67ceeddc718af38aa075809ff3d0538da166a6fdebaa4c03b6b35f14",
+      "factType": "file-exists",
+      "id": "FACT-0cfc95dedafd3d93",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/HistoryDrawer.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "evaluateExpression is explicitly exported by src/utils/evaluator.js at line 4.",
+      "claimSha256": "sha256:cba7b20df81320a473073f3afeb51a7980074f120ffe6469258217df9b38ee39",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-f36e5a54b9645652"
+      ],
+      "factSha256": "sha256:2de7a53723e729589ec486560af1de621cc4d36ace9fb7ede60bb5a079ab1922",
+      "factType": "export",
+      "id": "FACT-0df29870c78c2d57",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#evaluateExpression",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/StandardKeypad.jsx declares export const StandardKeypad at line 5.",
+      "claimSha256": "sha256:1f46f18ec00eebf89ac2bb116f1458185d7347bb6dd2d2a6b7ca0cd9680e727d",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-abe7576f160ef630"
+      ],
+      "factSha256": "sha256:8d738c41e9b17977778ce3caad84508367303de79c41693daa65d1a2b60097fc",
+      "factType": "signature",
+      "id": "FACT-0f374bd554ba2874",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/StandardKeypad.jsx#StandardKeypad",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "eslint.config.js exists as a 100644 Git blob with 568 bytes.",
+      "claimSha256": "sha256:bbae1908a11d3c9189c44c84eff48733f2e386bfce17f95d7bcea09ce5f98d9f",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-99a475259e62a899"
+      ],
+      "factSha256": "sha256:99e2f53d4fe6086e416a516c4a93e5222c1cb2ffeb8344cbd42a6c595eefd38b",
+      "factType": "file-exists",
+      "id": "FACT-13aa3e0cab4f2423",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "eslint.config.js",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/FunctionGrapher.jsx declares import target mathjs.",
+      "claimSha256": "sha256:02bb0e8c6567499d4db603312d39469846e4ed6f275e2b19f25ebc9ed2784169",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-f4ed1727fa2ece30"
+      ],
+      "factSha256": "sha256:8d79f6dc0b9db4c7a4dd9bed332ccada10d94bc3f145d3524b0ecf2b1ffc0ab3",
+      "factType": "import-dependency",
+      "id": "FACT-143093f56b17295b",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FunctionGrapher.jsx->mathjs",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/utils/evaluator.js.",
+      "claimSha256": "sha256:b927e530087429b3b8ba0164f1060fdf206362871426f4ae6db4c5190f1a09ac",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-825c5be58b5acc9e"
+      ],
+      "factSha256": "sha256:ba89b38b6e2ca3680904391c49523e8fecacfdbb732843f31f2d99065c506e68",
+      "factType": "dependency-edge",
+      "id": "FACT-147146b50ecb2eb6",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/utils/evaluator.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "FunctionGrapher is explicitly exported by src/components/FunctionGrapher.jsx at line 14.",
+      "claimSha256": "sha256:5a6cbfa51daac0bebcf31528c4586514ef9322cbde052cb19220ef48ccd0e145",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-ad3aa8e2f0a149e6"
+      ],
+      "factSha256": "sha256:bf87495a71a8706bb1a9612452dc770beb8baf056f957454bc63949ed6a50c2f",
+      "factType": "export",
+      "id": "FACT-14808854dc45f158",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FunctionGrapher.jsx#FunctionGrapher",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/FunctionGrapher.jsx declares import target react.",
+      "claimSha256": "sha256:b04f7fa813a9ba2409d5214b6cd439afd03e6f74068665fea94b623234adcd81",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-c0b410fcc49b6389"
+      ],
+      "factSha256": "sha256:f85f3b56b1de8964e03efe12dded1d68b45a39732113cfa4de6bc7f9d876ee99",
+      "factType": "import-dependency",
+      "id": "FACT-15f094974da0dbb9",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FunctionGrapher.jsx->react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'applies win11-dark theme via the shared data-theme attribute' is declared in src/App.test.jsx at line 151.",
+      "claimSha256": "sha256:f13e6cde51a1847ff6b5ddac8c4a5a98da48c64c59226a86b1328aba3ccee9a0",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-8f3626c587beb02e"
+      ],
+      "factSha256": "sha256:ad02785d2643c68baab85f4c88d3b9e5b25821b74ef52956a91a34f2b0da6fbd",
+      "factType": "test-identity",
+      "id": "FACT-178775e50e03bc1e",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx#applies win11-dark theme via the shared data-theme attribute",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/components/StandardKeypad.jsx.",
+      "claimSha256": "sha256:df9bedf67921d36e549396d38bd98e456933894adbef6fb58992e33543d2265c",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-2818b14e3aa9774d"
+      ],
+      "factSha256": "sha256:251049fd85127510e0706d4cb6e3719d13c62cda9624305e305ed0185f99e70e",
+      "factType": "dependency-edge",
+      "id": "FACT-178f27a99857c514",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/components/StandardKeypad.jsx",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/components/UnitConverter.jsx has the registered javascript source extension.",
+      "claimSha256": "sha256:e7549da95fea01f76b1aff90639030e183640f122c2d234b6e0a267c5f4c7327",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-5261634a1fd7d297"
+      ],
+      "factSha256": "sha256:f89f512f8b57677d7abbf25a6ec921ab1b81a30440cb86ea4a6f6d6240fe8620",
+      "factType": "language-detected",
+      "id": "FACT-18914be1de1d4d47",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/UnitConverter.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-7eb690154721d6bd",
+      "evidenceIds": [],
+      "factSha256": "sha256:7997d84af2e7433f03b9aa2350c18439369ea846f29b27aae1eb46fc09a48c51",
+      "factType": "ownership-concentration",
+      "id": "FACT-1960d4a013933408",
+      "reason": {
+        "attemptedProducer": "required-fact-coverage",
+        "code": "NO_REGISTERED_PRODUCER",
+        "detail": "No registered deterministic producer supplied ownership-concentration for dev.hotspots@4 within the pinned scope."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "dev.hotspots@4:ownership-concentration",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.test.jsx imports the in-scope module src/App.jsx.",
+      "claimSha256": "sha256:f42d598031e4aa09073bb6b7b43c4628de6214751f9dbddac107a7253ddd9287",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-a28b55e93b0dd19f"
+      ],
+      "factSha256": "sha256:be1de5647b8ca8e9d366d2026dfa91904072d2868d92ac5d23cfa1dbb281e41f",
+      "factType": "dependency-edge",
+      "id": "FACT-1a418ea50393db89",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx->src/App.jsx",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "eslint.config.js declares import target eslint-plugin-react-hooks.",
+      "claimSha256": "sha256:0fbe1802bf05b6c755327716fa9c1f9e5a0b3aa74835cdfe9a4a983021dee3dc",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-7559ba0d06ac29ea"
+      ],
+      "factSha256": "sha256:0c3f931c29f664b518a88ce7b7943037bcdd01245e440fa61fb8a8df0a1d5d9f",
+      "factType": "import-dependency",
+      "id": "FACT-1b612c883e20ba54",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "eslint.config.js->eslint-plugin-react-hooks",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "binding calculateCompoundInterest is exported in src/utils/evaluator.js at line 181.",
+      "claimSha256": "sha256:9ada1d72308c5f3d783059e9e0028884d89f9203e65c4609ea902be6229f5929",
+      "conflictsWith": [],
+      "derivationId": "DRV-4e035f536b28b89d",
+      "evidenceIds": [
+        "EV-8a859620ba8f8098"
+      ],
+      "factSha256": "sha256:123507f65213d735634ed19071560b3a29fec01eef36014face2ccf8e24f8697",
+      "factType": "symbol-exists",
+      "id": "FACT-1bf905e0a8353375",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#calculateCompoundInterest",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/components/Header.jsx exists as a 100644 Git blob with 6725 bytes.",
+      "claimSha256": "sha256:9aac319ff1c4b22d225361179d3c9cba9d76b7206a17c8573a46276d001126a6",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-f37db04f98123d7c"
+      ],
+      "factSha256": "sha256:25807cc9435f6282a7950e2c07c8712316f23412c1aae41db60501db625725a2",
+      "factType": "file-exists",
+      "id": "FACT-1bfd82a296b331f8",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/Header.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/FinancialCalculator.jsx declares import target lucide-react.",
+      "claimSha256": "sha256:60cb5ec392b0931c8ddcdab6cd741520a7e29b0c0c813c225dc2247b1572b429",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-c05d89f738040f24"
+      ],
+      "factSha256": "sha256:56cfd37f6db3e91ed9a3e07367d8835676189aaa53f66c4e38d9918de0cce39b",
+      "factType": "import-dependency",
+      "id": "FACT-1c6bc5dae7d7423b",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FinancialCalculator.jsx->lucide-react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-8b5a3b15e01bf7b3",
+      "evidenceIds": [],
+      "factSha256": "sha256:9118eefbded7194761aede6fecc71788ec7a6a9ef48861a45eef7e5e49a1dc3c",
+      "factType": "test-impact",
+      "id": "FACT-1c7efb7719ff7e8b",
+      "reason": {
+        "attemptedProducer": "change-region",
+        "code": "NO_BASELINE",
+        "detail": "The pinned source revision has no exact first-parent baseline; test-impact extraction is unavailable."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "change-region:test-impact",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "StandardKeypad is explicitly exported by src/components/StandardKeypad.jsx at line 5.",
+      "claimSha256": "sha256:19468483dee1c6d48d4b0a136b166b3c9766c6efb5db927b02badc770a46a38d",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-77bfa1739b1ccd90"
+      ],
+      "factSha256": "sha256:23d662ae185c04c8491419e66924000e5e41f7458afcc57734a93ea1307e644f",
+      "factType": "export",
+      "id": "FACT-1d14ef41ceb45e6f",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/StandardKeypad.jsx#StandardKeypad",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/FinancialCalculator.jsx imports the in-scope module src/utils/evaluator.js.",
+      "claimSha256": "sha256:b3c7d2a600f9e83f6083da01c1ff3235e0b713e8f5666f51fc0f9b7d2463988b",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-2513bfc50ac5ccd0"
+      ],
+      "factSha256": "sha256:043a73ef327766caeaf1af0e5bd94b0121bdf6dd59f5d04ac20850deafd40130",
+      "factType": "dependency-edge",
+      "id": "FACT-1dae072eb20d5842",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FinancialCalculator.jsx->src/utils/evaluator.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'completes successfully and emits the expected bundle' is declared in src/build.test.js at line 16.",
+      "claimSha256": "sha256:227339170acf4919e1277f7bc32b28d97d4debb3c9d61d0178bb9d8a7b4d81c1",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-1861015ed2455bd0"
+      ],
+      "factSha256": "sha256:074128d698276fccbbf278cc4d2bcd0d7d7c87b79adb81bef745643ccc7b73dd",
+      "factType": "test-identity",
+      "id": "FACT-1dca1c9b16887967",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/build.test.js#completes successfully and emits the expected bundle",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'exposes win11-light and win11-dark as selectable themes' is declared in src/App.test.jsx at line 139.",
+      "claimSha256": "sha256:f4bbe8996fbf25ba9d9b7d2dc16d9ff16c3d7805a93e00a40711c732308dbd7d",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-9338a6356d3b727d"
+      ],
+      "factSha256": "sha256:a9e7361d07546df484817d0ecacba5d63c4ac358e642b9adcd9c396703e053d6",
+      "factType": "test-identity",
+      "id": "FACT-1f356a1bf503e119",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx#exposes win11-light and win11-dark as selectable themes",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/KeyboardShortcutsModal.jsx declares import target lucide-react.",
+      "claimSha256": "sha256:46d0dd4706b031858b0aafc9f339ccf2ac0dad2b98ed24def6876e91a9d447f5",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-927be9793db5c98a"
+      ],
+      "factSha256": "sha256:e6c8a04cd83c080ee93cf04d82f9f44f0487aafe4dbbbd05846af4b98e058525",
+      "factType": "import-dependency",
+      "id": "FACT-2231a6473749042d",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/KeyboardShortcutsModal.jsx->lucide-react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:d4e674892b255691a5dbee984d3be0f16d3cbec6de2a9733d745a5bc25d31dd7",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-f92388b1febdce82"
+      ],
+      "factSha256": "sha256:080b81c94430d4a764c20a780866bb8b5c8287a25ce8e8545c97ecd5851058cc",
+      "factType": "dependency-edge",
+      "id": "FACT-22ba7ed970f7c6fa",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/utils/audio.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/HistoryDrawer.jsx declares import target react.",
+      "claimSha256": "sha256:884b42c32b33fee8ede0d5a0976f3572401583dd6d7818378f00d1fc1e203b66",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-9d4c5e84d4b4f735"
+      ],
+      "factSha256": "sha256:05dc77580b2b803609e0b696b482cdfc64fecb83df0fc23340b63ff8baf3e914",
+      "factType": "import-dependency",
+      "id": "FACT-2309d7a3130a046e",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/HistoryDrawer.jsx->react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/App.jsx has the registered javascript source extension.",
+      "claimSha256": "sha256:3967009ef579eeb05e7bcfad2e86fa25d5951efb6739894393c5876fda6c3d11",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-18325c57fb6c027b"
+      ],
+      "factSha256": "sha256:400bdc975752af282a81af2d85c00e6b11dbaf465bc66e9be7a9d1cfbdf068e7",
+      "factType": "language-detected",
+      "id": "FACT-293602eb511f2c23",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/components/HistoryDrawer.jsx.",
+      "claimSha256": "sha256:9abc968734f0c0cf0bcbde9e555b7d23c08a1bcd0c2e9af47bada26bd8d71194",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-626b53284318a4c4"
+      ],
+      "factSha256": "sha256:88f1da88a950b1adf81156c1eb62f7220a67df239a806e84c706f040ce4a1d44",
+      "factType": "dependency-edge",
+      "id": "FACT-2bbf45c2a43cedc9",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/components/HistoryDrawer.jsx",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/utils/audio.js exists as a 100644 Git blob with 3186 bytes.",
+      "claimSha256": "sha256:66d9846ca8c230c777cffbdabb1ab8a167567cbe45f4b53702fba5f805bd8270",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-916cb59f0b45196a"
+      ],
+      "factSha256": "sha256:986417eab8058455635830e21e7cfe66d4312fb48b033873299aa65d4b714281",
+      "factType": "file-exists",
+      "id": "FACT-2ccd11b56256f8b7",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/audio.js",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/HistoryDrawer.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:fc8c994be54283ab403624474638f625c11f2defd702f2c8dd998af162064762",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-ad4a5bc004bf9aae"
+      ],
+      "factSha256": "sha256:d951f6eb357fbe581b7bbc59cca017e400729cc489f8b02a6eadf3488ed71088",
+      "factType": "dependency-edge",
+      "id": "FACT-2ec06c28d50e996c",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/HistoryDrawer.jsx->src/utils/audio.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'switches to exponential notation for very large numbers' is declared in src/utils/evaluator.test.js at line 72.",
+      "claimSha256": "sha256:1901bf96c1ed3ce4271a9158b2b515383b7756b34c6e0f91a5efe20f4b9c2344",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-9daebd4e0b8e8d4a"
+      ],
+      "factSha256": "sha256:dff9c67eb7674f1610350788e9d8a2d728d6ff88b67e6ea9d244a13e175126e8",
+      "factType": "test-identity",
+      "id": "FACT-2f1b117e865aedbd",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js#switches to exponential notation for very large numbers",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.test.js imports the in-scope module src/utils/evaluator.js.",
+      "claimSha256": "sha256:4043199deda0d7aa0afc2fba4baca3b06e449006542d424ae97ea7faab905ec9",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-cec729bdacddc9ed"
+      ],
+      "factSha256": "sha256:45a8c0996dc4f01525cce0205b503b271d568ca3505529e62f4289559e703ff5",
+      "factType": "dependency-edge",
+      "id": "FACT-33190a720986281e",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js->src/utils/evaluator.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/test/setup.js has the registered javascript source extension.",
+      "claimSha256": "sha256:18d98a41f8a6d88e00c561cbff1b39f814c69dbbfe28d10c1223b4b09dc0e32d",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-90a43b7e283aa28f"
+      ],
+      "factSha256": "sha256:07a6892d141f44a0b4cc077f2e3989f88e2ae5c2016860bfb4b2a4a62916a614",
+      "factType": "language-detected",
+      "id": "FACT-331ac5c192060149",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/test/setup.js",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "describe test 'Responsive navigation (desktop rail + mobile dropdown)' is declared in src/App.test.jsx at line 185.",
+      "claimSha256": "sha256:a0e4734fbbba8f334fb225b97400578c6817913154f4a02bb5638653db8e573b",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-5e948305070a5555"
+      ],
+      "factSha256": "sha256:090e278114f3d566bce1f308d750004150635a46d98373e12f714acfb9b2936d",
+      "factType": "test-identity",
+      "id": "FACT-3487c84cd9b6691d",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx#Responsive navigation (desktop rail + mobile dropdown)",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/components/ScientificKeypad.jsx has the registered javascript source extension.",
+      "claimSha256": "sha256:7e586aad026132c7ff6bd16413fb1b8ccfdaf42c42736bd6bf0fa2180fa57bb4",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-a5848c97ae075c29"
+      ],
+      "factSha256": "sha256:d7e38287a43e36d3efee9d3adf04b6a29384aada0c7fb90900fa3c1cc6ca6cb3",
+      "factType": "language-detected",
+      "id": "FACT-35fc5b4220c20dee",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/ScientificKeypad.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "binding StandardKeypad is exported in src/components/StandardKeypad.jsx at line 5.",
+      "claimSha256": "sha256:0bfcc49c9cc2096a09481d8bd4041ab01ea93d2ba46a8d308fe5a3145e008960",
+      "conflictsWith": [],
+      "derivationId": "DRV-4e035f536b28b89d",
+      "evidenceIds": [
+        "EV-4c86429394d084d0"
+      ],
+      "factSha256": "sha256:8b8d00ccf85112e89456d7b3ce48255073900af7afcb74041d7820bb9af3f697",
+      "factType": "symbol-exists",
+      "id": "FACT-3aee38d4eb448f75",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/StandardKeypad.jsx#StandardKeypad",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "calculateEMI is explicitly exported by src/utils/evaluator.js at line 161.",
+      "claimSha256": "sha256:8cad98d473c0f5eaccfdc6861d5723d39da0fa21987b67276197006f7e4824c3",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-c1bca0782056ec00"
+      ],
+      "factSha256": "sha256:07268455d9710bae67dcaf1aa77a8eeb1612b3036b6cec877b055706061bc225",
+      "factType": "export",
+      "id": "FACT-3cde07cf934faefa",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#calculateEMI",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "eslint.config.js declares import target @eslint/js.",
+      "claimSha256": "sha256:e1b069f8aab6ae7a10142107c4143c034268030ab5fce3af455e73b06538572a",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-e9954eaba3c641a5"
+      ],
+      "factSha256": "sha256:795554eb78fa543891758fa864d1f5b4c261aef4d181fdf39022a8566bb6db54",
+      "factType": "import-dependency",
+      "id": "FACT-3d2384372182f2d2",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "eslint.config.js->@eslint/js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": ".gitignore exists as a 100644 Git blob with 253 bytes.",
+      "claimSha256": "sha256:12ded6085a283becedcf7a8c8061d0f7b07589c725ab39b392591e5ae1e6ced8",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-61503775722e1954"
+      ],
+      "factSha256": "sha256:2dce070c89608b3af04c07e024db9b3c7f6d51729d5aa2607a392437e5100d5e",
+      "factType": "file-exists",
+      "id": "FACT-3e2618afa0314431",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": ".gitignore",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-8b5a3b15e01bf7b3",
+      "evidenceIds": [],
+      "factSha256": "sha256:225fdbe467822f0bd1cc716868ff2ae5ef11de266e99b5b352364fe77e199691",
+      "factType": "structural-impact",
+      "id": "FACT-3f956568c505d27c",
+      "reason": {
+        "attemptedProducer": "change-region",
+        "code": "NO_BASELINE",
+        "detail": "The pinned source revision has no exact first-parent baseline; structural-impact extraction is unavailable."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "change-region:structural-impact",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js declares export const convertUnits at line 140.",
+      "claimSha256": "sha256:ea65a51a91e10c0ea0308a2196ba5eaddca88aceec483ee139a12f0676d6dd15",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-9920a6e65dcdac42"
+      ],
+      "factSha256": "sha256:249e3916384e1fc8af106fc235efe232442a67e638dd0f3cdd35e64b1b9b688a",
+      "factType": "signature",
+      "id": "FACT-401c7c30936cf0cd",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#convertUnits",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'toggles sound on and off' is declared in src/App.test.jsx at line 118.",
+      "claimSha256": "sha256:0f33634347c0c61286336e293116d6b18c194bfd70d37206d4c713f6c8d0b069",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-94363f150ccd9ad9"
+      ],
+      "factSha256": "sha256:a9b57e9db85cf834a415f19bdfa17818ab37d6ee48cbd9b6f432c6e730f02621",
+      "factType": "test-identity",
+      "id": "FACT-41b87c998ae4f0af",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx#toggles sound on and off",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/components/Display.jsx exists as a 100644 Git blob with 3430 bytes.",
+      "claimSha256": "sha256:952f05675f99d338ac024f701a0aac9c920b603b78c578aec8ce87997720e8a3",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-36bcfcef4e8ca46f"
+      ],
+      "factSha256": "sha256:5298408e5e56f914d8b0640ade140b8c41337ca518bef0e2892abdfb385e0b76",
+      "factType": "file-exists",
+      "id": "FACT-4276b90268db53cb",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/Display.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/Display.jsx declares import target react.",
+      "claimSha256": "sha256:ef29db7eb21aec906e5dee4298107bc59b6ee37fb609eefc211344b62dfbfd9d",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-2764c03e785ec191"
+      ],
+      "factSha256": "sha256:ac6a4d5c9f84b0e1b57419336463c2b1b448e88fe901b6d78203f45cb6a327be",
+      "factType": "import-dependency",
+      "id": "FACT-4366ecbbc1e69407",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/Display.jsx->react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "eslint.config.js declares import target globals.",
+      "claimSha256": "sha256:c7a341b29054f46fb1c5f8d63e2ad25ce0bbc453b0ab18948d9c19b775186761",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-30fa5cd3419eba94"
+      ],
+      "factSha256": "sha256:774182bea9c25714c9b6605e1c5578ad6ee01e74b71cd18eb67db58e673d0fa3",
+      "factType": "import-dependency",
+      "id": "FACT-4474e8172d90f913",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "eslint.config.js->globals",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/KeyboardShortcutsModal.jsx declares export const KeyboardShortcutsModal at line 5.",
+      "claimSha256": "sha256:99266b1801db3a39dd605d0d1bce48e3cc2b8ae85932f06492ca302948064a69",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-55a086e8e1e8f66e"
+      ],
+      "factSha256": "sha256:fb0134d580e1033e2bb5bc2ea94780b20f5b8234148482377ccd803b9301f603",
+      "factType": "signature",
+      "id": "FACT-448d8563e1e05b5c",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/KeyboardShortcutsModal.jsx#KeyboardShortcutsModal",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'records a calculation in history and clears it' is declared in src/App.test.jsx at line 87.",
+      "claimSha256": "sha256:53275f81aafc5732a9f46afc3b7bc30126777305e62be15f2c49b904942555b9",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-af0f308e944cbf52"
+      ],
+      "factSha256": "sha256:ea94d2de514c00b1ffde5d57e7e7576074fcc3d210c1265cac2561f900dcfd49",
+      "factType": "test-identity",
+      "id": "FACT-45d8d8727cfa00e7",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx#records a calculation in history and clears it",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "FinancialCalculator is explicitly exported by src/components/FinancialCalculator.jsx at line 6.",
+      "claimSha256": "sha256:8b07fd6ca69464a13de737ce686e353cce9794741d70f8c4d6eaac0dcfd16be6",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-79b14b45b9a818ed"
+      ],
+      "factSha256": "sha256:4ec369f36c8fb725cb7a45dc2224c84c9da09216c1ec64637a8ea8bd9a86ec5b",
+      "factType": "export",
+      "id": "FACT-465ad1111e629cf5",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FinancialCalculator.jsx#FinancialCalculator",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-7eb690154721d6bd",
+      "evidenceIds": [],
+      "factSha256": "sha256:d86b145e363fed37d23cf4e071eeab0125193c851fbfb19779e421976a008d01",
+      "factType": "incident-mapping",
+      "id": "FACT-474b746aed43fb89",
+      "reason": {
+        "attemptedProducer": "required-fact-coverage",
+        "code": "NO_REGISTERED_PRODUCER",
+        "detail": "No registered deterministic producer supplied incident-mapping for dev.hotspots@4 within the pinned scope."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "dev.hotspots@4:incident-mapping",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "Header is explicitly exported by src/components/Header.jsx at line 36.",
+      "claimSha256": "sha256:a5f97a741da9a44098f7c77a22a1918d85cc4d75faa3148923d3cb5ef7657135",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-566d1d7590e26b93"
+      ],
+      "factSha256": "sha256:5737d4b7904332af972908116b574ac83655619a0618a4796348ed6b420df9c3",
+      "factType": "export",
+      "id": "FACT-477a1d66715811de",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/Header.jsx#Header",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'evaluates basic arithmetic unchanged' is declared in src/utils/evaluator.test.js at line 8.",
+      "claimSha256": "sha256:bdaac01630929c2c31704bde95589586e8a348520d569d09dbc87d0db87013fb",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-990f85b077374c21"
+      ],
+      "factSha256": "sha256:3a0dd43c3d3ac911dcf2028703133bdd30c2b6ff995eaaf0f1a898f525831b85",
+      "factType": "test-identity",
+      "id": "FACT-48799289bd8b4373",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js#evaluates basic arithmetic unchanged",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/main.jsx imports the in-scope module src/index.css.",
+      "claimSha256": "sha256:baa1695fbe902c8e0ceb8ca9c30cc961a5aa7f6b73d3b18f1b2361e03ce14b4e",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-1cf9c9c454018eb9"
+      ],
+      "factSha256": "sha256:f7d8718a3e80900db948617b2ffa056ff1558a3b303fd981656dc49bfa04a0f1",
+      "factType": "dependency-edge",
+      "id": "FACT-4a4230f4bba40420",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/main.jsx->src/index.css",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/components/FunctionGrapher.jsx.",
+      "claimSha256": "sha256:9a1637cd603f6bd8ae25793381e1ab9b36af6290516064d622571df71a41a6a9",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-37b78ece3bc1951b"
+      ],
+      "factSha256": "sha256:1d034b72c6d339066753d29ec9799825fd1e31d27f455e613f920a2beca5e18f",
+      "factType": "dependency-edge",
+      "id": "FACT-4b206c3e2ee1712b",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/components/FunctionGrapher.jsx",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "calculateTip is explicitly exported by src/utils/evaluator.js at line 200.",
+      "claimSha256": "sha256:3c80558298f9785000b66eb715237a454a9697595abda49c3036338818f1e444",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-c98798723e98ba7d"
+      ],
+      "factSha256": "sha256:c9d705440f11caed80c8380467d276e112203ca07dead9d121a719a68159b169",
+      "factType": "export",
+      "id": "FACT-4bca7a035687192d",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#calculateTip",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'opens the keyboard shortcuts modal' is declared in src/App.test.jsx at line 110.",
+      "claimSha256": "sha256:048ab15e7b9277b5e3d7d911365e73665cd95ee3c6b7951422aa582a9e63a2f0",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-ccda582f679108ad"
+      ],
+      "factSha256": "sha256:8f9d48883c0bd91dd6d248058108b96a8a988775adbb28ab1cf9ff0d3f9c3770",
+      "factType": "test-identity",
+      "id": "FACT-4c28ebe3383800ab",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx#opens the keyboard shortcuts modal",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js declares export const calculateEMI at line 161.",
+      "claimSha256": "sha256:815f9a7087ab95d08b0906798d33ad70d29c76598d45f6a33c04bff4b5c4e5a1",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-85d010281d073c58"
+      ],
+      "factSha256": "sha256:02e7b0429c33d5ef81a8f6672b25ba11393f5ed092eb4dd1ac9e1c9bb86fbc3a",
+      "factType": "signature",
+      "id": "FACT-4cf0b53e9e7f00ca",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#calculateEMI",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "describe test 'production build' is declared in src/build.test.js at line 15.",
+      "claimSha256": "sha256:0efc25fb8fd109ba6123a2e7daba1792eb445633729dce5139ee91dc98607482",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-e4e899c20fa48a32"
+      ],
+      "factSha256": "sha256:362e77694f3b575a8373481df459c0d4452b7e217ccf1b116034315c1cbdf8c3",
+      "factType": "test-identity",
+      "id": "FACT-4f0b3a0830f7dacc",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/build.test.js#production build",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/components/FinancialCalculator.jsx has the registered javascript source extension.",
+      "claimSha256": "sha256:2618082c1df2f692c8f80d06f05646312d64c115db1c53ad443ef61e02ee949a",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-30a8f4b2d0cf159c"
+      ],
+      "factSha256": "sha256:42a6a4944d2c3b332b1723edebfa79255a49995c1bcddc38912c2e4e97aceb6b",
+      "factType": "language-detected",
+      "id": "FACT-50ea104b9882159c",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FinancialCalculator.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/components/StandardKeypad.jsx has the registered javascript source extension.",
+      "claimSha256": "sha256:1a0006c9153d6f1165ef86024a7de86686eac6b78825d06fdf99a0381d0088c2",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-7ed0c9c6d21fad20"
+      ],
+      "factSha256": "sha256:f7d0a640b3c2993d980968568db645407802cd43a44b6fd7754194959ef7c013",
+      "factType": "language-detected",
+      "id": "FACT-5212ec2266ac5c29",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/StandardKeypad.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/assets/vite.svg exists as a 100644 Git blob with 8709 bytes.",
+      "claimSha256": "sha256:73441b830705fb4f9bf509800465d7aefa756287e75419289007a2cfa6474f2e",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-4c448414ca6e6ad7"
+      ],
+      "factSha256": "sha256:27c6d9268f1544cad6533c7d8b29592e0afd053e7a95533af229f654b7d7f865",
+      "factType": "file-exists",
+      "id": "FACT-52be48b64dd41b3c",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/assets/vite.svg",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/build.test.js declares import target node:url.",
+      "claimSha256": "sha256:85469b5010bcc9e1c90fba88006b7cc99fa00f4b8c5825e24d84bcf37b85d556",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-024a88854c020eb2"
+      ],
+      "factSha256": "sha256:26c376f03002411f0ab3df2feec75ad6ed2e64367dc557f83006cb61388e3ac9",
+      "factType": "import-dependency",
+      "id": "FACT-533b4b0857370f04",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/build.test.js->node:url",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'clears memory with MC' is declared in src/App.test.jsx at line 58.",
+      "claimSha256": "sha256:cf82a0bad1497101a077a0cfb49e584e82689616451b1ab28938bd4142e26336",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-d7b0b7da1e7d9cf0"
+      ],
+      "factSha256": "sha256:be527a8036e3bb55cc3200181a6249d396e3f3890437982dd837a2ef96dd5fcf",
+      "factType": "test-identity",
+      "id": "FACT-56155a60b4fe791a",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx#clears memory with MC",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.test.jsx declares import target vitest.",
+      "claimSha256": "sha256:dd0773cc76fa5253ddfbde9028a654d13ae86ed41c21e88696e0ef83bb71f331",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-9994435acc1d1f08"
+      ],
+      "factSha256": "sha256:a5fe8023d05327e141dc104789dee752adfe41c9b4211e6e42657216409b63b1",
+      "factType": "import-dependency",
+      "id": "FACT-56cd2a5f304c0e9e",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx->vitest",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "AC-002 is explicitly bound to src/App.test.jsx at line 133.",
+      "claimSha256": "sha256:26b6db0eb4c729da5482cb5967aa9412fca5fc854f1e72bcdd1dfc42dec3b83e",
+      "conflictsWith": [],
+      "derivationId": "DRV-856d200f81fa9587",
+      "evidenceIds": [
+        "EV-4198d324531c70f6"
+      ],
+      "factSha256": "sha256:2ce61fb1ef60cbe1f58b90ce97884048fd21b3370997dad44817150030df73f8",
+      "factType": "clause-binding",
+      "id": "FACT-579660d283ffe038",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "AC-002@src/App.test.jsx:133",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/FinancialCalculator.jsx declares export const FinancialCalculator at line 6.",
+      "claimSha256": "sha256:c0bfa9b7ab0f6463ff35ae84f9a504afa7e4b78aac6b5660d51893d54fa9209e",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-14686c950a6e895c"
+      ],
+      "factSha256": "sha256:a0926c6563db5fe89cdd7072cd8e78169517e56fc0782f01057d64324021bd2c",
+      "factType": "signature",
+      "id": "FACT-57cf2cb590b5acfb",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FinancialCalculator.jsx#FinancialCalculator",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js line 149 contains a lexical call candidate to same-file declaration formatNumber at line 57; semantic resolution is unavailable.",
+      "claimSha256": "sha256:601e87d5e64e774e3a77de50fcf121cea0feecacf0f848e07ea039861f2036a6",
+      "conflictsWith": [],
+      "derivationId": "DRV-1ec54f9dc79d4140",
+      "evidenceIds": [
+        "EV-b4bd4c47c681b029"
+      ],
+      "factSha256": "sha256:9828a4e2321fcf732f8dceea7faed84db25afed015f37fe6c2410e7e76eb6a54",
+      "factType": "dependency-edge",
+      "id": "FACT-57dbf9831075644e",
+      "scopeStatus": "inside",
+      "status": "partial",
+      "subject": {
+        "id": "src/utils/evaluator.js:149->src/utils/evaluator.js#formatNumber",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/UnitConverter.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:dc51ad8a8f91de87e9706b8e0ccd25505f7dadbe2a0c413f7b6ee502707cb294",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-c2febb0ac56ac102"
+      ],
+      "factSha256": "sha256:72730763c0f42f9fc3994e89fe88b773f66d5b5cd54bce15c3e14d52a55d95e4",
+      "factType": "dependency-edge",
+      "id": "FACT-57ed38ed59eff002",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/UnitConverter.jsx->src/utils/audio.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/utils/audio.js has the registered javascript source extension.",
+      "claimSha256": "sha256:217468093597a056da778fa8357441cc1facc6bf6be37cadd81eb2dcf010a3af",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-916cb59f0b45196a"
+      ],
+      "factSha256": "sha256:986655f5bacf67befd6544953d52d4f858855c81dc1447c2759a47f5f33ebeac",
+      "factType": "language-detected",
+      "id": "FACT-5812fc5fb93288b7",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/audio.js",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "binding UnitConverter is exported in src/components/UnitConverter.jsx at line 14.",
+      "claimSha256": "sha256:768c18dacd5d73a4759356c4bcbddbba50e435fd1ffbccbbc96a6fa615465b9e",
+      "conflictsWith": [],
+      "derivationId": "DRV-4e035f536b28b89d",
+      "evidenceIds": [
+        "EV-12d50564f45ec553"
+      ],
+      "factSha256": "sha256:ef286af54b92a65bc3697e83ce951ff3c65258a126dd31a3f51fe27662197901",
+      "factType": "symbol-exists",
+      "id": "FACT-5a47824b14766802",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/UnitConverter.jsx#UnitConverter",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js line 144 contains a lexical reference candidate to same-file declaration UNIT_TYPES at line 75; semantic resolution is unavailable.",
+      "claimSha256": "sha256:080267142273165038419572a63c3c9dbdb6998f2433465c97b2f391e1a18afa",
+      "conflictsWith": [],
+      "derivationId": "DRV-1ec54f9dc79d4140",
+      "evidenceIds": [
+        "EV-65f1a36ef98c1586"
+      ],
+      "factSha256": "sha256:655bc4402032c863d9bec9a011def5d06165721f7d13cca254d3bb48fffc5c92",
+      "factType": "dependency-edge",
+      "id": "FACT-5a5b41bc154b0b27",
+      "scopeStatus": "inside",
+      "status": "partial",
+      "subject": {
+        "id": "src/utils/evaluator.js:144->src/utils/evaluator.js#UNIT_TYPES",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/KeyboardShortcutsModal.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:eb61878717e96ad92d526c0485c191600b70fdd2fa9181d58cdc46886a8727f1",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-f3ed456dbc1062d5"
+      ],
+      "factSha256": "sha256:822606b9f345a470d7a50bd21238f04dd6270b0d6c6e0c314210ad066cc485f0",
+      "factType": "dependency-edge",
+      "id": "FACT-5ab9666e992e67a5",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/KeyboardShortcutsModal.jsx->src/utils/audio.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "AC-004 is explicitly bound to src/App.test.jsx at line 184.",
+      "claimSha256": "sha256:9a251088365f44e7909e1ae44ec794f8442ba8f59dbc3d5712b5f6ddfbaf31d3",
+      "conflictsWith": [],
+      "derivationId": "DRV-856d200f81fa9587",
+      "evidenceIds": [
+        "EV-dd3c62d6ebd0c4e4"
+      ],
+      "factSha256": "sha256:ef61eb3b0c65394912c9a598c3633e66ba88353e0da623b0ee57199e94337f82",
+      "factType": "clause-binding",
+      "id": "FACT-5b27e706c6765863",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "AC-004@src/App.test.jsx:184",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/components/FinancialCalculator.jsx exists as a 100644 Git blob with 11121 bytes.",
+      "claimSha256": "sha256:8dab6ef684c5f5d48ba187fcfc28cdbabc4228b859b2185206d81b8ef5d80442",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-30a8f4b2d0cf159c"
+      ],
+      "factSha256": "sha256:fbce7b5bc2c1a3bda8fa984e21ef294e0da08b3e85a0711c431f55bd235e9a3e",
+      "factType": "file-exists",
+      "id": "FACT-5c601dd8be493c3f",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FinancialCalculator.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'evaluates factorials' is declared in src/utils/evaluator.test.js at line 26.",
+      "claimSha256": "sha256:38aee4f688d3ef3a0be9714fa40c98ae990996dad7e97dc1bf171e37c93e0e1c",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-539e25501a1e204b"
+      ],
+      "factSha256": "sha256:c8db005bde1d70973ad3bfb3cae3261058fbfd1e62d7a5a6c44b39b7e579454a",
+      "factType": "test-identity",
+      "id": "FACT-5c6b05ab34f5e45e",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js#evaluates factorials",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/ScientificKeypad.jsx declares import target react.",
+      "claimSha256": "sha256:d4c21639eb79eda107459a4a33e4514e79ed32f8ebe20cf750160d05f292d9bd",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-64820fdd3dca847e"
+      ],
+      "factSha256": "sha256:8087f93d4e8697fe7f49adaa85b4d142ba31a79331a4cdd61b70f0b7cafcffeb",
+      "factType": "import-dependency",
+      "id": "FACT-60212dbc4dd6682b",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/ScientificKeypad.jsx->react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-7eb690154721d6bd",
+      "evidenceIds": [],
+      "factSha256": "sha256:4fd71785b32eda9ad957b9ad8b1e3b80aca7cd2fbf1d77a183b0679797adfafb",
+      "factType": "business-meaning",
+      "id": "FACT-6285a0dd85403c34",
+      "reason": {
+        "attemptedProducer": "required-fact-coverage",
+        "code": "NO_REGISTERED_PRODUCER",
+        "detail": "No registered deterministic producer supplied business-meaning for biz.rules@4 within the pinned scope."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "biz.rules@4:business-meaning",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/App.jsx exists as a 100644 Git blob with 10489 bytes.",
+      "claimSha256": "sha256:889eeafaffe4bbc47183a393a54bcd75a2efd30bb4f88b3fc0b7fa983d5c97e0",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-18325c57fb6c027b"
+      ],
+      "factSha256": "sha256:d2ac5f068366c80d2430e85d0f430b5223c8f33e4a9263b48565034c549cc29c",
+      "factType": "file-exists",
+      "id": "FACT-62a340f2f481e0db",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/build.test.js declares import target node:child_process.",
+      "claimSha256": "sha256:dbc68de55677590a24233abe54c0120744cfef105dcacfd35b4ffa49ebac83a3",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-7a24887e356207dc"
+      ],
+      "factSha256": "sha256:a192cfb4d03b653f18ef1ed344fd941b4520563bdfbe6195dc6361a1532ef521",
+      "factType": "import-dependency",
+      "id": "FACT-62deb73b7ec34413",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/build.test.js->node:child_process",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/Header.jsx declares import target react.",
+      "claimSha256": "sha256:81cdf4b5cc1c893b48355b7596726aabfa40f10e7aa4ef39fe5b2e9b8fd80b20",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-e06e193278961912"
+      ],
+      "factSha256": "sha256:47d634004601296b2581a2f6f3188c94c23975ef22911b52242da88455b6446f",
+      "factType": "import-dependency",
+      "id": "FACT-62f7595b52e27e3b",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/Header.jsx->react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/Header.jsx declares import target lucide-react.",
+      "claimSha256": "sha256:c5e636a41f4475e2cad4167572ff77cada8082b338cafd2d0a1da1a0b1c66a54",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-b42f1e00cfa107f0"
+      ],
+      "factSha256": "sha256:150bfaf95d88f39f0f89776808d020a92bacf78fd2d96a2a2eb771a8cd96d261",
+      "factType": "import-dependency",
+      "id": "FACT-6397aebb3217b6be",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/Header.jsx->lucide-react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/utils/evaluator.test.js has the registered javascript source extension.",
+      "claimSha256": "sha256:c9fcc505348a81b4097e05216a997df2e5860470f21754d9ed03ab12b8bfc075",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-43a901c3f1535784"
+      ],
+      "factSha256": "sha256:ec55ad291a2f7823245b5f7d89c752d569a77d38a128c8fc2fea4c7bb4662b42",
+      "factType": "language-detected",
+      "id": "FACT-6484b02b53456a42",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/build.test.js declares import target node:path.",
+      "claimSha256": "sha256:d8edece5194ad11ef62e5aca0c229ede65c01da01cb3b48b1ce026646dac78ec",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-81a37fe0db0f8a13"
+      ],
+      "factSha256": "sha256:949f7209a715b74cbff58ff465495e444bb38c79bc837f54c0f4fc5bcd163f71",
+      "factType": "import-dependency",
+      "id": "FACT-64a84c7e324fd650",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/build.test.js->node:path",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'adds thousands separators' is declared in src/utils/evaluator.test.js at line 60.",
+      "claimSha256": "sha256:713de3c91b02fa6c6e0c17d8d25b0f98a7ee17b49c58ce2af9dd9910e3de668d",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-0cbb8cb3be00b853"
+      ],
+      "factSha256": "sha256:ba68279405238fa09ae8bf3cf0b5c7882ce23942764c222ab8e782d3327ee5b4",
+      "factType": "test-identity",
+      "id": "FACT-64ef0ef0681eb9d7",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js#adds thousands separators",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "public/favicon.svg exists as a 100644 Git blob with 9522 bytes.",
+      "claimSha256": "sha256:69a5efa932dccecd846f5d86ab4c8f07179ed24169a3aaef166757c71163c02a",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-b9a15f48d6d55607"
+      ],
+      "factSha256": "sha256:3c6e6bb0cd9642169e248cfd0b048916449bf3afa5b7dd6fe006f4eb2e05a7f0",
+      "factType": "file-exists",
+      "id": "FACT-66994df62ccbcd11",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "public/favicon.svg",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "AC-005 is explicitly bound to src/utils/evaluator.test.js at line 6.",
+      "claimSha256": "sha256:3fddd3be28eb523150d0c2c2b277f58acf9280bdfc709009496d8bb6e076ecaf",
+      "conflictsWith": [],
+      "derivationId": "DRV-856d200f81fa9587",
+      "evidenceIds": [
+        "EV-44664ee9c0e3381a"
+      ],
+      "factSha256": "sha256:17db2bb0501240f4bc1ba2084428cf0cbd6d3167dfc7ddb938894b5dca32ddff",
+      "factType": "clause-binding",
+      "id": "FACT-6715155f5aa773e8",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "AC-005@src/utils/evaluator.test.js:6",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "AC-001 is explicitly bound to src/App.test.jsx at line 133.",
+      "claimSha256": "sha256:82dc2ffba25958d5dd75dd2da3ab3953f0c0d9413c6c304b23be7e9405585775",
+      "conflictsWith": [],
+      "derivationId": "DRV-856d200f81fa9587",
+      "evidenceIds": [
+        "EV-07b716d0e4a3757c"
+      ],
+      "factSha256": "sha256:5855c74f179e1fae689cef7654d119c773b808a26ceb05b0b44cf91c2a497192",
+      "factType": "clause-binding",
+      "id": "FACT-678b2c9db5d468e7",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "AC-001@src/App.test.jsx:133",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-7eb690154721d6bd",
+      "evidenceIds": [],
+      "factSha256": "sha256:5938ed4651ac8f34690ec72cefcd249f507f4cc1843437a5f6940ced906efe11",
+      "factType": "dependency-degree",
+      "id": "FACT-681e34c5403040ce",
+      "reason": {
+        "attemptedProducer": "required-fact-coverage",
+        "code": "NO_REGISTERED_PRODUCER",
+        "detail": "No registered deterministic producer supplied dependency-degree for dev.hotspots@4 within the pinned scope."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "dev.hotspots@4:dependency-degree",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "ScientificKeypad is explicitly exported by src/components/ScientificKeypad.jsx at line 5.",
+      "claimSha256": "sha256:2e65902ceb9d07b5fc9926fa1bf74afd540f6f31b1f068423b21f7938bea622b",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-e2bed9825742d53d"
+      ],
+      "factSha256": "sha256:d5b74c71d4e7bc3da98c3903adaba614ca361b604a397ae20878d898cda49912",
+      "factType": "export",
+      "id": "FACT-6820237f20f2f659",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/ScientificKeypad.jsx#ScientificKeypad",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/FinancialCalculator.jsx declares import target react.",
+      "claimSha256": "sha256:e0fc6d7bd1ddb74e3a572bfd19bdad05446729486bf551772e102cc13181e329",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-800274796388bfb5"
+      ],
+      "factSha256": "sha256:05a6f08579fc8753d3896cc025a492c36143e0b8ace3a8eb76c54d4524eb3d91",
+      "factType": "import-dependency",
+      "id": "FACT-68d486cdb9110449",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FinancialCalculator.jsx->react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/KeyboardShortcutsModal.jsx declares import target react.",
+      "claimSha256": "sha256:7bec768be8a511f86f32dcebede8850d2062a7607d791ba6bfc630eb4c061c48",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-9d995c3f1022387d"
+      ],
+      "factSha256": "sha256:6dcd9e77c8010a75c6a0dcb35a379819666c7a037f2a52438951e10b44acf4d6",
+      "factType": "import-dependency",
+      "id": "FACT-68d62cb38481317c",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/KeyboardShortcutsModal.jsx->react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/components/FunctionGrapher.jsx exists as a 100644 Git blob with 6962 bytes.",
+      "claimSha256": "sha256:73d6ce24d5118d076b9b9193b8a2d964ff7e4b4320ddb85ce5df863087f93f92",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-bccb1426fa96f5ee"
+      ],
+      "factSha256": "sha256:e9932807b16478a4d9c0dfd7a596cec65876a007abc93c1ac53b2aadb3ea1264",
+      "factType": "file-exists",
+      "id": "FACT-69d165552964127c",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FunctionGrapher.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'supports constants pi and e' is declared in src/utils/evaluator.test.js at line 42.",
+      "claimSha256": "sha256:92d7b42ba2b0163c8b5173c3e9d3a6ed1ae3bd016fa7dff7fbe9b9b3ba497a04",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-a97e079e5034eafa"
+      ],
+      "factSha256": "sha256:f1acfa0b25bcf06a68848e3fbd4f2766fa6c06e97ff794027ee6597355ff9228",
+      "factType": "test-identity",
+      "id": "FACT-6a1d240bb882574d",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js#supports constants pi and e",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/build.test.js declares import target node:fs.",
+      "claimSha256": "sha256:34bd1d5f49032c380b870004d2d44535a17e63f96cad9b6bf5b11e6858594cc7",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-40dfe68f5ad768de"
+      ],
+      "factSha256": "sha256:9adac931c71be9d6a4da7e008363fd2a2be0032099dc0281b9d22a0b55564004",
+      "factType": "import-dependency",
+      "id": "FACT-6aaa27749991dccd",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/build.test.js->node:fs",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/components/KeyboardShortcutsModal.jsx exists as a 100644 Git blob with 2512 bytes.",
+      "claimSha256": "sha256:5370455a6fcc4a0b2339e5190f0edab3ca4993c5c44df3d0699eb3117f57fe3a",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-d05a65717edb166e"
+      ],
+      "factSha256": "sha256:210496c4891acd50e1c25bbfb295451ec0b36d12ceb069f6d923816a3d401a39",
+      "factType": "file-exists",
+      "id": "FACT-6abf1df0f2fc29b0",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/KeyboardShortcutsModal.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/UnitConverter.jsx declares import target react.",
+      "claimSha256": "sha256:09096c7b79e3029920abe0af26cd2b4cdf4746521eebb35cfdf8a6927e0254c2",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-11384fb7787cbec9"
+      ],
+      "factSha256": "sha256:3b2d8ba2b61aa2fb919319d5d8e20d0cbcf1dffc257c70e6dcb6d59c59b0c20e",
+      "factType": "import-dependency",
+      "id": "FACT-6d67280e71947ecf",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/UnitConverter.jsx->react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx declares import target react.",
+      "claimSha256": "sha256:bdbf05b614c013723a041d42627ace6963e7654c92d0491322b1fb9c124892eb",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-884c4e6c67e9d76b"
+      ],
+      "factSha256": "sha256:8c462f293f76b1fab99603c693437f4fe9f7f2d406e1346ab6dc8a4973b6df8b",
+      "factType": "import-dependency",
+      "id": "FACT-6e7ebe28e527318e",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "describe test 'evaluateExpression (calculation behavior regression)' is declared in src/utils/evaluator.test.js at line 7.",
+      "claimSha256": "sha256:260358a39bc33f179fe8fd2265a66d6ac4fc0bb8a8ae73ef8cd5d7724a8a3bdf",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-d4a3237d0a17dcdd"
+      ],
+      "factSha256": "sha256:fd9d8e8b69f588309a6fe869ad25f206ba5da8b1fc2e2ace8a2cc062de381492",
+      "factType": "test-identity",
+      "id": "FACT-6ed92c59c1d24177",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js#evaluateExpression (calculation behavior regression)",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "package-lock.json exists as a 100644 Git blob with 124909 bytes.",
+      "claimSha256": "sha256:52772cd854458cb35b598457d870c2eb0032910d0e6eac694695d99de1533ff8",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-9caefa63ab0c8682"
+      ],
+      "factSha256": "sha256:6b9a0eba5f672f0717deb6e4fdd454794bf7b5199a0317d54137933105d37b90",
+      "factType": "file-exists",
+      "id": "FACT-70ce0c9fc543438f",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "package-lock.json",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'returns Error for NaN input' is declared in src/utils/evaluator.test.js at line 68.",
+      "claimSha256": "sha256:a25b6e4e3cfcb786352e7206540fe98d75f5f52cda903f447696ef32c81d5994",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-b06189c53b432028"
+      ],
+      "factSha256": "sha256:0b340741bceeeef0a66cddc31d5c03d53a622297618ae54cdf1b8d127ea26412",
+      "factType": "test-identity",
+      "id": "FACT-71ad481b79bcb4a5",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js#returns Error for NaN input",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-7eb690154721d6bd",
+      "evidenceIds": [],
+      "factSha256": "sha256:134264e79a000ad15cab7ab4dbef3bbf8e4388e097e640c10f8570605e358a93",
+      "factType": "interface",
+      "id": "FACT-72c2c66bb8588891",
+      "reason": {
+        "attemptedProducer": "required-fact-coverage",
+        "code": "NO_REGISTERED_PRODUCER",
+        "detail": "No registered deterministic producer supplied interface for arch.contracts@4 within the pinned scope."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "arch.contracts@4:interface",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "eslint.config.js declares import target eslint/config.",
+      "claimSha256": "sha256:e33dd3f96b976500450a087888f2fde2fcc19f945b20a1937acbee234d075f2a",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-ab98564947f7c693"
+      ],
+      "factSha256": "sha256:f34cd771afcab091e1ed337ed06102f1b7f71ab871284aa00f2f9b134b7628e0",
+      "factType": "import-dependency",
+      "id": "FACT-73f50e3474c88d36",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "eslint.config.js->eslint/config",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js declares export const formatNumber at line 57.",
+      "claimSha256": "sha256:07a8b211dc69a932bb73dcc0d6be922557e56d597c978023ba6c4f4e7835c5b1",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-53ebcb155e20fa7c"
+      ],
+      "factSha256": "sha256:96c08fc4b0b009fe17df94a2da6aa4a88dfe15f93c62457edff411670bf1675d",
+      "factType": "signature",
+      "id": "FACT-75b6428d798409a5",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#formatNumber",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'switches between all calculator modes' is declared in src/App.test.jsx at line 99.",
+      "claimSha256": "sha256:10c396ea4d4ae04dc3a76b8ae4d7fa712446be16cefde51565991e681299e7c4",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-5b5b12bc8c7affd0"
+      ],
+      "factSha256": "sha256:4020e97a3547754b474412220bba7ed185b1c75751487bd7d130b9079cf04b8e",
+      "factType": "test-identity",
+      "id": "FACT-773c04dc60738dea",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx#switches between all calculator modes",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/ScientificKeypad.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:8df28b00f55549827544c6ec154ce5caa87e705656742a2655ca6b676483fdf3",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-9e68d5e8a5f97ec7"
+      ],
+      "factSha256": "sha256:ec0adc7986c221d9e2572edb1e3bb53aa4d588ed5d19d70fce5aa65e97ecd779",
+      "factType": "dependency-edge",
+      "id": "FACT-77f28322893e4979",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/ScientificKeypad.jsx->src/utils/audio.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js declares export const UNIT_TYPES at line 75.",
+      "claimSha256": "sha256:44bfb95b7581611aeb725f996bf324386d703ab817b88679883de26eeb38e957",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-421f8e437ba71c21"
+      ],
+      "factSha256": "sha256:c84c48f2badfcf10a9c3074681867fadffa934af6fa17c4721dcbafb8a81c84b",
+      "factType": "signature",
+      "id": "FACT-7b716b78861c45a1",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#UNIT_TYPES",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "package.json exists as a 100644 Git blob with 865 bytes.",
+      "claimSha256": "sha256:0e0a1228aa2c84abf327ee855c755d749803410438148965f385df013c7b83db",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-e7e34aa1c995a89d"
+      ],
+      "factSha256": "sha256:c304f7597ac53f5c57241453af7f6e0c7426461f3f1485f490e904c28f79fdf8",
+      "factType": "file-exists",
+      "id": "FACT-7c4826aa2357ac3a",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "package.json",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/components/FunctionGrapher.jsx has the registered javascript source extension.",
+      "claimSha256": "sha256:3c06e6a6cfe8576c9762857c2efc3793e9c87cea86523665b23201c865349145",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-bccb1426fa96f5ee"
+      ],
+      "factSha256": "sha256:88077c9c51d4d88274157c04b56082b3c6312d188fd9d24f538a5a62b61dbd63",
+      "factType": "language-detected",
+      "id": "FACT-7d71865a353f79ff",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FunctionGrapher.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "binding UNIT_TYPES is exported in src/utils/evaluator.js at line 75.",
+      "claimSha256": "sha256:bfa73e35fc26f5bb5f4b16e7d191dcb1b90d5ff814643f380e0df97c3ea97398",
+      "conflictsWith": [],
+      "derivationId": "DRV-4e035f536b28b89d",
+      "evidenceIds": [
+        "EV-21b16863a78f3fea"
+      ],
+      "factSha256": "sha256:9b75fad1632b23d63c878b93b87eba6567d9e10bf38e6708a4678be79f0e163d",
+      "factType": "symbol-exists",
+      "id": "FACT-809d45f7c1e81cf8",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#UNIT_TYPES",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/assets/hero.png exists as a 100644 Git blob with 13057 bytes.",
+      "claimSha256": "sha256:0b506bfe013578457a47a574a558a1a6049a514f6e35acaae15df04c6c267107",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-43dcc0b81d26332b"
+      ],
+      "factSha256": "sha256:deda84fea121e5045a3a21abddc18596890718563d211e31a43b5741d82a5024",
+      "factType": "file-exists",
+      "id": "FACT-81bde7da880a5bc6",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/assets/hero.png",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/utils/evaluator.js exists as a 100644 Git blob with 7148 bytes.",
+      "claimSha256": "sha256:9856d8b4dad9961f96580e663d4644782c6ca819390d641e723b40b7272d8224",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-ef5c9c716e6e3f58"
+      ],
+      "factSha256": "sha256:4ce37054f04abaa0405bbf57070514709e8df1be94b85d94bffa044114ca4968",
+      "factType": "file-exists",
+      "id": "FACT-840f67bc2e4565b8",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "formatNumber is explicitly exported by src/utils/evaluator.js at line 57.",
+      "claimSha256": "sha256:2981506cc3bb237724a1194bd968fd9a3f80cbd1c3b833d1c5e41509365dd797",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-11d959a1d6fab2c6"
+      ],
+      "factSha256": "sha256:a9877e8bae00e6c60ad67f5bafbfccfcbcf4a1b5ebb158a40070e668676c512a",
+      "factType": "export",
+      "id": "FACT-8674f240bd21b0d4",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#formatNumber",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "describe test 'App functional regression (all modes/features unchanged)' is declared in src/App.test.jsx at line 26.",
+      "claimSha256": "sha256:acb2b62e0883c397d38da7291a67020fa7b6f31f4b18355e35f7a7cd96158418",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-b7c7dd516ac4b3ee"
+      ],
+      "factSha256": "sha256:fce1565b89e85d6cc92930e3e934f4c6cfb3d4f4c5edf061ed180c966bc1279e",
+      "factType": "test-identity",
+      "id": "FACT-8744dfdaf1dd43b0",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx#App functional regression (all modes/features unchanged)",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'evaluates percentages' is declared in src/utils/evaluator.test.js at line 20.",
+      "claimSha256": "sha256:a445838b164f2f81a2a0e50f8ee106e2e2d1747621a7f0efa3519a83f1b28fa6",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-ebed0e890fc51ac4"
+      ],
+      "factSha256": "sha256:ad61edaeb31c98b6239a5acc816d808e52214c093c241eaaca5a900aa9a629e7",
+      "factType": "test-identity",
+      "id": "FACT-8a21ef157aab2cbf",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js#evaluates percentages",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "eslint.config.js has the registered javascript source extension.",
+      "claimSha256": "sha256:02daecb155009136da45dac2c5222d8444f2d508e35a2d91d444a6a6b9f7ae91",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-99a475259e62a899"
+      ],
+      "factSha256": "sha256:80f4d14cfe785eb34627940c95bab76f643ee42723d114f0012eb5e01952cfbf",
+      "factType": "language-detected",
+      "id": "FACT-8c7ba9ca51d492c9",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "eslint.config.js",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "binding convertUnits is exported in src/utils/evaluator.js at line 140.",
+      "claimSha256": "sha256:fe2a310d459bbfb10baabc6347ad03a81529c90fce09cc44ea4e2c0d274fe489",
+      "conflictsWith": [],
+      "derivationId": "DRV-4e035f536b28b89d",
+      "evidenceIds": [
+        "EV-384779a6cf73f195"
+      ],
+      "factSha256": "sha256:1041d237b118d3adfd06740333d2d8e133dc4384feede4a30ad934038fd4afb7",
+      "factType": "symbol-exists",
+      "id": "FACT-8d650139b244a3c1",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#convertUnits",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "vite.config.js declares import target vite.",
+      "claimSha256": "sha256:6dbf5bdd8d60b085839d3c122f29fbb624d65e001cea1fac0804d0e51478ba7f",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-fd79b1c03dd42369"
+      ],
+      "factSha256": "sha256:92c351a5f8ecd9556a0d397095fd9485e7886d31501d65e7de5501118347108d",
+      "factType": "import-dependency",
+      "id": "FACT-8db44497e5e4041d",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "vite.config.js->vite",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/components/KeyboardShortcutsModal.jsx has the registered javascript source extension.",
+      "claimSha256": "sha256:5ae859f477c1b2375ef77eb26c4b34b47ae53287282904aabcd646d5de9bc5d3",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-d05a65717edb166e"
+      ],
+      "factSha256": "sha256:00ff8fe630d4051ce1cf0547380f96d8c6e3d36df9bc518caed0f3c473c0ac11",
+      "factType": "language-detected",
+      "id": "FACT-8f8e555ac1786802",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/KeyboardShortcutsModal.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/assets/react.svg exists as a 100644 Git blob with 4126 bytes.",
+      "claimSha256": "sha256:1781d55c443a293cb4bd045cc651285dc5a249b4bbcb095a00495a06cea6e7f2",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-27df7d96b3a78fbd"
+      ],
+      "factSha256": "sha256:c208bee5c128d3119f6d1aebed8480cb5f9a969dd9552dcb0226519686e7a185",
+      "factType": "file-exists",
+      "id": "FACT-8fe2093e7a1fc1c2",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/assets/react.svg",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "binding Display is exported in src/components/Display.jsx at line 5.",
+      "claimSha256": "sha256:5f3522531e6386459715605f5b7a029bb24672ae7b08a4b60922fb6fdcd62625",
+      "conflictsWith": [],
+      "derivationId": "DRV-4e035f536b28b89d",
+      "evidenceIds": [
+        "EV-aa05a8a31bee8ffe"
+      ],
+      "factSha256": "sha256:8d4d9b30aaf0743e31c95d430d7ff97ef6b1c37e255bf64bbbebe79a95d5a2ee",
+      "factType": "symbol-exists",
+      "id": "FACT-905362ee1feebc01",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/Display.jsx#Display",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js line 157 contains a lexical call candidate to same-file declaration formatNumber at line 57; semantic resolution is unavailable.",
+      "claimSha256": "sha256:26da035bc066b5941dafd88707ee546229dcf6324d9a932cc9d6608d337633ad",
+      "conflictsWith": [],
+      "derivationId": "DRV-1ec54f9dc79d4140",
+      "evidenceIds": [
+        "EV-59f389d599bbb24c"
+      ],
+      "factSha256": "sha256:1779a2158761463446fa34acd3898f2be53b510e2699d419f8004bf9c510f2d6",
+      "factType": "dependency-edge",
+      "id": "FACT-9207b8ce683beed8",
+      "scopeStatus": "inside",
+      "status": "partial",
+      "subject": {
+        "id": "src/utils/evaluator.js:157->src/utils/evaluator.js#formatNumber",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/components/ScientificKeypad.jsx exists as a 100644 Git blob with 4399 bytes.",
+      "claimSha256": "sha256:a64b42620b9da0fc0453cf3c0e5c0a2408e19e80e66f944a458b6e54dea267a0",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-a5848c97ae075c29"
+      ],
+      "factSha256": "sha256:78cdbcf3954026ee26a8ccd2f1683fcf9731a9540c87c8678c89cc100e326cbb",
+      "factType": "file-exists",
+      "id": "FACT-9350a969fac6e038",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/ScientificKeypad.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/FunctionGrapher.jsx declares export const FunctionGrapher at line 14.",
+      "claimSha256": "sha256:deb27f116091f80d66db58a0c889e1072fbcbe70f2b937cde3f83e87591676c8",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-09d2597b119a0ad8"
+      ],
+      "factSha256": "sha256:f341f55ec08ed56e66587fda2a0c797c87b2b4cab3d9011320035b22c3954d4d",
+      "factType": "signature",
+      "id": "FACT-93a08333bcf414be",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FunctionGrapher.jsx#FunctionGrapher",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/Header.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:2b21a0e898b86d32dbcac29e0f2457c8dadad47b3d6c5c786f22653dda9986d4",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-809114f0b1eab1be"
+      ],
+      "factSha256": "sha256:8bbc8f981eac1d2b860ef2411835aae13a4459198f4622a7ec496c33b66b0a8b",
+      "factType": "dependency-edge",
+      "id": "FACT-946a21f45d3e9c1e",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/Header.jsx->src/utils/audio.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "binding Header is exported in src/components/Header.jsx at line 36.",
+      "claimSha256": "sha256:6a7e807ed9f358103062d6c86515e5fd5aae5bd119795c2913bd5f3939d035fb",
+      "conflictsWith": [],
+      "derivationId": "DRV-4e035f536b28b89d",
+      "evidenceIds": [
+        "EV-6777d5f91f174e92"
+      ],
+      "factSha256": "sha256:0f278b1f8d1580890ef91df7d1b77190bfc68f6a71dda0179858933c2ee53c3a",
+      "factType": "symbol-exists",
+      "id": "FACT-96482fd7d36c5d4c",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/Header.jsx#Header",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "binding playSound is exported in src/utils/audio.js at line 18.",
+      "claimSha256": "sha256:ca483021d6240bc81c8fba20ec11821245ea8ce93bf160be1f628ba5721ccfc2",
+      "conflictsWith": [],
+      "derivationId": "DRV-4e035f536b28b89d",
+      "evidenceIds": [
+        "EV-23dd976137d38edd"
+      ],
+      "factSha256": "sha256:ef4a44cceca9bbb83c21d2caa6d4a85cea7eb7d1d9d5cfda2aad412cfb20f484",
+      "factType": "symbol-exists",
+      "id": "FACT-96bf3a6e653b2eab",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/audio.js#playSound",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'keeps the mobile mode dropdown in sync with the active mode' is declared in src/App.test.jsx at line 192.",
+      "claimSha256": "sha256:dc6032f600339777549a1fc698acc323cde9aba53c19cd523f84d1b3b9c49a72",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-2e39a0f70cd067f7"
+      ],
+      "factSha256": "sha256:5526ef04b9d2551903164e9daddcd83f359477ea88f4bbcb3c80cd4ac548c489",
+      "factType": "test-identity",
+      "id": "FACT-98adedf20f0c2fbe",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx#keeps the mobile mode dropdown in sync with the active mode",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/components/Display.jsx.",
+      "claimSha256": "sha256:d4d7109e77377f5b1a2668cff03090646fff0de99decf5c93553a74a3aa49fe6",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-04473b12a7a6bc49"
+      ],
+      "factSha256": "sha256:feac1843e76e00e2cc81c1ecbcbc42a531a1c15af46e6c899130238fda4c1582",
+      "factType": "dependency-edge",
+      "id": "FACT-99677dfa4a57c36e",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/components/Display.jsx",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/StandardKeypad.jsx declares import target lucide-react.",
+      "claimSha256": "sha256:ef024fd6240d165e69facbe0885acc9233ad55ab13572cb78f979372e8e9f0df",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-ada97c1db07b4500"
+      ],
+      "factSha256": "sha256:efff1ed2158e7ef710e6d08b0ed4e18d5da9964a1af33f8a88b616a9b56e284d",
+      "factType": "import-dependency",
+      "id": "FACT-99a5aa2e48dcfaaa",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/StandardKeypad.jsx->lucide-react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "deterministically-derived",
+      "claim": "package.json is a json configuration object with 7 registered key(s); bounded key inventory: dependencies, devDependencies, name, private, scripts, type, version.",
+      "claimSha256": "sha256:2fd563f3aef4e409f80e35e0c7a6195d1ba282527661fbe18c3d17c319549a64",
+      "conflictsWith": [],
+      "derivationId": "DRV-51204d034d505378",
+      "evidenceIds": [
+        "EV-90b464ba13204882"
+      ],
+      "factSha256": "sha256:18bb4c4a23b108c4f964bf67e230367157eff27952d0ec40384e425e823b8853",
+      "factType": "configuration-object",
+      "id": "FACT-9e2b6a07d809f247",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "package.json",
+        "kind": "configuration"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "playSound is explicitly exported by src/utils/audio.js at line 18.",
+      "claimSha256": "sha256:58d9fee6c02c9f5f7a4ecb422eccaca183a1ba03d84140440d739e0508588e04",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-2304ca7b7d2283d3"
+      ],
+      "factSha256": "sha256:a4bc9de3f36b89530c019c14a27059c57a8031073b9cd18615127d6e696a03b9",
+      "factType": "export",
+      "id": "FACT-a069008ac0a29657",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/audio.js#playSound",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/FunctionGrapher.jsx declares import target lucide-react.",
+      "claimSha256": "sha256:1d070d6cce6cd881d015a415d329a7111b07e8013ddf1cc7924c7a1a83e3607e",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-4de9d0b0d9596b5f"
+      ],
+      "factSha256": "sha256:8aac0cea9d25807003eb90167cbd367697d9763be937bff5237ab55977674508",
+      "factType": "import-dependency",
+      "id": "FACT-a123497a4254bbf0",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FunctionGrapher.jsx->lucide-react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "convertUnits is explicitly exported by src/utils/evaluator.js at line 140.",
+      "claimSha256": "sha256:10c28d152095f558623d782039b62d9367c5bfc04705d4d7f60266536da40487",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-b734ccc06a328b7b"
+      ],
+      "factSha256": "sha256:a3b365c68362b3c8a6cc698954d29b156dc4f59138b9f649336af09c8c96014f",
+      "factType": "export",
+      "id": "FACT-a6e27a576caad040",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#convertUnits",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.test.jsx declares import target @testing-library/react.",
+      "claimSha256": "sha256:8bbb45154dee66d2914225b5819fd1efa19a4a0ab96df24139421184a9cb13a6",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-66e741d85b1508e0"
+      ],
+      "factSha256": "sha256:1c4232f16d765902d52fc8652f80be75ac15be2214457e4fffe40f5ed5127a6f",
+      "factType": "import-dependency",
+      "id": "FACT-a8b2f49df851242e",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx->@testing-library/react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "README.md exists as a 100644 Git blob with 1027 bytes.",
+      "claimSha256": "sha256:99c4f58f6c481c67b6cddd9a18f4ad494b869c0ea578834a5c3d557195e256cd",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-5c38ff3bbb08708b"
+      ],
+      "factSha256": "sha256:e1bc381ad4772c54511574e5e04eda291ea4a8baad8083b6dcd898acf79d9195",
+      "factType": "file-exists",
+      "id": "FACT-a9d0044f3b5cef87",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "README.md",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/components/UnitConverter.jsx exists as a 100644 Git blob with 5167 bytes.",
+      "claimSha256": "sha256:40bb8f470d5c91fc956657b7108d5f653011280050c89083aa2758c98d97e5db",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-5261634a1fd7d297"
+      ],
+      "factSha256": "sha256:98e74abf3e831f2c8bf0b1385e973305c48be7e6b94d7982ce7c7ba4999d3740",
+      "factType": "file-exists",
+      "id": "FACT-aa0058aab4b83d18",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/UnitConverter.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/main.jsx imports the in-scope module src/App.jsx.",
+      "claimSha256": "sha256:afd7d800908cc799306df9a0be7424caab1fcbf6a07744da425ce1e50a10e0e1",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-4483d8eb2f06c59f"
+      ],
+      "factSha256": "sha256:f60833f639ef6370e0b986dfdefe4e76bbde0584969c76e6cb9c9f06cabb8309",
+      "factType": "dependency-edge",
+      "id": "FACT-aa174af25cc94688",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/main.jsx->src/App.jsx",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/test/setup.js exists as a 100644 Git blob with 1845 bytes.",
+      "claimSha256": "sha256:df2c13af07625f148f0d09c73fbcb01ca5dcab99f449165bfca2417ef58fd844",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-90a43b7e283aa28f"
+      ],
+      "factSha256": "sha256:2910e431ec1b5ef9b7d3136c76db7756d98d66aaf0f68c1941b9436f7e2bc85f",
+      "factType": "file-exists",
+      "id": "FACT-ab97202c4b314f4d",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/test/setup.js",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-7eb690154721d6bd",
+      "evidenceIds": [],
+      "factSha256": "sha256:5f1f1228dcd9a5f141df35092f3e34d883bdbcd81f199ac99cdd3d07bbc03276",
+      "factType": "change-frequency",
+      "id": "FACT-ac92b70a7d4b50bf",
+      "reason": {
+        "attemptedProducer": "required-fact-coverage",
+        "code": "NO_REGISTERED_PRODUCER",
+        "detail": "No registered deterministic producer supplied change-frequency for dev.hotspots@4 within the pinned scope."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "dev.hotspots@4:change-frequency",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/build.test.js has the registered javascript source extension.",
+      "claimSha256": "sha256:f626fe8f99b6adf62f3b17caf6d1f86b5f52ba17e6054a8afa1f834bc8d4e4b4",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-f78c27a3e119537c"
+      ],
+      "factSha256": "sha256:58ea4a99ce8bd563743024689b177b19823e0511795f527daebdb4922cb04d6d",
+      "factType": "language-detected",
+      "id": "FACT-ae485fa5d1060a15",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/build.test.js",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/test/setup.js declares import target @testing-library/jest-dom/vitest.",
+      "claimSha256": "sha256:d87b221d72f4bc9bae978e9088940ef8531f2213b0d475edfde32e57ed8db853",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-7789deea248a68c8"
+      ],
+      "factSha256": "sha256:794a7b7d1ec4fbe95b1be2116267d3047ec38c39e9e39bd3775460bedbbf3549",
+      "factType": "import-dependency",
+      "id": "FACT-ae91e5ba1d631cd3",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/test/setup.js->@testing-library/jest-dom/vitest",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-8b5a3b15e01bf7b3",
+      "evidenceIds": [],
+      "factSha256": "sha256:1031020bf31eb401e213273a2a3ba77f90951dcd22d9f3137cd3a1f61f0993cc",
+      "factType": "contract-change",
+      "id": "FACT-b20dd2168c086dea",
+      "reason": {
+        "attemptedProducer": "change-region",
+        "code": "NO_BASELINE",
+        "detail": "The pinned source revision has no exact first-parent baseline; contract-change extraction is unavailable."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "change-region:contract-change",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'performs digit entry and arithmetic in Standard mode' is declared in src/App.test.jsx at line 31.",
+      "claimSha256": "sha256:196bb2c06206c73598b656d24d26809acae7665f39dc983854f7d2b8f68a11c8",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-ae3d31a38c414a00"
+      ],
+      "factSha256": "sha256:474f3c2f0ee79e0613f60e937eece579797e0dccf27bee259de770859d5af87a",
+      "factType": "test-identity",
+      "id": "FACT-b39b2dda1d256db5",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx#performs digit entry and arithmetic in Standard mode",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/ScientificKeypad.jsx imports the in-scope module src/components/StandardKeypad.jsx.",
+      "claimSha256": "sha256:a8043f379aee023f14f3c78ebf5a3f0e4f53a7f4cce4e1e4cd699a15edaa6774",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-5224f3c6a4a12a0c"
+      ],
+      "factSha256": "sha256:f530026268902986c5a879851a8318a55750ca5680d4f5b39e4721690b720fba",
+      "factType": "dependency-edge",
+      "id": "FACT-b4e5327278d85f7b",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/ScientificKeypad.jsx->src/components/StandardKeypad.jsx",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/main.jsx declares import target react-dom/client.",
+      "claimSha256": "sha256:6f5d3c0ce6ff99d8de8e137f5504e42f05769604f6edfd23f2045758d681bae3",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-be238ba3a03a3031"
+      ],
+      "factSha256": "sha256:fb3bf8496fb7503e8742a4350164a6de9a2c6e4ad7e49ec46637e04fd447a082",
+      "factType": "import-dependency",
+      "id": "FACT-b52e64ed68c5f5d3",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/main.jsx->react-dom/client",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/components/Header.jsx.",
+      "claimSha256": "sha256:aaa3b359be29fc210e202395b1b516347788f80a809f6de45ab7d7027457833d",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-a922c8ddb5919651"
+      ],
+      "factSha256": "sha256:225110822e22c1aad9b3680e767b0a9f958d4395b162c88efb9b4b0df84051ec",
+      "factType": "dependency-edge",
+      "id": "FACT-b56455a6c756f9dc",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/components/Header.jsx",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/utils/evaluator.test.js exists as a 100644 Git blob with 2742 bytes.",
+      "claimSha256": "sha256:95b55aceecf7cece4ca4e146a483496c390fb812182261b0833c78c8f2fecc9f",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-43a901c3f1535784"
+      ],
+      "factSha256": "sha256:6a23586bd7774b8a5114cddd759a8e5127fae403978bcf2dc378c958bbf7664e",
+      "factType": "file-exists",
+      "id": "FACT-b672a6e5e618c239",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/build.test.js exists as a 100644 Git blob with 987 bytes.",
+      "claimSha256": "sha256:628a2d642f2a6a8beed8661243cb8af59c4fd72dc326d80ebe29beef407a00ac",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-f78c27a3e119537c"
+      ],
+      "factSha256": "sha256:91c5204b3e8e0e9f385e53c2b163fc1f077ce79d3aa6075d505b7e6df550d35d",
+      "factType": "file-exists",
+      "id": "FACT-b690024877a41348",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/build.test.js",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "binding calculateTip is exported in src/utils/evaluator.js at line 200.",
+      "claimSha256": "sha256:4f4885ec38328df4d43b8f77d964ae5c71280e7e9eb0504eb0c7356bf904d680",
+      "conflictsWith": [],
+      "derivationId": "DRV-4e035f536b28b89d",
+      "evidenceIds": [
+        "EV-d621a1d348094724"
+      ],
+      "factSha256": "sha256:6c8b13fdbd283d2321433a4e03c78add600eec35b3d9c2dbbea7ebdeef1c5724",
+      "factType": "symbol-exists",
+      "id": "FACT-b9abbbf77de43b6d",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#calculateTip",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "eslint.config.js declares import target eslint-plugin-react-refresh.",
+      "claimSha256": "sha256:ae821d6debcd4a27599220dcbbac2da1e5361d299a3f8559e7d39a047a88dbfc",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-29df03baaf33fde4"
+      ],
+      "factSha256": "sha256:0648f85eafc4c906ac147006e003277fc0443671bc24ab0d972ad98af3abd25a",
+      "factType": "import-dependency",
+      "id": "FACT-ba1aeaaf5e8dc1e6",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "eslint.config.js->eslint-plugin-react-refresh",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-7eb690154721d6bd",
+      "evidenceIds": [],
+      "factSha256": "sha256:a003f8b7c9604f371e34f52b99a78b99be0ebf988027794408dff604c72c142c",
+      "factType": "runtime-guarantee",
+      "id": "FACT-bd25ad77fa032b2d",
+      "reason": {
+        "attemptedProducer": "required-fact-coverage",
+        "code": "NO_RUNTIME_EVIDENCE",
+        "detail": "No registered deterministic producer supplied runtime-guarantee for arch.contracts@4 within the pinned scope."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "arch.contracts@4:runtime-guarantee",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/FinancialCalculator.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:a7196250dd5e04f56b0f6d35a05492e4315770e4b78e098c4609fb71896cad0a",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-7ea18bc2ab23d340"
+      ],
+      "factSha256": "sha256:2d38604cef9d81e4125bdb4dd695a56009b139ced098a468616407ce85f4c550",
+      "factType": "dependency-edge",
+      "id": "FACT-bd6587bac4f916b2",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FinancialCalculator.jsx->src/utils/audio.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/utils/evaluator.js has the registered javascript source extension.",
+      "claimSha256": "sha256:36d38705ba7bcb39d893b255d64c2227b1946caea0f7918eff81ba6eee57edae",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-ef5c9c716e6e3f58"
+      ],
+      "factSha256": "sha256:7539f47cd463b78d6e7b328891f6f030b28372b780a4b081d9908c4e55863adc",
+      "factType": "language-detected",
+      "id": "FACT-bf446e76a0f8fcba",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/components/KeyboardShortcutsModal.jsx.",
+      "claimSha256": "sha256:70d747d3e173b1b3bef9c163ccfa5528f60807a2d6cee6228c2b48ac730d97ff",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-5401cf9193ea416e"
+      ],
+      "factSha256": "sha256:c82c37665074a87ded7a89a68b45a06b2a991157b3c2bf31b1665b6909fc88a1",
+      "factType": "dependency-edge",
+      "id": "FACT-bfcbd9c293e839ba",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/components/KeyboardShortcutsModal.jsx",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'applies degree-mode trig conversion' is declared in src/utils/evaluator.test.js at line 32.",
+      "claimSha256": "sha256:26c4958a9b8ba737ab86c5185eb56e5962b7d843a92d678521a496c22b837685",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-c73a24951edfb605"
+      ],
+      "factSha256": "sha256:432f3551527bef0ded2066e07a1a14ffd4e25ec18ce737e94fc8e128659ceba7",
+      "factType": "test-identity",
+      "id": "FACT-c0d58e8bb68a61d5",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js#applies degree-mode trig conversion",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "UnitConverter is explicitly exported by src/components/UnitConverter.jsx at line 14.",
+      "claimSha256": "sha256:a8bbcad9a5137695739211d297f57e7ee64e8d5c8df108fb8a97f77130848ee6",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-3efd1c1fc5b49ec5"
+      ],
+      "factSha256": "sha256:681ea1f58bd206c3f30c594f4d7bb7e219e190d60891c5b25c1bdcb8d655c185",
+      "factType": "export",
+      "id": "FACT-c1e190aa94dd42cf",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/UnitConverter.jsx#UnitConverter",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "binding ScientificKeypad is exported in src/components/ScientificKeypad.jsx at line 5.",
+      "claimSha256": "sha256:6efcf6dbdb99922b881fc9392d351c3840c392d4708f35871e984b853a9f3e0d",
+      "conflictsWith": [],
+      "derivationId": "DRV-4e035f536b28b89d",
+      "evidenceIds": [
+        "EV-0d746e6ba57915fc"
+      ],
+      "factSha256": "sha256:74c867c48bfe262a3be74f0f695c142a9ef914e057738297b98bc2113313eac3",
+      "factType": "symbol-exists",
+      "id": "FACT-c26b0738420186d1",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/ScientificKeypad.jsx#ScientificKeypad",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/Header.jsx declares export const Header at line 36.",
+      "claimSha256": "sha256:7c0d9ab7a7d0845074cccc86b5bafc6ef094db91763948c6639b71af7b2afd33",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-6d4e30cafda2344c"
+      ],
+      "factSha256": "sha256:8ac13c420f7c1ce668dc018c572e6b6ef95067517fb7a1d43ecea88d6b04b34d",
+      "factType": "signature",
+      "id": "FACT-c276890c70177ce3",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/Header.jsx#Header",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'fixes floating point precision artifacts' is declared in src/utils/evaluator.test.js at line 64.",
+      "claimSha256": "sha256:7367d30d5f94c75f4ed6709152956e93785c784b8eed9b7c5b42ccd628515288",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-64956052172a576d"
+      ],
+      "factSha256": "sha256:ad2735c1621e1972d04c1112e4b7eb60987876a4394b2f1ed98264bbdf614af0",
+      "factType": "test-identity",
+      "id": "FACT-c39c1e4e281fa726",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js#fixes floating point precision artifacts",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'reports a recoverable error for malformed expressions' is declared in src/utils/evaluator.test.js at line 47.",
+      "claimSha256": "sha256:ff7c18624e1856d9197caee6acb9064c4600433d0928ad3cc470c3b24f7048fc",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-be1e11eaa575c469"
+      ],
+      "factSha256": "sha256:fe917f6cb94a9fe16ab30465ba18d21ac1a770ca2f01452b7f1b23d3d02d0012",
+      "factType": "test-identity",
+      "id": "FACT-c3cdcb9ba9fc7536",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js#reports a recoverable error for malformed expressions",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "binding HistoryDrawer is exported in src/components/HistoryDrawer.jsx at line 5.",
+      "claimSha256": "sha256:d0cf32dffa6a39a41c059bd13af1fbca347fef9174f1873b425a3c156f4433c6",
+      "conflictsWith": [],
+      "derivationId": "DRV-4e035f536b28b89d",
+      "evidenceIds": [
+        "EV-d91c5395f1cedddb"
+      ],
+      "factSha256": "sha256:a25776142e16de57a9bb1655820ab0d8efc2bd26ce1005b389e6c68167922c19",
+      "factType": "symbol-exists",
+      "id": "FACT-c4a27628758e0a6c",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/HistoryDrawer.jsx#HistoryDrawer",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "binding evaluateExpression is exported in src/utils/evaluator.js at line 4.",
+      "claimSha256": "sha256:9e0da5c0c33823749cb62e471ae31cc104c81edc7f0887b7305a72d057ca9e58",
+      "conflictsWith": [],
+      "derivationId": "DRV-4e035f536b28b89d",
+      "evidenceIds": [
+        "EV-c57a6ba83003f7d5"
+      ],
+      "factSha256": "sha256:7a57c4a2b5fabdbdc356df59a29ef0bb8e36564467a5ce93991e2f69a047c165",
+      "factType": "symbol-exists",
+      "id": "FACT-c4aba13c27c8af43",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#evaluateExpression",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "Display is explicitly exported by src/components/Display.jsx at line 5.",
+      "claimSha256": "sha256:db76180d55b7339e85af0b833f6aad6975f79f0a8f2d765997695aae3e3279ab",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-593292201f858156"
+      ],
+      "factSha256": "sha256:166387e87ff17d5adb04d057974f9a528c28aca3355260f6448a8dab911746f6",
+      "factType": "export",
+      "id": "FACT-c4e1ac81e5397625",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/Display.jsx#Display",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'handles empty expressions' is declared in src/utils/evaluator.test.js at line 15.",
+      "claimSha256": "sha256:4d3854fa48bf234e7624df006bdb12c4aa78f59398b0b9e4dc12f40cff4c03f1",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-086b400eefd0318d"
+      ],
+      "factSha256": "sha256:cafb3e3d8dbf8f51b88fa767a19d601d2909bfdde88334e663f7047726882791",
+      "factType": "test-identity",
+      "id": "FACT-c8845684e2ea1032",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js#handles empty expressions",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-7eb690154721d6bd",
+      "evidenceIds": [],
+      "factSha256": "sha256:00834837d5bd9807092353bfab814130c688566c60aa1b8e10f2c72d30820c10",
+      "factType": "complexity-metric",
+      "id": "FACT-c8896cd1e8d57ef2",
+      "reason": {
+        "attemptedProducer": "required-fact-coverage",
+        "code": "NO_REGISTERED_PRODUCER",
+        "detail": "No registered deterministic producer supplied complexity-metric for dev.hotspots@4 within the pinned scope."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "dev.hotspots@4:complexity-metric",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js declares export const calculateCompoundInterest at line 181.",
+      "claimSha256": "sha256:c24ba030a27317335adc387d8f1c3a185b378777d691d4ce3b374fa833f54079",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-64250d0870a007e6"
+      ],
+      "factSha256": "sha256:7a5c5618cd03369bc61e2891466093f7938ba1bccb2bad9390e0524c692a5f6b",
+      "factType": "signature",
+      "id": "FACT-c990d0d61311e6f1",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#calculateCompoundInterest",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/Display.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:1910a0e49a594a69ae9942736e209999486497b7d61dffb169189b993dfc843e",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-8c42de9354de7b57"
+      ],
+      "factSha256": "sha256:23c1e5dc997cbbe667544a29b5a91978e0a12ac89d5b1e3f579deb6edecf081b",
+      "factType": "dependency-edge",
+      "id": "FACT-caf85c21e4002a41",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/Display.jsx->src/utils/audio.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "binding FunctionGrapher is exported in src/components/FunctionGrapher.jsx at line 14.",
+      "claimSha256": "sha256:45c50b757eb8bd8051293116d035fc5192dc192f03cd0841c43c74c08f2f96fa",
+      "conflictsWith": [],
+      "derivationId": "DRV-4e035f536b28b89d",
+      "evidenceIds": [
+        "EV-e2f45acd74f6bd92"
+      ],
+      "factSha256": "sha256:c8abcc976b8489dd07f3e3416e3a61093418ae3f34eae13aa07c692f57f8dafd",
+      "factType": "symbol-exists",
+      "id": "FACT-cbb026fde00427ae",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FunctionGrapher.jsx#FunctionGrapher",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/components/HistoryDrawer.jsx has the registered javascript source extension.",
+      "claimSha256": "sha256:23b8ae052931657fadd64234ee3ddd1b09c020d78544e060701f49fe9de9055e",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-4116697068617a95"
+      ],
+      "factSha256": "sha256:dc1d9e30f81bf5b522e5d070de8614fc3e0d694b800cb5250b09427d57a0cd7a",
+      "factType": "language-detected",
+      "id": "FACT-cbe46a4b9f1b6f05",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/HistoryDrawer.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'applies radian-mode trig conversion (no deg wrapping)' is declared in src/utils/evaluator.test.js at line 37.",
+      "claimSha256": "sha256:43b9f4d6f26a5c1fc704a8e7ff463465817d0be591e011b0d7222ac2afff2aaa",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-a7e243d5db0f2bb4"
+      ],
+      "factSha256": "sha256:590bfe31fffd066b0b7db87d21dc658156471103169914f11cfb305077c02ec6",
+      "factType": "test-identity",
+      "id": "FACT-ccf5b217b87afae5",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js#applies radian-mode trig conversion (no deg wrapping)",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/Display.jsx declares export const Display at line 5.",
+      "claimSha256": "sha256:b46b036939f8c7aa2a0a1497b4e284361df596e76b019a85ca4d1789d338df7d",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-f52495a51c338b04"
+      ],
+      "factSha256": "sha256:43d632aed7227fd038e7980ae3249461aa43ef01def9df60214b5aee58cb5777",
+      "factType": "signature",
+      "id": "FACT-ce0d0b54185052cc",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/Display.jsx#Display",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js declares export const evaluateExpression at line 4.",
+      "claimSha256": "sha256:4031c47cfd1f9b3bdbc2702382d55c1f4f78ab96996448cf72e9470d96922dfb",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-9825e87dd817b349"
+      ],
+      "factSha256": "sha256:98cdc8db64185f1e38ca656cb11fa364e3bdfe1bf53c9a25aeb8bde4db8a31f1",
+      "factType": "signature",
+      "id": "FACT-ce38c1243eb7d1de",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#evaluateExpression",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/StandardKeypad.jsx imports the in-scope module src/utils/audio.js.",
+      "claimSha256": "sha256:525e36db0b413d93ff0ef31086fe0b81117cb2e6c2f880043b03b15964bfcb05",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-cbdc058263cb4e6f"
+      ],
+      "factSha256": "sha256:cebcb36a04745ab8cdbb9c7e0f737263dc662e1d6ecae8c7809f97f8762ee7bb",
+      "factType": "dependency-edge",
+      "id": "FACT-cfe74023518f74d0",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/StandardKeypad.jsx->src/utils/audio.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx declares export default function App() at line 14.",
+      "claimSha256": "sha256:dfdeeff013f08edbd4b5d7e158827d0fd11390ea99f02cfd8301d6cf595fb5b7",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-cbeb91fb6905911d"
+      ],
+      "factSha256": "sha256:bcd7e625336ba51e59638c9fe0e27c6dc1baea1bf1f4cedc1b4fd3a818089615",
+      "factType": "signature",
+      "id": "FACT-d1d7371e6c017c54",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx#App",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-7eb690154721d6bd",
+      "evidenceIds": [],
+      "factSha256": "sha256:9220703d02b7e38b479dc842006827513f99303edf4da2b487e48c596b31a018",
+      "factType": "implementation",
+      "id": "FACT-d37231b1d6385c5f",
+      "reason": {
+        "attemptedProducer": "required-fact-coverage",
+        "code": "NO_REGISTERED_PRODUCER",
+        "detail": "No registered deterministic producer supplied implementation for arch.contracts@4 within the pinned scope."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "arch.contracts@4:implementation",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js line 40 contains a lexical reference candidate to same-file declaration formatNumber at line 57; semantic resolution is unavailable.",
+      "claimSha256": "sha256:14b29d2754eba4d1fe103be6059827ec59a871da24b50a297003954e90013480",
+      "conflictsWith": [],
+      "derivationId": "DRV-1ec54f9dc79d4140",
+      "evidenceIds": [
+        "EV-3b10478f2225bcd4"
+      ],
+      "factSha256": "sha256:32967e2a47d3146f5717faa2f2220db712e43d9b84c56ec19dee45dec0eff44c",
+      "factType": "dependency-edge",
+      "id": "FACT-d436607626c6bb79",
+      "scopeStatus": "inside",
+      "status": "partial",
+      "subject": {
+        "id": "src/utils/evaluator.js:40->src/utils/evaluator.js#formatNumber",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js declares import target mathjs.",
+      "claimSha256": "sha256:7671078c9fa387861fd6fabbb463a22fc00387cb1a91916770486c7435509542",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-e002f4dc16da52c7"
+      ],
+      "factSha256": "sha256:aa634f732d9c38308d498455416503178dd78ae6cd3a6a1f98a7af32a472b493",
+      "factType": "import-dependency",
+      "id": "FACT-d74771015816cc9f",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js->mathjs",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "binding FinancialCalculator is exported in src/components/FinancialCalculator.jsx at line 6.",
+      "claimSha256": "sha256:3a0443921edf7be33cd31bc6e29f3ac7da9efc4f5c9cbbc6871258a2cc6f4cea",
+      "conflictsWith": [],
+      "derivationId": "DRV-4e035f536b28b89d",
+      "evidenceIds": [
+        "EV-30271b088c92b686"
+      ],
+      "factSha256": "sha256:66b8da9e6277c5a2da75eb68db782b7de53c7a959c2b2a3fdd67a4c9c4594535",
+      "factType": "symbol-exists",
+      "id": "FACT-d9cc2d4ed5c65ed1",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FinancialCalculator.jsx#FinancialCalculator",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/App.test.jsx exists as a 100644 Git blob with 7330 bytes.",
+      "claimSha256": "sha256:cb55aac6c51a84539abc636a0b54f55fd78716cbdb2c6209e89d84b99330b225",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-ca9e99555782f35f"
+      ],
+      "factSha256": "sha256:1a987f5f4a5315a49eeb7afddb36124117c8e47d6ae301c456a28027e47bb873",
+      "factType": "file-exists",
+      "id": "FACT-dac86b7468f68bdd",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/Display.jsx declares import target lucide-react.",
+      "claimSha256": "sha256:b3f1cdc7330d9c27c32b25a8a8d9690a06d847ddbeb10653d19ef0d974d89e6d",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-b7538845b7864a0e"
+      ],
+      "factSha256": "sha256:cd144e07871442f46ce50402ba827293e93312a0ba4dd246384a45076fc932e7",
+      "factType": "import-dependency",
+      "id": "FACT-de0b589cf345b62a",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/Display.jsx->lucide-react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/main.jsx declares import target react.",
+      "claimSha256": "sha256:e30b63e7c831d5fa5f3f1b33b331b256c4a2a5af1661270aa9f98c578ca62dbc",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-b0c0191e63f541a8"
+      ],
+      "factSha256": "sha256:1aaa90b2d86768248312d6803bad1e96f0aef1d1029d66f3ef2df519b3a0619f",
+      "factType": "import-dependency",
+      "id": "FACT-de3f8922d0887b52",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/main.jsx->react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/App.test.jsx has the registered javascript source extension.",
+      "claimSha256": "sha256:dd6d33c2f2d476c06befc06061f26fb95da2ef853ded3fc2fe07da4910db8340",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-ca9e99555782f35f"
+      ],
+      "factSha256": "sha256:1ee0dcbfbbd2f58621f7bc85e80968841ee87d58151b5834f97662567a55427e",
+      "factType": "language-detected",
+      "id": "FACT-dfd8eae6c70ad68d",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "function App is exported in src/App.jsx at line 14.",
+      "claimSha256": "sha256:e89c354b6d81d5f15767a4addd9268b6e421d66a556d219ed33e98ce373f55af",
+      "conflictsWith": [],
+      "derivationId": "DRV-4e035f536b28b89d",
+      "evidenceIds": [
+        "EV-c70c55aba0639d6e"
+      ],
+      "factSha256": "sha256:6b05fb0dc74b18966e7362fcbed1cba77f987d4260cde19b86c8c1adfe6d94d5",
+      "factType": "symbol-exists",
+      "id": "FACT-e045be96b99c84fb",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx#App",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "AC-003 is explicitly bound to src/App.test.jsx at line 25.",
+      "claimSha256": "sha256:d998e4bd46904d6beeabfe882fc18b51bdf087864754ec84ff8314121e82cc56",
+      "conflictsWith": [],
+      "derivationId": "DRV-856d200f81fa9587",
+      "evidenceIds": [
+        "EV-e850637f6d5cfa1c"
+      ],
+      "factSha256": "sha256:ce37b78d6df2147e22c4ecb2b853809d1223173f232a00f30e1078fd7e7cc841",
+      "factType": "clause-binding",
+      "id": "FACT-e06c95d7194d2dcf",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "AC-003@src/App.test.jsx:25",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.test.js declares import target vitest.",
+      "claimSha256": "sha256:67ef9b7500e416bbe29fe41741a30afc3a39c1cead800de57abe75dfac5c685c",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-b9dd1cad0d26c219"
+      ],
+      "factSha256": "sha256:d635d8bfabb0cab01a5335aa9de25bffdfc413db9a3537feebe551a0fec71203",
+      "factType": "import-dependency",
+      "id": "FACT-e196c92dc9bd2b14",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js->vitest",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/index.css exists as a 100644 Git blob with 16856 bytes.",
+      "claimSha256": "sha256:84c3eb5ab59be2001f98f081c50124d95a8356a9b20be716e4c5772fdc71394c",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-b3d3b91d1f21259d"
+      ],
+      "factSha256": "sha256:0cef24c4cb583a80d8442ebcf1cef6417ccf46ab2f15cb1bf9e05517c87dee77",
+      "factType": "file-exists",
+      "id": "FACT-e1a37887e168cd3b",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/index.css",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-7eb690154721d6bd",
+      "evidenceIds": [],
+      "factSha256": "sha256:2151ca1683fc99aab582c004ec65e4a82d0c093b519c78ad6e8314736f27c966",
+      "factType": "consumer-dependency",
+      "id": "FACT-e2009099116afbd7",
+      "reason": {
+        "attemptedProducer": "required-fact-coverage",
+        "code": "NO_REGISTERED_PRODUCER",
+        "detail": "No registered deterministic producer supplied consumer-dependency for arch.contracts@4 within the pinned scope."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "arch.contracts@4:consumer-dependency",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "vite.config.js has the registered javascript source extension.",
+      "claimSha256": "sha256:08f632abede95b5e18f7cfa94846df8057e402512a6481c0c6e423163fe9480c",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-838969db01a35c56"
+      ],
+      "factSha256": "sha256:0d0ccc9f00a1aa8489a1cee952c4898bbad71805898f97cd6a3c7a4f4899c901",
+      "factType": "language-detected",
+      "id": "FACT-e27229bede4feaef",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "vite.config.js",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "describe test 'formatNumber (display formatting regression)' is declared in src/utils/evaluator.test.js at line 59.",
+      "claimSha256": "sha256:3d3040a819d4f3e0faccdadc06a2060d70b5f33ac98446368b3e2d8629491ced",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-1c7d40101767988b"
+      ],
+      "factSha256": "sha256:a5bcc11c5c2d1f1f16f2e7b91d222efcba02590b743dfa4cdb007693df4dc158",
+      "factType": "test-identity",
+      "id": "FACT-e4ad41c61941ab3d",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js#formatNumber (display formatting regression)",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'reports a math error for divide-by-zero style overflow' is declared in src/utils/evaluator.test.js at line 53.",
+      "claimSha256": "sha256:02218460e31cbafc6d3d2974a077334476f3815ef2ad9518871c3848a5e946fd",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-d696b4a22d8139e8"
+      ],
+      "factSha256": "sha256:acbb6a59e69ccdf0f74788d6b255762168763015a4ea2713d13166a4c66dcf50",
+      "factType": "test-identity",
+      "id": "FACT-e4edadaf0291e812",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.test.js#reports a math error for divide-by-zero style overflow",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js line 47 contains a lexical reference candidate to same-file declaration formatNumber at line 57; semantic resolution is unavailable.",
+      "claimSha256": "sha256:c6743598167aa4933d5070219680e9a349541e9fc5769f3db335e7e1d962009e",
+      "conflictsWith": [],
+      "derivationId": "DRV-1ec54f9dc79d4140",
+      "evidenceIds": [
+        "EV-e2c58a6cb3a7ffb9"
+      ],
+      "factSha256": "sha256:7004eeb5f2770b80821bc2d1b5b5f92a09528ddf8d1fed1230a2dee7e9403eed",
+      "factType": "dependency-edge",
+      "id": "FACT-e588c6e672c215bb",
+      "scopeStatus": "inside",
+      "status": "partial",
+      "subject": {
+        "id": "src/utils/evaluator.js:47->src/utils/evaluator.js#formatNumber",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "HistoryDrawer is explicitly exported by src/components/HistoryDrawer.jsx at line 5.",
+      "claimSha256": "sha256:f59dcb77d902e1297e25ab09fdcb3a311f8c7a7348cf797714f7ef73a5a4eb4a",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-c7aefaa3740318a6"
+      ],
+      "factSha256": "sha256:06cc294911fc7f2568e3448e1f94af85af8fc2510144d6e74c5966fb1428a3cc",
+      "factType": "export",
+      "id": "FACT-e83b618fdd0bdce9",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/HistoryDrawer.jsx#HistoryDrawer",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/components/Header.jsx has the registered javascript source extension.",
+      "claimSha256": "sha256:60b27db9137803054af3c80426638365697507f155dc1442e3406c0ba7da56a8",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-f37db04f98123d7c"
+      ],
+      "factSha256": "sha256:4925e7ef430a62fc67a6e1c9e66d160148a2775a28bcf4bfcc901722222fd4cf",
+      "factType": "language-detected",
+      "id": "FACT-e8c8a12dfc947ed9",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/Header.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "binding KeyboardShortcutsModal is exported in src/components/KeyboardShortcutsModal.jsx at line 5.",
+      "claimSha256": "sha256:c25234e28add19a9528ee4c116e532e78be3b07286901f883e343fc3ef24f2c8",
+      "conflictsWith": [],
+      "derivationId": "DRV-4e035f536b28b89d",
+      "evidenceIds": [
+        "EV-0122e50678d05085"
+      ],
+      "factSha256": "sha256:fedb724193907b082ab3922fbd4476bfadb36a322062ee038a8c9ac5ff91a852",
+      "factType": "symbol-exists",
+      "id": "FACT-ea6e230edcb2310b",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/KeyboardShortcutsModal.jsx#KeyboardShortcutsModal",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "describe test 'Windows 11 Fluent theme coverage across modes' is declared in src/App.test.jsx at line 134.",
+      "claimSha256": "sha256:1f220aaf20b7e07586c7de2499dc1c700c739bb95c57f5e6160c17b6cc8cf6f3",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-d3e8118384f2b855"
+      ],
+      "factSha256": "sha256:048808a3bf5f952da07389d4ec418fe2c83a34bf2e52304169feb40c731eff93",
+      "factType": "test-identity",
+      "id": "FACT-ea9b368e4b8f43c2",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx#Windows 11 Fluent theme coverage across modes",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'clears the expression with AC and supports backspace' is declared in src/App.test.jsx at line 73.",
+      "claimSha256": "sha256:9d825e9c6dc50e902f2953495a503bcca466463342616b41138a51cb0ab44240",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-f4217d0d443888f4"
+      ],
+      "factSha256": "sha256:c79cb6e82db475955e59f59f30e3e3000bc26e5e5dae514e119178b1741ed176",
+      "factType": "test-identity",
+      "id": "FACT-eb5ffa91c6e79b86",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx#clears the expression with AC and supports backspace",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'supports memory recall (MC/MR/M+/M-) without changing calculation results' is declared in src/App.test.jsx at line 44.",
+      "claimSha256": "sha256:8b0c5dd4c6140004f3b73b786e49613b0b399a609497ea6e6f6d85667791eec1",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-df44c882517d556d"
+      ],
+      "factSha256": "sha256:87a412e1f9c784a2ea7b8ccf4cb3b6ef177c9d585f317f55dd950c7a8b828989",
+      "factType": "test-identity",
+      "id": "FACT-ebd89e66dd15063e",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx#supports memory recall (MC/MR/M+/M-) without changing calculation results",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.test.jsx declares import target @testing-library/user-event.",
+      "claimSha256": "sha256:9f3aaaf3719b5e4bb6b452cab30d962afa08485f974670c95925776954e0d19d",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-b775f694ca134317"
+      ],
+      "factSha256": "sha256:bf0860a0c0c6d99b985bc3a38a790b692c2a59756e185df5d93e861be93535d9",
+      "factType": "import-dependency",
+      "id": "FACT-ecbfd8c553977c87",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx->@testing-library/user-event",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "App is explicitly exported by src/App.jsx at line 14.",
+      "claimSha256": "sha256:1901e1e3d3839c879ae8c9ab2a2ae1a1e9cd1d0d62497da9aa75ceb362714d1d",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-54169855d7c87eb4"
+      ],
+      "factSha256": "sha256:014533eac2950d1ff6136af141c820cfb1f3eef2a9b9ae33997efa6c2321f2b7",
+      "factType": "export",
+      "id": "FACT-ed489d8be2f790a3",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx#App",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/components/Display.jsx has the registered javascript source extension.",
+      "claimSha256": "sha256:467603fef4c835f6710fcc627e6655bfb78fb54970bad0a0b6b5f8ee1bc6f470",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-36bcfcef4e8ca46f"
+      ],
+      "factSha256": "sha256:44090a8dea88a1d81821537837a4b7ad8f0b6ac18087ac58e6b8bdd073ebf673",
+      "factType": "language-detected",
+      "id": "FACT-edbd12621542f60a",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/Display.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "index.html exists as a 100644 Git blob with 697 bytes.",
+      "claimSha256": "sha256:01bda91aa7e99b5986ea25ae0651f0d116e0aba5e0d0cd02a6e43a6a62d663aa",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-def95f7c7b30ef81"
+      ],
+      "factSha256": "sha256:fe005fa3521a8e560b7cd075971b9d643804a435df72f7dbe335591e2ce2b235",
+      "factType": "file-exists",
+      "id": "FACT-eeca99d69a9b67bb",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "index.html",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "calculateCompoundInterest is explicitly exported by src/utils/evaluator.js at line 181.",
+      "claimSha256": "sha256:96ac2b9eff2e2851b6cf481d3ae942a673bb7ec85cacc5f99cf47ade16b6ecae",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-aa2c8889c1304945"
+      ],
+      "factSha256": "sha256:610d2b182d856533d82d2ccd3b774c0bab3a0c9ef17da50b990d9b7cdaa80728",
+      "factType": "export",
+      "id": "FACT-ef1c9e9404b8fdaf",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#calculateCompoundInterest",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "KeyboardShortcutsModal is explicitly exported by src/components/KeyboardShortcutsModal.jsx at line 5.",
+      "claimSha256": "sha256:e1021f9917b1d5f147a42f5f386985a7581c3f90edf6f4d83c8d2c124134e820",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-13375654f30d79d2"
+      ],
+      "factSha256": "sha256:b20ab272bb2ac2bf9f2537884a6463ffcdcc7071b3f0e9e5765e8f15f8576c8f",
+      "factType": "export",
+      "id": "FACT-ef88867196a6e8ea",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/KeyboardShortcutsModal.jsx#KeyboardShortcutsModal",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "AC-005 is explicitly bound to src/build.test.js at line 14.",
+      "claimSha256": "sha256:e3598e32f035e39d542257561bde487e45a7ab7a4e4b17fa28f5bab7dd438a69",
+      "conflictsWith": [],
+      "derivationId": "DRV-856d200f81fa9587",
+      "evidenceIds": [
+        "EV-9077d33532c74131"
+      ],
+      "factSha256": "sha256:5c88bf9716bfb2eda7a97e587ad91a9eacf4cfbf8ce601f0898ea1f4a870e244",
+      "factType": "clause-binding",
+      "id": "FACT-f241fae3cb616373",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "AC-005@src/build.test.js:14",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/main.jsx has the registered javascript source extension.",
+      "claimSha256": "sha256:e569d08bc529c3d9d324d56d559d690a40d04dbdcb53ffe1c61d246bfa8f811e",
+      "conflictsWith": [],
+      "derivationId": "DRV-5cef0e505626a07c",
+      "evidenceIds": [
+        "EV-4f95f0869594f9dc"
+      ],
+      "factSha256": "sha256:576283fc6738aaef83da200e295e98c6f5dba916c62102c124deb5551fad25bd",
+      "factType": "language-detected",
+      "id": "FACT-f252390b005722d8",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/main.jsx",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/ScientificKeypad.jsx declares export const ScientificKeypad at line 5.",
+      "claimSha256": "sha256:beb2748ebfaf1c23a22678b878f7a976d3a664f75b07ad26cacdfe8cfa65d24b",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-46d1a3665d6f5490"
+      ],
+      "factSha256": "sha256:81cd9dcea4b36d5ee2b4197289ecfb3e871109c2fdf6d907c37f074131fb10a7",
+      "factType": "signature",
+      "id": "FACT-f385aa736ebec63f",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/ScientificKeypad.jsx#ScientificKeypad",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/UnitConverter.jsx imports the in-scope module src/utils/evaluator.js.",
+      "claimSha256": "sha256:5a99dae20dcc583f14c2dfe4087833773d7f2abbe016a8690b1267f19efb69ef",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-31f5fd9658b146cf"
+      ],
+      "factSha256": "sha256:9c88c360bcb5794ee3e22aaa820e0188eeff5df3825fb10b5fd97a82175b08b5",
+      "factType": "dependency-edge",
+      "id": "FACT-f461438597eb4ab5",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/UnitConverter.jsx->src/utils/evaluator.js",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/HistoryDrawer.jsx declares import target lucide-react.",
+      "claimSha256": "sha256:d796480c446c546de531d8f7c808db8b309a482b17a7e19bf65b43dffad982e1",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-290a85f3fd2435af"
+      ],
+      "factSha256": "sha256:4adf6ad6842fff4ec5b47d2ab783bdf4efdfa3b3ac4e9735a8fdc1ec1093e4d5",
+      "factType": "import-dependency",
+      "id": "FACT-f5dbbd6f5b7cf26e",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/HistoryDrawer.jsx->lucide-react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "vite.config.js declares import target @vitejs/plugin-react.",
+      "claimSha256": "sha256:90736162955ee5641c89a28e17945ce7a4198db1be3c8cad8a920d4bc54fbd99",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-cc644ded64cef943"
+      ],
+      "factSha256": "sha256:4e3a0d7360605806298cfd2e0d1cd15823e03e511135eecaa6044bd8beee4462",
+      "factType": "import-dependency",
+      "id": "FACT-f5e3fcab0f4d27ce",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "vite.config.js->@vitejs/plugin-react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "UNIT_TYPES is explicitly exported by src/utils/evaluator.js at line 75.",
+      "claimSha256": "sha256:586b0402329b91ef7a6b0ea0f898fb9967d83b38050566a6a211dd4246d4a962",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-235c9044ce3fdef7"
+      ],
+      "factSha256": "sha256:a6f6f4c24471a6dd002457f386428f300202c9b50fe4f24ade9909f893d5b9e6",
+      "factType": "export",
+      "id": "FACT-f8e238d8933ab5ea",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#UNIT_TYPES",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-7eb690154721d6bd",
+      "evidenceIds": [],
+      "factSha256": "sha256:2c533587af6c00f0600fe19b880bd78fb793c53ba47e465f547f3d5a168c112c",
+      "factType": "rule-definition",
+      "id": "FACT-f9509b576c4c89c9",
+      "reason": {
+        "attemptedProducer": "required-fact-coverage",
+        "code": "NO_REGISTERED_PRODUCER",
+        "detail": "No registered deterministic producer supplied rule-definition for biz.rules@4 within the pinned scope."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "biz.rules@4:rule-definition",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/UnitConverter.jsx declares export const UnitConverter at line 14.",
+      "claimSha256": "sha256:e26d2b5f0cdb273affcb84d3013563d0c57d777eb4eddb2a71aa5ccd8c096603",
+      "conflictsWith": [],
+      "derivationId": "DRV-c7e97e5ae05d63d4",
+      "evidenceIds": [
+        "EV-c603f486ff74ed3e"
+      ],
+      "factSha256": "sha256:7eeb3fd2a3f780b60f24184268f931ed2bff6a412497836baa7f6d8cf38aebe7",
+      "factType": "signature",
+      "id": "FACT-f9dfc85cd1556fe1",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/UnitConverter.jsx#UnitConverter",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "binding calculateEMI is exported in src/utils/evaluator.js at line 161.",
+      "claimSha256": "sha256:d1b088d6b8fdc17e47c3e3b593b9d8cbd39d10f5505623ae8f011e532c39c90a",
+      "conflictsWith": [],
+      "derivationId": "DRV-4e035f536b28b89d",
+      "evidenceIds": [
+        "EV-1d0c4e6752d55d45"
+      ],
+      "factSha256": "sha256:51177d58fe3623992261ff53a6ee6fa37964dd77386fcf35d881b7739be77d7b",
+      "factType": "symbol-exists",
+      "id": "FACT-fd444de4354367b0",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#calculateEMI",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/UnitConverter.jsx declares import target lucide-react.",
+      "claimSha256": "sha256:b599438cedec1c85ca2bad04deb7653239ff5dd915314b909dcc2907c65df7a2",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-4c78706b061f1519"
+      ],
+      "factSha256": "sha256:e2dab76300349651e7a1018acc7520919345050224d7422db6836ca463798e84",
+      "factType": "import-dependency",
+      "id": "FACT-fd7576cc9a5c2a4d",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/UnitConverter.jsx->lucide-react",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "src/App.css exists as a 100644 Git blob with 2891 bytes.",
+      "claimSha256": "sha256:2d3f1c274ad97e5ca95d86fa74d7f90361f757ab11bdf8f5e618a5ad8b26c9ac",
+      "conflictsWith": [],
+      "derivationId": "DRV-cb1cd54b3d05638d",
+      "evidenceIds": [
+        "EV-0462935369de1d01"
+      ],
+      "factSha256": "sha256:e0c34ea7eb7a4004a636434b1168e1e7a7623518a22ada750cb816fbb0ee4771",
+      "factType": "file-exists",
+      "id": "FACT-fd93b1cf66ab7f42",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.css",
+        "kind": "file"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "it test 'renders both the desktop nav rail and the mobile dropdown markup' is declared in src/App.test.jsx at line 186.",
+      "claimSha256": "sha256:f2c009bab9a02f14088a24cb54fc2b49b154fc853a7aa1f47cadfa3e200e4c33",
+      "conflictsWith": [],
+      "derivationId": "DRV-9a47f6485e90241e",
+      "evidenceIds": [
+        "EV-89651bff76c2b096"
+      ],
+      "factSha256": "sha256:581fc48a715475a5590d601503c4af163112d8a12a7b6c34d8d56ccc5b4e9b75",
+      "factType": "test-identity",
+      "id": "FACT-fe401f854ca0c759",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.test.jsx#renders both the desktop nav rail and the mobile dropdown markup",
+        "kind": "test"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "binding formatNumber is exported in src/utils/evaluator.js at line 57.",
+      "claimSha256": "sha256:c1c6a1aaab54927dd189ff587bdf6d844e4069b6eb1f235c002d7992860c89d5",
+      "conflictsWith": [],
+      "derivationId": "DRV-4e035f536b28b89d",
+      "evidenceIds": [
+        "EV-d75190c32da5d546"
+      ],
+      "factSha256": "sha256:a8fb96b9d2156f5f3c60422c1cf5b7fc17b6dc7e4955374a4c25bba235468243",
+      "factType": "symbol-exists",
+      "id": "FACT-ff0f730a7b4fa9b4",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#formatNumber",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/components/UnitConverter.jsx.",
+      "claimSha256": "sha256:5109f5679a46a44a7f348d90cbdb9944afc16797959fd74ee2c95704b7c77aab",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-799a99fdc5788ea2"
+      ],
+      "factSha256": "sha256:ca14c1b9b26685f8f25ff0193d532e2394c36255d3a93de93e8373ca0ddab4fa",
+      "factType": "dependency-edge",
+      "id": "FACT-ff11ef46a5fa3529",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/components/UnitConverter.jsx",
+        "kind": "dependency-edge"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx imports the in-scope module src/components/ScientificKeypad.jsx.",
+      "claimSha256": "sha256:d5df7d430436904ab4abcb6288ecaf1a124c9d9181e66547a23dbc600c4726c0",
+      "conflictsWith": [],
+      "derivationId": "DRV-cee3d0023694abe2",
+      "evidenceIds": [
+        "EV-d0ee65552afd74f9"
+      ],
+      "factSha256": "sha256:6da1eaa2884aa3c6d65a458a43540275277a029287105f538ea63fa51f73f859",
+      "factType": "dependency-edge",
+      "id": "FACT-ff1b276982409f7a",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx->src/components/ScientificKeypad.jsx",
+        "kind": "dependency-edge"
+      }
+    }
+  ],
+  "kind": "world-model-fact-ledger",
+  "ledgerSha256": "sha256:94e9618f4995f06b7775177d5e3b040d1610340b0a0c1dc0e58f6411bbf2f20b",
+  "schemaVersion": 1,
+  "scopeManifestSha256": "sha256:1c07de1e3891f4ec4710c0c479e681f009a03f1dd5f42c26a4a60373cab1a2df",
+  "sourceManifestSha256": "sha256:0748ea44b3c8165f90f4981b65cc40f23342ba876dd9e59c2fdd13918427e2e0"
+}
