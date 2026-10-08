@@ -1,0 +1,97 @@
+import React, { useState } from 'react';
+import { Copy, Check, Delete, RotateCcw } from 'lucide-react';
+import { playSound } from '../utils/audio';
+
+export const Display = ({
+  expression,
+  result,
+  angleUnit,
+  setAngleUnit,
+  memoryValue,
+  soundEnabled,
+  onBackspace,
+  onClear,
+}) => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    const textToCopy = result && result !== '0' ? result : expression;
+    if (!textToCopy) return;
+    navigator.clipboard.writeText(textToCopy);
+    setCopied(true);
+    playSound('click', soundEnabled);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div className="calculator-display w-full flex flex-col justify-between mb-4 transition-all relative overflow-hidden">
+      {/* Top Status Bar */}
+      <div className="flex items-center justify-between text-xs u-text-text-muted font-mono mb-2">
+        <div className="flex items-center gap-2">
+          {/* DEG / RAD Toggle Pill */}
+          <button
+            onClick={() => {
+              playSound('click', soundEnabled);
+              setAngleUnit(angleUnit === 'DEG' ? 'RAD' : 'DEG');
+            }}
+            className="px-2 py-0.5 rounded-md u-bg-btn-func-bg border u-border-card-border u-htext-text-main font-semibold transition-colors"
+          >
+            {angleUnit}
+          </button>
+
+          {/* Memory Indicator */}
+          {memoryValue !== null && memoryValue !== 0 && (
+            <span className="px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-400 font-bold border border-amber-500/30 animate-pulse">
+              M: {memoryValue}
+            </span>
+          )}
+        </div>
+
+        {/* Display Utility Actions */}
+        <div className="flex items-center gap-1.5">
+          <button
+            onClick={() => {
+              playSound('clear', soundEnabled);
+              onClear();
+            }}
+            title="Clear All (Esc)"
+            className="p-1.5 rounded-lg hover:bg-rose-500/20 text-rose-400 transition-colors"
+          >
+            <RotateCcw className="w-3.5 h-3.5" />
+          </button>
+          <button
+            onClick={() => {
+              playSound('digit', soundEnabled);
+              onBackspace();
+            }}
+            title="Backspace"
+            className="p-1.5 rounded-lg u-hbg-btn-func-bg u-text-text-muted u-htext-text-main transition-colors"
+          >
+            <Delete className="w-3.5 h-3.5" />
+          </button>
+          <button
+            onClick={handleCopy}
+            title="Copy Result"
+            className="p-1.5 rounded-lg u-hbg-btn-func-bg u-text-text-muted u-htext-text-main transition-colors flex items-center gap-1"
+          >
+            {copied ? (
+              <Check className="w-3.5 h-3.5 text-emerald-400" />
+            ) : (
+              <Copy className="w-3.5 h-3.5" />
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Math Expression Line */}
+      <div className="w-full text-right font-mono text-sm sm:text-base u-text-text-muted min-h-[24px] overflow-x-auto whitespace-nowrap scrollbar-none tracking-wide">
+        {expression || ' '}
+      </div>
+
+      {/* Main Result Output */}
+      <div className="w-full text-right font-mono text-3xl sm:text-4xl font-bold u-text-text-main overflow-x-auto whitespace-nowrap scrollbar-none tracking-tight mt-1 transition-all">
+        {result || '0'}
+      </div>
+    </div>
+  );
+};
