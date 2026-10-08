@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-10-08T13:23:50.922Z",
+  "claims": {
+    "C-HEX:REQ-001": {
+      "expectedPaths": [
+        "src/App.css",
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "The browser page accepts a value and performs hexadecimal conversion without introducing a new backend or privileged flow."
+    },
+    "C-HEX:REQ-002": {
+      "expectedPaths": [
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "A supported positive whole number displays its uppercase hexadecimal form with no `0x` prefix."
+    },
+    "C-HEX:REQ-003": {
+      "expectedPaths": [
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "Every valid result uses uppercase hexadecimal characters and omits the `0x` prefix."
+    },
+    "C-HEX:REQ-004": {
+      "expectedPaths": [
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "Empty, zero, negative, decimal, and non-numeric values all display exactly `Not Supported`."
+    },
+    "C-HEX:REQ-005": {
+      "expectedPaths": [
+        "singularity/work-items/c-hex/evidence/verification/hex-conversion-not-supported.png",
+        "singularity/work-items/c-hex/evidence/verification/hex-conversion-success.png"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "Screenshot evidence shows the implemented browser page with a successful conversion and a `Not Supported` outcome."
+    },
+    "C-HEX:AC-001": {
+      "expectedPaths": [
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "Entering `255` and requesting conversion displays exactly `FF`."
+    },
+    "C-HEX:AC-002": {
+      "expectedPaths": [
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "Entering `1` and requesting conversion displays exactly `1`."
+    },
+    "C-HEX:AC-003": {
+      "expectedPaths": [
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "Supported results use uppercase characters and omit the `0x` prefix."
+    },
+    "C-HEX:AC-004": {
+      "expectedPaths": [
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "Empty, `0`, negative, decimal, and non-numeric input each display exactly `Not Supported`."
+    },
+    "C-HEX:AC-005": {
+      "expectedPaths": [
+        "singularity/work-items/c-hex/evidence/verification/hex-conversion-not-supported.png",
+        "singularity/work-items/c-hex/evidence/verification/hex-conversion-success.png"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "Retained screenshots show at least one supported result and the `Not Supported` outcome."
+    }
+  },
+  "verificationContracts": [
+    {
+      "clauseId": "C-HEX:AC-001",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "browser-page-result",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "successful conversion showing 255 as FF"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    },
+    {
+      "clauseId": "C-HEX:AC-004",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "unsupported-input-result",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "unsupported inputs showing Not Supported"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    },
+    {
+      "clauseId": "C-HEX:AC-005",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "supported-screenshot",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "retained browser screenshot showing a supported result"
+          },
+          "requiredAssurance": "source-bound"
+        },
+        {
+          "slot": "unsupported-screenshot",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "retained browser screenshot showing Not Supported"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    }
+  ],
+  "workId": "c-hex",
+  "phase": "planning",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/c-hex/artifacts/planning/plan.md",
+    "sha256": "efcd52f6b4311de0c47173033ccdffc777c7975cc831470cf3c2f2f379952cb6",
+    "bytes": 16979
+  }
+}
