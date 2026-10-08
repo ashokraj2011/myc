@@ -4,7 +4,7 @@
   "workId": "c-hex",
   "workType": "spec-driven-standard",
   "phase": "planning",
-  "generation": 1,
+  "generation": 2,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "plan.md",
       "mediaType": "text/markdown",
-      "sha256": "5a40173963ce3def812aae2da4a34bf907448d13670d62b0936beb0f472889e0",
-      "bytes": 6882
+      "sha256": "3949edda3e57958bf6b004fc5a73df1c6b7ae0ac3e32c54728adc464c7110629",
+      "bytes": 7633
     },
-    "generation": 1,
-    "publishedAt": "2026-10-08T13:23:50.798Z"
+    "generation": 2,
+    "publishedAt": "2026-10-08T13:49:01.240Z"
   },
-  "sourceCommit": "f0a9914c5701d31a9da549e8aadf2007a65e6b82",
+  "sourceCommit": "e2a40495ec6c98d1c4c05d27d9a01064a60bf476",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "8603b630ebce6c8a7cabcc23f668f657bb84d84d9326d1545f5db42557025e04",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/spec-driven/plan.md"
   },
   "inputs": {
-    "generation": 1,
-    "path": "singularity/work-items/c-hex/context/inputs-planning-gen1.json",
-    "sha256": "40c4f1bcf92467e3b7280323d13ca9852cd4e54c249a85291fe42fd7eacb2daa",
+    "generation": 2,
+    "path": "singularity/work-items/c-hex/context/inputs-planning-gen2.json",
+    "sha256": "298907f59dcc66bdcf74f732fe8650110c689adc5f8a3e3630f8aa2d05f3160d",
     "renderedSha256": "56e464ba6d3a5be41e6e13bb468520e340bbc934764724d1db48a99164c294c6",
     "mode": "enforce"
   },
@@ -77,6 +77,26 @@
       "generation": 1,
       "path": "singularity/work-items/c-hex/telemetry/planning-gen1.json",
       "sha256": "2076127ae52640567d805ea47a0df779ababebfdc2a53ac488a44a67984a52fb",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 17185,
+        "estimatedTokens": 4297,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 17185,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 2,
+      "path": "singularity/work-items/c-hex/telemetry/planning-gen2.json",
+      "sha256": "aba4a338ba1e105aa2acfa9717ffbb4e77732abb9f7afdd16fbf7fa2c0e89a1f",
       "status": "pending",
       "models": [],
       "providerCost": null,
@@ -116,6 +136,27 @@
       "completedAt": "2026-10-08T13:23:50.798Z",
       "agent": "architect",
       "generation": 1
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-08T13:49:01.240Z",
+      "completedAt": "2026-10-08T13:49:01.240Z",
+      "agent": "architect",
+      "generation": 2
     }
   ],
   "sequenceOverrides": [],
@@ -138,11 +179,11 @@ for downstream agents. Keep exact commands and source paths when they are operat
 The complete approved plan remains available through its hash-bound expansion reference.
 -->
 
-Add a minimal browser-side conversion flow to the existing calculator application: render a conversion input and action in the main UI, validate the supported domain (positive base-10 whole numbers greater than zero), and surface exactly `Not Supported` for every invalid value. The change is constrained to the current browser app and is verified with a small UI regression suite that exercises the supported and unsupported cases and retains screenshot evidence.
+Add a minimal browser-side conversion flow to the existing calculator application: render a conversion input and action in the main UI, validate the supported domain (positive base-10 whole numbers greater than zero), convert validated decimal text with `BigInt` so values above JavaScript's safe-integer boundary remain exact, and surface exactly `Not Supported` for every invalid value. The change is constrained to the current browser app and is verified with a small UI regression suite that exercises ordinary, large, and unsupported cases and retains screenshot evidence.
 
 ## Approach
 
-The implementation will extend the existing browser application rather than introducing a separate service or new runtime. A small input-and-button flow in the primary app will accept user text, reject values outside the allowed domain, and convert valid inputs to uppercase hexadecimal without a `0x` prefix. The approach follows the approved specification exactly: it treats unsupported inputs consistently, keeps the change in-browser only, and verifies the result through focused tests plus retained screenshot evidence.
+The implementation will extend the existing browser application rather than introducing a separate service or new runtime. A small input-and-button flow in the primary app will validate the entered text as a positive base-10 whole number before parsing it with `BigInt`, then render the equivalent uppercase hexadecimal value without a `0x` prefix. Keeping validation ahead of parsing prevents unsupported syntax from reaching `BigInt`, while avoiding `Number` preserves mathematical equivalence above `Number.MAX_SAFE_INTEGER` without adding an application-defined maximum. The approach follows the approved specification exactly: it treats unsupported inputs consistently, keeps the change in-browser only, and verifies the result through focused tests plus retained screenshot evidence.
 
 ## Affected surfaces
 
@@ -156,9 +197,9 @@ The change is limited to the browser UI and its associated regression checks. Th
 ## Sequencing
 
 1. Extend the existing browser UI to expose a conversion input, action trigger, and result display in the active page.
-2. Add the input guard for the supported domain (`> 0`, base-10, whole number) and map valid values to uppercase hexadecimal without a `0x` prefix.
+2. Add a decimal-string input guard for the supported domain (`> 0`, base-10, whole number), parse only validated input with `BigInt`, and map valid values to uppercase hexadecimal without a `0x` prefix or a safe-integer ceiling.
 3. Normalize the unsupported-input outcome to exactly `Not Supported` across empty, zero, negative, decimal, and non-numeric inputs.
-4. Validate the user-visible behavior with the app test suite and retain screenshot evidence that shows both a successful conversion and the unsupported result.
+4. Validate the user-visible behavior with the app test suite, including `9007199254740993` producing exactly `20000000000001`, and retain screenshot evidence that shows both a successful conversion and the unsupported result.
 5. Review the final UI and regression evidence to ensure the feature stays within the spec boundary and does not introduce authentication, persistence, or extra conversion modes.
 
 ## Test strategy
@@ -168,7 +209,7 @@ The implementation will prove each authoritative requirement with the app-level 
 | Clause | Expected paths | Planned tests | Fulfillment | Observable result |
 |---|---|---|---|---|
 | `c-hex:REQ-001` | `src/App.jsx`, `src/App.css` | `src/App.test.jsx` | new | The browser page accepts a value and performs hexadecimal conversion without introducing a new backend or privileged flow. |
-| `c-hex:REQ-002` | `src/App.jsx` | `src/App.test.jsx` | new | A supported positive whole number displays its uppercase hexadecimal form with no `0x` prefix. |
+| `c-hex:REQ-002` | `src/App.jsx` | `src/App.test.jsx` | new | A supported positive whole number, including `9007199254740993` above `Number.MAX_SAFE_INTEGER`, displays its mathematically equivalent hexadecimal value (`20000000000001`) without an application-defined maximum. |
 | `c-hex:REQ-003` | `src/App.jsx` | `src/App.test.jsx` | new | Every valid result uses uppercase hexadecimal characters and omits the `0x` prefix. |
 | `c-hex:REQ-004` | `src/App.jsx` | `src/App.test.jsx` | new | Empty, zero, negative, decimal, and non-numeric values all display exactly `Not Supported`. |
 | `c-hex:REQ-005` | `singularity/work-items/c-hex/evidence/verification/hex-conversion-success.png`, `singularity/work-items/c-hex/evidence/verification/hex-conversion-not-supported.png` | `src/App.test.jsx` | evidence | Screenshot evidence shows the implemented browser page with a successful conversion and a `Not Supported` outcome. |
@@ -195,7 +236,7 @@ The implementation will prove each authoritative requirement with the app-level 
 
 ## Risks and rollback
 
-The primary risk is implementing the validation incorrectly, such as accepting `0`, decimals, or non-numeric input, or returning lowercase or prefixed output. These errors are detected by the focused browser regression tests and by reviewing the retained screenshot evidence. If the UI or validation logic drifts from specification, the rollback path is to revert the conversion-only changes in the app entry file while keeping the rest of the calculator behavior unchanged; no authentication, persistence, or conversion-history work is coupled to the feature.
+The primary risks are implementing validation incorrectly, such as accepting `0`, decimals, or non-numeric input, and introducing precision loss by converting through `Number`. Focused browser regression tests cover unsupported classes, output formatting, and an exact value above `Number.MAX_SAFE_INTEGER`; retained screenshots cover the visible supported and unsupported outcomes. If the UI or validation logic drifts from specification, the rollback path is to revert the conversion-only changes in the app entry file while keeping the rest of the calculator behavior unchanged; no authentication, persistence, or conversion-history work is coupled to the feature.
 
 <!-- singularity-flow:inputs:start -->
 
