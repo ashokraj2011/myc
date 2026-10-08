@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "c-hex",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G1-001",
+  "phaseId": "implementation",
+  "generation": 1,
+  "baselineSha256": "feea48774265d3c6585454ee4a5326a66cb4f2280a56a13a7e136b01b881b378",
+  "baseline": {
+    "path": "singularity/work-items/c-hex/context/work-intervals/implementation-gen1-baseline.json",
+    "sha256": "feea48774265d3c6585454ee4a5326a66cb4f2280a56a13a7e136b01b881b378",
+    "verified": true,
+    "sourceBaseCommit": "0a4144d590bf6a76702c1f47541a07ba4d6a9f27"
+  },
+  "sourceBaseCommit": "0a4144d590bf6a76702c1f47541a07ba4d6a9f27",
+  "target": {
+    "branch": "c-hex",
+    "head": "387a9b447f8a11a7843858ed039fb7bf64c209c5",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": "src/App.css",
+      "status": "present",
+      "sha256": "3257353575842e140fddc4573cc3c4bebfd0d6cbb3525d710efe66be9abcda7f",
+      "bytes": 3210,
+      "verdict": "planned",
+      "clauseIds": [
+        "C-HEX:REQ-001"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/App.jsx",
+      "status": "present",
+      "sha256": "2aaceaae14f164735859b23c7dddb632b3b14c826a0de062e34ec22e77c0ac56",
+      "bytes": 13557,
+      "verdict": "planned",
+      "clauseIds": [
+        "C-HEX:AC-001",
+        "C-HEX:AC-002",
+        "C-HEX:AC-003",
+        "C-HEX:AC-004",
+        "C-HEX:REQ-001",
+        "C-HEX:REQ-002",
+        "C-HEX:REQ-003",
+        "C-HEX:REQ-004"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/App.test.jsx",
+      "status": "present",
+      "sha256": "4cee081c032f7b34a5708f3ff7ede6625f9fb19eea82459b6569f2e866c33ac4",
+      "bytes": 8544,
+      "verdict": "planned",
+      "clauseIds": [
+        "C-HEX:AC-001",
+        "C-HEX:AC-002",
+        "C-HEX:AC-003",
+        "C-HEX:AC-004",
+        "C-HEX:AC-005",
+        "C-HEX:REQ-001",
+        "C-HEX:REQ-002",
+        "C-HEX:REQ-003",
+        "C-HEX:REQ-004",
+        "C-HEX:REQ-005"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/components/Header.jsx",
+      "status": "present",
+      "sha256": "2e20daa47f8002546840aa050d77f24ac14e6fe316f8bb9caeb522dabd7e78df",
+      "bytes": 6785,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 4,
+    "planned": 3,
+    "unplanned": 1,
+    "protected": 0
+  },
+  "decision": {
+    "status": "review",
+    "summaryStatus": "attention",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "ac2f834d5c197c663135ce7f06b6d85e8009ffc625e40f111600eef065284f61",
+  "reconciledAt": "2026-10-08T15:24:54.407Z",
+  "final": true,
+  "recordedAt": "2026-10-08T15:24:54.409Z",
+  "path": "singularity/work-items/c-hex/context/work-intervals/reconciliations/ac2f834d5c197c663135ce7f06b6d85e8009ffc625e40f111600eef065284f61.json"
+}
