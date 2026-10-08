@@ -1,0 +1,831 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "c-hex",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "2772a4bf-668e-4108-9bd7-85a354c3a417",
+  "changeSet": {
+    "path": "singularity/work-items/c-hex/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:72015a11ac22c94137022ce5bd5a88e2421d0b04a61385cb26470a7172d08a95",
+    "sourcePaths": [
+      "src/App.css",
+      "src/App.jsx",
+      "src/components/Header.jsx"
+    ],
+    "deletedSourcePaths": [],
+    "executableTestPaths": [
+      "src/App.test.jsx"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "product-source": 3,
+      "test-source": 1
+    },
+    "entries": [
+      {
+        "changeId": "sha256:dea950b7ee506e3d0ae634ccae625ace296c3778b5c2a43e47f72861534acbd3",
+        "status": "modified",
+        "oldPath": "src/App.css",
+        "newPath": "src/App.css",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:116f63597737868bb81d06c1390c9a17fe46a433c76de8453b7147209d18ac84",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:2e5f94a77d8ac4fdfba7f9318f9caeb27692ce8f80abc77586f8c7925d19a8e2",
+        "status": "modified",
+        "oldPath": "src/App.test.jsx",
+        "newPath": "src/App.test.jsx",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:5f25969f2ec103be422a13b793e330dba3eb5afecbef12d5227c53c36cebad11",
+        "status": "modified",
+        "oldPath": "src/components/Header.jsx",
+        "newPath": "src/components/Header.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "C-HEX:AC-002",
+      "C-HEX:AC-003"
+    ],
+    "bound": [
+      "C-HEX:AC-001",
+      "C-HEX:AC-002",
+      "C-HEX:AC-003",
+      "C-HEX:AC-004"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "C-HEX:AC-001",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "C-HEX:AC-002",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "C-HEX:AC-003",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "C-HEX:AC-004",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "C-HEX:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "App functional regression (all modes/features unchanged)"
+          ],
+          "name": "converts supported decimal inputs and rejects every representative unsupported class"
+        },
+        "logicalTestId": "sha256:7ad2eb5ce3eb9cfd9d1b7dcd2883c6fdb6a93dd72ae5b4f124dd0d8d3c2fe1de",
+        "declarationSha256": "sha256:efc8bf546f28df77c3a4f033b80c1ecce603fb6993bf93d13978dc7f6a913750",
+        "supportSha256": null,
+        "line": 114,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "C-HEX:AC-002",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "App functional regression (all modes/features unchanged)"
+          ],
+          "name": "converts supported decimal inputs and rejects every representative unsupported class"
+        },
+        "logicalTestId": "sha256:7ad2eb5ce3eb9cfd9d1b7dcd2883c6fdb6a93dd72ae5b4f124dd0d8d3c2fe1de",
+        "declarationSha256": "sha256:efc8bf546f28df77c3a4f033b80c1ecce603fb6993bf93d13978dc7f6a913750",
+        "supportSha256": null,
+        "line": 114,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "C-HEX:AC-003",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "App functional regression (all modes/features unchanged)"
+          ],
+          "name": "converts supported decimal inputs and rejects every representative unsupported class"
+        },
+        "logicalTestId": "sha256:7ad2eb5ce3eb9cfd9d1b7dcd2883c6fdb6a93dd72ae5b4f124dd0d8d3c2fe1de",
+        "declarationSha256": "sha256:efc8bf546f28df77c3a4f033b80c1ecce603fb6993bf93d13978dc7f6a913750",
+        "supportSha256": null,
+        "line": 114,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "C-HEX:AC-004",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "App functional regression (all modes/features unchanged)"
+          ],
+          "name": "converts supported decimal inputs and rejects every representative unsupported class"
+        },
+        "logicalTestId": "sha256:7ad2eb5ce3eb9cfd9d1b7dcd2883c6fdb6a93dd72ae5b4f124dd0d8d3c2fe1de",
+        "declarationSha256": "sha256:efc8bf546f28df77c3a4f033b80c1ecce603fb6993bf93d13978dc7f6a913750",
+        "supportSha256": null,
+        "line": 114,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "C-HEX:AC-001",
+        "expectedPaths": [
+          "src/App.jsx"
+        ]
+      },
+      {
+        "clauseId": "C-HEX:AC-002",
+        "expectedPaths": [
+          "src/App.jsx"
+        ]
+      },
+      {
+        "clauseId": "C-HEX:AC-003",
+        "expectedPaths": [
+          "src/App.jsx"
+        ]
+      },
+      {
+        "clauseId": "C-HEX:AC-004",
+        "expectedPaths": [
+          "src/App.jsx"
+        ]
+      },
+      {
+        "clauseId": "C-HEX:REQ-001",
+        "expectedPaths": [
+          "src/App.css",
+          "src/App.jsx"
+        ]
+      },
+      {
+        "clauseId": "C-HEX:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx"
+        ]
+      },
+      {
+        "clauseId": "C-HEX:REQ-003",
+        "expectedPaths": [
+          "src/App.jsx"
+        ]
+      },
+      {
+        "clauseId": "C-HEX:REQ-004",
+        "expectedPaths": [
+          "src/App.jsx"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "C-HEX:AC-001",
+        "sourcePath": "src/App.jsx",
+        "line": 20,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "C-HEX:AC-002",
+        "sourcePath": "src/App.jsx",
+        "line": 21,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "C-HEX:AC-003",
+        "sourcePath": "src/App.jsx",
+        "line": 22,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "C-HEX:AC-004",
+        "sourcePath": "src/App.jsx",
+        "line": 23,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "C-HEX:REQ-001",
+        "sourcePath": "src/App.css",
+        "line": 186,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "C-HEX:REQ-001",
+        "sourcePath": "src/App.jsx",
+        "line": 342,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "C-HEX:REQ-002",
+        "sourcePath": "src/App.jsx",
+        "line": 17,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "C-HEX:REQ-003",
+        "sourcePath": "src/App.jsx",
+        "line": 18,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "C-HEX:REQ-004",
+        "sourcePath": "src/App.jsx",
+        "line": 19,
+        "tag": "clause"
+      }
+    ]
+  },
+  "fulfillment": {
+    "obligations": [
+      {
+        "clauseId": "C-HEX:AC-005",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/c-hex/evidence/verification/hex-conversion-not-supported.png",
+            "state": "present",
+            "sha256": "7efc9bcb881eaac2c5139c973ced3d093ed75389cf9d1d35a98dbd93ee55028e"
+          },
+          {
+            "path": "singularity/work-items/c-hex/evidence/verification/hex-conversion-success.png",
+            "state": "present",
+            "sha256": "57fc64a452705d1fa0e05b06aad52f8bc3bd2fb31c1fa6e7f7aa03a9880eba76"
+          }
+        ]
+      },
+      {
+        "clauseId": "C-HEX:REQ-005",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/c-hex/evidence/verification/hex-conversion-not-supported.png",
+            "state": "present",
+            "sha256": "7efc9bcb881eaac2c5139c973ced3d093ed75389cf9d1d35a98dbd93ee55028e"
+          },
+          {
+            "path": "singularity/work-items/c-hex/evidence/verification/hex-conversion-success.png",
+            "state": "present",
+            "sha256": "57fc64a452705d1fa0e05b06aad52f8bc3bd2fb31c1fa6e7f7aa03a9880eba76"
+          }
+        ]
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "C-HEX:AC-001",
+        "explanation": {
+          "text": "Converting decimal 255 produces exactly FF.",
+          "path": "src/App.jsx",
+          "line": 20
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 0,
+                "afterStart": 2,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 31
+              },
+              {
+                "beforeStart": 20,
+                "beforeLines": 0,
+                "afterStart": 53,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 166,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 296,
+                "beforeLines": 0,
+                "afterStart": 342,
+                "afterLines": 28
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 46
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "C-HEX:AC-002",
+        "explanation": {
+          "text": "Converting the lowest supported input 1 produces exactly 1.",
+          "path": "src/App.jsx",
+          "line": 21
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 0,
+                "afterStart": 2,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 31
+              },
+              {
+                "beforeStart": 20,
+                "beforeLines": 0,
+                "afterStart": 53,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 166,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 296,
+                "beforeLines": 0,
+                "afterStart": 342,
+                "afterLines": 28
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 46
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "C-HEX:AC-003",
+        "explanation": {
+          "text": "Uppercase formatting omits the hexadecimal prefix.",
+          "path": "src/App.jsx",
+          "line": 22
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 0,
+                "afterStart": 2,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 31
+              },
+              {
+                "beforeStart": 20,
+                "beforeLines": 0,
+                "afterStart": 53,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 166,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 296,
+                "beforeLines": 0,
+                "afterStart": 342,
+                "afterLines": 28
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 46
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "C-HEX:AC-004",
+        "explanation": {
+          "text": "Validation maps every unsupported input class to the required message.",
+          "path": "src/App.jsx",
+          "line": 23
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 0,
+                "afterStart": 2,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 31
+              },
+              {
+                "beforeStart": 20,
+                "beforeLines": 0,
+                "afterStart": 53,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 166,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 296,
+                "beforeLines": 0,
+                "afterStart": 342,
+                "afterLines": 28
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 46
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "C-HEX:REQ-001",
+        "explanation": {
+          "text": "Style the browser input, action, and result as one responsive conversion page.",
+          "path": "src/App.css",
+          "line": 186
+        },
+        "regions": [
+          {
+            "path": "src/App.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 184,
+                "beforeLines": 0,
+                "afterStart": 185,
+                "afterLines": 15
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          },
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 0,
+                "afterStart": 2,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 31
+              },
+              {
+                "beforeStart": 20,
+                "beforeLines": 0,
+                "afterStart": 53,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 166,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 296,
+                "beforeLines": 0,
+                "afterStart": 342,
+                "afterLines": 28
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 46
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "C-HEX:REQ-002",
+        "explanation": {
+          "text": "Convert every supported positive base-10 whole number.",
+          "path": "src/App.jsx",
+          "line": 17
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 0,
+                "afterStart": 2,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 31
+              },
+              {
+                "beforeStart": 20,
+                "beforeLines": 0,
+                "afterStart": 53,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 166,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 296,
+                "beforeLines": 0,
+                "afterStart": 342,
+                "afterLines": 28
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 46
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "C-HEX:REQ-003",
+        "explanation": {
+          "text": "Format supported results as uppercase hexadecimal without a prefix.",
+          "path": "src/App.jsx",
+          "line": 18
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 0,
+                "afterStart": 2,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 31
+              },
+              {
+                "beforeStart": 20,
+                "beforeLines": 0,
+                "afterStart": 53,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 166,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 296,
+                "beforeLines": 0,
+                "afterStart": 342,
+                "afterLines": 28
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 46
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "C-HEX:REQ-004",
+        "explanation": {
+          "text": "Return the exact unsupported-domain message for every invalid input.",
+          "path": "src/App.jsx",
+          "line": 19
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 0,
+                "afterStart": 2,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 31
+              },
+              {
+                "beforeStart": 20,
+                "beforeLines": 0,
+                "afterStart": 53,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 166,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 296,
+                "beforeLines": 0,
+                "afterStart": 342,
+                "afterLines": 28
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 46
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:f13e1a1eee8f3eb1c11ba349722ea5aa0d59b763c217f710648043922547d529"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:9519146e3c36f0fbb63ba09915c805c805efa4a781fe2d3f09041a9b829f8044",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-10-08T15:20:59.662Z"
+}

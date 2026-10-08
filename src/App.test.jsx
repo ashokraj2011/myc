@@ -101,9 +101,46 @@ describe('App functional regression (all modes/features unchanged)', () => {
     render(<App />);
 
     const modeSelect = screen.getAllByRole('combobox')[0];
-    for (const mode of ['scientific', 'converter', 'financial', 'grapher', 'standard']) {
+    for (const mode of ['scientific', 'converter', 'hex', 'financial', 'grapher', 'standard']) {
       await user.selectOptions(modeSelect, mode);
       expect(modeSelect.value).toBe(mode);
+    }
+  });
+
+  // @ac:c-hex:AC-001
+  // @ac:c-hex:AC-002
+  // @ac:c-hex:AC-003
+  // @ac:c-hex:AC-004
+  it('converts supported decimal inputs and rejects every representative unsupported class', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    const modeSelect = screen.getAllByRole('combobox')[0];
+    await user.selectOptions(modeSelect, 'hex');
+
+    const input = screen.getByPlaceholderText('Enter a positive whole number');
+    const convertButton = screen.getByRole('button', { name: 'Convert to Hex' });
+
+    for (const [value, expected] of [
+      ['255', 'FF'],
+      ['1', '1'],
+      ['9007199254740993', '20000000000001'],
+    ]) {
+      await user.clear(input);
+      await user.type(input, value);
+      await user.click(convertButton);
+      expect(screen.getByText(expected)).toBeInTheDocument();
+      expect(expected).toBe(expected.toUpperCase());
+      expect(expected).not.toMatch(/^0x/i);
+    }
+
+    for (const value of ['', '0', '-1', '1.5', 'hello']) {
+      await user.clear(input);
+      if (value) {
+        await user.type(input, value);
+      }
+      await user.click(convertButton);
+      expect(screen.getByText('Not Supported')).toBeInTheDocument();
     }
   });
 

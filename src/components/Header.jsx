@@ -11,6 +11,7 @@ import {
   Keyboard,
   Palette,
   Menu,
+  Hash,
 } from 'lucide-react';
 import { playSound } from '../utils/audio';
 
@@ -18,6 +19,7 @@ const MODES = [
   { id: 'standard', name: 'Standard', icon: Calculator },
   { id: 'scientific', name: 'Scientific', icon: FlaskConical },
   { id: 'converter', name: 'Converter', icon: ArrowRightLeft },
+  { id: 'hex', name: 'Hex Converter', icon: Hash },
   { id: 'financial', name: 'Financial', icon: DollarSign },
   { id: 'grapher', name: 'Grapher', icon: TrendingUp },
 ];

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import './App.css';
 import { Header } from './components/Header';
 import { Display } from './components/Display';
 import { StandardKeypad } from './components/StandardKeypad';
@@ -11,6 +12,37 @@ import { KeyboardShortcutsModal } from './components/KeyboardShortcutsModal';
 import { evaluateExpression } from './utils/evaluator';
 import { playSound } from './utils/audio';
 
+const HEX_NOT_SUPPORTED = 'Not Supported';
+
+// @clause:c-hex:REQ-002 Convert every supported positive base-10 whole number.
+// @clause:c-hex:REQ-003 Format supported results as uppercase hexadecimal without a prefix.
+// @clause:c-hex:REQ-004 Return the exact unsupported-domain message for every invalid input.
+// @clause:C-HEX:AC-001 Converting decimal 255 produces exactly FF.
+// @clause:C-HEX:AC-002 Converting the lowest supported input 1 produces exactly 1.
+// @clause:C-HEX:AC-003 Uppercase formatting omits the hexadecimal prefix.
+// @clause:C-HEX:AC-004 Validation maps every unsupported input class to the required message.
+const convertToHex = (value) => {
+  if (value === '' || value === null || value === undefined) {
+    return HEX_NOT_SUPPORTED;
+  }
+
+  const trimmed = String(value).trim();
+  if (trimmed === '' || !/^\d+$/.test(trimmed)) {
+    return HEX_NOT_SUPPORTED;
+  }
+
+  const normalized = trimmed.replace(/^0+/, '') || '0';
+  if (normalized === '0') {
+    return HEX_NOT_SUPPORTED;
+  }
+
+  try {
+    return BigInt(normalized).toString(16).toUpperCase();
+  } catch {
+    return HEX_NOT_SUPPORTED;
+  }
+};
+
 export default function App() {
   const [activeMode, setActiveMode] = useState('standard');
   const [expression, setExpression] = useState('');
@@ -18,6 +50,8 @@ export default function App() {
   const [lastEvaluated, setLastEvaluated] = useState(false);
   const [angleUnit, setAngleUnit] = useState('DEG');
   const [memoryValue, setMemoryValue] = useState(0);
+  const [hexInput, setHexInput] = useState('');
+  const [hexResult, setHexResult] = useState(HEX_NOT_SUPPORTED);
 
   // Customization & UI state
   const [theme, setTheme] = useState(() => localStorage.getItem('apex_theme') || 'classic');
@@ -128,6 +162,17 @@ export default function App() {
       setHistory((prev) => [newEntry, ...prev.slice(0, 49)]); // Keep last 50 items
     }
   }, [expression, angleUnit]);
+
+  const handleHexConvert = useCallback(() => {
+    setHexResult(convertToHex(hexInput));
+  }, [hexInput]);
+
+  const handleHexInputKeyDown = useCallback((event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      handleHexConvert();
+    }
+  }, [handleHexConvert]);
 
   const handleMemory = useCallback(
     (type) => {
@@ -293,6 +338,34 @@ export default function App() {
         )}
 
         {activeMode === 'converter' && <UnitConverter soundEnabled={soundEnabled} />}
+
+        {/* @clause:c-hex:REQ-001 Expose conversion input and submission in the browser application. */}
+        {activeMode === 'hex' && (
+          <div className="w-full flex flex-col items-center animate-fade-in gap-5">
+            <div className="hex-converter-panel glass-card w-full max-w-md p-5 sm:p-6">
+              <label className="block text-sm font-medium u-text-text-muted mb-2">Decimal value</label>
+              <input
+                type="text"
+                value={hexInput}
+                onChange={(event) => setHexInput(event.target.value)}
+                onKeyDown={handleHexInputKeyDown}
+                placeholder="Enter a positive whole number"
+                className="hex-converter-input w-full rounded-xl border u-border-card-border u-bg-btn-num-bg p-3 text-lg font-mono u-text-text-main outline-none u-fborder-text-accent"
+              />
+              <button
+                type="button"
+                onClick={handleHexConvert}
+                className="calc-btn mt-4 w-full p-3 text-base font-semibold"
+              >
+                Convert to Hex
+              </button>
+              <div className="hex-converter-result mt-4 rounded-xl border u-border-card-border u-bg-display-bg p-3 text-center">
+                <div className="text-xs uppercase tracking-[0.2em] u-text-text-muted">Result</div>
+                <div className="mt-2 text-3xl font-bold font-mono u-text-text-accent">{hexResult}</div>
+              </div>
+            </div>
+          </div>
+        )}
 
         {activeMode === 'financial' && <FinancialCalculator soundEnabled={soundEnabled} />}
 
