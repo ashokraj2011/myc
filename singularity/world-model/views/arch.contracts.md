@@ -7,7 +7,7 @@ view: arch.contracts@4
 view-spec-sha256: sha256:13ff5bb50461e3b7a40d8e34e1785fd29ebd36b5134a59c7630fa5304d2997b0
 fact-ledger-sha256: sha256:6798a0897cf16df0903d2a1ed95bbf45e177873ad35f9f805eb202c7fb2b4da5
 composer-core-sha256: sha256:b9860a376856e4a03c76111a71207068934fdcb1eefd292ca422590e7545c1af
-composition-candidate-sha256: sha256:938100ddd998625161dbd0798075dd98f32a5b442d76fe776896b03077f90dd6
+composition-candidate-sha256: sha256:942782d27b313980fb5afb164a4729297685169c82616c0180dc5892e3dd10f6
 validator-sha256: sha256:28dc1c4656a8ede7c6c7bf9be228ebd73b9f32d76a8af8959b52a3e31493e601
 -->
 
@@ -17,31 +17,51 @@ validator-sha256: sha256:28dc1c4656a8ede7c6c7bf9be228ebd73b9f32d76a8af8959b52a3e
 
 ## Public contracts {#arch.contracts.public-contracts}
 
-- No registered deterministic producer supplied interface for arch.contracts@4 within the pinned scope. [F:FACT-01140bf3bdc3ea7d]
-- No registered deterministic producer supplied protocol-field for arch.contracts@4 within the pinned scope. [F:FACT-0118db23c9c3379a]
-- src/utils/evaluator.js declares export const evaluateExpression at line 4. [F:FACT-07e15e2c9e2ee93d]
-- src/utils/evaluator.js declares export const convertUnits at line 140. [F:FACT-1e37f3d87b9f5ff3]
-- src/components/FinancialCalculator.jsx declares export const FinancialCalculator at line 6. [F:FACT-20131f1bb57f3eef]
-- src/utils/evaluator.js declares export const calculateCompoundInterest at line 181. [F:FACT-3331802ad84ad9ae]
-- src/utils/evaluator.js declares export const UNIT_TYPES at line 75. [F:FACT-36aac3f50cd88e56]
-- src/components/ScientificKeypad.jsx declares export const ScientificKeypad at line 5. [F:FACT-41207206f32c3c98]
-- src/utils/evaluator.js declares export const formatNumber at line 57. [F:FACT-55e336522179425c]
-- src/utils/audio.js declares export const playSound at line 18. [F:FACT-5dc74474f4ded800]
-- No registered deterministic producer supplied schema-contract for arch.contracts@4 within the pinned scope. [F:FACT-c85a011962fb9ed1]
-- src/components/Display.jsx declares export const Display at line 5. [F:FACT-9b4bfb66e83cfd3c]
-- src/components/UnitConverter.jsx declares export const UnitConverter at line 14. [F:FACT-c2de13133030d459]
-- src/utils/evaluator.js declares export const calculateTip at line 200. [F:FACT-e150980f60cc3714]
-- src/components/Header.jsx declares export const Header at line 36. [F:FACT-e3d634bc9214cc45]
-- src/components/KeyboardShortcutsModal.jsx declares export const KeyboardShortcutsModal at line 5. [F:FACT-e54ce668f13bffa1]
-- src/App.jsx declares export default function App() at line 14. [F:FACT-e716796663aa1f09]
-- src/utils/evaluator.js declares export const calculateEMI at line 161. [F:FACT-ec30282bef05a01f]
-- src/components/FunctionGrapher.jsx declares export const FunctionGrapher at line 14. [F:FACT-ef35f99ab0b4dc6a]
-- src/components/HistoryDrawer.jsx declares export const HistoryDrawer at line 5. [F:FACT-f343fa21acbed916]
-- src/components/StandardKeypad.jsx declares export const StandardKeypad at line 5. [F:FACT-fcd1475a0304e04d]
+No registered deterministic producer supplied interface for arch.contracts@4 within the pinned scope. [F:FACT-01140bf3bdc3ea7d]
+
+No registered deterministic producer supplied protocol-field for arch.contracts@4 within the pinned scope. [F:FACT-0118db23c9c3379a]
+
+No registered deterministic producer supplied schema-contract for arch.contracts@4 within the pinned scope. [F:FACT-c85a011962fb9ed1]
 
 ## Implementations {#arch.contracts.implementations}
 
 No registered deterministic producer supplied implementation for arch.contracts@4 within the pinned scope. [F:FACT-9452b7cc0a0fc6b1]
+
+src/utils/evaluator.js declares export const evaluateExpression at line 4. [F:FACT-07e15e2c9e2ee93d]
+
+src/utils/evaluator.js declares export const convertUnits at line 140. [F:FACT-1e37f3d87b9f5ff3]
+
+src/components/FinancialCalculator.jsx declares export const FinancialCalculator at line 6. [F:FACT-20131f1bb57f3eef]
+
+src/utils/evaluator.js declares export const calculateCompoundInterest at line 181. [F:FACT-3331802ad84ad9ae]
+
+src/utils/evaluator.js declares export const UNIT_TYPES at line 75. [F:FACT-36aac3f50cd88e56]
+
+src/components/ScientificKeypad.jsx declares export const ScientificKeypad at line 5. [F:FACT-41207206f32c3c98]
+
+src/utils/evaluator.js declares export const formatNumber at line 57. [F:FACT-55e336522179425c]
+
+src/utils/audio.js declares export const playSound at line 18. [F:FACT-5dc74474f4ded800]
+
+src/components/Display.jsx declares export const Display at line 5. [F:FACT-9b4bfb66e83cfd3c]
+
+src/components/UnitConverter.jsx declares export const UnitConverter at line 14. [F:FACT-c2de13133030d459]
+
+src/utils/evaluator.js declares export const calculateTip at line 200. [F:FACT-e150980f60cc3714]
+
+src/components/Header.jsx declares export const Header at line 36. [F:FACT-e3d634bc9214cc45]
+
+src/components/KeyboardShortcutsModal.jsx declares export const KeyboardShortcutsModal at line 5. [F:FACT-e54ce668f13bffa1]
+
+src/App.jsx declares export default function App() at line 14. [F:FACT-e716796663aa1f09]
+
+src/utils/evaluator.js declares export const calculateEMI at line 161. [F:FACT-ec30282bef05a01f]
+
+src/components/FunctionGrapher.jsx declares export const FunctionGrapher at line 14. [F:FACT-ef35f99ab0b4dc6a]
+
+src/components/HistoryDrawer.jsx declares export const HistoryDrawer at line 5. [F:FACT-f343fa21acbed916]
+
+src/components/StandardKeypad.jsx declares export const StandardKeypad at line 5. [F:FACT-fcd1475a0304e04d]
 
 ## Consumers {#arch.contracts.consumers}
 
@@ -544,11 +564,11 @@ No registered deterministic producer supplied runtime-guarantee for arch.contrac
 }
 ```
 ---
-generated-at: 2026-10-08T10:12:08.972Z
+generated-at: 2026-10-08T10:17:57.405Z
 source-commit: 17e1d25dabf9efff7b894e9d5d5d82a9656ccce4
-view-sha256: sha256:a9399007273dde276e7cda6746883dc7831e8c214944d0a3b0974009565c67a4
+view-sha256: sha256:afd05af4b1663b9a46d10cd1a97c4d1709f84888341d3a81b7ec570e45e6ac15
 prompt-sha256: sha256:74b220c428bb7c74cd46eea1615539df8a4d465348f3b64c427a3ba4e7fd5eb6
-execution-unit: governed-model-composer@1:ewogICJwcm92aWRlciI6ICJjb3BpbG90LWNsaSIsCiAgInJlcXVlc3RlZE1vZGVsIjogInByb3ZpZGVyLWF1dG8iCn0K:0fe38769-4271-41d9-be04-0bb92da4c17b
+execution-unit: governed-model-composer@1:ewogICJwcm92aWRlciI6ICJjb3BpbG90LWNsaSIsCiAgInJlcXVlc3RlZE1vZGVsIjogInByb3ZpZGVyLWF1dG8iCn0K:62b10bc7-90c8-4b77-a73e-668f0bc50139
 model: auto
 assurance: validated-derived-view
 ---

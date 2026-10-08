@@ -166,11 +166,11 @@ No registered deterministic producer supplied incident-mapping for dev.hotspots@
 }
 ```
 ---
-generated-at: 2026-10-08T10:12:08.972Z
+generated-at: 2026-10-08T10:17:57.405Z
 source-commit: 17e1d25dabf9efff7b894e9d5d5d82a9656ccce4
 view-sha256: sha256:432c2672acf31473dedcac210fcfbeb1d71e016aeda9b2d41ef581ff0490133e
 prompt-sha256: sha256:477a298ffeff2b7f5e0a5afc9d75470efbfcc0da4fd4fa524a4e1cfb597818b5
-execution-unit: governed-model-composer@1:ewogICJwcm92aWRlciI6ICJjb3BpbG90LWNsaSIsCiAgInJlcXVlc3RlZE1vZGVsIjogInByb3ZpZGVyLWF1dG8iCn0K:ce859ad4-8a98-41c9-bb3a-98be7e71866e
+execution-unit: governed-model-composer@1:ewogICJwcm92aWRlciI6ICJjb3BpbG90LWNsaSIsCiAgInJlcXVlc3RlZE1vZGVsIjogInByb3ZpZGVyLWF1dG8iCn0K:ca1b0535-a685-4ce6-96ed-dbce3abf871a
 model: auto
 assurance: validated-derived-view
 ---

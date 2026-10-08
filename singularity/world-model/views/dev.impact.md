@@ -7,21 +7,21 @@ view: dev.impact@4
 view-spec-sha256: sha256:533e81e352ca8e38a12024424901e82668735ea5a638f7d5c85e30723ca24c41
 fact-ledger-sha256: sha256:099954ff66f9f15ba9e898f17828fc05ed631c74fadcd551f16f9c90e524b2a5
 composer-core-sha256: sha256:b9860a376856e4a03c76111a71207068934fdcb1eefd292ca422590e7545c1af
-composition-candidate-sha256: sha256:9bd78bf00b97341dca2a44cd991d5d101e73e8ec2aca45347ea1ea51a403aa8f
+composition-candidate-sha256: sha256:defaa6a3cfb2184cded1791e49cfbe1cd01148cf62ecae5b8c91b38b99a0dbaf
 validator-sha256: sha256:28dc1c4656a8ede7c6c7bf9be228ebd73b9f32d76a8af8959b52a3e31493e601
 -->
 
 # Development impact {#dev.impact}
 
-**TL;DR** The pinned source revision has no exact first-parent baseline; changed-symbol extraction is unavailable. The pinned source revision has no exact first-parent baseline; contract-change extraction is unavailable. [F:FACT-2a47ea9aa7a7faf0,FACT-7a76e9c31747a8bd]
+**TL;DR** The pinned source revision has no exact first-parent baseline; changed-symbol extraction is unavailable. No registered deterministic producer supplied runtime-frequency for dev.impact@4 within the pinned scope. [F:FACT-2a47ea9aa7a7faf0,FACT-b12e19189e01735a]
 
 ## Changed structure {#dev.impact.changed-structure}
 
-The pinned source revision has no exact first-parent baseline; structural-impact extraction is unavailable. The pinned source revision has no exact first-parent baseline; changed-symbol extraction is unavailable. [F:FACT-0d7ee2a0de4dfbec,FACT-2a47ea9aa7a7faf0]
+src/utils/evaluator.js line 40 contains a lexical reference candidate to same-file declaration formatNumber at line 57; semantic resolution is unavailable. The pinned source revision has no exact first-parent baseline; structural-impact extraction is unavailable. The pinned source revision has no exact first-parent baseline; changed-symbol extraction is unavailable. src/utils/evaluator.js line 47 contains a lexical reference candidate to same-file declaration formatNumber at line 57; semantic resolution is unavailable. src/utils/evaluator.js line 144 contains a lexical reference candidate to same-file declaration UNIT_TYPES at line 75; semantic resolution is unavailable. [F:FACT-04936004559c063d,FACT-0d7ee2a0de4dfbec,FACT-2a47ea9aa7a7faf0,FACT-4ccf9f07d43b1822,FACT-9e3ef3b8ff54aa62]
 
 ## Dependency impact {#dev.impact.dependency-impact}
 
-src/utils/evaluator.js line 40 contains a lexical reference candidate to same-file declaration formatNumber at line 57; semantic resolution is unavailable. src/components/FinancialCalculator.jsx imports the in-scope module src/utils/audio.js. src/main.jsx imports the in-scope module src/App.jsx. src/App.jsx imports the in-scope module src/components/FunctionGrapher.jsx. src/main.jsx imports the in-scope module src/index.css. src/components/KeyboardShortcutsModal.jsx imports the in-scope module src/utils/audio.js. src/App.jsx imports the in-scope module src/components/Header.jsx. src/components/FinancialCalculator.jsx imports the in-scope module src/utils/evaluator.js. src/utils/evaluator.js line 47 contains a lexical reference candidate to same-file declaration formatNumber at line 57; semantic resolution is unavailable. src/components/Display.jsx imports the in-scope module src/utils/audio.js. src/App.jsx imports the in-scope module src/components/Display.jsx. src/components/UnitConverter.jsx imports the in-scope module src/utils/audio.js. src/App.jsx imports the in-scope module src/utils/evaluator.js. src/components/ScientificKeypad.jsx imports the in-scope module src/components/StandardKeypad.jsx. src/App.jsx imports the in-scope module src/utils/audio.js. src/App.jsx imports the in-scope module src/components/HistoryDrawer.jsx. src/App.jsx imports the in-scope module src/components/UnitConverter.jsx. src/utils/evaluator.js line 144 contains a lexical reference candidate to same-file declaration UNIT_TYPES at line 75; semantic resolution is unavailable. src/components/StandardKeypad.jsx imports the in-scope module src/utils/audio.js. [F:FACT-04936004559c063d,FACT-1b16f0eff4701fe3,FACT-1d64e893630bf283,FACT-1e8b6e3f7ad4a258,FACT-37d970fa8ab49841,FACT-40a8f4c796b0b1ba,FACT-471272c7e50a2fa2,FACT-47da55e4b8d9f241,FACT-4ccf9f07d43b1822,FACT-5eba772636343601,FACT-632112375d8928eb,FACT-735e59c0844bb25a,FACT-7dc0c8dd8ccc80cd,FACT-850b0f651cd77623,FACT-8c67b67d2e94c219,FACT-955f5b5b56133671,FACT-9c6cb32f75585612,FACT-9e3ef3b8ff54aa62,FACT-b2280917fa269406]
+src/components/FinancialCalculator.jsx imports the in-scope module src/utils/audio.js. src/main.jsx imports the in-scope module src/App.jsx. src/App.jsx imports the in-scope module src/components/FunctionGrapher.jsx. src/main.jsx imports the in-scope module src/index.css. src/components/KeyboardShortcutsModal.jsx imports the in-scope module src/utils/audio.js. src/App.jsx imports the in-scope module src/components/Header.jsx. src/components/FinancialCalculator.jsx imports the in-scope module src/utils/evaluator.js. src/components/Display.jsx imports the in-scope module src/utils/audio.js. src/App.jsx imports the in-scope module src/components/Display.jsx. src/components/UnitConverter.jsx imports the in-scope module src/utils/audio.js. src/App.jsx imports the in-scope module src/utils/evaluator.js. src/components/ScientificKeypad.jsx imports the in-scope module src/components/StandardKeypad.jsx. src/App.jsx imports the in-scope module src/utils/audio.js. src/App.jsx imports the in-scope module src/components/HistoryDrawer.jsx. src/App.jsx imports the in-scope module src/components/UnitConverter.jsx. src/components/StandardKeypad.jsx imports the in-scope module src/utils/audio.js. [F:FACT-1b16f0eff4701fe3,FACT-1d64e893630bf283,FACT-1e8b6e3f7ad4a258,FACT-37d970fa8ab49841,FACT-40a8f4c796b0b1ba,FACT-471272c7e50a2fa2,FACT-47da55e4b8d9f241,FACT-5eba772636343601,FACT-632112375d8928eb,FACT-735e59c0844bb25a,FACT-7dc0c8dd8ccc80cd,FACT-850b0f651cd77623,FACT-8c67b67d2e94c219,FACT-955f5b5b56133671,FACT-9c6cb32f75585612,FACT-b2280917fa269406]
 
 ## Affected contracts {#dev.impact.affected-contracts}
 
@@ -540,11 +540,11 @@ No registered deterministic producer supplied runtime-frequency for dev.impact@4
 }
 ```
 ---
-generated-at: 2026-10-08T10:12:08.972Z
+generated-at: 2026-10-08T10:17:57.405Z
 source-commit: 17e1d25dabf9efff7b894e9d5d5d82a9656ccce4
-view-sha256: sha256:5855e0a1e474bc923713e07efcb41947a035258ed4cb2da18cae01b0e0b380ef
+view-sha256: sha256:3c17caab2b3bc97567740d292eaeb03967b6334f84f8ff7d554d647985f81a99
 prompt-sha256: sha256:8285fd733f79945f4b06e7c04eb63f9113f62b112a0a8163ecd0000e0cceb40d
-execution-unit: governed-model-composer@1:ewogICJwcm92aWRlciI6ICJjb3BpbG90LWNsaSIsCiAgInJlcXVlc3RlZE1vZGVsIjogInByb3ZpZGVyLWF1dG8iCn0K:8223931a-00f7-4866-9c5f-5d0b30c1af8b
+execution-unit: governed-model-composer@1:ewogICJwcm92aWRlciI6ICJjb3BpbG90LWNsaSIsCiAgInJlcXVlc3RlZE1vZGVsIjogInByb3ZpZGVyLWF1dG8iCn0K:a6f0d44f-89ac-48be-b90f-6846b45f760c
 model: auto
 assurance: validated-derived-view
 ---
