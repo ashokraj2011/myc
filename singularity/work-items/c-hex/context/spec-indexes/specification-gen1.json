@@ -1,0 +1,154 @@
+{
+  "clauses": [
+    {
+      "anchor": "[c-hex:REQ-001]",
+      "body": "The existing application shall provide a browser-based page where a user can enter a value and\nrequest hexadecimal conversion. *(S1, S2; DOC-002 Q-004)*",
+      "bodySha256": "cde7435f902fe79494a5c32614ef33b696238e135a86defc0937b98ee090c8d2",
+      "dependsOn": [],
+      "id": "C-HEX:REQ-001",
+      "namespace": "C-HEX",
+      "number": 1,
+      "source": {
+        "line": 202,
+        "path": "singularity/work-items/c-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[c-hex:REQ-002]",
+      "body": "For a positive base-10 whole number greater than zero, the page shall display its mathematically\nequivalent hexadecimal value. *(S1; DOC-002 Q-001, Q-002)*",
+      "bodySha256": "563b9ab3ffdc35fbe4360fe1edae1364cf15f84f95b398c1166a6a704f73a421",
+      "dependsOn": [],
+      "id": "C-HEX:REQ-002",
+      "namespace": "C-HEX",
+      "number": 2,
+      "source": {
+        "line": 204,
+        "path": "singularity/work-items/c-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[c-hex:REQ-003]",
+      "body": "A supported result shall use uppercase hexadecimal characters and shall omit the `0x` prefix.\n*(S1; DOC-002 Q-003)*",
+      "bodySha256": "22d6f5ab524071ca7bf446b1a0659c2b936adc41215f5c59f90834980fe16ace",
+      "dependsOn": [],
+      "id": "C-HEX:REQ-003",
+      "namespace": "C-HEX",
+      "number": 3,
+      "source": {
+        "line": 206,
+        "path": "singularity/work-items/c-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[c-hex:REQ-004]",
+      "body": "For every input outside the supported domain, the page shall display exactly `Not Supported`.\n*(S2; DOC-002 Q-001, Q-002)*",
+      "bodySha256": "04d7b0c7aa29f74059b46cb3cff4b001e99dc2d2947beff6c20debe23f4c9c7f",
+      "dependsOn": [],
+      "id": "C-HEX:REQ-004",
+      "namespace": "C-HEX",
+      "number": 4,
+      "source": {
+        "line": 208,
+        "path": "singularity/work-items/c-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[c-hex:REQ-005]",
+      "body": "Verification shall retain screenshot evidence showing the implemented browser page and its\nobservable behavior. *(S1, S2; DOC-001, DOC-002 Q-005)*",
+      "bodySha256": "3b5a3f295e4473fabc102fb12e24ae8d479d8410682fcc6a2b3761c55a64ce2e",
+      "dependsOn": [],
+      "id": "C-HEX:REQ-005",
+      "namespace": "C-HEX",
+      "number": 5,
+      "source": {
+        "line": 210,
+        "path": "singularity/work-items/c-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[c-hex:AC-001]",
+      "body": "Entering `255` and requesting conversion displays exactly `FF`. *(S1)*",
+      "bodySha256": "3718fcf2f7a556d4bf6764179b69019c12fc4b26fb8c784421bde2848e00608f",
+      "dependsOn": [],
+      "id": "C-HEX:AC-001",
+      "namespace": "C-HEX",
+      "number": 1,
+      "source": {
+        "line": 212,
+        "path": "singularity/work-items/c-hex/artifacts/specification/spec.md"
+      },
+      "type": "AC"
+    },
+    {
+      "anchor": "[c-hex:AC-002]",
+      "body": "Entering `1` and requesting conversion displays exactly `1`. *(S1)*",
+      "bodySha256": "0fbb1af77b27f5102b48907f2c1e62733b0407c2f703b3b0608d4dcf6ee3a332",
+      "dependsOn": [],
+      "id": "C-HEX:AC-002",
+      "namespace": "C-HEX",
+      "number": 2,
+      "source": {
+        "line": 213,
+        "path": "singularity/work-items/c-hex/artifacts/specification/spec.md"
+      },
+      "type": "AC"
+    },
+    {
+      "anchor": "[c-hex:AC-003]",
+      "body": "Every supported result is uppercase and has no `0x` prefix. *(S1)*",
+      "bodySha256": "ad9e8cd2f8b160e1e34e1532f87f0f53d3cc717dad301d7e227341e9287383c0",
+      "dependsOn": [],
+      "id": "C-HEX:AC-003",
+      "namespace": "C-HEX",
+      "number": 3,
+      "source": {
+        "line": 214,
+        "path": "singularity/work-items/c-hex/artifacts/specification/spec.md"
+      },
+      "type": "AC"
+    },
+    {
+      "anchor": "[c-hex:AC-004]",
+      "body": "Submitting each representative unsupported class—empty, `0`, a negative number, a decimal value,\nand non-numeric text—displays exactly `Not Supported`. *(S2)*",
+      "bodySha256": "85af3ed1f54d66c2e1aaaaa6c65ccda5e91f96cd9c068642c6ee6d50953d1d67",
+      "dependsOn": [],
+      "id": "C-HEX:AC-004",
+      "namespace": "C-HEX",
+      "number": 4,
+      "source": {
+        "line": 216,
+        "path": "singularity/work-items/c-hex/artifacts/specification/spec.md"
+      },
+      "type": "AC"
+    },
+    {
+      "anchor": "[c-hex:AC-005]",
+      "body": "Screenshot evidence captures the browser page with at least one supported result and the\n`Not Supported` outcome. *(S1, S2)*",
+      "bodySha256": "6fd72a103db66b6f0aa1cf79c4a898459290cb3a130523c5988ee87e311b4533",
+      "dependsOn": [],
+      "id": "C-HEX:AC-005",
+      "namespace": "C-HEX",
+      "number": 5,
+      "source": {
+        "line": 218,
+        "path": "singularity/work-items/c-hex/artifacts/specification/spec.md"
+      },
+      "type": "AC"
+    }
+  ],
+  "generation": 1,
+  "indexSha256": "0d47959cd6aff3ba7928a25f8d1e263eb73aad49ca1ad63e36956c0279c54ce5",
+  "phase": "specification",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 9777,
+    "path": "singularity/work-items/c-hex/artifacts/specification/spec.md",
+    "sha256": "76c15e32ef70ea5fa35ef4e732c4f893af1a35d3348f0b31ca64e3e4f3446466"
+  },
+  "workId": "c-hex"
+}
