@@ -1,31 +1,71 @@
 <!--
 SFlow World-Model View
-source: myc1@17e1d25dabf9efff7b894e9d5d5d82a9656ccce4
-source-manifest-sha256: sha256:0748ea44b3c8165f90f4981b65cc40f23342ba876dd9e59c2fdd13918427e2e0
+source: myc1@387a9b447f8a11a7843858ed039fb7bf64c209c5
+source-manifest-sha256: sha256:b555f1ad22f2db810d9ceaac54c278b826268b84cc1cbc37cbc35e5c7d397a69
 scope-sha256: sha256:1c07de1e3891f4ec4710c0c479e681f009a03f1dd5f42c26a4a60373cab1a2df
 view: arch.contracts@4
 view-spec-sha256: sha256:13ff5bb50461e3b7a40d8e34e1785fd29ebd36b5134a59c7630fa5304d2997b0
-fact-ledger-sha256: sha256:02e66383d581d1fcad4abd35d89590c84da0ffaac42f007a3de83d98f774f70d
+fact-ledger-sha256: sha256:d8adf159b9de86f68d805f1f79d46566957e4c89283c6ef6e630f89a5822e4a6
 composer-core-sha256: sha256:e358e2b202702b74c84c32853e16130da2366d85de0189b571eb84fbf37dc5e2
-composition-candidate-sha256: sha256:fb568745b4debb5df0f9fa3390f01f58ccdda8b6e8815f9e5a21929e3c2f1c5d
-validator-sha256: sha256:e0ab2da2c523899958e7f0327e427291fac19073a2c44eb4657f65e6b176dff8
+composition-candidate-sha256: sha256:812cdd16802800ef4bd9421b049004ac1e0260e1d36a35a3ab972833cd3297d1
+validator-sha256: sha256:c263cda0d2eca2e504cacad26b1b8de9085f2295e75ce79c00ba9af659ecceba
 -->
 
 # Architecture contracts {#arch.contracts}
 
-**TL;DR** No registered deterministic producer supplied runtime-guarantee for arch.contracts@4 within the pinned scope. src/App.jsx declares export default function App() at line 14. [F:FACT-02026ea421ff733e,FACT-536a4b571f0aa3f7]
+**TL;DR** src/utils/evaluator.js declares export const evaluateExpression at line 4. [F:FACT-61725e02a0ee1f94]
 
 ## Public contracts {#arch.contracts.public-contracts}
 
-src/utils/evaluator.js declares export const evaluateExpression at line 4. No registered deterministic producer supplied schema-contract for arch.contracts@4 within the pinned scope. src/components/UnitConverter.jsx declares export const UnitConverter at line 14. src/utils/audio.js declares export const playSound at line 18. src/utils/evaluator.js declares export const calculateCompoundInterest at line 181. No registered deterministic producer supplied interface for arch.contracts@4 within the pinned scope. src/components/StandardKeypad.jsx declares export const StandardKeypad at line 5. src/utils/evaluator.js declares export const UNIT_TYPES at line 75. src/components/HistoryDrawer.jsx declares export const HistoryDrawer at line 5. src/utils/evaluator.js declares export const calculateTip at line 200. src/utils/evaluator.js declares export const calculateEMI at line 161. src/components/ScientificKeypad.jsx declares export const ScientificKeypad at line 5. src/components/KeyboardShortcutsModal.jsx declares export const KeyboardShortcutsModal at line 5. src/components/Header.jsx declares export const Header at line 36. src/utils/evaluator.js declares export const convertUnits at line 140. src/components/FinancialCalculator.jsx declares export const FinancialCalculator at line 6. src/components/FunctionGrapher.jsx declares export const FunctionGrapher at line 14. src/utils/evaluator.js declares export const formatNumber at line 57. No registered deterministic producer supplied protocol-field for arch.contracts@4 within the pinned scope. src/components/Display.jsx declares export const Display at line 5. [F:FACT-003383ba204ad3b3,FACT-0a8605008d6ee5a7,FACT-0fd705dda4df2330,FACT-27cf7234a68230d8,FACT-2d9c2415ece9c882,FACT-3213c4eb1b172585,FACT-56540631c84e67f0,FACT-569cd394b4a5c7bf,FACT-771efeba9f2bcd5f,FACT-89766c8b0d12117b,FACT-905121dce7ecb39a,FACT-aa8582e47fbb63f9,FACT-b06d5ead8f62e086,FACT-b61bb8129cc5dafa,FACT-c47c7c3b7885ff67,FACT-ce9c14c9236fe9ae,FACT-d698675612a6f4f1,FACT-d8171f3ed7630723,FACT-da31bf6fe5f3cc05,FACT-e77b37bf747a855a]
+No registered deterministic producer supplied protocol-field for arch.contracts@4 within the pinned scope. [F:FACT-007a475a78db044c]
+
+No registered deterministic producer supplied schema-contract for arch.contracts@4 within the pinned scope. [F:FACT-3ca59cba66219176]
+
+No registered deterministic producer supplied interface for arch.contracts@4 within the pinned scope. [F:FACT-e37f91606735edaa]
 
 ## Implementations {#arch.contracts.implementations}
 
-No registered deterministic producer supplied implementation for arch.contracts@4 within the pinned scope. [F:FACT-2bfc76bca3545c62]
+No registered deterministic producer supplied implementation for arch.contracts@4 within the pinned scope. [F:FACT-22f422df3d8831dd]
+
+src/components/FunctionGrapher.jsx declares export const FunctionGrapher at line 14. [F:FACT-12645d8dc1f90791]
+
+src/components/Header.jsx declares export const Header at line 38. [F:FACT-2a2be2e34a717c9e]
+
+src/App.jsx declares export default function App() at line 46. [F:FACT-34666cab6447a1ea]
+
+src/components/FinancialCalculator.jsx declares export const FinancialCalculator at line 6. [F:FACT-3c9255849c1fc9d8]
+
+src/components/ScientificKeypad.jsx declares export const ScientificKeypad at line 5. [F:FACT-3d6a51c1176cef61]
+
+src/components/StandardKeypad.jsx declares export const StandardKeypad at line 5. [F:FACT-480b35fd14ecfdab]
+
+src/components/UnitConverter.jsx declares export const UnitConverter at line 14. [F:FACT-483eae7ffdb55e39]
+
+src/utils/evaluator.js declares export const calculateCompoundInterest at line 181. [F:FACT-48e676904a4cce68]
+
+src/utils/evaluator.js declares export const evaluateExpression at line 4. [F:FACT-61725e02a0ee1f94]
+
+src/utils/evaluator.js declares export const UNIT_TYPES at line 75. [F:FACT-8c25a6e1a6f8aef4]
+
+src/utils/evaluator.js declares export const convertUnits at line 140. [F:FACT-9fee3a8ce4a897ea]
+
+src/components/HistoryDrawer.jsx declares export const HistoryDrawer at line 5. [F:FACT-a68a73518ebc42e4]
+
+src/components/KeyboardShortcutsModal.jsx declares export const KeyboardShortcutsModal at line 5. [F:FACT-a781c8e50cc7d200]
+
+src/utils/evaluator.js declares export const calculateEMI at line 161. [F:FACT-ccdbdedc7112bbfc]
+
+src/utils/evaluator.js declares export const calculateTip at line 200. [F:FACT-d221cfbe00354a2d]
+
+src/utils/audio.js declares export const playSound at line 18. [F:FACT-ede7e3233fdb1acc]
+
+src/components/Display.jsx declares export const Display at line 5. [F:FACT-f0435bcfb8116eb3]
+
+src/utils/evaluator.js declares export const formatNumber at line 57. [F:FACT-01d6e881df39b91b]
 
 ## Consumers {#arch.contracts.consumers}
 
-No registered deterministic producer supplied consumer-dependency for arch.contracts@4 within the pinned scope. [F:FACT-f0cc5fc034a9545a]
+No registered deterministic producer supplied consumer-dependency for arch.contracts@4 within the pinned scope. [F:FACT-8f75be2767f9a3c9]
 
 ## Contract contradictions {#arch.contracts.contract-contradictions}
 
@@ -33,30 +73,71 @@ No registered deterministic producer supplied consumer-dependency for arch.contr
 
 ## Unavailable runtime guarantees {#arch.contracts.unavailable-runtime-guarantees}
 
-No registered deterministic producer supplied runtime-guarantee for arch.contracts@4 within the pinned scope. [F:FACT-02026ea421ff733e]
+No registered deterministic producer supplied runtime-guarantee for arch.contracts@4 within the pinned scope. [F:FACT-13e54b1399c08f60]
 
 ## Facts {#arch.contracts.facts}
 
 ```json
 {
-  "fact_ledger_sha256": "sha256:02e66383d581d1fcad4abd35d89590c84da0ffaac42f007a3de83d98f774f70d",
+  "fact_ledger_sha256": "sha256:d8adf159b9de86f68d805f1f79d46566957e4c89283c6ef6e630f89a5822e4a6",
   "facts": [
     {
-      "assurance": "structurally-derived",
-      "claim": "src/utils/evaluator.js declares export const evaluateExpression at line 4.",
-      "claimSha256": "sha256:4031c47cfd1f9b3bdbc2702382d55c1f4f78ab96996448cf72e9470d96922dfb",
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
       "conflictsWith": [],
-      "derivationId": "DRV-0836baf18a4a187c",
+      "derivationId": "DRV-6e83790f2bb4aae8",
+      "evidenceIds": [],
+      "factSha256": "sha256:0077dc9d5bb546e897cb82c72e01fc4ceb1aa11172c420303b22992833d7c22a",
+      "factType": "protocol-field",
+      "id": "FACT-007a475a78db044c",
+      "reason": {
+        "attemptedProducer": "required-fact-coverage",
+        "code": "NO_REGISTERED_PRODUCER",
+        "detail": "No registered deterministic producer supplied protocol-field for arch.contracts@4 within the pinned scope."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "arch.contracts@4:protocol-field",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js declares export const formatNumber at line 57.",
+      "claimSha256": "sha256:07a8b211dc69a932bb73dcc0d6be922557e56d597c978023ba6c4f4e7835c5b1",
+      "conflictsWith": [],
+      "derivationId": "DRV-c22047bda8fe255e",
       "evidenceIds": [
-        "EV-9825e87dd817b349"
+        "EV-53ebcb155e20fa7c"
       ],
-      "factSha256": "sha256:52cbcbbac231275051ec6ad4d0a21abefb4f4e1f6e1decff73443af9d8aa6d9a",
+      "factSha256": "sha256:6bf34da50cb44df91c81314041bac4880803f14504981a2750dd0065c5b5b28e",
       "factType": "signature",
-      "id": "FACT-003383ba204ad3b3",
+      "id": "FACT-01d6e881df39b91b",
       "scopeStatus": "inside",
       "status": "available",
       "subject": {
-        "id": "src/utils/evaluator.js#evaluateExpression",
+        "id": "src/utils/evaluator.js#formatNumber",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/FunctionGrapher.jsx declares export const FunctionGrapher at line 14.",
+      "claimSha256": "sha256:deb27f116091f80d66db58a0c889e1072fbcbe70f2b937cde3f83e87591676c8",
+      "conflictsWith": [],
+      "derivationId": "DRV-c22047bda8fe255e",
+      "evidenceIds": [
+        "EV-09d2597b119a0ad8"
+      ],
+      "factSha256": "sha256:205732abecbf55f82dd77f2404b2bcaaecc98dde7588fdca878e502bcae1c61e",
+      "factType": "signature",
+      "id": "FACT-12645d8dc1f90791",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FunctionGrapher.jsx#FunctionGrapher",
         "kind": "symbol"
       }
     },
@@ -65,11 +146,11 @@ No registered deterministic producer supplied runtime-guarantee for arch.contrac
       "claim": null,
       "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
       "conflictsWith": [],
-      "derivationId": "DRV-b84c927957ded541",
+      "derivationId": "DRV-6e83790f2bb4aae8",
       "evidenceIds": [],
-      "factSha256": "sha256:02cc9ed32619d6d609ea96d74023de09cc98b95fd569e168c6920f2202172006",
+      "factSha256": "sha256:61c541d0bf38540822f6bb1e03117d6c776270bd8fddf165f5c4b2feee9d51f3",
       "factType": "runtime-guarantee",
-      "id": "FACT-02026ea421ff733e",
+      "id": "FACT-13e54b1399c08f60",
       "reason": {
         "attemptedProducer": "required-fact-coverage",
         "code": "NO_RUNTIME_EVIDENCE",
@@ -87,71 +168,11 @@ No registered deterministic producer supplied runtime-guarantee for arch.contrac
       "claim": null,
       "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
       "conflictsWith": [],
-      "derivationId": "DRV-b84c927957ded541",
+      "derivationId": "DRV-6e83790f2bb4aae8",
       "evidenceIds": [],
-      "factSha256": "sha256:652ce1ca0ba50418decaf8e2bc5e3d66245d02aae632731d30e17a012445a302",
-      "factType": "schema-contract",
-      "id": "FACT-0a8605008d6ee5a7",
-      "reason": {
-        "attemptedProducer": "required-fact-coverage",
-        "code": "NO_REGISTERED_PRODUCER",
-        "detail": "No registered deterministic producer supplied schema-contract for arch.contracts@4 within the pinned scope."
-      },
-      "scopeStatus": "inside",
-      "status": "unavailable",
-      "subject": {
-        "id": "arch.contracts@4:schema-contract",
-        "kind": "analysis"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/components/UnitConverter.jsx declares export const UnitConverter at line 14.",
-      "claimSha256": "sha256:e26d2b5f0cdb273affcb84d3013563d0c57d777eb4eddb2a71aa5ccd8c096603",
-      "conflictsWith": [],
-      "derivationId": "DRV-0836baf18a4a187c",
-      "evidenceIds": [
-        "EV-c603f486ff74ed3e"
-      ],
-      "factSha256": "sha256:9bdf223523f4f205fd8aa05c04e3630c27d36233f34fa3395d5648b7d45c1d42",
-      "factType": "signature",
-      "id": "FACT-0fd705dda4df2330",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/components/UnitConverter.jsx#UnitConverter",
-        "kind": "symbol"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/utils/audio.js declares export const playSound at line 18.",
-      "claimSha256": "sha256:21875c1a9b7ee75618c0a398656b3de536b8d312a70f6988f805ad8cac218b9d",
-      "conflictsWith": [],
-      "derivationId": "DRV-0836baf18a4a187c",
-      "evidenceIds": [
-        "EV-9374ac66621f3028"
-      ],
-      "factSha256": "sha256:4854fec0e5c69dab8368d5e03883a81b492a49461f5f140a95dac8f6dceb0732",
-      "factType": "signature",
-      "id": "FACT-27cf7234a68230d8",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/utils/audio.js#playSound",
-        "kind": "symbol"
-      }
-    },
-    {
-      "assurance": "not-applicable",
-      "claim": null,
-      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
-      "conflictsWith": [],
-      "derivationId": "DRV-b84c927957ded541",
-      "evidenceIds": [],
-      "factSha256": "sha256:4cf7da4d6885f2efadffb9d94d42313ad755c253fe0fd87c7b77861411945b0f",
+      "factSha256": "sha256:858e137a5d0492ff0fb89e576f2021b1bbe5a29c1cbcbf99a7f32f7fef0bf1dc",
       "factType": "implementation",
-      "id": "FACT-2bfc76bca3545c62",
+      "id": "FACT-22f422df3d8831dd",
       "reason": {
         "attemptedProducer": "required-fact-coverage",
         "code": "NO_REGISTERED_PRODUCER",
@@ -166,20 +187,58 @@ No registered deterministic producer supplied runtime-guarantee for arch.contrac
     },
     {
       "assurance": "structurally-derived",
-      "claim": "src/utils/evaluator.js declares export const calculateCompoundInterest at line 181.",
-      "claimSha256": "sha256:c24ba030a27317335adc387d8f1c3a185b378777d691d4ce3b374fa833f54079",
+      "claim": "src/components/Header.jsx declares export const Header at line 38.",
+      "claimSha256": "sha256:579846a13c4f37ee4966fa4d85c328bdb9d59c211a827542b4bce471990ce38d",
       "conflictsWith": [],
-      "derivationId": "DRV-0836baf18a4a187c",
+      "derivationId": "DRV-c22047bda8fe255e",
       "evidenceIds": [
-        "EV-64250d0870a007e6"
+        "EV-b9e590ecea4bf67a"
       ],
-      "factSha256": "sha256:1f958279aab7647631ce1bd46027de60dfe8cfcf0b20234bbaca2012fd58846e",
+      "factSha256": "sha256:4cff282d10462e4fca8437dfd6fb036f2838a6f1cee5fde03aa71fa4fa4ce69f",
       "factType": "signature",
-      "id": "FACT-2d9c2415ece9c882",
+      "id": "FACT-2a2be2e34a717c9e",
       "scopeStatus": "inside",
       "status": "available",
       "subject": {
-        "id": "src/utils/evaluator.js#calculateCompoundInterest",
+        "id": "src/components/Header.jsx#Header",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/App.jsx declares export default function App() at line 46.",
+      "claimSha256": "sha256:d1f2f1235da8c592542f272257dc75a0985670e6ab5dcecb2fba5d5fd810bb89",
+      "conflictsWith": [],
+      "derivationId": "DRV-c22047bda8fe255e",
+      "evidenceIds": [
+        "EV-f3f468799e1901ba"
+      ],
+      "factSha256": "sha256:a6983cbce06585148aed568791fb2f57c58f5793cf35d8528e84d13114e95686",
+      "factType": "signature",
+      "id": "FACT-34666cab6447a1ea",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/App.jsx#App",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/FinancialCalculator.jsx declares export const FinancialCalculator at line 6.",
+      "claimSha256": "sha256:c0bfa9b7ab0f6463ff35ae84f9a504afa7e4b78aac6b5660d51893d54fa9209e",
+      "conflictsWith": [],
+      "derivationId": "DRV-c22047bda8fe255e",
+      "evidenceIds": [
+        "EV-14686c950a6e895c"
+      ],
+      "factSha256": "sha256:77a856636cc8fd267bc919b3121fcfb8d34f5fbe3f257df920ef6823ac73bb96",
+      "factType": "signature",
+      "id": "FACT-3c9255849c1fc9d8",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/FinancialCalculator.jsx#FinancialCalculator",
         "kind": "symbol"
       }
     },
@@ -188,11 +247,264 @@ No registered deterministic producer supplied runtime-guarantee for arch.contrac
       "claim": null,
       "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
       "conflictsWith": [],
-      "derivationId": "DRV-b84c927957ded541",
+      "derivationId": "DRV-6e83790f2bb4aae8",
       "evidenceIds": [],
-      "factSha256": "sha256:b4ea9eb9988b53001fad892ffa3c9cefd168c4e07e8ec84bb669cc5757e33733",
+      "factSha256": "sha256:34e679703de48e8a413c3b04a1ae9d8c9eceb73dd44246a2ed23bc6d70f2e505",
+      "factType": "schema-contract",
+      "id": "FACT-3ca59cba66219176",
+      "reason": {
+        "attemptedProducer": "required-fact-coverage",
+        "code": "NO_REGISTERED_PRODUCER",
+        "detail": "No registered deterministic producer supplied schema-contract for arch.contracts@4 within the pinned scope."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "arch.contracts@4:schema-contract",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/ScientificKeypad.jsx declares export const ScientificKeypad at line 5.",
+      "claimSha256": "sha256:beb2748ebfaf1c23a22678b878f7a976d3a664f75b07ad26cacdfe8cfa65d24b",
+      "conflictsWith": [],
+      "derivationId": "DRV-c22047bda8fe255e",
+      "evidenceIds": [
+        "EV-46d1a3665d6f5490"
+      ],
+      "factSha256": "sha256:e986853c5af6b6bba107cf77a1e039da35a3ce796c70658e9ec9fe79c4e52809",
+      "factType": "signature",
+      "id": "FACT-3d6a51c1176cef61",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/ScientificKeypad.jsx#ScientificKeypad",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/StandardKeypad.jsx declares export const StandardKeypad at line 5.",
+      "claimSha256": "sha256:1f46f18ec00eebf89ac2bb116f1458185d7347bb6dd2d2a6b7ca0cd9680e727d",
+      "conflictsWith": [],
+      "derivationId": "DRV-c22047bda8fe255e",
+      "evidenceIds": [
+        "EV-abe7576f160ef630"
+      ],
+      "factSha256": "sha256:dc868726405969ccb3f2a2a82a1d5aef3ee7975cbe2f11fe95d82c48e38aff4b",
+      "factType": "signature",
+      "id": "FACT-480b35fd14ecfdab",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/StandardKeypad.jsx#StandardKeypad",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/UnitConverter.jsx declares export const UnitConverter at line 14.",
+      "claimSha256": "sha256:e26d2b5f0cdb273affcb84d3013563d0c57d777eb4eddb2a71aa5ccd8c096603",
+      "conflictsWith": [],
+      "derivationId": "DRV-c22047bda8fe255e",
+      "evidenceIds": [
+        "EV-c603f486ff74ed3e"
+      ],
+      "factSha256": "sha256:26f53d703bbfd3eda776b671fc1ed3e8464d495c76bc9b0430ceff1eec09152b",
+      "factType": "signature",
+      "id": "FACT-483eae7ffdb55e39",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/UnitConverter.jsx#UnitConverter",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js declares export const calculateCompoundInterest at line 181.",
+      "claimSha256": "sha256:c24ba030a27317335adc387d8f1c3a185b378777d691d4ce3b374fa833f54079",
+      "conflictsWith": [],
+      "derivationId": "DRV-c22047bda8fe255e",
+      "evidenceIds": [
+        "EV-64250d0870a007e6"
+      ],
+      "factSha256": "sha256:9350faba898b36fd170fadba7bd0e2ee10ef03d02e07d1e3d91c8cb9c23cb2c2",
+      "factType": "signature",
+      "id": "FACT-48e676904a4cce68",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#calculateCompoundInterest",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js declares export const evaluateExpression at line 4.",
+      "claimSha256": "sha256:4031c47cfd1f9b3bdbc2702382d55c1f4f78ab96996448cf72e9470d96922dfb",
+      "conflictsWith": [],
+      "derivationId": "DRV-c22047bda8fe255e",
+      "evidenceIds": [
+        "EV-9825e87dd817b349"
+      ],
+      "factSha256": "sha256:3c1b97c9a49d50b18800f56c444d5a6959fc7c1baf6a0e1597c03f051ca4dc28",
+      "factType": "signature",
+      "id": "FACT-61725e02a0ee1f94",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#evaluateExpression",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js declares export const UNIT_TYPES at line 75.",
+      "claimSha256": "sha256:44bfb95b7581611aeb725f996bf324386d703ab817b88679883de26eeb38e957",
+      "conflictsWith": [],
+      "derivationId": "DRV-c22047bda8fe255e",
+      "evidenceIds": [
+        "EV-421f8e437ba71c21"
+      ],
+      "factSha256": "sha256:b420f8012d5d9a4da4b3d18a785f21235338514254c990ae5499eebc6148f726",
+      "factType": "signature",
+      "id": "FACT-8c25a6e1a6f8aef4",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#UNIT_TYPES",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-6e83790f2bb4aae8",
+      "evidenceIds": [],
+      "factSha256": "sha256:5fed621c2d0a6244f619d83ffeb85ea4a53129e146f440e2dc41d6c527fa9191",
+      "factType": "consumer-dependency",
+      "id": "FACT-8f75be2767f9a3c9",
+      "reason": {
+        "attemptedProducer": "required-fact-coverage",
+        "code": "NO_REGISTERED_PRODUCER",
+        "detail": "No registered deterministic producer supplied consumer-dependency for arch.contracts@4 within the pinned scope."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "arch.contracts@4:consumer-dependency",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js declares export const convertUnits at line 140.",
+      "claimSha256": "sha256:ea65a51a91e10c0ea0308a2196ba5eaddca88aceec483ee139a12f0676d6dd15",
+      "conflictsWith": [],
+      "derivationId": "DRV-c22047bda8fe255e",
+      "evidenceIds": [
+        "EV-9920a6e65dcdac42"
+      ],
+      "factSha256": "sha256:c4607c322d5c1f9ee3eecea60b5424cf08e607b7bea69403cd75adbd42c2f6e0",
+      "factType": "signature",
+      "id": "FACT-9fee3a8ce4a897ea",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#convertUnits",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/HistoryDrawer.jsx declares export const HistoryDrawer at line 5.",
+      "claimSha256": "sha256:a5892111c15c6beeafe10b4c4dfcb342f86aa4a5908549421ed9347151220d28",
+      "conflictsWith": [],
+      "derivationId": "DRV-c22047bda8fe255e",
+      "evidenceIds": [
+        "EV-17d137c1d4567b39"
+      ],
+      "factSha256": "sha256:64be9c9d8578cca9e2f998e76dfbc0aad74a3c1abcc9499c8f09701e4ca297bd",
+      "factType": "signature",
+      "id": "FACT-a68a73518ebc42e4",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/HistoryDrawer.jsx#HistoryDrawer",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/components/KeyboardShortcutsModal.jsx declares export const KeyboardShortcutsModal at line 5.",
+      "claimSha256": "sha256:99266b1801db3a39dd605d0d1bce48e3cc2b8ae85932f06492ca302948064a69",
+      "conflictsWith": [],
+      "derivationId": "DRV-c22047bda8fe255e",
+      "evidenceIds": [
+        "EV-55a086e8e1e8f66e"
+      ],
+      "factSha256": "sha256:ee651202c6c235cdf030b09005e87f319ac9b049f93c644b069c1938db2cdecb",
+      "factType": "signature",
+      "id": "FACT-a781c8e50cc7d200",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/components/KeyboardShortcutsModal.jsx#KeyboardShortcutsModal",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js declares export const calculateEMI at line 161.",
+      "claimSha256": "sha256:815f9a7087ab95d08b0906798d33ad70d29c76598d45f6a33c04bff4b5c4e5a1",
+      "conflictsWith": [],
+      "derivationId": "DRV-c22047bda8fe255e",
+      "evidenceIds": [
+        "EV-85d010281d073c58"
+      ],
+      "factSha256": "sha256:4a0c8567fc5c0b152be197b5ca99342b7438940fcd80c4a8d227c1a39526652b",
+      "factType": "signature",
+      "id": "FACT-ccdbdedc7112bbfc",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#calculateEMI",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "structurally-derived",
+      "claim": "src/utils/evaluator.js declares export const calculateTip at line 200.",
+      "claimSha256": "sha256:355e0e07b1ab8dbaa13ca727498c74c13a0b1969d0722500ffc2e95560793927",
+      "conflictsWith": [],
+      "derivationId": "DRV-c22047bda8fe255e",
+      "evidenceIds": [
+        "EV-64a8d3a93f656059"
+      ],
+      "factSha256": "sha256:35065bffcb3b12f00501eadf045f5a1288cf21eeb757653b206f6a2ca24da424",
+      "factType": "signature",
+      "id": "FACT-d221cfbe00354a2d",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "src/utils/evaluator.js#calculateTip",
+        "kind": "symbol"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-6e83790f2bb4aae8",
+      "evidenceIds": [],
+      "factSha256": "sha256:9477b027fa910876c748da86e475700cdded53233f61167fbec581d4ba1e1374",
       "factType": "interface",
-      "id": "FACT-3213c4eb1b172585",
+      "id": "FACT-e37f91606735edaa",
       "reason": {
         "attemptedProducer": "required-fact-coverage",
         "code": "NO_REGISTERED_PRODUCER",
@@ -207,271 +519,21 @@ No registered deterministic producer supplied runtime-guarantee for arch.contrac
     },
     {
       "assurance": "structurally-derived",
-      "claim": "src/App.jsx declares export default function App() at line 14.",
-      "claimSha256": "sha256:dfdeeff013f08edbd4b5d7e158827d0fd11390ea99f02cfd8301d6cf595fb5b7",
+      "claim": "src/utils/audio.js declares export const playSound at line 18.",
+      "claimSha256": "sha256:21875c1a9b7ee75618c0a398656b3de536b8d312a70f6988f805ad8cac218b9d",
       "conflictsWith": [],
-      "derivationId": "DRV-0836baf18a4a187c",
+      "derivationId": "DRV-c22047bda8fe255e",
       "evidenceIds": [
-        "EV-cbeb91fb6905911d"
+        "EV-9374ac66621f3028"
       ],
-      "factSha256": "sha256:f37925259099242f644911344a9fd9c9208d768b7d507fa4fcb17a828b15f652",
+      "factSha256": "sha256:3bf4bd82bd14440a07f8673b3bd04a848b980b491c8a18bc3f688cd3a5af2dff",
       "factType": "signature",
-      "id": "FACT-536a4b571f0aa3f7",
+      "id": "FACT-ede7e3233fdb1acc",
       "scopeStatus": "inside",
       "status": "available",
       "subject": {
-        "id": "src/App.jsx#App",
+        "id": "src/utils/audio.js#playSound",
         "kind": "symbol"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/components/StandardKeypad.jsx declares export const StandardKeypad at line 5.",
-      "claimSha256": "sha256:1f46f18ec00eebf89ac2bb116f1458185d7347bb6dd2d2a6b7ca0cd9680e727d",
-      "conflictsWith": [],
-      "derivationId": "DRV-0836baf18a4a187c",
-      "evidenceIds": [
-        "EV-abe7576f160ef630"
-      ],
-      "factSha256": "sha256:2cf1894ec6a3ea57d0b9424b3972d87b25f998cf1eb4cf04edef1a7d9c079db5",
-      "factType": "signature",
-      "id": "FACT-56540631c84e67f0",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/components/StandardKeypad.jsx#StandardKeypad",
-        "kind": "symbol"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/utils/evaluator.js declares export const UNIT_TYPES at line 75.",
-      "claimSha256": "sha256:44bfb95b7581611aeb725f996bf324386d703ab817b88679883de26eeb38e957",
-      "conflictsWith": [],
-      "derivationId": "DRV-0836baf18a4a187c",
-      "evidenceIds": [
-        "EV-421f8e437ba71c21"
-      ],
-      "factSha256": "sha256:eb8eacae4ebf4f86b2e44ee0390627f26360b6caff91f2f7f28878752fa519ef",
-      "factType": "signature",
-      "id": "FACT-569cd394b4a5c7bf",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/utils/evaluator.js#UNIT_TYPES",
-        "kind": "symbol"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/components/HistoryDrawer.jsx declares export const HistoryDrawer at line 5.",
-      "claimSha256": "sha256:a5892111c15c6beeafe10b4c4dfcb342f86aa4a5908549421ed9347151220d28",
-      "conflictsWith": [],
-      "derivationId": "DRV-0836baf18a4a187c",
-      "evidenceIds": [
-        "EV-17d137c1d4567b39"
-      ],
-      "factSha256": "sha256:ac20942fbd22d02ece3947c54f2436ba18b3be880a927bc626ae9ca8dbcf0d2a",
-      "factType": "signature",
-      "id": "FACT-771efeba9f2bcd5f",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/components/HistoryDrawer.jsx#HistoryDrawer",
-        "kind": "symbol"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/utils/evaluator.js declares export const calculateTip at line 200.",
-      "claimSha256": "sha256:355e0e07b1ab8dbaa13ca727498c74c13a0b1969d0722500ffc2e95560793927",
-      "conflictsWith": [],
-      "derivationId": "DRV-0836baf18a4a187c",
-      "evidenceIds": [
-        "EV-64a8d3a93f656059"
-      ],
-      "factSha256": "sha256:c82914cc0e843948b36aee52350995d30e1a065d870103a94efcb8f2df72df41",
-      "factType": "signature",
-      "id": "FACT-89766c8b0d12117b",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/utils/evaluator.js#calculateTip",
-        "kind": "symbol"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/utils/evaluator.js declares export const calculateEMI at line 161.",
-      "claimSha256": "sha256:815f9a7087ab95d08b0906798d33ad70d29c76598d45f6a33c04bff4b5c4e5a1",
-      "conflictsWith": [],
-      "derivationId": "DRV-0836baf18a4a187c",
-      "evidenceIds": [
-        "EV-85d010281d073c58"
-      ],
-      "factSha256": "sha256:056799b873a76df27248487ec91172d212f4faa88dfc4549e3b49676a82f56cc",
-      "factType": "signature",
-      "id": "FACT-905121dce7ecb39a",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/utils/evaluator.js#calculateEMI",
-        "kind": "symbol"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/components/ScientificKeypad.jsx declares export const ScientificKeypad at line 5.",
-      "claimSha256": "sha256:beb2748ebfaf1c23a22678b878f7a976d3a664f75b07ad26cacdfe8cfa65d24b",
-      "conflictsWith": [],
-      "derivationId": "DRV-0836baf18a4a187c",
-      "evidenceIds": [
-        "EV-46d1a3665d6f5490"
-      ],
-      "factSha256": "sha256:62aa29e69342b6a64e17ed3bef5cc4ec8309af50250492a13cd3c0a3bef0d9df",
-      "factType": "signature",
-      "id": "FACT-aa8582e47fbb63f9",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/components/ScientificKeypad.jsx#ScientificKeypad",
-        "kind": "symbol"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/components/KeyboardShortcutsModal.jsx declares export const KeyboardShortcutsModal at line 5.",
-      "claimSha256": "sha256:99266b1801db3a39dd605d0d1bce48e3cc2b8ae85932f06492ca302948064a69",
-      "conflictsWith": [],
-      "derivationId": "DRV-0836baf18a4a187c",
-      "evidenceIds": [
-        "EV-55a086e8e1e8f66e"
-      ],
-      "factSha256": "sha256:999a6a5e4da171ff85e3300a258fbe8acdd7025d2cc516ce9f86d45c38e09164",
-      "factType": "signature",
-      "id": "FACT-b06d5ead8f62e086",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/components/KeyboardShortcutsModal.jsx#KeyboardShortcutsModal",
-        "kind": "symbol"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/components/Header.jsx declares export const Header at line 36.",
-      "claimSha256": "sha256:7c0d9ab7a7d0845074cccc86b5bafc6ef094db91763948c6639b71af7b2afd33",
-      "conflictsWith": [],
-      "derivationId": "DRV-0836baf18a4a187c",
-      "evidenceIds": [
-        "EV-6d4e30cafda2344c"
-      ],
-      "factSha256": "sha256:c34445a7fde8401209ffedd66819e20c0098184373c8407fbd91b1fc3c1ba354",
-      "factType": "signature",
-      "id": "FACT-b61bb8129cc5dafa",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/components/Header.jsx#Header",
-        "kind": "symbol"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/utils/evaluator.js declares export const convertUnits at line 140.",
-      "claimSha256": "sha256:ea65a51a91e10c0ea0308a2196ba5eaddca88aceec483ee139a12f0676d6dd15",
-      "conflictsWith": [],
-      "derivationId": "DRV-0836baf18a4a187c",
-      "evidenceIds": [
-        "EV-9920a6e65dcdac42"
-      ],
-      "factSha256": "sha256:1953500367b1f2fa11fd4e5550f09d785ce5d4f28d3c86c9bba9aabcac0a6945",
-      "factType": "signature",
-      "id": "FACT-c47c7c3b7885ff67",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/utils/evaluator.js#convertUnits",
-        "kind": "symbol"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/components/FinancialCalculator.jsx declares export const FinancialCalculator at line 6.",
-      "claimSha256": "sha256:c0bfa9b7ab0f6463ff35ae84f9a504afa7e4b78aac6b5660d51893d54fa9209e",
-      "conflictsWith": [],
-      "derivationId": "DRV-0836baf18a4a187c",
-      "evidenceIds": [
-        "EV-14686c950a6e895c"
-      ],
-      "factSha256": "sha256:627907d393a9864b2b4ad7ba31b9f130368e2bac6014ff99f02cde1403e2d4f9",
-      "factType": "signature",
-      "id": "FACT-ce9c14c9236fe9ae",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/components/FinancialCalculator.jsx#FinancialCalculator",
-        "kind": "symbol"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/components/FunctionGrapher.jsx declares export const FunctionGrapher at line 14.",
-      "claimSha256": "sha256:deb27f116091f80d66db58a0c889e1072fbcbe70f2b937cde3f83e87591676c8",
-      "conflictsWith": [],
-      "derivationId": "DRV-0836baf18a4a187c",
-      "evidenceIds": [
-        "EV-09d2597b119a0ad8"
-      ],
-      "factSha256": "sha256:3768f313516f3d5b9f658f5d26dad0b9d78a4106c83892c89e318becce15fb72",
-      "factType": "signature",
-      "id": "FACT-d698675612a6f4f1",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/components/FunctionGrapher.jsx#FunctionGrapher",
-        "kind": "symbol"
-      }
-    },
-    {
-      "assurance": "structurally-derived",
-      "claim": "src/utils/evaluator.js declares export const formatNumber at line 57.",
-      "claimSha256": "sha256:07a8b211dc69a932bb73dcc0d6be922557e56d597c978023ba6c4f4e7835c5b1",
-      "conflictsWith": [],
-      "derivationId": "DRV-0836baf18a4a187c",
-      "evidenceIds": [
-        "EV-53ebcb155e20fa7c"
-      ],
-      "factSha256": "sha256:1be0823ba890bc852233257c4953797ae2af8b251ad31f6c2487e4d648f5714c",
-      "factType": "signature",
-      "id": "FACT-d8171f3ed7630723",
-      "scopeStatus": "inside",
-      "status": "available",
-      "subject": {
-        "id": "src/utils/evaluator.js#formatNumber",
-        "kind": "symbol"
-      }
-    },
-    {
-      "assurance": "not-applicable",
-      "claim": null,
-      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
-      "conflictsWith": [],
-      "derivationId": "DRV-b84c927957ded541",
-      "evidenceIds": [],
-      "factSha256": "sha256:6abea88fc73d74edf9cd33838423e3018905e0cc953252537c9a4b4f97c1baee",
-      "factType": "protocol-field",
-      "id": "FACT-da31bf6fe5f3cc05",
-      "reason": {
-        "attemptedProducer": "required-fact-coverage",
-        "code": "NO_REGISTERED_PRODUCER",
-        "detail": "No registered deterministic producer supplied protocol-field for arch.contracts@4 within the pinned scope."
-      },
-      "scopeStatus": "inside",
-      "status": "unavailable",
-      "subject": {
-        "id": "arch.contracts@4:protocol-field",
-        "kind": "analysis"
       }
     },
     {
@@ -479,40 +541,18 @@ No registered deterministic producer supplied runtime-guarantee for arch.contrac
       "claim": "src/components/Display.jsx declares export const Display at line 5.",
       "claimSha256": "sha256:b46b036939f8c7aa2a0a1497b4e284361df596e76b019a85ca4d1789d338df7d",
       "conflictsWith": [],
-      "derivationId": "DRV-0836baf18a4a187c",
+      "derivationId": "DRV-c22047bda8fe255e",
       "evidenceIds": [
         "EV-f52495a51c338b04"
       ],
-      "factSha256": "sha256:e989eab0d976c2e2d59de7d98318c1b26f710ce73d8ef83b47006f3e49ed6b97",
+      "factSha256": "sha256:a3bed6bfbf1044cae2dfd0d4fcd7eeac117ccf066119e36dd59335a832282086",
       "factType": "signature",
-      "id": "FACT-e77b37bf747a855a",
+      "id": "FACT-f0435bcfb8116eb3",
       "scopeStatus": "inside",
       "status": "available",
       "subject": {
         "id": "src/components/Display.jsx#Display",
         "kind": "symbol"
-      }
-    },
-    {
-      "assurance": "not-applicable",
-      "claim": null,
-      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
-      "conflictsWith": [],
-      "derivationId": "DRV-b84c927957ded541",
-      "evidenceIds": [],
-      "factSha256": "sha256:b6292c44fe94b552b70fcae34b6ed3eac04ab149a3505c1a05b7f7782f8c7aaf",
-      "factType": "consumer-dependency",
-      "id": "FACT-f0cc5fc034a9545a",
-      "reason": {
-        "attemptedProducer": "required-fact-coverage",
-        "code": "NO_REGISTERED_PRODUCER",
-        "detail": "No registered deterministic producer supplied consumer-dependency for arch.contracts@4 within the pinned scope."
-      },
-      "scopeStatus": "inside",
-      "status": "unavailable",
-      "subject": {
-        "id": "arch.contracts@4:consumer-dependency",
-        "kind": "analysis"
       }
     }
   ],
@@ -524,11 +564,11 @@ No registered deterministic producer supplied runtime-guarantee for arch.contrac
 }
 ```
 ---
-generated-at: 2026-10-08T10:34:13.035Z
-source-commit: 17e1d25dabf9efff7b894e9d5d5d82a9656ccce4
-view-sha256: sha256:f89431f0610e7c63e27eee323f994bd7e1ae817858039ef111dd3e097f90f65c
-prompt-sha256: sha256:80043df5a632c83ce5250d55737567df9a36a5828d4c268ac51069c5f87703b7
-execution-unit: governed-model-composer@1:ewogICJwcm92aWRlciI6ICJjb3BpbG90LWNsaSIsCiAgInJlcXVlc3RlZE1vZGVsIjogInByb3ZpZGVyLWF1dG8iCn0K:34e75ee2-f2de-4b14-9ec8-cf1046554056
+generated-at: 2026-10-09T06:45:09.602Z
+source-commit: 387a9b447f8a11a7843858ed039fb7bf64c209c5
+view-sha256: sha256:b8c535e8a3bfdf0a15d58461476cc10ffa961e53eccd31ada62b78d9b714a761
+prompt-sha256: sha256:732ce52edf171ec6b2098938594896f1fc6b0546895e725571f45203f5b3a565
+execution-unit: governed-model-composer@1:ewogICJwcm92aWRlciI6ICJjb3BpbG90LWNsaSIsCiAgInJlcXVlc3RlZE1vZGVsIjogInByb3ZpZGVyLWF1dG8iCn0K:636d37b3-47e6-4b64-92a3-b436fa93054e
 model: auto
 assurance: validated-derived-view
 ---

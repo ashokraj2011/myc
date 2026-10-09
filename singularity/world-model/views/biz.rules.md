@@ -1,25 +1,25 @@
 <!--
 SFlow World-Model View
-source: myc1@17e1d25dabf9efff7b894e9d5d5d82a9656ccce4
-source-manifest-sha256: sha256:0748ea44b3c8165f90f4981b65cc40f23342ba876dd9e59c2fdd13918427e2e0
+source: myc1@387a9b447f8a11a7843858ed039fb7bf64c209c5
+source-manifest-sha256: sha256:b555f1ad22f2db810d9ceaac54c278b826268b84cc1cbc37cbc35e5c7d397a69
 scope-sha256: sha256:1c07de1e3891f4ec4710c0c479e681f009a03f1dd5f42c26a4a60373cab1a2df
 view: biz.rules@4
 view-spec-sha256: sha256:39cca8832e285cb7fd7b7b5a09deca629602e2c303908e0aace6032ccf2680b1
-fact-ledger-sha256: sha256:6677ec818f6b150d5630802e06bc25742a28c1d6e5455eec88885a67e688b237
+fact-ledger-sha256: sha256:b2c960474c574a5e3fd6b8fa864d8c487097d35f3bb0cda5e7168a0332d5c028
 composer-core-sha256: sha256:e358e2b202702b74c84c32853e16130da2366d85de0189b571eb84fbf37dc5e2
-composition-candidate-sha256: sha256:11c10d30111de4a65b556b892488d0a1d59f22bbc80f27045debe2e89ae39a6f
-validator-sha256: sha256:e0ab2da2c523899958e7f0327e427291fac19073a2c44eb4657f65e6b176dff8
+composition-candidate-sha256: sha256:b1b2b66f9c8f9944dfe4086072ed9003d985a446ed630b94ab378b7b93a8e377
+validator-sha256: sha256:c263cda0d2eca2e504cacad26b1b8de9085f2295e75ce79c00ba9af659ecceba
 -->
 
 # Business rules {#biz.rules}
 
-**TL;DR** No registered deterministic producer supplied rule-definition for biz.rules@4 within the pinned scope. [F:FACT-b90d7dec949e2b73]
+**TL;DR** No registered deterministic producer supplied rule-definition for biz.rules@4 within the pinned scope. [F:FACT-c4188afeb24f65bf]
 
-No registered deterministic producer supplied business-meaning for biz.rules@4 within the pinned scope. [F:FACT-109934c9886d574c]
+No registered deterministic producer supplied business-meaning for biz.rules@4 within the pinned scope. [F:FACT-c7573b3297310385]
 
 ## Registered rules {#biz.rules.registered-rules}
 
-No registered deterministic producer supplied rule-definition for biz.rules@4 within the pinned scope. [F:FACT-b90d7dec949e2b73]
+No registered deterministic producer supplied rule-definition for biz.rules@4 within the pinned scope. [F:FACT-c4188afeb24f65bf]
 
 ## Conditions and outcomes {#biz.rules.conditions-and-outcomes}
 
@@ -27,106 +27,90 @@ No registered deterministic producer supplied rule-definition for biz.rules@4 wi
 
 ## Rule locations {#biz.rules.rule-locations}
 
-AC-001 is explicitly bound to src/App.test.jsx at line 133. [F:FACT-bc0f7e337273dc01]
-
-AC-002 is explicitly bound to src/App.test.jsx at line 133. [F:FACT-6319c5bc0f9082fe]
-
-AC-003 is explicitly bound to src/App.test.jsx at line 25. [F:FACT-6c6e40c448d9da8a]
-
-AC-003 is explicitly bound to src/utils/evaluator.test.js at line 6. [F:FACT-831c1653ef03ac38]
-
-AC-004 is explicitly bound to src/App.test.jsx at line 184. [F:FACT-25a85608af99342a]
-
-AC-005 is explicitly bound to src/utils/evaluator.test.js at line 6. [F:FACT-8fd9e4bddc76970a]
-
-AC-005 is explicitly bound to src/build.test.js at line 14. [F:FACT-ad52360886a391f4]
+- C-HEX:AC-004 is explicitly bound to src/App.test.jsx at line 113. [F:FACT-0c71510c21e69c06]
+- AC-001 is explicitly bound to src/App.test.jsx at line 170. [F:FACT-0e1a5de2b5678344]
+- C-HEX:REQ-003 is explicitly bound to src/App.jsx at line 18. [F:FACT-2ae1d446a26cf1c9]
+- AC-003 is explicitly bound to src/utils/evaluator.test.js at line 6. [F:FACT-4b80660418d00e41]
+- C-HEX:AC-002 is explicitly bound to src/App.jsx at line 21. [F:FACT-4c4a45eb7582ae9d]
+- AC-002 is explicitly bound to src/App.test.jsx at line 170. [F:FACT-5a7813ea314729cb]
+- C-HEX:AC-004 is explicitly bound to src/App.jsx at line 23. [F:FACT-8a0efffa14046599]
+- C-HEX:REQ-001 is explicitly bound to src/App.jsx at line 342. [F:FACT-8b80f376104af650]
+- AC-004 is explicitly bound to src/App.test.jsx at line 221. [F:FACT-9adc66150bc7aebc]
+- C-HEX:AC-001 is explicitly bound to src/App.test.jsx at line 110. [F:FACT-a20b20fdd1a074d8]
+- C-HEX:REQ-002 is explicitly bound to src/App.jsx at line 17. [F:FACT-a3d78d72843e8565]
+- C-HEX:REQ-004 is explicitly bound to src/App.jsx at line 19. [F:FACT-a4973a1ae75a746c]
+- AC-005 is explicitly bound to src/build.test.js at line 14. [F:FACT-b5a5df7ddb5f0293]
+- AC-005 is explicitly bound to src/utils/evaluator.test.js at line 6. [F:FACT-c42f60dbfee2e2a3]
+- C-HEX:AC-003 is explicitly bound to src/App.test.jsx at line 112. [F:FACT-d658cfabbc8e4393]
+- C-HEX:AC-002 is explicitly bound to src/App.test.jsx at line 111. [F:FACT-da3ad0302ee6d88a]
+- C-HEX:AC-001 is explicitly bound to src/App.jsx at line 20. [F:FACT-dd91b4f208db297e]
+- C-HEX:AC-003 is explicitly bound to src/App.jsx at line 22. [F:FACT-e460b42c160c77c7]
+- AC-003 is explicitly bound to src/App.test.jsx at line 25. [F:FACT-ee50d754c5736c79]
 
 ## Conflicts and unavailable meaning {#biz.rules.conflicts-and-unavailable-meaning}
 
-No registered deterministic producer supplied business-meaning for biz.rules@4 within the pinned scope. [F:FACT-109934c9886d574c]
+No registered deterministic producer supplied business-meaning for biz.rules@4 within the pinned scope. [F:FACT-c7573b3297310385]
 
 ## Facts {#biz.rules.facts}
 
 ```json
 {
-  "fact_ledger_sha256": "sha256:6677ec818f6b150d5630802e06bc25742a28c1d6e5455eec88885a67e688b237",
+  "fact_ledger_sha256": "sha256:b2c960474c574a5e3fd6b8fa864d8c487097d35f3bb0cda5e7168a0332d5c028",
   "facts": [
     {
-      "assurance": "not-applicable",
-      "claim": null,
-      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
-      "conflictsWith": [],
-      "derivationId": "DRV-b84c927957ded541",
-      "evidenceIds": [],
-      "factSha256": "sha256:b7be20ce969095729c0a7f8e05577a8f71081397717c32755e4ee470ef1851f2",
-      "factType": "business-meaning",
-      "id": "FACT-109934c9886d574c",
-      "reason": {
-        "attemptedProducer": "required-fact-coverage",
-        "code": "NO_REGISTERED_PRODUCER",
-        "detail": "No registered deterministic producer supplied business-meaning for biz.rules@4 within the pinned scope."
-      },
-      "scopeStatus": "inside",
-      "status": "unavailable",
-      "subject": {
-        "id": "biz.rules@4:business-meaning",
-        "kind": "analysis"
-      }
-    },
-    {
       "assurance": "source-exact",
-      "claim": "AC-004 is explicitly bound to src/App.test.jsx at line 184.",
-      "claimSha256": "sha256:9a251088365f44e7909e1ae44ec794f8442ba8f59dbc3d5712b5f6ddfbaf31d3",
+      "claim": "C-HEX:AC-004 is explicitly bound to src/App.test.jsx at line 113.",
+      "claimSha256": "sha256:c85e3483743badbcb791ddfc5ed063895036633ee30bcbb7a3049839c241a478",
       "conflictsWith": [],
-      "derivationId": "DRV-036790e050520944",
+      "derivationId": "DRV-cd54945c76eac504",
       "evidenceIds": [
-        "EV-dd3c62d6ebd0c4e4"
+        "EV-e26acc3910c7160e"
       ],
-      "factSha256": "sha256:2b95264da5f9b046b2ea770953b1b980abacb85eef252116e9d718729c573dd4",
+      "factSha256": "sha256:f55447e7aa3defe2d9f29be2209d9217e96fa9b76a5c66175803c6c070af00af",
       "factType": "clause-binding",
-      "id": "FACT-25a85608af99342a",
+      "id": "FACT-0c71510c21e69c06",
       "scopeStatus": "inside",
       "status": "available",
       "subject": {
-        "id": "AC-004@src/App.test.jsx:184",
+        "id": "C-HEX:AC-004@src/App.test.jsx:113",
         "kind": "contract"
       }
     },
     {
       "assurance": "source-exact",
-      "claim": "AC-002 is explicitly bound to src/App.test.jsx at line 133.",
-      "claimSha256": "sha256:26b6db0eb4c729da5482cb5967aa9412fca5fc854f1e72bcdd1dfc42dec3b83e",
+      "claim": "AC-001 is explicitly bound to src/App.test.jsx at line 170.",
+      "claimSha256": "sha256:5cd4043d5320689283bd67a2a239d38e1af70be050d827fe4550967cfeb8f53c",
       "conflictsWith": [],
-      "derivationId": "DRV-036790e050520944",
+      "derivationId": "DRV-cd54945c76eac504",
       "evidenceIds": [
-        "EV-4198d324531c70f6"
+        "EV-ae45bc9c8a7f26f5"
       ],
-      "factSha256": "sha256:fdb3723f0dbb6c36aaec1acf519a17c6fc7a69dad663d5ec1f0ccd8d7253f187",
+      "factSha256": "sha256:de6c7a3e619f4309893a4271db304adcf9d9e59aa895494a416121e2677e3554",
       "factType": "clause-binding",
-      "id": "FACT-6319c5bc0f9082fe",
+      "id": "FACT-0e1a5de2b5678344",
       "scopeStatus": "inside",
       "status": "available",
       "subject": {
-        "id": "AC-002@src/App.test.jsx:133",
+        "id": "AC-001@src/App.test.jsx:170",
         "kind": "contract"
       }
     },
     {
       "assurance": "source-exact",
-      "claim": "AC-003 is explicitly bound to src/App.test.jsx at line 25.",
-      "claimSha256": "sha256:d998e4bd46904d6beeabfe882fc18b51bdf087864754ec84ff8314121e82cc56",
+      "claim": "C-HEX:REQ-003 is explicitly bound to src/App.jsx at line 18.",
+      "claimSha256": "sha256:919225ab6df05f01c6f86f084fea425df5bad8f6816cb06e66a05326807605af",
       "conflictsWith": [],
-      "derivationId": "DRV-036790e050520944",
+      "derivationId": "DRV-cd54945c76eac504",
       "evidenceIds": [
-        "EV-e850637f6d5cfa1c"
+        "EV-31c491109b32ce90"
       ],
-      "factSha256": "sha256:663575db5ac5173af6d84797979d65ebc108e1fdd7b74ea7c50f5134789e455e",
+      "factSha256": "sha256:bb7011aca91f88aef0794c1442fee3865053cafd6a744027f6f5d0a6b8f2a84a",
       "factType": "clause-binding",
-      "id": "FACT-6c6e40c448d9da8a",
+      "id": "FACT-2ae1d446a26cf1c9",
       "scopeStatus": "inside",
       "status": "available",
       "subject": {
-        "id": "AC-003@src/App.test.jsx:25",
+        "id": "C-HEX:REQ-003@src/App.jsx:18",
         "kind": "contract"
       }
     },
@@ -135,13 +119,13 @@ No registered deterministic producer supplied business-meaning for biz.rules@4 w
       "claim": "AC-003 is explicitly bound to src/utils/evaluator.test.js at line 6.",
       "claimSha256": "sha256:f63f3324bfda3cda47c4b6c46e637f4df32e6c39db5fc144b02909e69f98ec88",
       "conflictsWith": [],
-      "derivationId": "DRV-036790e050520944",
+      "derivationId": "DRV-cd54945c76eac504",
       "evidenceIds": [
         "EV-e755efa41535dd5a"
       ],
-      "factSha256": "sha256:cf24718a38ff3a4de5e007468b270168c94f14e0ee88ce6c0b27c19e3ff93ab4",
+      "factSha256": "sha256:d0dc555dddace01e1308bc3b23121e5fd3cdd6307e2011a8496ba27b4fe3dd0d",
       "factType": "clause-binding",
-      "id": "FACT-831c1653ef03ac38",
+      "id": "FACT-4b80660418d00e41",
       "scopeStatus": "inside",
       "status": "available",
       "subject": {
@@ -151,20 +135,153 @@ No registered deterministic producer supplied business-meaning for biz.rules@4 w
     },
     {
       "assurance": "source-exact",
-      "claim": "AC-005 is explicitly bound to src/utils/evaluator.test.js at line 6.",
-      "claimSha256": "sha256:3fddd3be28eb523150d0c2c2b277f58acf9280bdfc709009496d8bb6e076ecaf",
+      "claim": "C-HEX:AC-002 is explicitly bound to src/App.jsx at line 21.",
+      "claimSha256": "sha256:098f60154aa69519115c9d413f48c162538ed0cca7e8354f1d9dbf97baf1b701",
       "conflictsWith": [],
-      "derivationId": "DRV-036790e050520944",
+      "derivationId": "DRV-cd54945c76eac504",
       "evidenceIds": [
-        "EV-44664ee9c0e3381a"
+        "EV-3b25715577b3bcde"
       ],
-      "factSha256": "sha256:7843ac94f0cb5ad18251d5edc784568e7b3030280060612c6e36ecb96a84f421",
+      "factSha256": "sha256:08006ba2e6206331d71ec4cbc464b083df570e3a1a1b3f11ddc162fc38194ace",
       "factType": "clause-binding",
-      "id": "FACT-8fd9e4bddc76970a",
+      "id": "FACT-4c4a45eb7582ae9d",
       "scopeStatus": "inside",
       "status": "available",
       "subject": {
-        "id": "AC-005@src/utils/evaluator.test.js:6",
+        "id": "C-HEX:AC-002@src/App.jsx:21",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "AC-002 is explicitly bound to src/App.test.jsx at line 170.",
+      "claimSha256": "sha256:d520349c6af817b5841af9a8939a8034419ded751b0e6f450a31139cd9cbbc29",
+      "conflictsWith": [],
+      "derivationId": "DRV-cd54945c76eac504",
+      "evidenceIds": [
+        "EV-da06f442c2aece23"
+      ],
+      "factSha256": "sha256:db5c9576fbe93ff0106a4943792a3e46cb55954eb387d4421283dd0f1e29ffe4",
+      "factType": "clause-binding",
+      "id": "FACT-5a7813ea314729cb",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "AC-002@src/App.test.jsx:170",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "C-HEX:AC-004 is explicitly bound to src/App.jsx at line 23.",
+      "claimSha256": "sha256:b09a9901742daf4f693c10a3295d8b7f2c626c050eadb2446a8f8474f94f19ec",
+      "conflictsWith": [],
+      "derivationId": "DRV-cd54945c76eac504",
+      "evidenceIds": [
+        "EV-56e31147b9a5e084"
+      ],
+      "factSha256": "sha256:cddb6968a23872fd50a2fa10b8e80556a4185c5854e977f105ce5547fc2dcfc9",
+      "factType": "clause-binding",
+      "id": "FACT-8a0efffa14046599",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "C-HEX:AC-004@src/App.jsx:23",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "C-HEX:REQ-001 is explicitly bound to src/App.jsx at line 342.",
+      "claimSha256": "sha256:11c76b476e63033ec4e1f98d20dbe34867dbc37426bc7331296f13bdb46eb492",
+      "conflictsWith": [],
+      "derivationId": "DRV-cd54945c76eac504",
+      "evidenceIds": [
+        "EV-bf29c9d450297c5d"
+      ],
+      "factSha256": "sha256:41ee3722904e701f3c6b2d1403ceb9175b5f2fabd368cfa01fbe53b74d06d01b",
+      "factType": "clause-binding",
+      "id": "FACT-8b80f376104af650",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "C-HEX:REQ-001@src/App.jsx:342",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "AC-004 is explicitly bound to src/App.test.jsx at line 221.",
+      "claimSha256": "sha256:a3633a3141e1117083bc940fccdfe858253ccd3a6d26993120987b6f557228a0",
+      "conflictsWith": [],
+      "derivationId": "DRV-cd54945c76eac504",
+      "evidenceIds": [
+        "EV-3b7a520c113f8aca"
+      ],
+      "factSha256": "sha256:e90876c8bd72b480acb6fa45b5dea188b107f56a8758d64095d178f35ec58073",
+      "factType": "clause-binding",
+      "id": "FACT-9adc66150bc7aebc",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "AC-004@src/App.test.jsx:221",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "C-HEX:AC-001 is explicitly bound to src/App.test.jsx at line 110.",
+      "claimSha256": "sha256:1cb7bed23d132438bf89063fa39fde4f83bff1c40fc6b7ae53afef886fe85025",
+      "conflictsWith": [],
+      "derivationId": "DRV-cd54945c76eac504",
+      "evidenceIds": [
+        "EV-4d89f83c4807fba9"
+      ],
+      "factSha256": "sha256:a8855e1398c295bf543410d9b8173fe95c197be5469a891f09c558c144351cff",
+      "factType": "clause-binding",
+      "id": "FACT-a20b20fdd1a074d8",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "C-HEX:AC-001@src/App.test.jsx:110",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "C-HEX:REQ-002 is explicitly bound to src/App.jsx at line 17.",
+      "claimSha256": "sha256:8d6a170dcea358a58e3e35facd0004760897b1f9ca0dfa825a5cc7cfcd2de92d",
+      "conflictsWith": [],
+      "derivationId": "DRV-cd54945c76eac504",
+      "evidenceIds": [
+        "EV-2d8728bece366578"
+      ],
+      "factSha256": "sha256:81ac39e437ec989420eb97fc6fa64fdb796e17fbd285a6d794d989b4e8f441fc",
+      "factType": "clause-binding",
+      "id": "FACT-a3d78d72843e8565",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "C-HEX:REQ-002@src/App.jsx:17",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "C-HEX:REQ-004 is explicitly bound to src/App.jsx at line 19.",
+      "claimSha256": "sha256:0f2683d2288996bff033956dfc189e5a4db0be2af3b68c5abad319411e6dadac",
+      "conflictsWith": [],
+      "derivationId": "DRV-cd54945c76eac504",
+      "evidenceIds": [
+        "EV-35894b2c75170d0f"
+      ],
+      "factSha256": "sha256:77f29a5c213dfe8edff79c8c9fc51c34616b9a07430f8afb86203ff99d202880",
+      "factType": "clause-binding",
+      "id": "FACT-a4973a1ae75a746c",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "C-HEX:REQ-004@src/App.jsx:19",
         "kind": "contract"
       }
     },
@@ -173,13 +290,13 @@ No registered deterministic producer supplied business-meaning for biz.rules@4 w
       "claim": "AC-005 is explicitly bound to src/build.test.js at line 14.",
       "claimSha256": "sha256:e3598e32f035e39d542257561bde487e45a7ab7a4e4b17fa28f5bab7dd438a69",
       "conflictsWith": [],
-      "derivationId": "DRV-036790e050520944",
+      "derivationId": "DRV-cd54945c76eac504",
       "evidenceIds": [
         "EV-9077d33532c74131"
       ],
-      "factSha256": "sha256:583de96dd463da4892b8eae1d168f80bf9fe694c5cb0e3c559581bc3a5ef42fa",
+      "factSha256": "sha256:e8750540ad2995b187377593318f3b3db113908994813996dd1259d38eac2722",
       "factType": "clause-binding",
-      "id": "FACT-ad52360886a391f4",
+      "id": "FACT-b5a5df7ddb5f0293",
       "scopeStatus": "inside",
       "status": "available",
       "subject": {
@@ -192,11 +309,11 @@ No registered deterministic producer supplied business-meaning for biz.rules@4 w
       "claim": null,
       "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
       "conflictsWith": [],
-      "derivationId": "DRV-b84c927957ded541",
+      "derivationId": "DRV-6e83790f2bb4aae8",
       "evidenceIds": [],
-      "factSha256": "sha256:b2475a44be94a4696020544a91cac8f635c6be1806fbd5d2a5cbbe87193a8bf1",
+      "factSha256": "sha256:a3d32724491aeed10cf5c0bf4a96863d972ca713f7c123603c0b797cb785493f",
       "factType": "rule-definition",
-      "id": "FACT-b90d7dec949e2b73",
+      "id": "FACT-c4188afeb24f65bf",
       "reason": {
         "attemptedProducer": "required-fact-coverage",
         "code": "NO_REGISTERED_PRODUCER",
@@ -211,20 +328,137 @@ No registered deterministic producer supplied business-meaning for biz.rules@4 w
     },
     {
       "assurance": "source-exact",
-      "claim": "AC-001 is explicitly bound to src/App.test.jsx at line 133.",
-      "claimSha256": "sha256:82dc2ffba25958d5dd75dd2da3ab3953f0c0d9413c6c304b23be7e9405585775",
+      "claim": "AC-005 is explicitly bound to src/utils/evaluator.test.js at line 6.",
+      "claimSha256": "sha256:3fddd3be28eb523150d0c2c2b277f58acf9280bdfc709009496d8bb6e076ecaf",
       "conflictsWith": [],
-      "derivationId": "DRV-036790e050520944",
+      "derivationId": "DRV-cd54945c76eac504",
       "evidenceIds": [
-        "EV-07b716d0e4a3757c"
+        "EV-44664ee9c0e3381a"
       ],
-      "factSha256": "sha256:adddb030c82c037db608117625054a279ac975910867bebf90cf3589eadd1be5",
+      "factSha256": "sha256:e844f67e4490323be2ba9761dbdbad0bd375951fff142fa14b81cbff93efda13",
       "factType": "clause-binding",
-      "id": "FACT-bc0f7e337273dc01",
+      "id": "FACT-c42f60dbfee2e2a3",
       "scopeStatus": "inside",
       "status": "available",
       "subject": {
-        "id": "AC-001@src/App.test.jsx:133",
+        "id": "AC-005@src/utils/evaluator.test.js:6",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "not-applicable",
+      "claim": null,
+      "claimSha256": "sha256:38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "conflictsWith": [],
+      "derivationId": "DRV-6e83790f2bb4aae8",
+      "evidenceIds": [],
+      "factSha256": "sha256:6270ef810235525d21bf3d70a3318f8c72b16e6db287fe32614e45aeacb153b2",
+      "factType": "business-meaning",
+      "id": "FACT-c7573b3297310385",
+      "reason": {
+        "attemptedProducer": "required-fact-coverage",
+        "code": "NO_REGISTERED_PRODUCER",
+        "detail": "No registered deterministic producer supplied business-meaning for biz.rules@4 within the pinned scope."
+      },
+      "scopeStatus": "inside",
+      "status": "unavailable",
+      "subject": {
+        "id": "biz.rules@4:business-meaning",
+        "kind": "analysis"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "C-HEX:AC-003 is explicitly bound to src/App.test.jsx at line 112.",
+      "claimSha256": "sha256:1e77492bee753143c20914d11017c74e4bf4c86bd3a8a7b07843ab065a4ed860",
+      "conflictsWith": [],
+      "derivationId": "DRV-cd54945c76eac504",
+      "evidenceIds": [
+        "EV-895512b9d83e65ad"
+      ],
+      "factSha256": "sha256:5447e93d7d71e69e24e8315dc924993aafa7e36645953f523c9944a7bc1eab99",
+      "factType": "clause-binding",
+      "id": "FACT-d658cfabbc8e4393",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "C-HEX:AC-003@src/App.test.jsx:112",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "C-HEX:AC-002 is explicitly bound to src/App.test.jsx at line 111.",
+      "claimSha256": "sha256:657bd69db3b2a9d40fdad4cc44f0141460c66bd159e576cd9e8673f27602c7c3",
+      "conflictsWith": [],
+      "derivationId": "DRV-cd54945c76eac504",
+      "evidenceIds": [
+        "EV-317c814663b99f02"
+      ],
+      "factSha256": "sha256:feb54fe26b4436fe75e22da21b4f29b0a07994318633d23961cabc1ac6379848",
+      "factType": "clause-binding",
+      "id": "FACT-da3ad0302ee6d88a",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "C-HEX:AC-002@src/App.test.jsx:111",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "C-HEX:AC-001 is explicitly bound to src/App.jsx at line 20.",
+      "claimSha256": "sha256:4f4aa89789c15e729fd6910f2d5ccf607aec6242f1bd23b4f9a15e90514383b1",
+      "conflictsWith": [],
+      "derivationId": "DRV-cd54945c76eac504",
+      "evidenceIds": [
+        "EV-0ede587aa51996a3"
+      ],
+      "factSha256": "sha256:01b663c6186299fb1814f5655da8a7a7f32653b13ce91ead91a7061b8a51b5d0",
+      "factType": "clause-binding",
+      "id": "FACT-dd91b4f208db297e",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "C-HEX:AC-001@src/App.jsx:20",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "C-HEX:AC-003 is explicitly bound to src/App.jsx at line 22.",
+      "claimSha256": "sha256:2fc0c25c1e23d6626fb4d216fcd494ea3ffeb5920dfff99a78d3c4f1601d2ebb",
+      "conflictsWith": [],
+      "derivationId": "DRV-cd54945c76eac504",
+      "evidenceIds": [
+        "EV-def0fdb91535b663"
+      ],
+      "factSha256": "sha256:24d19dacd4fc997adc00208c63b3668e1b2d4074e872a79a3072ee329e0d9ac7",
+      "factType": "clause-binding",
+      "id": "FACT-e460b42c160c77c7",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "C-HEX:AC-003@src/App.jsx:22",
+        "kind": "contract"
+      }
+    },
+    {
+      "assurance": "source-exact",
+      "claim": "AC-003 is explicitly bound to src/App.test.jsx at line 25.",
+      "claimSha256": "sha256:d998e4bd46904d6beeabfe882fc18b51bdf087864754ec84ff8314121e82cc56",
+      "conflictsWith": [],
+      "derivationId": "DRV-cd54945c76eac504",
+      "evidenceIds": [
+        "EV-ce8a445d2c69a8d1"
+      ],
+      "factSha256": "sha256:434ee7104a8b81888477b83eb12208a7a853547e9933fb4bb007266d8f5ec29a",
+      "factType": "clause-binding",
+      "id": "FACT-ee50d754c5736c79",
+      "scopeStatus": "inside",
+      "status": "available",
+      "subject": {
+        "id": "AC-003@src/App.test.jsx:25",
         "kind": "contract"
       }
     }
@@ -237,11 +471,11 @@ No registered deterministic producer supplied business-meaning for biz.rules@4 w
 }
 ```
 ---
-generated-at: 2026-10-08T10:34:13.035Z
-source-commit: 17e1d25dabf9efff7b894e9d5d5d82a9656ccce4
-view-sha256: sha256:669b647d08930b791077a68a3a4b01ed0df2a0fba866ef9a3041e6506312e9c3
-prompt-sha256: sha256:e08f692daba1c0a537b71bc51438ae420854ab246979ceae9187ea60c0938a76
-execution-unit: governed-model-composer@1:ewogICJwcm92aWRlciI6ICJjb3BpbG90LWNsaSIsCiAgInJlcXVlc3RlZE1vZGVsIjogInByb3ZpZGVyLWF1dG8iCn0K:c95a4e3c-926d-4e8a-a5b6-34738c815ae6
+generated-at: 2026-10-09T06:45:09.602Z
+source-commit: 387a9b447f8a11a7843858ed039fb7bf64c209c5
+view-sha256: sha256:c788418b9987e3436e1d1a9cfa515d240973c8d409e11924d1ab7d8307547552
+prompt-sha256: sha256:07f563b4a0bf7860e910a12f747fc466ecb60a8a29c3d97ca12424882a73268f
+execution-unit: governed-model-composer@1:ewogICJwcm92aWRlciI6ICJjb3BpbG90LWNsaSIsCiAgInJlcXVlc3RlZE1vZGVsIjogInByb3ZpZGVyLWF1dG8iCn0K:771884d0-cc5a-4d72-b57e-e73c083b4937
 model: auto
 assurance: validated-derived-view
 ---
