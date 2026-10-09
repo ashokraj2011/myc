@@ -19,10 +19,11 @@
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
 | 5 | Verification (`verification`) | qa | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
-| 6 | Release (`release`) | qa | **in_progress** | 1 | 0 | unavailable |
+| 6 | Release (`release`) | qa | **awaiting_approval** | 1 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-10-09T00:32:44.476Z — **phase_submitted** (release) by ashokraj2011 · governed agent qa: 2 artifacts
 - 2026-10-08T23:58:48.744Z — **phase_generated** (release) by ashokraj2011 · governed agent qa: generation 1
 - 2026-10-08T23:48:38.652Z — **phase_self_approved** (verification) by ashokraj2011 · governed agent qa: threshold reached; advanced to release
 - 2026-10-08T23:48:38.652Z — **work_interval_closed** (verification) by ashokraj2011 · governed agent qa: interval INT-verification-G1-002 closed after phase approval
@@ -37,4 +38,3 @@
 - 2026-10-08T15:35:25.449Z — **work_interval_closed** (implementation) by ashokraj2011 · governed agent developer: interval INT-implementation-G1-001 closed after phase approval
 - 2026-10-08T15:24:54.410Z — **phase_submitted** (implementation) by ashokraj2011 · governed agent developer: 5 artifacts
 - 2026-10-08T15:24:54.409Z — **work_interval_reconciled** (implementation) by system: review; 4 changed path(s)
-- 2026-10-08T15:21:00.086Z — **phase_generated** (implementation) by ashokraj2011 · governed agent developer: generation 1
