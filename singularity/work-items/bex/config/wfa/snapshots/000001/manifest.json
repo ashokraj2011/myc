@@ -1,0 +1,1210 @@
+{
+  "schemaVersion": 1,
+  "kind": "workflow-snapshot",
+  "story": {
+    "repositoryId": "sha256:c47f09161cd229abc20219e502a1041b8b99f498acab05fb7e3c52df32c3b5b2",
+    "workId": "bex"
+  },
+  "revision": 1,
+  "parentSnapshotHash": null,
+  "policy": {
+    "sha256": "sha256:55fa619dcb4b40b7929e67f82105463cfb46327e966ccc5311d5c32e6b1db5c6",
+    "bytes": 132205,
+    "mediaType": "application/json; profile=singularity-flow-effective-policy-v1",
+    "path": "singularity/work-items/bex/config/wfa/blobs/sha256/55fa619dcb4b40b7929e67f82105463cfb46327e966ccc5311d5c32e6b1db5c6"
+  },
+  "assets": [
+    {
+      "logicalId": "agent:architect",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:81348d097d9dc7e526319ea242d15178c5a35e7d027b26303be39fd4e8451aa8",
+        "bytes": 1807,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/81348d097d9dc7e526319ea242d15178c5a35e7d027b26303be39fd4e8451aa8"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/architect.agent.md",
+        "sourceId": "sha256:d7c465ddda01a94b0e4fc658f591c6a1ccaf6321322c1d551ba531d699fd874e",
+        "sha256": "sha256:81348d097d9dc7e526319ea242d15178c5a35e7d027b26303be39fd4e8451aa8"
+      }
+    },
+    {
+      "logicalId": "agent:architect-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:61e27c3626ecb8bf329a126da0d3e29cfd7108a8b87e2b0871a20e2685c4b8a8",
+        "bytes": 1859,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/61e27c3626ecb8bf329a126da0d3e29cfd7108a8b87e2b0871a20e2685c4b8a8"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/architect-imported.agent.md",
+        "sourceId": "sha256:c59148a1dd851f10687c10a76263a4275b3ad0701d4d8754f3119ce3ab769f35",
+        "sha256": "sha256:61e27c3626ecb8bf329a126da0d3e29cfd7108a8b87e2b0871a20e2685c4b8a8"
+      }
+    },
+    {
+      "logicalId": "agent:demo-code-checker",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:05ac1874b8e0b6a48efde26fd1a77e0c9ce2ecab27de28761a51460fa82deb03",
+        "bytes": 1017,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/05ac1874b8e0b6a48efde26fd1a77e0c9ce2ecab27de28761a51460fa82deb03"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/demo-code-checker.agent.md",
+        "sourceId": "sha256:fc3c3d0ebf9df9c679dfba58da7418a88f3ca6586bb59a88c3c0335f93cbbfdb",
+        "sha256": "sha256:05ac1874b8e0b6a48efde26fd1a77e0c9ce2ecab27de28761a51460fa82deb03"
+      }
+    },
+    {
+      "logicalId": "agent:demo-code-checker:skill:demo-code-acceptance-check",
+      "purpose": "agent-skill",
+      "dependencies": [
+        "agent:demo-code-checker"
+      ],
+      "blob": {
+        "sha256": "sha256:57cd19310b68568853ac9339b4d4d73cece27ff2df57b2fc1110a4e26e7c8870",
+        "bytes": 2283,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/57cd19310b68568853ac9339b4d4d73cece27ff2df57b2fc1110a4e26e7c8870"
+      },
+      "source": {
+        "kind": "reviewed-agent-dependency",
+        "agentId": "demo-code-checker",
+        "dependencyId": "demo-code-acceptance-check",
+        "referenceSha256": "sha256:d7da01dc3fd73f28f44af922024aad69b00cd7e1ecd2ea6d7f83d72736e7f1fa",
+        "sha256": "sha256:57cd19310b68568853ac9339b4d4d73cece27ff2df57b2fc1110a4e26e7c8870"
+      }
+    },
+    {
+      "logicalId": "agent:demo-code-repairer",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:c79919043b5c93cd43cdd6b297949d948796e8e56c7548d89ebb457472c02bff",
+        "bytes": 951,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/c79919043b5c93cd43cdd6b297949d948796e8e56c7548d89ebb457472c02bff"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/demo-code-repairer.agent.md",
+        "sourceId": "sha256:e5dab797b63183e2b38f4bab9e8deb7001013044b386e15377177c8896ec40d1",
+        "sha256": "sha256:c79919043b5c93cd43cdd6b297949d948796e8e56c7548d89ebb457472c02bff"
+      }
+    },
+    {
+      "logicalId": "agent:demo-code-repairer:skill:demo-scoped-code-repair",
+      "purpose": "agent-skill",
+      "dependencies": [
+        "agent:demo-code-repairer"
+      ],
+      "blob": {
+        "sha256": "sha256:8b5dad40926ef0f95a9d1c9295b2cdcbe9a43f1182636b1d82ff3fa69c2c9871",
+        "bytes": 1905,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/8b5dad40926ef0f95a9d1c9295b2cdcbe9a43f1182636b1d82ff3fa69c2c9871"
+      },
+      "source": {
+        "kind": "reviewed-agent-dependency",
+        "agentId": "demo-code-repairer",
+        "dependencyId": "demo-scoped-code-repair",
+        "referenceSha256": "sha256:c93c184aaa2a8303c6b31051e9bb28c59475fcc933319738cd72e3292b2bfcea",
+        "sha256": "sha256:8b5dad40926ef0f95a9d1c9295b2cdcbe9a43f1182636b1d82ff3fa69c2c9871"
+      }
+    },
+    {
+      "logicalId": "agent:demo-intake-analyst",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:f2fb5a528c8cc3966901868436afd640489e82fc4c5703787e1d010ef9c2b36e",
+        "bytes": 916,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/f2fb5a528c8cc3966901868436afd640489e82fc4c5703787e1d010ef9c2b36e"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/demo-intake-analyst.agent.md",
+        "sourceId": "sha256:046c3aa64a5a47bfc1b7b78e04c5b26836c09d9ca85a718d5b6628f7e8036caf",
+        "sha256": "sha256:f2fb5a528c8cc3966901868436afd640489e82fc4c5703787e1d010ef9c2b36e"
+      }
+    },
+    {
+      "logicalId": "agent:demo-intake-analyst:skill:demo-acceptance-intake",
+      "purpose": "agent-skill",
+      "dependencies": [
+        "agent:demo-intake-analyst"
+      ],
+      "blob": {
+        "sha256": "sha256:0ca1d2e0fec9b529070e7ec7128e632e2efc9c6e8089b05443ea928190304896",
+        "bytes": 1773,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/0ca1d2e0fec9b529070e7ec7128e632e2efc9c6e8089b05443ea928190304896"
+      },
+      "source": {
+        "kind": "reviewed-agent-dependency",
+        "agentId": "demo-intake-analyst",
+        "dependencyId": "demo-acceptance-intake",
+        "referenceSha256": "sha256:491e0f1144a46dd06960a9474ef464d592fd5f571684b676b9d307748afd46a8",
+        "sha256": "sha256:0ca1d2e0fec9b529070e7ec7128e632e2efc9c6e8089b05443ea928190304896"
+      }
+    },
+    {
+      "logicalId": "agent:demo-story-closer",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:098d10ddb1af9624cdd93f9fe53909e1fef79d666cd197a2b330c6076f12a5b0",
+        "bytes": 918,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/098d10ddb1af9624cdd93f9fe53909e1fef79d666cd197a2b330c6076f12a5b0"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/demo-story-closer.agent.md",
+        "sourceId": "sha256:e7146bcdbb73f145afeddd08f6d3909d6e060fb344ac78a95d489c9611815f27",
+        "sha256": "sha256:098d10ddb1af9624cdd93f9fe53909e1fef79d666cd197a2b330c6076f12a5b0"
+      }
+    },
+    {
+      "logicalId": "agent:demo-story-closer:skill:demo-evidence-bound-close",
+      "purpose": "agent-skill",
+      "dependencies": [
+        "agent:demo-story-closer"
+      ],
+      "blob": {
+        "sha256": "sha256:e18a418b84f1371fa7b86dbf30e9a9015d1ab348bddbb034ff12004f771f7926",
+        "bytes": 1685,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/e18a418b84f1371fa7b86dbf30e9a9015d1ab348bddbb034ff12004f771f7926"
+      },
+      "source": {
+        "kind": "reviewed-agent-dependency",
+        "agentId": "demo-story-closer",
+        "dependencyId": "demo-evidence-bound-close",
+        "referenceSha256": "sha256:71624160e5a5bf01aff6711ef8b8eb1e328895f93e941285f7a5caad8f8871b3",
+        "sha256": "sha256:e18a418b84f1371fa7b86dbf30e9a9015d1ab348bddbb034ff12004f771f7926"
+      }
+    },
+    {
+      "logicalId": "agent:demo-web-analyst",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:a06f1b514eec22d8e75b2d8b609348f3d43b118f00e456de5b1c3e25ca72e2b1",
+        "bytes": 1472,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/a06f1b514eec22d8e75b2d8b609348f3d43b118f00e456de5b1c3e25ca72e2b1"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/demo-web-analyst.agent.md",
+        "sourceId": "sha256:c6614db2e3085f1b7bfe7fc336ec0014b41da78abeaffa4baef0ccc9f92eef37",
+        "sha256": "sha256:a06f1b514eec22d8e75b2d8b609348f3d43b118f00e456de5b1c3e25ca72e2b1"
+      }
+    },
+    {
+      "logicalId": "agent:demo-web-analyst-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:8c15b8d9f6e3765af62fd52ff93c64d1e9eb00db90f77dd48c97ddcb2df31415",
+        "bytes": 1749,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/8c15b8d9f6e3765af62fd52ff93c64d1e9eb00db90f77dd48c97ddcb2df31415"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/demo-web-analyst-imported.agent.md",
+        "sourceId": "sha256:be35cb4d7b0338d09ae6f92ba947d65aca32056ee95b25a3d4ac39295bbaf7d8",
+        "sha256": "sha256:8c15b8d9f6e3765af62fd52ff93c64d1e9eb00db90f77dd48c97ddcb2df31415"
+      }
+    },
+    {
+      "logicalId": "agent:demo-web-analyst-imported:skill:demo-web-screenshot-intake-imported",
+      "purpose": "agent-skill",
+      "dependencies": [
+        "agent:demo-web-analyst-imported"
+      ],
+      "blob": {
+        "sha256": "sha256:ede0120088f9e93940e8e1b4bdf66495d069a345015b9ac803b0111c864688b3",
+        "bytes": 2017,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/ede0120088f9e93940e8e1b4bdf66495d069a345015b9ac803b0111c864688b3"
+      },
+      "source": {
+        "kind": "reviewed-agent-dependency",
+        "agentId": "demo-web-analyst-imported",
+        "dependencyId": "demo-web-screenshot-intake-imported",
+        "referenceSha256": "sha256:4d3eaf6403d688580cb5547646839a4164c2d1a188341afe2913399702341d5f",
+        "sha256": "sha256:ede0120088f9e93940e8e1b4bdf66495d069a345015b9ac803b0111c864688b3"
+      }
+    },
+    {
+      "logicalId": "agent:demo-web-analyst:skill:demo-web-screenshot-intake",
+      "purpose": "agent-skill",
+      "dependencies": [
+        "agent:demo-web-analyst"
+      ],
+      "blob": {
+        "sha256": "sha256:225d981bbf356ccbe63033940b4c81172d5985f9453330af275bdd21c4510a63",
+        "bytes": 1997,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/225d981bbf356ccbe63033940b4c81172d5985f9453330af275bdd21c4510a63"
+      },
+      "source": {
+        "kind": "reviewed-agent-dependency",
+        "agentId": "demo-web-analyst",
+        "dependencyId": "demo-web-screenshot-intake",
+        "referenceSha256": "sha256:3b0781ee41b1cbf1c0fe45358d4b5b742ef58638b2a35269f1f95ed9b0226b89",
+        "sha256": "sha256:225d981bbf356ccbe63033940b4c81172d5985f9453330af275bdd21c4510a63"
+      }
+    },
+    {
+      "logicalId": "agent:demo-web-developer",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:30572f81d47c0c9274872153f93d9313884713c6b25411967468307da703cdfa",
+        "bytes": 1462,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/30572f81d47c0c9274872153f93d9313884713c6b25411967468307da703cdfa"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/demo-web-developer.agent.md",
+        "sourceId": "sha256:d4a354f55056d1590d2f5a72f53bdc2e621696ca891b783192c242ff26a622f5",
+        "sha256": "sha256:30572f81d47c0c9274872153f93d9313884713c6b25411967468307da703cdfa"
+      }
+    },
+    {
+      "logicalId": "agent:demo-web-developer-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:3f7b24dbcef5ad9238836d7849a86b063b2c7a7dd4dfea9c72f6795681166650",
+        "bytes": 1730,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/3f7b24dbcef5ad9238836d7849a86b063b2c7a7dd4dfea9c72f6795681166650"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/demo-web-developer-imported.agent.md",
+        "sourceId": "sha256:0ac00c5cba776499489fd531d4b9e929ebdafe8e87f42560808a23542d198a3b",
+        "sha256": "sha256:3f7b24dbcef5ad9238836d7849a86b063b2c7a7dd4dfea9c72f6795681166650"
+      }
+    },
+    {
+      "logicalId": "agent:demo-web-developer-imported:skill:demo-web-defect-repair-imported",
+      "purpose": "agent-skill",
+      "dependencies": [
+        "agent:demo-web-developer-imported"
+      ],
+      "blob": {
+        "sha256": "sha256:29b07b900e8c18313757d53939c67c0b72ccb7e96df53d7cc7ecb5c35f79fd6a",
+        "bytes": 1688,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/29b07b900e8c18313757d53939c67c0b72ccb7e96df53d7cc7ecb5c35f79fd6a"
+      },
+      "source": {
+        "kind": "reviewed-agent-dependency",
+        "agentId": "demo-web-developer-imported",
+        "dependencyId": "demo-web-defect-repair-imported",
+        "referenceSha256": "sha256:8dae4e24ed3a9fc31ee7afe52f7f63ce93c84c4f6c7058160e6a1421b1441773",
+        "sha256": "sha256:29b07b900e8c18313757d53939c67c0b72ccb7e96df53d7cc7ecb5c35f79fd6a"
+      }
+    },
+    {
+      "logicalId": "agent:demo-web-developer:skill:demo-web-defect-repair",
+      "purpose": "agent-skill",
+      "dependencies": [
+        "agent:demo-web-developer"
+      ],
+      "blob": {
+        "sha256": "sha256:c968f300ac02c798ec54a9b7c83744534b529372fdb60539f164effd251416fb",
+        "bytes": 1668,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/c968f300ac02c798ec54a9b7c83744534b529372fdb60539f164effd251416fb"
+      },
+      "source": {
+        "kind": "reviewed-agent-dependency",
+        "agentId": "demo-web-developer",
+        "dependencyId": "demo-web-defect-repair",
+        "referenceSha256": "sha256:f5ca7d9147eacb2f3dac05b92248d5b978fcd3d9a5595b0557d7dbdf3fa02bb7",
+        "sha256": "sha256:c968f300ac02c798ec54a9b7c83744534b529372fdb60539f164effd251416fb"
+      }
+    },
+    {
+      "logicalId": "agent:demo-web-tester",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:effdbb363713e11ebcf06df83c7258dada6ef5b28e7ba012dd3e2f9e74611af3",
+        "bytes": 1526,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/effdbb363713e11ebcf06df83c7258dada6ef5b28e7ba012dd3e2f9e74611af3"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/demo-web-tester.agent.md",
+        "sourceId": "sha256:90f4ea45f691d090e6043e15ac2f372ba9fedb7ec5238f7c7bafba63cbfabfee",
+        "sha256": "sha256:effdbb363713e11ebcf06df83c7258dada6ef5b28e7ba012dd3e2f9e74611af3"
+      }
+    },
+    {
+      "logicalId": "agent:demo-web-tester-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:a5ed14987c27edd777579cf150e3cb731008ad212f18513de887aac9125c85f0",
+        "bytes": 1863,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/a5ed14987c27edd777579cf150e3cb731008ad212f18513de887aac9125c85f0"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/demo-web-tester-imported.agent.md",
+        "sourceId": "sha256:b294930b2d7263ece83d734173c60aa1da6b91896c61cbced1bbd98ac16ba3e1",
+        "sha256": "sha256:a5ed14987c27edd777579cf150e3cb731008ad212f18513de887aac9125c85f0"
+      }
+    },
+    {
+      "logicalId": "agent:demo-web-tester-imported:skill:demo-web-screenshot-check-imported",
+      "purpose": "agent-skill",
+      "dependencies": [
+        "agent:demo-web-tester-imported"
+      ],
+      "blob": {
+        "sha256": "sha256:e3056b4fab31942332bd2d8040931229035154e4c838f691a89d1b5966daa6ea",
+        "bytes": 2184,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/e3056b4fab31942332bd2d8040931229035154e4c838f691a89d1b5966daa6ea"
+      },
+      "source": {
+        "kind": "reviewed-agent-dependency",
+        "agentId": "demo-web-tester-imported",
+        "dependencyId": "demo-web-screenshot-check-imported",
+        "referenceSha256": "sha256:c8f6f8b6cae417b244635e0d0a314bc5037be7dd91dee2a7837218c87312e3ae",
+        "sha256": "sha256:e3056b4fab31942332bd2d8040931229035154e4c838f691a89d1b5966daa6ea"
+      }
+    },
+    {
+      "logicalId": "agent:demo-web-tester:skill:demo-web-screenshot-check",
+      "purpose": "agent-skill",
+      "dependencies": [
+        "agent:demo-web-tester"
+      ],
+      "blob": {
+        "sha256": "sha256:77a7ca8a6afb9a73cbbfda626ce72cec6d07d6b82287b3deaf61159785b0ee5f",
+        "bytes": 2164,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/77a7ca8a6afb9a73cbbfda626ce72cec6d07d6b82287b3deaf61159785b0ee5f"
+      },
+      "source": {
+        "kind": "reviewed-agent-dependency",
+        "agentId": "demo-web-tester",
+        "dependencyId": "demo-web-screenshot-check",
+        "referenceSha256": "sha256:ba3096c7cb6eb44a86125e68b4357125e548336c4725703c84d0565bfc4c4fad",
+        "sha256": "sha256:77a7ca8a6afb9a73cbbfda626ce72cec6d07d6b82287b3deaf61159785b0ee5f"
+      }
+    },
+    {
+      "logicalId": "agent:developer",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:5e98b958632baa68321694536f5a6ddc80cef2b11e1bb422796cfbea6d7786c7",
+        "bytes": 2462,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/5e98b958632baa68321694536f5a6ddc80cef2b11e1bb422796cfbea6d7786c7"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/developer.agent.md",
+        "sourceId": "sha256:8dbfd3ed72fd91d55a5dea07d3c483ce41ed55a5e7159f65dec7fc4026b481d8",
+        "sha256": "sha256:5e98b958632baa68321694536f5a6ddc80cef2b11e1bb422796cfbea6d7786c7"
+      }
+    },
+    {
+      "logicalId": "agent:developer-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:6c19a75ac8b7c2873b46e9731e70cb696bfd30c62cfbf30ee8c578313e360a5c",
+        "bytes": 2515,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/6c19a75ac8b7c2873b46e9731e70cb696bfd30c62cfbf30ee8c578313e360a5c"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/developer-imported.agent.md",
+        "sourceId": "sha256:0f32146c65b18cbdf3a4c3087fa4ab0ca78ef73a594847af4896126569dffee6",
+        "sha256": "sha256:6c19a75ac8b7c2873b46e9731e70cb696bfd30c62cfbf30ee8c578313e360a5c"
+      }
+    },
+    {
+      "logicalId": "agent:document-analyst",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:03c307bb9396ec71ea8af1a347c45cae82c2e5cb04197588c24ce48ea6559d37",
+        "bytes": 2185,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/03c307bb9396ec71ea8af1a347c45cae82c2e5cb04197588c24ce48ea6559d37"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/document-analyst.agent.md",
+        "sourceId": "sha256:f5c796af733680c960e1089ac62133f75ad4fe4799ff0ff879b2fb8bd8a2cf22",
+        "sha256": "sha256:03c307bb9396ec71ea8af1a347c45cae82c2e5cb04197588c24ce48ea6559d37"
+      }
+    },
+    {
+      "logicalId": "agent:document-analyst-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:8153eef4af060d1221ad00a16f28561e411045eb537ff3bf0fba8e12b2bc1c41",
+        "bytes": 2256,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/8153eef4af060d1221ad00a16f28561e411045eb537ff3bf0fba8e12b2bc1c41"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/document-analyst-imported.agent.md",
+        "sourceId": "sha256:8a7d66306b2b0ac901f2bb8de133a03078f556515cc35f55c549ff0a467511a8",
+        "sha256": "sha256:8153eef4af060d1221ad00a16f28561e411045eb537ff3bf0fba8e12b2bc1c41"
+      }
+    },
+    {
+      "logicalId": "agent:mobile-architect",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:393e8b3fe7bb07dcfd34f4e7f10be0f124414700414be01b038016087d785958",
+        "bytes": 2011,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/393e8b3fe7bb07dcfd34f4e7f10be0f124414700414be01b038016087d785958"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/mobile-architect.agent.md",
+        "sourceId": "sha256:1dd6c9f6093f0f63d3628f620c49ceb28fa97d6830b7a8272896e5fd2d0427ce",
+        "sha256": "sha256:393e8b3fe7bb07dcfd34f4e7f10be0f124414700414be01b038016087d785958"
+      }
+    },
+    {
+      "logicalId": "agent:mobile-architect-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:33239582e61a1e4ec97190e14d6999a0767f4580dff291deda169845f3ab3a5d",
+        "bytes": 2114,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/33239582e61a1e4ec97190e14d6999a0767f4580dff291deda169845f3ab3a5d"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/mobile-architect-imported.agent.md",
+        "sourceId": "sha256:c865a81817bcfc7c053dcc9c8da38112993fd3ab40e36c59cce1a489f5a91927",
+        "sha256": "sha256:33239582e61a1e4ec97190e14d6999a0767f4580dff291deda169845f3ab3a5d"
+      }
+    },
+    {
+      "logicalId": "agent:poc-analyst",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:f80f745a90ea2bf7ef2a5aa9ded7438ba7ba10cd74e5364fb818ec29d80bccf4",
+        "bytes": 1886,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/f80f745a90ea2bf7ef2a5aa9ded7438ba7ba10cd74e5364fb818ec29d80bccf4"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/poc-analyst.agent.md",
+        "sourceId": "sha256:026c4faf7490729173813708bcc565dd960295922ef8c494c55bdc8d4cdc404a",
+        "sha256": "sha256:f80f745a90ea2bf7ef2a5aa9ded7438ba7ba10cd74e5364fb818ec29d80bccf4"
+      }
+    },
+    {
+      "logicalId": "agent:poc-automation",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:5608247f349c259850f55ac38072875508e9550ad2ebe706fedfd94e8bfe2e80",
+        "bytes": 4135,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/5608247f349c259850f55ac38072875508e9550ad2ebe706fedfd94e8bfe2e80"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/poc-automation.agent.md",
+        "sourceId": "sha256:ed2bb76038f4e03ec0e4e6143dee342ffc4f36bf0d04cd46e038bb630fdeea7c",
+        "sha256": "sha256:5608247f349c259850f55ac38072875508e9550ad2ebe706fedfd94e8bfe2e80"
+      }
+    },
+    {
+      "logicalId": "agent:poc-automation-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:73eccae2a41edab90413888f293114ca5ec53706767822a74dff67dbfa4786a0",
+        "bytes": 4222,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/73eccae2a41edab90413888f293114ca5ec53706767822a74dff67dbfa4786a0"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/poc-automation-imported.agent.md",
+        "sourceId": "sha256:ac33c99a82dde07aed140085c090132a1f8a50f7598a86701eeb5dd4857e3427",
+        "sha256": "sha256:73eccae2a41edab90413888f293114ca5ec53706767822a74dff67dbfa4786a0"
+      }
+    },
+    {
+      "logicalId": "agent:poc-explorer",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:6c6e9515d390d6f4aa715a4921a6ae2748752fa038d2cdf9391b5e712602d45a",
+        "bytes": 1886,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/6c6e9515d390d6f4aa715a4921a6ae2748752fa038d2cdf9391b5e712602d45a"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/poc-explorer.agent.md",
+        "sourceId": "sha256:7275674580dab49992a3335bbf836717e71f41683d307b4488239274190fdbf9",
+        "sha256": "sha256:6c6e9515d390d6f4aa715a4921a6ae2748752fa038d2cdf9391b5e712602d45a"
+      }
+    },
+    {
+      "logicalId": "agent:poc-explorer-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:eda3ea3f2bbaa63eff49e138a454df501c18f9d1d5a35d67a83e3cd5a0fb94ab",
+        "bytes": 1956,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/eda3ea3f2bbaa63eff49e138a454df501c18f9d1d5a35d67a83e3cd5a0fb94ab"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/poc-explorer-imported.agent.md",
+        "sourceId": "sha256:b87cabd08176cc6832dda92433e6abbee56f5e39b35e8abd70f7213fbabe8909",
+        "sha256": "sha256:eda3ea3f2bbaa63eff49e138a454df501c18f9d1d5a35d67a83e3cd5a0fb94ab"
+      }
+    },
+    {
+      "logicalId": "agent:poc-lite-implementer",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:9d907a1f75e54b75a0a581843aa1195c6635e72a351e54e3de0763daeeec0c29",
+        "bytes": 1272,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/9d907a1f75e54b75a0a581843aa1195c6635e72a351e54e3de0763daeeec0c29"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/poc-lite-implementer.agent.md",
+        "sourceId": "sha256:3a17a5f251ae891b0254fb3d1c91b9263ba18e3996bd0159eba29537a0906f11",
+        "sha256": "sha256:9d907a1f75e54b75a0a581843aa1195c6635e72a351e54e3de0763daeeec0c29"
+      }
+    },
+    {
+      "logicalId": "agent:poc-lite-planner",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:74b564d5ca0063954fedf554d9c2350a9eebf78deef212ed2c6907283f35fdae",
+        "bytes": 1255,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/74b564d5ca0063954fedf554d9c2350a9eebf78deef212ed2c6907283f35fdae"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/poc-lite-planner.agent.md",
+        "sourceId": "sha256:eb42500ae566faf9156bc327ba765f2a46e8bb071c167f0bae3d2f7c15b47523",
+        "sha256": "sha256:74b564d5ca0063954fedf554d9c2350a9eebf78deef212ed2c6907283f35fdae"
+      }
+    },
+    {
+      "logicalId": "agent:poc-lite-verifier",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:14fe9eb15692eac47922cbc61de3686aec2eedf447544ae6ab6901c70995d33e",
+        "bytes": 1306,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/14fe9eb15692eac47922cbc61de3686aec2eedf447544ae6ab6901c70995d33e"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/poc-lite-verifier.agent.md",
+        "sourceId": "sha256:baa0f8924052781b97c0d4bfea323a068cc73ce9fd1dd0b9785466e27a92dad9",
+        "sha256": "sha256:14fe9eb15692eac47922cbc61de3686aec2eedf447544ae6ab6901c70995d33e"
+      }
+    },
+    {
+      "logicalId": "agent:poc-test-developer",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:31c1c375019c83474dec8e0108310d58a52f5cab92c287d59b36f7d6bcc84cd7",
+        "bytes": 1404,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/31c1c375019c83474dec8e0108310d58a52f5cab92c287d59b36f7d6bcc84cd7"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/poc-test-developer.agent.md",
+        "sourceId": "sha256:ce9fe0546eb715a1bbabb91c4f9490230d1b194285752639f1edc546770f1c7f",
+        "sha256": "sha256:31c1c375019c83474dec8e0108310d58a52f5cab92c287d59b36f7d6bcc84cd7"
+      }
+    },
+    {
+      "logicalId": "agent:poc-validator",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:33d0cc77990f6320aa03305c0bd8051be7f2b696170132d4161c0aef4ba98894",
+        "bytes": 1999,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/33d0cc77990f6320aa03305c0bd8051be7f2b696170132d4161c0aef4ba98894"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/poc-validator.agent.md",
+        "sourceId": "sha256:387eda5cc28096acb3d57bed058cad5944c53c5d92b2afcdbbdab91aad9fd088",
+        "sha256": "sha256:33d0cc77990f6320aa03305c0bd8051be7f2b696170132d4161c0aef4ba98894"
+      }
+    },
+    {
+      "logicalId": "agent:poc-validator-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:5d0784b2055784f9de46dbfc18ed09a05e87e233a21f6e681211bdf1042041d1",
+        "bytes": 2043,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/5d0784b2055784f9de46dbfc18ed09a05e87e233a21f6e681211bdf1042041d1"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/poc-validator-imported.agent.md",
+        "sourceId": "sha256:304c2215c2a0bb26358f27025eee572334f03a47ea7d75c012c0c8a8dcc0a185",
+        "sha256": "sha256:5d0784b2055784f9de46dbfc18ed09a05e87e233a21f6e681211bdf1042041d1"
+      }
+    },
+    {
+      "logicalId": "agent:product-designer",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:37df7604d2727eeea1cc23d5dee7200fd9a4a4bb16c10f4f9d0e4746a0cd13c5",
+        "bytes": 1816,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/37df7604d2727eeea1cc23d5dee7200fd9a4a4bb16c10f4f9d0e4746a0cd13c5"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/product-designer.agent.md",
+        "sourceId": "sha256:2baa7dacf772f650186a852ee0fe768f026cda6a547674debf419f3b43eb7dd9",
+        "sha256": "sha256:37df7604d2727eeea1cc23d5dee7200fd9a4a4bb16c10f4f9d0e4746a0cd13c5"
+      }
+    },
+    {
+      "logicalId": "agent:product-designer-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:cf0a2829a90b7c72f5536f106f4e81f371c31c491d13ae13cc5dc0918bd8c867",
+        "bytes": 1920,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/cf0a2829a90b7c72f5536f106f4e81f371c31c491d13ae13cc5dc0918bd8c867"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/product-designer-imported.agent.md",
+        "sourceId": "sha256:5ce3b3d6e4a8e21c43b5c1a353d1465dadf1c41c3f5c379dc20c059a02251fdc",
+        "sha256": "sha256:cf0a2829a90b7c72f5536f106f4e81f371c31c491d13ae13cc5dc0918bd8c867"
+      }
+    },
+    {
+      "logicalId": "agent:product-owner",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:2fd9bdef16bbf508d58125ba519e1ca46f35cb593480cb544c3e91e6dc63ad8a",
+        "bytes": 1714,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/2fd9bdef16bbf508d58125ba519e1ca46f35cb593480cb544c3e91e6dc63ad8a"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/product-owner.agent.md",
+        "sourceId": "sha256:a52b2949aab5deeceea3c1a6a0f64bf546e602a079c1a6b47113574f8c273a80",
+        "sha256": "sha256:2fd9bdef16bbf508d58125ba519e1ca46f35cb593480cb544c3e91e6dc63ad8a"
+      }
+    },
+    {
+      "logicalId": "agent:product-owner-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:02a41e92a86ea7c62e8e6329c16c8594a4428b0f28130945095cd6be727de112",
+        "bytes": 1790,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/02a41e92a86ea7c62e8e6329c16c8594a4428b0f28130945095cd6be727de112"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/product-owner-imported.agent.md",
+        "sourceId": "sha256:d1665b59c5fe73f73505f7387e1f4f5ffaa57b17c15fd384ed7053b833715441",
+        "sha256": "sha256:02a41e92a86ea7c62e8e6329c16c8594a4428b0f28130945095cd6be727de112"
+      }
+    },
+    {
+      "logicalId": "agent:qa",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:6d73fddfc57e603970eba377123dfa43e2fbd4b444c006df9f13115496976959",
+        "bytes": 1834,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/6d73fddfc57e603970eba377123dfa43e2fbd4b444c006df9f13115496976959"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/qa.agent.md",
+        "sourceId": "sha256:972dec98c9cc3c02aa852deece5fca54c673ddf30df8095e32d6550eec5a71e0",
+        "sha256": "sha256:6d73fddfc57e603970eba377123dfa43e2fbd4b444c006df9f13115496976959"
+      }
+    },
+    {
+      "logicalId": "agent:qa-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:26f4527abc9ef9e46208fbdfa38b273a6a3388e4e7381539aef3d46ce579ddcc",
+        "bytes": 1954,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/26f4527abc9ef9e46208fbdfa38b273a6a3388e4e7381539aef3d46ce579ddcc"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/qa-imported.agent.md",
+        "sourceId": "sha256:5a68c2a9b4eb795a1aa8ef0a0e78536db145e22857530218d87881e829262ca2",
+        "sha256": "sha256:26f4527abc9ef9e46208fbdfa38b273a6a3388e4e7381539aef3d46ce579ddcc"
+      }
+    },
+    {
+      "logicalId": "agent:scenario-developer",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:9fc0f10ebd86aa0f3efb30414b5523fa8afc5732ffaa3402a1387bac671b4c26",
+        "bytes": 2089,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/9fc0f10ebd86aa0f3efb30414b5523fa8afc5732ffaa3402a1387bac671b4c26"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/scenario-developer.agent.md",
+        "sourceId": "sha256:b8d7afb75b86f6160e9453473c9c028baeace30c10afc60ae46a0721989e7bc3",
+        "sha256": "sha256:9fc0f10ebd86aa0f3efb30414b5523fa8afc5732ffaa3402a1387bac671b4c26"
+      }
+    },
+    {
+      "logicalId": "agent:scenario-developer-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:72febb0ae12e1cc921a18d2c963a05769ca0cb9ea1564ff314c3ed79fa714a6a",
+        "bytes": 2162,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/72febb0ae12e1cc921a18d2c963a05769ca0cb9ea1564ff314c3ed79fa714a6a"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/scenario-developer-imported.agent.md",
+        "sourceId": "sha256:1ad371ba68684e70306fecb972bcc1a68422f3fe9251071b17c759dc7f1adb3b",
+        "sha256": "sha256:72febb0ae12e1cc921a18d2c963a05769ca0cb9ea1564ff314c3ed79fa714a6a"
+      }
+    },
+    {
+      "logicalId": "agent:scenario-tester",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:3f9ea64bd093f5fd63c7d7c5837313deff922feae22c5a5b5e76bed6a131d3be",
+        "bytes": 2505,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/3f9ea64bd093f5fd63c7d7c5837313deff922feae22c5a5b5e76bed6a131d3be"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/scenario-tester.agent.md",
+        "sourceId": "sha256:554d09738e61c15892f4fe9c329da1aeda6f80957429a1098113376732583529",
+        "sha256": "sha256:3f9ea64bd093f5fd63c7d7c5837313deff922feae22c5a5b5e76bed6a131d3be"
+      }
+    },
+    {
+      "logicalId": "agent:scenario-tester-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:a18dbc974ee3d07b87dbd16a352fe5c12f968ffe1c8f642ee2794edf7d394c0c",
+        "bytes": 2608,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/a18dbc974ee3d07b87dbd16a352fe5c12f968ffe1c8f642ee2794edf7d394c0c"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/scenario-tester-imported.agent.md",
+        "sourceId": "sha256:a5d4e78448db6e6c8cddffc04cf27ee5a6c894c6aa664a54b36c6de6d10a3ee1",
+        "sha256": "sha256:a18dbc974ee3d07b87dbd16a352fe5c12f968ffe1c8f642ee2794edf7d394c0c"
+      }
+    },
+    {
+      "logicalId": "agent:sflow-source-reviewer",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:f68d7e7116343a9048a141c83754abdf3ba2f6fa233d9c89997182701e6f17c4",
+        "bytes": 5869,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/f68d7e7116343a9048a141c83754abdf3ba2f6fa233d9c89997182701e6f17c4"
+      },
+      "source": {
+        "kind": "installed-reviewed-agent",
+        "scope": "plugin",
+        "source": null,
+        "sourceId": "sha256:521546a67d001ab0ca709177f13e90a9c48d35e09e782dcff04ef8c54af919e1",
+        "sha256": "sha256:f68d7e7116343a9048a141c83754abdf3ba2f6fa233d9c89997182701e6f17c4"
+      }
+    },
+    {
+      "logicalId": "agent:sflow-utility",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:cdf616b8293632adc8d20f1782134aed8fc38c6a43a448de042d4cbafd83bb99",
+        "bytes": 2516,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/cdf616b8293632adc8d20f1782134aed8fc38c6a43a448de042d4cbafd83bb99"
+      },
+      "source": {
+        "kind": "installed-reviewed-agent",
+        "scope": "plugin",
+        "source": null,
+        "sourceId": "sha256:ab2c3f8942c1234b8453ca94db62a129f41cf407b20a13b10156b61c9a08df19",
+        "sha256": "sha256:cdf616b8293632adc8d20f1782134aed8fc38c6a43a448de042d4cbafd83bb99"
+      }
+    },
+    {
+      "logicalId": "agent:sflow-workflow",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:931d10a7fce57c2e08b958b18c8804dec0638063007a646cd691ad5bf01c1f51",
+        "bytes": 4280,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/931d10a7fce57c2e08b958b18c8804dec0638063007a646cd691ad5bf01c1f51"
+      },
+      "source": {
+        "kind": "installed-reviewed-agent",
+        "scope": "plugin",
+        "source": null,
+        "sourceId": "sha256:864f0ca3578bdbea3ba9798fba26d169dbfc389883dd7259a9a623c3c1bef790",
+        "sha256": "sha256:931d10a7fce57c2e08b958b18c8804dec0638063007a646cd691ad5bf01c1f51"
+      }
+    },
+    {
+      "logicalId": "prompt:planning",
+      "purpose": "planning-prompt",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:4128acc6930949e4ba1e50e8b8c7c4f7beb23f4361c2e8428475b081712b77db",
+        "bytes": 3271,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/4128acc6930949e4ba1e50e8b8c7c4f7beb23f4361c2e8428475b081712b77db"
+      },
+      "source": {
+        "kind": "repository-path",
+        "path": "singularity/prompts/copilot-planning.md",
+        "sha256": "sha256:4128acc6930949e4ba1e50e8b8c7c4f7beb23f4361c2e8428475b081712b77db"
+      }
+    },
+    {
+      "logicalId": "template:conformance",
+      "purpose": "phase-template",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:b22de4f73720b8bf645faef0e2484031838d511fe4ea06810c6bf9b16c8bae1a",
+        "bytes": 1769,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/b22de4f73720b8bf645faef0e2484031838d511fe4ea06810c6bf9b16c8bae1a"
+      },
+      "source": {
+        "kind": "repository-path",
+        "path": "singularity/templates/spec-code-test-loop/conformance.md",
+        "sha256": "sha256:b22de4f73720b8bf645faef0e2484031838d511fe4ea06810c6bf9b16c8bae1a"
+      }
+    },
+    {
+      "logicalId": "template:implementation",
+      "purpose": "phase-template",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:cf46a21cdcb12035defbb5b6a74c7acd6c6d1e751556964f416f27bb5acb5482",
+        "bytes": 1013,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/cf46a21cdcb12035defbb5b6a74c7acd6c6d1e751556964f416f27bb5acb5482"
+      },
+      "source": {
+        "kind": "repository-path",
+        "path": "singularity/templates/common/implementation.md",
+        "sha256": "sha256:cf46a21cdcb12035defbb5b6a74c7acd6c6d1e751556964f416f27bb5acb5482"
+      }
+    },
+    {
+      "logicalId": "template:specification",
+      "purpose": "phase-template",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:cc407b7192e181456f1ba6e8af2ddfb81ae4329efa2dc829d2aa060cd4e66c1d",
+        "bytes": 2911,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/cc407b7192e181456f1ba6e8af2ddfb81ae4329efa2dc829d2aa060cd4e66c1d"
+      },
+      "source": {
+        "kind": "repository-path",
+        "path": "singularity/templates/spec-code-test-loop/specification.md",
+        "sha256": "sha256:cc407b7192e181456f1ba6e8af2ddfb81ae4329efa2dc829d2aa060cd4e66c1d"
+      }
+    },
+    {
+      "logicalId": "template:testing",
+      "purpose": "phase-template",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:eef65b164a45b3df7843d76ef071e9d9932304ec9861c8ed19c646db105f9284",
+        "bytes": 2668,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bex/config/wfa/blobs/sha256/eef65b164a45b3df7843d76ef071e9d9932304ec9861c8ed19c646db105f9284"
+      },
+      "source": {
+        "kind": "repository-path",
+        "path": "singularity/templates/spec-code-test-loop/testing.md",
+        "sha256": "sha256:eef65b164a45b3df7843d76ef071e9d9932304ec9861c8ed19c646db105f9284"
+      }
+    }
+  ],
+  "executionDependencies": [
+    {
+      "id": "agent:demo-code-checker:skill:demo-code-acceptance-check",
+      "agentId": "demo-code-checker",
+      "dependencyId": "demo-code-acceptance-check",
+      "kind": "skill",
+      "optional": false,
+      "availability": "remote-required",
+      "inclusion": "included",
+      "assetLogicalId": "agent:demo-code-checker:skill:demo-code-acceptance-check",
+      "referenceSha256": "sha256:d7da01dc3fd73f28f44af922024aad69b00cd7e1ecd2ea6d7f83d72736e7f1fa",
+      "contentSha256": "sha256:57cd19310b68568853ac9339b4d4d73cece27ff2df57b2fc1110a4e26e7c8870",
+      "executable": false
+    },
+    {
+      "id": "agent:demo-code-repairer:skill:demo-scoped-code-repair",
+      "agentId": "demo-code-repairer",
+      "dependencyId": "demo-scoped-code-repair",
+      "kind": "skill",
+      "optional": false,
+      "availability": "remote-required",
+      "inclusion": "included",
+      "assetLogicalId": "agent:demo-code-repairer:skill:demo-scoped-code-repair",
+      "referenceSha256": "sha256:c93c184aaa2a8303c6b31051e9bb28c59475fcc933319738cd72e3292b2bfcea",
+      "contentSha256": "sha256:8b5dad40926ef0f95a9d1c9295b2cdcbe9a43f1182636b1d82ff3fa69c2c9871",
+      "executable": false
+    },
+    {
+      "id": "agent:demo-intake-analyst:skill:demo-acceptance-intake",
+      "agentId": "demo-intake-analyst",
+      "dependencyId": "demo-acceptance-intake",
+      "kind": "skill",
+      "optional": false,
+      "availability": "remote-required",
+      "inclusion": "included",
+      "assetLogicalId": "agent:demo-intake-analyst:skill:demo-acceptance-intake",
+      "referenceSha256": "sha256:491e0f1144a46dd06960a9474ef464d592fd5f571684b676b9d307748afd46a8",
+      "contentSha256": "sha256:0ca1d2e0fec9b529070e7ec7128e632e2efc9c6e8089b05443ea928190304896",
+      "executable": false
+    },
+    {
+      "id": "agent:demo-story-closer:skill:demo-evidence-bound-close",
+      "agentId": "demo-story-closer",
+      "dependencyId": "demo-evidence-bound-close",
+      "kind": "skill",
+      "optional": false,
+      "availability": "remote-required",
+      "inclusion": "included",
+      "assetLogicalId": "agent:demo-story-closer:skill:demo-evidence-bound-close",
+      "referenceSha256": "sha256:71624160e5a5bf01aff6711ef8b8eb1e328895f93e941285f7a5caad8f8871b3",
+      "contentSha256": "sha256:e18a418b84f1371fa7b86dbf30e9a9015d1ab348bddbb034ff12004f771f7926",
+      "executable": false
+    },
+    {
+      "id": "agent:demo-web-analyst-imported:skill:demo-web-screenshot-intake-imported",
+      "agentId": "demo-web-analyst-imported",
+      "dependencyId": "demo-web-screenshot-intake-imported",
+      "kind": "skill",
+      "optional": false,
+      "availability": "remote-required",
+      "inclusion": "included",
+      "assetLogicalId": "agent:demo-web-analyst-imported:skill:demo-web-screenshot-intake-imported",
+      "referenceSha256": "sha256:4d3eaf6403d688580cb5547646839a4164c2d1a188341afe2913399702341d5f",
+      "contentSha256": "sha256:ede0120088f9e93940e8e1b4bdf66495d069a345015b9ac803b0111c864688b3",
+      "executable": false
+    },
+    {
+      "id": "agent:demo-web-analyst:skill:demo-web-screenshot-intake",
+      "agentId": "demo-web-analyst",
+      "dependencyId": "demo-web-screenshot-intake",
+      "kind": "skill",
+      "optional": false,
+      "availability": "remote-required",
+      "inclusion": "included",
+      "assetLogicalId": "agent:demo-web-analyst:skill:demo-web-screenshot-intake",
+      "referenceSha256": "sha256:3b0781ee41b1cbf1c0fe45358d4b5b742ef58638b2a35269f1f95ed9b0226b89",
+      "contentSha256": "sha256:225d981bbf356ccbe63033940b4c81172d5985f9453330af275bdd21c4510a63",
+      "executable": false
+    },
+    {
+      "id": "agent:demo-web-developer-imported:skill:demo-web-defect-repair-imported",
+      "agentId": "demo-web-developer-imported",
+      "dependencyId": "demo-web-defect-repair-imported",
+      "kind": "skill",
+      "optional": false,
+      "availability": "remote-required",
+      "inclusion": "included",
+      "assetLogicalId": "agent:demo-web-developer-imported:skill:demo-web-defect-repair-imported",
+      "referenceSha256": "sha256:8dae4e24ed3a9fc31ee7afe52f7f63ce93c84c4f6c7058160e6a1421b1441773",
+      "contentSha256": "sha256:29b07b900e8c18313757d53939c67c0b72ccb7e96df53d7cc7ecb5c35f79fd6a",
+      "executable": false
+    },
+    {
+      "id": "agent:demo-web-developer:skill:demo-web-defect-repair",
+      "agentId": "demo-web-developer",
+      "dependencyId": "demo-web-defect-repair",
+      "kind": "skill",
+      "optional": false,
+      "availability": "remote-required",
+      "inclusion": "included",
+      "assetLogicalId": "agent:demo-web-developer:skill:demo-web-defect-repair",
+      "referenceSha256": "sha256:f5ca7d9147eacb2f3dac05b92248d5b978fcd3d9a5595b0557d7dbdf3fa02bb7",
+      "contentSha256": "sha256:c968f300ac02c798ec54a9b7c83744534b529372fdb60539f164effd251416fb",
+      "executable": false
+    },
+    {
+      "id": "agent:demo-web-tester-imported:skill:demo-web-screenshot-check-imported",
+      "agentId": "demo-web-tester-imported",
+      "dependencyId": "demo-web-screenshot-check-imported",
+      "kind": "skill",
+      "optional": false,
+      "availability": "remote-required",
+      "inclusion": "included",
+      "assetLogicalId": "agent:demo-web-tester-imported:skill:demo-web-screenshot-check-imported",
+      "referenceSha256": "sha256:c8f6f8b6cae417b244635e0d0a314bc5037be7dd91dee2a7837218c87312e3ae",
+      "contentSha256": "sha256:e3056b4fab31942332bd2d8040931229035154e4c838f691a89d1b5966daa6ea",
+      "executable": false
+    },
+    {
+      "id": "agent:demo-web-tester:skill:demo-web-screenshot-check",
+      "agentId": "demo-web-tester",
+      "dependencyId": "demo-web-screenshot-check",
+      "kind": "skill",
+      "optional": false,
+      "availability": "remote-required",
+      "inclusion": "included",
+      "assetLogicalId": "agent:demo-web-tester:skill:demo-web-screenshot-check",
+      "referenceSha256": "sha256:ba3096c7cb6eb44a86125e68b4357125e548336c4725703c84d0565bfc4c4fad",
+      "contentSha256": "sha256:77a7ca8a6afb9a73cbbfda626ce72cec6d07d6b82287b3deaf61159785b0ee5f",
+      "executable": false
+    }
+  ],
+  "provenance": {
+    "configuration": {
+      "repository": "https://github.com/ashokraj2011/myc.git",
+      "commit": "eade867b1b8dcd88a70836a216330b0d3b1baa27",
+      "filesSha256": "78b36497a6913d6b5a78319896e7f8ae2e64a8d578851a618855ee004f780acc"
+    },
+    "workType": "spec-code-test-loop",
+    "foldProfile": "singularity-flow-resolution-v1"
+  },
+  "semantics": {
+    "snapshot": "wfa-snapshot-v1",
+    "canonicalJson": "singularity-flow-canonical-json-v1",
+    "policyReaderMinimum": 5,
+    "agentDocumentParser": "sflow-agent-document-v1",
+    "promptComposer": "story-snapshot-agent-v1",
+    "phaseSemantics": "sflow-phase-semantics/v1"
+  },
+  "configFoldHash": "sha256:d808c0007e4b0aacd1fa00cc3871c0cbb9608ba7589495798e7a9eeedaa6d418",
+  "createdAt": "2026-10-10T12:29:01.302Z",
+  "limits": {
+    "assets": 57,
+    "bytes": 250435
+  },
+  "snapshotHash": "sha256:c37b998ac9081bc548bb052448d24197b0dbd1e8cef9c3f283a731f046ae8f0e"
+}
