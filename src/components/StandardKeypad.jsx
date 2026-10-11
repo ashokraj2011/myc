@@ -2,6 +2,12 @@ import React from 'react';
 import { Delete, Divide, X, Minus, Plus, Equal, Percent } from 'lucide-react';
 import { playSound } from '../utils/audio';
 
+/**
+ * Renders the standard calculator keys from their event callbacks.
+ * @param {Object} props Key, operator, memory, and sound callbacks/settings.
+ * @param {Function} props.onHex Optional conversion callback; omit when Hex is unavailable.
+ * @returns {JSX.Element} The standard keypad controls.
+ */
 export const StandardKeypad = ({
   onDigit,
   onOperator,
@@ -11,6 +17,7 @@ export const StandardKeypad = ({
   onNegate,
   onPercent,
   onMemory,
+  onHex,
   soundEnabled,
 }) => {
   const handleBtn = (type, fn, val) => {
@@ -18,6 +25,9 @@ export const StandardKeypad = ({
     fn(val);
   };
 
+  // @clause:1H-HEX:AC-001 The Hex button invokes conversion for the current eligible display value.
+  // @clause:1H-HEX:AC-002 The control supports functional acceptance without screenshot-specific behavior.
+  // @clause:1H-HEX:REQ-001 The Hex button forwards activation to the decimal-to-hex display handler.
   return (
     <div className="w-full flex flex-col gap-2.5 sm:gap-3">
       {/* Memory Strip: slim row docked above the main keypad, mirroring
@@ -180,6 +190,14 @@ export const StandardKeypad = ({
         >
           <Equal className="w-5 h-5" />
         </button>
+        {onHex && (
+          <button
+            onClick={() => handleBtn('operator', onHex)}
+            className="calc-btn u-bg-btn-func-bg u-text-btn-func-text u-hbg-btn-func-hover font-semibold text-sm"
+          >
+            Hex
+          </button>
+        )}
       </div>
     </div>
   );

@@ -11,6 +11,10 @@ import { KeyboardShortcutsModal } from './components/KeyboardShortcutsModal';
 import { evaluateExpression } from './utils/evaluator';
 import { playSound } from './utils/audio';
 
+/**
+ * Renders the calculator application and its active mode.
+ * @returns {JSX.Element} The calculator interface.
+ */
 export default function App() {
   const [activeMode, setActiveMode] = useState('standard');
   const [expression, setExpression] = useState('');
@@ -111,6 +115,35 @@ export default function App() {
     if (!expression) return;
     setExpression((prev) => prev + '%');
   }, [expression]);
+
+  // @clause:1H-HEX:AC-001 Activating Hex replaces 15 with F in the existing display.
+  // @clause:1H-HEX:AC-002 The functional assertion checks the display result without screenshot or layout checks.
+  // @clause:1H-HEX:REQ-001 Convert the current eligible decimal value to uppercase base-16 digits.
+  // @clause:1H-HEX:REQ-002 Restrict conversion to nonnegative whole-number values.
+  const handleHex = useCallback(() => {
+    const currentValue = lastEvaluated || !expression ? result : expression;
+    const match = currentValue.replaceAll(',', '').match(/^(\d+)(?:\.(\d+))?(?:e([+-]?\d+))?$/i);
+    if (!match) return;
+
+    const [, whole, fraction = '', exponentText = '0'] = match;
+    const exponent = Number(exponentText);
+    if (!Number.isSafeInteger(exponent)) return;
+
+    const digits = `${whole}${fraction}`;
+    const scale = fraction.length - exponent;
+    let integerDigits = digits;
+    if (scale > 0) {
+      const discardedDigits = digits.slice(-scale);
+      if (discardedDigits.length < scale || /[1-9]/.test(discardedDigits)) return;
+      integerDigits = digits.slice(0, -scale) || '0';
+    } else if (scale < 0) {
+      integerDigits += '0'.repeat(-scale);
+    }
+
+    setExpression('');
+    setResult(BigInt(integerDigits).toString(16).toUpperCase());
+    setLastEvaluated(true);
+  }, [expression, lastEvaluated, result]);
 
   const handleEquals = useCallback(() => {
     if (!expression || expression.trim() === '') return;
@@ -261,6 +294,7 @@ export default function App() {
               onNegate={handleNegate}
               onPercent={handlePercent}
               onMemory={handleMemory}
+              onHex={handleHex}
               soundEnabled={soundEnabled}
             />
           </div>

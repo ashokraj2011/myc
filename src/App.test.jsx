@@ -197,3 +197,34 @@ describe('Responsive navigation (desktop rail + mobile dropdown)', () => {
     expect(mobileSelect.value).toBe('financial');
   });
 });
+
+describe('Hex conversion', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  // @ac:1H-HEX:AC-001
+  // @ac:1H-HEX:AC-002
+  it('replaces the current eligible value with uppercase hexadecimal digits', async () => {
+    const { container } = render(<App />);
+
+    await clickButton(container, '1');
+    await clickButton(container, '5');
+    await clickButton(container, 'Hex');
+
+    expect(getResultText(container)).toBe('F');
+  });
+
+  // @ac:1H-HEX:AC-001
+  it('converts a calculated whole-number result', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+
+    await clickButton(container, '1');
+    await clickButton(container, '5');
+    await user.keyboard('{Enter}');
+    await clickButton(container, 'Hex');
+
+    expect(getResultText(container)).toBe('F');
+  });
+});
