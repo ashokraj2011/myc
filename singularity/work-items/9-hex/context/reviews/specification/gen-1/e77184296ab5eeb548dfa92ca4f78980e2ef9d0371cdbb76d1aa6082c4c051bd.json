@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "phase": "specification",
+  "generation": 1,
+  "reportSha256": "e77184296ab5eeb548dfa92ca4f78980e2ef9d0371cdbb76d1aa6082c4c051bd",
+  "lifecycleEventId": "d63c2c4a-cb97-44f3-8acc-db52555ce752",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "specification",
+    "binding": {
+      "workId": "9-hex",
+      "phase": "specification",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/9-hex/USER-STORY.md",
+          "textSha256": "e7a959375badac554ff7d04969ff601e94127a7d7e3944276ddac32d4dab7e94",
+          "originalSha256": "18a1fe1c5ac9e2588fb623096db313fed7c7ec8d008681bdf0731c30aebc0f91"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:current-phase",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/9-hex/context/clarifications-specification-gen1.json",
+          "sha256": "515aaaa314b6c80d8c88eb491007f324b9351b584c7c9564e71e9255736faaa7"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/9-hex/artifacts/specification/spec.md",
+        "sha256": "3309227b931c7e27a706afda958cab7dc57e3c335e5ec2d51b4c7a694546d891"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:current-phase"
+    ],
+    "rows": [
+      {
+        "id": "source-hex-operator",
+        "sourceId": "story",
+        "line": 7,
+        "quote": "create hex operator",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "9-HEX:REQ-001",
+          "9-HEX:AC-001"
+        ]
+      },
+      {
+        "id": "source-nonnegative-domain",
+        "sourceId": "story",
+        "line": 8,
+        "quote": "only non negative integers ,others show ERR as output",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "9-HEX:REQ-002"
+        ]
+      },
+      {
+        "id": "source-invalid-input-error",
+        "sourceId": "story",
+        "line": 8,
+        "quote": "only non negative integers ,others show ERR as output",
+        "outcome": "covered",
+        "scenarioId": "S2",
+        "clauseIds": [
+          "9-HEX:REQ-003",
+          "9-HEX:AC-002",
+          "9-HEX:AC-003"
+        ]
+      },
+      {
+        "id": "source-screenshot-acceptance",
+        "sourceId": "story",
+        "line": 17,
+        "quote": "screenshot",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "9-HEX:REQ-004",
+          "9-HEX:AC-004"
+        ]
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "a0016f43bc13f4991a4347bdd86c60bed8424da1e4a226e03267702d04a4c9e5",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "product-owner",
+    "readOnly": true
+  },
+  "submittedAt": "2026-10-11T23:44:25.205Z",
+  "recordSha256": "438669674a8066a3136d7af77fd029ddc90ad377d918f71866a0e01e7acb59bd"
+}
