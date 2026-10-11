@@ -5,12 +5,13 @@
 - Capability: **calc** (`myc1`)
 - Capability map: `48d460384819a855dcd7909eb6cae48e7fd6ce01d82748c66cb46d3ea8170731`
 - Overall status: **in_progress**
-- Current phase: **specification**
+- Current phase: **planning**
 
 | # | Phase | Governed agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
-| 1 | Specification (`specification`) | product-owner | **awaiting_approval** | 2 | 0 | unavailable |
-| 2 | Planning (`planning`) | architect | **not_started** | 0 | 0 | unavailable |
+| 1 | Specification (`specification`) | product-owner | **approved** | 2 | 1 | unavailable |
+|  | ⚠ self-approval | Ashok Raj via product-approvers; agent product-owner | **warning** |  |  |  |
+| 2 | Planning (`planning`) | architect | **in_progress** | 0 | 0 | unavailable |
 | 3 | Implementation (`implementation`) | developer | **not_started** | 0 | 0 | unavailable |
 | 4 | Convergence (`convergence`) | architect | **not_started** | 0 | 0 | unavailable |
 | 5 | Verification (`verification`) | qa | **not_started** | 0 | 0 | unavailable |
@@ -18,6 +19,7 @@
 
 ## Recent history
 
+- 2026-10-11T13:35:10.726Z — **phase_self_approved** (specification) by ashokraj2011 · governed agent product-owner: threshold reached; advanced to planning
 - 2026-10-11T13:19:49.111Z — **phase_submitted** (specification) by ashokraj2011 · governed agent product-owner: 1 artifacts
 - 2026-10-11T13:18:22.745Z — **source_review_submitted** (specification) by 88361104+ashokraj2011@users.noreply.github.com · governed agent sflow-source-reviewer: a9e19d3be61910ed7ff82481acd84d267f6c9a9e20bd473b7cfa1f393e243731
 - 2026-10-11T13:16:36.296Z — **phase_generated** (specification) by ashokraj2011 · governed agent product-owner: generation 2
