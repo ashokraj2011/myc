@@ -4,27 +4,51 @@
   "workId": "l-hex",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "61d1bafd5fb43c1f6adeaa77dc09d6e484289dc070f838a6ef6408692ce53dab",
+      "bytes": 6727
+    },
+    "generation": 1,
+    "publishedAt": "2026-10-11T16:13:10.871Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "6cb70c99ec808adc7d84f591a6303520990492e9",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "083d8965c65e8abeeb52bc7c40dd470aa5cdc144f592aea74911d5544b9770be",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/l-hex/context/clarifications-specification-gen1.json",
+    "sha256": "24b072e5c4b1d73dd5086af0142885df849a821bf2b7c7962b79d5dc1f953303",
+    "promptSha256": "0f9077f7247c7c646ad93c27a24481371b02a83c461b60e219287a021e8245fc",
+    "responses": 1,
+    "markers": [],
+    "recordedAt": "2026-10-11T16:09:07.491Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/l-hex/telemetry/specification-gen1.json",
+      "sha256": "e279930323346cebd47f2dda08a105a876d73ba854b8dd59cdaaaab2622111bc",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 13007,
+        "estimatedTokens": 3252,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 13007,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-11T16:13:10.871Z",
+      "completedAt": "2026-10-11T16:13:10.871Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -74,95 +155,100 @@ the answer `[SPK:REQ-067]` — deleting the text alone is an integrity failure, 
 
 ## Agent brief
 
-<!--
-Summarize the approved intent for downstream agents in a compact, standalone form. Include the
-problem, intended outcome, principal actors, most important scenarios, hard constraints, and major
-exclusions. Do not introduce claims that are absent from the sections below. Exact requirements and
-boundary conditions are preserved separately by the governed projection.
--->
+The calculator needs a HEX operator that converts the current numeric display into hexadecimal notation while preserving the existing calculation flow. The feature is a UI-facing behavior: it must work for valid integer inputs, remain safe on empty or invalid states, and present output in a clear, accessible format. It does not expand the product into multi-base arithmetic beyond the stated hex conversion behavior.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+- Calculator user: enters numbers and triggers the operator from the standard calculator UI.
+- Accessibility user: relies on meaningful labels and a readable display state.
 
 ## User scenarios
 
-Prioritized. Each scenario leads with the situation, then its acceptance cases.
-
-### S1 — <the most important situation, in the user's words>
+### S1 — Convert a decimal value to hexadecimal
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Calculator user
+**Context:** A value is shown in the calculator display and the user wants to inspect it in hexadecimal notation.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+- **Given** the display contains `255`
+  **When** the user presses the HEX operator
+  **Then** the display changes to `FF` and the value is shown in uppercase hexadecimal form
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
+- **Given** the display contains `10`
+  **When** the user presses the HEX operator
+  **Then** the display changes to `A`
 
-### S2 — <the next situation>
+### S2 — Handle empty and invalid input safely
 
 **Priority:** P2
+**Actor:** Calculator user
+**Context:** The user triggers the operator before entering a value or after a partial entry.
 
-- **Given** … **When** … **Then** …
+- **Given** the display is empty
+  **When** the user presses the HEX operator
+  **Then** the calculator does not crash, freeze, or show a broken state
+
+- **Given** the display contains a value that cannot be converted cleanly
+  **When** the user presses the HEX operator
+  **Then** the calculator leaves the display in a safe state and does not produce invalid formatting
 
 ## Failure and empty states
 
-What happens the first time, with nothing there yet, and when each step fails. These are where
-specifications are usually silent and implementations usually improvise.
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** With no current value, the HEX operator is ignored without an exception or visual corruption.
+- **Failure:** If the value cannot be converted, the UI remains stable and no invalid numeric representation is shown.
+- **Partial:** If a partial entry exists, the operator does not force a conversion until a valid numeric value is present.
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+- All users of the calculator may access the HEX operator in the same interface as other value-format actions.
+- No privileged or authenticated role is required for this behavior.
+- A user without this feature should still see the existing calculator behavior and not encounter a broken control.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+- The feature applies to the current numeric display value, not to arbitrary long integer strings from outside the app.
+- The output uses uppercase hexadecimal digits `0-9` and `A-F`.
+- The operator must remain safe for empty states, invalid inputs, and values that exceed the display's practical capacity.
+- If a value cannot be displayed in the current calculator layout, the UI must not corrupt the value or the keypad.
 
 ## Requirements
 
-Numbered, testable, one obligation each. Cite the scenario each serves.
-
-- <requirement>. *(S1)* [l-hex:REQ-001]
-- <requirement>. *(S1, S2)* [l-hex:REQ-002]
+1. The calculator must provide a HEX operator in the same interaction model as the other calculator value-format controls. *(S1)* [l-hex:REQ-001]
+2. When the current display contains a valid integer value, the HEX operator must convert it to uppercase hexadecimal notation. *(S1)* [l-hex:REQ-002]
+3. When the current display is empty or invalid, the HEX operator must not throw, freeze, or render malformed output. *(S2)* [l-hex:REQ-003]
+4. The operator must preserve the calculator's normal usability, including clear visual feedback and consistent display stability during and after conversion. *(S1, S2)* [l-hex:REQ-004]
+5. The feature must be accessible: a screen reader or keyboard user must be able to identify the control and understand the updated display state. *(S1)* [l-hex:REQ-005]
 
 Acceptance criteria use the same stable, namespaced form:
 
-- <observable acceptance outcome>. *(S1)* [l-hex:AC-001]
+- Pressing HEX on `255` results in the display showing `FF`. *(S1)* [l-hex:AC-001]
+- Pressing HEX on an empty display leaves the calculator in a stable, non-crashing state. *(S2)* [l-hex:AC-002]
+- Pressing HEX on a valid integer preserves the calculator UI layout and produces uppercase hexadecimal output. *(S1)* [l-hex:AC-003]
 
 ## Non-functional requirements
 
-Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
-will be measured; "fast" is not a requirement.
-
-Use governed requirement anchors here too (for example `[l-hex:REQ-003]`); `NFR-001` by
-itself is only a display label and is not a stable clause identity.
+- The conversion response must feel immediate to the user; the result should appear within 150 ms for normal values in the calculator's local UI. *(l-hex:REQ-006)*
+- The display must remain readable and keyboard-accessible with meaningful labels; no hidden or unlabeled controls may be introduced. *(l-hex:REQ-007)*
+- The feature must not introduce a persistent error state or crash when a user presses the operator repeatedly. *(l-hex:REQ-008)*
 
 ## Constitution articles
 
-Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
-cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
-
-- <ART-…>
+No constitution article IDs were pinned for this story in the current workflow context, so this specification makes no unsupported constitutional claims beyond the calculator behavior above.
 
 ## Assumptions
 
-What this specification takes as true without proving. An assumption that turns out false is a
-change request, not a defect — which is only true if it was written down.
+- The calculator operates on a single current value shown in the display at a given time.
+- The feature is a visual conversion operator, not a broader multi-base calculation engine.
+- Existing arithmetic patterns and UI conventions remain intact unless explicitly changed elsewhere in the product.
 
 ## Out of scope
 
-Named explicitly, so the boundary is reviewable rather than inferred.
+- Full hexadecimal arithmetic with independent value-entry and operation modes.
+- Any redesign of the calculator keypad beyond adding the HEX operator behavior.
+- Data persistence or cross-session history for converted values.
 
 ## Sources
 
-Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
-offered to this phase that could not be read or was not available here, named as a gap. Without
-supporting documents, say so.
+- DOC-001 — l-hex / USER-STORY.md — "implement hex oeprator"
+- DOC-002 — repository calculator UI context — keypad and display behavior from the current application state
+- GAP — no additional pinned design or product specification documents were available for this story
