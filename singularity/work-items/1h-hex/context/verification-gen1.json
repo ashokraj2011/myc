@@ -1,0 +1,2107 @@
+{
+  "schemaVersion": 7,
+  "workId": "1h-hex",
+  "phase": "verification",
+  "generation": 1,
+  "agent": "qa",
+  "modelCommit": null,
+  "matchedRules": 0,
+  "mode": "off",
+  "applied": false,
+  "depth": "standard",
+  "evidence": false,
+  "groundingAvailability": {
+    "status": "unavailable",
+    "reasonCode": "WORLD_MODEL_GROUNDING_DISABLED"
+  },
+  "sourceComparison": {
+    "status": "unavailable",
+    "reasonCode": "WORLD_MODEL_GROUNDING_DISABLED"
+  },
+  "requiredViews": [],
+  "requiredSelections": [],
+  "task": null,
+  "supportingEvidence": [],
+  "references": [
+    {
+      "handle": "sfref:v1:story:1h-hex:dfb9a18c41078bc4733800904312611ae9dce53c3e3e923e71a21272db208dca",
+      "phase": "convergence",
+      "path": "singularity/work-items/1h-hex/artifacts/convergence/convergence.md",
+      "rawSha256": "b24039ad0ca757ef2fd1c3772341926854a646d3760ad3ccfb3f23975729febf",
+      "rawBytes": 14499,
+      "previewSha256": "5c8b6a2933c6966aa9cc4390afcd8be1dcc419c4b9800da8e23a3ff5186e81dd",
+      "previewBytes": 945,
+      "renderer": {
+        "id": "markdown-outline",
+        "version": 1
+      },
+      "truncated": false
+    }
+  ],
+  "modelSourceTreeSha256": null,
+  "composedSourceTreeSha256": null,
+  "worldModelCommit": null,
+  "manifestSha256": null,
+  "fresh": true,
+  "renderedSha256": "a6254df93224bea5919873cd91dc7a42c1a52c602a2f048086d9168d400fb042",
+  "promptStudy": null,
+  "promptDefinition": null,
+  "structuralContext": null,
+  "workSource": {
+    "path": "singularity/work-items/1h-hex/source.json",
+    "sha256": "f204490875e9d5bb38ee534560b2feb433f58c03bbfdccf5b5207e0be012f801",
+    "bytes": 921
+  },
+  "promptBudget": {
+    "policy": {
+      "mode": "observe",
+      "profile": "standard",
+      "maximumBytes": 72000,
+      "maximumEstimatedPromptTokens": 18000,
+      "policyOnBudgetBreach": "refuse",
+      "assurance": "estimated-prompt-text"
+    },
+    "admission": {
+      "model": null,
+      "logicalPromptBytes": 25980,
+      "logicalPromptTokens": {
+        "value": 6495,
+        "assurance": "estimated"
+      },
+      "systemAndToolReserveTokens": {
+        "value": null,
+        "assurance": "unavailable"
+      },
+      "historyTokens": {
+        "value": null,
+        "assurance": "unavailable"
+      },
+      "totalAdmissionTokens": {
+        "value": 6495,
+        "assurance": "partial"
+      },
+      "maximumInputTokens": 18000,
+      "safeToEnforce": false,
+      "admitted": null,
+      "policyApprovedConservativeUpperBound": false
+    },
+    "compliance": "compliant",
+    "originalBytes": 25980,
+    "originalEstimatedTokens": 6495,
+    "finalBytes": 25980,
+    "finalEstimatedTokens": 6495,
+    "overflow": false,
+    "warnings": [],
+    "economics": {
+      "prompt": {
+        "candidatePromptBytes": 25980,
+        "deduplicatedPromptBytes": 12137,
+        "budgetEvictedPromptBytes": 0,
+        "finalPromptBytes": 25980,
+        "tkrCandidatePromptBytes": 25979,
+        "tkrCandidateByteDelta": 1,
+        "tkrCandidateAssurance": "deterministic-shadow-not-delivered",
+        "clauseInputBytesSaved": 257
+      },
+      "provider": {
+        "inputTokens": null,
+        "cachedInputTokens": null,
+        "uncachedInputTokens": null,
+        "assurance": "unavailable"
+      },
+      "system": {
+        "totalSystemTokens": null,
+        "assurance": "unavailable"
+      },
+      "source": {
+        "sourceBytes": 55190,
+        "authoredSourceBytes": 11762,
+        "managedSourceBytesExcluded": 43428,
+        "managedReferenceBytesExcluded": 13679,
+        "deliveredSourceBytes": 8188,
+        "assurance": "sflow-measured"
+      }
+    },
+    "sections": [
+      {
+        "id": "phase-contract",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 3239,
+        "estimatedTokens": 810,
+        "sha256": "3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "work-source",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 920,
+        "estimatedTokens": 230,
+        "sha256": "e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "active-clause-capsule",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 1458,
+        "estimatedTokens": 365,
+        "sha256": "204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "clarification-protocol",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 2653,
+        "estimatedTokens": 664,
+        "sha256": "5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "governed-agent-policy",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 1416,
+        "estimatedTokens": 354,
+        "sha256": "183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "mcp-policy",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 984,
+        "estimatedTokens": 246,
+        "sha256": "784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "world-model-grounding",
+        "mandatory": false,
+        "priority": 40,
+        "bytes": 2626,
+        "estimatedTokens": 657,
+        "sha256": "02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "approved-reference-previews",
+        "mandatory": false,
+        "priority": 80,
+        "bytes": 1506,
+        "estimatedTokens": 377,
+        "sha256": "e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [
+          "sfref:v1:story:1h-hex:dfb9a18c41078bc4733800904312611ae9dce53c3e3e923e71a21272db208dca"
+        ],
+        "expandability": "available"
+      },
+      {
+        "id": "approved-phase-inputs",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 10822,
+        "estimatedTokens": 2706,
+        "sha256": "ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "final-clarification-guard",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 337,
+        "estimatedTokens": 85,
+        "sha256": "22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      }
+    ],
+    "omitted": [],
+    "tokenReduction": {
+      "mode": "shadow",
+      "record": {
+        "kind": "tkr/shadow-evaluation",
+        "version": 1,
+        "status": "observed",
+        "scope": {
+          "workId": "1h-hex",
+          "phase": "verification",
+          "generation": 1,
+          "sourceRevision": null,
+          "configurationSha256": "083d8965c65e8abeeb52bc7c40dd470aa5cdc144f592aea74911d5544b9770be",
+          "executionMode": "workflow-snapshot"
+        },
+        "sourceSetSha256": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+        "composerRef": {
+          "kind": "tkr/composer-contract",
+          "version": 1,
+          "owner": "sflow-core",
+          "contractSha256": "sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6"
+        },
+        "configuredMaximumBytes": 72000,
+        "candidateOverflow": false,
+        "legacyRef": {
+          "sha256": "sha256:a6254df93224bea5919873cd91dc7a42c1a52c602a2f048086d9168d400fb042",
+          "bytes": 25980
+        },
+        "candidateRef": {
+          "sha256": "sha256:1abe5218387e95655a33298aef3deae1393df8274f71c37e23d7efea879d13e7",
+          "bytes": 25979
+        },
+        "byteEquivalent": false,
+        "byteDelta": 1,
+        "delivery": {
+          "state": "shadow-not-delivered",
+          "deliveredRef": {
+            "sha256": "sha256:a6254df93224bea5919873cd91dc7a42c1a52c602a2f048086d9168d400fb042",
+            "bytes": 25980
+          },
+          "candidateDelivered": false
+        },
+        "receiptSha256": "sha256:2118fd64548cc1e498e5fc5ee23c1f412fec61db5dd546ec904007f166506f42",
+        "sectionReport": {
+          "kind": "tkr/prompt-section-report",
+          "version": 1,
+          "sources": [
+            {
+              "sectionId": "phase-contract",
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "phase-contract",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#phase-contract:sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e"
+              },
+              "ownerBindingRef": "sha256:a6a911ba8bf3eabc0e2ca2bb06f1188bfe1f4a062b9c71ce2de628a98f4f2e1b",
+              "evidenceRole": "policy",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#phase-contract",
+              "applicability": "required",
+              "applicabilityDecisionRef": null,
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#phase-contract:sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e",
+              "sourceSha256": "sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e",
+              "sourceByteLength": 3239
+            },
+            {
+              "sectionId": "work-source",
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "work-source",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#work-source:sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8"
+              },
+              "ownerBindingRef": "sha256:4397c85ee576077d4975287a4f7f7a3c2d30d5b50a28aa3a995a5b33b1f21d00",
+              "evidenceRole": "source",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#work-source",
+              "applicability": "required",
+              "applicabilityDecisionRef": null,
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#work-source:sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8",
+              "sourceSha256": "sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8",
+              "sourceByteLength": 920
+            },
+            {
+              "sectionId": "active-clause-capsule",
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "active-clause-capsule",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#active-clause-capsule:sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959"
+              },
+              "ownerBindingRef": "sha256:ecbce5a6ef98875512358d2168eb197c28a87d30d0d97b719cc5dab1a307e7ed",
+              "evidenceRole": "requirement",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#active-clause-capsule",
+              "applicability": "required",
+              "applicabilityDecisionRef": null,
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#active-clause-capsule:sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959",
+              "sourceSha256": "sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959",
+              "sourceByteLength": 1458
+            },
+            {
+              "sectionId": "clarification-protocol",
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "clarification-protocol",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#clarification-protocol:sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a"
+              },
+              "ownerBindingRef": "sha256:a858931ea80517eef062a71cc62c5422abbd61a663c211581f9cedfe1ce184c1",
+              "evidenceRole": "interaction-policy",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#clarification-protocol",
+              "applicability": "required",
+              "applicabilityDecisionRef": null,
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#clarification-protocol:sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a",
+              "sourceSha256": "sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a",
+              "sourceByteLength": 2653
+            },
+            {
+              "sectionId": "governed-agent-policy",
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "governed-agent-policy",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#governed-agent-policy:sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a"
+              },
+              "ownerBindingRef": "sha256:3a5914c6d9ecc00a26b4e06037b5f73302d8a9e86377fd8c67430585bd5962d7",
+              "evidenceRole": "instructions",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#governed-agent-policy",
+              "applicability": "required",
+              "applicabilityDecisionRef": null,
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#governed-agent-policy:sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a",
+              "sourceSha256": "sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a",
+              "sourceByteLength": 1416
+            },
+            {
+              "sectionId": "mcp-policy",
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "mcp-policy",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#mcp-policy:sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f"
+              },
+              "ownerBindingRef": "sha256:4246e8c27770386435b27e2b730a7071e848879fbdc25dc3a8779a6e2baa6bd5",
+              "evidenceRole": "tool-policy",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#mcp-policy",
+              "applicability": "required",
+              "applicabilityDecisionRef": null,
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#mcp-policy:sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f",
+              "sourceSha256": "sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f",
+              "sourceByteLength": 984
+            },
+            {
+              "sectionId": "world-model-grounding",
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "world-model-grounding",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#world-model-grounding:sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224"
+              },
+              "ownerBindingRef": "sha256:3f2cc6c753fe3c972b6dcbe602e6683e70a2fc1b592cf418ca40b028cf495b58",
+              "evidenceRole": "grounding",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#world-model-grounding",
+              "applicability": "optional",
+              "applicabilityDecisionRef": null,
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#world-model-grounding:sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224",
+              "sourceSha256": "sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224",
+              "sourceByteLength": 2626
+            },
+            {
+              "sectionId": "approved-reference-previews",
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "approved-reference-previews",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#approved-reference-previews:sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a"
+              },
+              "ownerBindingRef": "sha256:65fb4c589e1c12f1627dd86680e8673bf4eed927d465fee4cd6dbdcaebb78737",
+              "evidenceRole": "approved-reference",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#approved-reference-previews",
+              "applicability": "optional",
+              "applicabilityDecisionRef": null,
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#approved-reference-previews:sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a",
+              "sourceSha256": "sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a",
+              "sourceByteLength": 1506
+            },
+            {
+              "sectionId": "approved-phase-inputs",
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "approved-phase-inputs",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#approved-phase-inputs:sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6"
+              },
+              "ownerBindingRef": "sha256:6cb8acc9b2ea34860f3f38e9cb53e5ebb170ab0c27176507a961b5504fe9d247",
+              "evidenceRole": "phase-input",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#approved-phase-inputs",
+              "applicability": "required",
+              "applicabilityDecisionRef": null,
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#approved-phase-inputs:sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6",
+              "sourceSha256": "sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6",
+              "sourceByteLength": 10822
+            },
+            {
+              "sectionId": "final-clarification-guard",
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "final-clarification-guard",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#final-clarification-guard:sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473"
+              },
+              "ownerBindingRef": "sha256:acd2ffc252276adc01fd34d25b06d89a0022e4bb121017064cc5b308ea743f7e",
+              "evidenceRole": "interaction-policy",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#final-clarification-guard",
+              "applicability": "required",
+              "applicabilityDecisionRef": null,
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#final-clarification-guard:sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473",
+              "sourceSha256": "sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473",
+              "sourceByteLength": 337
+            }
+          ],
+          "ownerAssuranceRefs": [
+            "assurance:tkr-shadow-owner-boundary-unverified@1"
+          ],
+          "composerSha256": "sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6",
+          "compositionRef": {
+            "sha256": "sha256:1abe5218387e95655a33298aef3deae1393df8274f71c37e23d7efea879d13e7",
+            "bytes": 25979,
+            "composerSha256": "sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6"
+          },
+          "measurement": {
+            "candidateSectionBytes": 25961,
+            "retainedOriginalSectionBytes": 25961,
+            "generatedSectionBytes": 0,
+            "separatorBytes": 18,
+            "finalCompositionBytes": 25979,
+            "tokens": null,
+            "tokenizerRef": null,
+            "assurance": "owner-declared-assurance-with-exact-byte-verification"
+          },
+          "sections": [
+            {
+              "id": "phase-contract",
+              "mandatory": true,
+              "applicability": "required",
+              "applicabilityDecisionRef": null,
+              "priority": 0,
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "phase-contract",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#phase-contract:sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e"
+              },
+              "ownerBindingRef": "sha256:a6a911ba8bf3eabc0e2ca2bb06f1188bfe1f4a062b9c71ce2de628a98f4f2e1b",
+              "evidenceRole": "policy",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#phase-contract",
+              "coverage": [
+                {
+                  "claimRef": "claim:sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e",
+                  "subjectRef": {
+                    "owner": "sflow-core",
+                    "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "kind": "prompt-section",
+                    "id": "phase-contract",
+                    "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#phase-contract:sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e"
+                  },
+                  "evidenceRole": "policy",
+                  "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#phase-contract"
+                }
+              ],
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#phase-contract:sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e",
+              "sourceSha256": "sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e",
+              "sourceByteLength": 3239,
+              "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+              "limitations": [
+                "shadow candidate only; not delivery or lifecycle authority"
+              ],
+              "originalRenderedRef": {
+                "sha256": "sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e",
+                "bytes": 3239
+              },
+              "outcome": "included",
+              "representation": "full",
+              "finalRenderedRef": {
+                "sha256": "sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e",
+                "bytes": 3239
+              },
+              "omission": null
+            },
+            {
+              "id": "work-source",
+              "mandatory": true,
+              "applicability": "required",
+              "applicabilityDecisionRef": null,
+              "priority": 0,
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "work-source",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#work-source:sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8"
+              },
+              "ownerBindingRef": "sha256:4397c85ee576077d4975287a4f7f7a3c2d30d5b50a28aa3a995a5b33b1f21d00",
+              "evidenceRole": "source",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#work-source",
+              "coverage": [
+                {
+                  "claimRef": "claim:sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8",
+                  "subjectRef": {
+                    "owner": "sflow-core",
+                    "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "kind": "prompt-section",
+                    "id": "work-source",
+                    "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#work-source:sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8"
+                  },
+                  "evidenceRole": "source",
+                  "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#work-source"
+                }
+              ],
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#work-source:sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8",
+              "sourceSha256": "sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8",
+              "sourceByteLength": 920,
+              "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+              "limitations": [
+                "shadow candidate only; not delivery or lifecycle authority"
+              ],
+              "originalRenderedRef": {
+                "sha256": "sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8",
+                "bytes": 920
+              },
+              "outcome": "included",
+              "representation": "full",
+              "finalRenderedRef": {
+                "sha256": "sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8",
+                "bytes": 920
+              },
+              "omission": null
+            },
+            {
+              "id": "active-clause-capsule",
+              "mandatory": true,
+              "applicability": "required",
+              "applicabilityDecisionRef": null,
+              "priority": 0,
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "active-clause-capsule",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#active-clause-capsule:sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959"
+              },
+              "ownerBindingRef": "sha256:ecbce5a6ef98875512358d2168eb197c28a87d30d0d97b719cc5dab1a307e7ed",
+              "evidenceRole": "requirement",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#active-clause-capsule",
+              "coverage": [
+                {
+                  "claimRef": "claim:sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959",
+                  "subjectRef": {
+                    "owner": "sflow-core",
+                    "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "kind": "prompt-section",
+                    "id": "active-clause-capsule",
+                    "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#active-clause-capsule:sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959"
+                  },
+                  "evidenceRole": "requirement",
+                  "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#active-clause-capsule"
+                }
+              ],
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#active-clause-capsule:sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959",
+              "sourceSha256": "sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959",
+              "sourceByteLength": 1458,
+              "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+              "limitations": [
+                "shadow candidate only; not delivery or lifecycle authority"
+              ],
+              "originalRenderedRef": {
+                "sha256": "sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959",
+                "bytes": 1458
+              },
+              "outcome": "included",
+              "representation": "full",
+              "finalRenderedRef": {
+                "sha256": "sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959",
+                "bytes": 1458
+              },
+              "omission": null
+            },
+            {
+              "id": "clarification-protocol",
+              "mandatory": true,
+              "applicability": "required",
+              "applicabilityDecisionRef": null,
+              "priority": 0,
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "clarification-protocol",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#clarification-protocol:sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a"
+              },
+              "ownerBindingRef": "sha256:a858931ea80517eef062a71cc62c5422abbd61a663c211581f9cedfe1ce184c1",
+              "evidenceRole": "interaction-policy",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#clarification-protocol",
+              "coverage": [
+                {
+                  "claimRef": "claim:sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a",
+                  "subjectRef": {
+                    "owner": "sflow-core",
+                    "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "kind": "prompt-section",
+                    "id": "clarification-protocol",
+                    "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#clarification-protocol:sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a"
+                  },
+                  "evidenceRole": "interaction-policy",
+                  "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#clarification-protocol"
+                }
+              ],
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#clarification-protocol:sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a",
+              "sourceSha256": "sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a",
+              "sourceByteLength": 2653,
+              "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+              "limitations": [
+                "shadow candidate only; not delivery or lifecycle authority"
+              ],
+              "originalRenderedRef": {
+                "sha256": "sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a",
+                "bytes": 2653
+              },
+              "outcome": "included",
+              "representation": "full",
+              "finalRenderedRef": {
+                "sha256": "sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a",
+                "bytes": 2653
+              },
+              "omission": null
+            },
+            {
+              "id": "governed-agent-policy",
+              "mandatory": true,
+              "applicability": "required",
+              "applicabilityDecisionRef": null,
+              "priority": 0,
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "governed-agent-policy",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#governed-agent-policy:sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a"
+              },
+              "ownerBindingRef": "sha256:3a5914c6d9ecc00a26b4e06037b5f73302d8a9e86377fd8c67430585bd5962d7",
+              "evidenceRole": "instructions",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#governed-agent-policy",
+              "coverage": [
+                {
+                  "claimRef": "claim:sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a",
+                  "subjectRef": {
+                    "owner": "sflow-core",
+                    "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "kind": "prompt-section",
+                    "id": "governed-agent-policy",
+                    "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#governed-agent-policy:sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a"
+                  },
+                  "evidenceRole": "instructions",
+                  "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#governed-agent-policy"
+                }
+              ],
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#governed-agent-policy:sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a",
+              "sourceSha256": "sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a",
+              "sourceByteLength": 1416,
+              "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+              "limitations": [
+                "shadow candidate only; not delivery or lifecycle authority"
+              ],
+              "originalRenderedRef": {
+                "sha256": "sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a",
+                "bytes": 1416
+              },
+              "outcome": "included",
+              "representation": "full",
+              "finalRenderedRef": {
+                "sha256": "sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a",
+                "bytes": 1416
+              },
+              "omission": null
+            },
+            {
+              "id": "mcp-policy",
+              "mandatory": true,
+              "applicability": "required",
+              "applicabilityDecisionRef": null,
+              "priority": 0,
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "mcp-policy",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#mcp-policy:sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f"
+              },
+              "ownerBindingRef": "sha256:4246e8c27770386435b27e2b730a7071e848879fbdc25dc3a8779a6e2baa6bd5",
+              "evidenceRole": "tool-policy",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#mcp-policy",
+              "coverage": [
+                {
+                  "claimRef": "claim:sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f",
+                  "subjectRef": {
+                    "owner": "sflow-core",
+                    "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "kind": "prompt-section",
+                    "id": "mcp-policy",
+                    "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#mcp-policy:sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f"
+                  },
+                  "evidenceRole": "tool-policy",
+                  "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#mcp-policy"
+                }
+              ],
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#mcp-policy:sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f",
+              "sourceSha256": "sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f",
+              "sourceByteLength": 984,
+              "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+              "limitations": [
+                "shadow candidate only; not delivery or lifecycle authority"
+              ],
+              "originalRenderedRef": {
+                "sha256": "sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f",
+                "bytes": 984
+              },
+              "outcome": "included",
+              "representation": "full",
+              "finalRenderedRef": {
+                "sha256": "sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f",
+                "bytes": 984
+              },
+              "omission": null
+            },
+            {
+              "id": "world-model-grounding",
+              "mandatory": false,
+              "applicability": "optional",
+              "applicabilityDecisionRef": null,
+              "priority": 40,
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "world-model-grounding",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#world-model-grounding:sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224"
+              },
+              "ownerBindingRef": "sha256:3f2cc6c753fe3c972b6dcbe602e6683e70a2fc1b592cf418ca40b028cf495b58",
+              "evidenceRole": "grounding",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#world-model-grounding",
+              "coverage": [
+                {
+                  "claimRef": "claim:sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224",
+                  "subjectRef": {
+                    "owner": "sflow-core",
+                    "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "kind": "prompt-section",
+                    "id": "world-model-grounding",
+                    "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#world-model-grounding:sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224"
+                  },
+                  "evidenceRole": "grounding",
+                  "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#world-model-grounding"
+                }
+              ],
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#world-model-grounding:sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224",
+              "sourceSha256": "sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224",
+              "sourceByteLength": 2626,
+              "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+              "limitations": [
+                "shadow candidate only; not delivery or lifecycle authority"
+              ],
+              "originalRenderedRef": {
+                "sha256": "sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224",
+                "bytes": 2626
+              },
+              "outcome": "included",
+              "representation": "full",
+              "finalRenderedRef": {
+                "sha256": "sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224",
+                "bytes": 2626
+              },
+              "omission": null
+            },
+            {
+              "id": "approved-reference-previews",
+              "mandatory": false,
+              "applicability": "optional",
+              "applicabilityDecisionRef": null,
+              "priority": 80,
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "approved-reference-previews",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#approved-reference-previews:sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a"
+              },
+              "ownerBindingRef": "sha256:65fb4c589e1c12f1627dd86680e8673bf4eed927d465fee4cd6dbdcaebb78737",
+              "evidenceRole": "approved-reference",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#approved-reference-previews",
+              "coverage": [
+                {
+                  "claimRef": "claim:sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a",
+                  "subjectRef": {
+                    "owner": "sflow-core",
+                    "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "kind": "prompt-section",
+                    "id": "approved-reference-previews",
+                    "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#approved-reference-previews:sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a"
+                  },
+                  "evidenceRole": "approved-reference",
+                  "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#approved-reference-previews"
+                }
+              ],
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#approved-reference-previews:sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a",
+              "sourceSha256": "sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a",
+              "sourceByteLength": 1506,
+              "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+              "limitations": [
+                "shadow candidate only; not delivery or lifecycle authority"
+              ],
+              "originalRenderedRef": {
+                "sha256": "sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a",
+                "bytes": 1506
+              },
+              "outcome": "included",
+              "representation": "full",
+              "finalRenderedRef": {
+                "sha256": "sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a",
+                "bytes": 1506
+              },
+              "omission": null
+            },
+            {
+              "id": "approved-phase-inputs",
+              "mandatory": true,
+              "applicability": "required",
+              "applicabilityDecisionRef": null,
+              "priority": 0,
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "approved-phase-inputs",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#approved-phase-inputs:sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6"
+              },
+              "ownerBindingRef": "sha256:6cb8acc9b2ea34860f3f38e9cb53e5ebb170ab0c27176507a961b5504fe9d247",
+              "evidenceRole": "phase-input",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#approved-phase-inputs",
+              "coverage": [
+                {
+                  "claimRef": "claim:sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6",
+                  "subjectRef": {
+                    "owner": "sflow-core",
+                    "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "kind": "prompt-section",
+                    "id": "approved-phase-inputs",
+                    "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#approved-phase-inputs:sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6"
+                  },
+                  "evidenceRole": "phase-input",
+                  "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#approved-phase-inputs"
+                }
+              ],
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#approved-phase-inputs:sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6",
+              "sourceSha256": "sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6",
+              "sourceByteLength": 10822,
+              "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+              "limitations": [
+                "shadow candidate only; not delivery or lifecycle authority"
+              ],
+              "originalRenderedRef": {
+                "sha256": "sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6",
+                "bytes": 10822
+              },
+              "outcome": "included",
+              "representation": "full",
+              "finalRenderedRef": {
+                "sha256": "sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6",
+                "bytes": 10822
+              },
+              "omission": null
+            },
+            {
+              "id": "final-clarification-guard",
+              "mandatory": true,
+              "applicability": "required",
+              "applicabilityDecisionRef": null,
+              "priority": 0,
+              "subjectRef": {
+                "owner": "sflow-core",
+                "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "kind": "prompt-section",
+                "id": "final-clarification-guard",
+                "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#final-clarification-guard:sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473"
+              },
+              "ownerBindingRef": "sha256:acd2ffc252276adc01fd34d25b06d89a0022e4bb121017064cc5b308ea743f7e",
+              "evidenceRole": "interaction-policy",
+              "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+              "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#final-clarification-guard",
+              "coverage": [
+                {
+                  "claimRef": "claim:sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473",
+                  "subjectRef": {
+                    "owner": "sflow-core",
+                    "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "kind": "prompt-section",
+                    "id": "final-clarification-guard",
+                    "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+                    "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#final-clarification-guard:sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473"
+                  },
+                  "evidenceRole": "interaction-policy",
+                  "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#final-clarification-guard"
+                }
+              ],
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#final-clarification-guard:sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473",
+              "sourceSha256": "sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473",
+              "sourceByteLength": 337,
+              "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+              "limitations": [
+                "shadow candidate only; not delivery or lifecycle authority"
+              ],
+              "originalRenderedRef": {
+                "sha256": "sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473",
+                "bytes": 337
+              },
+              "outcome": "included",
+              "representation": "full",
+              "finalRenderedRef": {
+                "sha256": "sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473",
+                "bytes": 337
+              },
+              "omission": null
+            }
+          ]
+        },
+        "shadowSha256": "sha256:600c72e2d1a91e29eb0bac55d539314a32528a0275b0fbdf599e613300efe5ac"
+      }
+    },
+    "deduplicatedReferences": [
+      {
+        "handle": "sfref:v1:story:1h-hex:c76423c612d71d785a264cfd6350445016fb9a86aa6f3c00b44cbc477816ef76",
+        "path": "singularity/work-items/1h-hex/artifacts/specification/spec.md",
+        "rawSha256": "bb5b6947961695fa0fdf1dc84bdce7482b4e2112f3be35e013493d19cc73b386",
+        "rawBytes": 7532,
+        "previewBytes": 3613,
+        "reason": "same-governed-reference-handle"
+      },
+      {
+        "handle": "sfref:v1:story:1h-hex:cb92c831cd5a0ea6a0d3473fadcac4d8bf2899d3edc13147301d06fe08875644",
+        "path": "singularity/work-items/1h-hex/artifacts/planning/plan.md",
+        "rawSha256": "8ad13d8f72d994b8c69cb7066a8beaa74aa34d3413aaa86b75d2e898f26acef7",
+        "rawBytes": 13560,
+        "previewBytes": 5841,
+        "reason": "same-governed-reference-handle"
+      },
+      {
+        "handle": "sfref:v1:story:1h-hex:f4af03e9414d60e67ac62b85407005d6b1efb2dc13da3ebae7b0a2c02b676a21",
+        "path": "singularity/work-items/1h-hex/artifacts/implementation/implementation-summary.md",
+        "rawSha256": "d8705a3b238c7a1b515dfa1c112d5530095e6dce70a0dbe73720b6f28638076c",
+        "rawBytes": 14281,
+        "previewBytes": 2683,
+        "reason": "same-governed-reference-handle"
+      }
+    ],
+    "inputLinearization": {
+      "sourceBytes": 55190,
+      "authoredBytes": 11762,
+      "managedBytesExcluded": 43428,
+      "injectedBytes": 8445
+    },
+    "inputProjection": {
+      "renderer": "approved-inputs-v2",
+      "capsuleSha256": "sha256:5c69fe51c9098104ce867de5e1a86521871ea0aea55399d6c1ec67018f5aac57",
+      "originalSha256": "1d31dbf1e3a979c897fcdfcb4225ecd6ac82d3e3f425470b670a7bf2b1780e90",
+      "renderedSha256": "71975f9d0a213b4bd22e6583b96d91eb5f80f5606acfc4738b322bfbd7ec2b09",
+      "originalBytes": 10938,
+      "renderedBytes": 10681,
+      "originalContentBytes": 8445,
+      "renderedContentBytes": 8188,
+      "savedBytes": 257,
+      "inputs": [
+        {
+          "phase": "specification",
+          "path": "singularity/work-items/1h-hex/artifacts/specification/spec.md",
+          "sourceSha256": "681fad0f450e5fbc0cb05fe7bf30289a94a27f3b0956ca9aab9980630098edc9",
+          "briefSha256": "5cf1f435f2aea9da21baed3975296bf736dbf5a94d20cfdc8b6eddbbc6a43b60",
+          "originalSha256": "sha256:5cf1f435f2aea9da21baed3975296bf736dbf5a94d20cfdc8b6eddbbc6a43b60",
+          "renderedSha256": "sha256:aec802d823a0df3aa94ed194cbabe5965dd0af744c1e70099fbfe3d6518fe834",
+          "deduplicatedClauseIds": [
+            "1H-HEX:REQ-001",
+            "1H-HEX:REQ-002"
+          ],
+          "savedBytes": 257
+        }
+      ]
+    },
+    "stakeholderProjection": {
+      "renderer": "stakeholder-requests-v2",
+      "referencedRequestIds": [],
+      "requests": [],
+      "capsuleBytesSaved": 0
+    },
+    "skillLoading": [],
+    "structuralContext": null,
+    "referenceRepositories": [],
+    "workSource": {
+      "path": "singularity/work-items/1h-hex/source.json",
+      "sha256": "f204490875e9d5bb38ee534560b2feb433f58c03bbfdccf5b5207e0be012f801",
+      "bytes": 921
+    },
+    "activeClauseCapsule": {
+      "renderer": "clause-capsule-v3",
+      "renderedSha256": "sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959",
+      "sha256": "sha256:5c69fe51c9098104ce867de5e1a86521871ea0aea55399d6c1ec67018f5aac57",
+      "clauses": 4,
+      "openRisks": 0,
+      "clarifications": 0
+    }
+  },
+  "persistedGrounding": null,
+  "tokenReduction": {
+    "schemaVersion": 1,
+    "kind": "tkr/composition-receipt",
+    "version": 1,
+    "activation": "shadow",
+    "subject": {
+      "repositoryDomainSha256": "sha256:b6b0e144b91f734c16c4fa94f91421771d174e23847940487bc5dbe44619bb27",
+      "workId": "1h-hex",
+      "workflowInstanceId": "sha256:a8db5c4c80dbe3c1744f80bb6bf01b8427e1562686ea0542a1e50e6775988189",
+      "phase": "verification",
+      "generation": 1
+    },
+    "authority": {
+      "tokenEconomyPolicySha256": "sha256:245c9fc0147b287981a3beecdfad8ddfff15eb7746d2eb1d72faaaefc5ec7f16",
+      "phaseContextPolicySha256": null,
+      "workflowSnapshotSha256": "sha256:a8db5c4c80dbe3c1744f80bb6bf01b8427e1562686ea0542a1e50e6775988189",
+      "sourceSnapshotSha256": "sha256:f204490875e9d5bb38ee534560b2feb433f58c03bbfdccf5b5207e0be012f801",
+      "composerRef": "sflow-core/tkr/composer-contract/worldmodel-prompt.default@1#sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6",
+      "composerSha256": "sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6",
+      "contractSetSha256": "sha256:282c61c540c94fe8f1ecb021be82bbaa7f97974fa25989be6d5822237734381a"
+    },
+    "inputs": [
+      {
+        "sectionId": "phase-contract",
+        "subjectRef": {
+          "owner": "sflow-core",
+          "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "kind": "prompt-section",
+          "id": "phase-contract",
+          "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#phase-contract:sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e"
+        },
+        "ownerBindingSha256": "sha256:a6a911ba8bf3eabc0e2ca2bb06f1188bfe1f4a062b9c71ce2de628a98f4f2e1b",
+        "evidenceRole": "policy",
+        "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+        "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#phase-contract",
+        "applicability": "required",
+        "applicabilityDecisionRef": null,
+        "coverage": [
+          {
+            "claimRef": "claim:sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e",
+            "subjectRef": {
+              "owner": "sflow-core",
+              "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "kind": "prompt-section",
+              "id": "phase-contract",
+              "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#phase-contract:sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e"
+            },
+            "evidenceRole": "policy",
+            "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#phase-contract"
+          }
+        ],
+        "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#phase-contract:sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e",
+        "sourceSha256": "sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e",
+        "sourceByteLength": 3239,
+        "expansionRefs": [],
+        "limitations": [
+          "shadow candidate only; not delivery or lifecycle authority"
+        ],
+        "outcome": "included",
+        "representation": "full",
+        "originalRenderedRef": {
+          "sha256": "sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e",
+          "bytes": 3239
+        },
+        "finalRenderedRef": {
+          "sha256": "sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e",
+          "bytes": 3239
+        },
+        "omission": null
+      },
+      {
+        "sectionId": "work-source",
+        "subjectRef": {
+          "owner": "sflow-core",
+          "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "kind": "prompt-section",
+          "id": "work-source",
+          "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#work-source:sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8"
+        },
+        "ownerBindingSha256": "sha256:4397c85ee576077d4975287a4f7f7a3c2d30d5b50a28aa3a995a5b33b1f21d00",
+        "evidenceRole": "source",
+        "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+        "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#work-source",
+        "applicability": "required",
+        "applicabilityDecisionRef": null,
+        "coverage": [
+          {
+            "claimRef": "claim:sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8",
+            "subjectRef": {
+              "owner": "sflow-core",
+              "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "kind": "prompt-section",
+              "id": "work-source",
+              "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#work-source:sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8"
+            },
+            "evidenceRole": "source",
+            "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#work-source"
+          }
+        ],
+        "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#work-source:sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8",
+        "sourceSha256": "sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8",
+        "sourceByteLength": 920,
+        "expansionRefs": [],
+        "limitations": [
+          "shadow candidate only; not delivery or lifecycle authority"
+        ],
+        "outcome": "included",
+        "representation": "full",
+        "originalRenderedRef": {
+          "sha256": "sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8",
+          "bytes": 920
+        },
+        "finalRenderedRef": {
+          "sha256": "sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8",
+          "bytes": 920
+        },
+        "omission": null
+      },
+      {
+        "sectionId": "active-clause-capsule",
+        "subjectRef": {
+          "owner": "sflow-core",
+          "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "kind": "prompt-section",
+          "id": "active-clause-capsule",
+          "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#active-clause-capsule:sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959"
+        },
+        "ownerBindingSha256": "sha256:ecbce5a6ef98875512358d2168eb197c28a87d30d0d97b719cc5dab1a307e7ed",
+        "evidenceRole": "requirement",
+        "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+        "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#active-clause-capsule",
+        "applicability": "required",
+        "applicabilityDecisionRef": null,
+        "coverage": [
+          {
+            "claimRef": "claim:sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959",
+            "subjectRef": {
+              "owner": "sflow-core",
+              "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "kind": "prompt-section",
+              "id": "active-clause-capsule",
+              "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#active-clause-capsule:sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959"
+            },
+            "evidenceRole": "requirement",
+            "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#active-clause-capsule"
+          }
+        ],
+        "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#active-clause-capsule:sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959",
+        "sourceSha256": "sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959",
+        "sourceByteLength": 1458,
+        "expansionRefs": [],
+        "limitations": [
+          "shadow candidate only; not delivery or lifecycle authority"
+        ],
+        "outcome": "included",
+        "representation": "full",
+        "originalRenderedRef": {
+          "sha256": "sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959",
+          "bytes": 1458
+        },
+        "finalRenderedRef": {
+          "sha256": "sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959",
+          "bytes": 1458
+        },
+        "omission": null
+      },
+      {
+        "sectionId": "clarification-protocol",
+        "subjectRef": {
+          "owner": "sflow-core",
+          "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "kind": "prompt-section",
+          "id": "clarification-protocol",
+          "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#clarification-protocol:sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a"
+        },
+        "ownerBindingSha256": "sha256:a858931ea80517eef062a71cc62c5422abbd61a663c211581f9cedfe1ce184c1",
+        "evidenceRole": "interaction-policy",
+        "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+        "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#clarification-protocol",
+        "applicability": "required",
+        "applicabilityDecisionRef": null,
+        "coverage": [
+          {
+            "claimRef": "claim:sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a",
+            "subjectRef": {
+              "owner": "sflow-core",
+              "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "kind": "prompt-section",
+              "id": "clarification-protocol",
+              "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#clarification-protocol:sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a"
+            },
+            "evidenceRole": "interaction-policy",
+            "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#clarification-protocol"
+          }
+        ],
+        "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#clarification-protocol:sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a",
+        "sourceSha256": "sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a",
+        "sourceByteLength": 2653,
+        "expansionRefs": [],
+        "limitations": [
+          "shadow candidate only; not delivery or lifecycle authority"
+        ],
+        "outcome": "included",
+        "representation": "full",
+        "originalRenderedRef": {
+          "sha256": "sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a",
+          "bytes": 2653
+        },
+        "finalRenderedRef": {
+          "sha256": "sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a",
+          "bytes": 2653
+        },
+        "omission": null
+      },
+      {
+        "sectionId": "governed-agent-policy",
+        "subjectRef": {
+          "owner": "sflow-core",
+          "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "kind": "prompt-section",
+          "id": "governed-agent-policy",
+          "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#governed-agent-policy:sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a"
+        },
+        "ownerBindingSha256": "sha256:3a5914c6d9ecc00a26b4e06037b5f73302d8a9e86377fd8c67430585bd5962d7",
+        "evidenceRole": "instructions",
+        "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+        "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#governed-agent-policy",
+        "applicability": "required",
+        "applicabilityDecisionRef": null,
+        "coverage": [
+          {
+            "claimRef": "claim:sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a",
+            "subjectRef": {
+              "owner": "sflow-core",
+              "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "kind": "prompt-section",
+              "id": "governed-agent-policy",
+              "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#governed-agent-policy:sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a"
+            },
+            "evidenceRole": "instructions",
+            "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#governed-agent-policy"
+          }
+        ],
+        "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#governed-agent-policy:sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a",
+        "sourceSha256": "sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a",
+        "sourceByteLength": 1416,
+        "expansionRefs": [],
+        "limitations": [
+          "shadow candidate only; not delivery or lifecycle authority"
+        ],
+        "outcome": "included",
+        "representation": "full",
+        "originalRenderedRef": {
+          "sha256": "sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a",
+          "bytes": 1416
+        },
+        "finalRenderedRef": {
+          "sha256": "sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a",
+          "bytes": 1416
+        },
+        "omission": null
+      },
+      {
+        "sectionId": "mcp-policy",
+        "subjectRef": {
+          "owner": "sflow-core",
+          "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "kind": "prompt-section",
+          "id": "mcp-policy",
+          "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#mcp-policy:sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f"
+        },
+        "ownerBindingSha256": "sha256:4246e8c27770386435b27e2b730a7071e848879fbdc25dc3a8779a6e2baa6bd5",
+        "evidenceRole": "tool-policy",
+        "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+        "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#mcp-policy",
+        "applicability": "required",
+        "applicabilityDecisionRef": null,
+        "coverage": [
+          {
+            "claimRef": "claim:sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f",
+            "subjectRef": {
+              "owner": "sflow-core",
+              "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "kind": "prompt-section",
+              "id": "mcp-policy",
+              "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#mcp-policy:sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f"
+            },
+            "evidenceRole": "tool-policy",
+            "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#mcp-policy"
+          }
+        ],
+        "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#mcp-policy:sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f",
+        "sourceSha256": "sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f",
+        "sourceByteLength": 984,
+        "expansionRefs": [],
+        "limitations": [
+          "shadow candidate only; not delivery or lifecycle authority"
+        ],
+        "outcome": "included",
+        "representation": "full",
+        "originalRenderedRef": {
+          "sha256": "sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f",
+          "bytes": 984
+        },
+        "finalRenderedRef": {
+          "sha256": "sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f",
+          "bytes": 984
+        },
+        "omission": null
+      },
+      {
+        "sectionId": "world-model-grounding",
+        "subjectRef": {
+          "owner": "sflow-core",
+          "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "kind": "prompt-section",
+          "id": "world-model-grounding",
+          "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#world-model-grounding:sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224"
+        },
+        "ownerBindingSha256": "sha256:3f2cc6c753fe3c972b6dcbe602e6683e70a2fc1b592cf418ca40b028cf495b58",
+        "evidenceRole": "grounding",
+        "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+        "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#world-model-grounding",
+        "applicability": "optional",
+        "applicabilityDecisionRef": null,
+        "coverage": [
+          {
+            "claimRef": "claim:sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224",
+            "subjectRef": {
+              "owner": "sflow-core",
+              "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "kind": "prompt-section",
+              "id": "world-model-grounding",
+              "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#world-model-grounding:sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224"
+            },
+            "evidenceRole": "grounding",
+            "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#world-model-grounding"
+          }
+        ],
+        "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#world-model-grounding:sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224",
+        "sourceSha256": "sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224",
+        "sourceByteLength": 2626,
+        "expansionRefs": [],
+        "limitations": [
+          "shadow candidate only; not delivery or lifecycle authority"
+        ],
+        "outcome": "included",
+        "representation": "full",
+        "originalRenderedRef": {
+          "sha256": "sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224",
+          "bytes": 2626
+        },
+        "finalRenderedRef": {
+          "sha256": "sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224",
+          "bytes": 2626
+        },
+        "omission": null
+      },
+      {
+        "sectionId": "approved-reference-previews",
+        "subjectRef": {
+          "owner": "sflow-core",
+          "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "kind": "prompt-section",
+          "id": "approved-reference-previews",
+          "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#approved-reference-previews:sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a"
+        },
+        "ownerBindingSha256": "sha256:65fb4c589e1c12f1627dd86680e8673bf4eed927d465fee4cd6dbdcaebb78737",
+        "evidenceRole": "approved-reference",
+        "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+        "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#approved-reference-previews",
+        "applicability": "optional",
+        "applicabilityDecisionRef": null,
+        "coverage": [
+          {
+            "claimRef": "claim:sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a",
+            "subjectRef": {
+              "owner": "sflow-core",
+              "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "kind": "prompt-section",
+              "id": "approved-reference-previews",
+              "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#approved-reference-previews:sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a"
+            },
+            "evidenceRole": "approved-reference",
+            "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#approved-reference-previews"
+          }
+        ],
+        "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#approved-reference-previews:sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a",
+        "sourceSha256": "sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a",
+        "sourceByteLength": 1506,
+        "expansionRefs": [],
+        "limitations": [
+          "shadow candidate only; not delivery or lifecycle authority"
+        ],
+        "outcome": "included",
+        "representation": "full",
+        "originalRenderedRef": {
+          "sha256": "sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a",
+          "bytes": 1506
+        },
+        "finalRenderedRef": {
+          "sha256": "sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a",
+          "bytes": 1506
+        },
+        "omission": null
+      },
+      {
+        "sectionId": "approved-phase-inputs",
+        "subjectRef": {
+          "owner": "sflow-core",
+          "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "kind": "prompt-section",
+          "id": "approved-phase-inputs",
+          "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#approved-phase-inputs:sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6"
+        },
+        "ownerBindingSha256": "sha256:6cb8acc9b2ea34860f3f38e9cb53e5ebb170ab0c27176507a961b5504fe9d247",
+        "evidenceRole": "phase-input",
+        "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+        "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#approved-phase-inputs",
+        "applicability": "required",
+        "applicabilityDecisionRef": null,
+        "coverage": [
+          {
+            "claimRef": "claim:sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6",
+            "subjectRef": {
+              "owner": "sflow-core",
+              "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "kind": "prompt-section",
+              "id": "approved-phase-inputs",
+              "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#approved-phase-inputs:sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6"
+            },
+            "evidenceRole": "phase-input",
+            "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#approved-phase-inputs"
+          }
+        ],
+        "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#approved-phase-inputs:sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6",
+        "sourceSha256": "sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6",
+        "sourceByteLength": 10822,
+        "expansionRefs": [],
+        "limitations": [
+          "shadow candidate only; not delivery or lifecycle authority"
+        ],
+        "outcome": "included",
+        "representation": "full",
+        "originalRenderedRef": {
+          "sha256": "sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6",
+          "bytes": 10822
+        },
+        "finalRenderedRef": {
+          "sha256": "sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6",
+          "bytes": 10822
+        },
+        "omission": null
+      },
+      {
+        "sectionId": "final-clarification-guard",
+        "subjectRef": {
+          "owner": "sflow-core",
+          "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "kind": "prompt-section",
+          "id": "final-clarification-guard",
+          "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#final-clarification-guard:sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473"
+        },
+        "ownerBindingSha256": "sha256:acd2ffc252276adc01fd34d25b06d89a0022e4bb121017064cc5b308ea743f7e",
+        "evidenceRole": "interaction-policy",
+        "assuranceRef": "assurance:tkr-shadow-owner-boundary-unverified@1",
+        "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#final-clarification-guard",
+        "applicability": "required",
+        "applicabilityDecisionRef": null,
+        "coverage": [
+          {
+            "claimRef": "claim:sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473",
+            "subjectRef": {
+              "owner": "sflow-core",
+              "domain": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "kind": "prompt-section",
+              "id": "final-clarification-guard",
+              "revision": "sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8",
+              "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#final-clarification-guard:sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473"
+            },
+            "evidenceRole": "interaction-policy",
+            "requirementRef": "tkr-composer:sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6#final-clarification-guard"
+          }
+        ],
+        "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#final-clarification-guard:sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473",
+        "sourceSha256": "sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473",
+        "sourceByteLength": 337,
+        "expansionRefs": [],
+        "limitations": [
+          "shadow candidate only; not delivery or lifecycle authority"
+        ],
+        "outcome": "included",
+        "representation": "full",
+        "originalRenderedRef": {
+          "sha256": "sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473",
+          "bytes": 337
+        },
+        "finalRenderedRef": {
+          "sha256": "sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473",
+          "bytes": 337
+        },
+        "omission": null
+      }
+    ],
+    "selectedPrompt": {
+      "sha256": "sha256:a6254df93224bea5919873cd91dc7a42c1a52c602a2f048086d9168d400fb042",
+      "bytes": 25980
+    },
+    "candidatePrompt": {
+      "sha256": "sha256:1abe5218387e95655a33298aef3deae1393df8274f71c37e23d7efea879d13e7",
+      "bytes": 25979
+    },
+    "relationship": "different",
+    "composition": {
+      "composerSha256": "sha256:4a3234b4c57ea173e77f14c61c1d465cf451eab7e61130e3d73b085fdb035ad6",
+      "sha256": "sha256:1abe5218387e95655a33298aef3deae1393df8274f71c37e23d7efea879d13e7",
+      "bytes": 25979,
+      "segments": [
+        {
+          "sectionId": "phase-contract",
+          "slot": "governance",
+          "role": "policy",
+          "position": 0,
+          "start": 0,
+          "end": 3239,
+          "bytes": 3239,
+          "sha256": "sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e",
+          "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+          "representation": "full",
+          "subjectRefsSha256": "sha256:2fd6f19f19d5bec09234a022be9f291047962448f05ba3b20d387b6ff0ef2c04",
+          "coverageSha256": "sha256:b3aa81bca19c2ea1e2044c73c2a8ac4da4d2f59faaaec92028a1dd85697c21aa",
+          "carriedSha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "sectionId": "work-source",
+          "slot": "source",
+          "role": "source",
+          "position": 1,
+          "start": 3241,
+          "end": 4161,
+          "bytes": 920,
+          "sha256": "sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8",
+          "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+          "representation": "full",
+          "subjectRefsSha256": "sha256:e9f003832fb6d49ec3994e1180e7856e2f9d285dc255951af418bc08a0554f69",
+          "coverageSha256": "sha256:30fdbf52bfd40815c223b317d564de4524af78be2e6f76d35acefdf6acc95186",
+          "carriedSha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "sectionId": "active-clause-capsule",
+          "slot": "requirements",
+          "role": "requirement",
+          "position": 2,
+          "start": 4163,
+          "end": 5621,
+          "bytes": 1458,
+          "sha256": "sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959",
+          "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+          "representation": "full",
+          "subjectRefsSha256": "sha256:8a4b3ffc482c293fab05c9da83d1193c80d2fe6bd99dcfe489463494fa7ca03a",
+          "coverageSha256": "sha256:bb6b71123461fbc8ebf66e6ca00a6b4766178a4ac7f86ba4b44706ed970c2a07",
+          "carriedSha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "sectionId": "clarification-protocol",
+          "slot": "interaction",
+          "role": "interaction-policy",
+          "position": 3,
+          "start": 5623,
+          "end": 8276,
+          "bytes": 2653,
+          "sha256": "sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a",
+          "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+          "representation": "full",
+          "subjectRefsSha256": "sha256:c2d28a9430719602ad4c78f340258c6d74a06427f943cae5e9a6446ddee5c084",
+          "coverageSha256": "sha256:060afe860c870f7d00eda531dbd4d7f96e782b052c327a29dd4056c64e91b023",
+          "carriedSha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "sectionId": "governed-agent-policy",
+          "slot": "governance",
+          "role": "instructions",
+          "position": 4,
+          "start": 8278,
+          "end": 9694,
+          "bytes": 1416,
+          "sha256": "sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a",
+          "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+          "representation": "full",
+          "subjectRefsSha256": "sha256:4466b41fcc4fff84d88c45dfb1ebd71b42f90033b6bb0dfda922297c0d324554",
+          "coverageSha256": "sha256:192fd43d3238abcce96c4a5a7134dad3d3ebe5293747e88994ed5e5d576453df",
+          "carriedSha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "sectionId": "mcp-policy",
+          "slot": "tools",
+          "role": "tool-policy",
+          "position": 5,
+          "start": 9696,
+          "end": 10680,
+          "bytes": 984,
+          "sha256": "sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f",
+          "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+          "representation": "full",
+          "subjectRefsSha256": "sha256:cf90dea098f91433cd3319ec66992879bdb0d8a5e82a0e97df7dc5d2997949bd",
+          "coverageSha256": "sha256:5f56dd3262aff004eda7dfe4e03c2775b28f85123684e5a3d9cce693182cc3ce",
+          "carriedSha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "sectionId": "world-model-grounding",
+          "slot": "repository-intelligence",
+          "role": "grounding",
+          "position": 6,
+          "start": 10682,
+          "end": 13308,
+          "bytes": 2626,
+          "sha256": "sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224",
+          "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+          "representation": "full",
+          "subjectRefsSha256": "sha256:6ceb90c8663a2178753013b7b3660a04a986d852cc7a358b1246414da6d19b35",
+          "coverageSha256": "sha256:55baa63507817940714a8da21c303c2cd49863c0189d56272156001f4244a256",
+          "carriedSha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "sectionId": "approved-reference-previews",
+          "slot": "references",
+          "role": "approved-reference",
+          "position": 7,
+          "start": 13310,
+          "end": 14816,
+          "bytes": 1506,
+          "sha256": "sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a",
+          "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+          "representation": "full",
+          "subjectRefsSha256": "sha256:626103f0f1fcf5cfb0cd127c5024d9ee515a5f3cffffcf108830ec017b96f351",
+          "coverageSha256": "sha256:47cad734392cf5a15908fab55ee3461c157e562709c00001f01e64460ebbac8a",
+          "carriedSha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "sectionId": "approved-phase-inputs",
+          "slot": "evidence",
+          "role": "phase-input",
+          "position": 8,
+          "start": 14818,
+          "end": 25640,
+          "bytes": 10822,
+          "sha256": "sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6",
+          "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+          "representation": "full",
+          "subjectRefsSha256": "sha256:dcd0d3d84d2ac51e49828dcbc914e83b2a47a19e797ce0d9237ae713d17da02c",
+          "coverageSha256": "sha256:ec9b3f4fe394f4bc88f7d5f0721b41002faeabc1c59a2615566e08164b4e19c0",
+          "carriedSha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "sectionId": "final-clarification-guard",
+          "slot": "interaction",
+          "role": "interaction-policy",
+          "position": 9,
+          "start": 25642,
+          "end": 25979,
+          "bytes": 337,
+          "sha256": "sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473",
+          "rendererRef": "sflow-core/tkr/renderer/worldmodel-prompt-sections.exact-v1@1#sha256:98657de72ac6449849a788ed0a740e1cb8c1333284dce873b16784b12b066237",
+          "representation": "full",
+          "subjectRefsSha256": "sha256:baedf5ba9d771bb8bd3dfba53e884e4bac5ee8bd06057c2a0882778bfcdef86b",
+          "coverageSha256": "sha256:05ef75cc48da20056bc77956fb3927fb5f4f43c0b14333e8fb7cc22881f2b330",
+          "carriedSha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        }
+      ],
+      "separators": [
+        {
+          "start": 3239,
+          "end": 3241,
+          "bytes": 2,
+          "sha256": "sha256:75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070"
+        },
+        {
+          "start": 4161,
+          "end": 4163,
+          "bytes": 2,
+          "sha256": "sha256:75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070"
+        },
+        {
+          "start": 5621,
+          "end": 5623,
+          "bytes": 2,
+          "sha256": "sha256:75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070"
+        },
+        {
+          "start": 8276,
+          "end": 8278,
+          "bytes": 2,
+          "sha256": "sha256:75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070"
+        },
+        {
+          "start": 9694,
+          "end": 9696,
+          "bytes": 2,
+          "sha256": "sha256:75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070"
+        },
+        {
+          "start": 10680,
+          "end": 10682,
+          "bytes": 2,
+          "sha256": "sha256:75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070"
+        },
+        {
+          "start": 13308,
+          "end": 13310,
+          "bytes": 2,
+          "sha256": "sha256:75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070"
+        },
+        {
+          "start": 14816,
+          "end": 14818,
+          "bytes": 2,
+          "sha256": "sha256:75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070"
+        },
+        {
+          "start": 25640,
+          "end": 25642,
+          "bytes": 2,
+          "sha256": "sha256:75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070"
+        }
+      ],
+      "protectedText": [
+        {
+          "sectionId": "phase-contract",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#phase-contract:sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e",
+          "sourceRange": {
+            "start": 0,
+            "end": 3239
+          },
+          "renderedRange": {
+            "start": 0,
+            "end": 3239
+          },
+          "blockRange": {
+            "start": 0,
+            "end": 3239
+          },
+          "sha256": "sha256:3a746ed2bc013a19dce7bcee7334e27a20e230e68db5800be599b11eab51d64e",
+          "bytes": 3239,
+          "encoding": "literal-utf8"
+        },
+        {
+          "sectionId": "work-source",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#work-source:sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8",
+          "sourceRange": {
+            "start": 0,
+            "end": 920
+          },
+          "renderedRange": {
+            "start": 0,
+            "end": 920
+          },
+          "blockRange": {
+            "start": 3241,
+            "end": 4161
+          },
+          "sha256": "sha256:e22f04df46be70cf2ee1a8e3a8ea17251b53b8af2cb47e649832be76a5fb9fc8",
+          "bytes": 920,
+          "encoding": "literal-utf8"
+        },
+        {
+          "sectionId": "active-clause-capsule",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#active-clause-capsule:sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959",
+          "sourceRange": {
+            "start": 0,
+            "end": 1458
+          },
+          "renderedRange": {
+            "start": 0,
+            "end": 1458
+          },
+          "blockRange": {
+            "start": 4163,
+            "end": 5621
+          },
+          "sha256": "sha256:204f160a1e2e3ad34618846f6c144f437d140c8e58624b7fd70482f5f6a23959",
+          "bytes": 1458,
+          "encoding": "literal-utf8"
+        },
+        {
+          "sectionId": "clarification-protocol",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#clarification-protocol:sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a",
+          "sourceRange": {
+            "start": 0,
+            "end": 2653
+          },
+          "renderedRange": {
+            "start": 0,
+            "end": 2653
+          },
+          "blockRange": {
+            "start": 5623,
+            "end": 8276
+          },
+          "sha256": "sha256:5da0cba3b82e77654d89d543bd20f5476a4f7a2b19643821d12bd7832288d53a",
+          "bytes": 2653,
+          "encoding": "literal-utf8"
+        },
+        {
+          "sectionId": "governed-agent-policy",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#governed-agent-policy:sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a",
+          "sourceRange": {
+            "start": 0,
+            "end": 1416
+          },
+          "renderedRange": {
+            "start": 0,
+            "end": 1416
+          },
+          "blockRange": {
+            "start": 8278,
+            "end": 9694
+          },
+          "sha256": "sha256:183357471d6f932a70ce16e9fd2d7b379b381dfb44a81966fdae7f5301dba95a",
+          "bytes": 1416,
+          "encoding": "literal-utf8"
+        },
+        {
+          "sectionId": "mcp-policy",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#mcp-policy:sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f",
+          "sourceRange": {
+            "start": 0,
+            "end": 984
+          },
+          "renderedRange": {
+            "start": 0,
+            "end": 984
+          },
+          "blockRange": {
+            "start": 9696,
+            "end": 10680
+          },
+          "sha256": "sha256:784b27ddc25e1535a816f85ce6bcbaf1d42b213f1dfb3be350e3ff622e21fc8f",
+          "bytes": 984,
+          "encoding": "literal-utf8"
+        },
+        {
+          "sectionId": "world-model-grounding",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#world-model-grounding:sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224",
+          "sourceRange": {
+            "start": 0,
+            "end": 2626
+          },
+          "renderedRange": {
+            "start": 0,
+            "end": 2626
+          },
+          "blockRange": {
+            "start": 10682,
+            "end": 13308
+          },
+          "sha256": "sha256:02b91296544d6f36a0e25c084fa144cfe8de3994f577e9ee05a01053265ee224",
+          "bytes": 2626,
+          "encoding": "literal-utf8"
+        },
+        {
+          "sectionId": "approved-reference-previews",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#approved-reference-previews:sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a",
+          "sourceRange": {
+            "start": 0,
+            "end": 1506
+          },
+          "renderedRange": {
+            "start": 0,
+            "end": 1506
+          },
+          "blockRange": {
+            "start": 13310,
+            "end": 14816
+          },
+          "sha256": "sha256:e925168605d5d796d59de7b1bcc7fd8113ef407fae790d81a234974b2bd5325a",
+          "bytes": 1506,
+          "encoding": "literal-utf8"
+        },
+        {
+          "sectionId": "approved-phase-inputs",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#approved-phase-inputs:sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6",
+          "sourceRange": {
+            "start": 0,
+            "end": 10822
+          },
+          "renderedRange": {
+            "start": 0,
+            "end": 10822
+          },
+          "blockRange": {
+            "start": 14818,
+            "end": 25640
+          },
+          "sha256": "sha256:ac381efc1bc1e231402ebbaf19bf631175b865ebc069adb7d41d6b9ce76988d6",
+          "bytes": 10822,
+          "encoding": "literal-utf8"
+        },
+        {
+          "sectionId": "final-clarification-guard",
+          "sourceRef": "tkr-shadow:sha256:23cde06cd0e3f1762b241ed272977d724cb05425f89c2e9a802b6dd036ba36b8#final-clarification-guard:sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473",
+          "sourceRange": {
+            "start": 0,
+            "end": 337
+          },
+          "renderedRange": {
+            "start": 0,
+            "end": 337
+          },
+          "blockRange": {
+            "start": 25642,
+            "end": 25979
+          },
+          "sha256": "sha256:22d9d4b8a9c6b6a5ba45ebb985e07aa8d64b675edca312cf29c0f6e5d4cb6473",
+          "bytes": 337,
+          "encoding": "literal-utf8"
+        }
+      ],
+      "aliases": [],
+      "omissions": [],
+      "deduplication": []
+    },
+    "compositionManifestSha256": "sha256:71e827781d82600301b57e5285ad6701679e54f06a422af71b5127717246fae1",
+    "receiptSha256": "sha256:2118fd64548cc1e498e5fc5ee23c1f412fec61db5dd546ec904007f166506f42"
+  },
+  "remoteSkills": [],
+  "executionContext": {
+    "mode": "workflow-snapshot",
+    "snapshotHash": "sha256:a8db5c4c80dbe3c1744f80bb6bf01b8427e1562686ea0542a1e50e6775988189",
+    "agentId": "qa",
+    "agentBlobSha256": "sha256:1d9963e539be077db1efe3cbd55572c1365c755db98008857ed0aa958f67fd4a",
+    "dependencies": [],
+    "instructions": [],
+    "parserProfile": "sflow-agent-document-v1",
+    "composerProfile": "story-snapshot-agent-v1",
+    "overrideSha256": null
+  },
+  "compositionCache": {
+    "key": "4463fa7bd3dee262dbae4d15b14abc205238f30c85b46225c49def8810cb1b20",
+    "promptSha256": "a6254df93224bea5919873cd91dc7a42c1a52c602a2f048086d9168d400fb042"
+  },
+  "promptPath": "singularity/work-items/1h-hex/context/prompts/verification-gen1.md",
+  "files": [
+    {
+      "path": "singularity/work-items/1h-hex/artifacts/convergence/convergence.md",
+      "sha256": "b24039ad0ca757ef2fd1c3772341926854a646d3760ad3ccfb3f23975729febf",
+      "bytes": 14499,
+      "injectedBytes": 945,
+      "truncated": false,
+      "category": "reference",
+      "level": null,
+      "reason": "convergence:sfref:v1:story:1h-hex:dfb9a18c41078bc4733800904312611ae9dce53c3e3e923e71a21272db208dca",
+      "evidenceId": null,
+      "mimeType": null,
+      "packageId": null,
+      "handle": "sfref:v1:story:1h-hex:dfb9a18c41078bc4733800904312611ae9dce53c3e3e923e71a21272db208dca",
+      "previewSha256": "5c8b6a2933c6966aa9cc4390afcd8be1dcc419c4b9800da8e23a3ff5186e81dd",
+      "previewBytes": 945,
+      "renderer": {
+        "id": "markdown-outline",
+        "version": 1
+      }
+    }
+  ],
+  "injectedAt": "2026-10-11T18:24:49.404Z"
+}
