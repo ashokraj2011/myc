@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "phase": "specification",
+  "generation": 1,
+  "reportSha256": "1fb976f19c30973c066f99d23697402c65491e3969a85bb149069ba793219f3c",
+  "lifecycleEventId": "acdc806d-c282-49f6-a813-b7f32ac33213",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "specification",
+    "binding": {
+      "workId": "i-hex",
+      "phase": "specification",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/i-hex/USER-STORY.md",
+          "textSha256": "6dc79d6b2e130824097c3aa8f66c8b898392d4134e1b773a2de88a895b52269a",
+          "originalSha256": "dcdfe0bfeb76e54a84f93aea9f8cf5e607ff480a41073a46d4a461da206646e0"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:current-phase",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/i-hex/context/clarifications-specification-gen1.json",
+          "sha256": "2b32ec2b4aabd9057a825a52e684497b3a622ba23de53fce3bd9a06be9d19d02"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/i-hex/artifacts/specification/spec.md",
+        "sha256": "f6d3d46d8f2be054b18eae7ce1938545d3c165cdda092268c009777c101408ab"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:current-phase"
+    ],
+    "rows": [
+      {
+        "id": "coverage:hex-operator",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "I-HEX:REQ-001",
+          "I-HEX:REQ-002",
+          "I-HEX:REQ-003",
+          "I-HEX:REQ-004",
+          "I-HEX:AC-001"
+        ],
+        "line": 7,
+        "quote": "create hex operator"
+      },
+      {
+        "id": "coverage:invalid-input",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S2",
+        "clauseIds": [
+          "I-HEX:REQ-001",
+          "I-HEX:REQ-002",
+          "I-HEX:REQ-005",
+          "I-HEX:REQ-007",
+          "I-HEX:AC-003",
+          "I-HEX:AC-004"
+        ],
+        "line": 7,
+        "quote": "create hex operator"
+      },
+      {
+        "id": "coverage:screenshot-tests",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "I-HEX:REQ-006",
+          "I-HEX:REQ-007",
+          "I-HEX:AC-002",
+          "I-HEX:AC-003"
+        ],
+        "line": 16,
+        "quote": "screen shot and unit test cases"
+      }
+    ],
+    "findings": [
+      {
+        "id": "F-001-negative-integer-format",
+        "severity": "blocking",
+        "message": "Specification generation 1 acknowledges clarification Q-002 as uppercase, prefix-free, integer-only output, but it applies conversion to any valid decimal integer without excluding negative integers or defining signed-magnitude versus fixed-width two's-complement representation. This leaves REQ-003 and REQ-004 non-deterministic for negative input and requires a specification successor decision.",
+        "clauseId": "I-HEX:REQ-003",
+        "sourceId": "story",
+        "line": 7,
+        "quote": "create hex operator"
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "faa34c4775bb0c6afe8a42aa503467faea5b0e599b464e0171ab28f244fa7acf",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "product-owner",
+    "readOnly": true
+  },
+  "submittedAt": "2026-10-11T13:14:20.203Z",
+  "recordSha256": "087f549cfb683c0c466b9dee7a03d3afa6884586d97d0887e1adcd3fa92277ea"
+}
