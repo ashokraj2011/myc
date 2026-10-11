@@ -5,7 +5,7 @@
   "workType": "spec-driven-standard",
   "phase": "verification",
   "generation": 1,
-  "status": "in_progress",
+  "status": "awaiting_approval",
   "generatedBy": {
     "name": "Ashok Raj",
     "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -49,8 +49,8 @@
     "publishedAt": "2026-10-11T18:26:40.915Z"
   },
   "sourceCommit": "40665d9568458df55b6abc376b8c84f6746c0aaa",
-  "generationCommit": null,
-  "publicationCommit": null,
+  "generationCommit": "15b309a00b30d6f18c8b501405f0edfcc3e1a44e",
+  "publicationCommit": "15b309a00b30d6f18c8b501405f0edfcc3e1a44e",
   "configSha256": "083d8965c65e8abeeb52bc7c40dd470aa5cdc144f592aea74911d5544b9770be",
   "sourceSha256": "f204490875e9d5bb38ee534560b2feb433f58c03bbfdccf5b5207e0be012f801",
   "template": {
