@@ -4,7 +4,7 @@
   "workId": "i-hex",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 1,
+  "generation": 2,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "spec.md",
       "mediaType": "text/markdown",
-      "sha256": "f6d3d46d8f2be054b18eae7ce1938545d3c165cdda092268c009777c101408ab",
-      "bytes": 5074
+      "sha256": "12fdbfea5121cb30bdc1694f92f18dea7f978257325ce92fa0b21648171ea15a",
+      "bytes": 5637
     },
-    "generation": 1,
-    "publishedAt": "2026-10-11T13:12:19.423Z"
+    "generation": 2,
+    "publishedAt": "2026-10-11T13:16:36.055Z"
   },
-  "sourceCommit": "475809dc43e53fcb4662e94ff35bf5ef4c500cb7",
+  "sourceCommit": "b4b1b012a06ef853b6bb6bda5f3c9eb3e57ac7db",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "083d8965c65e8abeeb52bc7c40dd470aa5cdc144f592aea74911d5544b9770be",
@@ -66,13 +66,13 @@
   },
   "remoteAgent": null,
   "clarification": {
-    "generation": 1,
-    "path": "singularity/work-items/i-hex/context/clarifications-specification-gen1.json",
-    "sha256": "2b32ec2b4aabd9057a825a52e684497b3a622ba23de53fce3bd9a06be9d19d02",
-    "promptSha256": "852c83abdcc0662ac5c021c9570dde81973c8c13ff23cfa387e86c003c922d31",
-    "responses": 5,
+    "generation": 2,
+    "path": "singularity/work-items/i-hex/context/clarifications-specification-gen2.json",
+    "sha256": "5f6231251da3c56d147ea50267c04b444cccd778e19ecfe6811184150fb5bbde",
+    "promptSha256": "34a4c21b8911e30134b597a7d5ce1d3076d627c585c2b880ab65e1af768a5f2f",
+    "responses": 1,
     "markers": [],
-    "recordedAt": "2026-10-11T13:11:21.272Z",
+    "recordedAt": "2026-10-11T13:16:05.886Z",
     "recordedBy": {
       "name": "Ashok Raj",
       "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -85,6 +85,26 @@
       "generation": 1,
       "path": "singularity/work-items/i-hex/telemetry/specification-gen1.json",
       "sha256": "32ecad6e026d2842477faabf3ffcefe637ccd1930b22dfeb824b2594614035b9",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 12223,
+        "estimatedTokens": 3056,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 12223,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 2,
+      "path": "singularity/work-items/i-hex/telemetry/specification-gen2.json",
+      "sha256": "53a47f42874ba4e1d05d8b198299dbd337fff09a351f4bd4adc18415fa94a631",
       "status": "pending",
       "models": [],
       "providerCost": null,
@@ -124,6 +144,27 @@
       "completedAt": "2026-10-11T13:12:19.423Z",
       "agent": "product-owner",
       "generation": 1
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-11T13:16:36.055Z",
+      "completedAt": "2026-10-11T13:16:36.055Z",
+      "agent": "product-owner",
+      "generation": 2
     }
   ],
   "sequenceOverrides": [],
@@ -138,10 +179,11 @@
 ## Agent brief
 
 Add a Hex action to the scientific calculator keypad for calculator users. When the displayed value
-is a valid decimal integer, the action converts it to uppercase hexadecimal without a prefix. The
-action remains disabled for empty, invalid, or non-integer displays. Delivery evidence consists of
-one screenshot showing a successful result and unit tests covering successful conversion and invalid
-input. Hexadecimal entry, arithmetic syntax, radix modes, and other base conversions are excluded.
+is a valid non-negative decimal integer, the action converts it to uppercase hexadecimal without a
+prefix. The action remains disabled for empty, invalid, negative, or non-integer displays. Delivery
+evidence consists of one screenshot showing a successful result and unit tests covering successful
+conversion and invalid input. Hexadecimal entry, arithmetic syntax, radix modes, and other base
+conversions are excluded.
 
 ## Actors
 
@@ -154,14 +196,14 @@ input. Hexadecimal entry, arithmetic syntax, radix modes, and other base convers
 
 **Priority:** P1
 **Actor:** Calculator user
-**Context:** The scientific calculator keypad is visible and the display contains a valid decimal
-integer.
+**Context:** The scientific calculator keypad is visible and the display contains a valid
+non-negative decimal integer.
 
 - **Given** the display contains the decimal integer `255`
   **When** the user activates Hex
   **Then** the display shows `FF`
 
-- **Given** the display contains any valid decimal integer
+- **Given** the display contains any valid non-negative decimal integer
   **When** the user activates Hex
   **Then** the displayed result uses uppercase hexadecimal digits and has no radix prefix
 
@@ -170,16 +212,20 @@ integer.
 **Priority:** P2
 **Actor:** Calculator user
 **Context:** The scientific calculator keypad is visible but the current display is empty, invalid,
-or non-integer.
+negative, or non-integer.
 
 - **Given** the displayed value is not a valid decimal integer
   **When** the user views the scientific keypad
   **Then** Hex is disabled and cannot alter the display
 
+- **Given** the display contains the negative decimal integer `-10`
+  **When** the user views the scientific keypad
+  **Then** Hex is disabled and the display remains `-10`
+
 ## Failure and empty states
 
 - **Empty:** Hex is disabled when the display has no value.
-- **Failure:** Hex is disabled when the display contains an invalid or unsupported value.
+- **Failure:** Hex is disabled when the display contains an invalid, negative, or unsupported value.
 - **Partial:** Conversion is atomic; the display changes only after a successful conversion.
 
 ## Permissions
@@ -189,8 +235,8 @@ valid; otherwise the disabled control remains visible on the scientific keypad.
 
 ## Boundary conditions
 
-- Input is the decimal integer currently represented by the calculator display.
-- Non-integer, empty, and invalid display values are unsupported and keep Hex disabled.
+- Input is the non-negative decimal integer currently represented by the calculator display.
+- Negative, non-integer, empty, and invalid display values are unsupported and keep Hex disabled.
 - Output uses uppercase hexadecimal digits with no `0x` or other radix prefix.
 - Conversion replaces the displayed value in one operation.
 - The feature is limited to the scientific calculator keypad.
@@ -198,14 +244,15 @@ valid; otherwise the disabled control remains visible on the scientific keypad.
 ## Requirements
 
 - The scientific calculator keypad shall expose a Hex action. *(S1, S2)* [i-hex:REQ-001]
-- Hex shall be enabled only when the display represents a valid decimal integer. *(S1, S2)*
+- Hex shall be enabled only when the display represents a valid non-negative decimal integer.
+  *(S1, S2)*
   [i-hex:REQ-002]
-- Activating Hex shall replace the valid displayed decimal integer with its hexadecimal equivalent.
-  *(S1)* [i-hex:REQ-003]
+- Activating Hex shall replace the valid displayed non-negative decimal integer with its hexadecimal
+  equivalent. *(S1)* [i-hex:REQ-003]
 - Hexadecimal output shall use uppercase digits and shall not include a radix prefix. *(S1)*
   [i-hex:REQ-004]
-- An empty, invalid, or non-integer display shall leave Hex disabled and the display unchanged.
-  *(S2)* [i-hex:REQ-005]
+- An empty, invalid, negative, or non-integer display shall leave Hex disabled and the display
+  unchanged. *(S2)* [i-hex:REQ-005]
 - Delivery evidence shall include one screenshot showing a successful Hex result. *(S1)*
   [i-hex:REQ-006]
 - Unit tests shall cover successful conversion and rejected invalid input. *(S1, S2)*
@@ -217,7 +264,7 @@ valid; otherwise the disabled control remains visible on the scientific keypad.
   converted display value. *(S1)* [i-hex:AC-002]
 - Automated unit tests pass for at least one valid decimal-to-hexadecimal conversion and at least
   one invalid or unsupported input. *(S1, S2)* [i-hex:AC-003]
-- Hex cannot be activated while the display is empty, invalid, or non-integer. *(S2)*
+- Hex cannot be activated while the display is empty, invalid, negative, or non-integer. *(S2)*
   [i-hex:AC-004]
 
 ## Non-functional requirements
@@ -233,7 +280,8 @@ valid; otherwise the disabled control remains visible on the scientific keypad.
 
 - The current calculator display remains the single source and destination for the conversion.
 - Existing calculator conventions determine how a user reaches the scientific keypad.
-- "Invalid input" in the requested test evidence includes a value for which Hex must be disabled.
+- "Invalid input" in the requested test evidence includes negative values and any other value for
+  which Hex must be disabled.
 
 ## Out of scope
 
@@ -250,4 +298,7 @@ valid; otherwise the disabled control remains visible on the scientific keypad.
 - **DOC-002 — Human clarification record:**
   `singularity/work-items/i-hex/context/clarifications-specification-gen1.json`, recording the five
   scope, formatting, placement, failure-state, and evidence decisions for generation 1.
+- **DOC-003 — Successor clarification record:**
+  `singularity/work-items/i-hex/context/clarifications-specification-gen2.json`, recording that Hex
+  is disabled for negative values and leaves the display unchanged.
 - No other supporting documents were supplied to this phase.
