@@ -1,0 +1,168 @@
+{
+  "clauses": [
+    {
+      "anchor": "[i-hex:REQ-001]",
+      "body": "The scientific calculator keypad shall expose a Hex action. *(S1, S2)*",
+      "bodySha256": "2ce141bb329c22a20f980a2a290c47e9dd2fe631ef7ddf8fa57c84de4a7d0813",
+      "dependsOn": [],
+      "id": "I-HEX:REQ-001",
+      "namespace": "I-HEX",
+      "number": 1,
+      "source": {
+        "line": 200,
+        "path": "singularity/work-items/i-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[i-hex:REQ-002]",
+      "body": "Hex shall be enabled only when the display represents a valid decimal integer. *(S1, S2)*",
+      "bodySha256": "08707c5d7813b1e15a4171cc7f7d0d7a7fcbd29c01f103bf2ba1f759e68a9217",
+      "dependsOn": [],
+      "id": "I-HEX:REQ-002",
+      "namespace": "I-HEX",
+      "number": 2,
+      "source": {
+        "line": 202,
+        "path": "singularity/work-items/i-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[i-hex:REQ-003]",
+      "body": "Activating Hex shall replace the valid displayed decimal integer with its hexadecimal equivalent.\n*(S1)*",
+      "bodySha256": "b34197c633a120aa81de052419236b6db083881b27fe6be9e7c94efb52cf46ae",
+      "dependsOn": [],
+      "id": "I-HEX:REQ-003",
+      "namespace": "I-HEX",
+      "number": 3,
+      "source": {
+        "line": 204,
+        "path": "singularity/work-items/i-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[i-hex:REQ-004]",
+      "body": "Hexadecimal output shall use uppercase digits and shall not include a radix prefix. *(S1)*",
+      "bodySha256": "2a3754bede45c371bf8078ec9c56c80ce1f9d94708dc3b8bc4dbcee85926b807",
+      "dependsOn": [],
+      "id": "I-HEX:REQ-004",
+      "namespace": "I-HEX",
+      "number": 4,
+      "source": {
+        "line": 206,
+        "path": "singularity/work-items/i-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[i-hex:REQ-005]",
+      "body": "An empty, invalid, or non-integer display shall leave Hex disabled and the display unchanged.\n*(S2)*",
+      "bodySha256": "7d1edb00a18befa10698f8588170c851c83c609f9374310337ddfd242f95e69b",
+      "dependsOn": [],
+      "id": "I-HEX:REQ-005",
+      "namespace": "I-HEX",
+      "number": 5,
+      "source": {
+        "line": 208,
+        "path": "singularity/work-items/i-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[i-hex:REQ-006]",
+      "body": "Delivery evidence shall include one screenshot showing a successful Hex result. *(S1)*",
+      "bodySha256": "c830e36cf9fb0dfa308b3d4699a26c421ac7f8bb02d4ab2fe644487396ab5248",
+      "dependsOn": [],
+      "id": "I-HEX:REQ-006",
+      "namespace": "I-HEX",
+      "number": 6,
+      "source": {
+        "line": 210,
+        "path": "singularity/work-items/i-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[i-hex:REQ-007]",
+      "body": "Unit tests shall cover successful conversion and rejected invalid input. *(S1, S2)*",
+      "bodySha256": "302151dc1f337974230b63092c4bbacfcb957b3db348bc8325da22dab6f4cbac",
+      "dependsOn": [],
+      "id": "I-HEX:REQ-007",
+      "namespace": "I-HEX",
+      "number": 7,
+      "source": {
+        "line": 212,
+        "path": "singularity/work-items/i-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[i-hex:AC-001]",
+      "body": "With `255` displayed on the scientific calculator, activating Hex displays `FF`.\n*(S1)*",
+      "bodySha256": "08a6bc36ef84e1d4a97944355c18d0019eb4f4d9801a06ba66184769b61383a1",
+      "dependsOn": [],
+      "id": "I-HEX:AC-001",
+      "namespace": "I-HEX",
+      "number": 1,
+      "source": {
+        "line": 215,
+        "path": "singularity/work-items/i-hex/artifacts/specification/spec.md"
+      },
+      "type": "AC"
+    },
+    {
+      "anchor": "[i-hex:AC-002]",
+      "body": "A successful result screenshot visibly includes the scientific keypad's Hex action and its\nconverted display value. *(S1)*",
+      "bodySha256": "f80468c761481d4237f014e124ba3988c27f5f550e6665fd4b8284bf8a599e4d",
+      "dependsOn": [],
+      "id": "I-HEX:AC-002",
+      "namespace": "I-HEX",
+      "number": 2,
+      "source": {
+        "line": 217,
+        "path": "singularity/work-items/i-hex/artifacts/specification/spec.md"
+      },
+      "type": "AC"
+    },
+    {
+      "anchor": "[i-hex:AC-003]",
+      "body": "Automated unit tests pass for at least one valid decimal-to-hexadecimal conversion and at least\none invalid or unsupported input. *(S1, S2)*",
+      "bodySha256": "9eb2531fb50660f0eda6d14642685c1e00c054291ec9a53d559e723b4e43723f",
+      "dependsOn": [],
+      "id": "I-HEX:AC-003",
+      "namespace": "I-HEX",
+      "number": 3,
+      "source": {
+        "line": 219,
+        "path": "singularity/work-items/i-hex/artifacts/specification/spec.md"
+      },
+      "type": "AC"
+    },
+    {
+      "anchor": "[i-hex:AC-004]",
+      "body": "Hex cannot be activated while the display is empty, invalid, or non-integer. *(S2)*",
+      "bodySha256": "54069d2966bb06f1929c810787a8c62c809e710254d6b304ff12f7d1abec5edf",
+      "dependsOn": [],
+      "id": "I-HEX:AC-004",
+      "namespace": "I-HEX",
+      "number": 4,
+      "source": {
+        "line": 221,
+        "path": "singularity/work-items/i-hex/artifacts/specification/spec.md"
+      },
+      "type": "AC"
+    }
+  ],
+  "generation": 1,
+  "indexSha256": "be4b9dcd6de21dce99925c88060a9d7fda91dec346357a174ae6b306338a6768",
+  "phase": "specification",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 9114,
+    "path": "singularity/work-items/i-hex/artifacts/specification/spec.md",
+    "sha256": "867c1ba0dc89f6dbf86582c3c7836aafb75c6f99d5610253842c0f0a9c79231e"
+  },
+  "workId": "i-hex"
+}
