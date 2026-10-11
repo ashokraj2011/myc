@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "workId": "9-hex",
+  "phase": "specification",
+  "generation": 1,
+  "mode": "required",
+  "promptPath": "singularity/work-items/9-hex/context/prompts/specification-gen1.md",
+  "promptSha256": "1d3fe69d35948eb5109911b038ef38d05aab978a7f286ab0a909457d5b684007",
+  "groundingRecordPath": "singularity/work-items/9-hex/context/specification-gen1.json",
+  "groundingRecordSha256": "56009d5cca88fd30cdea06d177bbcb8fa998171c3568c7f57d7492f51f813631",
+  "responses": [
+    {
+      "id": "Q-001",
+      "question": "Should the hex operator convert a non-negative integer input to a hexadecimal representation or perform hexadecimal arithmetic in calculator expressions?",
+      "answer": "Convert an integer to hexadecimal.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-002",
+      "question": "How should a valid hexadecimal result be displayed?",
+      "answer": "Uppercase digits, no 0x prefix.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-003",
+      "question": "Which input forms count as non-negative integers?",
+      "answer": "Unsigned decimal digits only; reject signs, whitespace, decimals, and other text.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-004",
+      "question": "Is there a target screenshot to match, or should acceptance be behavior-only?",
+      "answer": "There is no reference screenshot to match; capture a completion screenshot as evidence after implementation.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-005",
+      "question": "What input range should count as valid?",
+      "answer": "Limit to JavaScript safe integers; larger values show ERR.",
+      "status": "answered",
+      "blocking": false
+    }
+  ],
+  "completed": true,
+  "recordedAt": "2026-10-11T23:35:29.995Z",
+  "recordedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "agent": "product-owner"
+}
