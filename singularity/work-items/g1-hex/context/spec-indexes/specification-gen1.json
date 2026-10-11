@@ -1,0 +1,196 @@
+{
+  "clauses": [
+    {
+      "anchor": "[g1-hex:REQ-001]",
+      "body": "The standard calculator shall expose a visible button with the accessible name `HEX`. *(S1, S2)*",
+      "bodySha256": "e8d72120cbd4d4d7265d01ff12334b932a0bcef85ae573d6f718d0199a96751e",
+      "dependsOn": [],
+      "id": "G1-HEX:REQ-001",
+      "namespace": "G1-HEX",
+      "number": 1,
+      "source": {
+        "line": 224,
+        "path": "singularity/work-items/g1-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[g1-hex:REQ-002]",
+      "body": "Activating `HEX` shall convert the current decimal value when it is an integer in the inclusive\nrange `0` through `Number.MAX_SAFE_INTEGER`. *(S1)*",
+      "bodySha256": "daeecb5b7d3adee6bbcfd9668e0079314492938155aa689340427c3e8cc88a25",
+      "dependsOn": [],
+      "id": "G1-HEX:REQ-002",
+      "namespace": "G1-HEX",
+      "number": 2,
+      "source": {
+        "line": 226,
+        "path": "singularity/work-items/g1-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[g1-hex:REQ-003]",
+      "body": "A successful conversion shall replace the main result display with uppercase hexadecimal digits\nand shall not include a base prefix. *(S1)*",
+      "bodySha256": "e3a5a57a68be9194c4494f515d0bb13ef323ab0cae13d839235575470b4d3c90",
+      "dependsOn": [],
+      "id": "G1-HEX:REQ-003",
+      "namespace": "G1-HEX",
+      "number": 3,
+      "source": {
+        "line": 228,
+        "path": "singularity/work-items/g1-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[g1-hex:REQ-004]",
+      "body": "Activating `HEX` for a negative or fractional value shall show the existing `Error` result and\nshall not truncate, round, or reinterpret the value. *(S2)*",
+      "bodySha256": "71b1d74c1629a8d4b5582552a2b3c6595f5a57455ef092c00914b20017374de1",
+      "dependsOn": [],
+      "id": "G1-HEX:REQ-004",
+      "namespace": "G1-HEX",
+      "number": 4,
+      "source": {
+        "line": 230,
+        "path": "singularity/work-items/g1-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[g1-hex:REQ-005]",
+      "body": "Activating `HEX` for an empty, incomplete, invalid, non-finite, or unsafe-integer value shall show\nthe existing `Error` result and shall not show partial conversion output. *(S2)*",
+      "bodySha256": "34b0e12101ce80b4b2f056cea57837c15d04b273e9a6f263fca8b5e5802b19eb",
+      "dependsOn": [],
+      "id": "G1-HEX:REQ-005",
+      "namespace": "G1-HEX",
+      "number": 5,
+      "source": {
+        "line": 233,
+        "path": "singularity/work-items/g1-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[g1-hex:REQ-006]",
+      "body": "The conversion logic shall be covered by unit tests for zero, a typical value, the maximum safe\ninteger, negative input, fractional input, invalid input, and input above the safe-integer\nboundary. *(S1, S2)*",
+      "bodySha256": "4d020118e1189e5932747a479d7380117b5f1f349be1f2e33c05ca6dc4ce4e1b",
+      "dependsOn": [],
+      "id": "G1-HEX:REQ-006",
+      "namespace": "G1-HEX",
+      "number": 6,
+      "source": {
+        "line": 236,
+        "path": "singularity/work-items/g1-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[g1-hex:REQ-007]",
+      "body": "The UI interaction shall be covered by a test that enters or calculates `255`, activates `HEX`,\nand observes `FF` in the main result display. *(S1)*",
+      "bodySha256": "7114175e78c7a88a6f7e3a7f68af1d13c4b8c2fa0cbb5568b0645f8a1de5a768",
+      "dependsOn": [],
+      "id": "G1-HEX:REQ-007",
+      "namespace": "G1-HEX",
+      "number": 7,
+      "source": {
+        "line": 238,
+        "path": "singularity/work-items/g1-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[g1-hex:AC-001]",
+      "body": "A screenshot shall show the standard calculator with the visible `HEX` button and `FF` displayed\nafter converting decimal `255`. *(S1)*",
+      "bodySha256": "63aee3d8d5d63ac37cdf7e19b2053558be9061d25cf6465d0aaed05e06c91f09",
+      "dependsOn": [],
+      "id": "G1-HEX:AC-001",
+      "namespace": "G1-HEX",
+      "number": 1,
+      "source": {
+        "line": 241,
+        "path": "singularity/work-items/g1-hex/artifacts/specification/spec.md"
+      },
+      "type": "AC"
+    },
+    {
+      "anchor": "[g1-hex:AC-002]",
+      "body": "Automated tests shall verify successful conversion and every specified invalid-input class without\nregressing existing calculator tests. *(S1, S2)*",
+      "bodySha256": "87bdd2d2d5451f3053a13c2164d3753a573f66e2eabfd9ee105b8ab4cceed806",
+      "dependsOn": [],
+      "id": "G1-HEX:AC-002",
+      "namespace": "G1-HEX",
+      "number": 2,
+      "source": {
+        "line": 243,
+        "path": "singularity/work-items/g1-hex/artifacts/specification/spec.md"
+      },
+      "type": "AC"
+    },
+    {
+      "anchor": "[g1-hex:AC-003]",
+      "body": "In the running application, `0`, `255`, and `9007199254740991` shall display `0`, `FF`, and\n`1FFFFFFFFFFFFF`, respectively, after `HEX` is activated. *(S1)*",
+      "bodySha256": "e2a061aa146955d9f640a5f6b46cedd947937bfd312b878db889b434e9603800",
+      "dependsOn": [],
+      "id": "G1-HEX:AC-003",
+      "namespace": "G1-HEX",
+      "number": 3,
+      "source": {
+        "line": 245,
+        "path": "singularity/work-items/g1-hex/artifacts/specification/spec.md"
+      },
+      "type": "AC"
+    },
+    {
+      "anchor": "[g1-hex:AC-004]",
+      "body": "In the running application, negative, fractional, invalid, non-finite, empty, incomplete, and\nunsafe-integer values shall display `Error` after `HEX` is activated. *(S2)*",
+      "bodySha256": "736f9bb3b4db888f25f09072c3bf4ddda355818d2fd177b4c9653ec0f83aa539",
+      "dependsOn": [],
+      "id": "G1-HEX:AC-004",
+      "namespace": "G1-HEX",
+      "number": 4,
+      "source": {
+        "line": 247,
+        "path": "singularity/work-items/g1-hex/artifacts/specification/spec.md"
+      },
+      "type": "AC"
+    },
+    {
+      "anchor": "[g1-hex:REQ-008]",
+      "body": "The `HEX` action shall use a semantic button that is keyboard-focusable and has the accessible name\n`HEX`, verifiable with the existing DOM test stack. *(S1, S2)*",
+      "bodySha256": "671e3c9a94cea63b934d1201abfd0457e067c9cae962ba874f61d92926b91fe6",
+      "dependsOn": [],
+      "id": "G1-HEX:REQ-008",
+      "namespace": "G1-HEX",
+      "number": 8,
+      "source": {
+        "line": 252,
+        "path": "singularity/work-items/g1-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    },
+    {
+      "anchor": "[g1-hex:REQ-009]",
+      "body": "Conversion shall execute locally in the browser without adding a network dependency or persisting\nthe converted value beyond the calculator's existing state behavior. *(S1, S2)*",
+      "bodySha256": "fd9af1f95bcf188e3a1e2740132a634a4f297b34f782655ba9cab912556e37be",
+      "dependsOn": [],
+      "id": "G1-HEX:REQ-009",
+      "namespace": "G1-HEX",
+      "number": 9,
+      "source": {
+        "line": 255,
+        "path": "singularity/work-items/g1-hex/artifacts/specification/spec.md"
+      },
+      "type": "REQ"
+    }
+  ],
+  "generation": 1,
+  "indexSha256": "9e29de9f2398555a2fd0dc1ff7752259dcfa6e71c914be47554e281b8bcd4587",
+  "phase": "specification",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 11595,
+    "path": "singularity/work-items/g1-hex/artifacts/specification/spec.md",
+    "sha256": "836d8ac348bcb7fcf7f01a9b715d22bffdd7278955e09cbe24d859575fbe6fe6"
+  },
+  "workId": "g1-hex"
+}
