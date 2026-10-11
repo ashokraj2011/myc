@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "workId": "1h-hex",
+  "phase": "specification",
+  "generation": 1,
+  "mode": "required",
+  "promptPath": "singularity/work-items/1h-hex/context/prompts/specification-gen1.md",
+  "promptSha256": "cdaac11a92194d7fe06a543e06553a8217a710e1a36ec0c093e103235f92671f",
+  "groundingRecordPath": "singularity/work-items/1h-hex/context/specification-gen1.json",
+  "groundingRecordSha256": "98d4c1b337f61d7872bb9b1cf9b73685f03192994a71810cd9c0f2461e727581",
+  "responses": [
+    {
+      "id": "Q-001",
+      "question": "The pinned request says only \"implement hex operator in calc,\" so the operation affects the UI and testable behavior. Which operation do you intend?",
+      "answer": "Convert the current calculator value from decimal to hexadecimal",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-002",
+      "question": "The pinned acceptance criterion is literally \"screenshit,\" and the composed evidence has no screenshot reference. For the decimal-to-hex conversion, what observable result should acceptance require?",
+      "answer": "Use the existing display: activating Hex replaces the current value with its base-16 digits (for example, 15 becomes F)",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-003",
+      "question": "The pinned request does not define negative or fractional inputs. A possible first-version boundary is to convert nonnegative whole numbers only, excluding those cases. Which boundary do you want?",
+      "answer": "Nonnegative whole numbers only",
+      "status": "answered",
+      "blocking": false
+    }
+  ],
+  "completed": true,
+  "recordedAt": "2026-10-11T17:10:17.730Z",
+  "recordedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "agent": "product-owner"
+}
