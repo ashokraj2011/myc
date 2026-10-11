@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "1h-hex",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G1-001",
+  "phaseId": "implementation",
+  "generation": 1,
+  "baselineSha256": "cc12b2a36873f88d8efef7dc8b999a0fa0662335259b240af55f12d83b2a1ef8",
+  "baseline": {
+    "path": "singularity/work-items/1h-hex/context/work-intervals/implementation-gen1-baseline.json",
+    "sha256": "cc12b2a36873f88d8efef7dc8b999a0fa0662335259b240af55f12d83b2a1ef8",
+    "verified": true,
+    "sourceBaseCommit": "15144f558b3007c215d4083f142e13e1a5e314a5"
+  },
+  "sourceBaseCommit": "15144f558b3007c215d4083f142e13e1a5e314a5",
+  "target": {
+    "branch": "1h-hex",
+    "head": "e9403729f349bee6cc614947aae56511d1987557",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": "src/App.jsx",
+      "status": "present",
+      "sha256": "813a5e5f6721232516c709ae2b9847869bb0151dfaab98d041918c09b252931e",
+      "bytes": 11990,
+      "verdict": "planned",
+      "clauseIds": [
+        "1H-HEX:AC-001",
+        "1H-HEX:AC-002",
+        "1H-HEX:REQ-001",
+        "1H-HEX:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/App.test.jsx",
+      "status": "present",
+      "sha256": "b7b77692df46816fbbf0d70c1c40b3fa773753a24b66fdd5e8e9c0addfd42564",
+      "bytes": 8158,
+      "verdict": "planned",
+      "clauseIds": [
+        "1H-HEX:AC-001",
+        "1H-HEX:AC-002",
+        "1H-HEX:REQ-001",
+        "1H-HEX:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/components/StandardKeypad.jsx",
+      "status": "present",
+      "sha256": "db063a21651bc5f9b82ba91871ab258d7a3f9d1a10fafc06a90e912bf7df758a",
+      "bytes": 7273,
+      "verdict": "planned",
+      "clauseIds": [
+        "1H-HEX:AC-001",
+        "1H-HEX:AC-002",
+        "1H-HEX:REQ-001"
+      ],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 3,
+    "planned": 3,
+    "unplanned": 0,
+    "protected": 0
+  },
+  "decision": {
+    "status": "aligned",
+    "summaryStatus": "clear",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "6df04415d92c16537ba31a60e1dd3e8c9890a9f658aade9f2c229867d969021d",
+  "reconciledAt": "2026-10-11T18:03:53.274Z",
+  "final": true,
+  "recordedAt": "2026-10-11T18:03:53.275Z",
+  "path": "singularity/work-items/1h-hex/context/work-intervals/reconciliations/6df04415d92c16537ba31a60e1dd3e8c9890a9f658aade9f2c229867d969021d.json"
+}

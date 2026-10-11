@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 3,
+  "workId": "1h-hex",
+  "epicId": null,
+  "planId": null,
+  "jiraIssueId": "1h-hex",
+  "initialJiraKey": null,
+  "currentJiraKey": null,
+  "canonicalBranch": "1h-hex",
+  "submittedBranch": "1h-hex",
+  "submissionCommit": "e9403729f349bee6cc614947aae56511d1987557",
+  "sourceCommit": "e9403729f349bee6cc614947aae56511d1987557",
+  "sourceTreeSha256": "sha256:7470b692af22abab027db415f84727b45c3d68c29d0d331957c799a4b3fdb908",
+  "phase": "implementation",
+  "generation": 1,
+  "authorship": {
+    "schemaVersion": 1,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "developer"
+    },
+    "kernelModel": {
+      "invoked": false,
+      "status": "exact",
+      "invocationIds": []
+    },
+    "externalAiUse": {
+      "value": "unknown",
+      "status": "unavailable"
+    },
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "implementation-summary.md",
+      "mediaType": "text/markdown",
+      "sha256": "f0baf60c496b380fbc4561b961f1535f72644cecdb2fb46419ea3c4330ec839f",
+      "bytes": 2558
+    },
+    "generation": 1,
+    "publishedAt": "2026-10-11T18:02:15.388Z"
+  },
+  "artifacts": [
+    {
+      "path": "singularity/work-items/1h-hex/artifacts/implementation/implementation-summary.md",
+      "kind": "document",
+      "sha256": "c2d2639eee5311d6c0f06806c880de6279a689989f8ca13d00884fa1215d6806",
+      "size": 14363,
+      "reference": {
+        "handle": "sfref:v1:story:1h-hex:f4af03e9414d60e67ac62b85407005d6b1efb2dc13da3ebae7b0a2c02b676a21",
+        "recordHash": "f4af03e9414d60e67ac62b85407005d6b1efb2dc13da3ebae7b0a2c02b676a21"
+      }
+    },
+    {
+      "path": "src/App.jsx",
+      "kind": "code",
+      "sha256": "813a5e5f6721232516c709ae2b9847869bb0151dfaab98d041918c09b252931e",
+      "size": 11990
+    },
+    {
+      "path": "src/App.test.jsx",
+      "kind": "test",
+      "sha256": "b7b77692df46816fbbf0d70c1c40b3fa773753a24b66fdd5e8e9c0addfd42564",
+      "size": 8158
+    },
+    {
+      "path": "src/components/StandardKeypad.jsx",
+      "kind": "code",
+      "sha256": "db063a21651bc5f9b82ba91871ab258d7a3f9d1a10fafc06a90e912bf7df758a",
+      "size": 7273
+    }
+  ],
+  "references": [
+    {
+      "handle": "sfref:v1:story:1h-hex:f4af03e9414d60e67ac62b85407005d6b1efb2dc13da3ebae7b0a2c02b676a21",
+      "recordHash": "f4af03e9414d60e67ac62b85407005d6b1efb2dc13da3ebae7b0a2c02b676a21",
+      "purpose": "review-evidence",
+      "required": true
+    }
+  ],
+  "agentBriefs": [
+    {
+      "consumerPhase": "convergence",
+      "status": "ready",
+      "path": "singularity/work-items/1h-hex/context/briefs/implementation-gen1-for-convergence.json",
+      "renderedPath": "singularity/work-items/1h-hex/context/briefs/implementation-gen1-for-convergence.md",
+      "sourceSha256": "d8705a3b238c7a1b515dfa1c112d5530095e6dce70a0dbe73720b6f28638076c",
+      "sourceBytes": 14281,
+      "renderedSha256": "eb54eede6665b780eb3c751c95c11cf966de1f00874bd35725605c21058bcd10",
+      "integritySha256": "2041f1a7997d4b342a226a5438dc20088597b02e0cb85c960a47e861e2bc614d"
+    },
+    {
+      "consumerPhase": "verification",
+      "status": "ready",
+      "path": "singularity/work-items/1h-hex/context/briefs/implementation-gen1-for-verification.json",
+      "renderedPath": "singularity/work-items/1h-hex/context/briefs/implementation-gen1-for-verification.md",
+      "sourceSha256": "d8705a3b238c7a1b515dfa1c112d5530095e6dce70a0dbe73720b6f28638076c",
+      "sourceBytes": 14281,
+      "renderedSha256": "92c48447fba61410759ea5dd6b1f1043a980bde4e1071813c679aa6ffc0b96b8",
+      "integritySha256": "4937a2ca6777d01197cb467c3cb149d6ff27d4c6f12e9cca8f3cbab53da469ce"
+    }
+  ],
+  "checks": [
+    {
+      "id": ".-node-tests",
+      "command": "npm test -- --reporter=json --outputFile=.sflow/results/node-tests.json",
+      "kind": "test",
+      "requirement": "required",
+      "workingDirectory": ".",
+      "resultIsolated": true,
+      "externalModelPolicy": "never",
+      "timeoutMs": 1800000,
+      "sourceCommit": "e9403729f349bee6cc614947aae56511d1987557",
+      "sourceTreeSha256": "sha256:7470b692af22abab027db415f84727b45c3d68c29d0d331957c799a4b3fdb908",
+      "testRuntime": {
+        "node": "v22.14.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "profile": {
+          "nodeOptions": []
+        },
+        "nodeOptionsSha256": "sha256:12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "sha256": "sha256:dbe379c7bb0e9e8a2c3b876d8cb6d1376637cc2489ae3dfb9e67d6262af8f908"
+      },
+      "startedAt": "2026-10-11T18:03:49.935Z",
+      "completedAt": "2026-10-11T18:03:52.915Z",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "\n> calc-app@0.0.0 test\n> vitest run --reporter=json --outputFile=.sflow/results/node-tests.json\n\nJSON report written to /Users/ashokraj/Downloads/myxc/myc1/.singularity-flow/story-worktrees/.w-873c4f96530667bf0ce341b4/.sflow/results/node-tests.json\n",
+      "stderr": "",
+      "stdoutBytes": 249,
+      "stderrBytes": 0,
+      "stdoutTruncated": false,
+      "stderrTruncated": false
+    }
+  ],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-11T18:02:15.388Z",
+      "completedAt": "2026-10-11T18:02:15.388Z",
+      "agent": "developer",
+      "generation": 1
+    }
+  ],
+  "approvals": [],
+  "visualAssurance": null,
+  "submissionEvidence": {
+    "architectureIntent": null,
+    "architectureDecision": null,
+    "codeDelivery": {
+      "path": "singularity/work-items/1h-hex/context/code-delivery/implementation-gen1.json",
+      "sha256": "2846c648be05f3210e5c584eaeeddfdc70513394fbb7134ab76ce0895ab82151",
+      "changeSetPath": "singularity/work-items/1h-hex/context/code-delivery/implementation-gen1-changes.json",
+      "changeSetDigest": "sha256:a5101a111d4b160cc122ea87508bfe0176cf3066b7ded6883e883f4d3d7a5ad7",
+      "status": "ready",
+      "autoCandidate": null,
+      "autoCandidateVerification": null
+    },
+    "testExecutions": [
+      {
+        "commandId": ".-node-tests",
+        "path": "singularity/work-items/1h-hex/context/code-delivery/tests/attempts/implementation/TA-2850aaf0adeec542dcbd.json",
+        "sha256": "7f8726a71fd5888ba9db87ecf982a3be27d1bc76b7996b76235e87be88652fa6",
+        "status": "passed"
+      }
+    ],
+    "claimMaps": [
+      {
+        "kind": "observed",
+        "generation": 1,
+        "path": "singularity/work-items/1h-hex/context/claims/implementation-gen1-observed.json",
+        "sha256": "1d61a98e8d8eddd8464edff70c665eeea2dfe4618b79307134a4cafbe74b73b0"
+      }
+    ],
+    "checksSha256": "23382e7a35ae3be05e48a62575955b78f44560b058ade847778c1068abbd8bde",
+    "artifactSetSha256": "072ac4a1d430b1873108d65811e2181403af25b97a18414dfae59506b912d3fc"
+  },
+  "witnessReview": {
+    "enrollment": {
+      "schemaVersion": 1,
+      "mode": "disabled",
+      "witnessedClauses": {
+        "enabled": false,
+        "profiles": []
+      },
+      "testcaseExact": {
+        "mode": "disabled",
+        "profile": null,
+        "requiredAssurance": "unavailable",
+        "policySha256": "sha256:12b50a34a1f03338377ecd76f44b20cbee83e7b91a0b07392ef08e3d8fd60800"
+      },
+      "claimMapContractVersion": 2,
+      "cab": null,
+      "sgos": null,
+      "rollout": {
+        "id": "wel-v0.2-observe",
+        "version": 1,
+        "enrollment": "new-story-only"
+      },
+      "configurationAuthority": {
+        "repository": "https://github.com/ashokraj2011/myc.git",
+        "branch": "sflow/config",
+        "commit": "6456f2f5c51b34d93fb428e2a8e91e0e70d5c099",
+        "projectionSha256": "37ccaa9c01c5ed96d9e814f5b7cae79e751093d6250cf319f59ba3569b96631c"
+      }
+    },
+    "enrollmentClassification": "enrolled",
+    "enrollmentReason": null,
+    "clauseMappings": [
+      {
+        "mappingSha256": "sha256:1959b6376ae1d6cd25b135739605d7fe2eec6039d39130e21aaff75be14f1352",
+        "clauseId": "1H-HEX:AC-001",
+        "witnessType": "test",
+        "executionProfile": "vitest-static-v2",
+        "logicalTestId": "sha256:adbb9ee83f4561e5cb4713a3ff99f73fd3e8f6934973fdc152615fde1d8a7d65",
+        "sourcePath": "src/App.test.jsx",
+        "sourceDeclarationSha256": "sha256:913c23afa60871151eb77704b158581488e219231344922c10e4c420a9539704",
+        "supportSha256": null,
+        "clauseBodySha256": "sha256:71791b74d0845a64708d530c0bb4c2cac2e5d1c6431fb4d791f8543d01e24d14",
+        "contractSha256": "sha256:3567d8476fde940cbecdf20fc488073cba2ff52f770db9b2c65b61fff20e7158",
+        "slot": "tests",
+        "test": "'Hex conversion › replaces the current eligible value with uppercase hexadecimal digits' in src/App.test.jsx",
+        "reviewStatus": "unreviewed",
+        "decision": null,
+        "reason": null,
+        "expiresAt": null
+      },
+      {
+        "mappingSha256": "sha256:c896966b4d16813935bf6305bb68b68677ed503682a8ac7c34f65de7cd4bf451",
+        "clauseId": "1H-HEX:AC-002",
+        "witnessType": "test",
+        "executionProfile": "vitest-static-v2",
+        "logicalTestId": "sha256:adbb9ee83f4561e5cb4713a3ff99f73fd3e8f6934973fdc152615fde1d8a7d65",
+        "sourcePath": "src/App.test.jsx",
+        "sourceDeclarationSha256": "sha256:913c23afa60871151eb77704b158581488e219231344922c10e4c420a9539704",
+        "supportSha256": null,
+        "clauseBodySha256": "sha256:1fe9d0621956e5b1cf57b9450bbe530fc204c11ccee77f4ef2e07aa553927b08",
+        "contractSha256": "sha256:2fedbc5d5f1d5861cf00ccf7ee4bc3cc64a3b4286d8c114b0545c31909b1b798",
+        "slot": "tests",
+        "test": "'Hex conversion › replaces the current eligible value with uppercase hexadecimal digits' in src/App.test.jsx",
+        "reviewStatus": "unreviewed",
+        "decision": null,
+        "reason": null,
+        "expiresAt": null
+      },
+      {
+        "mappingSha256": "sha256:d47d7b7e88735fbcc2462c94769d57ec8f9c130de40f9cfaac683e76989c8bcb",
+        "clauseId": "1H-HEX:AC-001",
+        "witnessType": "test",
+        "executionProfile": "vitest-static-v2",
+        "logicalTestId": "sha256:2a52de7d4aa739ea8f250c0b71e5991cb25d496d653177366ef7ef873ee91465",
+        "sourcePath": "src/App.test.jsx",
+        "sourceDeclarationSha256": "sha256:8e43eb75f0d65652e99736cd740f3b00dd826fa59ff4b6ccaf498d54a3e90ee9",
+        "supportSha256": null,
+        "clauseBodySha256": "sha256:71791b74d0845a64708d530c0bb4c2cac2e5d1c6431fb4d791f8543d01e24d14",
+        "contractSha256": "sha256:3567d8476fde940cbecdf20fc488073cba2ff52f770db9b2c65b61fff20e7158",
+        "slot": "tests",
+        "test": "'Hex conversion › converts a calculated whole-number result' in src/App.test.jsx",
+        "reviewStatus": "unreviewed",
+        "decision": null,
+        "reason": null,
+        "expiresAt": null
+      }
+    ],
+    "testcaseObservations": []
+  },
+  "submittedAt": "2026-10-11T18:03:53.275Z",
+  "submittedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "status": "awaiting_review",
+  "packetSha256": "a55b12f67b0f9c6a27c5e48e8a47d5c130eee8fdbae162b173a8aadabeda5731"
+}

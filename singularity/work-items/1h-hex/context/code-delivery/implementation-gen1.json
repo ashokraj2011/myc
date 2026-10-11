@@ -77,12 +77,24 @@
       {
         "clauseId": "1H-HEX:AC-001",
         "testSource": "src/App.test.jsx",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": ".-node-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       },
       {
         "clauseId": "1H-HEX:AC-002",
         "testSource": "src/App.test.jsx",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": ".-node-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       }
     ],
     "witnesses": [
@@ -524,11 +536,19 @@
     ],
     "bindingsSha256": "sha256:6be306476807860d749b7cdcdf7552a4433d0fe4b4eaa00699da7c30b0e22db2"
   },
-  "testExecutions": [],
+  "testExecutions": [
+    {
+      "commandId": ".-node-tests",
+      "attemptId": "TA-2850aaf0adeec542dcbd",
+      "receiptPath": "singularity/work-items/1h-hex/context/code-delivery/tests/attempts/implementation/TA-2850aaf0adeec542dcbd.json",
+      "receiptSha256": "7f8726a71fd5888ba9db87ecf982a3be27d1bc76b7996b76235e87be88652fa6",
+      "status": "passed"
+    }
+  ],
   "tree": {
     "workingStateDigest": "sha256:7470b692af22abab027db415f84727b45c3d68c29d0d331957c799a4b3fdb908",
-    "generationCommit": null,
-    "generationTree": null
+    "generationCommit": "e9403729f349bee6cc614947aae56511d1987557",
+    "generationTree": "55ecac3f50ab4b1236a7012bb3426c3af99fda09"
   },
   "model": {
     "task": "code",
@@ -547,6 +567,7 @@
     "observedAt": null,
     "generation": null
   },
-  "status": "pending-tests",
-  "capturedAt": "2026-10-11T18:02:15.388Z"
+  "status": "ready",
+  "capturedAt": "2026-10-11T18:02:15.388Z",
+  "validatedAt": "2026-10-11T18:03:53.000Z"
 }
