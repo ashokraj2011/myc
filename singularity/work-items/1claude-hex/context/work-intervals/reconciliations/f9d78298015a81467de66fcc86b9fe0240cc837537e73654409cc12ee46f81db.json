@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "1claude-hex",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G1-001",
+  "phaseId": "implementation",
+  "generation": 1,
+  "baselineSha256": "2f24a421e02e2de92728ee99f06f0dc0a4b6d8b4f7b0e3e34026ba712b3e7c8c",
+  "baseline": {
+    "path": "singularity/work-items/1claude-hex/context/work-intervals/implementation-gen1-baseline.json",
+    "sha256": "2f24a421e02e2de92728ee99f06f0dc0a4b6d8b4f7b0e3e34026ba712b3e7c8c",
+    "verified": true,
+    "sourceBaseCommit": "6e221fe43573ddb0a0d88a97aa36400da758cebc"
+  },
+  "sourceBaseCommit": "6e221fe43573ddb0a0d88a97aa36400da758cebc",
+  "target": {
+    "branch": "1claude-hex",
+    "head": "bc5dcc102dd020895b26eae44e54dcb5a3250d70",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": "src/App.jsx",
+      "status": "present",
+      "sha256": "a94a15c574551f445584b8f1f28c1a08a8d39b3d02b685c1e7c543efc0be5eae",
+      "bytes": 11195,
+      "verdict": "planned",
+      "clauseIds": [
+        "1CLAUDE-HEX:REQ-001",
+        "1CLAUDE-HEX:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/App.test.jsx",
+      "status": "present",
+      "sha256": "741185ed0142d762be6963289888010f88cba2e026e90651cf106c1d667cff1c",
+      "bytes": 9887,
+      "verdict": "planned",
+      "clauseIds": [
+        "1CLAUDE-HEX:AC-001",
+        "1CLAUDE-HEX:REQ-001",
+        "1CLAUDE-HEX:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/components/ScientificKeypad.jsx",
+      "status": "present",
+      "sha256": "371afd0163168cd108d42625c7ad44b7a6cb9c5ce3821f9c9548f01a0668e137",
+      "bytes": 4971,
+      "verdict": "planned",
+      "clauseIds": [
+        "1CLAUDE-HEX:REQ-001",
+        "1CLAUDE-HEX:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/utils/evaluator.js",
+      "status": "present",
+      "sha256": "252d207c429b88659f392444d13ff8273cc6e618b156c9bb9458dbf047847e43",
+      "bytes": 8252,
+      "verdict": "planned",
+      "clauseIds": [
+        "1CLAUDE-HEX:REQ-001",
+        "1CLAUDE-HEX:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/utils/evaluator.test.js",
+      "status": "present",
+      "sha256": "60c75dbf71f3fd8ad90700853c6c1810f61d6b50ba9bc763c2e88e6ec16ab8fd",
+      "bytes": 3369,
+      "verdict": "planned",
+      "clauseIds": [
+        "1CLAUDE-HEX:AC-001",
+        "1CLAUDE-HEX:REQ-001",
+        "1CLAUDE-HEX:REQ-002"
+      ],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 5,
+    "planned": 5,
+    "unplanned": 0,
+    "protected": 0
+  },
+  "decision": {
+    "status": "aligned",
+    "summaryStatus": "clear",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "f9d78298015a81467de66fcc86b9fe0240cc837537e73654409cc12ee46f81db",
+  "reconciledAt": "2026-10-12T13:06:23.334Z",
+  "final": true,
+  "recordedAt": "2026-10-12T13:06:23.335Z",
+  "path": "singularity/work-items/1claude-hex/context/work-intervals/reconciliations/f9d78298015a81467de66fcc86b9fe0240cc837537e73654409cc12ee46f81db.json"
+}

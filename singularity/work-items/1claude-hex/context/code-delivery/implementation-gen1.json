@@ -98,12 +98,24 @@
       {
         "clauseId": "1CLAUDE-HEX:AC-001",
         "testSource": "src/App.test.jsx",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": ".-node-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       },
       {
         "clauseId": "1CLAUDE-HEX:AC-001",
         "testSource": "src/utils/evaluator.test.js",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": ".-node-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       }
     ],
     "witnesses": [
@@ -591,11 +603,19 @@
     ],
     "bindingsSha256": "sha256:3087fafc7cc753bbe05aff650e1ccff19e3f7c89db6aa832c468d406bd3d86df"
   },
-  "testExecutions": [],
+  "testExecutions": [
+    {
+      "commandId": ".-node-tests",
+      "attemptId": "TA-c877917424c3dd2459c2",
+      "receiptPath": "singularity/work-items/1claude-hex/context/code-delivery/tests/attempts/implementation/TA-c877917424c3dd2459c2.json",
+      "receiptSha256": "dda109df3fdba51a4666daffb489a38bef7161649ed64f61a8c6e0fe5320b775",
+      "status": "passed"
+    }
+  ],
   "tree": {
     "workingStateDigest": "sha256:6b20784e68e9a9db660d274c82cf8cb25a4399cd7ca0bd5b047bfd17273948cd",
-    "generationCommit": null,
-    "generationTree": null
+    "generationCommit": "bc5dcc102dd020895b26eae44e54dcb5a3250d70",
+    "generationTree": "2d6ccd397acb3daf62994a1d6d0a0724dbf3da8e"
   },
   "model": {
     "task": "code",
@@ -614,6 +634,7 @@
     "observedAt": null,
     "generation": null
   },
-  "status": "pending-tests",
-  "capturedAt": "2026-10-12T13:02:44.651Z"
+  "status": "ready",
+  "capturedAt": "2026-10-12T13:02:44.651Z",
+  "validatedAt": "2026-10-12T13:06:23.184Z"
 }
