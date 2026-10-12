@@ -15,12 +15,13 @@
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent architect | **warning** |  |  |  |
 | 3 | Implementation (`implementation`) | developer | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via engineering-reviewers; agent developer | **warning** |  |  |  |
-| 4 | Convergence (`convergence`) | architect | **in_progress** | 1 | 0 | unavailable |
+| 4 | Convergence (`convergence`) | architect | **awaiting_approval** | 1 | 0 | unavailable |
 | 5 | Verification (`verification`) | qa | **not_started** | 0 | 0 | unavailable |
 | 6 | Release (`release`) | qa | **not_started** | 0 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-10-12T13:13:35.585Z — **phase_submitted** (convergence) by ashokraj2011: 1 artifacts
 - 2026-10-12T13:12:22.981Z — **phase_generated** (convergence) by ashokraj2011: generation 1
 - 2026-10-12T13:09:52.428Z — **phase_self_approved** (implementation) by ashokraj2011 · governed agent developer: threshold reached; advanced to convergence
 - 2026-10-12T13:09:52.428Z — **work_interval_closed** (implementation) by ashokraj2011 · governed agent developer: interval INT-implementation-G1-001 closed after phase approval
@@ -35,4 +36,3 @@
 - 2026-10-12T10:23:10.562Z — **phase_self_approved** (specification) by ashokraj2011 · governed agent product-owner: threshold reached; advanced to planning
 - 2026-10-12T10:20:37.646Z — **phase_submitted** (specification) by ashokraj2011 · governed agent product-owner: 1 artifacts
 - 2026-10-12T10:19:24.560Z — **source_review_submitted** (specification) by 88361104+ashokraj2011@users.noreply.github.com · governed agent sflow-source-reviewer: dc2609a17f2c96ec074c0486ec48354dbe33a3cb92fb16cbc7188026765d42c7
-- 2026-10-12T10:14:20.498Z — **phase_generated** (specification) by ashokraj2011 · governed agent product-owner: generation 1
