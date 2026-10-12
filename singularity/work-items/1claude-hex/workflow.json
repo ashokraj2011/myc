@@ -8374,6 +8374,14 @@
       "event": "phase_generated",
       "phase": "release",
       "detail": "generation 1"
+    },
+    {
+      "at": "2026-10-12T16:24:40.564Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "scope_decided",
+      "phase": "release",
+      "detail": "SRI-77b88f6611a7 is included (1CLAUDE-HEX:AC-001). Reason: Ashok confirmed inclusion; approved AC-001 explicitly requires screenshots of the successful and unsupported states plus automated tests for the specified inputs."
     }
   ],
   "measurement": {
@@ -10362,6 +10370,111 @@
         },
         "createdAt": "2026-10-12T16:21:58.803Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "1418cf31-4611-457b-ae68-3575aed9733b",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "1claude-hex",
+          "branch": "1claude-hex"
+        },
+        "phaseId": "release",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": "product-approvers",
+        "payload": {
+          "decision": "scope",
+          "item": "SRI-77b88f6611a7",
+          "disposition": "included",
+          "reviewPacketSha256": null
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-12T16:24:39.439Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "1418cf31-4611-457b-ae68-3575aed9733b",
+        "eventType": "decision-made",
+        "capabilityId": "myc1",
+        "subject": {
+          "branch": "1claude-hex",
+          "generation": 1,
+          "phase": "release",
+          "workId": "1claude-hex",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": "product-approvers",
+        "payload": {
+          "capabilityMapSha256": "48d460384819a855dcd7909eb6cae48e7fd6ce01d82748c66cb46d3ea8170731",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "a8b6f4a122f2ad38555f4fc4c268f606c36fdd0a845a848fee4e9f05663fe8ac",
+          "lifecycleEventId": "1418cf31-4611-457b-ae68-3575aed9733b",
+          "lifecyclePayload": {
+            "decision": "scope",
+            "item": "SRI-77b88f6611a7",
+            "disposition": "included",
+            "reviewPacketSha256": null
+          },
+          "templateSha256": "3d6717eace80085585d04c9c3f5c67f10d7a2e9c4e535a862c8b5aa900d556fe",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "1418cf31-4611-457b-ae68-3575aed9733b",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "1claude-hex",
+              "branch": "1claude-hex"
+            },
+            "phaseId": "release",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": "product-approvers",
+            "payload": {
+              "decision": "scope",
+              "item": "SRI-77b88f6611a7",
+              "disposition": "included",
+              "reviewPacketSha256": null
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-12T16:24:39.439Z"
+          }
+        },
+        "createdAt": "2026-10-12T16:24:39.444Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -10449,6 +10562,21 @@
       "previousRevisionSha256": null,
       "at": "2026-10-12T10:23:10.562Z",
       "revisionSha256": "sha256:f649d8f42311bb6929ecfb2890dabc1e9dca1f9eb7ca6b42e185b0991e60c0a7"
+    }
+  ],
+  "scopeDispositions": [
+    {
+      "item": "SRI-77b88f6611a7",
+      "disposition": "included",
+      "clauseIds": [
+        "1CLAUDE-HEX:AC-001"
+      ],
+      "reason": "Ashok confirmed inclusion; approved AC-001 explicitly requires screenshots of the successful and unsupported states plus automated tests for the specified inputs.",
+      "statementSha256": "dc2fae5c4286bde33b05917c2897c0f2f29d9d617b76b1c0a27ceaf93288c02e",
+      "actor": "ashokraj2011",
+      "authorityGroup": "product-approvers",
+      "identityAssurance": "configured-local",
+      "at": "2026-10-12T16:24:40.564Z"
     }
   ]
 }
