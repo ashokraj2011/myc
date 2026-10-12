@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "phase": "specification",
+  "generation": 1,
+  "reportSha256": "dc2609a17f2c96ec074c0486ec48354dbe33a3cb92fb16cbc7188026765d42c7",
+  "lifecycleEventId": "bd840b3c-5e56-478e-bbbc-48dafb8d9a90",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "specification",
+    "binding": {
+      "workId": "1claude-hex",
+      "phase": "specification",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/1claude-hex/USER-STORY.md",
+          "textSha256": "d28224215a441c47e770e6e69271ffc07e415af4843784d68588699903848d77",
+          "originalSha256": "7e37579cd40bc56419b60d49a1f8901fe812fa2bf06d4a6c23218fc2d60333ce"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:current-phase",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/1claude-hex/context/clarifications-specification-gen1.json",
+          "sha256": "dcaf0cbfbd9f2a89d4e427a376c4cdd8b3013ec2d7265e264d852079fd1bf79b"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/1claude-hex/artifacts/specification/spec.md",
+        "sha256": "435640f1dd70703d4c9f13d3bbbc59dda5adea19f02dbfcce39c06dfca76f319"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:current-phase"
+    ],
+    "rows": [
+      {
+        "id": "story-positive-integer",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "1CLAUDE-HEX:REQ-001"
+        ],
+        "line": 7,
+        "quote": "implement hex operator on calculator .It should covert an postive integer to hex value ,for all others it should show not supported in the screen"
+      },
+      {
+        "id": "story-other-inputs",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S2",
+        "clauseIds": [
+          "1CLAUDE-HEX:REQ-002"
+        ],
+        "line": 7,
+        "quote": "implement hex operator on calculator .It should covert an postive integer to hex value ,for all others it should show not supported in the screen"
+      },
+      {
+        "id": "story-acceptance-success",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "1CLAUDE-HEX:AC-001"
+        ],
+        "line": 16,
+        "quote": "Screenshot and test cases"
+      },
+      {
+        "id": "story-acceptance-unsupported",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S2",
+        "clauseIds": [
+          "1CLAUDE-HEX:AC-001"
+        ],
+        "line": 16,
+        "quote": "Screenshot and test cases"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "a0016f43bc13f4991a4347bdd86c60bed8424da1e4a226e03267702d04a4c9e5",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "product-owner",
+    "readOnly": true
+  },
+  "submittedAt": "2026-10-12T10:19:24.560Z",
+  "recordSha256": "dd749bc51d8026516a7fcfabf192f08f83ec8c92a858461b9c558e69bc741b31"
+}
