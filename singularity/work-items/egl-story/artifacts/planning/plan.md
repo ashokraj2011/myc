@@ -5,7 +5,7 @@
   "workType": "spec-driven-standard",
   "phase": "planning",
   "generation": 1,
-  "status": "awaiting_approval",
+  "status": "approved",
   "generatedBy": {
     "name": "Ashok Raj",
     "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -119,8 +119,109 @@
     }
   ],
   "sequenceOverrides": [],
-  "approvals": [],
-  "selfApproval": false,
+  "approvals": [
+    {
+      "decision": "approved",
+      "phase": "planning",
+      "at": "2026-10-12T03:05:25.754Z",
+      "actor": {
+        "name": "Ashok Raj",
+        "email": "88361104+ashokraj2011@users.noreply.github.com",
+        "login": "ashokraj2011",
+        "githubLookup": "resolved"
+      },
+      "agent": "architect",
+      "authorityGroup": "architecture-reviewers",
+      "identityAssurance": "configured-local",
+      "channel": "copilot-selection-receipt",
+      "generation": 1,
+      "artifactSha256": [
+        {
+          "path": "singularity/work-items/egl-story/artifacts/planning/plan.md",
+          "sha256": "ffb4d26ee830d5affdd3276b4ddd3d7963a9a448dc153f5a043e4044309686e0"
+        }
+      ],
+      "artifactSet": "spec-driven-planning",
+      "bundleSha256": "fc6793b73d347e246ccf27843e310a234df48f862321f452aa2845235dbad748",
+      "reviewPacketSha256": "99520bd3d5ba97db8b3e1366ddbd5323ac4842945c9feaae293f4e01fc4d5c2b",
+      "evidenceCommit": "f0540412e0b333fb5307c7a38aa1c121fcf524ae",
+      "artifactSetSha256": "ba655eec27e0608d89a0de47152e5c80e8d704964c5af4038dff9bbe19330f64",
+      "architectureIntent": null,
+      "architectureDecision": null,
+      "actionContext": {
+        "phase": "planning",
+        "label": "Planning",
+        "generation": 1,
+        "submittedAt": "2026-10-12T03:04:26.910Z",
+        "artifacts": [
+          {
+            "path": "singularity/work-items/egl-story/artifacts/planning/plan.md",
+            "sha256": "ffb4d26ee830d5affdd3276b4ddd3d7963a9a448dc153f5a043e4044309686e0"
+          }
+        ],
+        "agentBriefs": [
+          {
+            "consumerPhase": "convergence",
+            "status": "ready",
+            "path": "singularity/work-items/egl-story/context/briefs/planning-gen1-for-convergence.json",
+            "renderedPath": "singularity/work-items/egl-story/context/briefs/planning-gen1-for-convergence.md",
+            "renderedSha256": "77518d6a92e6c04c88ad74b434f23d1329a99c24a4659e710885cd61c34ba6a9",
+            "integritySha256": "52d4e4e0ddb144490f5d6a3fbc2040e3166873fdb094b6f35168c1774a2756a1",
+            "documentId": "agent-brief-planning-gen1-convergence",
+            "documentPath": "singularity/work-items/egl-story/context/briefs/planning-gen1-for-convergence.md",
+            "documentSha256": "77518d6a92e6c04c88ad74b434f23d1329a99c24a4659e710885cd61c34ba6a9"
+          },
+          {
+            "consumerPhase": "implementation",
+            "status": "ready",
+            "path": "singularity/work-items/egl-story/context/briefs/planning-gen1-for-implementation.json",
+            "renderedPath": "singularity/work-items/egl-story/context/briefs/planning-gen1-for-implementation.md",
+            "renderedSha256": "583c6e34224257f135c0f79341c94e43032cf52303491ff761852ff03362b9d6",
+            "integritySha256": "398e5b73db9be81aaf4a3bcf2c2563722ee75f276ae6cf35e38622019043ebd6",
+            "documentId": "agent-brief-planning-gen1-implementation",
+            "documentPath": "singularity/work-items/egl-story/context/briefs/planning-gen1-for-implementation.md",
+            "documentSha256": "583c6e34224257f135c0f79341c94e43032cf52303491ff761852ff03362b9d6"
+          },
+          {
+            "consumerPhase": "verification",
+            "status": "ready",
+            "path": "singularity/work-items/egl-story/context/briefs/planning-gen1-for-verification.json",
+            "renderedPath": "singularity/work-items/egl-story/context/briefs/planning-gen1-for-verification.md",
+            "renderedSha256": "541ab2e6573166de46f27973c962991aceaf5c3f49e58b3b21fc286f26f8b170",
+            "integritySha256": "1beb0bfcd7ff9c1a680d2eb9246f0c605e5336d0f3743f0cd33d399fa5961123",
+            "documentId": "agent-brief-planning-gen1-verification",
+            "documentPath": "singularity/work-items/egl-story/context/briefs/planning-gen1-for-verification.md",
+            "documentSha256": "541ab2e6573166de46f27973c962991aceaf5c3f49e58b3b21fc286f26f8b170"
+          }
+        ],
+        "reviewPacketSha256": "99520bd3d5ba97db8b3e1366ddbd5323ac4842945c9feaae293f4e01fc4d5c2b",
+        "submittedSourceCommit": "07842f1de3f8ffa976167a2316a04ad978f17d4f",
+        "planId": "20082baa32f28dbd0c68dff3"
+      },
+      "upstream": {
+        "sha256": "sha256:8bfa4530aa23d136e8aaf7d1ac069378383e88bf1c5a2c27af52bfa35a04c6aa",
+        "refs": [
+          {
+            "kind": "input",
+            "ref": "specification",
+            "sha256": "sha256:93b45d32ee1f73a9053a2ae41dbc73ac48501f5cc092065a32f83a2b2e22c7c2"
+          },
+          {
+            "kind": "documents",
+            "ref": "planning",
+            "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+          },
+          {
+            "kind": "decisions",
+            "ref": "story",
+            "sha256": "sha256:a75ecd676d300994d7cf29150047dc9925ea3782870fdef6c72956f0e0ad7bfd"
+          }
+        ]
+      },
+      "selfApproval": true
+    }
+  ],
+  "selfApproval": true,
   "conformanceTree": null
 }
 -->
