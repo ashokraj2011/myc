@@ -4,27 +4,51 @@
   "workId": "morning-1",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "fb88e7515a8f2db89224264efba9cf9613823ae5a624f151dc36273bc3b92149",
+      "bytes": 7769
+    },
+    "generation": 1,
+    "publishedAt": "2026-10-12T22:55:12.215Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "8140da0a86cf5cb55fbc3cd2a781501fc03efcf9",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "a8b6f4a122f2ad38555f4fc4c268f606c36fdd0a845a848fee4e9f05663fe8ac",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/morning-1/context/clarifications-specification-gen1.json",
+    "sha256": "df43ca9b5dc029060b6b7dbdb41243b15b375e2baad495a0d78d8b7b6c1719a7",
+    "promptSha256": "d3485720d0727ea529e69c607c5050fdef5d9e93b3703b4ba2e139386e21ee22",
+    "responses": 4,
+    "markers": [],
+    "recordedAt": "2026-10-12T22:54:19.738Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/morning-1/telemetry/specification-gen1.json",
+      "sha256": "000ce7a2a58ef29b86d51d691839a2f627e9039229dc023072358ad48a660602",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 18388,
+        "estimatedTokens": 4597,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 18388,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-12T22:55:12.215Z",
+      "completedAt": "2026-10-12T22:55:12.215Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -74,49 +155,50 @@ the answer `[SPK:REQ-067]` — deleting the text alone is an integrity failure, 
 
 ## Agent brief
 
-<!--
-Summarize the approved intent for downstream agents in a compact, standalone form. Include the
-problem, intended outcome, principal actors, most important scenarios, hard constraints, and major
-exclusions. Do not introduce claims that are absent from the sections below. Exact requirements and
-boundary conditions are preserved separately by the governed projection.
--->
+Add a hexadecimal operator to the calculator. For a supported whole-number value, invoking the
+operator shows the original decimal value and its hexadecimal equivalent together. If there is no
+current value, invoking the operator leaves the display unchanged. The required visual acceptance
+evidence is a screenshot showing both representations. The pinned Story and clarification do not
+prescribe exact hexadecimal text formatting or other calculator behavior.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+The calculator user invokes the operator and views its result. No separate role or permission
+distinction is specified by the pinned Story or clarification.
 
 ## User scenarios
 
 Prioritized. Each scenario leads with the situation, then its acceptance cases.
 
-### S1 — <the most important situation, in the user's words>
+### S1 — Show the hexadecimal equivalent of a whole-number value
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Calculator user
+**Context:** The calculator has a whole-number value.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+- **Given** the calculator displays a whole-number value
+  **When** the user invokes the hex operator
+  **Then** the calculator displays the original decimal value and its mathematically equivalent hexadecimal representation together.
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
+- **Given** the calculator displays zero
+  **When** the user invokes the hex operator
+  **Then** the decimal zero and its hexadecimal equivalent are displayed together.
 
-### S2 — <the next situation>
+### S2 — Invoke the operator without a current value
 
 **Priority:** P2
+**Actor:** Calculator user
+**Context:** The calculator has no current value.
 
-- **Given** … **When** … **Then** …
+- **Given** the calculator has no current value
+  **When** the user invokes the hex operator
+  **Then** the display remains unchanged.
 
 ## Failure and empty states
 
-What happens the first time, with nothing there yet, and when each step fails. These are where
-specifications are usually silent and implementations usually improvise.
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** When there is no current value, invoking the operator leaves the display unchanged.
+- **Failure:** No dependency failure behavior is specified by the pinned Story or clarification; do not add a new error behavior to this scope.
+- **Partial:** No partial-completion behavior is specified by the pinned Story or clarification.
 
 ## Scenario coverage
 
@@ -127,28 +209,35 @@ prose. Use the pinned request and clarification answers; do not invent error tex
 
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `morning-1:REQ-001` | S1 | TODO |
-| `morning-1:REQ-002` | S2 | TODO |
-| `morning-1:AC-001` | S1 | TODO |
+| `morning-1:REQ-001` | S1 | success |
+| `morning-1:REQ-002` | S1 | success |
+| `morning-1:REQ-002` | S1 | boundary |
+| `morning-1:REQ-003` | S2 | empty |
+| `morning-1:AC-001` | S1 | success |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+No separate permissions or protected-reader behavior are specified. The user of the calculator
+invokes the operator.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+The confirmed input scope is whole-number values only; fractional values are outside this
+specification. Zero is included and must produce its equivalent hexadecimal representation. When
+there is no current value, the display remains unchanged. Negative-value behavior and exact output
+formatting (including prefix and letter case) are not specified by the pinned Story or clarification.
 
 ## Requirements
 
 Numbered, testable, one obligation each. Cite the scenario each serves.
 
-- <requirement>. *(S1)* [morning-1:REQ-001]
-- <requirement>. *(S1, S2)* [morning-1:REQ-002]
+- For a whole-number current value, the user can invoke the hex operator to obtain its hexadecimal equivalent. *(S1)* [morning-1:REQ-001]
+- After the operator is invoked for a whole-number current value, the calculator displays the original decimal value and its hexadecimal equivalent together. *(S1)* [morning-1:REQ-002]
+- If there is no current value when the operator is invoked, the calculator display remains unchanged. *(S2)* [morning-1:REQ-003]
 
 Acceptance criteria use the same stable, namespaced form:
 
-- <observable acceptance outcome>. *(S1)* [morning-1:AC-001]
+- A screenshot of the calculator after conversion shows the decimal value and its hexadecimal equivalent together. *(S1)* [morning-1:AC-001]
 
 ## Verification intent
 
@@ -160,36 +249,53 @@ Planning must inherit these methods and cannot change them without an approved s
 
 | Clause | Methods | Criterion |
 |---|---|---|
-| `morning-1:REQ-001` | TODO | - |
-| `morning-1:REQ-002` | TODO | - |
-| `morning-1:AC-001` | TODO | `morning-1:AC-001` |
+| `morning-1:REQ-001` | test | - |
+| `morning-1:REQ-002` | test | - |
+| `morning-1:REQ-003` | test | - |
+| `morning-1:AC-001` | visual | `morning-1:AC-001` |
 
 ## Non-functional requirements
 
 Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
 will be measured; "fast" is not a requirement.
 
-Use governed requirement anchors here too (for example `[morning-1:REQ-003]`); `NFR-001` by
-itself is only a display label and is not a stable clause identity.
+No non-functional requirements are specified by the pinned Story or clarification.
+
+## Open questions
+
+The exact hexadecimal text format (for example, prefix and letter case) is unspecified. It does not
+change the confirmed requirement that the result be mathematically equivalent and shown alongside
+the decimal value. Owner: product approvers, if a fixed visual format is required before approval.
 
 ## Constitution articles
 
 Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
 cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
 
-- <ART-…>
+No constitution article IDs were included in the current phase inputs.
 
 ## Assumptions
 
 What this specification takes as true without proving. An assumption that turns out false is a
 change request, not a defect — which is only true if it was written down.
 
+The calculator has a current whole-number value when conversion is requested in S1. The exact
+representation of an equivalent hexadecimal value is left to implementation, subject to the
+display and visual acceptance requirements above.
+
 ## Out of scope
 
 Named explicitly, so the boundary is reviewable rather than inferred.
+
+Fractional-value conversion and any new calculator behavior beyond the hex operator requirements
+above are out of scope. Negative-value handling is not defined by the pinned Story or clarification.
 
 ## Sources
 
 Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
 offered to this phase that could not be read or was not available here, named as a gap. Without
 supporting documents, say so.
+
+No supporting documents were provided. Governing inputs are the pinned Story source
+(`singularity/work-items/morning-1/source.json`) and the recorded specification-generation-1 human
+clarification.
