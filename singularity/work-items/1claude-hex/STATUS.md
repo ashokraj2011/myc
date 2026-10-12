@@ -19,10 +19,11 @@
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
 | 5 | Verification (`verification`) | qa | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
-| 6 | Release (`release`) | qa | **in_progress** | 1 | 0 | unavailable |
+| 6 | Release (`release`) | qa | **awaiting_approval** | 1 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-10-12T16:25:03.563Z — **phase_submitted** (release) by ashokraj2011 · governed agent qa: 2 artifacts
 - 2026-10-12T16:24:40.564Z — **scope_decided** (release) by ashokraj2011 · governed agent qa: SRI-77b88f6611a7 is included (1CLAUDE-HEX:AC-001). Reason: Ashok confirmed inclusion; approved AC-001 explicitly requires screenshots of the successful and unsupported states plus automated tests for the specified inputs.
 - 2026-10-12T16:22:00.416Z — **phase_generated** (release) by ashokraj2011 · governed agent qa: generation 1
 - 2026-10-12T13:25:07.322Z — **phase_self_approved** (verification) by ashokraj2011 · governed agent qa: threshold reached; advanced to release
@@ -37,4 +38,3 @@
 - 2026-10-12T13:09:52.428Z — **phase_self_approved** (implementation) by ashokraj2011 · governed agent developer: threshold reached; advanced to convergence
 - 2026-10-12T13:09:52.428Z — **work_interval_closed** (implementation) by ashokraj2011 · governed agent developer: interval INT-implementation-G1-001 closed after phase approval
 - 2026-10-12T13:06:23.335Z — **phase_submitted** (implementation) by ashokraj2011 · governed agent developer: 6 artifacts
-- 2026-10-12T13:06:23.335Z — **work_interval_reconciled** (implementation) by system: aligned; 5 changed path(s)
