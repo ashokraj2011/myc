@@ -1,5 +1,32 @@
 import { describe, it, expect } from 'vitest';
-import { evaluateExpression, formatNumber } from '../utils/evaluator';
+import {
+  convertPositiveIntegerToHex,
+  evaluateExpression,
+  formatNumber,
+} from '../utils/evaluator';
+
+describe('convertPositiveIntegerToHex', () => {
+  // @ac:1CLAUDE-HEX:AC-001
+  it.each([
+    ['255', 'FF'],
+    ['4095', 'FFF'],
+    ['1.0', '1'],
+    ['1,000', '3E8'],
+  ])('converts supported positive whole number %s to %s', (input, expected) => {
+    expect(convertPositiveIntegerToHex(input)).toBe(expected);
+  });
+
+  // @ac:1CLAUDE-HEX:AC-001
+  it.each([
+    ['zero', '0'],
+    ['negative', '-1'],
+    ['fractional', '1.5'],
+    ['empty', ''],
+    ['non-numeric', 'abc'],
+  ])('rejects %s input', (_kind, input) => {
+    expect(convertPositiveIntegerToHex(input)).toBeNull();
+  });
+});
 
 // Verifies WRK-1978:AC-003 and WRK-1978:AC-005: the restyle work must not
 // change calculation semantics, expression evaluation, or number formatting.

@@ -1,5 +1,28 @@
 import * as math from 'mathjs';
 
+// @clause:1CLAUDE-HEX:REQ-001 Convert positive whole-number values to uppercase hexadecimal.
+// @clause:1CLAUDE-HEX:REQ-002 Reject values outside the supported positive-whole-number domain.
+/**
+ * Converts a positive whole-number string or number to uppercase hexadecimal.
+ * @param {string | number} value The current scalar value.
+ * @returns {string | null} Hexadecimal digits, or null when the value is unsupported.
+ */
+export const convertPositiveIntegerToHex = (value) => {
+  if (typeof value !== 'string' && typeof value !== 'number') return null;
+
+  const input = String(value).trim();
+  const hasGrouping = input.includes(',');
+  const validGrouping = /^[+-]?\d{1,3}(?:,\d{3})+(?:\.\d*)?$/.test(input);
+  if (!input || (hasGrouping && !validGrouping)) return null;
+
+  const normalized = hasGrouping ? input.replaceAll(',', '') : input;
+  const match = /^([+-]?)(\d+)(?:\.(\d*))?$/.exec(normalized);
+  if (!match || match[1] === '-' || (match[3] && /[1-9]/.test(match[3]))) return null;
+
+  const integer = BigInt(match[2]);
+  return integer > 0n ? integer.toString(16).toUpperCase() : null;
+};
+
 // Custom evaluator wrapper around mathjs with degree/radian support and error handling
 export const evaluateExpression = (expr, angleUnit = 'DEG') => {
   if (!expr || expr.trim() === '') return { result: '0', rawResult: 0, error: null };

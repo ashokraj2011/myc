@@ -1,0 +1,619 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "1claude-hex",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "a27cbe93-78c9-453e-b33b-1343369386bd",
+  "changeSet": {
+    "path": "singularity/work-items/1claude-hex/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:0f4e1963d79da294e617138feb25a4cc31ff410b3ef63f7abda67a2c96f57342",
+    "sourcePaths": [
+      "src/App.jsx",
+      "src/components/ScientificKeypad.jsx",
+      "src/utils/evaluator.js"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [],
+    "executableTestPaths": [
+      "src/App.test.jsx",
+      "src/utils/evaluator.test.js"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "product-source": 3,
+      "test-source": 2
+    },
+    "entries": [
+      {
+        "changeId": "sha256:3760fbd401dc0177955079d1101ddfbadd6177c20464360050414b0624cbbeff",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:b6a66124654bc4cc35e68cb047467b629a6a7efe72f7c67153c24bf7cf939e30",
+        "status": "modified",
+        "oldPath": "src/App.test.jsx",
+        "newPath": "src/App.test.jsx",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:e370201a66e0b784caf62bb5da4a0d44ee1c59d3c918fb22a218a675b74e5302",
+        "status": "modified",
+        "oldPath": "src/components/ScientificKeypad.jsx",
+        "newPath": "src/components/ScientificKeypad.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:76a0f4de4c514e2b9f02af74e7054577a372f8d19069215c45ad4146aa3d7e1d",
+        "status": "modified",
+        "oldPath": "src/utils/evaluator.js",
+        "newPath": "src/utils/evaluator.js",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:f8d7d9c79ca6ffcde61aca4c5a158dbec38acbd2fd16b6234640b0bdcce81143",
+        "status": "modified",
+        "oldPath": "src/utils/evaluator.test.js",
+        "newPath": "src/utils/evaluator.test.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "1CLAUDE-HEX:AC-001"
+    ],
+    "bound": [
+      "1CLAUDE-HEX:AC-001"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "1CLAUDE-HEX:AC-001",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "1CLAUDE-HEX:AC-001",
+        "testSource": "src/utils/evaluator.test.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "1CLAUDE-HEX:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "scientific hexadecimal conversion"
+          ],
+          "name": "converts 255 immediately to uppercase hexadecimal without a prefix"
+        },
+        "logicalTestId": "sha256:c16c557f29994f04a58bdd46e243d7ea81e1da6bdc307351ac2e33e299bc3f37",
+        "declarationSha256": "sha256:3cba237b23f57fd5502385d2de78f6f74ac51c632824d5fd29ac18108af2036f",
+        "supportSha256": null,
+        "line": 33,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "1CLAUDE-HEX:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "scientific hexadecimal conversion"
+          ],
+          "name": "shows Not supported when the current input is empty"
+        },
+        "logicalTestId": "sha256:487034a730704543975d5876155f7c2264717354d6b482760dfc741ff38e1e90",
+        "declarationSha256": "sha256:5a19d3ef1fb8f93a5b1dfd674c5aa7efd3e8ce9d65818ae0c9d35ca0c1e1a82a",
+        "supportSha256": null,
+        "line": 47,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "1CLAUDE-HEX:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "scientific hexadecimal conversion"
+          ],
+          "name": "shows Not supported for zero"
+        },
+        "logicalTestId": "sha256:7e6828b28eb673bf878ed99c2cb20c1f22ab27d20b346302209b7e075c18a242",
+        "declarationSha256": "sha256:154f8838b04fc3703d84df1ec8120d24d3216aa9a56bb7ac0b9e9c33bcf9faba",
+        "supportSha256": null,
+        "line": 58,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "1CLAUDE-HEX:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "scientific hexadecimal conversion"
+          ],
+          "name": "shows Not supported for a negative value"
+        },
+        "logicalTestId": "sha256:dd9f57e6c1210c436f26ed5a9d8d98acb255d876c443115f0a88270054b3cd6e",
+        "declarationSha256": "sha256:57c51d5f3899e220156975f04cd8c62a8a4ee7c4a02a38c1e40cbdc1cb81ae18",
+        "supportSha256": null,
+        "line": 70,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "1CLAUDE-HEX:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "scientific hexadecimal conversion"
+          ],
+          "name": "shows Not supported for a fractional value"
+        },
+        "logicalTestId": "sha256:2426dc6282a9f1d3494971cae2c2d278213e484fe98f8636fd2a791512a34628",
+        "declarationSha256": "sha256:5405a915f092d280993b322fecea09d27d027f6ddcf6b450a5a528a383f1b258",
+        "supportSha256": null,
+        "line": 83,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "1CLAUDE-HEX:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "scientific hexadecimal conversion"
+          ],
+          "name": "shows Not supported for non-numeric input"
+        },
+        "logicalTestId": "sha256:f4808f3d2be1bed40d9c899d2929b032fbbfc0425fa38f9346e6ed6e884ba1b6",
+        "declarationSha256": "sha256:d430f860a4c6555080c4d14677ee1109b46a2c2a2657d79127dfa79f5f22067b",
+        "supportSha256": null,
+        "line": 97,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "1CLAUDE-HEX:AC-001",
+        "testSource": "src/utils/evaluator.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "convertPositiveIntegerToHex"
+          ],
+          "name": "converts supported positive whole number %s to %s"
+        },
+        "logicalTestId": "sha256:73f5fd070d7eba4a62685436d1b959b2c3d546ff59ba34e41c4f73aa1edae954",
+        "declarationSha256": "sha256:371502d3645e33f0f6048760b42dd82889dd13c3126bb396351db99b1c1427f6",
+        "supportSha256": null,
+        "line": 10,
+        "parameters": {
+          "kind": "static",
+          "count": 4,
+          "titlePattern": "^converts supported positive whole number .*? to .*?$"
+        },
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "1CLAUDE-HEX:AC-001",
+        "testSource": "src/utils/evaluator.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "convertPositiveIntegerToHex"
+          ],
+          "name": "rejects %s input"
+        },
+        "logicalTestId": "sha256:aa7a5dda3f875b0bd25f56e4661758eea766c9fb951784f0616721e140cad443",
+        "declarationSha256": "sha256:c9dd74ac4604c68d31da85cbbf8720b4720deec522d9a07b4f3fb07afb24d706",
+        "supportSha256": null,
+        "line": 20,
+        "parameters": {
+          "kind": "static",
+          "count": 5,
+          "titlePattern": "^rejects .*? input$"
+        },
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      },
+      {
+        "testSource": "src/utils/evaluator.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "1CLAUDE-HEX:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/ScientificKeypad.jsx",
+          "src/utils/evaluator.js"
+        ]
+      },
+      {
+        "clauseId": "1CLAUDE-HEX:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/ScientificKeypad.jsx",
+          "src/utils/evaluator.js"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "1CLAUDE-HEX:REQ-001",
+        "sourcePath": "src/App.jsx",
+        "line": 133,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "1CLAUDE-HEX:REQ-001",
+        "sourcePath": "src/components/ScientificKeypad.jsx",
+        "line": 5,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "1CLAUDE-HEX:REQ-001",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 3,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "1CLAUDE-HEX:REQ-002",
+        "sourcePath": "src/App.jsx",
+        "line": 134,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "1CLAUDE-HEX:REQ-002",
+        "sourcePath": "src/components/ScientificKeypad.jsx",
+        "line": 6,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "1CLAUDE-HEX:REQ-002",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 4,
+        "tag": "clause"
+      }
+    ]
+  },
+  "fulfillment": {
+    "obligations": [
+      {
+        "clauseId": "1CLAUDE-HEX:AC-001",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/1claude-hex/evidence/hex-not-supported.png",
+            "state": "present",
+            "sha256": "d8c3b933dd9cda298ca8f7e0df8650c4f5000ae3c40b448075f4c1cc1705ae4c"
+          },
+          {
+            "path": "singularity/work-items/1claude-hex/evidence/hex-positive-255.png",
+            "state": "present",
+            "sha256": "9db562abf1476ffdbae75b5fd7fd4ede441ef18abdbb6932c5d0790735c64b11"
+          }
+        ]
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "1CLAUDE-HEX:REQ-001",
+        "explanation": {
+          "text": "Convert the current scalar value immediately from the scientific keypad.",
+          "path": "src/App.jsx",
+          "line": 133
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 1,
+                "afterStart": 11,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 133,
+                "afterLines": 10
+              },
+              {
+                "beforeStart": 283,
+                "beforeLines": 0,
+                "afterStart": 295,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 15
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/ScientificKeypad.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 4,
+                "beforeLines": 0,
+                "afterStart": 5,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 7,
+                "beforeLines": 1,
+                "afterStart": 10,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 56,
+                "beforeLines": 0,
+                "afterStart": 60,
+                "afterLines": 9
+              }
+            ],
+            "symbols": [
+              {
+                "name": "ScientificKeypad",
+                "kind": "function",
+                "line": 8
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 2,
+                "beforeLines": 0,
+                "afterStart": 3,
+                "afterLines": 23
+              }
+            ],
+            "symbols": [
+              {
+                "name": "convertPositiveIntegerToHex",
+                "kind": "function",
+                "line": 10
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "1CLAUDE-HEX:REQ-002",
+        "explanation": {
+          "text": "Show the required unsupported state for invalid or non-positive values.",
+          "path": "src/App.jsx",
+          "line": 134
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 1,
+                "afterStart": 11,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 133,
+                "afterLines": 10
+              },
+              {
+                "beforeStart": 283,
+                "beforeLines": 0,
+                "afterStart": 295,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 15
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/ScientificKeypad.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 4,
+                "beforeLines": 0,
+                "afterStart": 5,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 7,
+                "beforeLines": 1,
+                "afterStart": 10,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 56,
+                "beforeLines": 0,
+                "afterStart": 60,
+                "afterLines": 9
+              }
+            ],
+            "symbols": [
+              {
+                "name": "ScientificKeypad",
+                "kind": "function",
+                "line": 8
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 2,
+                "beforeLines": 0,
+                "afterStart": 3,
+                "afterLines": 23
+              }
+            ],
+            "symbols": [
+              {
+                "name": "convertPositiveIntegerToHex",
+                "kind": "function",
+                "line": 10
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:3087fafc7cc753bbe05aff650e1ccff19e3f7c89db6aa832c468d406bd3d86df"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:6b20784e68e9a9db660d274c82cf8cb25a4399cd7ca0bd5b047bfd17273948cd",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-10-12T13:02:44.651Z"
+}

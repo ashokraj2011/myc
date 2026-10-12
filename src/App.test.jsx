@@ -20,6 +20,92 @@ const getResultText = (container) => {
   return lines[lines.length - 1].textContent;
 };
 
+const selectScientificMode = async (user) => {
+  await user.selectOptions(screen.getAllByRole('combobox')[0], 'scientific');
+};
+
+describe('scientific hexadecimal conversion', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  // @ac:1CLAUDE-HEX:AC-001
+  it('converts 255 immediately to uppercase hexadecimal without a prefix', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+    await selectScientificMode(user);
+
+    await clickButton(container, '2');
+    await clickButton(container, '5');
+    await clickButton(container, '5');
+    await clickButton(container, 'hex');
+
+    expect(getResultText(container)).toBe('FF');
+  });
+
+  // @ac:1CLAUDE-HEX:AC-001
+  it('shows Not supported when the current input is empty', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+    await selectScientificMode(user);
+
+    await clickButton(container, 'hex');
+
+    expect(getResultText(container)).toBe('Not supported');
+  });
+
+  // @ac:1CLAUDE-HEX:AC-001
+  it('shows Not supported for zero', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+    await selectScientificMode(user);
+
+    await clickButton(container, '0');
+    await clickButton(container, 'hex');
+
+    expect(getResultText(container)).toBe('Not supported');
+  });
+
+  // @ac:1CLAUDE-HEX:AC-001
+  it('shows Not supported for a negative value', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+    await selectScientificMode(user);
+
+    await clickButton(container, '1');
+    await clickButton(container, '±');
+    await clickButton(container, 'hex');
+
+    expect(getResultText(container)).toBe('Not supported');
+  });
+
+  // @ac:1CLAUDE-HEX:AC-001
+  it('shows Not supported for a fractional value', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+    await selectScientificMode(user);
+
+    await clickButton(container, '1');
+    await clickButton(container, '.');
+    await clickButton(container, '5');
+    await clickButton(container, 'hex');
+
+    expect(getResultText(container)).toBe('Not supported');
+  });
+
+  // @ac:1CLAUDE-HEX:AC-001
+  it('shows Not supported for non-numeric input', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+    await selectScientificMode(user);
+
+    await clickButton(container, 'e');
+    await clickButton(container, 'hex');
+
+    expect(getResultText(container)).toBe('Not supported');
+  });
+});
+
 // Full end-to-end functional regression across modes, themes, memory,
 // history, and keyboard shortcuts.
 // @ac:AC-003

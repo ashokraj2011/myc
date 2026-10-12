@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import { playSound } from '../utils/audio';
 import { StandardKeypad } from './StandardKeypad';
 
+// @clause:1CLAUDE-HEX:REQ-001 Expose the immediate hexadecimal conversion action in the scientific toolbar.
+// @clause:1CLAUDE-HEX:REQ-002 Route unsupported current values through the same toolbar action.
+/** Renders scientific controls and forwards calculator actions through props. */
 export const ScientificKeypad = (props) => {
   const [isSecond, setIsSecond] = useState(false);
-  const { onDigit, onOperator, soundEnabled } = props;
+  const { onDigit, onOperator, onHex, soundEnabled } = props;
 
   const handleFunc = (fnString) => {
     playSound('operator', soundEnabled);
@@ -53,6 +56,15 @@ export const ScientificKeypad = (props) => {
           className="calc-btn py-2 u-bg-btn-func-bg u-text-btn-func-text u-hbg-btn-func-hover font-semibold"
         >
           e
+        </button>
+        <button
+          onClick={() => {
+            playSound('operator', soundEnabled);
+            onHex();
+          }}
+          className="calc-btn py-2 u-bg-btn-func-bg u-text-btn-func-text u-hbg-btn-func-hover font-semibold"
+        >
+          hex
         </button>
 
         {/* Trig Functions Row */}

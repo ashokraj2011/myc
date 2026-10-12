@@ -8,9 +8,10 @@ import { FinancialCalculator } from './components/FinancialCalculator';
 import { FunctionGrapher } from './components/FunctionGrapher';
 import { HistoryDrawer } from './components/HistoryDrawer';
 import { KeyboardShortcutsModal } from './components/KeyboardShortcutsModal';
-import { evaluateExpression } from './utils/evaluator';
+import { convertPositiveIntegerToHex, evaluateExpression } from './utils/evaluator';
 import { playSound } from './utils/audio';
 
+/** Renders the calculator modes and coordinates their shared display state. */
 export default function App() {
   const [activeMode, setActiveMode] = useState('standard');
   const [expression, setExpression] = useState('');
@@ -128,6 +129,16 @@ export default function App() {
       setHistory((prev) => [newEntry, ...prev.slice(0, 49)]); // Keep last 50 items
     }
   }, [expression, angleUnit]);
+
+  // @clause:1CLAUDE-HEX:REQ-001 Convert the current scalar value immediately from the scientific keypad.
+  // @clause:1CLAUDE-HEX:REQ-002 Show the required unsupported state for invalid or non-positive values.
+  const handleHex = useCallback(() => {
+    const expressionValue = convertPositiveIntegerToHex(expression);
+    const currentValue =
+      lastEvaluated && expressionValue === null ? result : expression;
+    setResult(convertPositiveIntegerToHex(currentValue) ?? 'Not supported');
+    setLastEvaluated(true);
+  }, [expression, lastEvaluated, result]);
 
   const handleMemory = useCallback(
     (type) => {
@@ -281,6 +292,7 @@ export default function App() {
             <ScientificKeypad
               onDigit={handleDigit}
               onOperator={handleOperator}
+              onHex={handleHex}
               onEquals={handleEquals}
               onClear={handleClear}
               onBackspace={handleBackspace}
