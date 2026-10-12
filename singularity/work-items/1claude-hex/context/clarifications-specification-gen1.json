@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "workId": "1claude-hex",
+  "phase": "specification",
+  "generation": 1,
+  "mode": "required",
+  "promptPath": "singularity/work-items/1claude-hex/context/prompts/specification-gen1.md",
+  "promptSha256": "f8aac05c936d037eca0fbc93bed4ef2081a702dbff8821589018cb569052f66e",
+  "groundingRecordPath": "singularity/work-items/1claude-hex/context/specification-gen1.json",
+  "groundingRecordSha256": "13084be20ba1fd76c0aa7fbf64c0c68fe71a061c7e094c196bcf5263c871d864",
+  "responses": [
+    {
+      "id": "Q-001",
+      "question": "For `hex`, should only positive whole-number inputs convert, with zero, negative, fractional, empty, or non-numeric inputs displaying exactly “Not supported”? The Story says “positive integer” and “all others” but doesn’t enumerate these boundaries; confirming prevents different unsupported-input behavior from being assumed. This is the proposed default interpretation.",
+      "answer": "Yes, use that interpretation",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-002",
+      "question": "Which hexadecimal result format should the calculator display? The existing decimal formatter doesn’t settle this, and it affects the visible result and screenshot/test expectations.",
+      "answer": "Uppercase A–F, no `0x` prefix (proposal)",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-003",
+      "question": "The pinned acceptance criterion says “Screenshot and test cases,” but provides no reference image or coverage list. Should acceptance use fresh screenshots showing both a successful conversion and the “Not supported” state, plus automated tests for positive integers and each confirmed unsupported input class (zero, negative, fractional, empty, non-numeric)?",
+      "answer": "Yes, use that evidence scope",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-004",
+      "question": "Where should the `hex` control appear? The existing app separates standard arithmetic keys from its scientific unary-function toolbar; this choice defines how users discover the feature and what the screenshot should show.",
+      "answer": "Scientific keypad toolbar (Recommended; it groups unary functions)",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-005",
+      "question": "When the user presses `hex`, should it immediately convert the current value and show the hexadecimal result, rather than insert a function into the expression and wait for `=`? This determines the interaction and visible success/failure states; immediate conversion is a proposed interpretation.",
+      "answer": "Yes, convert immediately",
+      "status": "answered",
+      "blocking": false
+    }
+  ],
+  "completed": true,
+  "recordedAt": "2026-10-12T09:49:37.586Z",
+  "recordedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "agent": "product-owner"
+}

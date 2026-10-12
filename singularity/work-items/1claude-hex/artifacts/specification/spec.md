@@ -4,27 +4,51 @@
   "workId": "1claude-hex",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "435640f1dd70703d4c9f13d3bbbc59dda5adea19f02dbfcce39c06dfca76f319",
+      "bytes": 8313
+    },
+    "generation": 1,
+    "publishedAt": "2026-10-12T10:14:19.775Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "bd70ff7b3bcce8e92fb5ee2f6d530ea6f518ec21",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "a8b6f4a122f2ad38555f4fc4c268f606c36fdd0a845a848fee4e9f05663fe8ac",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/1claude-hex/context/clarifications-specification-gen1.json",
+    "sha256": "dcaf0cbfbd9f2a89d4e427a376c4cdd8b3013ec2d7265e264d852079fd1bf79b",
+    "promptSha256": "f8aac05c936d037eca0fbc93bed4ef2081a702dbff8821589018cb569052f66e",
+    "responses": 5,
+    "markers": [],
+    "recordedAt": "2026-10-12T09:49:37.586Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/1claude-hex/telemetry/specification-gen1.json",
+      "sha256": "666c61742edd8ec8cc2a0cce5c149ffd95d7cec3981c9bcbed85bd88e8e5d69f",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 18657,
+        "estimatedTokens": 4665,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 18657,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-12T10:14:19.775Z",
+      "completedAt": "2026-10-12T10:14:19.775Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -74,49 +155,56 @@ the answer `[SPK:REQ-067]` — deleting the text alone is an integrity failure, 
 
 ## Agent brief
 
-<!--
-Summarize the approved intent for downstream agents in a compact, standalone form. Include the
-problem, intended outcome, principal actors, most important scenarios, hard constraints, and major
-exclusions. Do not introduce claims that are absent from the sections below. Exact requirements and
-boundary conditions are preserved separately by the governed projection.
--->
+Calculator users can convert the current value immediately with a `hex` control in the scientific keypad toolbar. Positive whole numbers display as uppercase hexadecimal digits without a `0x` prefix. Empty input, zero, negative values, fractions, and non-numeric values display exactly `Not supported`. Acceptance requires automated tests for those input classes and fresh screenshots of a successful conversion and an unsupported-input state.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+The actor is a calculator user. No distinct permission or role is required by this Story.
 
 ## User scenarios
 
 Prioritized. Each scenario leads with the situation, then its acceptance cases.
 
-### S1 — <the most important situation, in the user's words>
+### S1 — Convert a positive integer to a hexadecimal value
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Calculator user
+**Context:** The calculator is open, the scientific keypad is available, and a positive whole-number value is current.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+- **Given** the current value is `255`
+  **When** the user presses the `hex` control
+  **Then** the calculator immediately displays `FF`, with no `0x` prefix, without requiring `=`.
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
+- **Given** the current value is another positive whole number
+  **When** the user presses the `hex` control
+  **Then** the calculator immediately displays that value's uppercase hexadecimal digits.
 
-### S2 — <the next situation>
+### S2 — Reject values that are not positive whole numbers
 
 **Priority:** P2
+**Actor:** Calculator user
+**Context:** The calculator is open and the current input is empty or is not a positive whole number.
 
-- **Given** … **When** … **Then** …
+- **Given** the current value is `0`, a negative number, or a fractional number
+  **When** the user presses the `hex` control
+  **Then** the calculator displays exactly `Not supported`.
+
+- **Given** the current input is empty
+  **When** the user presses the `hex` control
+  **Then** the calculator displays exactly `Not supported`.
+
+- **Given** the current input is non-numeric
+  **When** the user presses the `hex` control
+  **Then** the calculator displays exactly `Not supported`.
 
 ## Failure and empty states
 
 What happens the first time, with nothing there yet, and when each step fails. These are where
 specifications are usually silent and implementations usually improvise.
 
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** Pressing `hex` with no current input displays `Not supported`.
+- **Failure:** A value that cannot be converted because it is zero, negative, fractional, or non-numeric displays `Not supported`. The Story defines no separate dependency or service failure state for this local conversion.
+- **Partial:** No partial outcome is defined; the conversion either displays the hexadecimal value or `Not supported`.
 
 ## Scenario coverage
 
@@ -127,28 +215,30 @@ prose. Use the pinned request and clarification answers; do not invent error tex
 
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `1claude-hex:REQ-001` | S1 | TODO |
-| `1claude-hex:REQ-002` | S2 | TODO |
-| `1claude-hex:AC-001` | S1 | TODO |
+| `1claude-hex:REQ-001` | S1 | success |
+| `1claude-hex:REQ-002` | S2 | boundary |
+| `1claude-hex:REQ-002` | S2 | failure |
+| `1claude-hex:AC-001` | S1 | success |
+| `1claude-hex:AC-001` | S2 | failure |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+The feature is available to the calculator user. The Story specifies no role-based access or permission change.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+A supported input is a whole-number value greater than zero. Zero, any negative value, any fractional value, empty input, and non-numeric input are unsupported and display exactly `Not supported`. A supported result uses uppercase A–F and has no `0x` prefix. The control is in the scientific keypad toolbar and converts immediately.
 
 ## Requirements
 
 Numbered, testable, one obligation each. Cite the scenario each serves.
 
-- <requirement>. *(S1)* [1claude-hex:REQ-001]
-- <requirement>. *(S1, S2)* [1claude-hex:REQ-002]
+- Pressing the `hex` control in the scientific keypad toolbar immediately converts the current positive whole-number value and displays its hexadecimal digits using uppercase A–F, without a `0x` prefix or requiring `=`. *(S1)* [1claude-hex:REQ-001]
+- Pressing the `hex` control for zero, a negative value, a fractional value, empty input, or non-numeric input displays exactly `Not supported`. *(S2)* [1claude-hex:REQ-002]
 
 Acceptance criteria use the same stable, namespaced form:
 
-- <observable acceptance outcome>. *(S1)* [1claude-hex:AC-001]
+- Acceptance evidence includes fresh screenshots of a successful hexadecimal conversion and the `Not supported` state, plus automated tests covering positive whole numbers and each unsupported input class: zero, negative, fractional, empty, and non-numeric. *(S1, S2)* [1claude-hex:AC-001]
 
 ## Verification intent
 
@@ -160,36 +250,41 @@ Planning must inherit these methods and cannot change them without an approved s
 
 | Clause | Methods | Criterion |
 |---|---|---|
-| `1claude-hex:REQ-001` | TODO | - |
-| `1claude-hex:REQ-002` | TODO | - |
-| `1claude-hex:AC-001` | TODO | `1claude-hex:AC-001` |
+| `1claude-hex:REQ-001` | test, visual | `1claude-hex:AC-001` |
+| `1claude-hex:REQ-002` | test, visual | `1claude-hex:AC-001` |
+| `1claude-hex:AC-001` | test, visual | `1claude-hex:AC-001` |
 
 ## Non-functional requirements
 
 Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
 will be measured; "fast" is not a requirement.
 
-Use governed requirement anchors here too (for example `[1claude-hex:REQ-003]`); `NFR-001` by
-itself is only a display label and is not a stable clause identity.
+No non-functional requirement is specified by the pinned Story or clarification answers.
 
 ## Constitution articles
 
 Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
 cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
 
-- <ART-…>
+No applicable constitution article was supplied in the composed context; no article ID is asserted.
 
 ## Assumptions
 
 What this specification takes as true without proving. An assumption that turns out false is a
 change request, not a defect — which is only true if it was written down.
 
+The `hex` control acts on the current calculator value. The Story does not define behavior for entering or converting compound expressions; this specification covers the current value only. No further unresolved decision is recorded for this generation.
+
 ## Out of scope
 
 Named explicitly, so the boundary is reviewable rather than inferred.
+
+Binary, octal, or other base conversions; changes to ordinary arithmetic or other scientific functions; and a `0x` prefix are out of scope.
 
 ## Sources
 
 Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
 offered to this phase that could not be read or was not available here, named as a gap. Without
 supporting documents, say so.
+
+The pinned Story source (`singularity/work-items/1claude-hex/source.json`) and the recorded clarification checkpoint (`singularity/work-items/1claude-hex/context/clarifications-specification-gen1.json`, five responses) are the governing inputs. No supporting documents were provided. World Model grounding was unavailable in the composed context.
