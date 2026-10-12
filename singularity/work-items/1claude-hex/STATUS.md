@@ -11,7 +11,7 @@
 |---:|---|---|---|---:|---:|---:|
 | 1 | Specification (`specification`) | product-owner | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via product-approvers; agent product-owner | **warning** |  |  |  |
-| 2 | Planning (`planning`) | architect | **in_progress** | 1 | 0 | unavailable |
+| 2 | Planning (`planning`) | architect | **awaiting_approval** | 1 | 0 | unavailable |
 | 3 | Implementation (`implementation`) | developer | **not_started** | 0 | 0 | unavailable |
 | 4 | Convergence (`convergence`) | architect | **not_started** | 0 | 0 | unavailable |
 | 5 | Verification (`verification`) | qa | **not_started** | 0 | 0 | unavailable |
@@ -19,6 +19,7 @@
 
 ## Recent history
 
+- 2026-10-12T11:18:43.899Z — **phase_submitted** (planning) by ashokraj2011 · governed agent architect: 1 artifacts
 - 2026-10-12T10:38:01.213Z — **source_review_submitted** (planning) by 88361104+ashokraj2011@users.noreply.github.com · governed agent sflow-source-reviewer: 1174aee70c894f59bd0aba8a7c3049627e40aadabc6348e3b722dd2294da47c0
 - 2026-10-12T10:33:15.567Z — **phase_generated** (planning) by ashokraj2011 · governed agent architect: generation 1
 - 2026-10-12T10:23:10.562Z — **phase_self_approved** (specification) by ashokraj2011 · governed agent product-owner: threshold reached; advanced to planning
