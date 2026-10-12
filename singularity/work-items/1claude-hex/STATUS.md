@@ -9,7 +9,7 @@
 
 | # | Phase | Governed agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
-| 1 | Specification (`specification`) | product-owner | **in_progress** | 1 | 0 | unavailable |
+| 1 | Specification (`specification`) | product-owner | **awaiting_approval** | 1 | 0 | unavailable |
 | 2 | Planning (`planning`) | architect | **not_started** | 0 | 0 | unavailable |
 | 3 | Implementation (`implementation`) | developer | **not_started** | 0 | 0 | unavailable |
 | 4 | Convergence (`convergence`) | architect | **not_started** | 0 | 0 | unavailable |
@@ -18,6 +18,7 @@
 
 ## Recent history
 
+- 2026-10-12T10:20:37.646Z — **phase_submitted** (specification) by ashokraj2011 · governed agent product-owner: 1 artifacts
 - 2026-10-12T10:19:24.560Z — **source_review_submitted** (specification) by 88361104+ashokraj2011@users.noreply.github.com · governed agent sflow-source-reviewer: dc2609a17f2c96ec074c0486ec48354dbe33a3cb92fb16cbc7188026765d42c7
 - 2026-10-12T10:14:20.498Z — **phase_generated** (specification) by ashokraj2011 · governed agent product-owner: generation 1
 - 2026-10-12T09:39:08.823Z — **work_started** (specification) by ashokraj2011 · governed agent product-owner: Created spec-driven-standard branch 1claude-hex
