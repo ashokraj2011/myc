@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "phase": "planning",
+  "generation": 1,
+  "reportSha256": "a461fa29e82316747877cbe4824ba67dd7dfbbe525fb2626455deaa3c12488ea",
+  "lifecycleEventId": "fafbd9b6-31f2-4d23-82eb-d97dc35bbb4d",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "planning",
+    "binding": {
+      "workId": "9-hex",
+      "phase": "planning",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/9-hex/USER-STORY.md",
+          "textSha256": "e7a959375badac554ff7d04969ff601e94127a7d7e3944276ddac32d4dab7e94",
+          "originalSha256": "18a1fe1c5ac9e2588fb623096db313fed7c7ec8d008681bdf0731c30aebc0f91"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:approved-scope",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/9-hex/context/clarifications-specification-gen1.json",
+          "sha256": "515aaaa314b6c80d8c88eb491007f324b9351b584c7c9564e71e9255736faaa7"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/9-hex/artifacts/planning/plan.md",
+        "sha256": "4439708923c9e5e2a753b546911acc4cc09a6cb7d5ced7b2b4e29309f76cfaa9"
+      },
+      "upstreamSpec": {
+        "path": "singularity/work-items/9-hex/artifacts/specification/spec.md",
+        "sha256": "3309227b931c7e27a706afda958cab7dc57e3c335e5ec2d51b4c7a694546d891"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:approved-scope"
+    ],
+    "rows": [
+      {
+        "clauseId": "9-HEX:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx",
+          "src/utils/hex.js"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/hex.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "A valid decimal input is converted to uppercase base-16 digits with no prefix.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "9-HEX:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx",
+          "src/utils/hex.js"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/hex.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Only canonical unsigned decimal text representing a safe integer from zero through `9007199254740991` is accepted.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "9-HEX:REQ-003",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx",
+          "src/utils/hex.js"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/hex.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Empty, syntactically invalid, and out-of-range input displays the literal `ERR`.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "9-HEX:REQ-004",
+        "expectedPaths": [
+          "singularity/work-items/9-hex/evidence/hex-operator.png"
+        ],
+        "plannedTests": [],
+        "testDisposition": "not-applicable",
+        "testReason": "This screenshot evidence obligation is reviewed under the primary visual contract for 9-HEX:AC-004; no independent executable test verifies attachment.",
+        "fulfillment": "evidence",
+        "observableResult": "The completed feature's screenshot is attached as implementation evidence.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "9-HEX:AC-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx",
+          "src/utils/hex.js"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/hex.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Invoking HEX on `0`, `255`, and `9007199254740991` displays `0`, `FF`, and `1FFFFFFFFFFFFF`, respectively.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "9-HEX:AC-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx",
+          "src/utils/hex.js"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/hex.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Empty input, `-1`, `+1`, `1.5`, whitespace-containing text, alphabetic text, and `01` display exactly `ERR`.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "9-HEX:AC-003",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx",
+          "src/utils/hex.js"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/hex.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Invoking HEX on `9007199254740992` displays exactly `ERR`.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "9-HEX:AC-004",
+        "expectedPaths": [
+          "singularity/work-items/9-hex/evidence/hex-operator.png"
+        ],
+        "plannedTests": [],
+        "testDisposition": "not-applicable",
+        "testReason": "The retained screenshot is assessed by the primary visual contract below; no executable test proves attachment.",
+        "fulfillment": "evidence",
+        "observableResult": "The attached screenshot visibly documents the completed HEX control and result; no reference-image comparison is required.",
+        "assessment": "supported"
+      }
+    ],
+    "findings": [
+      {
+        "id": "test-exception-ac-004",
+        "severity": "advisory",
+        "message": "AC-004 has no executable test by design: the plan requires a retained screenshot and names a primary source-bound visual witness. Human disposition is requested for this not-applicable test reason.",
+        "clauseId": "9-HEX:AC-004"
+      },
+      {
+        "id": "test-exception-req-004",
+        "severity": "advisory",
+        "message": "REQ-004 has no independent executable test because its required screenshot is reviewed under the primary AC-004 visual contract. Human disposition is requested for this not-applicable test reason.",
+        "clauseId": "9-HEX:REQ-004"
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "a0016f43bc13f4991a4347bdd86c60bed8424da1e4a226e03267702d04a4c9e5",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "architect",
+    "readOnly": true
+  },
+  "submittedAt": "2026-10-12T00:03:48.519Z",
+  "recordSha256": "1adddb06677c888e90f2f7e65d9a7fa9ff9486c258c3325eab546e8f3af038ee"
+}
