@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-10-12T00:00:11.562Z",
+  "claims": {
+    "9-HEX:AC-001": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/StandardKeypad.jsx",
+        "src/utils/hex.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/hex.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Invoking HEX on `0`, `255`, and `9007199254740991` displays `0`, `FF`, and `1FFFFFFFFFFFFF`, respectively."
+    },
+    "9-HEX:AC-002": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/StandardKeypad.jsx",
+        "src/utils/hex.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/hex.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Empty input, `-1`, `+1`, `1.5`, whitespace-containing text, alphabetic text, and `01` display exactly `ERR`."
+    },
+    "9-HEX:AC-003": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/StandardKeypad.jsx",
+        "src/utils/hex.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/hex.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Invoking HEX on `9007199254740992` displays exactly `ERR`."
+    },
+    "9-HEX:AC-004": {
+      "expectedPaths": [
+        "singularity/work-items/9-hex/evidence/hex-operator.png"
+      ],
+      "tests": [],
+      "testDisposition": "not-applicable",
+      "testReason": "The retained screenshot is assessed by the primary visual contract below; no executable test proves attachment.",
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "The attached screenshot visibly documents the completed HEX control and result; no reference-image comparison is required."
+    },
+    "9-HEX:REQ-001": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/StandardKeypad.jsx",
+        "src/utils/hex.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/hex.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "A valid decimal input is converted to uppercase base-16 digits with no prefix."
+    },
+    "9-HEX:REQ-002": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/StandardKeypad.jsx",
+        "src/utils/hex.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/hex.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Only canonical unsigned decimal text representing a safe integer from zero through `9007199254740991` is accepted."
+    },
+    "9-HEX:REQ-003": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/StandardKeypad.jsx",
+        "src/utils/hex.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/hex.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Empty, syntactically invalid, and out-of-range input displays the literal `ERR`."
+    },
+    "9-HEX:REQ-004": {
+      "expectedPaths": [
+        "singularity/work-items/9-hex/evidence/hex-operator.png"
+      ],
+      "tests": [],
+      "testDisposition": "not-applicable",
+      "testReason": "This screenshot evidence obligation is reviewed under the primary visual contract for 9-HEX:AC-004; no independent executable test verifies attachment.",
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "The completed feature's screenshot is attached as implementation evidence."
+    }
+  },
+  "verificationContracts": [
+    {
+      "clauseId": "9-HEX:AC-004",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "hex-operator-capture",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "standard-mode-255-to-FF"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    }
+  ],
+  "workId": "9-hex",
+  "phase": "planning",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/9-hex/artifacts/planning/plan.md",
+    "sha256": "07f16e5dd610c6e6464d134e8c9850c13fb3b716ed7b654fadec540916d63e73",
+    "bytes": 17845
+  }
+}
