@@ -9,7 +9,7 @@
 
 | # | Phase | Governed agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
-| 1 | Intake (`intake`) | product-owner | **in_progress** | 0 | 0 | unavailable |
+| 1 | Intake (`intake`) | product-owner | **in_progress** | 1 | 0 | unavailable |
 | 2 | Requirements (`requirements`) | product-owner | **not_started** | 0 | 0 | unavailable |
 | 3 | Architecture and design (`design`) | architect | **not_started** | 0 | 0 | unavailable |
 | 4 | Implementation specification (`implementation-spec`) | architect | **not_started** | 0 | 0 | unavailable |
@@ -19,4 +19,5 @@
 
 ## Recent history
 
+- 2026-10-12T06:53:15.264Z — **phase_generated** (intake) by ashokraj2011 · governed agent product-owner: generation 1
 - 2026-10-12T06:41:42.353Z — **work_started** (intake) by ashokraj2011 · governed agent product-owner: Created feature branch claude-hex
