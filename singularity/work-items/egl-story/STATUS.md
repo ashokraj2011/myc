@@ -11,7 +11,7 @@
 |---:|---|---|---|---:|---:|---:|
 | 1 | Specification (`specification`) | product-owner | **approved** | 2 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via product-approvers; agent product-owner | **warning** |  |  |  |
-| 2 | Planning (`planning`) | architect | **in_progress** | 0 | 0 | unavailable |
+| 2 | Planning (`planning`) | architect | **in_progress** | 1 | 0 | unavailable |
 | 3 | Implementation (`implementation`) | developer | **not_started** | 0 | 0 | unavailable |
 | 4 | Convergence (`convergence`) | architect | **not_started** | 0 | 0 | unavailable |
 | 5 | Verification (`verification`) | qa | **not_started** | 0 | 0 | unavailable |
@@ -19,6 +19,7 @@
 
 ## Recent history
 
+- 2026-10-12T02:45:26.706Z — **phase_generated** (planning) by ashokraj2011 · governed agent architect: generation 1
 - 2026-10-12T02:39:59.064Z — **phase_self_approved** (specification) by ashokraj2011 · governed agent product-owner: threshold reached; advanced to planning
 - 2026-10-12T02:35:38.168Z — **phase_submitted** (specification) by ashokraj2011 · governed agent product-owner: 1 artifacts
 - 2026-10-12T02:34:46.156Z — **source_review_submitted** (specification) by 88361104+ashokraj2011@users.noreply.github.com · governed agent sflow-source-reviewer: b9e2064597c36880789095f71910c9c1e1e919c634da73122975381839de4092
