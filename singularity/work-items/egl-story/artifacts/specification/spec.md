@@ -4,27 +4,51 @@
   "workId": "egl-story",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "05a3d91c6f389217daa11fb7b8a7dc27b74e6870bf2ce90f0832c6bcdab0fd49",
+      "bytes": 3206
+    },
+    "generation": 1,
+    "publishedAt": "2026-10-12T02:24:58.712Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "86e6522e9f45b1388dbcd83b2b7df54657e2c421",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "083d8965c65e8abeeb52bc7c40dd470aa5cdc144f592aea74911d5544b9770be",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/egl-story/context/clarifications-specification-gen1.json",
+    "sha256": "4b9eb0ae7b7d7370f8f0b5fbcb7b2b96c768b6abd3c60e9074e69555d0279f37",
+    "promptSha256": "1fbcf24b6e388f44d536e5553bffc24f4be5d57a00442ded8d05147a44a92ecd",
+    "responses": 2,
+    "markers": [],
+    "recordedAt": "2026-10-12T02:23:08.734Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/egl-story/telemetry/specification-gen1.json",
+      "sha256": "bcd63612710c8aa7174bf847143ecfed11d4636c804f81528c9b3f61b14b6e92",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 16667,
+        "estimatedTokens": 4167,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 16667,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-12T02:24:58.712Z",
+      "completedAt": "2026-10-12T02:24:58.712Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -54,129 +135,86 @@
 
 # Specification — egl-story
 
-<!--
-Scenarios come first, and general requirements come after them `[SPK:REQ-068]`. That ordering is the
-template's opinion: a requirement written before anyone has described the situation it serves tends
-to describe the system instead of the need, and nobody notices until verification.
-
-Where the current Story evidence leaves something material unknown, say so with a marker rather
-than guessing. Use this syntax:
-
-    [NEEDS CLARIFICATION: <one question grounded in the current Story evidence>]
-
-Replace the angle-bracketed placeholder; never copy or ask it as written. The question must be one
-non-empty line and must arise from the pinned sources, approved upstream artifacts, repository world
-model, or a contradiction among them. Markers are extracted the same way clauses are, so a marker
-inside fenced or inline code is ignored `[SPK:REQ-063]`. This phase blocks publication while any
-marker is unresolved, and a marker is only resolved when a later generation removes it *and* records
-the answer `[SPK:REQ-067]` — deleting the text alone is an integrity failure, not an answer.
--->
-
 ## Agent brief
 
-<!--
-Summarize the approved intent for downstream agents in a compact, standalone form. Include the
-problem, intended outcome, principal actors, most important scenarios, hard constraints, and major
-exclusions. Do not introduce claims that are absent from the sections below. Exact requirements and
-boundary conditions are preserved separately by the governed projection.
--->
+Provide a hex conversion operation for positive integer input. The user activates the hex button to
+see the integer represented in uppercase hexadecimal without a `0x` prefix. Inputs that are not
+positive integers produce an error. The acceptance screenshot shows the button and a successful
+conversion. No permission model or non-functional thresholds were requested.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+The person using the screen that provides the hex button. No additional roles or authority levels
+are specified.
 
 ## User scenarios
 
-Prioritized. Each scenario leads with the situation, then its acceptance cases.
-
-### S1 — <the most important situation, in the user's words>
+### S1 — Convert a positive integer
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Screen user
+**Context:** A positive integer is available as the value to convert.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
-
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
-
-### S2 — <the next situation>
-
-**Priority:** P2
-
-- **Given** … **When** … **Then** …
+- **Given** the value is a positive integer
+  **When** the user activates the hex button
+  **Then** the corresponding hexadecimal value is shown in uppercase, without a `0x` prefix.
 
 ## Failure and empty states
 
-What happens the first time, with nothing there yet, and when each step fails. These are where
-specifications are usually silent and implementations usually improvise.
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** Empty input is not a positive integer; show an error and do not show a conversion result.
+- **Failure:** Zero, negative, fractional, or otherwise non-integer input shows an error and does not
+  produce a hexadecimal result.
+- **Partial:** No partial result is defined for a single conversion.
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+No role-based permissions or authorization behavior are specified.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+Positive integers are valid inputs. Zero, negative values, fractions, empty input, and values that
+cannot be interpreted as integers are invalid and produce an error. Hexadecimal output uses
+uppercase A-F and has no `0x` prefix. The Story specifies no upper bound; conversion must preserve
+the integer value exactly rather than silently rounding it.
 
 ## Requirements
 
-Numbered, testable, one obligation each. Cite the scenario each serves.
-
-- <requirement>. *(S1)* [egl-story:REQ-001]
-- <requirement>. *(S1, S2)* [egl-story:REQ-002]
-
-Acceptance criteria use the same stable, namespaced form:
-
-- <observable acceptance outcome>. *(S1)* [egl-story:AC-001]
+- For a positive integer input, the hex operation shall show its exact hexadecimal value using
+  uppercase letters and no `0x` prefix. *(S1)* [egl-story:REQ-001]
+- For empty input or any value that is not a positive integer, the operation shall show an error
+  instead of a hexadecimal result. *(S1)* [egl-story:REQ-002]
+- A screenshot of the screen shall show the hex button and a successful conversion. *(S1)*
+  [egl-story:AC-001]
 
 ## Verification intent
 
-<!-- One row per declared clause, including non-functional requirements. Methods: test, visual,
-inspection, or a comma-separated combination (all required). AC Criterion is its own ID. A
-visual/inspection requirement names the AC proving it; a test-only requirement may use -. Choose
-from the pinned source, not from available tools. A screenshot is visual proof, not a test exemption.
-Planning must inherit these methods and cannot change them without an approved scope amendment. -->
-
 | Clause | Methods | Criterion |
 |---|---|---|
-| `egl-story:REQ-001` | TODO | - |
-| `egl-story:REQ-002` | TODO | - |
-| `egl-story:AC-001` | TODO | `egl-story:AC-001` |
+| `egl-story:REQ-001` | test | - |
+| `egl-story:REQ-002` | test | - |
+| `egl-story:AC-001` | visual | `egl-story:AC-001` |
 
 ## Non-functional requirements
 
-Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
-will be measured; "fast" is not a requirement.
-
-Use governed requirement anchors here too (for example `[egl-story:REQ-003]`); `NFR-001` by
-itself is only a display label and is not a stable clause identity.
+No non-functional requirements were specified in the pinned Story or its clarification.
 
 ## Constitution articles
 
-Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
-cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
-
-- <ART-…>
+No constitution article IDs were supplied in the pinned phase inputs.
 
 ## Assumptions
 
-What this specification takes as true without proving. An assumption that turns out false is a
-change request, not a defect — which is only true if it was written down.
+The screen user can provide the integer value to the hex operation. Input entry mechanics and error
+copy are not defined by the Story.
 
 ## Out of scope
 
-Named explicitly, so the boundary is reviewable rather than inferred.
+Changes to other operations, role-based access, non-functional thresholds, and a particular error
+message or styling are outside this Story.
 
 ## Sources
 
-Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
-offered to this phase that could not be read or was not available here, named as a gap. Without
-supporting documents, say so.
+The pinned Story source `singularity/work-items/egl-story/source.json`
+(SHA-256 `346451d0e7141c5ebe3e4ed4b92bf029f65ffe35e6166e281fd407d921e56362`) and the recorded
+human clarification for specification generation 1 inform this specification. No supporting
+documents or approved upstream artifacts were configured for this phase.
