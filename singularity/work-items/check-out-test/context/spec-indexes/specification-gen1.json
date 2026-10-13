@@ -1,0 +1,194 @@
+{
+  "clauses": [
+    {
+      "anchor": "[check-out-test:REQ-001]",
+      "body": "The standard calculator shall present a hexadecimal conversion control to the calculator user. *(S1, S3, S4)*",
+      "bodySha256": "21b8c77c17bc8d5013c45b58f74fd5fd0ff45e7faf22a152b3114be3db0cbf50",
+      "dependsOn": [],
+      "id": "CHECK-OUT-TEST:REQ-001",
+      "namespace": "CHECK-OUT-TEST",
+      "number": 1,
+      "source": {
+        "line": 258,
+        "path": "singularity/work-items/check-out-test/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "CHECK-OUT-TEST:AC-004",
+        "methods": [
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[check-out-test:REQ-002]",
+      "body": "The conversion control shall be available only when the most recently evaluated result is a finite signed whole number; it shall be unavailable before evaluation and for fractional, invalid, error, or non-finite results. *(S1, S2, S3)*",
+      "bodySha256": "9b00d526f0c3bf0c9eab00797fd93a468911908dc98dca2105a9465816a197c9",
+      "dependsOn": [],
+      "id": "CHECK-OUT-TEST:REQ-002",
+      "namespace": "CHECK-OUT-TEST",
+      "number": 2,
+      "source": {
+        "line": 259,
+        "path": "singularity/work-items/check-out-test/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[check-out-test:REQ-003]",
+      "body": "Activating the available control while a decimal result is displayed shall replace only the displayed result with its uppercase hexadecimal representation using a `0x` prefix and, for negative values, a leading sign before the prefix. *(S1)*",
+      "bodySha256": "16e2c5b7f75921b6fc8c5988cb7d0e55aa80d3125fa373ec89f53a24f0172b70",
+      "dependsOn": [],
+      "id": "CHECK-OUT-TEST:REQ-003",
+      "namespace": "CHECK-OUT-TEST",
+      "number": 3,
+      "source": {
+        "line": 260,
+        "path": "singularity/work-items/check-out-test/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[check-out-test:REQ-004]",
+      "body": "Activating the available control while a hexadecimal result is displayed shall restore that evaluated result's decimal representation without changing the expression. *(S2)*",
+      "bodySha256": "b3425ac41875686b9ec31c24268d596d130b60af90ebe3e5fe7a526e8cbc95c5",
+      "dependsOn": [],
+      "id": "CHECK-OUT-TEST:REQ-004",
+      "namespace": "CHECK-OUT-TEST",
+      "number": 4,
+      "source": {
+        "line": 261,
+        "path": "singularity/work-items/check-out-test/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[check-out-test:REQ-005]",
+      "body": "In the default theme and standard mode, the conversion control and converted result shall be visibly identifiable in the calculator interface. *(S4)*",
+      "bodySha256": "3c0f355d3401d089bae0b9b37734b883527f571c3a0f841b4a7a0ee0248345c3",
+      "dependsOn": [],
+      "id": "CHECK-OUT-TEST:REQ-005",
+      "namespace": "CHECK-OUT-TEST",
+      "number": 5,
+      "source": {
+        "line": 262,
+        "path": "singularity/work-items/check-out-test/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "CHECK-OUT-TEST:AC-004",
+        "methods": [
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[check-out-test:AC-001]",
+      "body": "Evaluating `200 + 55` and activating conversion displays `0xFF` while the expression remains `200 + 55`; evaluating a result of `0` and converting displays `0x0`. *(S1)*",
+      "bodySha256": "e7c0b5a546f5be46b8594a85280aaf8ad3f3528bc8c3736d45bf884c3aa5868e",
+      "dependsOn": [],
+      "id": "CHECK-OUT-TEST:AC-001",
+      "namespace": "CHECK-OUT-TEST",
+      "number": 1,
+      "source": {
+        "line": 264,
+        "path": "singularity/work-items/check-out-test/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "CHECK-OUT-TEST:AC-001",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[check-out-test:AC-002]",
+      "body": "An evaluated result of `-255` converts to `-0xFF`, and activating conversion again restores `-255` without changing the expression. *(S2)*",
+      "bodySha256": "42055e28f545b0d39e94081f65bcd65f62fc45d4c1b2ca46337f7147855b6300",
+      "dependsOn": [],
+      "id": "CHECK-OUT-TEST:AC-002",
+      "namespace": "CHECK-OUT-TEST",
+      "number": 2,
+      "source": {
+        "line": 265,
+        "path": "singularity/work-items/check-out-test/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "CHECK-OUT-TEST:AC-002",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[check-out-test:AC-003]",
+      "body": "Before evaluation and after fractional, invalid, error, or non-finite results, the control is unavailable and activation cannot alter the result or expression. *(S3)*",
+      "bodySha256": "ca93db120c25a2460adf635033b4492821cd1b42b92fe15aa10b899a5b8877a6",
+      "dependsOn": [],
+      "id": "CHECK-OUT-TEST:AC-003",
+      "namespace": "CHECK-OUT-TEST",
+      "number": 3,
+      "source": {
+        "line": 266,
+        "path": "singularity/work-items/check-out-test/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "CHECK-OUT-TEST:AC-003",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[check-out-test:AC-004]",
+      "body": "A screenshot of the standard calculator in its default theme shows the conversion control visible and an uppercase, `0x`-prefixed hexadecimal result in the result display. *(S4)*",
+      "bodySha256": "b570615cc23a2174a210c78b0f3064abf7bfdbc8fd84250599abb57db17d3957",
+      "dependsOn": [],
+      "id": "CHECK-OUT-TEST:AC-004",
+      "namespace": "CHECK-OUT-TEST",
+      "number": 4,
+      "source": {
+        "line": 267,
+        "path": "singularity/work-items/check-out-test/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "CHECK-OUT-TEST:AC-004",
+        "methods": [
+          "visual"
+        ]
+      }
+    }
+  ],
+  "generation": 1,
+  "indexSha256": "cc87b0c06c7dcb3f2ec5f7a462c2eb997e4b093bbe264e0d6dc776c91bac3f63",
+  "phase": "specification",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 14027,
+    "path": "singularity/work-items/check-out-test/artifacts/specification/spec.md",
+    "sha256": "83ff715b65e27002381269d3a7812870f9e17754042653e1b1b4fac745e4f18e"
+  },
+  "workId": "check-out-test"
+}
