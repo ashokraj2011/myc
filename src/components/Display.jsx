@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Copy, Check, Delete, RotateCcw } from 'lucide-react';
 import { playSound } from '../utils/audio';
 
+/** Renders the calculator display and its standard-mode conversion control. */
 export const Display = ({
   expression,
   result,
@@ -9,6 +10,10 @@ export const Display = ({
   setAngleUnit,
   memoryValue,
   soundEnabled,
+  showHexadecimalControl = false,
+  hexadecimalAvailable,
+  isHexadecimal,
+  onToggleHexadecimal,
   onBackspace,
   onClear,
 }) => {
@@ -49,6 +54,24 @@ export const Display = ({
 
         {/* Display Utility Actions */}
         <div className="flex items-center gap-1.5">
+          {showHexadecimalControl && (
+            <>
+              {/* @clause:check-out-test:REQ-001 @clause:check-out-test:REQ-005 Standard mode exposes a visible conversion control. */}
+              {/* @clause:check-out-test:REQ-002 Availability follows evaluation eligibility. */}
+              {/* @clause:check-out-test:REQ-003 @clause:check-out-test:REQ-004 The control changes and restores only the displayed result. */}
+              <button
+                type="button"
+                onClick={onToggleHexadecimal}
+                disabled={!hexadecimalAvailable}
+                aria-label="Toggle hexadecimal result"
+                aria-pressed={isHexadecimal}
+                title={isHexadecimal ? 'Show decimal result' : 'Convert result to hexadecimal'}
+                className="px-2 py-1 rounded-lg u-bg-btn-func-bg u-text-btn-func-text u-hbg-btn-func-hover font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isHexadecimal ? 'DEC' : 'HEX'}
+              </button>
+            </>
+          )}
           <button
             onClick={() => {
               playSound('clear', soundEnabled);
@@ -89,6 +112,7 @@ export const Display = ({
       </div>
 
       {/* Main Result Output */}
+      {/* @clause:check-out-test:REQ-003 @clause:check-out-test:REQ-004 Render the converted or canonical result without changing expression text. */}
       <div className="w-full text-right font-mono text-3xl sm:text-4xl font-bold u-text-text-main overflow-x-auto whitespace-nowrap scrollbar-none tracking-tight mt-1 transition-all">
         {result || '0'}
       </div>

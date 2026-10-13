@@ -1,0 +1,1595 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "check-out-test",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "5f86164b-3f6c-4cbc-a261-f7b9028ffb88",
+  "changeSet": {
+    "path": "singularity/work-items/check-out-test/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:3ed19c39cf5aba39e25f85a33dce5442ee48332772f7fbb829cb95312d055ca3",
+    "sourcePaths": [
+      "src/App.jsx",
+      "src/components/Display.jsx",
+      "src/utils/hexadecimal.js"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [],
+    "executableTestPaths": [
+      "src/App.test.jsx",
+      "src/utils/hexadecimal.test.js"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "product-source": 3,
+      "test-source": 2
+    },
+    "entries": [
+      {
+        "changeId": "sha256:b5a8ea0e8054e635cd9c62c88a4327a3cf1fe3956e11c3ff627676efa825ce49",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "src/utils/hexadecimal.js",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:057dab2c52bbba92a81e63c06660211f26196b84761d2f1d0f2f265db835d20c",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "src/utils/hexadecimal.test.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:2c25e3b21f0bc004fd55c4cf3b0f8df18c8f5979080f82caf74bd35c676885af",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:6b4baf8b13ae99e1e7a6e4cbb7ee5be4ea95eeb9d846a1c7a43f87dcc681bd8d",
+        "status": "modified",
+        "oldPath": "src/App.test.jsx",
+        "newPath": "src/App.test.jsx",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:151872bce3c08dd4b0bfb50cae9fdf1f70fe24c9707d8d30e6ba67f6f2f90cfa",
+        "status": "modified",
+        "oldPath": "src/components/Display.jsx",
+        "newPath": "src/components/Display.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "CHECK-OUT-TEST:AC-001",
+      "CHECK-OUT-TEST:AC-002",
+      "CHECK-OUT-TEST:AC-003"
+    ],
+    "bound": [
+      "CHECK-OUT-TEST:AC-001",
+      "CHECK-OUT-TEST:AC-002",
+      "CHECK-OUT-TEST:AC-003"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-001",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-001",
+        "testSource": "src/utils/hexadecimal.test.js",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-002",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-002",
+        "testSource": "src/utils/hexadecimal.test.js",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-003",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-003",
+        "testSource": "src/utils/hexadecimal.test.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "Standard calculator hexadecimal result toggle"
+          ],
+          "name": "converts positive and zero results without changing the expression"
+        },
+        "logicalTestId": "sha256:73fc74d49ee06456840eaaa13489599fb2a8c914b38cc3076cb0447d32e68681",
+        "declarationSha256": "sha256:69c660a2ce2e3e83fa95b766adce9c6907d5c9715f31586c3b81006a7546343e",
+        "supportSha256": null,
+        "line": 216,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-001",
+        "testSource": "src/utils/hexadecimal.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "isHexConvertible"
+          ],
+          "name": "accepts finite signed whole numbers, including zero"
+        },
+        "logicalTestId": "sha256:bd276fe2f3bfa032768ca932ec33e2e8b9d4e371b6f631bf697b68cda716d312",
+        "declarationSha256": "sha256:786b4151962084e006ad99ba9944c4e29805ac0eb7954fac1537028c7035c7fe",
+        "supportSha256": null,
+        "line": 6,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-001",
+        "testSource": "src/utils/hexadecimal.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "formatHexadecimal"
+          ],
+          "name": "formats zero and signed values with uppercase digits and a 0x prefix"
+        },
+        "logicalTestId": "sha256:49b14c1537f41d852b10aa58c270ebb8649c3460feb0df5b20aaad56f062b306",
+        "declarationSha256": "sha256:77498e1548443905d220d17681fc471f1162a1d88e3d0313ba0d2c53206eb422",
+        "supportSha256": null,
+        "line": 24,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-002",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "Standard calculator hexadecimal result toggle"
+          ],
+          "name": "formats negative results and toggles back to decimal without changing the expression"
+        },
+        "logicalTestId": "sha256:607ab16bf97a8565582e3a769c636ce9ba355fa5809afde544cf1e2ff38173cc",
+        "declarationSha256": "sha256:84435592fa26ba81c0fa5fb8e841f0d39a9eede622361c035f1af6177c7c04f4",
+        "supportSha256": null,
+        "line": 238,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-002",
+        "testSource": "src/utils/hexadecimal.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "isHexConvertible"
+          ],
+          "name": "accepts finite signed whole numbers, including zero"
+        },
+        "logicalTestId": "sha256:bd276fe2f3bfa032768ca932ec33e2e8b9d4e371b6f631bf697b68cda716d312",
+        "declarationSha256": "sha256:786b4151962084e006ad99ba9944c4e29805ac0eb7954fac1537028c7035c7fe",
+        "supportSha256": null,
+        "line": 6,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-002",
+        "testSource": "src/utils/hexadecimal.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "formatHexadecimal"
+          ],
+          "name": "formats zero and signed values with uppercase digits and a 0x prefix"
+        },
+        "logicalTestId": "sha256:49b14c1537f41d852b10aa58c270ebb8649c3460feb0df5b20aaad56f062b306",
+        "declarationSha256": "sha256:77498e1548443905d220d17681fc471f1162a1d88e3d0313ba0d2c53206eb422",
+        "supportSha256": null,
+        "line": 24,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-003",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "Standard calculator hexadecimal result toggle"
+          ],
+          "name": "keeps the control unavailable for %s results"
+        },
+        "logicalTestId": "sha256:88046c3bd40e64fbfdb1ecb8f9caace44dc1fd252506caba280e1f7c20d9ba9f",
+        "declarationSha256": "sha256:128ac778193f1d20037a3af525ff6d5a5e619d5be025d3abc66a7197359ab8f1",
+        "supportSha256": null,
+        "line": 257,
+        "parameters": {
+          "kind": "static",
+          "count": 3,
+          "titlePattern": "^keeps the control unavailable for .*? results$"
+        },
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-003",
+        "testSource": "src/utils/hexadecimal.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "isHexConvertible"
+          ],
+          "name": "rejects fractional, invalid, and non-finite values"
+        },
+        "logicalTestId": "sha256:b765c7dd89f93781a08b8718c60891d3b5c3b8a722e885e87d6b0cd1daf32f94",
+        "declarationSha256": "sha256:cbb77e9cb4c2a8bddf0f428783d8ea9995593e6e4f9072bc74096b41ee3353d2",
+        "supportSha256": null,
+        "line": 13,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [
+      {
+        "testSource": "src/App.test.jsx",
+        "line": 202,
+        "clauseIds": [
+          "CHECK-OUT-TEST:AC-001",
+          "CHECK-OUT-TEST:AC-002",
+          "CHECK-OUT-TEST:AC-003"
+        ],
+        "code": "AC_TAG_ON_SUITE",
+        "message": "the tag is above a describe block; place it directly above the test that verifies the criterion"
+      }
+    ],
+    "adapterProfiles": [
+      {
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      },
+      {
+        "testSource": "src/utils/hexadecimal.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx"
+        ]
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx",
+          "src/utils/hexadecimal.js"
+        ]
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-003",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx",
+          "src/utils/hexadecimal.js"
+        ]
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-004",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx"
+        ]
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-005",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-001",
+        "sourcePath": "src/App.jsx",
+        "line": 285,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-001",
+        "sourcePath": "src/components/Display.jsx",
+        "line": 59,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-002",
+        "sourcePath": "src/App.jsx",
+        "line": 49,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-002",
+        "sourcePath": "src/components/Display.jsx",
+        "line": 60,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-002",
+        "sourcePath": "src/utils/hexadecimal.js",
+        "line": 1,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-003",
+        "sourcePath": "src/App.jsx",
+        "line": 158,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-003",
+        "sourcePath": "src/components/Display.jsx",
+        "line": 61,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-003",
+        "sourcePath": "src/components/Display.jsx",
+        "line": 115,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-003",
+        "sourcePath": "src/utils/hexadecimal.js",
+        "line": 6,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-004",
+        "sourcePath": "src/App.jsx",
+        "line": 159,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-004",
+        "sourcePath": "src/components/Display.jsx",
+        "line": 61,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-004",
+        "sourcePath": "src/components/Display.jsx",
+        "line": 115,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-005",
+        "sourcePath": "src/App.jsx",
+        "line": 285,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-005",
+        "sourcePath": "src/components/Display.jsx",
+        "line": 59,
+        "tag": "clause"
+      }
+    ]
+  },
+  "fulfillment": {
+    "obligations": [
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-004",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/check-out-test/evidence/hex-conversion-default-theme.png",
+            "state": "present",
+            "sha256": "2fda42ecb7d3c09640ca98942ab3544b60e8f1451ce6748d333a4cac3934ef08"
+          }
+        ]
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-001",
+        "explanation": {
+          "text": "@clause:check-out-test:REQ-005 Wire the visible control only in standard mode.",
+          "path": "src/App.jsx",
+          "line": 285
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 0,
+                "afterStart": 12,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 18,
+                "beforeLines": 0,
+                "afterStart": 21,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 38,
+                "beforeLines": 0,
+                "afterStart": 43,
+                "afterLines": 13
+              },
+              {
+                "beforeStart": 57,
+                "beforeLines": 0,
+                "afterStart": 75,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 67,
+                "beforeLines": 1,
+                "afterStart": 85,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 71,
+                "beforeLines": 0,
+                "afterStart": 90,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 79,
+                "beforeLines": 1,
+                "afterStart": 98,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 82,
+                "beforeLines": 0,
+                "afterStart": 102,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 86,
+                "beforeLines": 1,
+                "afterStart": 106,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 102,
+                "beforeLines": 0,
+                "afterStart": 123,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 108,
+                "beforeLines": 1,
+                "afterStart": 130,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 111,
+                "beforeLines": 0,
+                "afterStart": 134,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 113,
+                "beforeLines": 1,
+                "afterStart": 137,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 118,
+                "beforeLines": 0,
+                "afterStart": 143,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 158,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 139,
+                "beforeLines": 0,
+                "afterStart": 178,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 152,
+                "beforeLines": 1,
+                "afterStart": 192,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 233,
+                "beforeLines": 1,
+                "afterStart": 273,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 244,
+                "beforeLines": 0,
+                "afterStart": 285,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 247,
+                "beforeLines": 1,
+                "afterStart": 288,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 251,
+                "beforeLines": 0,
+                "afterStart": 293,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 307,
+                "beforeLines": 0,
+                "afterStart": 353,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 309,
+                "beforeLines": 0,
+                "afterStart": 356,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 16
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/Display.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 4,
+                "beforeLines": 0,
+                "afterStart": 5,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 11,
+                "beforeLines": 0,
+                "afterStart": 13,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 51,
+                "beforeLines": 0,
+                "afterStart": 57,
+                "afterLines": 18
+              },
+              {
+                "beforeStart": 91,
+                "beforeLines": 0,
+                "afterStart": 115,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "Display",
+                "kind": "function",
+                "line": 6
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-002",
+        "explanation": {
+          "text": "Availability follows the latest evaluated finite whole number.",
+          "path": "src/App.jsx",
+          "line": 49
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 0,
+                "afterStart": 12,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 18,
+                "beforeLines": 0,
+                "afterStart": 21,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 38,
+                "beforeLines": 0,
+                "afterStart": 43,
+                "afterLines": 13
+              },
+              {
+                "beforeStart": 57,
+                "beforeLines": 0,
+                "afterStart": 75,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 67,
+                "beforeLines": 1,
+                "afterStart": 85,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 71,
+                "beforeLines": 0,
+                "afterStart": 90,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 79,
+                "beforeLines": 1,
+                "afterStart": 98,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 82,
+                "beforeLines": 0,
+                "afterStart": 102,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 86,
+                "beforeLines": 1,
+                "afterStart": 106,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 102,
+                "beforeLines": 0,
+                "afterStart": 123,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 108,
+                "beforeLines": 1,
+                "afterStart": 130,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 111,
+                "beforeLines": 0,
+                "afterStart": 134,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 113,
+                "beforeLines": 1,
+                "afterStart": 137,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 118,
+                "beforeLines": 0,
+                "afterStart": 143,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 158,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 139,
+                "beforeLines": 0,
+                "afterStart": 178,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 152,
+                "beforeLines": 1,
+                "afterStart": 192,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 233,
+                "beforeLines": 1,
+                "afterStart": 273,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 244,
+                "beforeLines": 0,
+                "afterStart": 285,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 247,
+                "beforeLines": 1,
+                "afterStart": 288,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 251,
+                "beforeLines": 0,
+                "afterStart": 293,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 307,
+                "beforeLines": 0,
+                "afterStart": 353,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 309,
+                "beforeLines": 0,
+                "afterStart": 356,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 16
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/Display.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 4,
+                "beforeLines": 0,
+                "afterStart": 5,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 11,
+                "beforeLines": 0,
+                "afterStart": 13,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 51,
+                "beforeLines": 0,
+                "afterStart": 57,
+                "afterLines": 18
+              },
+              {
+                "beforeStart": 91,
+                "beforeLines": 0,
+                "afterStart": 115,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "Display",
+                "kind": "function",
+                "line": 6
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/hexadecimal.js",
+            "change": "added",
+            "hunks": [
+              {
+                "beforeStart": 0,
+                "beforeLines": 0,
+                "afterStart": 1,
+                "afterLines": 16
+              }
+            ],
+            "symbols": [
+              {
+                "name": "isHexConvertible",
+                "kind": "function",
+                "line": 3
+              },
+              {
+                "name": "formatHexadecimal",
+                "kind": "function",
+                "line": 8
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-003",
+        "explanation": {
+          "text": "Conversion changes only the presented result.",
+          "path": "src/App.jsx",
+          "line": 158
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 0,
+                "afterStart": 12,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 18,
+                "beforeLines": 0,
+                "afterStart": 21,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 38,
+                "beforeLines": 0,
+                "afterStart": 43,
+                "afterLines": 13
+              },
+              {
+                "beforeStart": 57,
+                "beforeLines": 0,
+                "afterStart": 75,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 67,
+                "beforeLines": 1,
+                "afterStart": 85,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 71,
+                "beforeLines": 0,
+                "afterStart": 90,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 79,
+                "beforeLines": 1,
+                "afterStart": 98,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 82,
+                "beforeLines": 0,
+                "afterStart": 102,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 86,
+                "beforeLines": 1,
+                "afterStart": 106,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 102,
+                "beforeLines": 0,
+                "afterStart": 123,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 108,
+                "beforeLines": 1,
+                "afterStart": 130,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 111,
+                "beforeLines": 0,
+                "afterStart": 134,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 113,
+                "beforeLines": 1,
+                "afterStart": 137,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 118,
+                "beforeLines": 0,
+                "afterStart": 143,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 158,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 139,
+                "beforeLines": 0,
+                "afterStart": 178,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 152,
+                "beforeLines": 1,
+                "afterStart": 192,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 233,
+                "beforeLines": 1,
+                "afterStart": 273,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 244,
+                "beforeLines": 0,
+                "afterStart": 285,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 247,
+                "beforeLines": 1,
+                "afterStart": 288,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 251,
+                "beforeLines": 0,
+                "afterStart": 293,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 307,
+                "beforeLines": 0,
+                "afterStart": 353,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 309,
+                "beforeLines": 0,
+                "afterStart": 356,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 16
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/Display.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 4,
+                "beforeLines": 0,
+                "afterStart": 5,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 11,
+                "beforeLines": 0,
+                "afterStart": 13,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 51,
+                "beforeLines": 0,
+                "afterStart": 57,
+                "afterLines": 18
+              },
+              {
+                "beforeStart": 91,
+                "beforeLines": 0,
+                "afterStart": 115,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "Display",
+                "kind": "function",
+                "line": 6
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/hexadecimal.js",
+            "change": "added",
+            "hunks": [
+              {
+                "beforeStart": 0,
+                "beforeLines": 0,
+                "afterStart": 1,
+                "afterLines": 16
+              }
+            ],
+            "symbols": [
+              {
+                "name": "isHexConvertible",
+                "kind": "function",
+                "line": 3
+              },
+              {
+                "name": "formatHexadecimal",
+                "kind": "function",
+                "line": 8
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-004",
+        "explanation": {
+          "text": "Toggling again restores the stored decimal result.",
+          "path": "src/App.jsx",
+          "line": 159
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 0,
+                "afterStart": 12,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 18,
+                "beforeLines": 0,
+                "afterStart": 21,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 38,
+                "beforeLines": 0,
+                "afterStart": 43,
+                "afterLines": 13
+              },
+              {
+                "beforeStart": 57,
+                "beforeLines": 0,
+                "afterStart": 75,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 67,
+                "beforeLines": 1,
+                "afterStart": 85,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 71,
+                "beforeLines": 0,
+                "afterStart": 90,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 79,
+                "beforeLines": 1,
+                "afterStart": 98,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 82,
+                "beforeLines": 0,
+                "afterStart": 102,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 86,
+                "beforeLines": 1,
+                "afterStart": 106,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 102,
+                "beforeLines": 0,
+                "afterStart": 123,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 108,
+                "beforeLines": 1,
+                "afterStart": 130,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 111,
+                "beforeLines": 0,
+                "afterStart": 134,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 113,
+                "beforeLines": 1,
+                "afterStart": 137,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 118,
+                "beforeLines": 0,
+                "afterStart": 143,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 158,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 139,
+                "beforeLines": 0,
+                "afterStart": 178,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 152,
+                "beforeLines": 1,
+                "afterStart": 192,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 233,
+                "beforeLines": 1,
+                "afterStart": 273,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 244,
+                "beforeLines": 0,
+                "afterStart": 285,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 247,
+                "beforeLines": 1,
+                "afterStart": 288,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 251,
+                "beforeLines": 0,
+                "afterStart": 293,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 307,
+                "beforeLines": 0,
+                "afterStart": 353,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 309,
+                "beforeLines": 0,
+                "afterStart": 356,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 16
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/Display.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 4,
+                "beforeLines": 0,
+                "afterStart": 5,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 11,
+                "beforeLines": 0,
+                "afterStart": 13,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 51,
+                "beforeLines": 0,
+                "afterStart": 57,
+                "afterLines": 18
+              },
+              {
+                "beforeStart": 91,
+                "beforeLines": 0,
+                "afterStart": 115,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "Display",
+                "kind": "function",
+                "line": 6
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-005",
+        "explanation": {
+          "text": "Wire the visible control only in standard mode.",
+          "path": "src/App.jsx",
+          "line": 285
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 0,
+                "afterStart": 12,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 18,
+                "beforeLines": 0,
+                "afterStart": 21,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 38,
+                "beforeLines": 0,
+                "afterStart": 43,
+                "afterLines": 13
+              },
+              {
+                "beforeStart": 57,
+                "beforeLines": 0,
+                "afterStart": 75,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 67,
+                "beforeLines": 1,
+                "afterStart": 85,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 71,
+                "beforeLines": 0,
+                "afterStart": 90,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 79,
+                "beforeLines": 1,
+                "afterStart": 98,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 82,
+                "beforeLines": 0,
+                "afterStart": 102,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 86,
+                "beforeLines": 1,
+                "afterStart": 106,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 102,
+                "beforeLines": 0,
+                "afterStart": 123,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 108,
+                "beforeLines": 1,
+                "afterStart": 130,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 111,
+                "beforeLines": 0,
+                "afterStart": 134,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 113,
+                "beforeLines": 1,
+                "afterStart": 137,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 118,
+                "beforeLines": 0,
+                "afterStart": 143,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 158,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 139,
+                "beforeLines": 0,
+                "afterStart": 178,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 152,
+                "beforeLines": 1,
+                "afterStart": 192,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 233,
+                "beforeLines": 1,
+                "afterStart": 273,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 244,
+                "beforeLines": 0,
+                "afterStart": 285,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 247,
+                "beforeLines": 1,
+                "afterStart": 288,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 251,
+                "beforeLines": 0,
+                "afterStart": 293,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 307,
+                "beforeLines": 0,
+                "afterStart": 353,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 309,
+                "beforeLines": 0,
+                "afterStart": 356,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 16
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/Display.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 4,
+                "beforeLines": 0,
+                "afterStart": 5,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 11,
+                "beforeLines": 0,
+                "afterStart": 13,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 51,
+                "beforeLines": 0,
+                "afterStart": 57,
+                "afterLines": 18
+              },
+              {
+                "beforeStart": 91,
+                "beforeLines": 0,
+                "afterStart": 115,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "Display",
+                "kind": "function",
+                "line": 6
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:74191d186ebca95b78d131d100131bdf7c748b87f4824a87ff95e0a03a91bd3a"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:e42c19d36a68177325e5a31df3aca8cf9d3572b2fd2a6c904c3fad5444b32f11",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-10-13T03:03:18.128Z"
+}

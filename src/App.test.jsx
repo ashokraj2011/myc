@@ -197,3 +197,88 @@ describe('Responsive navigation (desktop rail + mobile dropdown)', () => {
     expect(mobileSelect.value).toBe('financial');
   });
 });
+
+// @ac:check-out-test:AC-001 @ac:check-out-test:AC-002 @ac:check-out-test:AC-003
+describe('Standard calculator hexadecimal result toggle', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  it('keeps the control visible but unavailable before evaluation', () => {
+    render(<App />);
+
+    const toggle = screen.getByRole('button', { name: 'Toggle hexadecimal result' });
+    expect(toggle).toBeVisible();
+    expect(toggle).toBeDisabled();
+  });
+
+  // @ac:check-out-test:AC-001
+  it('converts positive and zero results without changing the expression', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+    const toggle = screen.getByRole('button', { name: 'Toggle hexadecimal result' });
+
+    await user.keyboard('200+55{enter}');
+    expect(getResultText(container)).toBe('255');
+    const expression = container.querySelector('.calculator-display .text-right.font-mono.text-sm')
+      .textContent;
+
+    await user.click(toggle);
+    expect(getResultText(container)).toBe('0xFF');
+    expect(container.querySelector('.calculator-display .text-right.font-mono.text-sm').textContent)
+      .toBe(expression);
+
+    await user.keyboard('0+0{enter}');
+    expect(toggle).toBeEnabled();
+    await user.click(toggle);
+    expect(getResultText(container)).toBe('0x0');
+  });
+
+  // @ac:check-out-test:AC-002
+  it('formats negative results and toggles back to decimal without changing the expression', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+    const toggle = screen.getByRole('button', { name: 'Toggle hexadecimal result' });
+
+    await user.keyboard('-255{enter}');
+    expect(getResultText(container)).toBe('-255');
+    const expression = container.querySelector('.calculator-display .text-right.font-mono.text-sm')
+      .textContent;
+
+    await user.click(toggle);
+    expect(getResultText(container)).toBe('-0xFF');
+    await user.click(toggle);
+    expect(getResultText(container)).toBe('-255');
+    expect(container.querySelector('.calculator-display .text-right.font-mono.text-sm').textContent)
+      .toBe(expression);
+  });
+
+  // @ac:check-out-test:AC-003
+  it.each([
+    ['fractional', '0.5{enter}', '0.5'],
+    ['invalid', '1+{enter}', 'Error'],
+    ['error', '1/0{enter}', 'Error'],
+  ])('keeps the control unavailable for %s results', async (_state, input, expectedResult) => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+
+    await user.keyboard(input);
+
+    const toggle = screen.getByRole('button', { name: 'Toggle hexadecimal result' });
+    const expression = container.querySelector('.calculator-display .text-right.font-mono.text-sm')
+      .textContent;
+    expect(toggle).toBeDisabled();
+    expect(getResultText(container)).toBe(expectedResult);
+    expect(container.querySelector('.calculator-display .text-right.font-mono.text-sm').textContent)
+      .toBe(expression);
+  });
+
+  it('does not expose the hexadecimal control in scientific mode', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await user.selectOptions(screen.getAllByRole('combobox')[0], 'scientific');
+
+    expect(screen.queryByRole('button', { name: 'Toggle hexadecimal result' })).toBeNull();
+  });
+});

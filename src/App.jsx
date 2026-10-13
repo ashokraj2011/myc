@@ -9,13 +9,17 @@ import { FunctionGrapher } from './components/FunctionGrapher';
 import { HistoryDrawer } from './components/HistoryDrawer';
 import { KeyboardShortcutsModal } from './components/KeyboardShortcutsModal';
 import { evaluateExpression } from './utils/evaluator';
+import { formatHexadecimal, isHexConvertible } from './utils/hexadecimal';
 import { playSound } from './utils/audio';
 
+/** Renders ApexCalc and coordinates its calculator and presentation state. */
 export default function App() {
   const [activeMode, setActiveMode] = useState('standard');
   const [expression, setExpression] = useState('');
   const [result, setResult] = useState('0');
   const [lastEvaluated, setLastEvaluated] = useState(false);
+  const [evaluatedNumericResult, setEvaluatedNumericResult] = useState(null);
+  const [isHexadecimal, setIsHexadecimal] = useState(false);
   const [angleUnit, setAngleUnit] = useState('DEG');
   const [memoryValue, setMemoryValue] = useState(0);
 
@@ -36,6 +40,19 @@ export default function App() {
   const [isHistoryOpen, setIsHistoryOpen] = useState(false);
   const [isKeyboardOpen, setIsKeyboardOpen] = useState(false);
 
+  const resetHexadecimalDisplay = useCallback(() => {
+    setIsHexadecimal(false);
+    setEvaluatedNumericResult(null);
+  }, []);
+
+  const hexadecimalAvailable =
+    // @clause:check-out-test:REQ-002 Availability follows the latest evaluated finite whole number.
+    lastEvaluated && isHexConvertible(evaluatedNumericResult);
+  const displayedResult =
+    isHexadecimal && hexadecimalAvailable
+      ? formatHexadecimal(evaluatedNumericResult)
+      : result;
+
   // Sync theme to document body data-theme attribute
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -55,6 +72,7 @@ export default function App() {
   // Handlers for digit, operator, clear, backspace, equals
   const handleDigit = useCallback(
     (digit) => {
+      resetHexadecimalDisplay();
       if (lastEvaluated) {
         setExpression(digit);
         setResult(digit);
@@ -64,11 +82,12 @@ export default function App() {
         setExpression(nextExpr);
       }
     },
-    [expression, lastEvaluated]
+    [expression, lastEvaluated, resetHexadecimalDisplay]
   );
 
   const handleOperator = useCallback(
     (op) => {
+      resetHexadecimalDisplay();
       setLastEvaluated(false);
       if (!expression && result && result !== '0' && result !== 'Error') {
         setExpression(result + ' ' + op + ' ');
@@ -76,14 +95,15 @@ export default function App() {
         setExpression((prev) => prev + ' ' + op + ' ');
       }
     },
-    [expression, result]
+    [expression, result, resetHexadecimalDisplay]
   );
 
   const handleClear = useCallback(() => {
+    resetHexadecimalDisplay();
     setExpression('');
     setResult('0');
     setLastEvaluated(false);
-  }, []);
+  }, [resetHexadecimalDisplay]);
 
   const handleBackspace = useCallback(() => {
     if (lastEvaluated) {
@@ -100,22 +120,28 @@ export default function App() {
 
   const handleNegate = useCallback(() => {
     if (!expression) return;
+    resetHexadecimalDisplay();
+    setLastEvaluated(false);
     if (expression.startsWith('-(') && expression.endsWith(')')) {
       setExpression(expression.slice(2, -1));
     } else {
       setExpression(`-(${expression})`);
     }
-  }, [expression]);
+  }, [expression, resetHexadecimalDisplay]);
 
   const handlePercent = useCallback(() => {
     if (!expression) return;
+    resetHexadecimalDisplay();
+    setLastEvaluated(false);
     setExpression((prev) => prev + '%');
-  }, [expression]);
+  }, [expression, resetHexadecimalDisplay]);
 
   const handleEquals = useCallback(() => {
     if (!expression || expression.trim() === '') return;
 
     const evalRes = evaluateExpression(expression, angleUnit);
+    setIsHexadecimal(false);
+    setEvaluatedNumericResult(evalRes.rawResult);
     setResult(evalRes.result);
     setLastEvaluated(true);
 
@@ -129,6 +155,18 @@ export default function App() {
     }
   }, [expression, angleUnit]);
 
+  // @clause:check-out-test:REQ-003 Conversion changes only the presented result.
+  // @clause:check-out-test:REQ-004 Toggling again restores the stored decimal result.
+  const handleToggleHexadecimal = useCallback(() => {
+    if (!hexadecimalAvailable) return;
+    setIsHexadecimal((current) => !current);
+  }, [hexadecimalAvailable]);
+
+  const handleModeChange = useCallback((mode) => {
+    setActiveMode(mode);
+    setIsHexadecimal(false);
+  }, []);
+
   const handleMemory = useCallback(
     (type) => {
       const currentNum = parseFloat(result) || 0;
@@ -137,6 +175,8 @@ export default function App() {
           setMemoryValue(0);
           break;
         case 'MR':
+          resetHexadecimalDisplay();
+          setLastEvaluated(false);
           setExpression((prev) => prev + memoryValue.toString());
           break;
         case 'M+':
@@ -149,7 +189,7 @@ export default function App() {
           break;
       }
     },
-    [result, memoryValue]
+    [result, memoryValue, resetHexadecimalDisplay]
   );
 
   // Global Keyboard listener
@@ -230,7 +270,7 @@ export default function App() {
         {/* Top Header */}
         <Header
           activeMode={activeMode}
-          setActiveMode={setActiveMode}
+          setActiveMode={handleModeChange}
           currentTheme={theme}
           setTheme={setTheme}
           soundEnabled={soundEnabled}
@@ -242,13 +282,18 @@ export default function App() {
         {/* Dynamic Content based on Active Mode */}
         {activeMode === 'standard' && (
           <div className="w-full flex flex-col items-center animate-fade-in">
+            {/* @clause:check-out-test:REQ-001 @clause:check-out-test:REQ-005 Wire the visible control only in standard mode. */}
             <Display
               expression={expression}
-              result={result}
+              result={displayedResult}
               angleUnit={angleUnit}
               setAngleUnit={setAngleUnit}
               memoryValue={memoryValue}
               soundEnabled={soundEnabled}
+              showHexadecimalControl
+              hexadecimalAvailable={hexadecimalAvailable}
+              isHexadecimal={isHexadecimal}
+              onToggleHexadecimal={handleToggleHexadecimal}
               onBackspace={handleBackspace}
               onClear={handleClear}
             />
@@ -305,8 +350,10 @@ export default function App() {
         onClose={() => setIsHistoryOpen(false)}
         history={history}
         onSelectHistory={(item) => {
+          resetHexadecimalDisplay();
           setExpression(item.expression);
           setResult(item.result);
+          setLastEvaluated(false);
           setIsHistoryOpen(false);
         }}
         onClearHistory={() => setHistory([])}
