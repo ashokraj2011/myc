@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "phase": "planning",
+  "generation": 1,
+  "reportSha256": "6e1c31ec219f533a65c9976a3167f1edf9c8b153dde0f4084dc26c4624ca2296",
+  "lifecycleEventId": "d8692455-cfe3-430d-a4eb-0febf295bd22",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "planning",
+    "binding": {
+      "workId": "check-out-test",
+      "phase": "planning",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/check-out-test/USER-STORY.md",
+          "textSha256": "4a117fa673089fcd15c788d2f022ded4b94b970554cfe6fd8e3c539238f1dfb0",
+          "originalSha256": "9b90f6aac83a988a04beee0d0c375520608bd50bed5f41bb40a347fe1823ec4c"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:approved-scope",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/check-out-test/context/clarifications-specification-gen1.json",
+          "sha256": "65a61c9eba41e1e242e569a74d0f61eaa039d0ebf9cdd4da09747ade36d0642c"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/check-out-test/artifacts/planning/plan.md",
+        "sha256": "5c69e1ab8b2487f570cfe46cff6061489e4a8e55d61d5461925dd38d0ef35f98"
+      },
+      "upstreamSpec": {
+        "path": "singularity/work-items/check-out-test/artifacts/specification/spec.md",
+        "sha256": "f75582ef939fd5056d63587c9f41b465a94ae53243dccb6e698de2604d21f591"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:approved-scope"
+    ],
+    "rows": [
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "A labelled hexadecimal conversion control is visible in the standard calculator.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx",
+          "src/utils/hexadecimal.js"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/hexadecimal.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Availability exactly follows whether the most recently evaluated result is a finite signed whole number.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-003",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx",
+          "src/utils/hexadecimal.js"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/hexadecimal.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Activation replaces only the displayed result with signed uppercase prefixed hexadecimal.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-004",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Activating the control again restores the canonical decimal result and leaves the expression unchanged.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:REQ-005",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx"
+        ],
+        "plannedTests": [],
+        "testDisposition": "non-test",
+        "testReason": null,
+        "verificationCriterion": "CHECK-OUT-TEST:AC-004",
+        "fulfillment": "modified",
+        "observableResult": "In default-theme standard mode, the conversion control and converted result are visually identifiable.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-001",
+        "expectedPaths": [],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/hexadecimal.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "test-only",
+        "observableResult": "Converting evaluated `255` displays `0xFF`, converting `0` displays `0x0`, and the expression is unchanged.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-002",
+        "expectedPaths": [],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/hexadecimal.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "test-only",
+        "observableResult": "Evaluated `-255` displays `-0xFF`; a second activation restores `-255` without changing the expression.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-003",
+        "expectedPaths": [],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/hexadecimal.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "test-only",
+        "observableResult": "The control is unavailable before evaluation and for fractional, invalid, error, and non-finite results, with no result or expression mutation.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "CHECK-OUT-TEST:AC-004",
+        "expectedPaths": [
+          "singularity/work-items/check-out-test/evidence/hex-conversion-default-theme.png"
+        ],
+        "plannedTests": [],
+        "testDisposition": "non-test",
+        "testReason": null,
+        "verificationCriterion": "CHECK-OUT-TEST:AC-004",
+        "fulfillment": "evidence",
+        "observableResult": "The retained default-theme standard calculator screenshot visibly shows the control and uppercase `0xFF` result.",
+        "assessment": "supported"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "a0016f43bc13f4991a4347bdd86c60bed8424da1e4a226e03267702d04a4c9e5",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "architect",
+    "readOnly": true
+  },
+  "submittedAt": "2026-10-13T02:22:00.531Z",
+  "recordSha256": "13b2692c0735c29c337d6e8d9093b2ec53d0dd6bd417ba5c3f9e4958a75f6c0f"
+}
