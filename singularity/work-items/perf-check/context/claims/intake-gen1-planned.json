@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-10-14T01:05:55.583Z",
+  "claims": {
+    "PERF-CHECK:REQ-001": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/StandardKeypad.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "A visible `HEX` control invokes conversion of the current result from the standard calculator keypad."
+    },
+    "PERF-CHECK:REQ-002": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/utils/evaluator.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Conversion emits uppercase, unprefixed hexadecimal for finite signed integers and reports an error for fractional or invalid results."
+    },
+    "PERF-CHECK:AC-001": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/StandardKeypad.jsx",
+        "src/utils/evaluator.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "The keypad exposes `HEX`; pressing it converts positive, negative, and zero integer results to uppercase hexadecimal without a prefix."
+    },
+    "PERF-CHECK:AC-002": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/utils/evaluator.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Pressing `HEX` for a fractional or invalid result visibly reports an error and never truncates or emits a hexadecimal value."
+    }
+  },
+  "verificationContracts": [
+    {
+      "clauseId": "PERF-CHECK:AC-001",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "hex-integer-conversion",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "src/App.test.jsx"
+          },
+          "requiredAssurance": null
+        }
+      ]
+    },
+    {
+      "clauseId": "PERF-CHECK:AC-002",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "hex-invalid-result",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "src/App.test.jsx"
+          },
+          "requiredAssurance": null
+        }
+      ]
+    }
+  ],
+  "workId": "perf-check",
+  "phase": "intake",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/perf-check/artifacts/intake/intake.md",
+    "sha256": "02a38a9d4aa0d3db0f426b6f34c6c11d5a4f357f5981f485c1f3b149cecca195",
+    "bytes": 10478
+  }
+}

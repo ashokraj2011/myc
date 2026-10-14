@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "workId": "perf-check",
+  "phase": "intake",
+  "generation": 1,
+  "mode": "when-needed",
+  "promptPath": "singularity/work-items/perf-check/context/prompts/intake-gen1.md",
+  "promptSha256": "2bf4d28bd3637a30e909bb07bb92baf4baeba737528c583f674da556bfa8f3da",
+  "groundingRecordPath": "singularity/work-items/perf-check/context/intake-gen1.json",
+  "groundingRecordSha256": "3569f3913d529c39d93a59cf2231067790e5afc893e66d20caf6686697ccbab1",
+  "responses": [
+    {
+      "id": "Q-001",
+      "question": "What should the requested hex operator do?",
+      "answer": "Convert the evaluated decimal result to hexadecimal (for example, 255 -> FF).",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-002",
+      "question": "How should users invoke the decimal-to-hex conversion?",
+      "answer": "Add a visible HEX button to the calculator keypad.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-003",
+      "question": "What should the HEX button do when the current evaluated result is negative, fractional, or invalid?",
+      "answer": "Convert signed integers (for example, -15 -> -F) and show an error for fractions or invalid results.",
+      "status": "answered",
+      "blocking": false
+    }
+  ],
+  "completed": true,
+  "recordedAt": "2026-10-14T01:03:40.523Z",
+  "recordedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "agent": "product-owner"
+}

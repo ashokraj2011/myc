@@ -1,0 +1,94 @@
+{
+  "clauses": [
+    {
+      "anchor": "[perf-check:REQ-001]",
+      "body": "A calculator user can invoke decimal-to-hexadecimal conversion from a visible `HEX` button on the calculator keypad. | Pinned Story request plus intake clarification generation 1",
+      "bodySha256": "2f0105785bad46158d5ed1cad502daebb910279b32c18c866a818e0f54964ada",
+      "dependsOn": [],
+      "id": "PERF-CHECK:REQ-001",
+      "namespace": "PERF-CHECK",
+      "number": 1,
+      "source": {
+        "line": 151,
+        "path": "singularity/work-items/perf-check/artifacts/intake/intake.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[perf-check:REQ-002]",
+      "body": "Conversion accepts finite signed integer results, emits uppercase hexadecimal without a prefix, and reports an error for fractional or invalid results. | Intake clarification generation 1",
+      "bodySha256": "ae0ebe24037d3d87c9e3f2a84734f820a27d4605783ee8c03f37dd4069be6b40",
+      "dependsOn": [],
+      "id": "PERF-CHECK:REQ-002",
+      "namespace": "PERF-CHECK",
+      "number": 2,
+      "source": {
+        "line": 152,
+        "path": "singularity/work-items/perf-check/artifacts/intake/intake.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[perf-check:AC-001]",
+      "body": "Given a current finite signed integer decimal result, when the user presses the visible `HEX` keypad button, the result display shows its uppercase hexadecimal representation without a prefix; examples include `255` to `FF`, `-15` to `-F`, and `0` to `0`.",
+      "bodySha256": "9941919ea0c1af0808ae8b54cf4baf71f5db2d22ad8e09fbf04a14e3bcfd0903",
+      "dependsOn": [],
+      "id": "PERF-CHECK:AC-001",
+      "namespace": "PERF-CHECK",
+      "number": 1,
+      "source": {
+        "line": 158,
+        "path": "singularity/work-items/perf-check/artifacts/intake/intake.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "PERF-CHECK:AC-001",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[perf-check:AC-002]",
+      "body": "Given a fractional or invalid current result, when the user presses `HEX`, the result display shows an error instead of a converted or truncated value.",
+      "bodySha256": "d4bece45f5f1a6680ad57624efdf6929094427dbfb2d4ef31e349b6f0e3d5a62",
+      "dependsOn": [],
+      "id": "PERF-CHECK:AC-002",
+      "namespace": "PERF-CHECK",
+      "number": 2,
+      "source": {
+        "line": 159,
+        "path": "singularity/work-items/perf-check/artifacts/intake/intake.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "PERF-CHECK:AC-002",
+        "methods": [
+          "test"
+        ]
+      }
+    }
+  ],
+  "generation": 1,
+  "indexSha256": "208b3393399856782b2e45494bda8cbebe4aa0f0bd02483a95c48359f63305ec",
+  "phase": "intake",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 10478,
+    "path": "singularity/work-items/perf-check/artifacts/intake/intake.md",
+    "sha256": "02a38a9d4aa0d3db0f426b6f34c6c11d5a4f357f5981f485c1f3b149cecca195"
+  },
+  "workId": "perf-check"
+}
