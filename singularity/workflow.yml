@@ -1090,6 +1090,84 @@ workTypes:
         inputs:
           - { phase: convergence }
           - { phase: verification, projection: approved-summary, preserve: [Acceptance and specification results, "Negative, regression, security, and non-functional checks"], maximumSummaryBytes: 24576, expansion: hash-bound-reference, fallback: block }
+  demo-instruction-test-loop-imported:
+    decisions:
+      - after: demo-instruction-test-imported
+        enforceConditions: true
+        id: demo-instruction-test-result
+        inputs:
+          - label: Evidence-backed checker verdict
+            name: verdict
+            values:
+              - pass
+              - repair
+              - blocked
+        kind: branch
+        label: Do fresh tests and source comparisons satisfy every approved scenario?
+        maxRounds: 3
+        routes:
+          - id: demo-instruction-pass
+            label: Review the passing check and prepare closing documents
+            omits:
+              - authority: quality-reviewers
+                reason: Fresh evidence proves current code satisfies the agreed scenarios without another repair.
+                responsibility: implement
+            to: demo-instruction-close-imported
+            when:
+              verdict: pass
+          - id: demo-instruction-fix
+            label: Repair the observed defect
+            to: demo-instruction-repair-imported
+            when:
+              verdict: repair
+          - id: demo-instruction-access
+            label: Restore test access or missing evidence and recheck
+            to: demo-instruction-test-imported
+      - after: demo-instruction-repair-imported
+        enforceConditions: true
+        id: demo-instruction-repair-result
+        inputs:
+          - label: Repair handoff
+            name: next
+            values:
+              - recheck
+              - revise-intake
+        kind: branch
+        label: Independently retest the repair or review changed scope
+        maxRounds: 3
+        routes:
+          - id: demo-instruction-retest
+            label: Check the repaired current revision
+            to: demo-instruction-test-imported
+            when:
+              next: recheck
+          - id: demo-instruction-scope
+            label: Review new scope at intake
+            to: demo-instruction-intake-imported
+    description: Custom agents and skills compose reusable instructions at explicit procedure steps. Intake pins documents and screenshots; an independent checker proposes pass, repair or blocked from fresh evidence; repair returns to checking; closing retains results. Automatic routing keeps human approval checkpoints and a three-round bound.
+    documents:
+      allowedPhases:
+        - demo-instruction-intake-imported
+    intelligence:
+      agentBriefs: off
+      ast: off
+      worldModel: off
+    label: Demo — Instruction-composed Test Loop (imported)
+    omits:
+      - authority: quality-reviewers
+        reason: The approved final check proves no additional repair is needed; earlier repair history is retained in closing documents.
+        responsibility: implement
+    phases:
+      - demo-instruction-intake-imported
+      - demo-instruction-test-imported
+      - demo-instruction-repair-imported
+      - demo-instruction-close-imported
+    plannedClaims:
+      clausePhases:
+        - demo-instruction-intake-imported
+      mode: required
+      owners:
+        demo-instruction-repair-imported: demo-instruction-intake-imported
 phases:
   intake:
     label: Intake
@@ -1721,6 +1799,152 @@ phases:
       - id: git-diff-check
         argv: [git, diff, --check]
         modelPolicy: never
+  demo-instruction-close-imported:
+    approval:
+      authorities:
+        - quality-reviewers
+      minimum: 1
+      rejectTo:
+        - demo-instruction-intake-imported
+        - demo-instruction-test-imported
+        - demo-instruction-repair-imported
+        - demo-instruction-close-imported
+    artifact:
+      kind: publication-review
+      minimumBytes: 500
+      path: artifacts/demo-instruction-close-imported/closing-report.md
+      validation:
+        requiredHeadings:
+          - Agent brief
+          - Approved scope and final revision
+          - Final check and evidence
+          - Repair history and no-change accounting
+          - Residual risks and operational handoff
+          - Human closing decision
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - final acceptance
+        - residual risk
+    defaultTemplate: demo-check-repair-close/close.md
+    generation:
+      task: summarize
+    inputs:
+      - demo-instruction-intake-imported
+      - demo-instruction-test-imported
+      - optional: true
+        phase: demo-instruction-repair-imported
+    label: Instruction demo — Close (imported)
+    qualityCommands: []
+    writeScope: artifact-only
+  demo-instruction-intake-imported:
+    approval:
+      authorities:
+        - product-approvers
+      minimum: 1
+      rejectTo:
+        - demo-instruction-intake-imported
+    artifact:
+      kind: requirements
+      minimumBytes: 500
+      path: artifacts/demo-instruction-intake-imported/intake.md
+      validation:
+        requiredHeadings:
+          - Approved sources
+          - Scope and acceptance criteria
+          - Scenario matrix
+          - Test environment and commands
+          - Planned implementation evidence
+          - Routing and human checkpoints
+    authoringSkill: sf-document-intake
+    clarification:
+      maxQuestions: 5
+      mode: required
+      topics:
+        - source interpretation
+        - expected behavior
+        - test tools
+        - repair scope
+        - human checkpoints
+    defaultTemplate: demo-check-repair-close/intake.md
+    generation:
+      task: clarify
+    label: Instruction demo — Intake (imported)
+    qualityCommands: []
+    writeScope: artifact-only
+  demo-instruction-repair-imported:
+    approval:
+      authorities:
+        - engineering-reviewers
+      minimum: 1
+      rejectTo:
+        - demo-instruction-intake-imported
+        - demo-instruction-test-imported
+        - demo-instruction-repair-imported
+    artifact:
+      kind: implementation-summary
+      minimumBytes: 400
+      path: artifacts/demo-instruction-repair-imported/implementation-summary.md
+      validation:
+        requiredHeadings:
+          - Agent brief
+          - Approved defect and scope
+          - Changes and clause bindings
+          - Test results and regression evidence
+          - Handoff and remaining risks
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - root cause
+        - allowed paths
+        - repair risks
+    defaultTemplate: demo-check-repair-close/repair.md
+    generation:
+      task: code
+    inputs:
+      - demo-instruction-intake-imported
+      - demo-instruction-test-imported
+    label: Instruction demo — Repair (imported)
+    qualityCommands: []
+    writeScope: source-and-artifact
+  demo-instruction-test-imported:
+    approval:
+      authorities:
+        - quality-reviewers
+      minimum: 1
+      rejectTo:
+        - demo-instruction-intake-imported
+        - demo-instruction-test-imported
+    artifact:
+      kind: test-evidence
+      minimumBytes: 500
+      path: artifacts/demo-instruction-test-imported/test-results.md
+      validation:
+        requiredHeadings:
+          - Pinned inputs and tested revision
+          - Test execution and evidence
+          - Source and visual comparison
+          - Scenario results
+          - Verdict and repair request
+          - Human checkpoint
+    authoringSkill: sf-scenario-check
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - test access
+        - missing evidence
+        - defect classification
+    defaultTemplate: demo-check-repair-close/check.md
+    generation:
+      task: analyze
+    inputs:
+      - demo-instruction-intake-imported
+    label: Instruction demo — Test and compare (imported)
+    qualityCommands: []
+    writeScope: artifact-only
 governance:
   requireAcceptanceCriteriaTags: true
   protectedPaths:
