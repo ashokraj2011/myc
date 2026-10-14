@@ -406,6 +406,68 @@ mcpServers:
     evidence:
       captureToolCalls: true
       captureResults: true
+  figma-imported:
+    agents:
+      - product-designer-imported
+    approval: confirm
+    evidence:
+      captureResults: true
+      captureToolCalls: true
+    hostReference: figma
+    label: Figma design context (imported)
+    phases:
+      - design-intake-imported
+      - design-inventory-imported
+      - component-mapping-imported
+      - mobile-spec-imported
+      - visual-verification-imported
+    required: false
+    tools:
+      - get_metadata
+      - get_design_context
+      - get_screenshot
+      - get_variable_defs
+      - get_code_connect_map
+  playwright-imported:
+    agents:
+      - qa-imported
+      - product-designer-imported
+      - poc-automation-imported
+      - poc-explorer-imported
+      - poc-validator-imported
+      - scenario-tester-imported
+      - demo-web-tester-imported
+    approval: confirm
+    evidence:
+      captureResults: true
+      captureToolCalls: true
+    hostReference: playwright
+    label: Playwright browser automation (imported)
+    phases:
+      - design-intake-imported
+      - design-inventory-imported
+      - verification-imported
+      - testing-imported
+      - visual-verification-imported
+      - conformance-imported
+      - poc-ui-exploration-imported
+      - poc-validation-imported
+      - scenario-check-imported
+      - scenario-retest-imported
+      - demo-web-check-imported
+      - demo-web-retest-imported
+    required: false
+    tools:
+      - browser_navigate
+      - browser_snapshot
+      - browser_click
+      - browser_fill_form
+      - browser_hover
+      - browser_press_key
+      - browser_resize
+      - browser_take_screenshot
+      - browser_console_messages
+      - browser_network_requests
 
 # Human approval groups are matched against the real Git/GitHub identity.
 approvalSecurity:
@@ -1168,6 +1230,57 @@ workTypes:
       mode: required
       owners:
         demo-instruction-repair-imported: demo-instruction-intake-imported
+  ashok-workflow-imported:
+    description: The existing enterprise browser-regression profile with governed Playwright MCP evidence and independent publication review.
+    label: POC workflow — enterprise Playwright (imported)
+    phaseOverrides:
+      poc-impact-analysis-imported:
+        inputs:
+          - poc-intake-imported
+      poc-intake-imported:
+        artifact:
+          kind: requirements
+      poc-publication-review-imported:
+        inputs:
+          - poc-intake-imported
+          - poc-impact-analysis-imported
+          - poc-ui-exploration-imported
+          - poc-test-generation-imported
+          - poc-validation-imported
+      poc-test-generation-imported:
+        inputs:
+          - poc-intake-imported
+          - poc-impact-analysis-imported
+          - poc-ui-exploration-imported
+      poc-ui-exploration-imported:
+        inputs:
+          - poc-intake-imported
+          - poc-impact-analysis-imported
+      poc-validation-imported:
+        inputs:
+          - poc-impact-analysis-imported
+          - poc-ui-exploration-imported
+          - poc-test-generation-imported
+    phases:
+      - poc-intake-imported
+      - poc-impact-analysis-imported
+      - poc-ui-exploration-imported
+      - poc-test-generation-imported
+      - poc-validation-imported
+      - poc-publication-review-imported
+    plannedClaims:
+      clausePhases:
+        - poc-intake-imported
+      mode: required
+      owners:
+        poc-test-generation-imported: poc-ui-exploration-imported
+    templateOverrides:
+      poc-impact-analysis-imported: poc-workflow/impact-analysis.md
+      poc-intake-imported: poc-workflow/intake.md
+      poc-publication-review-imported: poc-workflow/publication-review.md
+      poc-test-generation-imported: poc-workflow/test-generation.md
+      poc-ui-exploration-imported: poc-workflow/ui-exploration.md
+      poc-validation-imported: poc-workflow/validation.md
 phases:
   intake:
     label: Intake
@@ -1945,6 +2058,791 @@ phases:
     label: Instruction demo — Test and compare (imported)
     qualityCommands: []
     writeScope: artifact-only
+  component-mapping-imported:
+    approval:
+      authorities:
+        - architecture-reviewers
+      minimum: 1
+      rejectTo:
+        - design-intake-imported
+        - design-inventory-imported
+        - component-mapping-imported
+    artifact:
+      kind: component-mapping
+      minimumBytes: 500
+      path: artifacts/component-mapping-imported/component-mapping.md
+    clarification:
+      maxQuestions: 5
+      mode: required
+      topics:
+        - component ownership
+        - navigation
+        - state
+        - data contracts
+        - accessibility
+    defaultTemplate: figma-mobile/component-mapping.md
+    label: Mobile component mapping (imported)
+    writeScope: artifact-only
+  conformance-imported:
+    approval:
+      authorities:
+        - quality-reviewers
+        - architecture-reviewers
+      minimum: 1
+      rejectTo:
+        - implementation-spec
+        - fix-spec
+        - implementation
+        - verification-imported
+        - conformance-imported
+    artifact:
+      kind: conformance-report
+      minimumBytes: 400
+      path: artifacts/conformance-imported/spec-code-comparison.md
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - approved deviations
+        - missing evidence
+        - unplanned work
+    comparison:
+      identifiers:
+        - acceptance-criteria
+        - specification
+      verdicts:
+        - matched
+        - partial
+        - missing
+        - deviated
+        - unplanned
+    defaultTemplate: common/conformance.md
+    label: Spec-to-code conformance (imported)
+    writeScope: artifact-only
+  demo-web-check-imported:
+    approval:
+      authorities:
+        - quality-reviewers
+      minimum: 1
+      rejectTo:
+        - demo-web-intake-imported
+        - demo-web-check-imported
+    artifact:
+      kind: test-evidence
+      minimumBytes: 500
+      path: artifacts/demo-web-check-imported/web-e2e-results.md
+      validation:
+        requiredHeadings:
+          - Pinned inputs and tested revision
+          - Browser and test execution
+          - Screenshot comparison
+          - Scenario results
+          - Agent verdict and repair request
+          - Human acceptance
+    authoringSkill: sf-scenario-check
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - test access
+        - ambiguous screenshots
+        - defect classification
+    defaultTemplate: demo-web-e2e-testing/check.md
+    generation:
+      task: analyze
+    inputs:
+      - demo-web-intake-imported
+    label: Check current web application (imported)
+    qualityCommands: []
+    writeScope: artifact-only
+  demo-web-intake-imported:
+    approval:
+      authorities:
+        - product-approvers
+      minimum: 1
+      rejectTo:
+        - demo-web-intake-imported
+    artifact:
+      kind: requirements
+      minimumBytes: 500
+      path: artifacts/demo-web-intake-imported/intake.md
+      validation:
+        requiredHeadings:
+          - Approved screenshots
+          - Scope and acceptance criteria
+          - Scenario matrix
+          - Test environment and commands
+          - Planned implementation evidence
+          - Repair and acceptance agreement
+    authoringSkill: sf-document-intake
+    clarification:
+      maxQuestions: 5
+      mode: required
+      topics:
+        - screenshot interpretation
+        - visual tolerance
+        - interaction expectations
+        - test environment
+        - repair boundary
+    defaultTemplate: demo-web-e2e-testing/intake.md
+    generation:
+      task: clarify
+    label: Screenshot and web scenario intake (imported)
+    qualityCommands: []
+    writeScope: artifact-only
+  demo-web-repair-imported:
+    approval:
+      authorities:
+        - engineering-reviewers
+      minimum: 1
+      rejectTo:
+        - demo-web-intake-imported
+        - demo-web-check-imported
+        - demo-web-repair-imported
+    artifact:
+      kind: implementation-summary
+      minimumBytes: 400
+      path: artifacts/demo-web-repair-imported/implementation-summary.md
+      validation:
+        requiredHeadings:
+          - Approved defect and scope
+          - Changes and clause bindings
+          - Test results and regression evidence
+          - Remaining risks
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - root cause
+        - allowed paths
+        - repair risks
+    defaultTemplate: demo-web-e2e-testing/repair.md
+    generation:
+      task: code
+    inputs:
+      - demo-web-intake-imported
+      - demo-web-check-imported
+    label: Repair web code and regression tests (imported)
+    qualityCommands: []
+    writeScope: source-and-artifact
+  demo-web-retest-imported:
+    approval:
+      authorities:
+        - quality-reviewers
+      minimum: 1
+      rejectTo:
+        - demo-web-intake-imported
+        - demo-web-check-imported
+        - demo-web-repair-imported
+        - demo-web-retest-imported
+    artifact:
+      kind: test-evidence
+      minimumBytes: 500
+      path: artifacts/demo-web-retest-imported/web-e2e-results.md
+      validation:
+        requiredHeadings:
+          - Pinned inputs and tested revision
+          - Browser and test execution
+          - Screenshot comparison
+          - Scenario results
+          - Agent verdict and repair request
+          - Human acceptance
+    authoringSkill: sf-scenario-check
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - test access
+        - inconclusive evidence
+        - remaining defects
+    defaultTemplate: demo-web-e2e-testing/check.md
+    generation:
+      task: analyze
+    inputs:
+      - demo-web-intake-imported
+      - demo-web-check-imported
+      - demo-web-repair-imported
+    label: Retest web behavior and accept (imported)
+    qualityCommands: []
+    testEvidenceFrom: demo-web-repair-imported
+    writeScope: artifact-only
+  design-intake-imported:
+    approval:
+      authorities:
+        - design-reviewers
+      minimum: 1
+      rejectTo:
+        - design-intake-imported
+    artifact:
+      kind: design-intake
+      minimumBytes: 350
+      path: artifacts/design-intake-imported/design-package-intake.md
+    clarification:
+      maxQuestions: 5
+      mode: required
+      topics:
+        - target platforms
+        - screen states
+        - interactions
+        - accessibility
+        - design constraints
+    defaultTemplate: figma-mobile/design-intake.md
+    label: Design package intake (imported)
+    writeScope: artifact-only
+  design-inventory-imported:
+    approval:
+      authorities:
+        - design-reviewers
+      minimum: 1
+      rejectTo:
+        - design-intake-imported
+        - design-inventory-imported
+    artifact:
+      kind: design-inventory
+      minimumBytes: 500
+      path: artifacts/design-inventory-imported/design-inventory.md
+    clarification:
+      maxQuestions: 5
+      mode: required
+      topics:
+        - screen states
+        - transitions
+        - assets
+        - responsive behavior
+        - evidence gaps
+    defaultTemplate: figma-mobile/design-inventory.md
+    label: Screen and design inventory (imported)
+    writeScope: artifact-only
+  document-intake-imported:
+    approval:
+      authorities:
+        - product-approvers
+      minimum: 1
+      rejectTo:
+        - document-intake-imported
+    artifact:
+      kind: requirements
+      minimumBytes: 500
+      path: artifacts/document-intake-imported/intake.md
+      validation:
+        requiredHeadings:
+          - Approved sources
+          - Scope and acceptance criteria
+          - Scenario matrix
+          - Test tool and authorized environment
+          - Planned implementation evidence
+          - Repair and acceptance agreement
+    authoringSkill: sf-document-intake
+    clarification:
+      maxQuestions: 5
+      mode: required
+      topics:
+        - source interpretation
+        - observable acceptance
+        - test tool
+        - authorized target
+        - repair boundary
+    defaultTemplate: document-test-repair/intake.md
+    generation:
+      task: clarify
+    label: Documents and scenario intake (imported)
+    qualityCommands: []
+    writeScope: artifact-only
+  mobile-spec-imported:
+    approval:
+      authorities:
+        - architecture-reviewers
+      minimum: 1
+      rejectTo:
+        - design-intake-imported
+        - design-inventory-imported
+        - component-mapping-imported
+        - mobile-spec-imported
+    artifact:
+      kind: implementation-spec
+      minimumBytes: 700
+      path: artifacts/mobile-spec-imported/mobile-spec.md
+    clarification:
+      maxQuestions: 5
+      mode: required
+      topics:
+        - behavior
+        - interfaces
+        - failure states
+        - analytics
+        - testing
+    defaultTemplate: figma-mobile/mobile-spec.md
+    label: Mobile implementation specification (imported)
+    writeScope: artifact-only
+  poc-impact-analysis-imported:
+    approval:
+      authorities:
+        - quality-reviewers
+      minimum: 1
+      rejectTo:
+        - poc-intake-imported
+        - poc-impact-analysis-imported
+    artifact:
+      kind: impact-analysis
+      minimumBytes: 600
+      path: artifacts/poc-impact-analysis-imported/impact-analysis.md
+      validation:
+        requiredHeadings:
+          - Compared revisions
+          - Changed-code evidence
+          - Regression footprint
+          - Proposed scenarios
+          - Risks and unknowns
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - change boundary
+        - affected routes
+        - test seams
+        - risk
+        - unknowns
+    defaultTemplate: poc-workflow/impact-analysis.md
+    generation:
+      task: analyze
+    label: Regression impact analysis (imported)
+    writeScope: artifact-only
+  poc-intake-imported:
+    approval:
+      authorities:
+        - product-approvers
+      minimum: 1
+      rejectTo:
+        - poc-intake-imported
+    artifact:
+      kind: poc-intake
+      minimumBytes: 500
+      path: artifacts/poc-intake-imported/intake.md
+      validation:
+        requiredHeadings:
+          - Objective and scope
+          - Repository and branch context
+          - Target environment
+          - Test intent and acceptance criteria
+          - Safety and access
+    clarification:
+      maxQuestions: 5
+      mode: required
+      topics:
+        - test intent
+        - target environment
+        - acceptance criteria
+        - access and safety
+        - exclusions
+    defaultTemplate: poc-workflow/intake.md
+    generation:
+      task: clarify
+    label: POC intent and environment (imported)
+    writeScope: artifact-only
+  poc-publication-review-imported:
+    approval:
+      authorities:
+        - quality-reviewers
+        - engineering-reviewers
+      minimum: 1
+      rejectTo:
+        - poc-intake-imported
+        - poc-impact-analysis-imported
+        - poc-ui-exploration-imported
+        - poc-test-generation-imported
+        - poc-validation-imported
+        - poc-publication-review-imported
+      requiredAuthorities:
+        - quality-reviewers
+    artifact:
+      kind: publication-review
+      minimumBytes: 700
+      path: artifacts/poc-publication-review-imported/publication-review.md
+      validation:
+        requiredHeadings:
+          - Publication boundary
+          - Change and coverage summary
+          - Validation evidence
+          - Residual risk and rollback
+          - Human decision
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - publication target
+        - evidence gaps
+        - residual risk
+        - rollback
+        - reviewer decision
+    defaultTemplate: poc-workflow/publication-review.md
+    generation:
+      task: summarize
+    label: Publication and PR review (imported)
+    writeScope: artifact-only
+  poc-test-generation-imported:
+    approval:
+      authorities:
+        - engineering-reviewers
+      minimum: 1
+      rejectTo:
+        - poc-intake-imported
+        - poc-impact-analysis-imported
+        - poc-ui-exploration-imported
+        - poc-test-generation-imported
+    artifact:
+      kind: implementation-summary
+      minimumBytes: 600
+      path: artifacts/poc-test-generation-imported/test-generation.md
+      validation:
+        requiredHeadings:
+          - Repository-native design
+          - Files changed
+          - Scenario traceability
+          - Locator and test-data strategy
+          - Deviations and residual risk
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - framework conventions
+        - fixtures
+        - test data
+        - approved deviations
+        - implementation blockers
+    defaultTemplate: poc-workflow/test-generation.md
+    generation:
+      task: code
+    label: Playwright test generation (imported)
+    qualityCommands:
+      - argv:
+          - git
+          - diff
+          - --check
+        id: git-diff-check
+        modelPolicy: never
+    sourceBoundary: test-automation
+    writeScope: source-and-artifact
+  poc-ui-exploration-imported:
+    approval:
+      authorities:
+        - quality-reviewers
+      minimum: 1
+      rejectTo:
+        - poc-intake-imported
+        - poc-impact-analysis-imported
+        - poc-ui-exploration-imported
+    artifact:
+      kind: ui-exploration-evidence
+      minimumBytes: 700
+      path: artifacts/poc-ui-exploration-imported/ui-exploration.md
+      validation:
+        requiredHeadings:
+          - Authorized target
+          - Observed journeys and states
+          - Accessibility and locator evidence
+          - Visual and runtime evidence
+          - Coverage gaps
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - environment access
+        - test data
+        - observed behavior
+        - accessibility
+        - evidence gaps
+    defaultTemplate: poc-workflow/ui-exploration.md
+    generation:
+      task: analyze
+    label: Governed UI exploration (imported)
+    mcp:
+      evidence:
+        - minimum: 1
+          outputRequired: false
+          server: playwright-imported
+          tool: browser_navigate
+        - minimum: 1
+          outputRequired: true
+          server: playwright-imported
+          tool: browser_snapshot
+        - minimum: 1
+          outputRequired: true
+          server: playwright-imported
+          tool: browser_take_screenshot
+      requireSmoke: true
+      requiredServers:
+        - playwright-imported
+    writeScope: artifact-only
+  poc-validation-imported:
+    approval:
+      authorities:
+        - quality-reviewers
+      minimum: 1
+      rejectTo:
+        - poc-intake-imported
+        - poc-impact-analysis-imported
+        - poc-ui-exploration-imported
+        - poc-test-generation-imported
+        - poc-validation-imported
+    artifact:
+      kind: test-evidence
+      minimumBytes: 800
+      path: artifacts/poc-validation-imported/validation.md
+      validation:
+        requiredHeadings:
+          - Validation scope
+          - Commands and environment
+          - Scenario results
+          - Evidence inventory
+          - Repair attempts
+          - Final verdict
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - failure classification
+        - environment
+        - evidence
+        - repair scope
+        - residual risk
+    defaultTemplate: poc-workflow/validation.md
+    generation:
+      task: analyze
+    label: Playwright validation and bounded repair (imported)
+    mcp:
+      evidence:
+        - minimum: 1
+          outputRequired: true
+          server: playwright-imported
+          tool: browser_console_messages
+        - minimum: 1
+          outputRequired: true
+          server: playwright-imported
+          tool: browser_network_requests
+        - minimum: 1
+          outputRequired: true
+          server: playwright-imported
+          tool: browser_take_screenshot
+      requireSmoke: true
+      requiredServers:
+        - playwright-imported
+    qualityCommands:
+      - argv:
+          - git
+          - diff
+          - --check
+        id: git-diff-check
+        modelPolicy: never
+        timeoutMs: 60000
+      - argv:
+          - npx
+          - --no-install
+          - tsc
+          - --noEmit
+        id: typescript-compile
+        modelPolicy: never
+        timeoutMs: 300000
+      - argv:
+          - npx
+          - --no-install
+          - playwright
+          - test
+          - --reporter=json
+        id: playwright-tests
+        modelPolicy: never
+        timeoutMs: 1200000
+    repairBudget:
+      maxAttempts: 2
+      resetOnPhase: poc-intake-imported
+    sourceBoundary: test-automation
+    writeScope: source-and-artifact
+  scenario-check-imported:
+    approval:
+      authorities:
+        - quality-reviewers
+      minimum: 1
+      rejectTo:
+        - document-intake-imported
+        - scenario-check-imported
+    artifact:
+      kind: test-evidence
+      minimumBytes: 500
+      path: artifacts/scenario-check-imported/scenario-results.md
+      validation:
+        requiredHeadings:
+          - Pinned inputs and tested revision
+          - Tool execution and evidence
+          - Scenario results
+          - Agent verdict and repair request
+          - Human acceptance
+    authoringSkill: sf-scenario-check
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - test access
+        - inconclusive evidence
+        - defect classification
+    defaultTemplate: document-test-repair/check.md
+    generation:
+      task: analyze
+    inputs:
+      - document-intake-imported
+    label: Test existing behavior (imported)
+    qualityCommands: []
+    writeScope: artifact-only
+  scenario-repair-imported:
+    approval:
+      authorities:
+        - engineering-reviewers
+      minimum: 1
+      rejectTo:
+        - document-intake-imported
+        - scenario-check-imported
+        - scenario-repair-imported
+    artifact:
+      kind: implementation-summary
+      minimumBytes: 400
+      path: artifacts/scenario-repair-imported/implementation-summary.md
+      validation:
+        requiredHeadings:
+          - Approved defect and scope
+          - Changes and clause bindings
+          - Test results and regression evidence
+          - Remaining risks
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - root cause
+        - authorized scope
+        - repair risks
+    defaultTemplate: document-test-repair/repair.md
+    generation:
+      task: code
+    inputs:
+      - document-intake-imported
+      - scenario-check-imported
+    label: Repair code and tests (imported)
+    qualityCommands: []
+    writeScope: source-and-artifact
+  scenario-retest-imported:
+    approval:
+      authorities:
+        - quality-reviewers
+      minimum: 1
+      rejectTo:
+        - document-intake-imported
+        - scenario-check-imported
+        - scenario-repair-imported
+        - scenario-retest-imported
+    artifact:
+      kind: test-evidence
+      minimumBytes: 500
+      path: artifacts/scenario-retest-imported/scenario-results.md
+      validation:
+        requiredHeadings:
+          - Pinned inputs and tested revision
+          - Tool execution and evidence
+          - Scenario results
+          - Agent verdict and repair request
+          - Human acceptance
+    authoringSkill: sf-scenario-check
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - test access
+        - inconclusive evidence
+        - remaining defects
+    defaultTemplate: document-test-repair/check.md
+    generation:
+      task: analyze
+    inputs:
+      - document-intake-imported
+      - scenario-check-imported
+      - scenario-repair-imported
+    label: Retest and accept (imported)
+    qualityCommands: []
+    testEvidenceFrom: scenario-repair-imported
+    writeScope: artifact-only
+  testing-imported:
+    approval:
+      authorities:
+        - quality-reviewers
+      minimum: 1
+      rejectTo:
+        - implementation
+        - testing-imported
+    artifact:
+      kind: test-evidence
+      minimumBytes: 300
+      path: artifacts/testing-imported/test-evidence.md
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - test gaps
+        - environment
+        - evidence
+        - deviations
+    defaultTemplate: benchmark/testing.md
+    label: Testing (imported)
+    qualityCommands: []
+    writeScope: source-and-artifact
+  verification-imported:
+    approval:
+      authorities:
+        - quality-reviewers
+      minimum: 1
+      rejectTo:
+        - implementation
+        - verification-imported
+    artifact:
+      kind: test-evidence
+      minimumBytes: 300
+      path: artifacts/verification-imported/test-evidence.md
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - test gaps
+        - environment
+        - evidence
+        - deviations
+    defaultTemplate: common/verification.md
+    label: Verification (imported)
+    qualityCommands: []
+    writeScope: source-and-artifact
+  visual-verification-imported:
+    approval:
+      authorities:
+        - design-reviewers
+        - quality-reviewers
+      minimum: 1
+      rejectTo:
+        - design-intake-imported
+        - design-inventory-imported
+        - component-mapping-imported
+        - mobile-spec-imported
+        - implementation
+        - visual-verification-imported
+    artifact:
+      kind: visual-test-evidence
+      minimumBytes: 600
+      path: artifacts/visual-verification-imported/visual-comparison.md
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - visual tolerance
+        - device evidence
+        - accessibility
+        - deviations
+    defaultTemplate: figma-mobile/visual-verification.md
+    label: Mobile visual verification (imported)
+    qualityCommands: []
+    writeScope: source-and-artifact
 governance:
   requireAcceptanceCriteriaTags: true
   protectedPaths:
