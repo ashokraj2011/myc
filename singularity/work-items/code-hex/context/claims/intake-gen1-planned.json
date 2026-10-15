@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-10-15T21:48:03.545Z",
+  "claims": {
+    "CODE-HEX:REQ-001": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/StandardKeypad.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Standard mode displays the `HEX` button and routes its action to the application."
+    },
+    "CODE-HEX:REQ-002": {
+      "expectedPaths": [
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "A keyed positive decimal integer is replaced in the result display by its `0x`-prefixed hexadecimal value."
+    },
+    "CODE-HEX:REQ-003": {
+      "expectedPaths": [
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Every specified unsupported input class produces `Error`."
+    },
+    "CODE-HEX:REQ-004": {
+      "expectedPaths": [
+        "singularity/work-items/code-hex/evidence/hex-button-and-result.png"
+      ],
+      "tests": [],
+      "testDisposition": "non-test",
+      "testReason": null,
+      "verificationCriterion": "CODE-HEX:AC-004",
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "The retained screenshot visibly shows the `HEX` control and `0x10` result."
+    },
+    "CODE-HEX:AC-001": {
+      "expectedPaths": [
+        "singularity/work-items/code-hex/evidence/hex-button-and-result.png"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "The retained screenshot visibly shows an accessible `HEX` button in Standard mode."
+    },
+    "CODE-HEX:AC-002": {
+      "expectedPaths": [
+        "singularity/work-items/code-hex/evidence/hex-button-and-result.png"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "The retained screenshot visibly shows `0x10` after converting keyed input `16`."
+    },
+    "CODE-HEX:AC-003": {
+      "expectedPaths": [
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Separate executable cases cover empty, zero, negative, decimal, and compound-expression input."
+    },
+    "CODE-HEX:AC-004": {
+      "expectedPaths": [
+        "singularity/work-items/code-hex/evidence/hex-button-and-result.png"
+      ],
+      "tests": [],
+      "testDisposition": "non-test",
+      "testReason": null,
+      "verificationCriterion": "CODE-HEX:AC-004",
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "The retained screenshot visibly shows the `HEX` control and `0x10` result."
+    }
+  },
+  "verificationContracts": [
+    {
+      "clauseId": "CODE-HEX:AC-001",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "button-test",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "src/App.test.jsx"
+          },
+          "requiredAssurance": "exact-local-observed"
+        },
+        {
+          "slot": "button-visual",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "singularity/work-items/code-hex/evidence/hex-button-and-result.png"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    },
+    {
+      "clauseId": "CODE-HEX:AC-002",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "convert-test",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "src/App.test.jsx"
+          },
+          "requiredAssurance": "exact-local-observed"
+        },
+        {
+          "slot": "convert-visual",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "singularity/work-items/code-hex/evidence/hex-button-and-result.png"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    },
+    {
+      "clauseId": "CODE-HEX:AC-003",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "invalid-test",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "src/App.test.jsx"
+          },
+          "requiredAssurance": "exact-local-observed"
+        }
+      ]
+    },
+    {
+      "clauseId": "CODE-HEX:AC-004",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "result-visual",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "singularity/work-items/code-hex/evidence/hex-button-and-result.png"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    }
+  ],
+  "workId": "code-hex",
+  "phase": "intake",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/code-hex/artifacts/intake/intake.md",
+    "sha256": "07a1657e0f86162a2747521bae17736abfe5115abc14d6bd199adb095d460ce5",
+    "bytes": 12029
+  }
+}

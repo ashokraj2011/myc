@@ -1,0 +1,186 @@
+{
+  "clauses": [
+    {
+      "anchor": "[code-hex:REQ-001]",
+      "body": "The Standard calculator keypad shall expose a button whose visible label is exactly `HEX`.",
+      "bodySha256": "9bbf0a4cf451598810892b2ef332171cbb9011458bef88b0de1dcd16481e7fb9",
+      "dependsOn": [],
+      "id": "CODE-HEX:REQ-001",
+      "namespace": "CODE-HEX",
+      "number": 1,
+      "source": {
+        "line": 151,
+        "path": "singularity/work-items/code-hex/artifacts/intake/intake.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "CODE-HEX:AC-001",
+        "methods": [
+          "test",
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[code-hex:REQ-002]",
+      "body": "Pressing `HEX` with a plain positive decimal integer keyed shall show its value-equivalent hexadecimal representation with the exact `0x` prefix. Hexadecimal letter case is not prescribed.",
+      "bodySha256": "b7175399df97a6e598ff89bc61a9150bf6a97e48f0f95dd5d3aa563590dcf7a1",
+      "dependsOn": [],
+      "id": "CODE-HEX:REQ-002",
+      "namespace": "CODE-HEX",
+      "number": 2,
+      "source": {
+        "line": 152,
+        "path": "singularity/work-items/code-hex/artifacts/intake/intake.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "CODE-HEX:AC-002",
+        "methods": [
+          "test",
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[code-hex:REQ-003]",
+      "body": "Pressing `HEX` with empty, zero, negative, decimal, or compound-expression input shall show `Error` in the result display.",
+      "bodySha256": "10faf371fb980fc34b56d494ee231538746d5402e7b96a0693b6f1a822ae8dfd",
+      "dependsOn": [],
+      "id": "CODE-HEX:REQ-003",
+      "namespace": "CODE-HEX",
+      "number": 3,
+      "source": {
+        "line": 153,
+        "path": "singularity/work-items/code-hex/artifacts/intake/intake.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[code-hex:REQ-004]",
+      "body": "The delivered change shall include retained visual evidence of the visible `HEX` button and a successful `16` to `0x10` conversion.",
+      "bodySha256": "df54c66340ea08b0720e8b990d274523ee5c625d88390dc55815cdcdde13e554",
+      "dependsOn": [],
+      "id": "CODE-HEX:REQ-004",
+      "namespace": "CODE-HEX",
+      "number": 4,
+      "source": {
+        "line": 154,
+        "path": "singularity/work-items/code-hex/artifacts/intake/intake.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "CODE-HEX:AC-004",
+        "methods": [
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[code-hex:AC-001]",
+      "body": "`code-hex:REQ-001` | In Standard mode, the keypad visibly contains a button labeled exactly `HEX`.",
+      "bodySha256": "de601d00cd4fd8b1c4efc741c553c288c6d1eec5f994d34d79ccd5da158d843b",
+      "dependsOn": [
+        "CODE-HEX:REQ-001"
+      ],
+      "id": "CODE-HEX:AC-001",
+      "namespace": "CODE-HEX",
+      "number": 1,
+      "source": {
+        "line": 160,
+        "path": "singularity/work-items/code-hex/artifacts/intake/intake.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "CODE-HEX:AC-001",
+        "methods": [
+          "test",
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[code-hex:AC-002]",
+      "body": "`code-hex:REQ-002` | Given `16` is keyed as the complete input, pressing `HEX` shows `0x10` in the result display.",
+      "bodySha256": "7c788dda9ccb9938ca1d09792bb66b327bb2681ca20fa2e884cc24c729eb741c",
+      "dependsOn": [
+        "CODE-HEX:REQ-002"
+      ],
+      "id": "CODE-HEX:AC-002",
+      "namespace": "CODE-HEX",
+      "number": 2,
+      "source": {
+        "line": 161,
+        "path": "singularity/work-items/code-hex/artifacts/intake/intake.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "CODE-HEX:AC-002",
+        "methods": [
+          "test",
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[code-hex:AC-003]",
+      "body": "`code-hex:REQ-003` | Each unsupported input class—empty, zero, negative, decimal, and compound expression—shows `Error` when `HEX` is pressed.",
+      "bodySha256": "e7883aa48ea6b511b0d6fa0008e16dd488886da33b34db7d5a93e81b9ce2edfc",
+      "dependsOn": [
+        "CODE-HEX:REQ-003"
+      ],
+      "id": "CODE-HEX:AC-003",
+      "namespace": "CODE-HEX",
+      "number": 3,
+      "source": {
+        "line": 162,
+        "path": "singularity/work-items/code-hex/artifacts/intake/intake.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "CODE-HEX:AC-003",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[code-hex:AC-004]",
+      "body": "`code-hex:REQ-004` | Retained visual evidence shows the visible `HEX` button and the displayed `0x10` result after converting keyed input `16`.",
+      "bodySha256": "621085d75a15616793ab7a9f4676849a3c62bc2b5c9960421773dcfb756f0e85",
+      "dependsOn": [
+        "CODE-HEX:REQ-004"
+      ],
+      "id": "CODE-HEX:AC-004",
+      "namespace": "CODE-HEX",
+      "number": 4,
+      "source": {
+        "line": 163,
+        "path": "singularity/work-items/code-hex/artifacts/intake/intake.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "CODE-HEX:AC-004",
+        "methods": [
+          "visual"
+        ]
+      }
+    }
+  ],
+  "generation": 1,
+  "indexSha256": "dd38d382f7cde09b9fbb5a79c0b76f27ed37627821add5022d8477c0fca0e230",
+  "phase": "intake",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 12029,
+    "path": "singularity/work-items/code-hex/artifacts/intake/intake.md",
+    "sha256": "07a1657e0f86162a2747521bae17736abfe5115abc14d6bd199adb095d460ce5"
+  },
+  "workId": "code-hex"
+}
