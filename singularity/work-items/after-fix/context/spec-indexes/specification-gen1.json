@@ -1,0 +1,158 @@
+{
+  "clauses": [
+    {
+      "anchor": "[after-fix:REQ-001]",
+      "body": "The calculator shall convert a positive base-10 integer to its mathematically equivalent hexadecimal value. *(S1)*",
+      "bodySha256": "5ebbed07cab28cd6c5e3fa9ce92623445b6072680a8b30a83b5891c683b448a1",
+      "dependsOn": [],
+      "id": "AFTER-FIX:REQ-001",
+      "namespace": "AFTER-FIX",
+      "number": 1,
+      "source": {
+        "line": 227,
+        "path": "singularity/work-items/after-fix/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[after-fix:REQ-002]",
+      "body": "The calculator shall expose hexadecimal conversion through both a visible keypad control and keyboard interaction. *(S1)*",
+      "bodySha256": "6e6f53a88be49f2ee50bc2fd48b46a8bc233042c4b7d8efe7d4cd5fe202b3602",
+      "dependsOn": [],
+      "id": "AFTER-FIX:REQ-002",
+      "namespace": "AFTER-FIX",
+      "number": 2,
+      "source": {
+        "line": 228,
+        "path": "singularity/work-items/after-fix/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "AFTER-FIX:AC-001",
+        "methods": [
+          "inspection",
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[after-fix:REQ-003]",
+      "body": "The calculator shall format every successful conversion with a `0x` prefix and uppercase hexadecimal digits. *(S1)*",
+      "bodySha256": "edb927ad557108d0d11249c3d9f2b18085c1a38beec222dbf35078ec6bc58b9d",
+      "dependsOn": [],
+      "id": "AFTER-FIX:REQ-003",
+      "namespace": "AFTER-FIX",
+      "number": 3,
+      "source": {
+        "line": 229,
+        "path": "singularity/work-items/after-fix/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[after-fix:REQ-004]",
+      "body": "The calculator shall reject blank input, zero, negative values, fractional values, and non-numeric input with a visible error and no converted result. *(S2)*",
+      "bodySha256": "53a729df53bbd92ff9a7d472af6ca7073836e4230533a2f3fb684a3ef4846e3d",
+      "dependsOn": [],
+      "id": "AFTER-FIX:REQ-004",
+      "namespace": "AFTER-FIX",
+      "number": 4,
+      "source": {
+        "line": 230,
+        "path": "singularity/work-items/after-fix/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "AFTER-FIX:AC-002",
+        "methods": [
+          "test",
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[after-fix:AC-001]",
+      "body": "Converting `1`, `26`, and `255` shall produce `0x1`, `0x1A`, and `0xFF`, respectively, with the successful cases exercised through the keypad and keyboard interaction paths. *(S1)*",
+      "bodySha256": "118efc9a84bf118370de62632df9db15b60024cca955fe77f0f7fd62e1355d7b",
+      "dependsOn": [],
+      "id": "AFTER-FIX:AC-001",
+      "namespace": "AFTER-FIX",
+      "number": 1,
+      "source": {
+        "line": 232,
+        "path": "singularity/work-items/after-fix/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "AFTER-FIX:AC-001",
+        "methods": [
+          "inspection",
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[after-fix:AC-002]",
+      "body": "Attempting conversion with blank input, `0`, a negative integer, a fraction, or non-numeric input shall display an error and shall not display a hexadecimal result. *(S2)*",
+      "bodySha256": "5ca3b72beeddacc9f0bbd59e40d5c543d17a4d5c8e74106997d39fe4344d3c02",
+      "dependsOn": [],
+      "id": "AFTER-FIX:AC-002",
+      "namespace": "AFTER-FIX",
+      "number": 2,
+      "source": {
+        "line": 233,
+        "path": "singularity/work-items/after-fix/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "AFTER-FIX:AC-002",
+        "methods": [
+          "test",
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[after-fix:AC-003]",
+      "body": "Automated test cases shall verify successful conversion, both interaction surfaces, uppercase prefixed formatting, and each declared invalid or empty input category. *(S1, S2)*",
+      "bodySha256": "8fa00f144bb263114a459d3abd3719bfce03aeaa4356f8bc7a126a8c5ec7436d",
+      "dependsOn": [],
+      "id": "AFTER-FIX:AC-003",
+      "namespace": "AFTER-FIX",
+      "number": 3,
+      "source": {
+        "line": 234,
+        "path": "singularity/work-items/after-fix/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "AFTER-FIX:AC-003",
+        "methods": [
+          "inspection"
+        ]
+      }
+    }
+  ],
+  "generation": 1,
+  "indexSha256": "70cb8d45db1dfc604cd8d87f66066e23e9cf9fe34d7442fd209a833b7fe62b2b",
+  "phase": "specification",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 10949,
+    "path": "singularity/work-items/after-fix/artifacts/specification/spec.md",
+    "sha256": "a66a290b9f7ab6184680e3fe4959eb134f272b56de28af7ae22e0a5b4536d943"
+  },
+  "workId": "after-fix"
+}

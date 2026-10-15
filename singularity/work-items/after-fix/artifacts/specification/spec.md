@@ -4,27 +4,51 @@
   "workId": "after-fix",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "fc12538f2cf7126777b4e098ca425097afa56ff6b866fcc80404cca777c22a5d",
+      "bytes": 6893
+    },
+    "generation": 1,
+    "publishedAt": "2026-10-15T11:20:57.940Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "9c1e20e49168a4861c22ed8357c20dc873d159fe",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "cb6a60069ea9e278ebc92437dfebb6d6ab77375482b08bf317e5221b4e5999fc",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/after-fix/context/clarifications-specification-gen1.json",
+    "sha256": "bbb4d3e88efb100e0535b448e95e1a997f4ae3837a1a90f962f918d464b3297f",
+    "promptSha256": "de8fa1e7c9341d436b425cbb09e07c05b3eec5f3469e44b9c30a94e70ea6ab18",
+    "responses": 5,
+    "markers": [],
+    "recordedAt": "2026-10-15T11:19:38.364Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/after-fix/telemetry/specification-gen1.json",
+      "sha256": "f43f3132524c8523af7f4c4a65f87ec3bba95e062b93119dc7f93c6fdcca5771",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 18641,
+        "estimatedTokens": 4661,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 18641,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-15T11:20:57.940Z",
+      "completedAt": "2026-10-15T11:20:57.940Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -54,142 +135,148 @@
 
 # Specification — after-fix
 
-<!--
-Scenarios come first, and general requirements come after them `[SPK:REQ-068]`. That ordering is the
-template's opinion: a requirement written before anyone has described the situation it serves tends
-to describe the system instead of the need, and nobody notices until verification.
-
-Where the current Story evidence leaves something material unknown, say so with a marker rather
-than guessing. Use this syntax:
-
-    [NEEDS CLARIFICATION: <one question grounded in the current Story evidence>]
-
-Replace the angle-bracketed placeholder; never copy or ask it as written. The question must be one
-non-empty line and must arise from the pinned sources, approved upstream artifacts, repository world
-model, or a contradiction among them. Markers are extracted the same way clauses are, so a marker
-inside fenced or inline code is ignored `[SPK:REQ-063]`. This phase blocks publication while any
-marker is unresolved, and a marker is only resolved when a later generation removes it *and* records
-the answer `[SPK:REQ-067]` — deleting the text alone is an integrity failure, not an answer.
--->
-
 ## Agent brief
 
-<!--
-Summarize the approved intent for downstream agents in a compact, standalone form. Include the
-problem, intended outcome, principal actors, most important scenarios, hard constraints, and major
-exclusions. Do not introduce claims that are absent from the sections below. Exact requirements and
-boundary conditions are preserved separately by the governed projection.
--->
+Add a decimal-to-hexadecimal conversion operation to the existing calculator for calculator users.
+The operation accepts positive base-10 integers only and returns an uppercase hexadecimal value with
+the `0x` prefix. Users must be able to invoke it through a visible keypad control and through
+keyboard interaction. Blank input, zero, negative values, fractional values, and non-numeric input
+must produce a visible error instead of a hexadecimal result. Automated tests must cover successful
+conversion, both interaction surfaces, output formatting, and invalid or empty input. Hexadecimal
+literals, hexadecimal arithmetic mode, reverse conversion, and conversion of non-positive or
+non-integer values are excluded.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+- **Calculator user:** Enters a decimal value, invokes hexadecimal conversion through the keypad or
+  keyboard, and sees either the converted value or an error. No elevated authority is required.
 
 ## User scenarios
 
-Prioritized. Each scenario leads with the situation, then its acceptance cases.
-
-### S1 — <the most important situation, in the user's words>
+### S1 — Convert a positive decimal integer to hexadecimal
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Calculator user
+**Context:** The calculator is available and the current input is a positive base-10 integer.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+- **Given** the user has entered `26`
+  **When** the user invokes hexadecimal conversion from the visible keypad control
+  **Then** the calculator displays `0x1A`
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
+- **Given** the user has entered `255` with the keyboard
+  **When** the user invokes hexadecimal conversion through keyboard interaction
+  **Then** the calculator displays `0xFF`
 
-### S2 — <the next situation>
+### S2 — Reject input outside the supported domain
 
 **Priority:** P2
+**Actor:** Calculator user
+**Context:** The current input is not a positive base-10 integer.
 
-- **Given** … **When** … **Then** …
+- **Given** the current input is `0`, a negative integer, a fraction, or non-numeric text
+  **When** the user invokes hexadecimal conversion
+  **Then** the calculator displays a visible error and does not display a converted result
+
+- **Given** the current input is empty
+  **When** the user invokes hexadecimal conversion
+  **Then** the calculator displays a visible error and does not display a converted result
 
 ## Failure and empty states
 
-What happens the first time, with nothing there yet, and when each step fails. These are where
-specifications are usually silent and implementations usually improvise.
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** Invoking hexadecimal conversion without a value displays a visible error and no
+  hexadecimal result.
+- **Failure:** Any value outside the positive-integer domain displays a visible error and no
+  hexadecimal result.
+- **Partial:** A conversion is atomic; the calculator must not display a partial or stale
+  hexadecimal result when validation or conversion fails.
 
 ## Scenario coverage
 
-<!-- One row per behavior/acceptance clause; repeat rows for multiple outcomes. Every referenced
-S-number must have complete Given/When/Then acceptance cases above. Outcome is success, failure,
-boundary, or empty. Rejection/error requirements need distinct failure cases, not only happy-path
-prose. Use the pinned request and clarification answers; do not invent error text or new scope. -->
-
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `after-fix:REQ-001` | S1 | TODO |
-| `after-fix:REQ-002` | S2 | TODO |
-| `after-fix:AC-001` | S1 | TODO |
+| `after-fix:REQ-001` | S1 | success |
+| `after-fix:REQ-002` | S1 | success |
+| `after-fix:REQ-003` | S1 | success |
+| `after-fix:REQ-004` | S2 | failure |
+| `after-fix:REQ-004` | S2 | boundary |
+| `after-fix:REQ-004` | S2 | empty |
+| `after-fix:AC-001` | S1 | success |
+| `after-fix:AC-002` | S2 | failure |
+| `after-fix:AC-002` | S2 | boundary |
+| `after-fix:AC-002` | S2 | empty |
+| `after-fix:AC-003` | S1 | success |
+| `after-fix:AC-003` | S2 | failure |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+All calculator users may invoke decimal-to-hexadecimal conversion. The feature introduces no
+privileged action, role-based restriction, or alternate unauthorized view.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+- The accepted domain is positive base-10 integers: whole numeric values strictly greater than zero.
+- `1` is the smallest accepted value and converts to `0x1`.
+- Zero, negative values, fractional values, non-numeric values, and blank input are rejected with a
+  visible error.
+- Successful output begins with `0x`; every hexadecimal digit from `A` through `F` is uppercase.
+- Conversion either produces one complete hexadecimal result or an error; it never exposes a
+  partial conversion.
 
 ## Requirements
 
-Numbered, testable, one obligation each. Cite the scenario each serves.
+- The calculator shall convert a positive base-10 integer to its mathematically equivalent hexadecimal value. *(S1)* [after-fix:REQ-001]
+- The calculator shall expose hexadecimal conversion through both a visible keypad control and keyboard interaction. *(S1)* [after-fix:REQ-002]
+- The calculator shall format every successful conversion with a `0x` prefix and uppercase hexadecimal digits. *(S1)* [after-fix:REQ-003]
+- The calculator shall reject blank input, zero, negative values, fractional values, and non-numeric input with a visible error and no converted result. *(S2)* [after-fix:REQ-004]
 
-- <requirement>. *(S1)* [after-fix:REQ-001]
-- <requirement>. *(S1, S2)* [after-fix:REQ-002]
-
-Acceptance criteria use the same stable, namespaced form:
-
-- <observable acceptance outcome>. *(S1)* [after-fix:AC-001]
+- Converting `1`, `26`, and `255` shall produce `0x1`, `0x1A`, and `0xFF`, respectively, with the successful cases exercised through the keypad and keyboard interaction paths. *(S1)* [after-fix:AC-001]
+- Attempting conversion with blank input, `0`, a negative integer, a fraction, or non-numeric input shall display an error and shall not display a hexadecimal result. *(S2)* [after-fix:AC-002]
+- Automated test cases shall verify successful conversion, both interaction surfaces, uppercase prefixed formatting, and each declared invalid or empty input category. *(S1, S2)* [after-fix:AC-003]
 
 ## Verification intent
 
-<!-- One row per declared clause, including non-functional requirements. Methods: test, visual,
-inspection, or a comma-separated combination (all required). AC Criterion is its own ID. A
-visual/inspection requirement names the AC proving it; a test-only requirement may use -. Choose
-from the pinned source, not from available tools. A screenshot is visual proof, not a test exemption.
-Planning must inherit these methods and cannot change them without an approved scope amendment. -->
-
 | Clause | Methods | Criterion |
 |---|---|---|
-| `after-fix:REQ-001` | TODO | - |
-| `after-fix:REQ-002` | TODO | - |
-| `after-fix:AC-001` | TODO | `after-fix:AC-001` |
+| `after-fix:REQ-001` | test | - |
+| `after-fix:REQ-002` | test, inspection | `after-fix:AC-001` |
+| `after-fix:REQ-003` | test | - |
+| `after-fix:REQ-004` | test, visual | `after-fix:AC-002` |
+| `after-fix:AC-001` | test, inspection | `after-fix:AC-001` |
+| `after-fix:AC-002` | test, visual | `after-fix:AC-002` |
+| `after-fix:AC-003` | inspection | `after-fix:AC-003` |
 
 ## Non-functional requirements
 
-Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
-will be measured; "fast" is not a requirement.
-
-Use governed requirement anchors here too (for example `[after-fix:REQ-003]`); `NFR-001` by
-itself is only a display label and is not a stable clause identity.
+No additional quantitative latency, throughput, availability, privacy, or retention requirement was
+requested. Keyboard interaction is a functional interaction requirement covered by
+`after-fix:REQ-002`.
 
 ## Constitution articles
 
-Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
-cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
-
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-What this specification takes as true without proving. An assumption that turns out false is a
-change request, not a defect — which is only true if it was written down.
+- Input is interpreted as base-10 because clarification defined the feature as decimal-to-hexadecimal
+  conversion.
+- Existing calculator behavior remains unchanged outside the new conversion operation.
+- The exact keyboard command and control placement may follow existing calculator interaction
+  conventions, provided both paths satisfy `after-fix:REQ-002`.
 
 ## Out of scope
 
-Named explicitly, so the boundary is reviewable rather than inferred.
+- Entering hexadecimal literals as operands.
+- Performing arithmetic in a hexadecimal calculator mode.
+- Converting hexadecimal values back to decimal or another base.
+- Converting zero, negative values, or fractional values.
+- Changing existing arithmetic, scientific, financial, graphing, or history behavior.
 
 ## Sources
 
-Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
-offered to this phase that could not be read or was not available here, named as a gap. Without
-supporting documents, say so.
+- DOC-001 — Pinned Story source `source.json`, SHA-256
+  `92bdbeb174685b0606b1f8d0a05700da09a818b9124c4e498c6d22cef721807a`.
+- DOC-002 — Governed clarification responses for Specification generation 1, SHA-256
+  `bbb4d3e88efb100e0535b448e95e1a997f4ae3837a1a90f962f918d464b3297f`.
+- DOC-003 — Composed Specification context, SHA-256
+  `de8fa1e7c9341d436b425cbb09e07c05b3eec5f3469e44b9c30a94e70ea6ab18`.
+- No external supporting documents were provided.
