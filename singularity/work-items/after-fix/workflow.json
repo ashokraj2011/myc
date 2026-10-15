@@ -8794,6 +8794,14 @@
       "event": "upstream_issue_raised",
       "phase": "release",
       "detail": "UPI-003 against implementation (AFTER-FIX:REQ-004): will be verified later"
+    },
+    {
+      "at": "2026-10-15T16:10:19.890Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "upstream_issue_raised",
+      "phase": "release",
+      "detail": "UPI-004 against implementation (AFTER-FIX:AC-001): will be verified later"
     }
   ],
   "measurement": {
@@ -11577,6 +11585,136 @@
         },
         "createdAt": "2026-10-15T16:10:08.369Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "3482c4c9-3a47-4f23-89ce-a46b3be6c87d",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "after-fix",
+          "branch": "after-fix"
+        },
+        "phaseId": "release",
+        "generation": 0,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": null,
+        "payload": {
+          "decision": "upstream-issue",
+          "reviewPacketSha256": null,
+          "issue": "UPI-004"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-15T16:10:19.084Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "3482c4c9-3a47-4f23-89ce-a46b3be6c87d",
+        "eventType": "decision-made",
+        "capabilityId": "cfa-calc",
+        "subject": {
+          "aliases": [
+            "after-fix"
+          ],
+          "branch": "after-fix",
+          "canonicalBranch": "after-fix",
+          "createdAt": "2026-10-15T11:15:18.722Z",
+          "currentPhase": "release",
+          "generation": 0,
+          "phase": "release",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 5,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 5,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "release",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "fix",
+          "updatedAt": "2026-10-15T16:10:19.890Z",
+          "workId": "after-fix",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "c04ba8e78b7bce7b70c622003ba3d52066b767c4e9c5b8184a98b77b9f1eebaa",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "cb6a60069ea9e278ebc92437dfebb6d6ab77375482b08bf317e5221b4e5999fc",
+          "lifecycleEventId": "3482c4c9-3a47-4f23-89ce-a46b3be6c87d",
+          "lifecyclePayload": {
+            "decision": "upstream-issue",
+            "reviewPacketSha256": null,
+            "issue": "UPI-004"
+          },
+          "templateSha256": "3d6717eace80085585d04c9c3f5c67f10d7a2e9c4e535a862c8b5aa900d556fe",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "3482c4c9-3a47-4f23-89ce-a46b3be6c87d",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "after-fix",
+              "branch": "after-fix"
+            },
+            "phaseId": "release",
+            "generation": 0,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": null,
+            "payload": {
+              "decision": "upstream-issue",
+              "reviewPacketSha256": null,
+              "issue": "UPI-004"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-15T16:10:19.084Z"
+          }
+        },
+        "createdAt": "2026-10-15T16:10:19.092Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -11840,6 +11978,56 @@
       "authored": "human",
       "agent": "qa",
       "at": "2026-10-15T16:10:09.293Z"
+    },
+    {
+      "id": "UPI-004",
+      "phase": "implementation",
+      "raisedIn": {
+        "phase": "release",
+        "status": "in_progress",
+        "generation": 0
+      },
+      "about": "AFTER-FIX:AC-001",
+      "problem": "will be verified later",
+      "assumption": null,
+      "impact": null,
+      "proposed": "unknown",
+      "producerGeneration": 1,
+      "producerArtifacts": [
+        {
+          "path": "singularity/work-items/after-fix/artifacts/implementation/implementation-summary.md",
+          "sha256": "c41d2fe0dcaacdd0537dc4a288b25db1cc2d0ce71561ad06b6deb7c519f25d61"
+        },
+        {
+          "path": "src/App.jsx",
+          "sha256": "139a26a22e26e22ac31c9356bd5a2ed60f54083822972906a911fc58f6e2d9e3"
+        },
+        {
+          "path": "src/App.test.jsx",
+          "sha256": "dc62a2c79a919002fc3f9f6431ced78810f70ee4283644db7bb09d0dd808de30"
+        },
+        {
+          "path": "src/components/KeyboardShortcutsModal.jsx",
+          "sha256": "fc152b655bd097b1a6830e092f813edbe850cb701f91d455f0b299a1e8818c12"
+        },
+        {
+          "path": "src/components/StandardKeypad.jsx",
+          "sha256": "3d8e30c71ee49fe386bb8a51e0ea122d07345a110b3f84856e90895d6912fdff"
+        },
+        {
+          "path": "src/utils/evaluator.js",
+          "sha256": "d678af4e59c4ea29da987b57c9d145d765a35a1ab44929254b2c01349b303def"
+        },
+        {
+          "path": "src/utils/evaluator.test.js",
+          "sha256": "67cc9fe11a023101c1dd962cc0852feaf89c8482c3c5b7220b18a4cf4265f0b6"
+        }
+      ],
+      "source": null,
+      "raisedBy": "ashokraj2011",
+      "authored": "human",
+      "agent": "qa",
+      "at": "2026-10-15T16:10:19.890Z"
     }
   ]
 }
