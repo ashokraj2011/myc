@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 7,
+  "workId": "after-fix",
+  "phase": "planning",
+  "generation": 1,
+  "agent": "architect",
+  "modelCommit": null,
+  "matchedRules": 0,
+  "mode": "off",
+  "applied": false,
+  "depth": "standard",
+  "evidence": false,
+  "groundingAvailability": {
+    "status": "unavailable",
+    "reasonCode": "WORLD_MODEL_GROUNDING_DISABLED"
+  },
+  "sourceComparison": {
+    "status": "unavailable",
+    "reasonCode": "WORLD_MODEL_GROUNDING_DISABLED"
+  },
+  "requiredViews": [],
+  "requiredSelections": [],
+  "task": null,
+  "supportingEvidence": [],
+  "references": [],
+  "modelSourceTreeSha256": null,
+  "composedSourceTreeSha256": null,
+  "worldModelCommit": null,
+  "manifestSha256": null,
+  "fresh": true,
+  "renderedSha256": "c0061291d60c09263f2737d5fd987d08b919116bf75f5393f1da1785e67a0394",
+  "promptStudy": null,
+  "promptDefinition": null,
+  "structuralContext": null,
+  "workSource": {
+    "path": "singularity/work-items/after-fix/source.json",
+    "sha256": "92bdbeb174685b0606b1f8d0a05700da09a818b9124c4e498c6d22cef721807a",
+    "bytes": 916
+  },
+  "promptBudget": {
+    "policy": {
+      "mode": "observe",
+      "profile": "standard",
+      "maximumBytes": 72000,
+      "maximumEstimatedPromptTokens": 18000,
+      "policyOnBudgetBreach": "refuse",
+      "assurance": "estimated-prompt-text"
+    },
+    "admission": {
+      "model": null,
+      "logicalPromptBytes": 26574,
+      "logicalPromptTokens": {
+        "value": 6644,
+        "assurance": "estimated"
+      },
+      "systemAndToolReserveTokens": {
+        "value": null,
+        "assurance": "unavailable"
+      },
+      "historyTokens": {
+        "value": null,
+        "assurance": "unavailable"
+      },
+      "totalAdmissionTokens": {
+        "value": 6644,
+        "assurance": "partial"
+      },
+      "maximumInputTokens": 18000,
+      "safeToEnforce": false,
+      "admitted": null,
+      "policyApprovedConservativeUpperBound": false
+    },
+    "compliance": "compliant",
+    "originalBytes": 26574,
+    "originalEstimatedTokens": 6644,
+    "finalBytes": 26574,
+    "finalEstimatedTokens": 6644,
+    "overflow": false,
+    "warnings": [],
+    "economics": {
+      "prompt": {
+        "candidatePromptBytes": 26574,
+        "deduplicatedPromptBytes": 7018,
+        "budgetEvictedPromptBytes": 0,
+        "finalPromptBytes": 26574,
+        "tkrCandidatePromptBytes": null,
+        "tkrCandidateByteDelta": null,
+        "tkrCandidateAssurance": "unavailable",
+        "clauseInputBytesSaved": 1021
+      },
+      "provider": {
+        "inputTokens": null,
+        "cachedInputTokens": null,
+        "uncachedInputTokens": null,
+        "assurance": "unavailable"
+      },
+      "system": {
+        "totalSystemTokens": null,
+        "assurance": "unavailable"
+      },
+      "source": {
+        "sourceBytes": 16683,
+        "authoredSourceBytes": 6893,
+        "managedSourceBytesExcluded": 9790,
+        "managedReferenceBytesExcluded": 0,
+        "deliveredSourceBytes": 4811,
+        "assurance": "sflow-measured"
+      }
+    },
+    "sections": [
+      {
+        "id": "phase-contract",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 9821,
+        "estimatedTokens": 2456,
+        "sha256": "8a61abe7341b30737fa0ecc582d778a88f212c0364090bcc8b66fc414f794f38",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "work-source",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 918,
+        "estimatedTokens": 230,
+        "sha256": "9328291b30f0d0f5e873eb58809704a2fd2948821145f8df480787c7b139579d",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "active-clause-capsule",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 2674,
+        "estimatedTokens": 669,
+        "sha256": "cf6c9f6c3bbd998188bd920a12d160f3b1759d82fdffe0eb9ad3867ae50bc850",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "governed-agent-policy",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 1582,
+        "estimatedTokens": 396,
+        "sha256": "61d5c34dbf58ef7f1cfd62ce6575aa91b3339a37768147b74e9c4184e46504ca",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "pinned-constitution",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 279,
+        "estimatedTokens": 70,
+        "sha256": "c2bca305dec54257e342fd76fd3ba28043e73a0c8df132fcba273acddcfc4fe9",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "world-model-grounding",
+        "mandatory": false,
+        "priority": 40,
+        "bytes": 2766,
+        "estimatedTokens": 692,
+        "sha256": "4be0030648264c63155224f427c6fa4ab012a006f59f8df736a6308c101e2c0b",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "approved-phase-inputs",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 5859,
+        "estimatedTokens": 1465,
+        "sha256": "df1a9d7bce5d4f9943b99268544bddc7263d64f3d57983023b47a5d9223c519e",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "governed-execution-evidence",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 2087,
+        "estimatedTokens": 522,
+        "sha256": "956fdca70629f25ceae0bcc91cb350bee4e613b46d44613b36b5ca0a4e82a580",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "final-clarification-guard",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 571,
+        "estimatedTokens": 143,
+        "sha256": "167b17253d68feaed6a118bc3766ea9a2f0775c5fa873f60b94affac681cad61",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      }
+    ],
+    "omitted": [],
+    "tokenReduction": {
+      "mode": "shadow",
+      "record": {
+        "kind": "tkr/shadow-evaluation",
+        "version": 1,
+        "status": "unavailable",
+        "scope": {
+          "workId": "after-fix",
+          "phase": "planning",
+          "generation": 1,
+          "sourceRevision": null,
+          "configurationSha256": "cb6a60069ea9e278ebc92437dfebb6d6ab77375482b08bf317e5221b4e5999fc",
+          "executionMode": "workflow-snapshot"
+        },
+        "code": "TKR_CONTRACT_UNSUPPORTED",
+        "diagnosticSha256": "sha256:bbc1b387ff023d8937e8a5b0c40df298562be324edfc06f94b67a2867c751bce",
+        "delivery": {
+          "state": "shadow-not-delivered",
+          "candidateDelivered": false
+        },
+        "receiptSha256": null,
+        "shadowSha256": "sha256:2b64bc77cf88606e162dddc3909bf15c4a34179190e8ee9c124243f6c60abd51"
+      }
+    },
+    "deduplicatedReferences": [
+      {
+        "handle": "sfref:v1:story:after-fix:98f3efe015bb84382501e412825983f087067c55fe386f5126cc62d958dff8eb",
+        "path": "singularity/work-items/after-fix/artifacts/specification/spec.md",
+        "rawSha256": "a66a290b9f7ab6184680e3fe4959eb134f272b56de28af7ae22e0a5b4536d943",
+        "rawBytes": 10949,
+        "previewBytes": 7018,
+        "reason": "same-governed-reference-handle"
+      }
+    ],
+    "inputLinearization": {
+      "sourceBytes": 16683,
+      "authoredBytes": 6893,
+      "managedBytesExcluded": 9790,
+      "injectedBytes": 5832
+    },
+    "inputProjection": {
+      "renderer": "approved-inputs-v2",
+      "capsuleSha256": "sha256:37e18cad4d467cbb1a278dc1f0e2742b1ca79ea61154f76a23fcbcddbfd27d74",
+      "originalSha256": "1dba7a697d45208329c5f0a8a971996d2374e3d6dfc969790b701cc953d9d6ae",
+      "renderedSha256": "31a0f771ae9a080016cefbb0fdeadad452aa1f70271f9655697bd94310260e36",
+      "originalBytes": 6739,
+      "renderedBytes": 5718,
+      "originalContentBytes": 5832,
+      "renderedContentBytes": 4811,
+      "savedBytes": 1021,
+      "inputs": [
+        {
+          "phase": "specification",
+          "path": "singularity/work-items/after-fix/artifacts/specification/spec.md",
+          "sourceSha256": "cf9462a6ce04efe42e45ecd3d30efc7a5c25c8ee3648c58e007be14507644a75",
+          "briefSha256": "b02f3b7f1fcf9d6eb3eb5e1820060359e1380362f7dd9e98b2f6b53160f27592",
+          "originalSha256": "sha256:b02f3b7f1fcf9d6eb3eb5e1820060359e1380362f7dd9e98b2f6b53160f27592",
+          "renderedSha256": "sha256:98b5ee43c8162a186d3ac4730f798fa90a78ce6121890567d2fb99f85808e227",
+          "deduplicatedClauseIds": [
+            "AFTER-FIX:REQ-001",
+            "AFTER-FIX:REQ-002",
+            "AFTER-FIX:REQ-003",
+            "AFTER-FIX:REQ-004",
+            "AFTER-FIX:AC-001",
+            "AFTER-FIX:AC-002",
+            "AFTER-FIX:AC-003"
+          ],
+          "savedBytes": 1021
+        }
+      ]
+    },
+    "inputDigests": [
+      {
+        "phase": "specification",
+        "path": "singularity/work-items/after-fix/artifacts/specification/spec.md",
+        "status": "captured",
+        "sha256": "cf9462a6ce04efe42e45ecd3d30efc7a5c25c8ee3648c58e007be14507644a75",
+        "briefSha256": "b02f3b7f1fcf9d6eb3eb5e1820060359e1380362f7dd9e98b2f6b53160f27592"
+      }
+    ],
+    "stakeholderProjection": {
+      "renderer": "stakeholder-requests-v2",
+      "referencedRequestIds": [],
+      "requests": [],
+      "capsuleBytesSaved": 0
+    },
+    "executionEvidence": {
+      "projectionSha256": "sha256:1f0d784c0c1cbb04c9630348cdcd265e2b3011953f70b1a812a8bcf819871b73",
+      "packets": 1,
+      "omittedPackets": 0,
+      "diagnostics": []
+    },
+    "skillLoading": [],
+    "structuralContext": null,
+    "referenceRepositories": [],
+    "workSource": {
+      "path": "singularity/work-items/after-fix/source.json",
+      "sha256": "92bdbeb174685b0606b1f8d0a05700da09a818b9124c4e498c6d22cef721807a",
+      "bytes": 916
+    },
+    "activeClauseCapsule": {
+      "renderer": "clause-capsule-v4",
+      "renderedSha256": "sha256:cf6c9f6c3bbd998188bd920a12d160f3b1759d82fdffe0eb9ad3867ae50bc850",
+      "sha256": "sha256:37e18cad4d467cbb1a278dc1f0e2742b1ca79ea61154f76a23fcbcddbfd27d74",
+      "clauses": 7,
+      "openRisks": 0,
+      "clarifications": 0
+    }
+  },
+  "persistedGrounding": null,
+  "tokenReduction": null,
+  "remoteSkills": [],
+  "executionContext": {
+    "mode": "workflow-snapshot",
+    "snapshotHash": "sha256:64819ed2605540312d79cbb52c504fd343717ceffac7512b5c779186a87896de",
+    "agentId": "architect",
+    "agentBlobSha256": "sha256:8770e647612b0c805ad583e7615f2ebe7fbb79b93bab2c1f3ad9237da5ff3d69",
+    "dependencies": [],
+    "instructions": [],
+    "parserProfile": "sflow-agent-document-v1",
+    "composerProfile": "story-snapshot-agent-v1",
+    "overrideSha256": null
+  },
+  "compositionCache": {
+    "key": "c444e8635c14f3ffcbecb66d4d630feeec781fec6d9961f9f94e938a01b445ad",
+    "promptSha256": "c0061291d60c09263f2737d5fd987d08b919116bf75f5393f1da1785e67a0394"
+  },
+  "promptPath": "singularity/work-items/after-fix/context/prompts/planning-gen1.md",
+  "files": [],
+  "injectedAt": "2026-10-15T11:27:05.394Z"
+}

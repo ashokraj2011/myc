@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-10-15T11:33:41.550Z",
+  "claims": {
+    "AFTER-FIX:AC-001": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/StandardKeypad.jsx",
+        "src/utils/evaluator.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "Keypad and keyboard actions produce `0x1`, `0x1A`, and `0xFF` for `1`, `26`, and `255`."
+    },
+    "AFTER-FIX:AC-002": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/utils/evaluator.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "Blank, zero, negative, fractional, and non-numeric input show an error and no hexadecimal result."
+    },
+    "AFTER-FIX:AC-003": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/KeyboardShortcutsModal.jsx",
+        "src/components/StandardKeypad.jsx",
+        "src/utils/evaluator.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "Automated cases cover success, both interaction surfaces, prefixed uppercase output, and each invalid/empty category."
+    },
+    "AFTER-FIX:REQ-001": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/utils/evaluator.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "A positive base-10 integer converts to its mathematically equivalent hexadecimal value."
+    },
+    "AFTER-FIX:REQ-002": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/KeyboardShortcutsModal.jsx",
+        "src/components/StandardKeypad.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "A visible keypad control and documented `h`/`H` shortcut invoke the same conversion action."
+    },
+    "AFTER-FIX:REQ-003": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/utils/evaluator.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "Every successful result has the `0x` prefix and uppercase A–F digits."
+    },
+    "AFTER-FIX:REQ-004": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/utils/evaluator.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "Blank, zero, negative, fractional, and non-numeric input visibly fail without a converted result."
+    }
+  },
+  "verificationContracts": [
+    {
+      "clauseId": "AFTER-FIX:AC-001",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "conversion-examples",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "src/App.test.jsx"
+          },
+          "requiredAssurance": "exact-local-observed"
+        },
+        {
+          "slot": "interaction-wiring",
+          "method": "inspection",
+          "role": "primary",
+          "witness": {
+            "path": "src/App.jsx"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    },
+    {
+      "clauseId": "AFTER-FIX:AC-002",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "invalid-input-cases",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "src/utils/evaluator.test.js"
+          },
+          "requiredAssurance": "exact-local-observed"
+        },
+        {
+          "slot": "visible-error",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "Standard calculator display showing Error after invalid conversion"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    },
+    {
+      "clauseId": "AFTER-FIX:AC-003",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "application-test-cases",
+          "method": "inspection",
+          "role": "primary",
+          "witness": {
+            "path": "src/App.test.jsx"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    }
+  ],
+  "workId": "after-fix",
+  "phase": "planning",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/after-fix/artifacts/planning/plan.md",
+    "sha256": "4bc2875a37870d74d71c0e9d6747b59bb94e9e472f96aa9e4a8f2dce2179b862",
+    "bytes": 19725
+  }
+}
