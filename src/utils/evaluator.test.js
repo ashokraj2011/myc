@@ -1,5 +1,24 @@
 import { describe, it, expect } from 'vitest';
-import { evaluateExpression, formatNumber } from '../utils/evaluator';
+import { convertToHex, evaluateExpression, formatNumber } from '../utils/evaluator';
+
+describe('convertToHex', () => {
+  // @ac:AFTER-FIX:AC-001
+  // @ac:AFTER-FIX:AC-003
+  it.each([
+    ['1', '0x1'],
+    ['26', '0x1A'],
+    ['255', '0xFF'],
+  ])('converts positive integer %s to %s', (input, expected) => {
+    expect(convertToHex(input)).toEqual({ result: expected, error: null });
+  });
+
+  // @ac:AFTER-FIX:AC-002
+  // @ac:AFTER-FIX:AC-003
+  it.each(['', '0', '-2', '2.5', 'abc'])('rejects invalid input %j', (input) => {
+    expect(convertToHex(input).result).toBe('Error');
+    expect(convertToHex(input).error).toBeTruthy();
+  });
+});
 
 // Verifies WRK-1978:AC-003 and WRK-1978:AC-005: the restyle work must not
 // change calculation semantics, expression evaluation, or number formatting.

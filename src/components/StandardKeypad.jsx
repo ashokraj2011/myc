@@ -11,6 +11,7 @@ export const StandardKeypad = ({
   onNegate,
   onPercent,
   onMemory,
+  onHexConvert,
   soundEnabled,
 }) => {
   const handleBtn = (type, fn, val) => {
@@ -23,6 +24,16 @@ export const StandardKeypad = ({
       {/* Memory Strip: slim row docked above the main keypad, mirroring
           Windows 11 Calculator's memory row placement. */}
       <div className="memory-strip">
+        {/* @clause:AFTER-FIX:REQ-002 Visible keypad control invokes decimal-to-hex conversion.
+            @clause:AFTER-FIX:AC-001 Exposes the successful conversion interaction on the keypad.
+            @clause:AFTER-FIX:AC-003 Adds the required visible conversion interaction. */}
+        <button
+          onClick={() => handleBtn('operator', onHexConvert)}
+          className="calc-btn u-bg-btn-func-bg u-text-btn-func-text u-hbg-btn-func-hover font-semibold"
+          aria-label="Convert to hexadecimal"
+        >
+          HEX
+        </button>
         <button
           onClick={() => handleBtn('mode', onMemory, 'MC')}
           className="calc-btn u-bg-btn-func-bg u-text-btn-func-text u-hbg-btn-func-hover font-semibold"

@@ -20,6 +20,46 @@ const getResultText = (container) => {
   return lines[lines.length - 1].textContent;
 };
 
+describe('decimal-to-hexadecimal conversion', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  // @ac:AFTER-FIX:AC-001
+  // @ac:AFTER-FIX:AC-003
+  it.each([
+    ['1', '0x1'],
+    ['26', '0x1A'],
+    ['255', '0xFF'],
+  ])('converts %s using the keypad control', async (input, expected) => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+    for (const digit of input) await clickButton(container, digit);
+    await user.click(screen.getByRole('button', { name: 'Convert to hexadecimal' }));
+    expect(getResultText(container)).toBe(expected);
+  });
+
+  // @ac:AFTER-FIX:AC-001
+  // @ac:AFTER-FIX:AC-003
+  it('converts by keyboard shortcut h', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+    await user.keyboard('255h');
+    expect(getResultText(container)).toBe('0xFF');
+  });
+
+  // @ac:AFTER-FIX:AC-002
+  // @ac:AFTER-FIX:AC-003
+  it.each(['0', '-2', '2.5', 'abc', ''])('shows an error for invalid input %j', async (input) => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+    if (input) await user.keyboard(input);
+    await user.keyboard('h');
+    expect(getResultText(container)).toBe('Error');
+    expect(getResultText(container)).not.toMatch(/^0x/);
+  });
+});
+
 // Full end-to-end functional regression across modes, themes, memory,
 // history, and keyboard shortcuts.
 // @ac:AC-003

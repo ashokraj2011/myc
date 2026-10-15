@@ -53,6 +53,25 @@ export const evaluateExpression = (expr, angleUnit = 'DEG') => {
   }
 };
 
+// @clause:AFTER-FIX:REQ-001 Converts decimal integer input without losing precision.
+// @clause:AFTER-FIX:REQ-003 Adds the required prefix and uppercase hexadecimal digits.
+// @clause:AFTER-FIX:REQ-004 Rejects blank and non-positive or non-integer input atomically.
+// @clause:AFTER-FIX:AC-001 Supports the required decimal-to-hexadecimal examples.
+// @clause:AFTER-FIX:AC-002 Invalid values return an error without a converted result.
+// @clause:AFTER-FIX:AC-003 The conversion validates input and formats successful output.
+export const convertToHex = (value) => {
+  const input = String(value ?? '').trim();
+  if (!/^\d+$/.test(input) || /^0+$/.test(input)) {
+    return { result: 'Error', error: 'Enter a positive integer' };
+  }
+
+  try {
+    return { result: `0x${BigInt(input).toString(16).toUpperCase()}`, error: null };
+  } catch (err) {
+    return { result: 'Error', error: err.message || 'Invalid integer' };
+  }
+};
+
 // Formats big numbers, floats, and removes precision artifacts like 0.1 + 0.2 = 0.30000000000000004
 export const formatNumber = (num) => {
   if (num === null || num === undefined || isNaN(num)) return 'Error';

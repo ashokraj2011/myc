@@ -8,7 +8,7 @@ import { FinancialCalculator } from './components/FinancialCalculator';
 import { FunctionGrapher } from './components/FunctionGrapher';
 import { HistoryDrawer } from './components/HistoryDrawer';
 import { KeyboardShortcutsModal } from './components/KeyboardShortcutsModal';
-import { evaluateExpression } from './utils/evaluator';
+import { convertToHex, evaluateExpression } from './utils/evaluator';
 import { playSound } from './utils/audio';
 
 export default function App() {
@@ -129,6 +129,20 @@ export default function App() {
     }
   }, [expression, angleUnit]);
 
+  // @clause:AFTER-FIX:REQ-001 Converts the current decimal input through the shared validator.
+  // @clause:AFTER-FIX:REQ-002 Uses one action for the keypad and h/H keyboard shortcut.
+  // @clause:AFTER-FIX:REQ-003 Displays the prefixed uppercase result returned by the converter.
+  // @clause:AFTER-FIX:REQ-004 Displays Error for invalid input, never a stale conversion.
+  // @clause:AFTER-FIX:AC-001 The shared action displays each specified successful conversion.
+  // @clause:AFTER-FIX:AC-002 The shared action displays an error for all invalid input categories.
+  // @clause:AFTER-FIX:AC-003 Both UI interactions use the same validated conversion action.
+  const handleHexConvert = useCallback(() => {
+    const input = expression || (lastEvaluated ? result : '');
+    const conversion = convertToHex(input);
+    setResult(conversion.result);
+    setLastEvaluated(true);
+  }, [expression, lastEvaluated, result]);
+
   const handleMemory = useCallback(
     (type) => {
       const currentNum = parseFloat(result) || 0;
@@ -188,6 +202,9 @@ export default function App() {
       } else if (key === 'Escape') {
         playSound('clear', soundEnabled);
         handleClear();
+      } else if (key.toLowerCase() === 'h') {
+        playSound('operator', soundEnabled);
+        handleHexConvert();
       } else if (key === '%') {
         playSound('operator', soundEnabled);
         handlePercent();
@@ -222,6 +239,7 @@ export default function App() {
     handleBackspace,
     handleClear,
     handlePercent,
+    handleHexConvert,
   ]);
 
   return (
@@ -261,6 +279,7 @@ export default function App() {
               onNegate={handleNegate}
               onPercent={handlePercent}
               onMemory={handleMemory}
+              onHexConvert={handleHexConvert}
               soundEnabled={soundEnabled}
             />
           </div>

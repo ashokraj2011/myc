@@ -1,0 +1,1226 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "after-fix",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "2a014b7c-e39f-4978-979b-3bf7e862ac32",
+  "changeSet": {
+    "path": "singularity/work-items/after-fix/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:c0f3b2f378480a019f93fcf067fca27fc8a2f033b3d355994191f19ae2cfa855",
+    "sourcePaths": [
+      "src/App.jsx",
+      "src/components/KeyboardShortcutsModal.jsx",
+      "src/components/StandardKeypad.jsx",
+      "src/utils/evaluator.js"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [],
+    "executableTestPaths": [
+      "src/App.test.jsx",
+      "src/utils/evaluator.test.js"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "product-source": 4,
+      "test-source": 2
+    },
+    "entries": [
+      {
+        "changeId": "sha256:ffd2a484115e51dac46267275425c602ef7e04691fd8c853f6dcd8fd2abb2608",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:254e568b41cbf6cc48ddf7198c25626d82eeb536a0ef0bdcf635f858184047e1",
+        "status": "modified",
+        "oldPath": "src/App.test.jsx",
+        "newPath": "src/App.test.jsx",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:55bf558e8fbdff2f979e97ebdeba658840e574bc5338a10fff0cd224e887c200",
+        "status": "modified",
+        "oldPath": "src/components/KeyboardShortcutsModal.jsx",
+        "newPath": "src/components/KeyboardShortcutsModal.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:d8d69efa6c02642b45e7a57fddf42f05330e19d4a6a24b6a7bba84f6c312ed97",
+        "status": "modified",
+        "oldPath": "src/components/StandardKeypad.jsx",
+        "newPath": "src/components/StandardKeypad.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:6cf10f05e57169526765a61ad1acc206f08b4e66eab64e8bd49450bf571333d3",
+        "status": "modified",
+        "oldPath": "src/utils/evaluator.js",
+        "newPath": "src/utils/evaluator.js",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:fecc5574b9904e8a44191b2c8288a62f540022e64653d287dce1d79b3d7238f0",
+        "status": "modified",
+        "oldPath": "src/utils/evaluator.test.js",
+        "newPath": "src/utils/evaluator.test.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "AFTER-FIX:AC-001",
+      "AFTER-FIX:AC-002"
+    ],
+    "bound": [
+      "AFTER-FIX:AC-001",
+      "AFTER-FIX:AC-002",
+      "AFTER-FIX:AC-003"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "AFTER-FIX:AC-001",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-001",
+        "testSource": "src/utils/evaluator.test.js",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-002",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-002",
+        "testSource": "src/utils/evaluator.test.js",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-003",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-003",
+        "testSource": "src/utils/evaluator.test.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "AFTER-FIX:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "decimal-to-hexadecimal conversion"
+          ],
+          "name": "converts %s using the keypad control"
+        },
+        "logicalTestId": "sha256:a74d8cda7e543f62d057104f7c22944cc510a5015309e1c2b2982a4a32d833f9",
+        "declarationSha256": "sha256:7c7bc6e7cfe8178f0e7c43a7e1f75dccf1819d68878458f774f9bf904d8e5963",
+        "supportSha256": null,
+        "line": 30,
+        "parameters": {
+          "kind": "static",
+          "count": 3,
+          "titlePattern": "^converts .*? using the keypad control$"
+        },
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "decimal-to-hexadecimal conversion"
+          ],
+          "name": "converts by keyboard shortcut h"
+        },
+        "logicalTestId": "sha256:ad5ef2f31cf42d6d05af7c5c56dbb681b131556e070571baccdab5306db5c435",
+        "declarationSha256": "sha256:0db711cf928e95007565f84402cc49cde30a9c0413c7217250bfbe43fd543c9c",
+        "supportSha256": null,
+        "line": 44,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-001",
+        "testSource": "src/utils/evaluator.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "convertToHex"
+          ],
+          "name": "converts positive integer %s to %s"
+        },
+        "logicalTestId": "sha256:6cd00913e47b6b0b302776326cf67b3ec67add026f8eaed5960528e8daf84deb",
+        "declarationSha256": "sha256:fec13cf9c77f03dc2af37f89656fef210656c8a7a4ac503873d2522249bd08d4",
+        "supportSha256": null,
+        "line": 7,
+        "parameters": {
+          "kind": "static",
+          "count": 3,
+          "titlePattern": "^converts positive integer .*? to .*?$"
+        },
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-002",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "decimal-to-hexadecimal conversion"
+          ],
+          "name": "shows an error for invalid input %j"
+        },
+        "logicalTestId": "sha256:4fb52995989381acb8612aba81f2d9b776e88f8da8194f7c3403335b31bde022",
+        "declarationSha256": "sha256:28f021d8bde466df9376f4ab118086256ea6f807e6dd549e8fc6dc45aec9a3ee",
+        "supportSha256": null,
+        "line": 53,
+        "parameters": {
+          "kind": "static",
+          "count": 5,
+          "titlePattern": "^shows an error for invalid input .*?$"
+        },
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-002",
+        "testSource": "src/utils/evaluator.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "convertToHex"
+          ],
+          "name": "rejects invalid input %j"
+        },
+        "logicalTestId": "sha256:1b1864a3cdcb006eff1df82da45fe912bae3c83dab88409a8986a85fde180546",
+        "declarationSha256": "sha256:9f4c683d1f49e00b722bfff2c5d88dd005504f4592470ebe269af5837fa4411e",
+        "supportSha256": null,
+        "line": 17,
+        "parameters": {
+          "kind": "static",
+          "count": 5,
+          "titlePattern": "^rejects invalid input .*?$"
+        },
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-003",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "decimal-to-hexadecimal conversion"
+          ],
+          "name": "converts %s using the keypad control"
+        },
+        "logicalTestId": "sha256:a74d8cda7e543f62d057104f7c22944cc510a5015309e1c2b2982a4a32d833f9",
+        "declarationSha256": "sha256:7c7bc6e7cfe8178f0e7c43a7e1f75dccf1819d68878458f774f9bf904d8e5963",
+        "supportSha256": null,
+        "line": 30,
+        "parameters": {
+          "kind": "static",
+          "count": 3,
+          "titlePattern": "^converts .*? using the keypad control$"
+        },
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-003",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "decimal-to-hexadecimal conversion"
+          ],
+          "name": "converts by keyboard shortcut h"
+        },
+        "logicalTestId": "sha256:ad5ef2f31cf42d6d05af7c5c56dbb681b131556e070571baccdab5306db5c435",
+        "declarationSha256": "sha256:0db711cf928e95007565f84402cc49cde30a9c0413c7217250bfbe43fd543c9c",
+        "supportSha256": null,
+        "line": 44,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-003",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "decimal-to-hexadecimal conversion"
+          ],
+          "name": "shows an error for invalid input %j"
+        },
+        "logicalTestId": "sha256:4fb52995989381acb8612aba81f2d9b776e88f8da8194f7c3403335b31bde022",
+        "declarationSha256": "sha256:28f021d8bde466df9376f4ab118086256ea6f807e6dd549e8fc6dc45aec9a3ee",
+        "supportSha256": null,
+        "line": 53,
+        "parameters": {
+          "kind": "static",
+          "count": 5,
+          "titlePattern": "^shows an error for invalid input .*?$"
+        },
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-003",
+        "testSource": "src/utils/evaluator.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "convertToHex"
+          ],
+          "name": "converts positive integer %s to %s"
+        },
+        "logicalTestId": "sha256:6cd00913e47b6b0b302776326cf67b3ec67add026f8eaed5960528e8daf84deb",
+        "declarationSha256": "sha256:fec13cf9c77f03dc2af37f89656fef210656c8a7a4ac503873d2522249bd08d4",
+        "supportSha256": null,
+        "line": 7,
+        "parameters": {
+          "kind": "static",
+          "count": 3,
+          "titlePattern": "^converts positive integer .*? to .*?$"
+        },
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-003",
+        "testSource": "src/utils/evaluator.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "convertToHex"
+          ],
+          "name": "rejects invalid input %j"
+        },
+        "logicalTestId": "sha256:1b1864a3cdcb006eff1df82da45fe912bae3c83dab88409a8986a85fde180546",
+        "declarationSha256": "sha256:9f4c683d1f49e00b722bfff2c5d88dd005504f4592470ebe269af5837fa4411e",
+        "supportSha256": null,
+        "line": 17,
+        "parameters": {
+          "kind": "static",
+          "count": 5,
+          "titlePattern": "^rejects invalid input .*?$"
+        },
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      },
+      {
+        "testSource": "src/utils/evaluator.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "AFTER-FIX:AC-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx",
+          "src/utils/evaluator.js"
+        ]
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/utils/evaluator.js"
+        ]
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-003",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/KeyboardShortcutsModal.jsx",
+          "src/components/StandardKeypad.jsx",
+          "src/utils/evaluator.js"
+        ]
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/utils/evaluator.js"
+        ]
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/KeyboardShortcutsModal.jsx",
+          "src/components/StandardKeypad.jsx"
+        ]
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-003",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/utils/evaluator.js"
+        ]
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-004",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/utils/evaluator.js"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "AFTER-FIX:AC-001",
+        "sourcePath": "src/App.jsx",
+        "line": 136,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-001",
+        "sourcePath": "src/components/StandardKeypad.jsx",
+        "line": 28,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-001",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 59,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-002",
+        "sourcePath": "src/App.jsx",
+        "line": 137,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-002",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 60,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-003",
+        "sourcePath": "src/App.jsx",
+        "line": 138,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-003",
+        "sourcePath": "src/components/KeyboardShortcutsModal.jsx",
+        "line": 15,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-003",
+        "sourcePath": "src/components/StandardKeypad.jsx",
+        "line": 29,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-003",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 61,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-001",
+        "sourcePath": "src/App.jsx",
+        "line": 132,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-001",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 56,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-002",
+        "sourcePath": "src/App.jsx",
+        "line": 133,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-002",
+        "sourcePath": "src/components/KeyboardShortcutsModal.jsx",
+        "line": 14,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-002",
+        "sourcePath": "src/components/StandardKeypad.jsx",
+        "line": 27,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-003",
+        "sourcePath": "src/App.jsx",
+        "line": 134,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-003",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 57,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-004",
+        "sourcePath": "src/App.jsx",
+        "line": 135,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-004",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 58,
+        "tag": "clause"
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "AFTER-FIX:AC-001",
+        "explanation": {
+          "text": "The shared action displays each specified successful conversion.",
+          "path": "src/App.jsx",
+          "line": 136
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 1,
+                "afterStart": 11,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 132,
+                "afterLines": 14
+              },
+              {
+                "beforeStart": 190,
+                "beforeLines": 0,
+                "afterStart": 205,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 224,
+                "beforeLines": 0,
+                "afterStart": 242,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 263,
+                "beforeLines": 0,
+                "afterStart": 282,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/StandardKeypad.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 25,
+                "beforeLines": 0,
+                "afterStart": 27,
+                "afterLines": 10
+              }
+            ],
+            "symbols": [
+              {
+                "name": "StandardKeypad",
+                "kind": "function",
+                "line": 5
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 55,
+                "beforeLines": 0,
+                "afterStart": 56,
+                "afterLines": 19
+              }
+            ],
+            "symbols": [
+              {
+                "name": "convertToHex",
+                "kind": "function",
+                "line": 62
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-002",
+        "explanation": {
+          "text": "The shared action displays an error for all invalid input categories.",
+          "path": "src/App.jsx",
+          "line": 137
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 1,
+                "afterStart": 11,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 132,
+                "afterLines": 14
+              },
+              {
+                "beforeStart": 190,
+                "beforeLines": 0,
+                "afterStart": 205,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 224,
+                "beforeLines": 0,
+                "afterStart": 242,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 263,
+                "beforeLines": 0,
+                "afterStart": 282,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 55,
+                "beforeLines": 0,
+                "afterStart": 56,
+                "afterLines": 19
+              }
+            ],
+            "symbols": [
+              {
+                "name": "convertToHex",
+                "kind": "function",
+                "line": 62
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-003",
+        "explanation": {
+          "text": "Both UI interactions use the same validated conversion action.",
+          "path": "src/App.jsx",
+          "line": 138
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 1,
+                "afterStart": 11,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 132,
+                "afterLines": 14
+              },
+              {
+                "beforeStart": 190,
+                "beforeLines": 0,
+                "afterStart": 205,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 224,
+                "beforeLines": 0,
+                "afterStart": 242,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 263,
+                "beforeLines": 0,
+                "afterStart": 282,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/KeyboardShortcutsModal.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 3
+              }
+            ],
+            "symbols": [
+              {
+                "name": "KeyboardShortcutsModal",
+                "kind": "function",
+                "line": 5
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/StandardKeypad.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 25,
+                "beforeLines": 0,
+                "afterStart": 27,
+                "afterLines": 10
+              }
+            ],
+            "symbols": [
+              {
+                "name": "StandardKeypad",
+                "kind": "function",
+                "line": 5
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 55,
+                "beforeLines": 0,
+                "afterStart": 56,
+                "afterLines": 19
+              }
+            ],
+            "symbols": [
+              {
+                "name": "convertToHex",
+                "kind": "function",
+                "line": 62
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-001",
+        "explanation": {
+          "text": "Converts the current decimal input through the shared validator.",
+          "path": "src/App.jsx",
+          "line": 132
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 1,
+                "afterStart": 11,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 132,
+                "afterLines": 14
+              },
+              {
+                "beforeStart": 190,
+                "beforeLines": 0,
+                "afterStart": 205,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 224,
+                "beforeLines": 0,
+                "afterStart": 242,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 263,
+                "beforeLines": 0,
+                "afterStart": 282,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 55,
+                "beforeLines": 0,
+                "afterStart": 56,
+                "afterLines": 19
+              }
+            ],
+            "symbols": [
+              {
+                "name": "convertToHex",
+                "kind": "function",
+                "line": 62
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-002",
+        "explanation": {
+          "text": "Uses one action for the keypad and h/H keyboard shortcut.",
+          "path": "src/App.jsx",
+          "line": 133
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 1,
+                "afterStart": 11,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 132,
+                "afterLines": 14
+              },
+              {
+                "beforeStart": 190,
+                "beforeLines": 0,
+                "afterStart": 205,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 224,
+                "beforeLines": 0,
+                "afterStart": 242,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 263,
+                "beforeLines": 0,
+                "afterStart": 282,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/KeyboardShortcutsModal.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 3
+              }
+            ],
+            "symbols": [
+              {
+                "name": "KeyboardShortcutsModal",
+                "kind": "function",
+                "line": 5
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/StandardKeypad.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 25,
+                "beforeLines": 0,
+                "afterStart": 27,
+                "afterLines": 10
+              }
+            ],
+            "symbols": [
+              {
+                "name": "StandardKeypad",
+                "kind": "function",
+                "line": 5
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-003",
+        "explanation": {
+          "text": "Displays the prefixed uppercase result returned by the converter.",
+          "path": "src/App.jsx",
+          "line": 134
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 1,
+                "afterStart": 11,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 132,
+                "afterLines": 14
+              },
+              {
+                "beforeStart": 190,
+                "beforeLines": 0,
+                "afterStart": 205,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 224,
+                "beforeLines": 0,
+                "afterStart": 242,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 263,
+                "beforeLines": 0,
+                "afterStart": 282,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 55,
+                "beforeLines": 0,
+                "afterStart": 56,
+                "afterLines": 19
+              }
+            ],
+            "symbols": [
+              {
+                "name": "convertToHex",
+                "kind": "function",
+                "line": 62
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-004",
+        "explanation": {
+          "text": "Displays Error for invalid input, never a stale conversion.",
+          "path": "src/App.jsx",
+          "line": 135
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 1,
+                "afterStart": 11,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 132,
+                "afterLines": 14
+              },
+              {
+                "beforeStart": 190,
+                "beforeLines": 0,
+                "afterStart": 205,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 224,
+                "beforeLines": 0,
+                "afterStart": 242,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 263,
+                "beforeLines": 0,
+                "afterStart": 282,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 55,
+                "beforeLines": 0,
+                "afterStart": 56,
+                "afterLines": 19
+              }
+            ],
+            "symbols": [
+              {
+                "name": "convertToHex",
+                "kind": "function",
+                "line": 62
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:70f137b423dcaabcc0b3f7e895de8697fc464dd62dd5350d8cc8ff65e26db944"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:9f0e0c08ccd1b91c4af4488ba7d804bbb6a578a79693746f5b970af33b57111b",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-10-15T12:08:53.958Z"
+}

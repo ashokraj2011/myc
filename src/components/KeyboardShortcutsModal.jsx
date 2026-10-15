@@ -11,6 +11,9 @@ export const KeyboardShortcutsModal = ({ isOpen, onClose, soundEnabled }) => {
     { key: 'Enter / =', desc: 'Calculate result' },
     { key: 'Backspace', desc: 'Delete last character' },
     { key: 'Escape', desc: 'Clear calculation (AC)' },
+    // @clause:AFTER-FIX:REQ-002 Documents the h/H shortcut used for conversion.
+    // @clause:AFTER-FIX:AC-003 Makes the keyboard conversion shortcut discoverable.
+    { key: 'h / H', desc: 'Convert positive decimal integer to hexadecimal' },
     { key: '%', desc: 'Percentage calculation' },
     { key: '^', desc: 'Power function (xʸ)' },
     { key: 's / c / t', desc: 'Quick trig (sin, cos, tan)' },
