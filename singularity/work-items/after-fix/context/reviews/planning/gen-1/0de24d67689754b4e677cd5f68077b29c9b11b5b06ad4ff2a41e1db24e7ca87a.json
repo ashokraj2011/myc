@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "phase": "planning",
+  "generation": 1,
+  "reportSha256": "0de24d67689754b4e677cd5f68077b29c9b11b5b06ad4ff2a41e1db24e7ca87a",
+  "lifecycleEventId": "fdee4db5-06ef-4695-8b74-ae0dec86e9f6",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "planning",
+    "binding": {
+      "workId": "after-fix",
+      "phase": "planning",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/after-fix/USER-STORY.md",
+          "textSha256": "0d09cd26c81356e0c4781456baf547f93a7c5c4fc7e6a9549ccbfea919d377e2",
+          "originalSha256": "92bdbeb174685b0606b1f8d0a05700da09a818b9124c4e498c6d22cef721807a"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:approved-scope",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/after-fix/context/clarifications-specification-gen1.json",
+          "sha256": "bbb4d3e88efb100e0535b448e95e1a997f4ae3837a1a90f962f918d464b3297f"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/after-fix/artifacts/planning/plan.md",
+        "sha256": "be3bd1988aceda44a813f72abfa0b8d33c4a1580a2ac55443fbaef2cfcccdba0"
+      },
+      "upstreamSpec": {
+        "path": "singularity/work-items/after-fix/artifacts/specification/spec.md",
+        "sha256": "fc12538f2cf7126777b4e098ca425097afa56ff6b866fcc80404cca777c22a5d"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:approved-scope"
+    ],
+    "rows": [
+      {
+        "clauseId": "AFTER-FIX:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/utils/evaluator.js"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/evaluator.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "new",
+        "observableResult": "A positive base-10 integer converts to its mathematically equivalent hexadecimal value.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/KeyboardShortcutsModal.jsx",
+          "src/components/StandardKeypad.jsx"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "new",
+        "observableResult": "A visible keypad control and documented `h`/`H` shortcut invoke the same conversion action.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-003",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/utils/evaluator.js"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/evaluator.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "new",
+        "observableResult": "Every successful result has the `0x` prefix and uppercase A–F digits.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "AFTER-FIX:REQ-004",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/utils/evaluator.js"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/evaluator.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "new",
+        "observableResult": "Blank, zero, negative, fractional, and non-numeric input visibly fail without a converted result.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx",
+          "src/utils/evaluator.js"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/evaluator.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "new",
+        "observableResult": "Keypad and keyboard actions produce `0x1`, `0x1A`, and `0xFF` for `1`, `26`, and `255`.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/utils/evaluator.js"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/evaluator.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "new",
+        "observableResult": "Blank, zero, negative, fractional, and non-numeric input show an error and no hexadecimal result.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "AFTER-FIX:AC-003",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/KeyboardShortcutsModal.jsx",
+          "src/components/StandardKeypad.jsx",
+          "src/utils/evaluator.js"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/evaluator.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "new",
+        "observableResult": "Automated cases cover success, both interaction surfaces, prefixed uppercase output, and each invalid/empty category.",
+        "assessment": "supported"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "a0016f43bc13f4991a4347bdd86c60bed8424da1e4a226e03267702d04a4c9e5",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "architect",
+    "readOnly": true
+  },
+  "submittedAt": "2026-10-15T11:53:06.019Z",
+  "recordSha256": "b1f417d05a5cc757d529914b1c84dea69ec716bd57d8378b3b34324872c01082"
+}
