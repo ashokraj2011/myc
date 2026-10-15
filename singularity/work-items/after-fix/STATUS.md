@@ -9,7 +9,7 @@
 
 | # | Phase | Governed agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
-| 1 | Specification (`specification`) | product-owner | **in_progress** | 1 | 0 | unavailable |
+| 1 | Specification (`specification`) | product-owner | **awaiting_approval** | 1 | 0 | unavailable |
 | 2 | Planning (`planning`) | architect | **not_started** | 0 | 0 | unavailable |
 | 3 | Implementation (`implementation`) | developer | **not_started** | 0 | 0 | unavailable |
 | 4 | Convergence (`convergence`) | architect | **not_started** | 0 | 0 | unavailable |
@@ -18,6 +18,7 @@
 
 ## Recent history
 
+- 2026-10-15T11:23:32.404Z — **phase_submitted** (specification) by ashokraj2011 · governed agent product-owner: 1 artifacts
 - 2026-10-15T11:22:54.091Z — **source_review_submitted** (specification) by 88361104+ashokraj2011@users.noreply.github.com · governed agent sflow-source-reviewer: 22663c4ef27ac03f11ee9fb3ec8b7621ff584242c2921c90a22b7dbadbd9632c
 - 2026-10-15T11:20:58.162Z — **phase_generated** (specification) by ashokraj2011 · governed agent product-owner: generation 1
 - 2026-10-15T11:15:18.722Z — **work_started** (specification) by ashokraj2011 · governed agent product-owner: Created spec-driven-standard branch after-fix
