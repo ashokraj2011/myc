@@ -23,6 +23,7 @@
 
 ## Recent history
 
+- 2026-10-15T16:09:56.559Z — **upstream_issue_raised** (release) by ashokraj2011 · governed agent qa: UPI-002 against implementation (AFTER-FIX:REQ-002): will be verified later
 - 2026-10-15T16:09:41.975Z — **upstream_issue_raised** (release) by ashokraj2011 · governed agent qa: UPI-001 against implementation (AFTER-FIX:REQ-001): will be verified later
 - 2026-10-15T14:39:01.214Z — **phase_self_approved** (verification) by ashokraj2011 · governed agent qa: threshold reached; advanced to release
 - 2026-10-15T14:39:01.214Z — **work_interval_closed** (verification) by ashokraj2011 · governed agent qa: interval INT-verification-G1-002 closed after phase approval
@@ -37,4 +38,3 @@
 - 2026-10-15T12:32:43.099Z — **work_interval_closed** (implementation) by ashokraj2011 · governed agent developer: interval INT-implementation-G1-001 closed after phase approval
 - 2026-10-15T12:30:14.677Z — **phase_submitted** (implementation) by ashokraj2011 · governed agent developer: 7 artifacts
 - 2026-10-15T12:30:14.676Z — **work_interval_reconciled** (implementation) by system: aligned; 6 changed path(s)
-- 2026-10-15T12:08:54.225Z — **phase_generated** (implementation) by ashokraj2011 · governed agent developer: generation 1
