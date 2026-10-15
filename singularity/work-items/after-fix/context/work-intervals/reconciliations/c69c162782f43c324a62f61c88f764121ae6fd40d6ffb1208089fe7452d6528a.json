@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "after-fix",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G1-001",
+  "phaseId": "implementation",
+  "generation": 1,
+  "baselineSha256": "4be778693bb53f2054272bfcbae9c2aeb5574d6aa81fcd053792fc1789e5ab09",
+  "baseline": {
+    "path": "singularity/work-items/after-fix/context/work-intervals/implementation-gen1-baseline.json",
+    "sha256": "4be778693bb53f2054272bfcbae9c2aeb5574d6aa81fcd053792fc1789e5ab09",
+    "verified": true,
+    "sourceBaseCommit": "e5700e34042a61360d71b0d553c057300b907817"
+  },
+  "sourceBaseCommit": "e5700e34042a61360d71b0d553c057300b907817",
+  "target": {
+    "branch": "after-fix",
+    "head": "82fc1e4388bbd34e1fc46a6af1c7cee671b46cef",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": "src/App.jsx",
+      "status": "present",
+      "sha256": "139a26a22e26e22ac31c9356bd5a2ed60f54083822972906a911fc58f6e2d9e3",
+      "bytes": 11611,
+      "verdict": "planned",
+      "clauseIds": [
+        "AFTER-FIX:AC-001",
+        "AFTER-FIX:AC-002",
+        "AFTER-FIX:AC-003",
+        "AFTER-FIX:REQ-001",
+        "AFTER-FIX:REQ-002",
+        "AFTER-FIX:REQ-003",
+        "AFTER-FIX:REQ-004"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/App.test.jsx",
+      "status": "present",
+      "sha256": "dc62a2c79a919002fc3f9f6431ced78810f70ee4283644db7bb09d0dd808de30",
+      "bytes": 8627,
+      "verdict": "planned",
+      "clauseIds": [
+        "AFTER-FIX:AC-001",
+        "AFTER-FIX:AC-002",
+        "AFTER-FIX:AC-003",
+        "AFTER-FIX:REQ-001",
+        "AFTER-FIX:REQ-002",
+        "AFTER-FIX:REQ-003",
+        "AFTER-FIX:REQ-004"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/components/KeyboardShortcutsModal.jsx",
+      "status": "present",
+      "sha256": "fc152b655bd097b1a6830e092f813edbe850cb701f91d455f0b299a1e8818c12",
+      "bytes": 2757,
+      "verdict": "planned",
+      "clauseIds": [
+        "AFTER-FIX:AC-003",
+        "AFTER-FIX:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/components/StandardKeypad.jsx",
+      "status": "present",
+      "sha256": "3d8e30c71ee49fe386bb8a51e0ea122d07345a110b3f84856e90895d6912fdff",
+      "bytes": 6953,
+      "verdict": "planned",
+      "clauseIds": [
+        "AFTER-FIX:AC-001",
+        "AFTER-FIX:AC-003",
+        "AFTER-FIX:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/utils/evaluator.js",
+      "status": "present",
+      "sha256": "d678af4e59c4ea29da987b57c9d145d765a35a1ab44929254b2c01349b303def",
+      "bytes": 8076,
+      "verdict": "planned",
+      "clauseIds": [
+        "AFTER-FIX:AC-001",
+        "AFTER-FIX:AC-002",
+        "AFTER-FIX:AC-003",
+        "AFTER-FIX:REQ-001",
+        "AFTER-FIX:REQ-003",
+        "AFTER-FIX:REQ-004"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/utils/evaluator.test.js",
+      "status": "present",
+      "sha256": "67cc9fe11a023101c1dd962cc0852feaf89c8482c3c5b7220b18a4cf4265f0b6",
+      "bytes": 3312,
+      "verdict": "planned",
+      "clauseIds": [
+        "AFTER-FIX:AC-001",
+        "AFTER-FIX:AC-002",
+        "AFTER-FIX:AC-003",
+        "AFTER-FIX:REQ-001",
+        "AFTER-FIX:REQ-003",
+        "AFTER-FIX:REQ-004"
+      ],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 6,
+    "planned": 6,
+    "unplanned": 0,
+    "protected": 0
+  },
+  "decision": {
+    "status": "aligned",
+    "summaryStatus": "clear",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "c69c162782f43c324a62f61c88f764121ae6fd40d6ffb1208089fe7452d6528a",
+  "reconciledAt": "2026-10-15T12:30:14.676Z",
+  "final": true,
+  "recordedAt": "2026-10-15T12:30:14.676Z",
+  "path": "singularity/work-items/after-fix/context/work-intervals/reconciliations/c69c162782f43c324a62f61c88f764121ae6fd40d6ffb1208089fe7452d6528a.json"
+}
