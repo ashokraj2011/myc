@@ -9,7 +9,7 @@
 
 | # | Phase | Governed agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
-| 1 | Specification (`specification`) | product-owner | **in_progress** | 1 | 0 | unavailable |
+| 1 | Specification (`specification`) | product-owner | **awaiting_approval** | 1 | 0 | unavailable |
 | 2 | Planning (`planning`) | architect | **not_started** | 0 | 0 | unavailable |
 | 3 | Implementation (`implementation`) | developer | **not_started** | 0 | 0 | unavailable |
 | 4 | Convergence (`convergence`) | architect | **not_started** | 0 | 0 | unavailable |
@@ -18,6 +18,7 @@
 
 ## Recent history
 
+- 2026-10-16T14:58:34.505Z — **phase_submitted** (specification) by ashokraj2011 · governed agent product-owner: 1 artifacts
 - 2026-10-16T14:57:50.903Z — **source_review_submitted** (specification) by 88361104+ashokraj2011@users.noreply.github.com · governed agent sflow-source-reviewer: 4aa1b0669f63351140a59df756f0e6ce79a80dc9fc0cc833461fd95cc4f4b46c
 - 2026-10-16T11:36:12.318Z — **phase_generated** (specification) by ashokraj2011 · governed agent product-owner: generation 1
 - 2026-10-16T10:53:47.259Z — **work_started** (specification) by ashokraj2011 · governed agent product-owner: Created spec-driven-standard branch anu-hex
