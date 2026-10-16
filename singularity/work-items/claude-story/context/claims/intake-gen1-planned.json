@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-10-16T08:23:59.789Z",
+  "claims": {
+    "CLAUDE-STORY:AC-001": {
+      "expectedPaths": [
+        "singularity/work-items/claude-story/evidence/CLAUDE-STORY-AC-001.png"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "Scientific mode screenshot shows the `HEX` button in the keyboard."
+    },
+    "CLAUDE-STORY:AC-002": {
+      "expectedPaths": [
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Activating `HEX` replaces the displayed decimal result with its hexadecimal representation."
+    }
+  },
+  "verificationContracts": [
+    {
+      "clauseId": "CLAUDE-STORY:AC-001",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "hex-button-presence",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "src/App.test.jsx"
+          },
+          "requiredAssurance": "exact-local-observed"
+        },
+        {
+          "slot": "hex-button-visual",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "src/components/ScientificKeypad.jsx"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    },
+    {
+      "clauseId": "CLAUDE-STORY:AC-002",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "hex-result-conversion",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "src/App.test.jsx"
+          },
+          "requiredAssurance": "exact-local-observed"
+        }
+      ]
+    }
+  ],
+  "workId": "claude-story",
+  "phase": "intake",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/claude-story/artifacts/intake/intake.md",
+    "sha256": "f981318698a656a5e2c4a8e63aff1aba96ef62e952b90f946da78358ee2b3502",
+    "bytes": 9242
+  }
+}

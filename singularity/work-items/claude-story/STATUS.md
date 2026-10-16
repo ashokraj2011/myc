@@ -9,10 +9,11 @@
 
 | # | Phase | Governed agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
-| 1 | Scope and plan (`intake`) | product-owner | **in_progress** | 0 | 0 | unavailable |
+| 1 | Scope and plan (`intake`) | product-owner | **in_progress** | 1 | 0 | unavailable |
 | 2 | Implement (`implement`) | developer | **not_started** | 0 | 0 | unavailable |
 | 3 | Verify (`verify`) | qa | **not_started** | 0 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-10-16T08:23:59.862Z — **phase_generated** (intake) by ashokraj2011 · governed agent product-owner: generation 1
 - 2026-10-16T08:11:07.811Z — **work_started** (intake) by ashokraj2011 · governed agent product-owner: Created quick-fix branch claude-story
