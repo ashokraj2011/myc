@@ -3,18 +3,21 @@
   "layout": "canonical-paths",
   "source": {
     "branch": "sflow/config",
-    "commit": "1d0214960ba7e35429f9943a4f2f615b202abc0c"
+    "commit": "f638817101d60744b5501967e98fd7821446d42d"
   },
   "history": {
-    "branch": "sflow/config-history/1d0214960ba7e35429f9943a4f2f615b202abc0c",
-    "commit": "1d0214960ba7e35429f9943a4f2f615b202abc0c"
+    "branch": "sflow/config-history/f638817101d60744b5501967e98fd7821446d42d",
+    "commit": "f638817101d60744b5501967e98fd7821446d42d"
   },
   "product": {
     "version": "0.9.0",
-    "revision": "9d3780b220fc4ba076120fc73a1a71787a82288c"
+    "revision": "2442523e8cf191402861b0da10d5b51e89377de1"
   },
   "files": {
     ".github/agents/architect.agent.md": "8770e647612b0c805ad583e7615f2ebe7fbb79b93bab2c1f3ad9237da5ff3d69",
+    ".github/agents/ashok-developer.agent.md": "99a50e59fd29b10a57422c3d09f76e9d9ac48cd3e8ab813cfd98f87e19e0156f",
+    ".github/agents/ashok-intake-agent.agent.md": "4c78bf63820584a24da75fc31bc03a68d843cb419b6f31bf66afede9aa754668",
+    ".github/agents/ashok-test-agent.agent.md": "00de804bdd974692c5cd959ceba6e90adee7fcf1faf3574b89d83fa230198045",
     ".github/agents/demo-code-checker.agent.md": "8663390f8d2307b0761c77dff2b8c3ba5f210eb0b4ce2a667393e35f74a8c429",
     ".github/agents/demo-code-repairer.agent.md": "c9fa90ab14274f2f1bd0d92662a773087ccdaa66d24b8b117b26d1e36fbb9834",
     ".github/agents/demo-instruction-analyst-imported.agent.md": "8f9baed8403833df8ce10aad417afb01eb45d1f8f09cdb9fff2d92d2fc8c7492",
@@ -62,7 +65,7 @@
     ".github/agents/scenario-tester.agent.md": "8149fbf087fedeaca0fcb9db91560e7a6b7d66e8fe580e171b3767a85db83cca",
     "singularity/agent-mappings.yml": "1b39a4f4caa3242749889a291e2259a361c815712bd762abde3db3cbe9f8a688",
     "singularity/capabilities.yml": "c04ba8e78b7bce7b70c622003ba3d52066b767c4e9c5b8184a98b77b9f1eebaa",
-    "singularity/configuration-transactions.json": "bc020ab02541c66e4960a7d5fb8f67757302b5e545dd83a58e10193bc0660314",
+    "singularity/configuration-transactions.json": "817849c7ac54ff32408ac168ac2202342a6925bc504ab2effdf03d2c5b09a0aa",
     "singularity/impact.yml": "e91000c4f19ba8f8c08812ebea1d3e825919f5b31dadd1f3e22f1749e3b05313",
     "singularity/instruction-library/demo-fresh-test-evidence-imported/INSTRUCTIONS.md": "8e227fa80d0941f8c42a9c2597192f119e092b201cb1cc77efb4d0d8fdd89f1a",
     "singularity/instruction-library/demo-fresh-test-evidence/INSTRUCTIONS.md": "955f8eb96b82b2498d312e8efc0d464095d0d3760cebb99ff17e12a871e91948",
@@ -73,7 +76,10 @@
     "singularity/modelTiers.yml": "da16ef4023221a14aba0b5a87fd80b395d3ea7d48b0ecf65481c291180aec23a",
     "singularity/portfolio.yml": "4f4bc576d18b45b3dc27d9e43a9863ab9182816a5bac415e66a508a845edd5ab",
     "singularity/prompts/copilot-planning.md": "4128acc6930949e4ba1e50e8b8c7c4f7beb23f4361c2e8428475b081712b77db",
-    "singularity/skill-library/attachments.yml": "34bb3311f72976388ce8279974354142ccffff182da90ceb7c0cef033bedd027",
+    "singularity/skill-library/ashok-dev-guidance/SKILL.md": "78ca2e3b116a80a2387552d070008f046dcf68ec52a83f2c9c9be1c24e639b6f",
+    "singularity/skill-library/ashok-intake-guidance/SKILL.md": "7285d01ab43301c88d24194551def0076771b9c9cad9af4eff287051c4ef440e",
+    "singularity/skill-library/ashok-test-guidance/SKILL.md": "e0c4c7f11199e7ac1407eb15440dd0a432644a081ce7d45ab362413701e305e5",
+    "singularity/skill-library/attachments.yml": "f3f2f8fbef6cf293ad6a47a2ecf57ffb20b6125c9364353143ae1043e79c802f",
     "singularity/skill-library/demo-acceptance-intake/SKILL.md": "0ca1d2e0fec9b529070e7ec7128e632e2efc9c6e8089b05443ea928190304896",
     "singularity/skill-library/demo-code-acceptance-check/SKILL.md": "57cd19310b68568853ac9339b4d4d73cece27ff2df57b2fc1110a4e26e7c8870",
     "singularity/skill-library/demo-evidence-bound-close/SKILL.md": "e18a418b84f1371fa7b86dbf30e9a9015d1ab348bddbb034ff12004f771f7926",
@@ -204,12 +210,27 @@
     "singularity/templates/spec-driven/spec.md": "8845017e5a12bf3b59ea955324f999f9b51f4a6a6606c3808f7e516adf1d2cce",
     "singularity/templates/starter-packs/skp-team-notes/draft-input.json": "fbc136911e7dfecf14be06091b6d759770fa72c133c39de74710511bfee57410",
     "singularity/templates/starter-packs/skp-team-notes/README.md": "ab3e66d1654df81922a6022c491ac85868cb3b644e0eace77c4f9089c4f599ea",
-    "singularity/workflow.yml": "cb6a60069ea9e278ebc92437dfebb6d6ab77375482b08bf317e5221b4e5999fc"
+    "singularity/workflow.yml": "cefab2b320917902d3a5d87f8fb41c6ca3fa661958e79fec9ecf93e28f239314"
   },
   "assets": {
     ".github/agents/architect.agent.md": {
       "sha256": "8770e647612b0c805ad583e7615f2ebe7fbb79b93bab2c1f3ad9237da5ff3d69",
       "object": "85421569ac45392c366576bcc2f22177bcfe1e50",
+      "mode": "100644"
+    },
+    ".github/agents/ashok-developer.agent.md": {
+      "sha256": "99a50e59fd29b10a57422c3d09f76e9d9ac48cd3e8ab813cfd98f87e19e0156f",
+      "object": "f0c09127c03f432449a657148712b39061617fce",
+      "mode": "100644"
+    },
+    ".github/agents/ashok-intake-agent.agent.md": {
+      "sha256": "4c78bf63820584a24da75fc31bc03a68d843cb419b6f31bf66afede9aa754668",
+      "object": "607a997bf1146379b16c66b3b3639693fd77452a",
+      "mode": "100644"
+    },
+    ".github/agents/ashok-test-agent.agent.md": {
+      "sha256": "00de804bdd974692c5cd959ceba6e90adee7fcf1faf3574b89d83fa230198045",
+      "object": "765c9be5785ecf012f44e7cf49379e3c3ed14644",
       "mode": "100644"
     },
     ".github/agents/demo-code-checker.agent.md": {
@@ -448,8 +469,8 @@
       "mode": "100644"
     },
     "singularity/configuration-transactions.json": {
-      "sha256": "bc020ab02541c66e4960a7d5fb8f67757302b5e545dd83a58e10193bc0660314",
-      "object": "93d76f9365f0371c1b3a4064943beed794159cc3",
+      "sha256": "817849c7ac54ff32408ac168ac2202342a6925bc504ab2effdf03d2c5b09a0aa",
+      "object": "7dc3de22884c3c27e66aa0c6c97b9b56d52120ec",
       "mode": "100644"
     },
     "singularity/impact.yml": {
@@ -502,9 +523,24 @@
       "object": "6dffb3072c8b121cd4b879cd457dd8219255ad42",
       "mode": "100644"
     },
+    "singularity/skill-library/ashok-dev-guidance/SKILL.md": {
+      "sha256": "78ca2e3b116a80a2387552d070008f046dcf68ec52a83f2c9c9be1c24e639b6f",
+      "object": "830ab0c56e2fe578e3d438e2bc49b081665f9e07",
+      "mode": "100644"
+    },
+    "singularity/skill-library/ashok-intake-guidance/SKILL.md": {
+      "sha256": "7285d01ab43301c88d24194551def0076771b9c9cad9af4eff287051c4ef440e",
+      "object": "3f608f63f8fea70e5ae9dfb089fa223d5905a572",
+      "mode": "100644"
+    },
+    "singularity/skill-library/ashok-test-guidance/SKILL.md": {
+      "sha256": "e0c4c7f11199e7ac1407eb15440dd0a432644a081ce7d45ab362413701e305e5",
+      "object": "da7ba9f13302371f9fe8c32952e690f693e24ccf",
+      "mode": "100644"
+    },
     "singularity/skill-library/attachments.yml": {
-      "sha256": "34bb3311f72976388ce8279974354142ccffff182da90ceb7c0cef033bedd027",
-      "object": "fb7e128cf9b667e9c0dab2e0657a1d239e18c446",
+      "sha256": "f3f2f8fbef6cf293ad6a47a2ecf57ffb20b6125c9364353143ae1043e79c802f",
+      "object": "7f436aeb6363fc40abb8e676e5a5780291b949b8",
       "mode": "100644"
     },
     "singularity/skill-library/demo-acceptance-intake/SKILL.md": {
@@ -1158,8 +1194,8 @@
       "mode": "100644"
     },
     "singularity/workflow.yml": {
-      "sha256": "cb6a60069ea9e278ebc92437dfebb6d6ab77375482b08bf317e5221b4e5999fc",
-      "object": "1397c53b9a6e177e0c2be48e8f174580b01a7af8",
+      "sha256": "cefab2b320917902d3a5d87f8fb41c6ca3fa661958e79fec9ecf93e28f239314",
+      "object": "5c0f589d05950d8ea1b16ed56b85c214769f5892",
       "mode": "100644"
     }
   }

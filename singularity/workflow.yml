@@ -1281,6 +1281,69 @@ workTypes:
       poc-test-generation-imported: poc-workflow/test-generation.md
       poc-ui-exploration-imported: poc-workflow/ui-exploration.md
       poc-validation-imported: poc-workflow/validation.md
+  ashok:
+    decisions: []
+    description: |-
+      Sequential intake, development and independent testing.
+
+      ## Authoring intent
+
+      create a workflow with intake ,dev and test use general agents name it as ashok
+
+      Catalog: sha256:c1fc584bf9c966a80c4934b41b2b3bdb4596b45de4ecdce5fa4f4992b39047ba. Family: software-change.
+
+      Structural coverage (requires human semantic review):
+      - intake: Provide an intake phase that captures scope and acceptance criteria. -> phase:ashok-intake, agent:ashok-intake-agent
+      - development: Provide a development phase using the selected developer asset. -> phase:ashok-dev, agent:ashok-developer
+      - testing: Test independently after development using a separate general test agent. -> phase:ashok-test, agent:ashok-test-agent
+      - name: Name the workflow Ashok. -> workflow:ashok
+
+      Source bindings:
+      - workflow:quick-fix (sha256:a056640bb982643da02f9830079a38516705ff6bf15b0ce0b7079f5408fbadbf) -> quick-fix
+      - phase:intake (sha256:5b1ea81deee071baba67875735ec353942107cf453a344083f8b3db244397b88) -> ashok-intake
+      - phase:implement (sha256:6e6d3acd98a97d69e763da125f419a473c4ba7f83b6046fe3aa07d79abd85c9c) -> ashok-dev
+      - phase:verify (sha256:9d69f31fa0d1df3581a72ca445c8643001b8a353745644c4f5d60fd0a8afed60) -> ashok-test
+      - agent:developer (sha256:0ac4c9edf2a949de06c8cbca93dcae9a5942f9f1920be8f2a4b070f410b8ca85) -> ashok-developer
+    label: Ashok
+    phaseOverrides:
+      ashok-dev:
+        inputs:
+          - ashok-intake
+      ashok-intake:
+        approval:
+          authorities:
+            - engineering-reviewers
+          minimum: 1
+          rejectTo:
+            - ashok-intake
+        artifact:
+          kind: requirements
+        clarification:
+          maxQuestions: 3
+          mode: when-needed
+          topics:
+            - acceptance criteria
+            - changed paths
+            - tests
+        label: Scope and plan
+      ashok-test:
+        inputs:
+          - ashok-intake
+          - ashok-dev
+    phases:
+      - ashok-intake
+      - ashok-dev
+      - ashok-test
+    plannedClaims:
+      clausePhases:
+        - ashok-intake
+      mode: required
+      owners:
+        ashok-dev: ashok-intake
+    templateOverrides:
+      ashok-dev: quick-fix/implement.md
+      ashok-intake: quick-fix/intake.md
+      ashok-test: quick-fix/verify.md
 phases:
   intake:
     label: Intake
@@ -2842,6 +2905,86 @@ phases:
     defaultTemplate: figma-mobile/visual-verification.md
     label: Mobile visual verification (imported)
     qualityCommands: []
+    writeScope: source-and-artifact
+  ashok-dev:
+    agents:
+      - ashok-developer
+    approval: none
+    artifact:
+      kind: implementation-summary
+      minimumBytes: 200
+      path: artifacts/ashok-dev/implementation-summary.md
+    comparison: {}
+    defaultTemplate: quick-fix/implement.md
+    generation:
+      producer: deterministic
+      requirement: required
+      task: code
+    inputs:
+      - ashok-intake
+    label: Implement
+    qualityCommands: []
+    worldModel: {}
+    writeScope: source-and-artifact
+  ashok-intake:
+    agents:
+      - ashok-intake-agent
+    approval:
+      authorities:
+        - engineering-reviewers
+      minimum: 1
+      rejectTo:
+        - ashok-intake
+    artifact:
+      kind: requirements
+      minimumBytes: 200
+      path: artifacts/ashok-intake/intake.md
+    clarification:
+      maxQuestions: 3
+      mode: when-needed
+      topics:
+        - acceptance criteria
+        - changed paths
+        - tests
+    comparison: {}
+    defaultTemplate: common/intake.md
+    label: Scope and plan
+    worldModel: {}
+    writeScope: artifact-only
+  ashok-test:
+    agents:
+      - ashok-test-agent
+    approval:
+      authorities:
+        - product-approvers
+      maximumChangedPaths: 5
+      minimum: 1
+      mode: required
+      policy: quick-fix-low-risk-v1
+      rejectTo:
+        - ashok-dev
+    artifact:
+      kind: test-evidence
+      minimumBytes: 200
+      path: artifacts/ashok-test/verification-summary.md
+    comparison: {}
+    defaultTemplate: quick-fix/verify.md
+    generation:
+      producer: deterministic
+      requirement: required
+      task: analyze
+    inputs:
+      - ashok-intake
+      - ashok-dev
+    label: Verify
+    qualityCommands:
+      - argv:
+          - git
+          - diff
+          - --check
+        id: git-diff-check
+        modelPolicy: never
+    worldModel: {}
     writeScope: source-and-artifact
 governance:
   requireAcceptanceCriteriaTags: true
