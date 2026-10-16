@@ -4,27 +4,51 @@
   "workId": "anu-hex",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "644b2d3230191a38b8b49bdb5b60c12a37b704c47c49a48990024523ed0a11d4",
+      "bytes": 4071
+    },
+    "generation": 1,
+    "publishedAt": "2026-10-16T11:36:12.056Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "2c5a3fae5e19a924e98eb1148fb17114524c5d3d",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "cefab2b320917902d3a5d87f8fb41c6ca3fa661958e79fec9ecf93e28f239314",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/anu-hex/context/clarifications-specification-gen1.json",
+    "sha256": "4e769b8991cfff320735e2b4fa5552e8de794f0fa007b3c2f5848e2e96b9456b",
+    "promptSha256": "aefca6da36d73ad83ea0ed541aedb3d54fb71f541aca3feea6ade56f21bec335",
+    "responses": 2,
+    "markers": [],
+    "recordedAt": "2026-10-16T11:34:21.861Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/anu-hex/telemetry/specification-gen1.json",
+      "sha256": "9ba010f701d9ad6e0c79690c6862cb1266acf0375ac3134ffa5dc8fd4565deaf",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 18780,
+        "estimatedTokens": 4695,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 18780,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-16T11:36:12.056Z",
+      "completedAt": "2026-10-16T11:36:12.056Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -54,142 +135,96 @@
 
 # Specification — anu-hex
 
-<!--
-Scenarios come first, and general requirements come after them `[SPK:REQ-068]`. That ordering is the
-template's opinion: a requirement written before anyone has described the situation it serves tends
-to describe the system instead of the need, and nobody notices until verification.
-
-Where the current Story evidence leaves something material unknown, say so with a marker rather
-than guessing. Use this syntax:
-
-    [NEEDS CLARIFICATION: <one question grounded in the current Story evidence>]
-
-Replace the angle-bracketed placeholder; never copy or ask it as written. The question must be one
-non-empty line and must arise from the pinned sources, approved upstream artifacts, repository world
-model, or a contradiction among them. Markers are extracted the same way clauses are, so a marker
-inside fenced or inline code is ignored `[SPK:REQ-063]`. This phase blocks publication while any
-marker is unresolved, and a marker is only resolved when a later generation removes it *and* records
-the answer `[SPK:REQ-067]` — deleting the text alone is an integrity failure, not an answer.
--->
-
 ## Agent brief
 
-<!--
-Summarize the approved intent for downstream agents in a compact, standalone form. Include the
-problem, intended outcome, principal actors, most important scenarios, hard constraints, and major
-exclusions. Do not introduce claims that are absent from the sections below. Exact requirements and
-boundary conditions are preserved separately by the governed projection.
--->
+Add a yellow hex-conversion button to the calculator. A calculator user activates it to convert the currently displayed numeric value to an equivalent hexadecimal representation. The button must be visible and its conversion demonstrable on screen. The request does not define representation formatting or behavior for non-numeric/error displays; do not infer additional requirements from those gaps.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+The calculator user operates the existing calculator. No additional roles or differentiated permissions are specified.
 
 ## User scenarios
 
-Prioritized. Each scenario leads with the situation, then its acceptance cases.
+### S1 — Convert the displayed calculator value
 
-### S1 — <the most important situation, in the user's words>
+**Priority:** P1  
+**Actor:** Calculator user  
+**Context:** A numeric value is currently displayed in the calculator.
 
-**Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+- **Given** a numeric value is displayed  
+  **When** the user activates the hex-conversion button  
+  **Then** the calculator displays an equivalent hexadecimal representation of that value.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+### S2 — Identify the conversion control
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
+**Priority:** P2  
+**Actor:** Calculator user  
+**Context:** The calculator is visible on screen.
 
-### S2 — <the next situation>
-
-**Priority:** P2
-
-- **Given** … **When** … **Then** …
+- **Given** the calculator is visible  
+  **When** the user looks for the hex-conversion control  
+  **Then** a visible yellow button for hex conversion is present.
 
 ## Failure and empty states
 
-What happens the first time, with nothing there yet, and when each step fails. These are where
-specifications are usually silent and implementations usually improvise.
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** No separate empty-state behavior is specified. The conversion requirement applies when a numeric value is displayed.
+- **Failure:** No conversion-failure behavior or error wording is specified.
+- **Partial:** No partial-conversion behavior is specified.
 
 ## Scenario coverage
 
-<!-- One row per behavior/acceptance clause; repeat rows for multiple outcomes. Every referenced
-S-number must have complete Given/When/Then acceptance cases above. Outcome is success, failure,
-boundary, or empty. Rejection/error requirements need distinct failure cases, not only happy-path
-prose. Use the pinned request and clarification answers; do not invent error text or new scope. -->
-
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `ANU-HEX:REQ-001` | S1 | TODO |
-| `ANU-HEX:REQ-002` | S2 | TODO |
-| `ANU-HEX:AC-001` | S1 | TODO |
+| `ANU-HEX:REQ-001` | S1 | success |
+| `ANU-HEX:REQ-002` | S2 | success |
+| `ANU-HEX:AC-001` | S1 | success |
+| `ANU-HEX:AC-001` | S2 | success |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+No special permission or authorization requirement is specified; the calculator user may activate the button.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+The requirement concerns the currently displayed numeric value. No numeric range, precision, prefix, letter-case, or behavior for non-numeric/error displays is specified.
 
 ## Requirements
 
-Numbered, testable, one obligation each. Cite the scenario each serves.
+- When activated while a numeric value is displayed, the hex-conversion button converts that displayed value to an equivalent hexadecimal representation. *(S1)* [ANU-HEX:REQ-001]
+- The calculator presents the hex-conversion control as a visible yellow button. *(S2)* [ANU-HEX:REQ-002]
 
-- <requirement>. *(S1)* [ANU-HEX:REQ-001]
-- <requirement>. *(S1, S2)* [ANU-HEX:REQ-002]
+Acceptance criteria:
 
-Acceptance criteria use the same stable, namespaced form:
-
-- <observable acceptance outcome>. *(S1)* [ANU-HEX:AC-001]
+- On screen, the user can identify the yellow hex-conversion button and activate it to display an equivalent hexadecimal representation of the current numeric value. *(S1, S2)* [ANU-HEX:AC-001]
 
 ## Verification intent
 
-<!-- One row per declared clause, including non-functional requirements. Methods: test, visual,
-inspection, or a comma-separated combination (all required). AC Criterion is its own ID. A
-visual/inspection requirement names the AC proving it; a test-only requirement may use -. Choose
-from the pinned source, not from available tools. A screenshot is visual proof, not a test exemption.
-Planning must inherit these methods and cannot change them without an approved scope amendment. -->
-
 | Clause | Methods | Criterion |
 |---|---|---|
-| `ANU-HEX:REQ-001` | TODO | - |
-| `ANU-HEX:REQ-002` | TODO | - |
-| `ANU-HEX:AC-001` | TODO | `ANU-HEX:AC-001` |
+| `ANU-HEX:REQ-001` | test | - |
+| `ANU-HEX:REQ-002` | visual | `ANU-HEX:AC-001` |
+| `ANU-HEX:AC-001` | test, visual | `ANU-HEX:AC-001` |
 
 ## Non-functional requirements
 
-Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
-will be measured; "fast" is not a requirement.
-
-Use governed requirement anchors here too (for example `[ANU-HEX:REQ-003]`); `NFR-001` by
-itself is only a display label and is not a stable clause identity.
+No non-functional requirements were specified in the pinned request or clarification.
 
 ## Constitution articles
 
-Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
-cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
-
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-What this specification takes as true without proving. An assumption that turns out false is a
-change request, not a defect — which is only true if it was written down.
+The button converts the numeric value shown by the calculator when activated, rather than converting an unevaluated expression. This follows the user's clarification that the current displayed value is to be converted.
 
 ## Out of scope
 
-Named explicitly, so the boundary is reviewable rather than inferred.
+The request does not define the hexadecimal prefix, letter case, numeric range or precision, handling of non-numeric/error displays, or which calculator modes contain the button. This specification does not set requirements for those details.
 
 ## Sources
 
-Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
-offered to this phase that could not be read or was not available here, named as a gap. Without
-supporting documents, say so.
+Pinned Story source: `singularity/work-items/anu-hex/source.json` (SHA-256 `2aa5dd1f00b6d1f1d71f2afc9a5837e34836af77b2abed56f495e2cf88e64cb8`).
+
+Human clarification for specification generation 1: the button converts the current displayed calculator value to hexadecimal; acceptance requires a visible, working button demonstrated on screen; the button should be yellow.
+
+Repository brief and source: `src/App.jsx` shows the existing calculator's displayed result in its standard and scientific views. No supporting documents were offered.
