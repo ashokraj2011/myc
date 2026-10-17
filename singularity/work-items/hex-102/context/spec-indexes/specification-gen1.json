@@ -1,0 +1,220 @@
+{
+  "clauses": [
+    {
+      "anchor": "[HEX-102:REQ-001]",
+      "body": "Provide a visible HEX button beside the existing calculator controls.\n*(S1; DOC-001, DOC-002 response 3)*",
+      "bodySha256": "e872e8d039ad6bf42b96be7e9bab647e695a66e65b850e84eb0994ba98b5c957",
+      "dependsOn": [],
+      "id": "HEX-102:REQ-001",
+      "namespace": "HEX-102",
+      "number": 1,
+      "source": {
+        "line": 271,
+        "path": "singularity/work-items/hex-102/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "HEX-102:AC-001",
+        "methods": [
+          "test",
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[HEX-102:REQ-002]",
+      "body": "Activating HEX for a current decimal integer from 0 through 99999 inclusive\nreplaces the displayed value with its uppercase hexadecimal representation\nwithout a prefix. *(S1, S2; DOC-002 responses 1-3)*",
+      "bodySha256": "659182f96b1fde06da3fa9639d4a3330d8dbe593c824008029f7759611f004ee",
+      "dependsOn": [],
+      "id": "HEX-102:REQ-002",
+      "namespace": "HEX-102",
+      "number": 2,
+      "source": {
+        "line": 274,
+        "path": "singularity/work-items/hex-102/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "HEX-102:AC-002",
+        "methods": [
+          "test",
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[HEX-102:REQ-003]",
+      "body": "Activating HEX for empty input, a fractional value, a negative number or a value\nabove 99999 displays an on-screen error rather than a successful conversion.\n*(S3; DOC-002 response 2)*",
+      "bodySha256": "cb30d23c1eaaba3d60b7487cc2712769b495a8bfa7ed675ef718b30836468ee7",
+      "dependsOn": [],
+      "id": "HEX-102:REQ-003",
+      "namespace": "HEX-102",
+      "number": 3,
+      "source": {
+        "line": 277,
+        "path": "singularity/work-items/hex-102/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "HEX-102:AC-003",
+        "methods": [
+          "test",
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[HEX-102:REQ-004]",
+      "body": "Provide automated tests of button activation, valid conversions, inclusive range\nboundaries and each specified invalid-input category.\n*(S4; DOC-001, DOC-002 response 4)*",
+      "bodySha256": "fcee4be8e7ce6678043680ee9a2e46e090f9cf1add25b40579f4533cce917694",
+      "dependsOn": [],
+      "id": "HEX-102:REQ-004",
+      "namespace": "HEX-102",
+      "number": 4,
+      "source": {
+        "line": 280,
+        "path": "singularity/work-items/hex-102/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[HEX-102:REQ-005]",
+      "body": "Capture new screenshot evidence of the HEX button, successful conversion and\nan on-screen invalid-input error.\n*(S4; DOC-002 response 4)*",
+      "bodySha256": "00b910ba0e4212446bdccf497022ba7dbc7fba046f439f26f96c712ef4a573c2",
+      "dependsOn": [],
+      "id": "HEX-102:REQ-005",
+      "namespace": "HEX-102",
+      "number": 5,
+      "source": {
+        "line": 283,
+        "path": "singularity/work-items/hex-102/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "HEX-102:AC-005",
+        "methods": [
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[HEX-102:AC-001]",
+      "body": "The rendered calculator shows a HEX button beside existing controls.\n*(S1; DOC-002 response 3)*",
+      "bodySha256": "b3f4275fc003ffc498c6f2be535ec6d4ebe827d106354336b0755fa9b2dc6db2",
+      "dependsOn": [],
+      "id": "HEX-102:AC-001",
+      "namespace": "HEX-102",
+      "number": 1,
+      "source": {
+        "line": 288,
+        "path": "singularity/work-items/hex-102/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "HEX-102:AC-001",
+        "methods": [
+          "test",
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[HEX-102:AC-002]",
+      "body": "Button activation produces 0 -> `0`, 26 -> `1A`, 255 -> `FF` and\n99999 -> `1869F` in the current-value display.\n*(S1, S2; DOC-002 response 2)*",
+      "bodySha256": "95b2074d94c4ac7dddb040c1ca45640629fcb7b843cbdae6456c5a5cba00ec2e",
+      "dependsOn": [],
+      "id": "HEX-102:AC-002",
+      "namespace": "HEX-102",
+      "number": 2,
+      "source": {
+        "line": 291,
+        "path": "singularity/work-items/hex-102/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "HEX-102:AC-002",
+        "methods": [
+          "test",
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[HEX-102:AC-003]",
+      "body": "Empty input, 1.5, -1 and 100000 each produce an on-screen error on HEX activation,\nnot a successful conversion.\n*(S3; DOC-002 response 2)*",
+      "bodySha256": "803adb2d4a8874ac07de482fb0524933cf6e68a10f654e1fa563aa36598da3ac",
+      "dependsOn": [],
+      "id": "HEX-102:AC-003",
+      "namespace": "HEX-102",
+      "number": 3,
+      "source": {
+        "line": 294,
+        "path": "singularity/work-items/hex-102/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "HEX-102:AC-003",
+        "methods": [
+          "test",
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[HEX-102:AC-004]",
+      "body": "Automated tests cover S1-S3 with retained execution results showing that the\nspecified button, formatting, range and error cases pass.\n*(S4; DOC-002 response 4)*",
+      "bodySha256": "6bbc30f1120d575d34f42c118d134f52bbdbd7b587c606f05381427cde005096",
+      "dependsOn": [],
+      "id": "HEX-102:AC-004",
+      "namespace": "HEX-102",
+      "number": 4,
+      "source": {
+        "line": 297,
+        "path": "singularity/work-items/hex-102/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "HEX-102:AC-004",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[HEX-102:AC-005]",
+      "body": "New screenshots show button placement, a successful conversion result and\na visible invalid-input error for the verified implementation candidate.\n*(S4; DOC-002 response 4)*",
+      "bodySha256": "f31ba73d04f6b97bfa45ec55cc20be6c1651e2285933a834b04f9c687c73a06e",
+      "dependsOn": [],
+      "id": "HEX-102:AC-005",
+      "namespace": "HEX-102",
+      "number": 5,
+      "source": {
+        "line": 300,
+        "path": "singularity/work-items/hex-102/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "HEX-102:AC-005",
+        "methods": [
+          "visual"
+        ]
+      }
+    }
+  ],
+  "generation": 1,
+  "indexSha256": "898bc009c523b7050697d434b1c34ae72367c827760a9c4353c5e2a10fc8dfac",
+  "phase": "specification",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 14277,
+    "path": "singularity/work-items/hex-102/artifacts/specification/spec.md",
+    "sha256": "5ba7a38817c75ca80098fdea60dfbd408e7491ff41ec346ef7c1ba3f2e8c5771"
+  },
+  "workId": "hex-102"
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "workId": "hex-102",
+  "phase": "specification",
+  "generation": 1,
+  "mode": "required",
+  "promptPath": "singularity/work-items/hex-102/context/prompts/specification-gen1.md",
+  "promptSha256": "75ca9e617ac60c1d97896af4e41139499e701dad79d3dbbe3ef507bc98c3d71f",
+  "groundingRecordPath": "singularity/work-items/hex-102/context/specification-gen1.json",
+  "groundingRecordSha256": "8fd1bf51e7fb561683643c16379b5ca2ad072cef9a4c202d4f9ce9c01d1d679b",
+  "responses": [
+    {
+      "id": "Q-001",
+      "question": "What should the HEX button do?",
+      "answer": "Convert the current integer value to hexadecimal.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-002",
+      "question": "What integer range, formatting and invalid-input behavior are required?",
+      "answer": "The user specified 0 to 99999 and explicitly confirmed uppercase hexadecimal without 0x: 0 -> 0, 26 -> 1A, 99999 -> 1869F. Empty input, fractions, negative numbers and values above 99999 must show an on-screen error.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-003",
+      "question": "Where should the button appear and how should conversion affect the calculator?",
+      "answer": "The user confirmed a visible HEX button beside existing calculator controls that replaces the displayed current value with its hexadecimal representation, without adding hexadecimal arithmetic mode or a keyboard shortcut.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-004",
+      "question": "Which verification evidence is required?",
+      "answer": "Capture new screenshots and run automated tests. The user selected this explicitly after the earlier ambiguous answer 'no'.",
+      "status": "answered",
+      "blocking": false
+    }
+  ],
+  "completed": true,
+  "recordedAt": "2026-10-17T18:22:34.897Z",
+  "recordedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "agent": "product-owner"
+}
