@@ -4,7 +4,7 @@
   "workId": "hex-106",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 1,
+  "generation": 2,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "spec.md",
       "mediaType": "text/markdown",
-      "sha256": "0c102c62f624cd6964c8c8595e80172b1d566a09b74e2925c0d6e88f41e54c6b",
-      "bytes": 6650
+      "sha256": "e64730cf59af40bef04225ac980ea22dd6d28f4c84bff46049b5d4596ce096c9",
+      "bytes": 6787
     },
-    "generation": 1,
-    "publishedAt": "2026-10-18T08:26:20.221Z"
+    "generation": 2,
+    "publishedAt": "2026-10-18T08:31:21.130Z"
   },
-  "sourceCommit": "10bc5eda86d5f91bd646e957e5a88b310bd56a1b",
+  "sourceCommit": "f26630c41960369b2000924d9908400a400a5bca",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "cefab2b320917902d3a5d87f8fb41c6ca3fa661958e79fec9ecf93e28f239314",
@@ -66,13 +66,13 @@
   },
   "remoteAgent": null,
   "clarification": {
-    "generation": 1,
-    "path": "singularity/work-items/hex-106/context/clarifications-specification-gen1.json",
-    "sha256": "3012b68f53ee27c95780c76d9693253cfe62d33587cf97cbc3f6efef7189f03e",
-    "promptSha256": "82ddcf266c234ddee7fb4a4ff20ad0857c229da9e038fa09c1e8388cddab2bc4",
+    "generation": 2,
+    "path": "singularity/work-items/hex-106/context/clarifications-specification-gen2.json",
+    "sha256": "eab0b5d0603e8730b4050ab38b8853d0be56126062441a1b6aa338b5ae06f24d",
+    "promptSha256": "41e0f002dae2415b1ecc40d1eb0bde6fadc0b4029f620e708ee3c5c6bfb41b7e",
     "responses": 1,
     "markers": [],
-    "recordedAt": "2026-10-18T08:25:33.538Z",
+    "recordedAt": "2026-10-18T08:30:46.664Z",
     "recordedBy": {
       "name": "Ashok Raj",
       "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -100,6 +100,26 @@
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 2,
+      "path": "singularity/work-items/hex-106/telemetry/specification-gen2.json",
+      "sha256": "6e999e26b3baabb26ee6578d513b4af8e08de21dae5891c2fbbf843a3c917d08",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 18664,
+        "estimatedTokens": 4666,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 18664,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
     }
   ],
   "remoteOutputs": [],
@@ -124,6 +144,27 @@
       "completedAt": "2026-10-18T08:26:20.221Z",
       "agent": "product-owner",
       "generation": 1
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-18T08:31:21.130Z",
+      "completedAt": "2026-10-18T08:31:21.130Z",
+      "agent": "product-owner",
+      "generation": 2
     }
   ],
   "sequenceOverrides": [],
@@ -157,8 +198,8 @@ the answer `[SPK:REQ-067]` — deleting the text alone is an integrity failure, 
 
 The calculator user needs a hex operation that converts a positive integer to its hexadecimal
 value. The accepted input is a positive integer; the result must represent that integer in base 16.
-The pinned Story and clarification do not define display casing, prefixes, supported numeric range,
-or behavior for inputs outside this domain. This specification does not decide those details.
+The required acceptance example is 123 producing `0x7B`. Other display conventions, supported
+numeric range, and behavior for inputs outside this domain remain unspecified.
 
 ## Actors
 
@@ -177,6 +218,10 @@ operation.
 - **Given** the user supplies a positive integer
   **When** the user invokes the hex operation
   **Then** the calculator produces the hexadecimal value corresponding to that integer.
+
+- **Given** the user supplies `123`
+  **When** the user invokes the hex operation
+  **Then** the calculator produces `0x7B`.
 
 ## Failure and empty states
 
@@ -220,8 +265,7 @@ Numbered, testable, one obligation each. Cite the scenario each serves.
 
 Acceptance criteria use the same stable, namespaced form:
 
-- For a supplied positive integer, the operation's result represents that same integer in base 16.
-  *(S1)* [HEX-106:AC-001]
+- For input `123`, the operation produces `0x7B`. *(S1)* [HEX-106:AC-001]
 
 ## Verification intent
 
@@ -283,4 +327,5 @@ supporting documents, say so.
 - Pinned Story source: `singularity/work-items/hex-106/source.json` (request: “implement hex
   operator”; acceptance criteria: “test cases”).
 - Human clarification for specification generation 1: convert a positive integer to its hex value.
+- Human clarification for specification generation 2: input `123` produces `0x7B`.
 - No additional supporting documents were provided.
