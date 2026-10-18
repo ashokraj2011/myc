@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "phase": "specification",
+  "generation": 1,
+  "reportSha256": "838e40d4a91a25ccb04e61e3c1612fa61f4c8c291227223b2e57b2032fa27ca0",
+  "lifecycleEventId": "aef59c2a-6839-4ddc-9383-eaa0c05e80e1",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "specification",
+    "binding": {
+      "workId": "hex-202",
+      "phase": "specification",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/hex-202/USER-STORY.md",
+          "textSha256": "807eaf740380a834b08955e85f03416c76b8971bacfaafc9c381afc708d017f5",
+          "originalSha256": "81c402581d09f1a37581263751fe2c751c4a9caaca9614fee5a8645541f7017a"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:current-phase",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/hex-202/context/clarifications-specification-gen1.json",
+          "sha256": "4a58e82bb0e185e527486943467e7a7832b6f58c2196bb614f9bbae42b21b518"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/hex-202/artifacts/specification/spec.md",
+        "sha256": "2ffcc356c30285e2bc2b6b11b917fcf819472cfb5c62c4de21a9508bd75d06e9"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:current-phase"
+    ],
+    "rows": [
+      {
+        "id": "story-description-positive-conversion",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "HEX-202:REQ-001"
+        ],
+        "line": 7,
+        "quote": "Implement hex button in calculator .Converts a postive integer to hexaecimal value and displayes .for all the other inputs it will show error ."
+      },
+      {
+        "id": "story-description-invalid-input",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S2",
+        "clauseIds": [
+          "HEX-202:REQ-002"
+        ],
+        "line": 7,
+        "quote": "Implement hex button in calculator .Converts a postive integer to hexaecimal value and displayes .for all the other inputs it will show error ."
+      },
+      {
+        "id": "story-screenshot-criterion",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "HEX-202:AC-001"
+        ],
+        "line": 16,
+        "quote": "run the app and take screenshot"
+      }
+    ],
+    "findings": [
+      {
+        "id": "HEX-202-SPEC-001",
+        "severity": "blocking",
+        "message": "The pinned Story description (story line 7) requires implementing a Hex button in the calculator. The specification describes activating a Hex control but does not state that the control must be present/available in the calculator UI. Add an explicit observable requirement and acceptance coverage for the control's presence.",
+        "clauseId": "HEX-202:REQ-001",
+        "sourceId": "story",
+        "line": 7,
+        "quote": "Implement hex button in calculator .Converts a postive integer to hexaecimal value and displayes .for all the other inputs it will show error ."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "a7ebdedaabe328ea83a4074d13d2b5c4d06a07fa32d2db53ef239075d102a8a3",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "product-owner",
+    "readOnly": true
+  },
+  "submittedAt": "2026-10-18T21:14:27.245Z",
+  "recordSha256": "55cecc213d8d35caac7be645f9290c2efe3bcbef599d5f6672ec5091eedb9cec"
+}
