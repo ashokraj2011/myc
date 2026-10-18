@@ -4,7 +4,7 @@
   "workId": "hex-202",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 1,
+  "generation": 2,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "spec.md",
       "mediaType": "text/markdown",
-      "sha256": "2ffcc356c30285e2bc2b6b11b917fcf819472cfb5c62c4de21a9508bd75d06e9",
-      "bytes": 7493
+      "sha256": "b6b6e1b3aa921f5c3f0bfe4691557e871e959ae57a03ed668f28609d7dae038e",
+      "bytes": 7823
     },
-    "generation": 1,
-    "publishedAt": "2026-10-18T20:54:40.787Z"
+    "generation": 2,
+    "publishedAt": "2026-10-18T21:26:26.104Z"
   },
-  "sourceCommit": "502d2b344028a2f682d413a1752d4c4358560cd4",
+  "sourceCommit": "a51cc1cf61b31e206ecc3d343874dcb855e015f4",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "cefab2b320917902d3a5d87f8fb41c6ca3fa661958e79fec9ecf93e28f239314",
@@ -66,13 +66,13 @@
   },
   "remoteAgent": null,
   "clarification": {
-    "generation": 1,
-    "path": "singularity/work-items/hex-202/context/clarifications-specification-gen1.json",
-    "sha256": "4a58e82bb0e185e527486943467e7a7832b6f58c2196bb614f9bbae42b21b518",
-    "promptSha256": "0542cc126caab48ff0f1544a2b67d3460d0b6065fb836d20bcc9a8d28b44686f",
-    "responses": 3,
+    "generation": 2,
+    "path": "singularity/work-items/hex-202/context/clarifications-specification-gen2.json",
+    "sha256": "8f9a37d46c0531464f08ebe5f8918ce9834d4827c514081830e9b9ce827f1da6",
+    "promptSha256": "a3ef06fd4021a14a0924471a5465fa2cd37062441f7baec06bf0b6bf7c83f762",
+    "responses": 1,
     "markers": [],
-    "recordedAt": "2026-10-18T20:51:32.616Z",
+    "recordedAt": "2026-10-18T21:23:48.470Z",
     "recordedBy": {
       "name": "Ashok Raj",
       "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -100,6 +100,26 @@
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 2,
+      "path": "singularity/work-items/hex-202/telemetry/specification-gen2.json",
+      "sha256": "ec8100c9f9b43538d5c8ec44e173f36b30bb7141f541114e2e4ea242a58302e2",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 20379,
+        "estimatedTokens": 5095,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 20379,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
     }
   ],
   "remoteOutputs": [],
@@ -124,6 +144,27 @@
       "completedAt": "2026-10-18T20:54:40.787Z",
       "agent": "product-owner",
       "generation": 1
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-18T21:26:26.104Z",
+      "completedAt": "2026-10-18T21:26:26.104Z",
+      "agent": "product-owner",
+      "generation": 2
     }
   ],
   "sequenceOverrides": [],
@@ -162,11 +203,11 @@ exclusions. Do not introduce claims that are absent from the sections below. Exa
 boundary conditions are preserved separately by the governed projection.
 -->
 
-The calculator user can use a Hex control to convert a positive integer to its hexadecimal value.
-Inputs that are not positive integers, including empty input, must show a visible error; the exact
-error wording is not prescribed. The application must be run and a screenshot captured showing the
-Hex control and a successful conversion. This specification does not define unrelated calculator
-behavior or a particular hexadecimal formatting convention.
+The running calculator presents a Hex button that the user can activate to convert a positive
+integer to its hexadecimal value. Inputs that are not positive integers, including empty input,
+must show a visible error; the exact error wording is not prescribed. The application must be run
+and a screenshot captured showing the Hex button and a successful conversion. This specification
+does not define unrelated calculator behavior or a particular hexadecimal formatting convention.
 
 ## Actors
 
@@ -177,13 +218,15 @@ authorization roles are specified.
 
 Prioritized. Each scenario leads with the situation, then its acceptance cases.
 
-### S1 — Convert a positive integer to hexadecimal
+### S1 — Use the calculator's Hex button to convert a positive integer
 
 **Priority:** P1
 **Actor:** Calculator user
-**Context:** The calculator is running and has a positive integer as the current input.
+**Context:** The calculator is running, presents its Hex button, and has a positive integer as the
+current input.
 
-- **Given** the current input is a positive integer
+- **Given** the running calculator presents the Hex button and the current input is a positive
+  integer
   **When** the user activates the Hex control
   **Then** the calculator displays that integer's hexadecimal value.
 
@@ -222,6 +265,7 @@ prose. Use the pinned request and clarification answers; do not invent error tex
 | `HEX-202:REQ-001` | S1 | success |
 | `HEX-202:REQ-002` | S2 | failure |
 | `HEX-202:REQ-002` | S2 | empty |
+| `HEX-202:REQ-003` | S1 | success |
 | `HEX-202:AC-001` | S1 | success |
 
 ## Permissions
@@ -239,7 +283,9 @@ No upper numeric limit or exact error wording is specified.
 
 Numbered, testable, one obligation each. Cite the scenario each serves.
 
-- When the current calculator input is a positive integer and the user activates the Hex control,
+- When the calculator is running, present a Hex button that the user can activate. *(S1)*
+  [HEX-202:REQ-003]
+- When the current calculator input is a positive integer and the user activates the Hex button,
   display its hexadecimal value. *(S1)* [HEX-202:REQ-001]
 - When the current input is not a positive integer, show a visible error upon activation of the Hex
   control; this includes zero, negative integers, decimals or fractions, empty input, and nonnumeric
@@ -262,6 +308,7 @@ Planning must inherit these methods and cannot change them without an approved s
 |---|---|---|
 | `HEX-202:REQ-001` | test | - |
 | `HEX-202:REQ-002` | test | - |
+| `HEX-202:REQ-003` | test, visual | `HEX-202:AC-001` |
 | `HEX-202:AC-001` | test, visual | `HEX-202:AC-001` |
 
 ## Non-functional requirements
