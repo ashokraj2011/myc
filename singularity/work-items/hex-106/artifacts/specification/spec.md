@@ -4,27 +4,51 @@
   "workId": "hex-106",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "0c102c62f624cd6964c8c8595e80172b1d566a09b74e2925c0d6e88f41e54c6b",
+      "bytes": 6650
+    },
+    "generation": 1,
+    "publishedAt": "2026-10-18T08:26:20.221Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "10bc5eda86d5f91bd646e957e5a88b310bd56a1b",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "cefab2b320917902d3a5d87f8fb41c6ca3fa661958e79fec9ecf93e28f239314",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/hex-106/context/clarifications-specification-gen1.json",
+    "sha256": "3012b68f53ee27c95780c76d9693253cfe62d33587cf97cbc3f6efef7189f03e",
+    "promptSha256": "82ddcf266c234ddee7fb4a4ff20ad0857c229da9e038fa09c1e8388cddab2bc4",
+    "responses": 1,
+    "markers": [],
+    "recordedAt": "2026-10-18T08:25:33.538Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/hex-106/telemetry/specification-gen1.json",
+      "sha256": "092f3601e7c1e7740811af94310ebeb9e848f93f1357fb0c566e933843c925fc",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 18817,
+        "estimatedTokens": 4705,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 18817,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-18T08:26:20.221Z",
+      "completedAt": "2026-10-18T08:26:20.221Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -74,49 +155,37 @@ the answer `[SPK:REQ-067]` — deleting the text alone is an integrity failure, 
 
 ## Agent brief
 
-<!--
-Summarize the approved intent for downstream agents in a compact, standalone form. Include the
-problem, intended outcome, principal actors, most important scenarios, hard constraints, and major
-exclusions. Do not introduce claims that are absent from the sections below. Exact requirements and
-boundary conditions are preserved separately by the governed projection.
--->
+The calculator user needs a hex operation that converts a positive integer to its hexadecimal
+value. The accepted input is a positive integer; the result must represent that integer in base 16.
+The pinned Story and clarification do not define display casing, prefixes, supported numeric range,
+or behavior for inputs outside this domain. This specification does not decide those details.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+- **Calculator user:** supplies a positive integer to the hex operation and observes its hexadecimal
+  value.
 
 ## User scenarios
 
-Prioritized. Each scenario leads with the situation, then its acceptance cases.
-
-### S1 — <the most important situation, in the user's words>
+### S1 — Convert a positive integer to its hexadecimal value
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Calculator user
+**Context:** The calculator is available and the user can provide a positive integer to the hex
+operation.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
-
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
-
-### S2 — <the next situation>
-
-**Priority:** P2
-
-- **Given** … **When** … **Then** …
+- **Given** the user supplies a positive integer
+  **When** the user invokes the hex operation
+  **Then** the calculator produces the hexadecimal value corresponding to that integer.
 
 ## Failure and empty states
 
-What happens the first time, with nothing there yet, and when each step fails. These are where
-specifications are usually silent and implementations usually improvise.
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** No separate empty-data state is specified; the operation takes a positive integer as
+  input.
+- **Failure:** Behavior for zero, negative, non-integer, or otherwise unsupported input is not
+  specified by the pinned Story or clarification.
+- **Partial:** No partial-result behavior is specified; the operation's stated outcome is a
+  hexadecimal value for the supplied positive integer.
 
 ## Scenario coverage
 
@@ -127,28 +196,32 @@ prose. Use the pinned request and clarification answers; do not invent error tex
 
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `HEX-106:REQ-001` | S1 | TODO |
-| `HEX-106:REQ-002` | S2 | TODO |
-| `HEX-106:AC-001` | S1 | TODO |
+| `HEX-106:REQ-001` | S1 | success |
+| `HEX-106:REQ-002` | S1 | success |
+| `HEX-106:AC-001` | S1 | success |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+The calculator user may invoke the operation. No additional roles or permission distinctions are
+specified.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+The input domain stated by the clarification is positive integers. No upper bound or numeric
+representation constraints are specified. Behavior at zero, for negative values, or for
+non-integers remains unspecified and is not an acceptance obligation in this specification.
 
 ## Requirements
 
 Numbered, testable, one obligation each. Cite the scenario each serves.
 
-- <requirement>. *(S1)* [HEX-106:REQ-001]
-- <requirement>. *(S1, S2)* [HEX-106:REQ-002]
+- The hex operation accepts a positive integer as its input. *(S1)* [HEX-106:REQ-001]
+- The hex operation converts the supplied positive integer to its hexadecimal value. *(S1)* [HEX-106:REQ-002]
 
 Acceptance criteria use the same stable, namespaced form:
 
-- <observable acceptance outcome>. *(S1)* [HEX-106:AC-001]
+- For a supplied positive integer, the operation's result represents that same integer in base 16.
+  *(S1)* [HEX-106:AC-001]
 
 ## Verification intent
 
@@ -160,9 +233,9 @@ Planning must inherit these methods and cannot change them without an approved s
 
 | Clause | Methods | Criterion |
 |---|---|---|
-| `HEX-106:REQ-001` | TODO | - |
-| `HEX-106:REQ-002` | TODO | - |
-| `HEX-106:AC-001` | TODO | `HEX-106:AC-001` |
+| `HEX-106:REQ-001` | test | - |
+| `HEX-106:REQ-002` | test | - |
+| `HEX-106:AC-001` | test | `HEX-106:AC-001` |
 
 ## Non-functional requirements
 
@@ -172,24 +245,42 @@ will be measured; "fast" is not a requirement.
 Use governed requirement anchors here too (for example `[HEX-106:REQ-003]`); `NFR-001` by
 itself is only a display label and is not a stable clause identity.
 
+No non-functional requirement was specified in the pinned Story or clarification.
+
+## Open questions
+
+- The required display casing and whether the output includes a prefix are unspecified; the
+  producer should resolve presentation consistently with the existing calculator before
+  implementation.
+- The supported positive-integer range and behavior for inputs outside the positive-integer domain
+  are unspecified; confirm these before relying on boundary or rejection behavior.
+
 ## Constitution articles
 
 Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
 cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
 
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-What this specification takes as true without proving. An assumption that turns out false is a
-change request, not a defect — which is only true if it was written down.
+- The hex operation is available within the calculator to its user.
+- “Hexadecimal value” means the base-16 value of the supplied positive integer; this does not
+  prescribe casing or display decoration.
 
 ## Out of scope
 
-Named explicitly, so the boundary is reviewable rather than inferred.
+- Defining formatting conventions, supported numeric limits, or behavior for input outside the
+  positive-integer domain.
+- Changes to other calculator operations.
 
 ## Sources
 
 Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
 offered to this phase that could not be read or was not available here, named as a gap. Without
 supporting documents, say so.
+
+- Pinned Story source: `singularity/work-items/hex-106/source.json` (request: “implement hex
+  operator”; acceptance criteria: “test cases”).
+- Human clarification for specification generation 1: convert a positive integer to its hex value.
+- No additional supporting documents were provided.
