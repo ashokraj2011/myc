@@ -4,27 +4,51 @@
   "workId": "hex-202",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "2ffcc356c30285e2bc2b6b11b917fcf819472cfb5c62c4de21a9508bd75d06e9",
+      "bytes": 7493
+    },
+    "generation": 1,
+    "publishedAt": "2026-10-18T20:54:40.787Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "502d2b344028a2f682d413a1752d4c4358560cd4",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "cefab2b320917902d3a5d87f8fb41c6ca3fa661958e79fec9ecf93e28f239314",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/hex-202/context/clarifications-specification-gen1.json",
+    "sha256": "4a58e82bb0e185e527486943467e7a7832b6f58c2196bb614f9bbae42b21b518",
+    "promptSha256": "0542cc126caab48ff0f1544a2b67d3460d0b6065fb836d20bcc9a8d28b44686f",
+    "responses": 3,
+    "markers": [],
+    "recordedAt": "2026-10-18T20:51:32.616Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/hex-202/telemetry/specification-gen1.json",
+      "sha256": "80d9ed234b8aff9f112e90fa4f0234884333bdf11f598f7653020565886fe111",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 20532,
+        "estimatedTokens": 5133,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 20532,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-18T20:54:40.787Z",
+      "completedAt": "2026-10-18T20:54:40.787Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -81,42 +162,53 @@ exclusions. Do not introduce claims that are absent from the sections below. Exa
 boundary conditions are preserved separately by the governed projection.
 -->
 
+The calculator user can use a Hex control to convert a positive integer to its hexadecimal value.
+Inputs that are not positive integers, including empty input, must show a visible error; the exact
+error wording is not prescribed. The application must be run and a screenshot captured showing the
+Hex control and a successful conversion. This specification does not define unrelated calculator
+behavior or a particular hexadecimal formatting convention.
+
 ## Actors
 
-Who uses this, and what authority does each hold?
+The calculator user enters or supplies a value and activates the Hex control. No separate
+authorization roles are specified.
 
 ## User scenarios
 
 Prioritized. Each scenario leads with the situation, then its acceptance cases.
 
-### S1 — <the most important situation, in the user's words>
+### S1 — Convert a positive integer to hexadecimal
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Calculator user
+**Context:** The calculator is running and has a positive integer as the current input.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+- **Given** the current input is a positive integer
+  **When** the user activates the Hex control
+  **Then** the calculator displays that integer's hexadecimal value.
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
+### S2 — Reject inputs that are not positive integers
 
-### S2 — <the next situation>
+**Priority:** P1
+**Actor:** Calculator user
+**Context:** The calculator is running and the current input is not a positive integer.
 
-**Priority:** P2
+- **Given** the current input is zero, a negative integer, a decimal or fraction, or nonnumeric text
+  **When** the user activates the Hex control
+  **Then** the calculator shows a visible error; its exact wording is unspecified.
 
-- **Given** … **When** … **Then** …
+- **Given** the current input is empty
+  **When** the user activates the Hex control
+  **Then** the calculator shows a visible error; its exact wording is unspecified.
 
 ## Failure and empty states
 
 What happens the first time, with nothing there yet, and when each step fails. These are where
 specifications are usually silent and implementations usually improvise.
 
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** Empty input is invalid; activating the Hex control shows a visible error.
+- **Failure:** No external dependency or dependency-failure behavior is specified for this conversion.
+- **Partial:** No partial-conversion state is specified.
 
 ## Scenario coverage
 
@@ -127,28 +219,36 @@ prose. Use the pinned request and clarification answers; do not invent error tex
 
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `HEX-202:REQ-001` | S1 | TODO |
-| `HEX-202:REQ-002` | S2 | TODO |
-| `HEX-202:AC-001` | S1 | TODO |
+| `HEX-202:REQ-001` | S1 | success |
+| `HEX-202:REQ-002` | S2 | failure |
+| `HEX-202:REQ-002` | S2 | empty |
+| `HEX-202:AC-001` | S1 | success |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+The calculator user may enter a value and activate the Hex control. The Story specifies no
+restricted roles or differing permissions.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+The accepted input class is a positive integer (greater than zero). Zero, negative integers,
+decimals or fractions, empty input, and nonnumeric input are invalid and produce a visible error.
+No upper numeric limit or exact error wording is specified.
 
 ## Requirements
 
 Numbered, testable, one obligation each. Cite the scenario each serves.
 
-- <requirement>. *(S1)* [HEX-202:REQ-001]
-- <requirement>. *(S1, S2)* [HEX-202:REQ-002]
+- When the current calculator input is a positive integer and the user activates the Hex control,
+  display its hexadecimal value. *(S1)* [HEX-202:REQ-001]
+- When the current input is not a positive integer, show a visible error upon activation of the Hex
+  control; this includes zero, negative integers, decimals or fractions, empty input, and nonnumeric
+  input. Exact error wording is unspecified. *(S2)* [HEX-202:REQ-002]
 
 Acceptance criteria use the same stable, namespaced form:
 
-- <observable acceptance outcome>. *(S1)* [HEX-202:AC-001]
+- Run the calculator and capture a screenshot showing the Hex control and a successful conversion
+  of a positive integer. [scope:SRI-465cc230c394] *(S1)* [HEX-202:AC-001]
 
 ## Verification intent
 
@@ -160,9 +260,9 @@ Planning must inherit these methods and cannot change them without an approved s
 
 | Clause | Methods | Criterion |
 |---|---|---|
-| `HEX-202:REQ-001` | TODO | - |
-| `HEX-202:REQ-002` | TODO | - |
-| `HEX-202:AC-001` | TODO | `HEX-202:AC-001` |
+| `HEX-202:REQ-001` | test | - |
+| `HEX-202:REQ-002` | test | - |
+| `HEX-202:AC-001` | test, visual | `HEX-202:AC-001` |
 
 ## Non-functional requirements
 
@@ -172,24 +272,32 @@ will be measured; "fast" is not a requirement.
 Use governed requirement anchors here too (for example `[HEX-202:REQ-003]`); `NFR-001` by
 itself is only a display label and is not a stable clause identity.
 
+No non-functional requirements are specified by the pinned Story or its clarification.
+
 ## Constitution articles
 
 Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
 cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
 
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
 What this specification takes as true without proving. An assumption that turns out false is a
 change request, not a defect — which is only true if it was written down.
 
+The calculator presents a current input value that the user can submit through its Hex control.
+
 ## Out of scope
 
 Named explicitly, so the boundary is reviewable rather than inferred.
+
+Unrelated calculator operations and behavior not stated in the pinned Story or its clarification.
 
 ## Sources
 
 Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
 offered to this phase that could not be read or was not available here, named as a gap. Without
 supporting documents, say so.
+
+No additional supporting documents were offered.
