@@ -9,7 +9,7 @@
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
-| 1 | Specification (`specification`) | product-owner | **in_progress** | 1 | 0 | unavailable |
+| 1 | Specification (`specification`) | product-owner | **awaiting_approval** | 1 | 0 | unavailable |
 | 2 | Planning (`planning`) | architect | **not_started** | 0 | 0 | unavailable |
 | 3 | Implementation (`implementation`) | developer | **not_started** | 0 | 0 | unavailable |
 | 4 | Convergence (`convergence`) | architect | **not_started** | 0 | 0 | unavailable |
@@ -18,6 +18,7 @@
 
 ## Recent history
 
+- 2026-10-18T15:29:54.359Z — **phase_submitted** (specification) by ashokraj2011 · agent product-owner: 1 artifacts
 - 2026-10-18T15:26:48.200Z — **source_review_submitted** (specification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 111145dc7f9eb9e7e4b39bad8730a05f4d01f3cdfde11d39faa68d1572ef1585
 - 2026-10-18T13:37:30.126Z — **phase_generated** (specification) by ashokraj2011 · agent product-owner: generation 1
 - 2026-10-18T13:20:33.560Z — **work_started** (specification) by ashokraj2011 · agent product-owner: Created spec-driven-standard branch hex-112
