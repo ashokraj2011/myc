@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "hex-106",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G1-001",
+  "phaseId": "implementation",
+  "generation": 1,
+  "baselineSha256": "7fadfae154dc2b17edae9e4a810e85214efa144de60a7a0c59d372ed6296a78e",
+  "baseline": {
+    "path": "singularity/work-items/hex-106/context/work-intervals/implementation-gen1-baseline.json",
+    "sha256": "7fadfae154dc2b17edae9e4a810e85214efa144de60a7a0c59d372ed6296a78e",
+    "verified": true,
+    "sourceBaseCommit": "89ae324c6b540bdc6b48a333c944af983ef6506e"
+  },
+  "sourceBaseCommit": "89ae324c6b540bdc6b48a333c944af983ef6506e",
+  "target": {
+    "branch": "hex-106",
+    "head": "1d0d49c8624b9cd05647c52d5a893335cddd0d10",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": "src/App.test.jsx",
+      "status": "present",
+      "sha256": "9c29dbca47cc4d80ad25ce9745d3d1739e44ded3d46c9d3a3609d1a226aa2113",
+      "bytes": 7876,
+      "verdict": "planned",
+      "clauseIds": [
+        "HEX-106:AC-001"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/components/ScientificKeypad.jsx",
+      "status": "present",
+      "sha256": "642543564cac600427bf1d891d21803add172820f97df1d2659d8ab91de997aa",
+      "bytes": 4925,
+      "verdict": "planned",
+      "clauseIds": [
+        "HEX-106:AC-001",
+        "HEX-106:REQ-001",
+        "HEX-106:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/utils/evaluator.js",
+      "status": "present",
+      "sha256": "34ded17ac45d59b53c42cfb60eee03259094782055d148a3d9bd8a1ea9e0ffae",
+      "bytes": 7662,
+      "verdict": "planned",
+      "clauseIds": [
+        "HEX-106:AC-001",
+        "HEX-106:REQ-001",
+        "HEX-106:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/utils/evaluator.test.js",
+      "status": "present",
+      "sha256": "1fb731dc4f123b1f21f1d7d26f7f0321ecabcbc43b0e7b61ae8e7ac722772cf8",
+      "bytes": 3048,
+      "verdict": "planned",
+      "clauseIds": [
+        "HEX-106:AC-001",
+        "HEX-106:REQ-001",
+        "HEX-106:REQ-002"
+      ],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 4,
+    "planned": 4,
+    "unplanned": 0,
+    "protected": 0
+  },
+  "decision": {
+    "status": "aligned",
+    "summaryStatus": "clear",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "fb7c8fa611f6b42b019486ee7bd786b147d240f540eedd4a9c3885d08880a1dd",
+  "reconciledAt": "2026-10-18T08:53:58.409Z",
+  "final": true,
+  "recordedAt": "2026-10-18T08:53:58.410Z",
+  "path": "singularity/work-items/hex-106/context/work-intervals/reconciliations/fb7c8fa611f6b42b019486ee7bd786b147d240f540eedd4a9c3885d08880a1dd.json"
+}
