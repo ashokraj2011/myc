@@ -1,0 +1,403 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "hex-106",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "0312aebf-2d3b-48f5-8b23-83252e29c66b",
+  "changeSet": {
+    "path": "singularity/work-items/hex-106/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:2eb6fe9081b449191854a537c733e2b717fa310e974a93110d6cec3f414123a4",
+    "sourcePaths": [
+      "src/components/ScientificKeypad.jsx",
+      "src/utils/evaluator.js"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [],
+    "executableTestPaths": [
+      "src/App.test.jsx",
+      "src/utils/evaluator.test.js"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "product-source": 2,
+      "test-source": 2
+    },
+    "entries": [
+      {
+        "changeId": "sha256:233281aa3ae6a5a08cd25e1a5adc16de1d75ec8e16013e68d0c8d3da3e6517f0",
+        "status": "modified",
+        "oldPath": "src/App.test.jsx",
+        "newPath": "src/App.test.jsx",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:2869193310b501172d305a870011293b8c7e14c6144f5701935f80eb86fd688a",
+        "status": "modified",
+        "oldPath": "src/components/ScientificKeypad.jsx",
+        "newPath": "src/components/ScientificKeypad.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:e7812376cf90655e26d29650fdfff5912351407f7c8c4ce985948c864bcad69d",
+        "status": "modified",
+        "oldPath": "src/utils/evaluator.js",
+        "newPath": "src/utils/evaluator.js",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:9373991afc31ed903b0515d7d964ca36ff2b1080e9e14da3847eb10e8e6752cb",
+        "status": "modified",
+        "oldPath": "src/utils/evaluator.test.js",
+        "newPath": "src/utils/evaluator.test.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "HEX-106:AC-001"
+    ],
+    "bound": [
+      "HEX-106:AC-001"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "HEX-106:AC-001",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "HEX-106:AC-001",
+        "testSource": "src/utils/evaluator.test.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "HEX-106:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "App functional regression (all modes/features unchanged)"
+          ],
+          "name": "converts 123 to 0x7B from the Scientific keypad"
+        },
+        "logicalTestId": "sha256:a605c35eedd3ebf587e6e33f64dafa79cb4e028c00457725849918d2d6f36999",
+        "declarationSha256": "sha256:75949df2e0310299a48d35e7a90b151d9ce1853e1877b43197c70452c1bb9db4",
+        "supportSha256": null,
+        "line": 128,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "HEX-106:AC-001",
+        "testSource": "src/utils/evaluator.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "evaluateExpression (calculation behavior regression)"
+          ],
+          "name": "converts positive integers to uppercase hexadecimal with a 0x prefix"
+        },
+        "logicalTestId": "sha256:c325a71b5a1db8da23f15a9905052641f39d238be690eea6fc5ab8ba16790c38",
+        "declarationSha256": "sha256:f834f858d06ed307ec8fb81bf37d8c5b872e676b0265739a015b56accfc0cf72",
+        "supportSha256": null,
+        "line": 59,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      },
+      {
+        "testSource": "src/utils/evaluator.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "HEX-106:AC-001",
+        "expectedPaths": [
+          "src/components/ScientificKeypad.jsx",
+          "src/utils/evaluator.js"
+        ]
+      },
+      {
+        "clauseId": "HEX-106:REQ-001",
+        "expectedPaths": [
+          "src/components/ScientificKeypad.jsx",
+          "src/utils/evaluator.js"
+        ]
+      },
+      {
+        "clauseId": "HEX-106:REQ-002",
+        "expectedPaths": [
+          "src/components/ScientificKeypad.jsx",
+          "src/utils/evaluator.js"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "HEX-106:AC-001",
+        "sourcePath": "src/components/ScientificKeypad.jsx",
+        "line": 125,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-106:AC-001",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 34,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-106:REQ-001",
+        "sourcePath": "src/components/ScientificKeypad.jsx",
+        "line": 123,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-106:REQ-001",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 32,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-106:REQ-002",
+        "sourcePath": "src/components/ScientificKeypad.jsx",
+        "line": 124,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-106:REQ-002",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 33,
+        "tag": "clause"
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "HEX-106:AC-001",
+        "explanation": {
+          "text": "Routes 123 through the operation to produce the required display value.",
+          "path": "src/components/ScientificKeypad.jsx",
+          "line": 125
+        },
+        "regions": [
+          {
+            "path": "src/components/ScientificKeypad.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 121,
+                "beforeLines": 0,
+                "afterStart": 122,
+                "afterLines": 11
+              }
+            ],
+            "symbols": [
+              {
+                "name": "ScientificKeypad",
+                "kind": "function",
+                "line": 5
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 32,
+                "beforeLines": 1,
+                "afterStart": 32,
+                "afterLines": 11
+              }
+            ],
+            "symbols": [
+              {
+                "name": "evaluateExpression",
+                "kind": "function",
+                "line": 4
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "HEX-106:REQ-001",
+        "explanation": {
+          "text": "Makes the hex operation available in Scientific mode.",
+          "path": "src/components/ScientificKeypad.jsx",
+          "line": 123
+        },
+        "regions": [
+          {
+            "path": "src/components/ScientificKeypad.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 121,
+                "beforeLines": 0,
+                "afterStart": 122,
+                "afterLines": 11
+              }
+            ],
+            "symbols": [
+              {
+                "name": "ScientificKeypad",
+                "kind": "function",
+                "line": 5
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 32,
+                "beforeLines": 1,
+                "afterStart": 32,
+                "afterLines": 11
+              }
+            ],
+            "symbols": [
+              {
+                "name": "evaluateExpression",
+                "kind": "function",
+                "line": 4
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "HEX-106:REQ-002",
+        "explanation": {
+          "text": "Routes the entered argument to the evaluator's hex conversion.",
+          "path": "src/components/ScientificKeypad.jsx",
+          "line": 124
+        },
+        "regions": [
+          {
+            "path": "src/components/ScientificKeypad.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 121,
+                "beforeLines": 0,
+                "afterStart": 122,
+                "afterLines": 11
+              }
+            ],
+            "symbols": [
+              {
+                "name": "ScientificKeypad",
+                "kind": "function",
+                "line": 5
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 32,
+                "beforeLines": 1,
+                "afterStart": 32,
+                "afterLines": 11
+              }
+            ],
+            "symbols": [
+              {
+                "name": "evaluateExpression",
+                "kind": "function",
+                "line": 4
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:f4926b2064b663e1b9d6d443916e967c472e13eaeaf2f2c2c52575014b99858a"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:df3949b777138f3b768a2adca6c658879811f7ffc27b90877da2417831a3d489",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-10-18T08:51:57.064Z"
+}

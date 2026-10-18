@@ -54,6 +54,16 @@ describe('evaluateExpression (calculation behavior regression)', () => {
     const res = evaluateExpression('1 / 0');
     expect(res.result).toBe('Error');
   });
+
+  // @ac:HEX-106:AC-001
+  it('converts positive integers to uppercase hexadecimal with a 0x prefix', () => {
+    expect(evaluateExpression('hex(123)')).toEqual({
+      result: '0x7B',
+      rawResult: '0x7B',
+      error: null,
+    });
+    expect(evaluateExpression('hex(16)').result).toBe('0x10');
+  });
 });
 
 describe('formatNumber (display formatting regression)', () => {

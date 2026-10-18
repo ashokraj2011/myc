@@ -119,6 +119,17 @@ export const ScientificKeypad = (props) => {
         >
           |x|
         </button>
+        {/*
+          @clause:HEX-106:REQ-001 Makes the hex operation available in Scientific mode.
+          @clause:HEX-106:REQ-002 Routes the entered argument to the evaluator's hex conversion.
+          @clause:HEX-106:AC-001 Routes 123 through the operation to produce the required display value.
+        */}
+        <button
+          onClick={() => handleFunc('hex(')}
+          className="calc-btn py-2 u-bg-btn-func-bg u-text-btn-func-text u-hbg-btn-func-hover font-semibold"
+        >
+          hex
+        </button>
       </div>
 
       {/* Main Standard Keypad beneath */}

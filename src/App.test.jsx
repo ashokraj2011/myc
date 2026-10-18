@@ -123,6 +123,22 @@ describe('App functional regression (all modes/features unchanged)', () => {
     await user.click(soundToggle);
     expect(localStorage.getItem('apex_sound')).toBeDefined();
   });
+
+  // @ac:HEX-106:AC-001
+  it('converts 123 to 0x7B from the Scientific keypad', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+
+    await user.selectOptions(screen.getAllByRole('combobox')[0], 'scientific');
+    await clickButton(container, 'hex');
+    await clickButton(container, '1');
+    await clickButton(container, '2');
+    await clickButton(container, '3');
+    await clickButton(container, ')');
+    await user.keyboard('{Enter}');
+
+    expect(getResultText(container)).toBe('0x7B');
+  });
 });
 
 // Verifies WRK-1978:AC-001 and WRK-1978:AC-002: the new win11-light/win11-dark

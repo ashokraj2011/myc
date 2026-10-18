@@ -29,7 +29,17 @@ export const evaluateExpression = (expr, angleUnit = 'DEG') => {
       sanitized = sanitized.replace(/\btan\(([^)]+)\)/g, 'tan(($1) deg)');
     }
 
-    const val = math.evaluate(sanitized);
+    // @clause:HEX-106:REQ-001 Accept positive integer arguments for the hex operation.
+    // @clause:HEX-106:REQ-002 Convert accepted arguments to uppercase hexadecimal display text.
+    // @clause:HEX-106:AC-001 Format 123 as the required 0x7B display value.
+    const val = math.evaluate(sanitized, {
+      hex: (value) => {
+        if (typeof value !== 'number' || !Number.isInteger(value) || value <= 0) {
+          throw new Error('hex expects a positive integer');
+        }
+        return `0x${value.toString(16).toUpperCase()}`;
+      },
+    });
 
     if (typeof val === 'function') {
       return { result: 'Error', rawResult: null, error: 'Incomplete Expression' };
