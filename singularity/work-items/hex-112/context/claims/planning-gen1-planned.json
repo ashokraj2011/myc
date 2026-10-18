@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-10-18T15:37:20.861Z",
+  "claims": {
+    "HEX-112:AC-001": {
+      "expectedPaths": [
+        "singularity/work-items/hex-112/evidence/hexadecimal-converter.png"
+      ],
+      "tests": [
+        "src/components/HexadecimalConverter.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "The existing calculator UI exposes the hexadecimal converter; the screenshot shows it and the automated test demonstrates both conversion directions."
+    },
+    "HEX-112:REQ-001": {
+      "expectedPaths": [
+        "src/components/HexadecimalConverter.jsx",
+        "src/components/UnitConverter.jsx",
+        "src/utils/numberBaseConverter.js"
+      ],
+      "tests": [
+        "src/components/HexadecimalConverter.test.jsx",
+        "src/utils/numberBaseConverter.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "A decimal input is converted and its corresponding hexadecimal value is displayed."
+    },
+    "HEX-112:REQ-002": {
+      "expectedPaths": [
+        "src/components/HexadecimalConverter.jsx",
+        "src/components/UnitConverter.jsx",
+        "src/utils/numberBaseConverter.js"
+      ],
+      "tests": [
+        "src/components/HexadecimalConverter.test.jsx",
+        "src/utils/numberBaseConverter.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "A hexadecimal input is converted and its corresponding decimal value is displayed."
+    },
+    "HEX-112:REQ-003": {
+      "expectedPaths": [
+        "singularity/work-items/hex-112/evidence/hexadecimal-converter.png"
+      ],
+      "tests": [
+        "src/components/HexadecimalConverter.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "Retain the calculator screenshot and automated coverage of both conversion directions."
+    }
+  },
+  "verificationContracts": [
+    {
+      "clauseId": "HEX-112:AC-001",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "conversion-directions",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "src/components/HexadecimalConverter.test.jsx"
+          },
+          "requiredAssurance": "exact-local-observed"
+        },
+        {
+          "slot": "converter-screen",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "singularity/work-items/hex-112/evidence/hexadecimal-converter.png"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    }
+  ],
+  "workId": "hex-112",
+  "phase": "planning",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/hex-112/artifacts/planning/plan.md",
+    "sha256": "d2b890174b700b3333375823b56a59a8775cdeff018f17785bd29529883c68e6",
+    "bytes": 17971
+  }
+}
