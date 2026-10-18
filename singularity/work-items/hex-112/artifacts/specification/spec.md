@@ -4,27 +4,51 @@
   "workId": "hex-112",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "aa379aa2437477ec1c1606f14d737c4e1fdfa5b5ce6e2e59460e2cfc766b73b0",
+      "bytes": 4331
+    },
+    "generation": 1,
+    "publishedAt": "2026-10-18T13:37:29.941Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "8c58717ecb8dc4eb4a8511c986fd50715cb89726",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "cefab2b320917902d3a5d87f8fb41c6ca3fa661958e79fec9ecf93e28f239314",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/hex-112/context/clarifications-specification-gen1.json",
+    "sha256": "dc9426324ac538c09bdc2ebe516b633199e1996c3dee03b294868f965c254e8d",
+    "promptSha256": "7165f1c2489b9dea8c7b5d61f70bf140e7614f742e6a54081e122ee37d19bb4d",
+    "responses": 1,
+    "markers": [],
+    "recordedAt": "2026-10-18T13:24:43.687Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/hex-112/telemetry/specification-gen1.json",
+      "sha256": "289f49594b8b0163b1813d0852f8ce08ed8603dcd9ae23c289bcb2f42e0c2892",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 19696,
+        "estimatedTokens": 4924,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 19696,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-18T13:37:29.941Z",
+      "completedAt": "2026-10-18T13:37:29.941Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -52,144 +133,119 @@
 }
 -->
 
-# Specification — hex-112
-
-<!--
-Scenarios come first, and general requirements come after them `[SPK:REQ-068]`. That ordering is the
-template's opinion: a requirement written before anyone has described the situation it serves tends
-to describe the system instead of the need, and nobody notices until verification.
-
-Where the current Story evidence leaves something material unknown, say so with a marker rather
-than guessing. Use this syntax:
-
-    [NEEDS CLARIFICATION: <one question grounded in the current Story evidence>]
-
-Replace the angle-bracketed placeholder; never copy or ask it as written. The question must be one
-non-empty line and must arise from the pinned sources, approved upstream artifacts, repository world
-model, or a contradiction among them. Markers are extracted the same way clauses are, so a marker
-inside fenced or inline code is ignored `[SPK:REQ-063]`. This phase blocks publication while any
-marker is unresolved, and a marker is only resolved when a later generation removes it *and* records
-the answer `[SPK:REQ-067]` — deleting the text alone is an integrity failure, not an answer.
--->
+# Specification - hex-112
 
 ## Agent brief
 
-<!--
-Summarize the approved intent for downstream agents in a compact, standalone form. Include the
-problem, intended outcome, principal actors, most important scenarios, hard constraints, and major
-exclusions. Do not introduce claims that are absent from the sections below. Exact requirements and
-boundary conditions are preserved separately by the governed projection.
--->
+Add a converter to the existing calculator UI that converts decimal values to hexadecimal and
+hexadecimal values to decimal. The user confirmed both directions. Acceptance requires a screenshot
+of the converter in the calculator and automated test cases covering both directions. No specific
+layout, numeric range, precision, or invalid-input behavior is established by the pinned request.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+- **Calculator user:** enters a value, selects the corresponding conversion direction, and reads the
+  converted value.
 
 ## User scenarios
 
-Prioritized. Each scenario leads with the situation, then its acceptance cases.
+### S1 - Convert a decimal value to hexadecimal
 
-### S1 — <the most important situation, in the user's words>
+**Priority:** P1  
+**Actor:** Calculator user  
+**Context:** The existing calculator is open and the converter is available.
 
-**Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+- **Given** the converter is available in the calculator
+  **When** the user provides a decimal value and requests hexadecimal conversion
+  **Then** the calculator displays the corresponding hexadecimal value.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+### S2 - Convert a hexadecimal value to decimal
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
+**Priority:** P1  
+**Actor:** Calculator user  
+**Context:** The existing calculator is open and the converter is available.
 
-### S2 — <the next situation>
-
-**Priority:** P2
-
-- **Given** … **When** … **Then** …
+- **Given** the converter is available in the calculator
+  **When** the user provides a hexadecimal value and requests decimal conversion
+  **Then** the calculator displays the corresponding decimal value.
 
 ## Failure and empty states
 
-What happens the first time, with nothing there yet, and when each step fails. These are where
-specifications are usually silent and implementations usually improvise.
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** No saved conversion data or record workflow is specified; a saved-record empty state
+  does not apply.
+- **Failure:** The pinned request defines no dependency or conversion-error behavior.
+- **Partial:** No multi-step or partial-completion workflow is specified.
 
 ## Scenario coverage
 
-<!-- One row per behavior/acceptance clause; repeat rows for multiple outcomes. Every referenced
-S-number must have complete Given/When/Then acceptance cases above. Outcome is success, failure,
-boundary, or empty. Rejection/error requirements need distinct failure cases, not only happy-path
-prose. Use the pinned request and clarification answers; do not invent error text or new scope. -->
-
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `HEX-112:REQ-001` | S1 | TODO |
-| `HEX-112:REQ-002` | S2 | TODO |
-| `HEX-112:AC-001` | S1 | TODO |
+| `HEX-112:REQ-001` | S1 | success |
+| `HEX-112:REQ-002` | S2 | success |
+| `HEX-112:REQ-003` | S1 | success |
+| `HEX-112:REQ-003` | S2 | success |
+| `HEX-112:AC-001` | S1 | success |
+| `HEX-112:AC-001` | S2 | success |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+The Story defines no new roles or permission changes. The calculator user interacts with the
+converter through the existing calculator UI.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+The Story and clarification do not specify numeric ranges, precision, input syntax, or formatting
+conventions. This specification does not add limits or prescribe those details.
 
 ## Requirements
 
-Numbered, testable, one obligation each. Cite the scenario each serves.
+- The converter accepts a decimal value and displays its corresponding hexadecimal value. *(S1)*
+  [HEX-112:REQ-001]
+- The converter accepts a hexadecimal value and displays its corresponding decimal value. *(S2)*
+  [HEX-112:REQ-002]
+- Provide a screenshot showing the converter in the existing calculator UI and automated test cases
+  exercising both conversion directions. *(S1, S2)* [HEX-112:REQ-003] [scope:SRI-2882cd00cb19]
 
-- <requirement>. *(S1)* [HEX-112:REQ-001]
-- <requirement>. *(S1, S2)* [HEX-112:REQ-002]
+Acceptance criteria:
 
-Acceptance criteria use the same stable, namespaced form:
-
-- <observable acceptance outcome>. *(S1)* [HEX-112:AC-001]
+- The existing calculator UI exposes the converter, and a screenshot demonstrates it; automated
+  test cases demonstrate both decimal-to-hexadecimal and hexadecimal-to-decimal conversion.
+  *(S1, S2)* [HEX-112:AC-001]
 
 ## Verification intent
 
-<!-- One row per declared clause, including non-functional requirements. Methods: test, visual,
-inspection, or a comma-separated combination (all required). AC Criterion is its own ID. A
-visual/inspection requirement names the AC proving it; a test-only requirement may use -. Choose
-from the pinned source, not from available tools. A screenshot is visual proof, not a test exemption.
-Planning must inherit these methods and cannot change them without an approved scope amendment. -->
-
 | Clause | Methods | Criterion |
 |---|---|---|
-| `HEX-112:REQ-001` | TODO | - |
-| `HEX-112:REQ-002` | TODO | - |
-| `HEX-112:AC-001` | TODO | `HEX-112:AC-001` |
+| `HEX-112:REQ-001` | test | - |
+| `HEX-112:REQ-002` | test | - |
+| `HEX-112:REQ-003` | test, visual | `HEX-112:AC-001` |
+| `HEX-112:AC-001` | test, visual | `HEX-112:AC-001` |
 
 ## Non-functional requirements
 
-Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
-will be measured; "fast" is not a requirement.
-
-Use governed requirement anchors here too (for example `[HEX-112:REQ-003]`); `NFR-001` by
-itself is only a display label and is not a stable clause identity.
+No non-functional targets are specified by the pinned request or clarification.
 
 ## Constitution articles
 
-Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
-cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
-
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-What this specification takes as true without proving. An assumption that turns out false is a
-change request, not a defect — which is only true if it was written down.
+- "Hexdecimal converter" means hexadecimal conversion, with both conversion directions as confirmed
+  in the specification clarification for generation 1.
+- The feature is available to users of the existing calculator; no separate authorization model
+  was requested.
 
 ## Out of scope
 
-Named explicitly, so the boundary is reviewable rather than inferred.
+- Changes to calculator behavior unrelated to the converter.
+- Conversion to or from bases other than decimal and hexadecimal.
 
 ## Sources
 
-Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
-offered to this phase that could not be read or was not available here, named as a gap. Without
-supporting documents, say so.
+- Pinned Story source: `singularity/work-items/hex-112/source.json`
+  (SHA-256: `c5b3586760198b6cb694980540f9beb0b9b2813a559eb8e43207f9b5f79fa9ed`).
+- Human clarification: `singularity/work-items/hex-112/context/clarifications-specification-gen1.json`
+  (SHA-256: `dc9426324ac538c09bdc2ebe516b633199e1996c3dee03b294868f965c254e8d`); confirms both
+  conversion directions and screenshot plus automated test-case acceptance.
+- No supporting documents were supplied.
