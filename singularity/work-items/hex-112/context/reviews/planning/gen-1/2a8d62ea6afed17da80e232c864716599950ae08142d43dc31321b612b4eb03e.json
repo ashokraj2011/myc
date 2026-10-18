@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "phase": "planning",
+  "generation": 1,
+  "reportSha256": "2a8d62ea6afed17da80e232c864716599950ae08142d43dc31321b612b4eb03e",
+  "lifecycleEventId": "54e422c4-96e9-47d7-9835-01c9cd1fdaeb",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "planning",
+    "binding": {
+      "workId": "hex-112",
+      "phase": "planning",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/hex-112/USER-STORY.md",
+          "textSha256": "5fbae74e50e2eeb80c41276b5e4ad2b2f0694b7980caa2083f4e76129d1f158a",
+          "originalSha256": "c5b3586760198b6cb694980540f9beb0b9b2813a559eb8e43207f9b5f79fa9ed"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:approved-scope",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/hex-112/context/clarifications-specification-gen1.json",
+          "sha256": "dc9426324ac538c09bdc2ebe516b633199e1996c3dee03b294868f965c254e8d"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/hex-112/artifacts/planning/plan.md",
+        "sha256": "189cf64aeff2f45b7fe87ccc16bd78dfa1c697991103a8c6cc1a428471fc2c31"
+      },
+      "upstreamSpec": {
+        "path": "singularity/work-items/hex-112/artifacts/specification/spec.md",
+        "sha256": "aa379aa2437477ec1c1606f14d737c4e1fdfa5b5ce6e2e59460e2cfc766b73b0"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:approved-scope"
+    ],
+    "rows": [
+      {
+        "clauseId": "HEX-112:REQ-001",
+        "expectedPaths": [
+          "src/components/HexadecimalConverter.jsx",
+          "src/components/UnitConverter.jsx",
+          "src/utils/numberBaseConverter.js"
+        ],
+        "plannedTests": [
+          "src/components/HexadecimalConverter.test.jsx",
+          "src/utils/numberBaseConverter.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "new",
+        "observableResult": "A decimal input is converted and its corresponding hexadecimal value is displayed.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "HEX-112:REQ-002",
+        "expectedPaths": [
+          "src/components/HexadecimalConverter.jsx",
+          "src/components/UnitConverter.jsx",
+          "src/utils/numberBaseConverter.js"
+        ],
+        "plannedTests": [
+          "src/components/HexadecimalConverter.test.jsx",
+          "src/utils/numberBaseConverter.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "new",
+        "observableResult": "A hexadecimal input is converted and its corresponding decimal value is displayed.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "HEX-112:REQ-003",
+        "expectedPaths": [
+          "singularity/work-items/hex-112/evidence/hexadecimal-converter.png"
+        ],
+        "plannedTests": [
+          "src/components/HexadecimalConverter.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "evidence",
+        "observableResult": "Retain the calculator screenshot and automated coverage of both conversion directions.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "HEX-112:AC-001",
+        "expectedPaths": [
+          "singularity/work-items/hex-112/evidence/hexadecimal-converter.png"
+        ],
+        "plannedTests": [
+          "src/components/HexadecimalConverter.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "evidence",
+        "observableResult": "The existing calculator UI exposes the hexadecimal converter; the screenshot shows it and the automated test demonstrates both conversion directions.",
+        "assessment": "supported"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "a0016f43bc13f4991a4347bdd86c60bed8424da1e4a226e03267702d04a4c9e5",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "architect",
+    "readOnly": true
+  },
+  "submittedAt": "2026-10-18T15:46:33.174Z",
+  "recordSha256": "3bcca0281f5eff344bdafc8e8a052248e3bfbb56f092b50d909cbe53a815aec0"
+}
