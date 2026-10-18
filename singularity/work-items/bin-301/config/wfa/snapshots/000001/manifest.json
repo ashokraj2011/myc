@@ -1,0 +1,412 @@
+{
+  "schemaVersion": 1,
+  "kind": "workflow-snapshot",
+  "story": {
+    "repositoryId": "sha256:c47f09161cd229abc20219e502a1041b8b99f498acab05fb7e3c52df32c3b5b2",
+    "workId": "bin-301"
+  },
+  "revision": 1,
+  "parentSnapshotHash": null,
+  "policy": {
+    "sha256": "sha256:69065f9b342651d957ee6ba217bab1cf2df1d6b9c3402acc6524aab4969444e8",
+    "bytes": 120218,
+    "mediaType": "application/json; profile=singularity-flow-effective-policy-v1",
+    "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/69065f9b342651d957ee6ba217bab1cf2df1d6b9c3402acc6524aab4969444e8"
+  },
+  "assets": [
+    {
+      "logicalId": "agent:demo-instruction-analyst-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:8f9baed8403833df8ce10aad417afb01eb45d1f8f09cdb9fff2d92d2fc8c7492",
+        "bytes": 1664,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/8f9baed8403833df8ce10aad417afb01eb45d1f8f09cdb9fff2d92d2fc8c7492"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/demo-instruction-analyst-imported.agent.md",
+        "sourceId": "sha256:e5c9a2ddfb913abd60cc6737042b850118a8c6dede368e36eb5d5a838b8b1488",
+        "sha256": "sha256:8f9baed8403833df8ce10aad417afb01eb45d1f8f09cdb9fff2d92d2fc8c7492"
+      }
+    },
+    {
+      "logicalId": "agent:demo-instruction-analyst-imported:skill:demo-instruction-intake-imported",
+      "purpose": "agent-skill",
+      "dependencies": [
+        "agent:demo-instruction-analyst-imported"
+      ],
+      "blob": {
+        "sha256": "sha256:e56ee44f3e3745b90bce7ccdb10ff4ee640e00251222dd28665b2d6807bf3cc2",
+        "bytes": 1032,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/e56ee44f3e3745b90bce7ccdb10ff4ee640e00251222dd28665b2d6807bf3cc2"
+      },
+      "source": {
+        "kind": "reviewed-agent-dependency",
+        "agentId": "demo-instruction-analyst-imported",
+        "dependencyId": "demo-instruction-intake-imported",
+        "referenceSha256": "sha256:a6b14ddc22c3450b4d042b3ba737940887ff7a5b218bd51a707afbfcf61697d3",
+        "sha256": "sha256:e56ee44f3e3745b90bce7ccdb10ff4ee640e00251222dd28665b2d6807bf3cc2"
+      }
+    },
+    {
+      "logicalId": "agent:demo-instruction-closer-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:f2f3833e7a773e94686e6eb0cdb02632328ac6679a40bc787ba58c42aedd532e",
+        "bytes": 1639,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/f2f3833e7a773e94686e6eb0cdb02632328ac6679a40bc787ba58c42aedd532e"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/demo-instruction-closer-imported.agent.md",
+        "sourceId": "sha256:741451fdcc7392ede81d6b4b4a971105a02895994797fdaaea36195181e0a110",
+        "sha256": "sha256:f2f3833e7a773e94686e6eb0cdb02632328ac6679a40bc787ba58c42aedd532e"
+      }
+    },
+    {
+      "logicalId": "agent:demo-instruction-closer-imported:skill:demo-instruction-close-imported",
+      "purpose": "agent-skill",
+      "dependencies": [
+        "agent:demo-instruction-closer-imported"
+      ],
+      "blob": {
+        "sha256": "sha256:1b816fcadc470155fd9cc0b6d67b5a29a509a191c8b093741448932bb15ce5f6",
+        "bytes": 998,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/1b816fcadc470155fd9cc0b6d67b5a29a509a191c8b093741448932bb15ce5f6"
+      },
+      "source": {
+        "kind": "reviewed-agent-dependency",
+        "agentId": "demo-instruction-closer-imported",
+        "dependencyId": "demo-instruction-close-imported",
+        "referenceSha256": "sha256:437fae7f6f322351d5ab00bbbfb9df5c0bb6cb664ee387a4dc32307beab3e531",
+        "sha256": "sha256:1b816fcadc470155fd9cc0b6d67b5a29a509a191c8b093741448932bb15ce5f6"
+      }
+    },
+    {
+      "logicalId": "agent:demo-instruction-developer-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:211763cad80b5080f46f34bb6e98471e8e25e9d4a647d7567f49c928151d1249",
+        "bytes": 1641,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/211763cad80b5080f46f34bb6e98471e8e25e9d4a647d7567f49c928151d1249"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/demo-instruction-developer-imported.agent.md",
+        "sourceId": "sha256:c0b25f3b9b5e9df3196cb6355614240a707738a740aaa5d7356ae0097a5fc099",
+        "sha256": "sha256:211763cad80b5080f46f34bb6e98471e8e25e9d4a647d7567f49c928151d1249"
+      }
+    },
+    {
+      "logicalId": "agent:demo-instruction-developer-imported:skill:demo-instruction-repair-imported",
+      "purpose": "agent-skill",
+      "dependencies": [
+        "agent:demo-instruction-developer-imported"
+      ],
+      "blob": {
+        "sha256": "sha256:db7fb41dc0015c675b84fe822df01f20f3b79455a88180c0c80cb7f30f822218",
+        "bytes": 1238,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/db7fb41dc0015c675b84fe822df01f20f3b79455a88180c0c80cb7f30f822218"
+      },
+      "source": {
+        "kind": "reviewed-agent-dependency",
+        "agentId": "demo-instruction-developer-imported",
+        "dependencyId": "demo-instruction-repair-imported",
+        "referenceSha256": "sha256:5621c60dea825beee19749e6403af991be4d9ab7f4a0ff6321350db0bee3ad82",
+        "sha256": "sha256:db7fb41dc0015c675b84fe822df01f20f3b79455a88180c0c80cb7f30f822218"
+      }
+    },
+    {
+      "logicalId": "agent:demo-instruction-tester-imported",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:fcef23483c2c6317dbacf72447bcdb8a445502061a45ddf9e9f13abed39c7c68",
+        "bytes": 1629,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/fcef23483c2c6317dbacf72447bcdb8a445502061a45ddf9e9f13abed39c7c68"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/demo-instruction-tester-imported.agent.md",
+        "sourceId": "sha256:97e08eb1ee172032443b57dcd14c5f1281b086803e02f0a6dbc85c20d499f967",
+        "sha256": "sha256:fcef23483c2c6317dbacf72447bcdb8a445502061a45ddf9e9f13abed39c7c68"
+      }
+    },
+    {
+      "logicalId": "agent:demo-instruction-tester-imported:skill:demo-instruction-check-imported",
+      "purpose": "agent-skill",
+      "dependencies": [
+        "agent:demo-instruction-tester-imported"
+      ],
+      "blob": {
+        "sha256": "sha256:cd4125a6c0d291ec3f3d79973f8166e1a5ec5377cf120845108856e8dff093a0",
+        "bytes": 1233,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/cd4125a6c0d291ec3f3d79973f8166e1a5ec5377cf120845108856e8dff093a0"
+      },
+      "source": {
+        "kind": "reviewed-agent-dependency",
+        "agentId": "demo-instruction-tester-imported",
+        "dependencyId": "demo-instruction-check-imported",
+        "referenceSha256": "sha256:2b815c640c725ecbe64da9a04170fdf07f71e0593ad9d00ebf4fb37908e4704e",
+        "sha256": "sha256:cd4125a6c0d291ec3f3d79973f8166e1a5ec5377cf120845108856e8dff093a0"
+      }
+    },
+    {
+      "logicalId": "agent:sflow-source-reviewer",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:adebae380c85c66b3e158c5e65633b47c3aadd50c6abeabd6fcbb6f42de23991",
+        "bytes": 8347,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/adebae380c85c66b3e158c5e65633b47c3aadd50c6abeabd6fcbb6f42de23991"
+      },
+      "source": {
+        "kind": "installed-reviewed-agent",
+        "scope": "plugin",
+        "source": null,
+        "sourceId": "sha256:521546a67d001ab0ca709177f13e90a9c48d35e09e782dcff04ef8c54af919e1",
+        "sha256": "sha256:adebae380c85c66b3e158c5e65633b47c3aadd50c6abeabd6fcbb6f42de23991"
+      }
+    },
+    {
+      "logicalId": "agent:sflow-utility",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:1b4d609e5932ef4f938d5dea59e5ec93396d3442c841bbce0c4efe438798898e",
+        "bytes": 3428,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/1b4d609e5932ef4f938d5dea59e5ec93396d3442c841bbce0c4efe438798898e"
+      },
+      "source": {
+        "kind": "installed-reviewed-agent",
+        "scope": "plugin",
+        "source": null,
+        "sourceId": "sha256:ab2c3f8942c1234b8453ca94db62a129f41cf407b20a13b10156b61c9a08df19",
+        "sha256": "sha256:1b4d609e5932ef4f938d5dea59e5ec93396d3442c841bbce0c4efe438798898e"
+      }
+    },
+    {
+      "logicalId": "instruction:demo-fresh-test-evidence-imported",
+      "purpose": "shared-instruction",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:8e227fa80d0941f8c42a9c2597192f119e092b201cb1cc77efb4d0d8fdd89f1a",
+        "bytes": 887,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/8e227fa80d0941f8c42a9c2597192f119e092b201cb1cc77efb4d0d8fdd89f1a"
+      },
+      "source": {
+        "kind": "reviewed-instruction",
+        "instructionId": "demo-fresh-test-evidence-imported",
+        "sha256": "sha256:8e227fa80d0941f8c42a9c2597192f119e092b201cb1cc77efb4d0d8fdd89f1a"
+      }
+    },
+    {
+      "logicalId": "instruction:demo-reviewed-routing-imported",
+      "purpose": "shared-instruction",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:271775fe2e56e9bc258f1f6fff8c37cb8323230553781a25e8c24e4533752575",
+        "bytes": 880,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/271775fe2e56e9bc258f1f6fff8c37cb8323230553781a25e8c24e4533752575"
+      },
+      "source": {
+        "kind": "reviewed-instruction",
+        "instructionId": "demo-reviewed-routing-imported",
+        "sha256": "sha256:271775fe2e56e9bc258f1f6fff8c37cb8323230553781a25e8c24e4533752575"
+      }
+    },
+    {
+      "logicalId": "instruction:demo-source-interpretation-imported",
+      "purpose": "shared-instruction",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:0e56152db7ee54fdd3d49ed9e5bd65f589a389c25d2b87851e76be67ad8faf5a",
+        "bytes": 760,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/0e56152db7ee54fdd3d49ed9e5bd65f589a389c25d2b87851e76be67ad8faf5a"
+      },
+      "source": {
+        "kind": "reviewed-instruction",
+        "instructionId": "demo-source-interpretation-imported",
+        "sha256": "sha256:0e56152db7ee54fdd3d49ed9e5bd65f589a389c25d2b87851e76be67ad8faf5a"
+      }
+    },
+    {
+      "logicalId": "prompt:planning",
+      "purpose": "planning-prompt",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:4128acc6930949e4ba1e50e8b8c7c4f7beb23f4361c2e8428475b081712b77db",
+        "bytes": 3271,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/4128acc6930949e4ba1e50e8b8c7c4f7beb23f4361c2e8428475b081712b77db"
+      },
+      "source": {
+        "kind": "repository-path",
+        "path": "singularity/prompts/copilot-planning.md",
+        "sha256": "sha256:4128acc6930949e4ba1e50e8b8c7c4f7beb23f4361c2e8428475b081712b77db"
+      }
+    },
+    {
+      "logicalId": "template:demo-instruction-close-imported",
+      "purpose": "phase-template",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:9070bc1135edfa168c5c63b43df230dd5997f527e7b7a2931311eb8cca78a2d6",
+        "bytes": 1658,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/9070bc1135edfa168c5c63b43df230dd5997f527e7b7a2931311eb8cca78a2d6"
+      },
+      "source": {
+        "kind": "repository-path",
+        "path": "singularity/templates/demo-check-repair-close/close.md",
+        "sha256": "sha256:9070bc1135edfa168c5c63b43df230dd5997f527e7b7a2931311eb8cca78a2d6"
+      }
+    },
+    {
+      "logicalId": "template:demo-instruction-intake-imported",
+      "purpose": "phase-template",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:b711a8f37bebf0dda05a99d4bf3efdcbb1bfc424d70d8f69d5c9289c2a6e2b2f",
+        "bytes": 2325,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/b711a8f37bebf0dda05a99d4bf3efdcbb1bfc424d70d8f69d5c9289c2a6e2b2f"
+      },
+      "source": {
+        "kind": "repository-path",
+        "path": "singularity/templates/demo-check-repair-close/intake.md",
+        "sha256": "sha256:b711a8f37bebf0dda05a99d4bf3efdcbb1bfc424d70d8f69d5c9289c2a6e2b2f"
+      }
+    },
+    {
+      "logicalId": "template:demo-instruction-repair-imported",
+      "purpose": "phase-template",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:66af2bad38c83317e4ccd2d96c7713234f64149e7d7015235b98047770f7df30",
+        "bytes": 1295,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/66af2bad38c83317e4ccd2d96c7713234f64149e7d7015235b98047770f7df30"
+      },
+      "source": {
+        "kind": "repository-path",
+        "path": "singularity/templates/demo-check-repair-close/repair.md",
+        "sha256": "sha256:66af2bad38c83317e4ccd2d96c7713234f64149e7d7015235b98047770f7df30"
+      }
+    },
+    {
+      "logicalId": "template:demo-instruction-test-imported",
+      "purpose": "phase-template",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:cbde6d2812b782f32589db7f95f33c44586ce6e552ce636541326e912c3a1663",
+        "bytes": 1992,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/bin-301/config/wfa/blobs/sha256/cbde6d2812b782f32589db7f95f33c44586ce6e552ce636541326e912c3a1663"
+      },
+      "source": {
+        "kind": "repository-path",
+        "path": "singularity/templates/demo-check-repair-close/check.md",
+        "sha256": "sha256:cbde6d2812b782f32589db7f95f33c44586ce6e552ce636541326e912c3a1663"
+      }
+    }
+  ],
+  "executionDependencies": [
+    {
+      "id": "agent:demo-instruction-analyst-imported:skill:demo-instruction-intake-imported",
+      "agentId": "demo-instruction-analyst-imported",
+      "dependencyId": "demo-instruction-intake-imported",
+      "kind": "skill",
+      "optional": false,
+      "availability": "remote-required",
+      "inclusion": "included",
+      "assetLogicalId": "agent:demo-instruction-analyst-imported:skill:demo-instruction-intake-imported",
+      "referenceSha256": "sha256:a6b14ddc22c3450b4d042b3ba737940887ff7a5b218bd51a707afbfcf61697d3",
+      "contentSha256": "sha256:e56ee44f3e3745b90bce7ccdb10ff4ee640e00251222dd28665b2d6807bf3cc2",
+      "executable": false
+    },
+    {
+      "id": "agent:demo-instruction-closer-imported:skill:demo-instruction-close-imported",
+      "agentId": "demo-instruction-closer-imported",
+      "dependencyId": "demo-instruction-close-imported",
+      "kind": "skill",
+      "optional": false,
+      "availability": "remote-required",
+      "inclusion": "included",
+      "assetLogicalId": "agent:demo-instruction-closer-imported:skill:demo-instruction-close-imported",
+      "referenceSha256": "sha256:437fae7f6f322351d5ab00bbbfb9df5c0bb6cb664ee387a4dc32307beab3e531",
+      "contentSha256": "sha256:1b816fcadc470155fd9cc0b6d67b5a29a509a191c8b093741448932bb15ce5f6",
+      "executable": false
+    },
+    {
+      "id": "agent:demo-instruction-developer-imported:skill:demo-instruction-repair-imported",
+      "agentId": "demo-instruction-developer-imported",
+      "dependencyId": "demo-instruction-repair-imported",
+      "kind": "skill",
+      "optional": false,
+      "availability": "remote-required",
+      "inclusion": "included",
+      "assetLogicalId": "agent:demo-instruction-developer-imported:skill:demo-instruction-repair-imported",
+      "referenceSha256": "sha256:5621c60dea825beee19749e6403af991be4d9ab7f4a0ff6321350db0bee3ad82",
+      "contentSha256": "sha256:db7fb41dc0015c675b84fe822df01f20f3b79455a88180c0c80cb7f30f822218",
+      "executable": false
+    },
+    {
+      "id": "agent:demo-instruction-tester-imported:skill:demo-instruction-check-imported",
+      "agentId": "demo-instruction-tester-imported",
+      "dependencyId": "demo-instruction-check-imported",
+      "kind": "skill",
+      "optional": false,
+      "availability": "remote-required",
+      "inclusion": "included",
+      "assetLogicalId": "agent:demo-instruction-tester-imported:skill:demo-instruction-check-imported",
+      "referenceSha256": "sha256:2b815c640c725ecbe64da9a04170fdf07f71e0593ad9d00ebf4fb37908e4704e",
+      "contentSha256": "sha256:cd4125a6c0d291ec3f3d79973f8166e1a5ec5377cf120845108856e8dff093a0",
+      "executable": false
+    }
+  ],
+  "provenance": {
+    "configuration": {
+      "repository": "https://github.com/ashokraj2011/myc.git",
+      "commit": "2e0e78c68db8d8620ece3afd37a6f7baf3bfb754",
+      "filesSha256": "0435c35260432f3db2e03e88f0e1c55909c4d23063a003771be009bb3f461d81"
+    },
+    "workType": "demo-instruction-test-loop-imported",
+    "foldProfile": "singularity-flow-resolution-v1"
+  },
+  "semantics": {
+    "snapshot": "wfa-snapshot-v1",
+    "canonicalJson": "singularity-flow-canonical-json-v1",
+    "policyReaderMinimum": 5,
+    "agentDocumentParser": "sflow-agent-document-v1",
+    "promptComposer": "story-snapshot-agent-v4",
+    "phaseSemantics": "sflow-phase-semantics/v1"
+  },
+  "configFoldHash": "sha256:80b411f58e6f4b101051a041bb9c7226e7329d33a9055b37cda924eb95a3b7ee",
+  "createdAt": "2026-10-18T23:27:58.068Z",
+  "limits": {
+    "assets": 18,
+    "bytes": 156135
+  },
+  "snapshotHash": "sha256:5e58f608346cd9d0245a5691f5bd8b9a86947c4af82136ebd5243755af76178e"
+}
