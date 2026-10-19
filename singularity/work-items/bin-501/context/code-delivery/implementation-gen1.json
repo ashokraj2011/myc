@@ -65,7 +65,13 @@
       {
         "clauseId": "BIN-501:AC-001",
         "testSource": "src/utils/evaluator.test.js",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": ".-node-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       }
     ],
     "witnesses": [
@@ -202,11 +208,19 @@
     ],
     "bindingsSha256": "sha256:5bac25eb5809930fc4d3d334bedcda12965377c89a61d2a9485c3953463c154f"
   },
-  "testExecutions": [],
+  "testExecutions": [
+    {
+      "commandId": ".-node-tests",
+      "attemptId": "TA-bbef1890ef2f7ef6828b",
+      "receiptPath": "singularity/work-items/bin-501/context/code-delivery/tests/attempts/implementation/TA-bbef1890ef2f7ef6828b.json",
+      "receiptSha256": "0a605cfad40d89f0d34732fc9f2d3146952c429a2506cd112214071e9910e2c4",
+      "status": "passed"
+    }
+  ],
   "tree": {
     "workingStateDigest": "sha256:19532122e0711ee508104386b91a462bcbd51c974cc6fb9dfb575146e68b2f7f",
-    "generationCommit": null,
-    "generationTree": null
+    "generationCommit": "2dd03049408064b1505628e97bcd23885480b97f",
+    "generationTree": "12244fe8fcd7d5f8a93960cad16a8789a8449266"
   },
   "model": {
     "task": "code",
@@ -225,6 +239,7 @@
     "observedAt": null,
     "generation": null
   },
-  "status": "pending-tests",
-  "capturedAt": "2026-10-19T06:44:04.366Z"
+  "status": "ready",
+  "capturedAt": "2026-10-19T06:44:04.366Z",
+  "validatedAt": "2026-10-19T06:51:05.710Z"
 }

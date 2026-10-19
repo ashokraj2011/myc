@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "bin-501",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G1-001",
+  "phaseId": "implementation",
+  "generation": 1,
+  "baselineSha256": "f9621c4b2268dbc5bc2c779a6abf3b1523137a1f02bfafa4341059c44d968f53",
+  "baseline": {
+    "path": "singularity/work-items/bin-501/context/work-intervals/implementation-gen1-baseline.json",
+    "sha256": "f9621c4b2268dbc5bc2c779a6abf3b1523137a1f02bfafa4341059c44d968f53",
+    "verified": true,
+    "sourceBaseCommit": "c9346818f2f9b93aead01d670ba8b593536a8165"
+  },
+  "sourceBaseCommit": "c9346818f2f9b93aead01d670ba8b593536a8165",
+  "target": {
+    "branch": "feature/bin-501",
+    "head": "2dd03049408064b1505628e97bcd23885480b97f",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": "src/utils/evaluator.js",
+      "status": "present",
+      "sha256": "deb8118d394a84a6e35b65fdfc00685cd6f21a7c455f9d256ebceac387ebe47b",
+      "bytes": 7408,
+      "verdict": "planned",
+      "clauseIds": [
+        "BIN-501:REQ-001"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/utils/evaluator.test.js",
+      "status": "present",
+      "sha256": "ea75963fab21765cbbf7bea3da8ddcea1adacba896c4922eb5789da4f35f8dc4",
+      "bytes": 3086,
+      "verdict": "planned",
+      "clauseIds": [
+        "BIN-501:AC-001",
+        "BIN-501:REQ-001",
+        "BIN-501:REQ-002",
+        "BIN-501:REQ-003"
+      ],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 2,
+    "planned": 2,
+    "unplanned": 0,
+    "protected": 0
+  },
+  "decision": {
+    "status": "aligned",
+    "summaryStatus": "clear",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "11b64ff0af37c0359e2189ac3c02db21c650b501b6259d5994fb1d2e6e8be47c",
+  "reconciledAt": "2026-10-19T06:51:05.903Z",
+  "final": true,
+  "recordedAt": "2026-10-19T06:51:05.904Z",
+  "path": "singularity/work-items/bin-501/context/work-intervals/reconciliations/11b64ff0af37c0359e2189ac3c02db21c650b501b6259d5994fb1d2e6e8be47c.json"
+}

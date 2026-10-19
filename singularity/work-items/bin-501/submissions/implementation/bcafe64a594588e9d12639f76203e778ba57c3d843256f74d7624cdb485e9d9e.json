@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 3,
+  "workId": "bin-501",
+  "epicId": null,
+  "planId": null,
+  "jiraIssueId": "bin-501",
+  "initialJiraKey": null,
+  "currentJiraKey": null,
+  "canonicalBranch": "feature/bin-501",
+  "submittedBranch": "feature/bin-501",
+  "submissionCommit": "2dd03049408064b1505628e97bcd23885480b97f",
+  "sourceCommit": "2dd03049408064b1505628e97bcd23885480b97f",
+  "sourceTreeSha256": "sha256:19532122e0711ee508104386b91a462bcbd51c974cc6fb9dfb575146e68b2f7f",
+  "phase": "implementation",
+  "generation": 1,
+  "authorship": {
+    "schemaVersion": 1,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "developer"
+    },
+    "kernelModel": {
+      "invoked": false,
+      "status": "exact",
+      "invocationIds": []
+    },
+    "externalAiUse": {
+      "value": "unknown",
+      "status": "unavailable"
+    },
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "implementation-summary.md",
+      "mediaType": "text/markdown",
+      "sha256": "05af328431297b4a10aef551dcbb622eb52838a414ca2a8cc6fd1fc3143562da",
+      "bytes": 2692
+    },
+    "generation": 1,
+    "publishedAt": "2026-10-19T06:44:04.366Z"
+  },
+  "artifacts": [
+    {
+      "path": "singularity/work-items/bin-501/artifacts/implementation/implementation-summary.md",
+      "kind": "document",
+      "sha256": "1bfe1aa153b48ff58fddb981971032c583f86dd7adbbbb68a52dda44927e8152",
+      "size": 18414,
+      "reference": {
+        "handle": "sfref:v1:story:bin-501:db153d5c3f4a4f102ce915db8b8155f30c72ff5885a52f542c1f04349db45bbc",
+        "recordHash": "db153d5c3f4a4f102ce915db8b8155f30c72ff5885a52f542c1f04349db45bbc"
+      }
+    },
+    {
+      "path": "src/utils/evaluator.js",
+      "kind": "code",
+      "sha256": "deb8118d394a84a6e35b65fdfc00685cd6f21a7c455f9d256ebceac387ebe47b",
+      "size": 7408
+    },
+    {
+      "path": "src/utils/evaluator.test.js",
+      "kind": "test",
+      "sha256": "ea75963fab21765cbbf7bea3da8ddcea1adacba896c4922eb5789da4f35f8dc4",
+      "size": 3086
+    }
+  ],
+  "references": [
+    {
+      "handle": "sfref:v1:story:bin-501:db153d5c3f4a4f102ce915db8b8155f30c72ff5885a52f542c1f04349db45bbc",
+      "recordHash": "db153d5c3f4a4f102ce915db8b8155f30c72ff5885a52f542c1f04349db45bbc",
+      "purpose": "review-evidence",
+      "required": true
+    }
+  ],
+  "agentBriefs": [
+    {
+      "consumerPhase": "convergence",
+      "status": "ready",
+      "path": "singularity/work-items/bin-501/context/briefs/implementation-gen1-for-convergence.json",
+      "renderedPath": "singularity/work-items/bin-501/context/briefs/implementation-gen1-for-convergence.md",
+      "sourceSha256": "134eeca5c9a9c96a2f84423d262dbbfac80ea1295ede14b2177db1c3795aa2f2",
+      "sourceBytes": 18332,
+      "renderedSha256": "8457cfcb303491d7ddef86c614cb83aaafdb7118f7a22899ae44918e9b7a6f82",
+      "integritySha256": "3cd2546cf11ea46d4e4b40355cb0af0858eb8e654c43fa67c12202d45ace1512"
+    },
+    {
+      "consumerPhase": "verification",
+      "status": "ready",
+      "path": "singularity/work-items/bin-501/context/briefs/implementation-gen1-for-verification.json",
+      "renderedPath": "singularity/work-items/bin-501/context/briefs/implementation-gen1-for-verification.md",
+      "sourceSha256": "134eeca5c9a9c96a2f84423d262dbbfac80ea1295ede14b2177db1c3795aa2f2",
+      "sourceBytes": 18332,
+      "renderedSha256": "5acee8624ac2871bd3482a02c2a1ec018991832c9edbae6b89bf86c6d1253bc0",
+      "integritySha256": "89fdff18f1c02dfef3fc6e9b191a9b0c239787248e2e2939bcd43dc978cd1377"
+    }
+  ],
+  "checks": [
+    {
+      "id": ".-node-tests",
+      "command": "npm test -- --reporter=json --outputFile=.sflow/results/node-tests.json",
+      "kind": "test",
+      "requirement": "required",
+      "workingDirectory": ".",
+      "resultIsolated": true,
+      "externalModelPolicy": "never",
+      "timeoutMs": 1800000,
+      "sourceCommit": "2dd03049408064b1505628e97bcd23885480b97f",
+      "sourceTreeSha256": "sha256:19532122e0711ee508104386b91a462bcbd51c974cc6fb9dfb575146e68b2f7f",
+      "testRuntime": {
+        "node": "v22.14.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "profile": {
+          "nodeOptions": []
+        },
+        "nodeOptionsSha256": "sha256:12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "sha256": "sha256:dbe379c7bb0e9e8a2c3b876d8cb6d1376637cc2489ae3dfb9e67d6262af8f908"
+      },
+      "startedAt": "2026-10-19T06:51:02.615Z",
+      "completedAt": "2026-10-19T06:51:05.643Z",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "\n> calc-app@0.0.0 test\n> vitest run --reporter=json --outputFile=.sflow/results/node-tests.json\n\nJSON report written to /Users/ashokraj/Downloads/cfa/cfa-calc/.singularity-flow/story-worktrees/.w-cf666584b390858c82dd6b6d/.sflow/results/node-tests.json\n",
+      "stderr": "",
+      "stdoutBytes": 252,
+      "stderrBytes": 0,
+      "stdoutTruncated": false,
+      "stderrTruncated": false
+    }
+  ],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-19T06:44:04.366Z",
+      "completedAt": "2026-10-19T06:44:04.366Z",
+      "agent": "developer",
+      "generation": 1
+    }
+  ],
+  "approvals": [],
+  "visualAssurance": null,
+  "submissionEvidence": {
+    "architectureIntent": null,
+    "architectureDecision": null,
+    "codeDelivery": {
+      "path": "singularity/work-items/bin-501/context/code-delivery/implementation-gen1.json",
+      "sha256": "851b96a07ddb2d0715a6443dbc741a02963a8d109cadcdb125f67dbc7bbb1fb1",
+      "changeSetPath": "singularity/work-items/bin-501/context/code-delivery/implementation-gen1-changes.json",
+      "changeSetDigest": "sha256:044dc6d0772753422bfa86cdbc67afe52223cad6d868b31f168e1e60be18a2d6",
+      "status": "ready",
+      "autoCandidate": null,
+      "autoCandidateVerification": null
+    },
+    "testExecutions": [
+      {
+        "commandId": ".-node-tests",
+        "path": "singularity/work-items/bin-501/context/code-delivery/tests/attempts/implementation/TA-bbef1890ef2f7ef6828b.json",
+        "sha256": "0a605cfad40d89f0d34732fc9f2d3146952c429a2506cd112214071e9910e2c4",
+        "status": "passed"
+      }
+    ],
+    "claimMaps": [
+      {
+        "kind": "observed",
+        "generation": 1,
+        "path": "singularity/work-items/bin-501/context/claims/implementation-gen1-observed.json",
+        "sha256": "2fcdda2cdaab67c6ff962b92738c1b026ee875f9a1b0305a8eed93cadc5b25e0"
+      }
+    ],
+    "checksSha256": "44c9c02c55b6c8f6523114b03412d46fde89a728a2db71e8bfb10e07e342cc5f",
+    "artifactSetSha256": "82a7115a79c86a3c6c6b6ddeb047cbd638436fd7c07ca5d9cd632c57909670dd"
+  },
+  "witnessReview": {
+    "enrollment": {
+      "schemaVersion": 1,
+      "mode": "disabled",
+      "witnessedClauses": {
+        "enabled": false,
+        "profiles": []
+      },
+      "testcaseExact": {
+        "mode": "disabled",
+        "profile": null,
+        "requiredAssurance": "unavailable",
+        "policySha256": "sha256:12b50a34a1f03338377ecd76f44b20cbee83e7b91a0b07392ef08e3d8fd60800"
+      },
+      "claimMapContractVersion": 2,
+      "cab": null,
+      "sgos": null,
+      "rollout": {
+        "id": "wel-v0.2-observe",
+        "version": 1,
+        "enrollment": "new-story-only"
+      },
+      "configurationAuthority": {
+        "repository": "https://github.com/ashokraj2011/myc.git",
+        "branch": "sflow/config",
+        "commit": "e2da61ba6a58b9cbb6bb6144670235cdfd60129f",
+        "projectionSha256": "722cf67d6c03ddd7d8a9f88b502a0f5784f0fb53be6f93fd509e547f6008f179"
+      }
+    },
+    "enrollmentClassification": "enrolled",
+    "enrollmentReason": null,
+    "clauseMappings": [
+      {
+        "mappingSha256": "sha256:0fe1f8dd62473a7718225b3cdb82eaf9e2f35f669fea781c414691b5e342967e",
+        "clauseId": "BIN-501:AC-001",
+        "witnessType": "test",
+        "executionProfile": "vitest-static-v2",
+        "logicalTestId": "sha256:c32dbb6fd9574eadc48f203bd7125c8adade421acd898c3978f90e3e2baa7000",
+        "sourcePath": "src/utils/evaluator.test.js",
+        "sourceDeclarationSha256": "sha256:2ab1e7ae98d6eace582c1ae8bc4dd70126b4316d5400090bb711ce48183ad19d",
+        "supportSha256": null,
+        "clauseBodySha256": "sha256:34190a9dc97bff961d4bcf04225517678b3d665122cc2c33a535a12ea976f6e4",
+        "contractSha256": "sha256:e01e8042b12eaf207e37231f18efb680a2a9a7a77e227fa3cbb60f2447039272",
+        "slot": "decimal-to-binary-test-cases",
+        "test": "'decimalToBinary › converts a positive whole number to its base-2 representation' in src/utils/evaluator.test.js",
+        "reviewStatus": "unreviewed",
+        "decision": null,
+        "reason": null,
+        "expiresAt": null
+      },
+      {
+        "mappingSha256": "sha256:a22d1fcc35e89349beb67fccfd2cc994c421ce33c7da48fc32035f2c32b5b448",
+        "clauseId": "BIN-501:AC-001",
+        "witnessType": "test",
+        "executionProfile": "vitest-static-v2",
+        "logicalTestId": "sha256:ee21a23703ac68d1e0b720bd6f21d8a8e2103710a1f8dbecefd693786c8751ed",
+        "sourcePath": "src/utils/evaluator.test.js",
+        "sourceDeclarationSha256": "sha256:56dbb4fab2c552e6ec7310e36d41d2a7cabdbdfc08707e12eaaa528a44f61e31",
+        "supportSha256": null,
+        "clauseBodySha256": "sha256:34190a9dc97bff961d4bcf04225517678b3d665122cc2c33a535a12ea976f6e4",
+        "contractSha256": "sha256:e01e8042b12eaf207e37231f18efb680a2a9a7a77e227fa3cbb60f2447039272",
+        "slot": "decimal-to-binary-test-cases",
+        "test": "'decimalToBinary › converts zero to its base-2 representation' in src/utils/evaluator.test.js",
+        "reviewStatus": "unreviewed",
+        "decision": null,
+        "reason": null,
+        "expiresAt": null
+      }
+    ],
+    "testcaseObservations": []
+  },
+  "submittedAt": "2026-10-19T06:51:05.904Z",
+  "submittedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "status": "awaiting_review",
+  "packetSha256": "bcafe64a594588e9d12639f76203e778ba57c3d843256f74d7624cdb485e9d9e"
+}
