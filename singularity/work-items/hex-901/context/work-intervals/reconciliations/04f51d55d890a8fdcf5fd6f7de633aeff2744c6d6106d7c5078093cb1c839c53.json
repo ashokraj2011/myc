@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "hex-901",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G1-001",
+  "phaseId": "implementation",
+  "generation": 1,
+  "baselineSha256": "42a6a55dc829bf7cf4bd392c304c11336e7d309346e689b925dbfe2e763aac96",
+  "baseline": {
+    "path": "singularity/work-items/hex-901/context/work-intervals/implementation-gen1-baseline.json",
+    "sha256": "42a6a55dc829bf7cf4bd392c304c11336e7d309346e689b925dbfe2e763aac96",
+    "verified": true,
+    "sourceBaseCommit": "44ccb92bee2f295a440e4e6684ecce3d203a18ef"
+  },
+  "sourceBaseCommit": "44ccb92bee2f295a440e4e6684ecce3d203a18ef",
+  "target": {
+    "branch": "hex-901",
+    "head": "7139b75d276f4d46d2aed57550735a0964fb977a",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": "src/App.jsx",
+      "status": "present",
+      "sha256": "e165af8f7cb67c34f04f396a1b385093c22100d0581d147c7ed608e4279e1487",
+      "bytes": 11208,
+      "verdict": "planned",
+      "clauseIds": [
+        "HEX-901:REQ-001"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/App.test.jsx",
+      "status": "present",
+      "sha256": "b62bb70683b6f8e8d1e68aeb2a5c7376aed830f96ad68aa0b1a6a2efa38096bf",
+      "bytes": 9031,
+      "verdict": "planned",
+      "clauseIds": [
+        "HEX-901:AC-001",
+        "HEX-901:REQ-001"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/components/StandardKeypad.jsx",
+      "status": "present",
+      "sha256": "41fefbb64f230cba5ebdb8c8c3e20e75f74e647389511475d950af6d9fb5278d",
+      "bytes": 6704,
+      "verdict": "planned",
+      "clauseIds": [
+        "HEX-901:REQ-001"
+      ],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 3,
+    "planned": 3,
+    "unplanned": 0,
+    "protected": 0
+  },
+  "decision": {
+    "status": "aligned",
+    "summaryStatus": "clear",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "04f51d55d890a8fdcf5fd6f7de633aeff2744c6d6106d7c5078093cb1c839c53",
+  "reconciledAt": "2026-10-19T14:29:41.442Z",
+  "final": true,
+  "recordedAt": "2026-10-19T14:29:41.443Z",
+  "path": "singularity/work-items/hex-901/context/work-intervals/reconciliations/04f51d55d890a8fdcf5fd6f7de633aeff2744c6d6106d7c5078093cb1c839c53.json"
+}
