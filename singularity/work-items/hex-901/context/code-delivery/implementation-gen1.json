@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "hex-901",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "5fb9448a-ed02-4659-a761-8f7cd9bf4fd0",
+  "changeSet": {
+    "path": "singularity/work-items/hex-901/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:d5b1cac6719f390b4c708d4e5efb81e857b805a06c988ae9b05b71ea37f4adc4",
+    "sourcePaths": [
+      "src/App.jsx",
+      "src/components/StandardKeypad.jsx"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [],
+    "executableTestPaths": [
+      "src/App.test.jsx"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "product-source": 2,
+      "test-source": 1
+    },
+    "entries": [
+      {
+        "changeId": "sha256:caf1e2c4e915172ab54b9a940c7924e0138c684e4ebd8704a9ffcae16c280646",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:1e7418ed8e23e6e9ee655cd27ab1fc7677b5826843c319b9f7102b7f821d3f53",
+        "status": "modified",
+        "oldPath": "src/App.test.jsx",
+        "newPath": "src/App.test.jsx",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:82649d7ecb600acbabe3438449bb7b009fe06a3d2a6a57596423479941d2a4a8",
+        "status": "modified",
+        "oldPath": "src/components/StandardKeypad.jsx",
+        "newPath": "src/components/StandardKeypad.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "HEX-901:AC-001"
+    ],
+    "bound": [
+      "HEX-901:AC-001"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "HEX-901:AC-001",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "HEX-901:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "Hex operator"
+          ],
+          "name": "converts positive integer %s to %s without a prefix"
+        },
+        "logicalTestId": "sha256:e675c76a219e5ee27036b748e07f1211cc667019b7ce8c676a03adc4b17339f3",
+        "declarationSha256": "sha256:258c895d1bdcca4cf581b7495ea37b72385a8c66f2512f793a90b58ba9816b6f",
+        "supportSha256": null,
+        "line": 29,
+        "parameters": {
+          "kind": "static",
+          "count": 3,
+          "titlePattern": "^converts positive integer .*? to .*? without a prefix$"
+        },
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "HEX-901:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "Hex operator"
+          ],
+          "name": "converts the pending expression value rather than the previous result"
+        },
+        "logicalTestId": "sha256:a411145db31cb3a5ce3f206f6cd3eab9728925b150eda9ed613e0eabb4826871",
+        "declarationSha256": "sha256:e1a939004bd6cab776addfec0e7ccb04fab97aa53eadf81aad08aea1fb5fb7d5",
+        "supportSha256": null,
+        "line": 45,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "HEX-901:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "HEX-901:REQ-001",
+        "sourcePath": "src/App.jsx",
+        "line": 132,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-901:REQ-001",
+        "sourcePath": "src/components/StandardKeypad.jsx",
+        "line": 51,
+        "tag": "clause"
+      }
+    ]
+  },
+  "fulfillment": {
+    "obligations": [
+      {
+        "clauseId": "HEX-901:AC-001",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/hex-901/evidence/hex-operator-16.png",
+            "state": "present",
+            "sha256": "fa441b44fe0fb42a575c791bdbc035b4cab6090ee61f830c38665bb05c70d742"
+          }
+        ]
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "HEX-901:REQ-001",
+        "explanation": {
+          "text": "Convert the current positive integer without changing evaluator behavior.",
+          "path": "src/App.jsx",
+          "line": 132
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 132,
+                "afterLines": 22
+              },
+              {
+                "beforeStart": 262,
+                "beforeLines": 0,
+                "afterStart": 285,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 288,
+                "beforeLines": 0,
+                "afterStart": 312,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/StandardKeypad.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 12,
+                "beforeLines": 0,
+                "afterStart": 13,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 49,
+                "beforeLines": 0,
+                "afterStart": 51,
+                "afterLines": 7
+              }
+            ],
+            "symbols": [
+              {
+                "name": "StandardKeypad",
+                "kind": "function",
+                "line": 5
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:6e69b17f941c4b69ee01959f698a3a0121fd51a44ed850d1ec578fc422c9130e"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:f27e11f26c357d140c8236cf47891d8bbfdf76ec2a6fab32137ab2b6faf3cf18",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-10-19T14:28:22.132Z"
+}

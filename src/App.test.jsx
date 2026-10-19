@@ -20,6 +20,60 @@ const getResultText = (container) => {
   return lines[lines.length - 1].textContent;
 };
 
+describe('Hex operator', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  // @ac:HEX-901:AC-001
+  it.each([
+    ['16', '10'],
+    ['255', 'ff'],
+    ['4095', 'fff'],
+  ])('converts positive integer %s to %s without a prefix', async (value, expected) => {
+    const { container } = render(<App />);
+
+    for (const digit of value) {
+      await clickButton(container, digit);
+    }
+    await clickButton(container, 'Hex');
+
+    expect(getResultText(container)).toBe(expected);
+  });
+
+  // @ac:HEX-901:AC-001
+  it('converts the pending expression value rather than the previous result', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+
+    await clickButton(container, '1');
+    await clickButton(container, '0');
+    await user.keyboard('+');
+    await clickButton(container, '6');
+    await clickButton(container, 'Hex');
+
+    expect(getResultText(container)).toBe('10');
+  });
+
+  it('shows the Hex action in scientific mode and leaves unsupported values unchanged', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+
+    await user.selectOptions(screen.getAllByRole('combobox')[0], 'scientific');
+    expect(container.querySelectorAll('button').length).toBeGreaterThan(0);
+    expect([...container.querySelectorAll('button')].some((button) => button.textContent.trim() === 'Hex'))
+      .toBe(true);
+
+    await user.selectOptions(screen.getAllByRole('combobox')[0], 'standard');
+    await clickButton(container, '1');
+    await clickButton(container, '.');
+    await clickButton(container, '5');
+    await clickButton(container, 'Hex');
+
+    expect(getResultText(container)).toBe('0');
+  });
+});
+
 // Full end-to-end functional regression across modes, themes, memory,
 // history, and keyboard shortcuts.
 // @ac:AC-003

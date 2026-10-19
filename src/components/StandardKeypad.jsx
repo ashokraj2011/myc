@@ -10,6 +10,7 @@ export const StandardKeypad = ({
   onBackspace,
   onNegate,
   onPercent,
+  onHex,
   onMemory,
   soundEnabled,
 }) => {
@@ -46,6 +47,13 @@ export const StandardKeypad = ({
           className="calc-btn u-bg-btn-func-bg u-text-btn-func-text u-hbg-btn-func-hover font-semibold"
         >
           M-
+        </button>
+        {/* @clause:HEX-901:REQ-001 The Hex control invokes the approved conversion action. */}
+        <button
+          onClick={() => handleBtn('operator', onHex)}
+          className="calc-btn u-bg-btn-func-bg u-text-btn-func-text u-hbg-btn-func-hover font-semibold"
+        >
+          Hex
         </button>
       </div>
 

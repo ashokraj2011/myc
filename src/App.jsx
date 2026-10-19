@@ -129,6 +129,28 @@ export default function App() {
     }
   }, [expression, angleUnit]);
 
+  // @clause:HEX-901:REQ-001 Convert the current positive integer without changing evaluator behavior.
+  const handleHex = useCallback(() => {
+    const currentValue = expression
+      ? evaluateExpression(expression, angleUnit)
+      : { rawResult: Number(result.replaceAll(',', '')), error: null };
+    const value = currentValue.rawResult;
+
+    if (
+      currentValue.error ||
+      typeof value !== 'number' ||
+      !Number.isFinite(value) ||
+      !Number.isInteger(value) ||
+      value <= 0
+    ) {
+      return;
+    }
+
+    setExpression('');
+    setResult(value.toString(16));
+    setLastEvaluated(true);
+  }, [expression, angleUnit, result]);
+
   const handleMemory = useCallback(
     (type) => {
       const currentNum = parseFloat(result) || 0;
@@ -260,6 +282,7 @@ export default function App() {
               onBackspace={handleBackspace}
               onNegate={handleNegate}
               onPercent={handlePercent}
+              onHex={handleHex}
               onMemory={handleMemory}
               soundEnabled={soundEnabled}
             />
@@ -286,6 +309,7 @@ export default function App() {
               onBackspace={handleBackspace}
               onNegate={handleNegate}
               onPercent={handlePercent}
+              onHex={handleHex}
               onMemory={handleMemory}
               soundEnabled={soundEnabled}
             />
