@@ -4,8 +4,8 @@
 - Work type: **spec-driven-standard**
 - Capability: **dfa** (`cfa-calc`)
 - Capability map: `c04ba8e78b7bce7b70c622003ba3d52066b767c4e9c5b8184a98b77b9f1eebaa`
-- Overall status: **in_progress**
-- Current phase: **release**
+- Overall status: **closed**
+- Current phase: **none — every step is decided**
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
@@ -19,10 +19,12 @@
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
 | 5 | Verification (`verification`) | qa | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
-| 6 | Release (`release`) | qa | **awaiting_approval** | 1 | 0 | unavailable |
+| 6 | Release (`release`) | qa | **approved** | 1 | 1 | unavailable |
+|  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
 
 ## Recent history
 
+- 2026-10-19T15:07:53.685Z — **phase_self_approved** (release) by ashokraj2011 · agent qa: threshold reached; closed
 - 2026-10-19T15:04:47.618Z — **upstream_issue_decided** (release) by ashokraj2011 · agent qa: UPI-001: accept-risk. Accepted as a risk until the date: Acceptance and specification results / Negative, regression, security, and non-functional checks in Verification as reported.
 - 2026-10-19T15:04:43.285Z — **upstream_issue_decided** (release) by ashokraj2011 · agent qa: UPI-002: accept-risk. Accepted as a risk until the date: REQ-001 and AC-001 are partial as the Release report says.
 - 2026-10-19T15:04:38.701Z — **upstream_issue_raised** (release) by ashokraj2011 · agent qa: UPI-002 against implementation (HEX-901:REQ-001, HEX-901:AC-001): The Release report marks HEX-901:REQ-001, HEX-901:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list.
@@ -37,4 +39,3 @@
 - 2026-10-19T14:44:30.479Z — **phase_generated** (verification) by ashokraj2011 · agent qa: generation 1
 - 2026-10-19T14:42:34.856Z — **work_interval_started** (verification) by system: baseline 6681f50121cc at 1d9f74dcc3f7
 - 2026-10-19T14:42:34.842Z — **phase_self_approved** (convergence) by ashokraj2011: threshold reached; advanced to verification
-- 2026-10-19T14:41:10.083Z — **phase_submitted** (convergence) by ashokraj2011: 1 artifacts
