@@ -23,6 +23,7 @@
 
 ## Recent history
 
+- 2026-10-19T15:04:47.618Z — **upstream_issue_decided** (release) by ashokraj2011 · agent qa: UPI-001: accept-risk. Accepted as a risk until the date: Acceptance and specification results / Negative, regression, security, and non-functional checks in Verification as reported.
 - 2026-10-19T15:04:43.285Z — **upstream_issue_decided** (release) by ashokraj2011 · agent qa: UPI-002: accept-risk. Accepted as a risk until the date: REQ-001 and AC-001 are partial as the Release report says.
 - 2026-10-19T15:04:38.701Z — **upstream_issue_raised** (release) by ashokraj2011 · agent qa: UPI-002 against implementation (HEX-901:REQ-001, HEX-901:AC-001): The Release report marks HEX-901:REQ-001, HEX-901:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list.
 - 2026-10-19T14:55:03.463Z — **phase_submitted** (release) by ashokraj2011 · agent qa: 2 artifacts
@@ -37,4 +38,3 @@
 - 2026-10-19T14:42:34.856Z — **work_interval_started** (verification) by system: baseline 6681f50121cc at 1d9f74dcc3f7
 - 2026-10-19T14:42:34.842Z — **phase_self_approved** (convergence) by ashokraj2011: threshold reached; advanced to verification
 - 2026-10-19T14:41:10.083Z — **phase_submitted** (convergence) by ashokraj2011: 1 artifacts
-- 2026-10-19T14:38:20.004Z — **phase_generated** (convergence) by ashokraj2011: generation 1
