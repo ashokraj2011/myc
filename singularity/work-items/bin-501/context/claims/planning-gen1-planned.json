@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-10-19T06:32:27.103Z",
+  "claims": {
+    "BIN-501:AC-001": {
+      "expectedPaths": [
+        "singularity/work-items/bin-501/evidence/decimal-to-binary.png"
+      ],
+      "tests": [
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "Executable conversion cases pass and the retained screenshot shows a whole-number decimal input with its corresponding base-2 result."
+    },
+    "BIN-501:REQ-001": {
+      "expectedPaths": [
+        "src/utils/evaluator.js"
+      ],
+      "tests": [
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "Invoking the exported utility with zero and positive whole-number decimal inputs returns base-2 representations of the same numeric values."
+    },
+    "BIN-501:REQ-002": {
+      "expectedPaths": [],
+      "tests": [
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "test-only",
+      "observableResult": "The executable Vitest cases verify conversion behavior for zero and positive whole-number inputs."
+    },
+    "BIN-501:REQ-003": {
+      "expectedPaths": [
+        "singularity/work-items/bin-501/evidence/decimal-to-binary.png"
+      ],
+      "tests": [
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "The retained screenshot visibly pairs one whole-number decimal input with its corresponding binary result; it does not imply new UI/API scope."
+    }
+  },
+  "verificationContracts": [
+    {
+      "clauseId": "BIN-501:AC-001",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "decimal-to-binary-screenshot",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "singularity/work-items/bin-501/evidence/decimal-to-binary.png"
+          },
+          "requiredAssurance": "source-bound"
+        },
+        {
+          "slot": "decimal-to-binary-test-cases",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "src/utils/evaluator.test.js"
+          },
+          "requiredAssurance": "exact-local-observed"
+        }
+      ]
+    }
+  ],
+  "workId": "bin-501",
+  "phase": "planning",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/bin-501/artifacts/planning/plan.md",
+    "sha256": "6d7b7cc96ee36d201cbb3667d6586f8842cb772eb41aaf74fdf42e7adbb016af",
+    "bytes": 19479
+  }
+}
