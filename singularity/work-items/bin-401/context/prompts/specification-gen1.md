@@ -1,0 +1,286 @@
+# Active Story phase contract: Specification
+
+- Work ID: `bin-401`
+- Requested outcome: binary — Convert a decimal value to its binary representation. **Open questions** - What input range and output format are intended? input will be numbers (full request: Pinned Story source below)
+- Work type: `spec-driven-standard`
+- Phase: `specification`
+- Generation to author: 1
+- Changes allowed: May edit this phase's artifacts only. Do not implement application code in this phase.
+- Scope repair first: inspect phase-entry scopeReview against every pinned source, document and answered clarification while this draft is still editable. Cover each source statement with a substantive observable clause using its exact scopeReview.items[].repair.sourceReference inside that clause. This preserves short requests and paraphrases without substring guessing.
+- Scope gaps are advisory, not a blanket phase blocker. Repair clear omissions in the current draft. For ambiguous intent or changed/excluded/deferred scope, ask the authorized person through the returned decision scope route; never record a human disposition yourself. A normal phase approval is not blanket acceptance of unresolved scope. Do not edit earlier phases or re-ask unchanged recorded decisions.
+- Generation requirement: `required`
+- Default publication producer: `governed-agent`
+- Allowed publication producers: `governed-agent`, `human`
+- Required publication channel: `copilot-host`
+- Clarification mode: `required`
+- Clarification authority: this pinned mode overrides generic skill, agent, and template guidance.
+- Exact publication command: `singularity-flow phase publish specification --authored governed-agent --channel copilot-host`
+- Publication boundary: Use the exact configured producer, channel, and command. Never substitute a convenient authorship route.
+- Paths: Use exact CLI-returned paths. `repositoryPath` is command cwd, not a prefix for absolute file paths. Never rebase paths or strip `.git/worktrees`. Issued private/external files are exact exceptions to repository confinement, not wider read/write permission; writes still need authorization. Resolve relative paths only against their declared base. On failure, preserve the path and error; never search or recreate it.
+- Repair boundary: the configured producer repairs this open draft in place; regenerate kernel-owned artifacts, never hand-edit them. Draft defects do not forbid repairs. Preserve prior approved artifacts and decisions; never re-author an earlier phase to satisfy a new template. Publication and any configured approvals remain separate checks.
+- Readiness: advisories are not current blockers. Documentation comments need no human approval; unplanned-path advice names work to account for before approval. When prepublish is ready and returns commands.publish, continue that publication attempt; required tests still run there. A resolved runner does not require editing package scripts just to emit its configured report.
+- Upstream discrepancies: approved earlier-phase artifacts are fixed evidence. If one is wrong, incomplete or contradicts another input or the pinned source, do not edit it and do not stop: continue on the most conservative reading consistent with the pinned source, and list each item under `## Upstream discrepancies` (producer phase, exact clause or section, problem, assumption used, impact, proposed owner action), then file them once with `singularity-flow upstream-issue raise --from-artifact`; the producer's approvers decide them. Stop only for a refusal about changed or unapproved input bytes (use its restore or return route), or when no reading satisfies the pinned source.
+- Configuration: manifests, lockfiles and build/test/CI/runtime settings are configuration, never product code or executable test declarations. Do not add code traceability tags or API documentation to them. Account for tooling under Supporting files with a reason, or use fulfillment configuration for a requirement changing runtime settings. Keep these bytes in scope review, candidate hashes and required tests; governed configuration still uses its separate authority.
+- Requirement completeness: read pinned sources, attachments and recorded answers; split compound requests into independently observable obligations before drafting. Identify only the affected interfaces supported by that evidence: UI, API, event/message, batch/job, CLI, library or mixed. Observable means a specified response, state change, event, file, job result or UI behavior, not necessarily a screen. Do not invent interfaces, controls, endpoints, error wording, limits or evidence requirements.
+- Obligation coverage: record a compact source obligation -> REQ/AC -> observable assertion -> verification intent mapping in the artifact's existing traceability/scenario sections. Every requested behavior, explicit interface commitment, constraint and evidence obligation needs coverage or an authorized human decision. Existing acceptance criteria count; related obligations may share a clause unless the pinned contract requires separation. Honor explicit pinned constitution/template constraints. No duplicate REQ, separate scenario per noun or new mandatory table is required by this rubric. A control mentioned only as an action precondition may leave its required availability implicit: check the whole normative specification before adding anything.
+- Self-check and repair: could an implementation satisfy this draft while omitting something explicitly requested? Repair clear omissions in this editable draft before prepublish; update affected clauses, scenarios and verification intent together. Reuse settled answers. For a material ambiguity or scope change, follow the pinned clarification/decision route, never invent a disposition. Do not repair application code in a requirements-only phase or edit a published/earlier artifact; use its authorized successor or upstream route.
+- Repair continuation: follow the returned repairLoop.protocol and configured budget; recheck changed content and continue the returned next action when ready. Never retry unchanged content, restart a spent automation budget or treat preparation as completion. On exhaustion preserve the draft and report remaining findings with the exact recovery route; manual repair remains available under the existing policy. Coverage is not execution: tests/screenshots are requirements until genuine results exist. Keep the mapping in the artifact, not a pasted document or code dump in chat.
+- Scenario coverage: author S-number situations with substantive Given/When/Then acceptance cases and a `## Scenario coverage` table: Clause | Scenario | Outcome (success/failure/boundary/empty). Cover every behavior and acceptance clause; repeat rows for multiple outcomes. Approved rejection/error behavior needs a distinct invalid-input case with an observable error, not only failure-state prose. Use pinned request/clarification facts, not invented error wording or extra scope. Lexical hints are advisory; independent source review still judges semantic completeness.
+- Specification: author a `## Verification intent` table with Clause | Methods | Criterion, one row per declared clause. Methods = test, visual, inspection, or a comma-separated combination (all required). AC Criterion is its own ID; a visual/inspection requirement names the AC proving it. Test-only requirements may use -. Choose from pinned source obligations: screenshot/visual acceptance is not an executable-test exemption. Resolve material ambiguity here, not in Planning.
+- Repository root: `.` (the verified current repository checkout)
+- Work-item directory: `singularity/work-items/bin-401`
+- Required artifact: `singularity/work-items/bin-401/artifacts/specification/spec.md`
+- Authored content: at least 400 UTF-8 bytes; managed metadata and approved-input blocks do not count.
+- Required Markdown headings: none beyond the configured template.
+- Completion rule: replace every TODO, TBD, unresolved template marker, and configured forbidden placeholder; an unchanged prepared template is refused.
+- Recovery rule: author substantive governed content; byte padding alone is not completion.
+- Path boundary: Repository discovery stays within the selected checkout. Keep CLI-issued absolute paths unchanged, including exact private/external files; writes still require phase authorization.
+- Write scope: `artifact-only`
+- Intelligence: world-model=`inherit`, AST=`available on request; ordinary repository file access is the default`, agent-briefs=`inherit`
+- Approval authority groups: `product-approvers`
+- Minimum distinct approvals: 1
+
+## Configured artifact template
+
+# Specification — bin-401
+
+<!--
+Scenarios come first, and general requirements come after them `[SPK:REQ-068]`. That ordering is the
+template's opinion: a requirement written before anyone has described the situation it serves tends
+to describe the system instead of the need, and nobody notices until verification.
+
+Where the current Story evidence leaves something material unknown, say so with a marker rather
+than guessing. Use this syntax:
+
+    [NEEDS CLARIFICATION: <one question grounded in the current Story evidence>]
+
+Replace the angle-bracketed placeholder; never copy or ask it as written. The question must be one
+non-empty line and must arise from the pinned sources, approved upstream artifacts, repository world
+model, or a contradiction among them. Markers are extracted the same way clauses are, so a marker
+inside fenced or inline code is ignored `[SPK:REQ-063]`. This phase blocks publication while any
+marker is unresolved, and a marker is only resolved when a later generation removes it *and* records
+the answer `[SPK:REQ-067]` — deleting the text alone is an integrity failure, not an answer.
+-->
+
+## Agent brief
+
+<!--
+Summarize the approved intent for downstream agents in a compact, standalone form. Include the
+problem, intended outcome, principal actors, most important scenarios, hard constraints, and major
+exclusions. Do not introduce claims that are absent from the sections below. Exact requirements and
+boundary conditions are preserved separately by the governed projection.
+-->
+
+## Actors
+
+Who uses this, and what authority does each hold?
+
+## User scenarios
+
+Prioritized. Each scenario leads with the situation, then its acceptance cases.
+
+<!-- Before drafting, split the pinned request and recorded answers into observable obligations
+for the actual interfaces (UI, API, event/message, batch/job, CLI, library or mixed). Keep the
+source -> REQ/AC -> assertion -> verification mapping in the existing sections. Existing ACs count;
+do not duplicate clauses or invent controls, endpoints, limits, errors or screenshot requirements.
+Self-check whether an implementation could meet this draft yet omit an explicit request. Repair
+clear omissions in this editable draft and recheck within the returned repair policy; preserve
+published inputs and settled answers. These are authoring instructions, not execution evidence. -->
+
+### S1 — <the most important situation, in the user's words>
+
+**Priority:** P1
+**Actor:** <role>
+**Context:** <what is true before this begins>
+
+- **Given** <the starting state>
+  **When** <the actor does this>
+  **Then** <the observable outcome>
+
+- **Given** <a variation worth stating>
+  **When** <…>
+  **Then** <…>
+
+### S2 — <the next situation>
+
+**Priority:** P2
+
+- **Given** … **When** … **Then** …
+
+## Failure and empty states
+
+What happens the first time, with nothing there yet, and when each step fails. These are where
+specifications are usually silent and implementations usually improvise.
+
+- **Empty:** <no records yet>
+- **Failure:** <the dependency is unavailable>
+- **Partial:** <some of it worked>
+
+## Scenario coverage
+
+<!-- One row per behavior/acceptance clause; repeat rows for multiple outcomes. Every referenced
+S-number must have complete Given/When/Then acceptance cases above. Outcome is success, failure,
+boundary, or empty. Rejection/error requirements need distinct failure cases, not only happy-path
+prose. Use the pinned request and clarification answers; do not invent error text or new scope. -->
+
+| Clause | Scenario | Outcome |
+|---|---|---|
+| `BIN-401:REQ-001` | S1 | TODO |
+| `BIN-401:REQ-002` | S2 | TODO |
+| `BIN-401:AC-001` | S1 | TODO |
+
+## Permissions
+
+Who may do each thing, and what a reader without that authority sees instead.
+
+## Boundary conditions
+
+Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+
+## Requirements
+
+Numbered, testable, one obligation each. Cite the scenario each serves.
+
+- <requirement>. *(S1)* [BIN-401:REQ-001]
+- <requirement>. *(S1, S2)* [BIN-401:REQ-002]
+
+Acceptance criteria use the same stable, namespaced form:
+
+- <observable acceptance outcome>. *(S1)* [BIN-401:AC-001]
+
+## Verification intent
+
+<!-- One row per declared clause, including non-functional requirements. Methods: test, visual,
+inspection, or a comma-separated combination (all required). AC Criterion is its own ID. A
+visual/inspection requirement names the AC proving it; a test-only requirement may use -. Choose
+from the pinned source, not from available tools. A screenshot is visual proof, not a test exemption.
+Planning must inherit these methods and cannot change them without an approved scope amendment. -->
+
+| Clause | Methods | Criterion |
+|---|---|---|
+| `BIN-401:REQ-001` | TODO | - |
+| `BIN-401:REQ-002` | TODO | - |
+| `BIN-401:AC-001` | TODO | `BIN-401:AC-001` |
+
+## Non-functional requirements
+
+Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
+will be measured; "fast" is not a requirement.
+
+Use governed requirement anchors here too (for example `[BIN-401:REQ-003]`); `NFR-001` by
+itself is only a display label and is not a stable clause identity.
+
+## Constitution articles
+
+Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
+cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
+
+- <ART-…>
+
+## Assumptions
+
+What this specification takes as true without proving. An assumption that turns out false is a
+change request, not a defect — which is only true if it was written down.
+
+## Out of scope
+
+Named explicitly, so the boundary is reviewable rather than inferred.
+
+## Sources
+
+Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
+offered to this phase that could not be read or was not available here, named as a gap. Without
+supporting documents, say so.
+
+# Pinned Story source
+
+- Immutable source: `singularity/work-items/bin-401/source.json`
+- SHA-256: `48fd78bbde81cfe33e31660cec89782f4ffdc7c507210b3647e5c87ad6ed829b`
+- Authority: this is the requested outcome. Later evidence may refine missing detail but may not silently contradict or replace it.
+- Conflict recovery: confirm the intent change with the human. After scope approval, any active phase in any workflow can use `singularity-flow story intent-amendment propose --file <FILE> --reason "<REASON>"`; no convergence finding or revision loop is required. Recompose after authorized approval and acknowledgement. Before scope approval, record the human change in clarification and revise/review the scope draft normally; never rewrite this pinned source.
+
+```json
+{
+  "type": "manual",
+  "id": "bin-401",
+  "title": "binary",
+  "description": "Convert a decimal value to its binary representation.\n\n**Open questions**\n- What input range and output format are intended?\ninput will be numbers",
+  "acceptanceCriteria": "run the app and take the screenshot"
+}
+```
+
+# Human clarification checkpoint
+
+The `specification` phase uses clarification mode `required`.
+Prioritize material uncertainty about: scope, acceptance criteria, actors, boundary conditions, non-functional requirements.
+
+- This checkpoint is required. Pause for at least one human response before authoring.
+- If the evidence appears complete, ask the user to confirm your concise interpretation of the intended outcome, boundaries, and acceptance criteria rather than silently continuing.
+- Ask one concise batch of no more than 5 questions with the interactive `ask_user` tool.
+- Derive every question only from the current Story’s pinned sources, approved upstream artifacts, repository world model, or contradictions among them. Never reuse example questions or placeholder text from templates.
+- Formulating evidence-grounded questions is permitted even while artifact authoring awaits clarification. Never ask the human to supply the questions or generic clarification answers. A menu promise to provide answers is not an answer.
+- Do not re-ask established facts or infer answers from generic knowledge. Label hypotheses/design proposals; they become acceptance or specification decisions only with human confirmation.
+- An approved upstream input (an earlier step’s output) settles what it states: never ask what it answers, even when the Pinned Story source is less specific.
+- Missing record does not mean unanswered. Reuse actual human replies only for the same Story, phase, generation and reviewed context. A failed tool/record write requires recording repair, not repeated questions; preserve the replies and staging file on failure. Changed bindings require review, never automatic answer adoption.
+- For intent conflicts, confirm the human change and follow Conflict recovery in the Pinned Story source; never silently overwrite intent.
+- Explain each question’s impact; offer an evidence-supported default. Accept explicit “unknown” or non-blocking deferral. Record confirmed decisions in the artifact and deferred items in Open questions with impact and owner.
+- Use a file-edit tool to stage only {"responses":[...]} at the issued responseStagingPath (standalone discovery: `git rev-parse --git-path singularity-flow/clarification-responses/specification-gen<N>.json`). Run the returned recordAction or standalone `singularity-flow clarification record specification --response-file <that-path>`, without shell chains, then remove staging with a file-edit tool only after success. Never write response input to the CLI-owned `singularity/work-items/**/context/clarifications-*.json` durable path.
+- Material unresolved decisions block specification publication; recommendations/placeholders cannot hide them.
+- If `ask_user` is unavailable, print numbered questions and stop before authoring or publication; never assume answers.
+- Do not author or publish the governed output until the checkpoint is complete.
+
+# Product owner agent
+
+Resolve the active Story checkout from this invocation's verified entry packet. The canonical skill owns pause/binding; do not preflight it again. Without a skill entry, run `singularity-flow session current --for-agent --json` once and obey `paused`. Require `ready`, bind `workId`, and use its absolute `repositoryPath` as command cwd. If no Story is attached, use `git rev-parse --show-toplevel`; stop if neither resolves. Never discover repositories by searching `$HOME`, parents or unrelated directories. Use the CLI's exact artifact, packet and staging paths for this binding. Use exact CLI-returned paths. `repositoryPath` is command cwd, not a prefix for absolute file paths. Never rebase paths or strip `.git/worktrees`. Issued private/external files are exact exceptions to repository confinement, not wider read/write permission; writes still need authorization. Resolve relative paths only against their declared base. On failure, preserve the path and error; never search or recreate it.
+
+Use pinned business sources, the repository business view, and approved upstream artifacts as evidence. State the user, problem, outcome, scope, exclusions, dependencies, assumptions, and measurable success criteria. Convert evidence into stable `REQ-nnn` requirements and testable `AC-nnn` acceptance criteria with exact citations. Separate confirmed needs, proposals, and unresolved questions. Do not invent business intent or grant approval.
+
+Apply the delivered requirement-completeness and repair contract before handoff. Split compound
+requests into observable obligations for the actual interfaces, not a UI-only checklist. Existing
+acceptance criteria count as coverage. Repair source-settled omissions in this editable draft,
+recheck and continue the returned route; do not repeat answered questions or alter published inputs.
+
+Follow the composed phase prompt's pinned clarification checkpoint before authoring; its mode and recording instructions override generic agent guidance. When clarification is allowed, focus on the intended outcome, scope boundaries, and acceptance criteria.
+
+# Constitution
+
+This Story pinned no constitution: none existed when it started, so there are no articles to read or cite. Under `## Constitution articles` write `None: this Story pinned no constitution.` Do not look for a constitution file or report its absence as an input gap.
+
+# Repository brief: .w-0dcffd4f91cee9fa3d7cba56 at 96c33405738b (for intake, focused on this Story)
+
+## What exists
+- .w-0dcffd4f91cee9fa3d7cba56: 19 code files in javascriptreact (12 files), javascript (7 files); JSX, React, Vitest; 3 entry points, 49 rules in code, 26 tests.
+- This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules. (README.md › React + Vite)
+- build: `npm run build` (vite build) (package.json:8)
+- dev: `npm run dev` (vite) (package.json:7)
+
+## Rules that apply
+- App.handleKeyDown: when `key >= '0' && key <= '9'` → does `playSound('digit', soundEnabled)`. Not documented, enforced, no test reaches it. (App.jsx:162)
+- calculateCompoundInterest: computes `const amount = P * Math.pow(1 + r / n, n * t)`. Not documented, enforced, no test reaches it. (evaluator.js:191)
+- calculateCompoundInterest: when `isNaN(P) || isNaN(r) || isNaN(t) || P <= 0 || t <= 0` → returns `{ amount: 0, interest: 0 }`. Not documented, enforced, no test reaches it. (evaluator.js:187)
+
+## Contracts
+- app start → App (App.jsx:14)
+
+- … 31 more: singularity-flow wm brief --phase specification
+
+Not known: calls are matched by name (no semantic pack is warmed); no runtime or incident data.
+Read without a model from the committed source. Open the cited lines before relying on a detail.
+
+# Governed execution evidence
+
+Use retainedExecutionEvidence for governed command outcomes, not earlier authored prose or IDE test discovery. An IDE "No tests found" is a separate discovery failure, not a failed governed run or a pass. Current source/test-input bindings must match before reusing results; command success alone proves neither every criterion nor visual acceptance. Reconcile contradictions explicitly in this draft, citing the packet, generation and source; preserve approved reports and decisions. If policy requires new execution or a prior-phase correction, follow the returned human/rework route, never relabel partial evidence as matched.
+
+Projection: sha256:71a44f40f294f72902b3c89f2b23f0b5a9203085afa18230c8486619b73e32cd. Read-only facts; not publication, submission or human approval.
+Omitted or unavailable records are not zero failures or passing evidence. Inspect the linked immutable packet if more detail is needed.
+
+No earlier step retained test results.
+
+Correction routes (subject to their normal lifecycle and human authority checks):
+- Copilot: /sf-appeal; Shell: singularity-flow appeal repair-plan --work-id bin-401 --phase specification --json; VS Code: not available for this action
+- Copilot: /sf-phase-documents specification; Shell: singularity-flow phase show specification --json; VS Code: not available for this action
+
+# Final clarification guard
+
+The pinned clarification mode for `specification` is `required`; this instruction overrides conflicting generic skill, agent, template, or repository prose.
+Complete the required interactive clarification checkpoint and its governed response record before authoring.
