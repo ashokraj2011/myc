@@ -6986,7 +6986,20 @@
       "artifactRegistrationRepairs": [],
       "artifacts": [],
       "checks": [],
-      "remoteOutputs": []
+      "remoteOutputs": [],
+      "authoringBaseline": {
+        "generation": 1,
+        "path": "artifacts/release/conformance.md",
+        "fingerprint": "sha256:b1e97b8a8497a2c95fc345ae9dbeb72ffc64b6c424419d3396ba8a5e56f7d63c",
+        "bytes": 2055
+      },
+      "inputContext": {
+        "generation": 1,
+        "path": "singularity/work-items/bin-501/context/inputs-release-gen1.json",
+        "sha256": "70f693f8cddeb85f6ece0b559e0a51ca8becc77100116b124cbe9555044589a0",
+        "renderedSha256": "44346b9f1fcc76df2e1cb9932ec2d37634b349a4cbbae55b1345be43e9846675",
+        "mode": "enforce"
+      }
     }
   },
   "usage": {
@@ -7278,6 +7291,14 @@
       "event": "phase_self_approved",
       "phase": "verification",
       "detail": "threshold reached; advanced to release"
+    },
+    {
+      "at": "2026-10-19T08:18:24.905Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "upstream_issue_raised",
+      "phase": "release",
+      "detail": "UPI-001 against specification (recorded discrepancy): **Verification generation 1; “Acceptance and specification results” / “Negative, regression, security, and non-functional checks”:** the approved Verification brief states the focused evaluator suite passed 15 tests, but the immutable Verification submission packet records `no-governed-tests-in-thi…"
     }
   ],
   "measurement": {
@@ -9801,6 +9822,136 @@
         },
         "createdAt": "2026-10-19T07:11:08.013Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "5a3d708e-d1b2-4b92-9d59-76ce6d9c4f68",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "bin-501",
+          "branch": "feature/bin-501"
+        },
+        "phaseId": "release",
+        "generation": 0,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": null,
+        "payload": {
+          "decision": "upstream-issue",
+          "reviewPacketSha256": null,
+          "issue": "UPI-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-19T08:18:23.714Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "5a3d708e-d1b2-4b92-9d59-76ce6d9c4f68",
+        "eventType": "decision-made",
+        "capabilityId": "cfa-calc",
+        "subject": {
+          "aliases": [
+            "bin-501"
+          ],
+          "branch": "feature/bin-501",
+          "canonicalBranch": "feature/bin-501",
+          "createdAt": "2026-10-19T04:38:23.770Z",
+          "currentPhase": "release",
+          "generation": 0,
+          "phase": "release",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 5,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 5,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "release",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "bin",
+          "updatedAt": "2026-10-19T08:18:24.905Z",
+          "workId": "bin-501",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "c04ba8e78b7bce7b70c622003ba3d52066b767c4e9c5b8184a98b77b9f1eebaa",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "1e9ee21b5e311f1c27d56b737efb46c14706df478a45bb6e22dec842f0409d21",
+          "lifecycleEventId": "5a3d708e-d1b2-4b92-9d59-76ce6d9c4f68",
+          "lifecyclePayload": {
+            "decision": "upstream-issue",
+            "reviewPacketSha256": null,
+            "issue": "UPI-001"
+          },
+          "templateSha256": "3d6717eace80085585d04c9c3f5c67f10d7a2e9c4e535a862c8b5aa900d556fe",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "5a3d708e-d1b2-4b92-9d59-76ce6d9c4f68",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "bin-501",
+              "branch": "feature/bin-501"
+            },
+            "phaseId": "release",
+            "generation": 0,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": null,
+            "payload": {
+              "decision": "upstream-issue",
+              "reviewPacketSha256": null,
+              "issue": "UPI-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-19T08:18:23.714Z"
+          }
+        },
+        "createdAt": "2026-10-19T08:18:23.719Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -9917,6 +10068,37 @@
       "authorityGroup": "engineering-reviewers",
       "identityAssurance": "configured-local",
       "at": "2026-10-19T06:53:45.638Z"
+    }
+  ],
+  "upstreamIssues": [
+    {
+      "id": "UPI-001",
+      "phase": "specification",
+      "raisedIn": {
+        "phase": "release",
+        "status": "in_progress",
+        "generation": 0
+      },
+      "about": "recorded discrepancy",
+      "problem": "**Verification generation 1; “Acceptance and specification results” / “Negative, regression, security, and non-functional checks”:** the approved Verification brief states the focused evaluator suite passed 15 tests, but the immutable Verification submission packet records `no-governed-tests-in-thi…",
+      "assumption": null,
+      "impact": null,
+      "proposed": "unknown",
+      "producerGeneration": 1,
+      "producerArtifacts": [
+        {
+          "path": "singularity/work-items/bin-501/artifacts/specification/spec.md",
+          "sha256": "4641cb957c5280a4f23e6f23fe98cda695d1ba938c4c76cf5467651a6b369134"
+        }
+      ],
+      "source": {
+        "path": "singularity/work-items/bin-501/artifacts/release/conformance.md",
+        "itemSha256": "9d3181691415c9388db8fc2ddd36e2a111a870bef8f738b831bc2179da05ee50"
+      },
+      "raisedBy": "ashokraj2011",
+      "authored": "human",
+      "agent": "qa",
+      "at": "2026-10-19T08:18:24.905Z"
     }
   ]
 }
