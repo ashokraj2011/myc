@@ -7088,7 +7088,20 @@
       "artifactRegistrationRepairs": [],
       "artifacts": [],
       "checks": [],
-      "remoteOutputs": []
+      "remoteOutputs": [],
+      "authoringBaseline": {
+        "generation": 1,
+        "path": "artifacts/release/conformance.md",
+        "fingerprint": "sha256:2ebd48e61998135a085e639e6300274ca7e9c611a5cead30abf6a7af584b55a3",
+        "bytes": 2551
+      },
+      "inputContext": {
+        "generation": 1,
+        "path": "singularity/work-items/hex-901/context/inputs-release-gen1.json",
+        "sha256": "ba4703634a0e684710e97582ee1dca9aba668607c4236aed7f3476efa7e6a4fb",
+        "renderedSha256": "677622a01d1798b2b0ce628012f27ad1211ca2051c1179b2c20fc1ea40f9d79f",
+        "mode": "enforce"
+      }
     }
   },
   "usage": {
@@ -7380,6 +7393,14 @@
       "event": "phase_self_approved",
       "phase": "verification",
       "detail": "threshold reached; advanced to release"
+    },
+    {
+      "at": "2026-10-19T14:53:55.862Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "upstream_issue_raised",
+      "phase": "release",
+      "detail": "UPI-001 against verification (Acceptance and specification results / Negative, regression, security, and non-functional checks): **Verification, “Acceptance and specification results” and “Negative, regression, security, and non-functional checks”:** the approved report describes 22 targeted tests as passed, but the retained evidence-consistency record says Verification generation 1 has no retained test execution. Assumption: the approved report's test results are producer-reported claims, not retained execution evidence. Impact: the test portion of both clauses cannot be treated as fully source-bound for this release. Proposed owner action: Verification's producer should attach the execution record or rerun and retain the targeted tests."
     }
   ],
   "measurement": {
@@ -9903,6 +9924,136 @@
         },
         "createdAt": "2026-10-19T14:51:14.526Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "ad1253e9-4c1a-4faa-95e8-395d2e914ec8",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "hex-901",
+          "branch": "hex-901"
+        },
+        "phaseId": "release",
+        "generation": 0,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": null,
+        "payload": {
+          "decision": "upstream-issue",
+          "reviewPacketSha256": null,
+          "issue": "UPI-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-19T14:53:55.100Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "ad1253e9-4c1a-4faa-95e8-395d2e914ec8",
+        "eventType": "decision-made",
+        "capabilityId": "cfa-calc",
+        "subject": {
+          "aliases": [
+            "hex-901"
+          ],
+          "branch": "hex-901",
+          "canonicalBranch": "hex-901",
+          "createdAt": "2026-10-19T13:44:37.535Z",
+          "currentPhase": "release",
+          "generation": 0,
+          "phase": "release",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 5,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 5,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "release",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "hex",
+          "updatedAt": "2026-10-19T14:53:55.862Z",
+          "workId": "hex-901",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "c04ba8e78b7bce7b70c622003ba3d52066b767c4e9c5b8184a98b77b9f1eebaa",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "1e9ee21b5e311f1c27d56b737efb46c14706df478a45bb6e22dec842f0409d21",
+          "lifecycleEventId": "ad1253e9-4c1a-4faa-95e8-395d2e914ec8",
+          "lifecyclePayload": {
+            "decision": "upstream-issue",
+            "reviewPacketSha256": null,
+            "issue": "UPI-001"
+          },
+          "templateSha256": "8f3e84e8e19dfc851d9948f20fbd48c0e43e5d8df9c747404d602106930e14fe",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "ad1253e9-4c1a-4faa-95e8-395d2e914ec8",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "hex-901",
+              "branch": "hex-901"
+            },
+            "phaseId": "release",
+            "generation": 0,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": null,
+            "payload": {
+              "decision": "upstream-issue",
+              "reviewPacketSha256": null,
+              "issue": "UPI-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-19T14:53:55.100Z"
+          }
+        },
+        "createdAt": "2026-10-19T14:53:55.105Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -10007,6 +10158,37 @@
       "authorityGroup": "engineering-reviewers",
       "identityAssurance": "configured-local",
       "at": "2026-10-19T14:46:18.124Z"
+    }
+  ],
+  "upstreamIssues": [
+    {
+      "id": "UPI-001",
+      "phase": "verification",
+      "raisedIn": {
+        "phase": "release",
+        "status": "in_progress",
+        "generation": 0
+      },
+      "about": "Acceptance and specification results / Negative, regression, security, and non-functional checks",
+      "problem": "**Verification, “Acceptance and specification results” and “Negative, regression, security, and non-functional checks”:** the approved report describes 22 targeted tests as passed, but the retained evidence-consistency record says Verification generation 1 has no retained test execution. Assumption: the approved report's test results are producer-reported claims, not retained execution evidence. Impact: the test portion of both clauses cannot be treated as fully source-bound for this release. Proposed owner action: Verification's producer should attach the execution record or rerun and retain the targeted tests.",
+      "assumption": "the approved report's test results are producer-reported claims, not retained execution evidence.",
+      "impact": "the test portion of both clauses cannot be treated as fully source-bound for this release.",
+      "proposed": "unknown",
+      "producerGeneration": 1,
+      "producerArtifacts": [
+        {
+          "path": "singularity/work-items/hex-901/artifacts/verification/test-evidence.md",
+          "sha256": "0c96c287eb240ff70500627a330c63245599c2e421d1179a90c93a86a49d7a1e"
+        }
+      ],
+      "source": {
+        "path": "singularity/work-items/hex-901/artifacts/release/conformance.md",
+        "itemSha256": "c5cf1208f380592efd70a8cbf1b318ba51e30229eef9ae7db50503726bd8e239"
+      },
+      "raisedBy": "ashokraj2011",
+      "authored": "human",
+      "agent": "qa",
+      "at": "2026-10-19T14:53:55.862Z"
     }
   ]
 }

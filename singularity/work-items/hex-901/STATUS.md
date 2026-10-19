@@ -23,6 +23,7 @@
 
 ## Recent history
 
+- 2026-10-19T14:53:55.862Z — **upstream_issue_raised** (release) by ashokraj2011 · agent qa: UPI-001 against verification (Acceptance and specification results / Negative, regression, security, and non-functional checks): **Verification, “Acceptance and specification results” and “Negative, regression, security, and non-functional checks”:** the approved report describes 22 targeted tests as passed, but the retained evidence-consistency record says Verification generation 1 has no retained test execution. Assumption: the approved report's test results are producer-reported claims, not retained execution evidence. Impact: the test portion of both clauses cannot be treated as fully source-bound for this release. Proposed owner action: Verification's producer should attach the execution record or rerun and retain the targeted tests.
 - 2026-10-19T14:51:14.852Z — **phase_self_approved** (verification) by ashokraj2011 · agent qa: threshold reached; advanced to release
 - 2026-10-19T14:51:14.852Z — **work_interval_closed** (verification) by ashokraj2011 · agent qa: interval INT-verification-G1-002 closed after phase approval
 - 2026-10-19T14:46:44.518Z — **phase_submitted** (verification) by ashokraj2011 · agent qa: 1 artifacts
@@ -37,4 +38,3 @@
 - 2026-10-19T14:32:35.038Z — **work_interval_closed** (implementation) by ashokraj2011 · agent developer: interval INT-implementation-G1-001 closed after phase approval
 - 2026-10-19T14:29:41.443Z — **phase_submitted** (implementation) by ashokraj2011 · agent developer: 4 artifacts
 - 2026-10-19T14:29:41.443Z — **work_interval_reconciled** (implementation) by system: aligned; 3 changed path(s)
-- 2026-10-19T14:28:22.273Z — **phase_generated** (implementation) by ashokraj2011 · agent developer: generation 1
