@@ -7675,6 +7675,14 @@
       "event": "upstream_issue_raised",
       "phase": "release",
       "detail": "UPI-002 against verification (BIN-501:REQ-001, BIN-501:REQ-002, BIN-501:AC-001): Verification claimed a 15-test run that SFlow never recorded It supersedes UPI-001."
+    },
+    {
+      "at": "2026-10-19T10:14:53.431Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "evidence_reuse_decided",
+      "phase": "verification",
+      "detail": "ERU-001 reused: TA-bbef1890ef2f7ef6828b recorded by implementation at 2dd030494080; approved for verification by ashokraj2011 (ERU-001), not a run by verification. Implementation's recorded run covers the unchanged source"
     }
   ],
   "measurement": {
@@ -10712,6 +10720,139 @@
         },
         "createdAt": "2026-10-19T10:13:54.899Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "f778c742-8256-4914-8eea-ae688b8af800",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "bin-501",
+          "branch": "feature/bin-501"
+        },
+        "phaseId": "verification",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": "quality-reviewers",
+        "payload": {
+          "decision": "evidence-reuse",
+          "reviewPacketSha256": null,
+          "record": "ERU-001",
+          "revoked": false
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-19T10:14:53.500Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "f778c742-8256-4914-8eea-ae688b8af800",
+        "eventType": "decision-made",
+        "capabilityId": "cfa-calc",
+        "subject": {
+          "aliases": [
+            "bin-501"
+          ],
+          "branch": "feature/bin-501",
+          "canonicalBranch": "feature/bin-501",
+          "createdAt": "2026-10-19T04:38:23.770Z",
+          "currentPhase": "release",
+          "generation": 1,
+          "phase": "verification",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 5,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 0,
+              "awaiting_approval": 1,
+              "approved": 5,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "release",
+              "status": "awaiting_approval",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "bin",
+          "updatedAt": "2026-10-19T10:14:53.431Z",
+          "workId": "bin-501",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": "quality-reviewers",
+        "payload": {
+          "capabilityMapSha256": "c04ba8e78b7bce7b70c622003ba3d52066b767c4e9c5b8184a98b77b9f1eebaa",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "1e9ee21b5e311f1c27d56b737efb46c14706df478a45bb6e22dec842f0409d21",
+          "lifecycleEventId": "f778c742-8256-4914-8eea-ae688b8af800",
+          "lifecyclePayload": {
+            "decision": "evidence-reuse",
+            "reviewPacketSha256": null,
+            "record": "ERU-001",
+            "revoked": false
+          },
+          "templateSha256": "fdda5ab9e701142bd6d1f12e90b85b4e24dddffb0f4f5d89c5b534bd9137e4e0",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "f778c742-8256-4914-8eea-ae688b8af800",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "bin-501",
+              "branch": "feature/bin-501"
+            },
+            "phaseId": "verification",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": "quality-reviewers",
+            "payload": {
+              "decision": "evidence-reuse",
+              "reviewPacketSha256": null,
+              "record": "ERU-001",
+              "revoked": false
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-19T10:14:53.500Z"
+          }
+        },
+        "createdAt": "2026-10-19T10:14:53.511Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -10886,6 +11027,42 @@
       "authored": "human",
       "agent": "qa",
       "at": "2026-10-19T10:13:56.030Z"
+    }
+  ],
+  "evidenceReuses": [
+    {
+      "id": "ERU-001",
+      "phase": "verification",
+      "attempt": {
+        "id": "TA-bbef1890ef2f7ef6828b",
+        "sha256": "0a605cfad40d89f0d34732fc9f2d3146952c429a2506cd112214071e9910e2c4",
+        "path": "singularity/work-items/bin-501/context/code-delivery/tests/attempts/implementation/TA-bbef1890ef2f7ef6828b.json",
+        "phase": "implementation",
+        "generation": 1,
+        "commandId": ".-node-tests",
+        "status": "passed",
+        "tests": {
+          "discovered": 33,
+          "passed": 33,
+          "failed": 0,
+          "skipped": 0
+        },
+        "completedAt": "2026-10-19T06:51:05.643Z"
+      },
+      "source": {
+        "commit": "2dd03049408064b1505628e97bcd23885480b97f",
+        "treeSha256": "sha256:19532122e0711ee508104386b91a462bcbd51c974cc6fb9dfb575146e68b2f7f",
+        "testInputSha256": null
+      },
+      "clauses": [
+        "BIN-501:AC-001"
+      ],
+      "reason": "Implementation's recorded run covers the unchanged source",
+      "expiresAt": null,
+      "actor": "ashokraj2011",
+      "authorityGroup": "quality-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-10-19T10:14:53.431Z"
     }
   ]
 }
