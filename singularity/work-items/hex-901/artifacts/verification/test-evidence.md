@@ -5,7 +5,7 @@
   "workType": "spec-driven-standard",
   "phase": "verification",
   "generation": 1,
-  "status": "awaiting_approval",
+  "status": "approved",
   "generatedBy": {
     "name": "Ashok Raj",
     "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -119,8 +119,105 @@
     }
   ],
   "sequenceOverrides": [],
-  "approvals": [],
-  "selfApproval": false,
+  "approvals": [
+    {
+      "decision": "approved",
+      "phase": "verification",
+      "at": "2026-10-19T14:51:14.852Z",
+      "actor": {
+        "name": "Ashok Raj",
+        "email": "88361104+ashokraj2011@users.noreply.github.com",
+        "login": "ashokraj2011",
+        "githubLookup": "resolved"
+      },
+      "agent": "qa",
+      "authorityGroup": "quality-reviewers",
+      "identityAssurance": "configured-local",
+      "channel": "copilot-selection-receipt",
+      "generation": 1,
+      "artifactSha256": [
+        {
+          "path": "singularity/work-items/hex-901/artifacts/verification/test-evidence.md",
+          "sha256": "a2d92117db67690341c3f2ccf7ca1d7ec30c8165c3d7a81d4b06ed497d03b419"
+        }
+      ],
+      "reviewPacketSha256": "a0e73b5c04814b12d03b5f41715d6220210c35aff1cd1ccdb48953107031e1ea",
+      "evidenceCommit": "77fb4ac05545951e6409de459766a0fe5fbbf58c",
+      "artifactSetSha256": "44c38f362e6ea32dd8049a9111fbc531903d26ed0202fd4322993b0371a6a38e",
+      "architectureIntent": null,
+      "architectureDecision": null,
+      "actionContext": {
+        "phase": "verification",
+        "label": "Verification",
+        "generation": 1,
+        "submittedAt": "2026-10-19T14:46:44.518Z",
+        "artifacts": [
+          {
+            "path": "singularity/work-items/hex-901/artifacts/verification/test-evidence.md",
+            "sha256": "a2d92117db67690341c3f2ccf7ca1d7ec30c8165c3d7a81d4b06ed497d03b419"
+          }
+        ],
+        "agentBriefs": [
+          {
+            "consumerPhase": "release",
+            "status": "ready",
+            "path": "singularity/work-items/hex-901/context/briefs/verification-gen1-for-release.json",
+            "renderedPath": "singularity/work-items/hex-901/context/briefs/verification-gen1-for-release.md",
+            "renderedSha256": "0ff6d15a9ea3e9e30306a234e70f8b0d5e3be60b7afd93c86130b16659b12e84",
+            "integritySha256": "de292e900a847ec2eca4cc32bf9e1189443ebd544621ae7f39cbd4ecaeb6c1b3",
+            "documentId": "agent-brief-verification-gen1-release",
+            "documentPath": "singularity/work-items/hex-901/context/briefs/verification-gen1-for-release.md",
+            "documentSha256": "0ff6d15a9ea3e9e30306a234e70f8b0d5e3be60b7afd93c86130b16659b12e84"
+          }
+        ],
+        "reviewPacketSha256": "a0e73b5c04814b12d03b5f41715d6220210c35aff1cd1ccdb48953107031e1ea",
+        "submittedSourceCommit": "e30fca8d00394f8c0943b1f6505de0b3964bcdbd",
+        "planId": "39992bf3fc4ccbfb4d2239e9"
+      },
+      "upstream": {
+        "sha256": "sha256:086bb5a082307855357bba4b0e547f4a409c604481215b443fb8a6b98cdff490",
+        "refs": [
+          {
+            "kind": "input",
+            "ref": "implementation",
+            "sha256": "sha256:a4f41c1f811af3acbf93f0394ce8f5d5500bda9442a54adf0f2a6528ddce7003"
+          },
+          {
+            "kind": "input",
+            "ref": "planning",
+            "sha256": "sha256:4d911f4074bb22e0964daa5599a8ce1d520531a27943fc521ae1a29f4e7d7b42"
+          },
+          {
+            "kind": "input",
+            "ref": "specification",
+            "sha256": "sha256:1eb9162c915dd44628cb7a06e2f754f80b98ac5885eb0093bbdbba7998249ac4"
+          },
+          {
+            "kind": "candidate",
+            "ref": "HEAD",
+            "sha256": "sha256:d54dfd9acf4157990e2fc27d65492759b041b91f6c69dcd1794bfb06b4231d28"
+          },
+          {
+            "kind": "specification",
+            "ref": "records",
+            "sha256": "sha256:f19dc729cde34f0763a02fb76e2b5baf0837992490426898e6cf5595b34885b5"
+          },
+          {
+            "kind": "documents",
+            "ref": "verification",
+            "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+          },
+          {
+            "kind": "decisions",
+            "ref": "story",
+            "sha256": "sha256:9d7a343755edca43bb67db44fc0814e281dc5f2c79fe1ee4eefd2770005c9b21"
+          }
+        ]
+      },
+      "selfApproval": true
+    }
+  ],
+  "selfApproval": true,
   "conformanceTree": null
 }
 -->
