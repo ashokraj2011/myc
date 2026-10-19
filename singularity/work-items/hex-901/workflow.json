@@ -7043,6 +7043,14 @@
       "event": "phase_generated",
       "phase": "verification",
       "detail": "generation 1"
+    },
+    {
+      "at": "2026-10-19T14:46:18.124Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "witness_recorded",
+      "phase": "verification",
+      "detail": "WIT-001: visual of singularity/work-items/hex-901/evidence/hex-operator-16.png for HEX-901:AC-001 slot hex-operator-16 satisfies it. reviewed and look fine .The screenshot is correct"
     }
   ],
   "measurement": {
@@ -9173,6 +9181,136 @@
         },
         "createdAt": "2026-10-19T14:44:29.612Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "e03e01f6-8ebf-4934-b6f2-a951d5312b94",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "hex-901",
+          "branch": "hex-901"
+        },
+        "phaseId": "verification",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "decision": "witness",
+          "reviewPacketSha256": null,
+          "record": "WIT-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-19T14:46:17.301Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "e03e01f6-8ebf-4934-b6f2-a951d5312b94",
+        "eventType": "decision-made",
+        "capabilityId": "cfa-calc",
+        "subject": {
+          "aliases": [
+            "hex-901"
+          ],
+          "branch": "hex-901",
+          "canonicalBranch": "hex-901",
+          "createdAt": "2026-10-19T13:44:37.535Z",
+          "currentPhase": "verification",
+          "generation": 1,
+          "phase": "verification",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 4,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 1,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 4,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "verification",
+              "status": "in_progress",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "hex",
+          "updatedAt": "2026-10-19T14:46:18.124Z",
+          "workId": "hex-901",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "capabilityMapSha256": "c04ba8e78b7bce7b70c622003ba3d52066b767c4e9c5b8184a98b77b9f1eebaa",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "1e9ee21b5e311f1c27d56b737efb46c14706df478a45bb6e22dec842f0409d21",
+          "lifecycleEventId": "e03e01f6-8ebf-4934-b6f2-a951d5312b94",
+          "lifecyclePayload": {
+            "decision": "witness",
+            "reviewPacketSha256": null,
+            "record": "WIT-001"
+          },
+          "templateSha256": "fdda5ab9e701142bd6d1f12e90b85b4e24dddffb0f4f5d89c5b534bd9137e4e0",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "e03e01f6-8ebf-4934-b6f2-a951d5312b94",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "hex-901",
+              "branch": "hex-901"
+            },
+            "phaseId": "verification",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": "engineering-reviewers",
+            "payload": {
+              "decision": "witness",
+              "reviewPacketSha256": null,
+              "record": "WIT-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-19T14:46:17.301Z"
+          }
+        },
+        "createdAt": "2026-10-19T14:46:17.302Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -9247,6 +9385,29 @@
       "previousRevisionSha256": null,
       "at": "2026-10-19T14:05:10.708Z",
       "revisionSha256": "sha256:034451f28f655a64f1693511a7c4a559bacc5b1e6756f45d9a2da2bb7dfd4f7c"
+    }
+  ],
+  "witnessRecords": [
+    {
+      "id": "WIT-001",
+      "clauseId": "HEX-901:AC-001",
+      "slot": "hex-operator-16",
+      "method": "visual",
+      "file": "singularity/work-items/hex-901/evidence/hex-operator-16.png",
+      "sha256": "sha256:fa441b44fe0fb42a575c791bdbc035b4cab6090ee61f830c38665bb05c70d742",
+      "contextBinding": "sha256:a6f2e36aba9a39411c77985044313edad9fb3ae275bbfd6f0ad60331ab2cc39b",
+      "target": "singularity/work-items/hex-901/evidence/hex-operator-16.png",
+      "checklist": {
+        "states-the-outcome": "yes",
+        "matches-the-criterion": "yes",
+        "current-for-this-change": "yes"
+      },
+      "outcome": "met",
+      "reason": "reviewed and look fine .The screenshot is correct",
+      "actor": "ashokraj2011",
+      "authorityGroup": "engineering-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-10-19T14:46:18.124Z"
     }
   ]
 }
