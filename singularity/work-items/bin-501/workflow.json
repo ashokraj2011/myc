@@ -6245,6 +6245,14 @@
       "event": "phase_submitted",
       "phase": "implementation",
       "detail": "3 artifacts"
+    },
+    {
+      "at": "2026-10-19T06:53:45.638Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "witness_recorded",
+      "phase": "implementation",
+      "detail": "WIT-001: visual of singularity/work-items/bin-501/evidence/decimal-to-binary.png for BIN-501:AC-001 slot decimal-to-binary-screenshot satisfies it. inspected the screenshot and it look fine .We are good to go .Pls go ahead"
     }
   ],
   "measurement": {
@@ -7722,6 +7730,136 @@
         },
         "createdAt": "2026-10-19T06:51:01.965Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "ea110a09-c84c-45cc-8031-e6061fc7516f",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "bin-501",
+          "branch": "feature/bin-501"
+        },
+        "phaseId": "implementation",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "decision": "witness",
+          "reviewPacketSha256": null,
+          "record": "WIT-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-19T06:53:43.635Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "ea110a09-c84c-45cc-8031-e6061fc7516f",
+        "eventType": "decision-made",
+        "capabilityId": "cfa-calc",
+        "subject": {
+          "aliases": [
+            "bin-501"
+          ],
+          "branch": "feature/bin-501",
+          "canonicalBranch": "feature/bin-501",
+          "createdAt": "2026-10-19T04:38:23.770Z",
+          "currentPhase": "implementation",
+          "generation": 1,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 0,
+              "awaiting_approval": 1,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "awaiting_approval",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "bin",
+          "updatedAt": "2026-10-19T06:53:45.638Z",
+          "workId": "bin-501",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "capabilityMapSha256": "c04ba8e78b7bce7b70c622003ba3d52066b767c4e9c5b8184a98b77b9f1eebaa",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "1e9ee21b5e311f1c27d56b737efb46c14706df478a45bb6e22dec842f0409d21",
+          "lifecycleEventId": "ea110a09-c84c-45cc-8031-e6061fc7516f",
+          "lifecyclePayload": {
+            "decision": "witness",
+            "reviewPacketSha256": null,
+            "record": "WIT-001"
+          },
+          "templateSha256": "2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "ea110a09-c84c-45cc-8031-e6061fc7516f",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "bin-501",
+              "branch": "feature/bin-501"
+            },
+            "phaseId": "implementation",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "engineering-reviewers",
+            "payload": {
+              "decision": "witness",
+              "reviewPacketSha256": null,
+              "record": "WIT-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-19T06:53:43.635Z"
+          }
+        },
+        "createdAt": "2026-10-19T06:53:43.640Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -7804,6 +7942,29 @@
       "previousRevisionSha256": null,
       "at": "2026-10-19T06:26:34.100Z",
       "revisionSha256": "sha256:4bffed04bae6e62bea4f561740ab7765fef1643b179874929e727f5063e378a8"
+    }
+  ],
+  "witnessRecords": [
+    {
+      "id": "WIT-001",
+      "clauseId": "BIN-501:AC-001",
+      "slot": "decimal-to-binary-screenshot",
+      "method": "visual",
+      "file": "singularity/work-items/bin-501/evidence/decimal-to-binary.png",
+      "sha256": "sha256:65c5a8a90dadcc20f203b001241766718536b8cc0c5d8d687da06bb3b0a0a82e",
+      "contextBinding": "sha256:75c3738b996819e7add40ca20dd5a857c3e4f675a6b68f1f66410b3674677516",
+      "target": "singularity/work-items/bin-501/evidence/decimal-to-binary.png",
+      "checklist": {
+        "states-the-outcome": "yes",
+        "matches-the-criterion": "yes",
+        "current-for-this-change": "yes"
+      },
+      "outcome": "met",
+      "reason": "inspected the screenshot and it look fine .We are good to go .Pls go ahead",
+      "actor": "ashokraj2011",
+      "authorityGroup": "engineering-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-10-19T06:53:45.638Z"
     }
   ]
 }
