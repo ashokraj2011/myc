@@ -7667,6 +7667,14 @@
       "event": "phase_submitted",
       "phase": "release",
       "detail": "2 artifacts"
+    },
+    {
+      "at": "2026-10-19T10:13:56.030Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "upstream_issue_raised",
+      "phase": "release",
+      "detail": "UPI-002 against verification (BIN-501:REQ-001, BIN-501:REQ-002, BIN-501:AC-001): Verification claimed a 15-test run that SFlow never recorded It supersedes UPI-001."
     }
   ],
   "measurement": {
@@ -10574,6 +10582,136 @@
         },
         "createdAt": "2026-10-19T08:19:43.129Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "0a638b80-4fb0-4c88-8759-f0b52f4975f9",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "bin-501",
+          "branch": "feature/bin-501"
+        },
+        "phaseId": "release",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": null,
+        "payload": {
+          "decision": "upstream-issue",
+          "reviewPacketSha256": null,
+          "issue": "UPI-002"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-19T10:13:54.888Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "0a638b80-4fb0-4c88-8759-f0b52f4975f9",
+        "eventType": "decision-made",
+        "capabilityId": "cfa-calc",
+        "subject": {
+          "aliases": [
+            "bin-501"
+          ],
+          "branch": "feature/bin-501",
+          "canonicalBranch": "feature/bin-501",
+          "createdAt": "2026-10-19T04:38:23.770Z",
+          "currentPhase": "release",
+          "generation": 1,
+          "phase": "release",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 5,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 0,
+              "awaiting_approval": 1,
+              "approved": 5,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "release",
+              "status": "awaiting_approval",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "bin",
+          "updatedAt": "2026-10-19T10:13:56.030Z",
+          "workId": "bin-501",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "c04ba8e78b7bce7b70c622003ba3d52066b767c4e9c5b8184a98b77b9f1eebaa",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "1e9ee21b5e311f1c27d56b737efb46c14706df478a45bb6e22dec842f0409d21",
+          "lifecycleEventId": "0a638b80-4fb0-4c88-8759-f0b52f4975f9",
+          "lifecyclePayload": {
+            "decision": "upstream-issue",
+            "reviewPacketSha256": null,
+            "issue": "UPI-002"
+          },
+          "templateSha256": "3d6717eace80085585d04c9c3f5c67f10d7a2e9c4e535a862c8b5aa900d556fe",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "0a638b80-4fb0-4c88-8759-f0b52f4975f9",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "bin-501",
+              "branch": "feature/bin-501"
+            },
+            "phaseId": "release",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": null,
+            "payload": {
+              "decision": "upstream-issue",
+              "reviewPacketSha256": null,
+              "issue": "UPI-002"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-19T10:13:54.888Z"
+          }
+        },
+        "createdAt": "2026-10-19T10:13:54.899Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -10721,6 +10859,33 @@
       "authored": "human",
       "agent": "qa",
       "at": "2026-10-19T08:18:24.905Z"
+    },
+    {
+      "id": "UPI-002",
+      "phase": "verification",
+      "raisedIn": {
+        "phase": "release",
+        "status": "awaiting_approval",
+        "generation": 1
+      },
+      "about": "BIN-501:REQ-001, BIN-501:REQ-002, BIN-501:AC-001",
+      "problem": "Verification claimed a 15-test run that SFlow never recorded",
+      "assumption": null,
+      "impact": null,
+      "proposed": "unknown",
+      "producerGeneration": 1,
+      "producerArtifacts": [
+        {
+          "path": "singularity/work-items/bin-501/artifacts/verification/test-evidence.md",
+          "sha256": "cdd2987d164fd880800b7d991a0d5e574a4f58e3e1c25410764efa4bb6205ace"
+        }
+      ],
+      "source": null,
+      "supersedes": "UPI-001",
+      "raisedBy": "ashokraj2011",
+      "authored": "human",
+      "agent": "qa",
+      "at": "2026-10-19T10:13:56.030Z"
     }
   ]
 }
