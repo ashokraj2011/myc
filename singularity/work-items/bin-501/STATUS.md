@@ -23,6 +23,7 @@
 
 ## Recent history
 
+- 2026-10-19T10:19:02.381Z — **upstream_issue_decided** (release) by ashokraj2011 · agent qa: UPI-001: dismiss. Superseded by UPI-002.
 - 2026-10-19T10:17:42.609Z — **upstream_issue_decided** (release) by ashokraj2011 · agent qa: UPI-002: accept-risk. 15-test Verification claim unsubstantiated; REQ-001, REQ-002 and AC-001 covered by ERU-001, a reuse of Implementation's recorded run TA-bbef1890ef2f7ef6828b on unchanged source.
 - 2026-10-19T10:14:53.431Z — **evidence_reuse_decided** (verification) by ashokraj2011 · agent qa: ERU-001 reused: TA-bbef1890ef2f7ef6828b recorded by implementation at 2dd030494080; approved for verification by ashokraj2011 (ERU-001), not a run by verification. Implementation's recorded run covers the unchanged source
 - 2026-10-19T10:13:56.030Z — **upstream_issue_raised** (release) by ashokraj2011 · agent qa: UPI-002 against verification (BIN-501:REQ-001, BIN-501:REQ-002, BIN-501:AC-001): Verification claimed a 15-test run that SFlow never recorded It supersedes UPI-001.
@@ -37,4 +38,3 @@
 - 2026-10-19T07:04:59.538Z — **work_interval_started** (verification) by system: baseline 79aaf952723f at aaaeddfb3cb2
 - 2026-10-19T07:04:59.523Z — **phase_self_approved** (convergence) by ashokraj2011: threshold reached; advanced to verification
 - 2026-10-19T07:04:07.725Z — **phase_submitted** (convergence) by ashokraj2011: 1 artifacts
-- 2026-10-19T07:02:59.907Z — **phase_generated** (convergence) by ashokraj2011: generation 1
