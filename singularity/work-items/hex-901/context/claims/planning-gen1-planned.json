@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-10-19T14:12:06.628Z",
+  "claims": {
+    "HEX-901:AC-001": {
+      "expectedPaths": [
+        "singularity/work-items/hex-901/evidence/hex-operator-16.png"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "Screenshot shows 16 converted to `10` in the calculator display with no prefix; tests cover positive-integer conversion."
+    },
+    "HEX-901:REQ-001": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/StandardKeypad.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Invoking Hex for a positive integer displays its equivalent base-16 representation."
+    }
+  },
+  "verificationContracts": [
+    {
+      "clauseId": "HEX-901:AC-001",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "hex-conversion-test",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "src/App.test.jsx"
+          },
+          "requiredAssurance": "exact-local-observed"
+        },
+        {
+          "slot": "hex-operator-16",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "singularity/work-items/hex-901/evidence/hex-operator-16.png"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    }
+  ],
+  "workId": "hex-901",
+  "phase": "planning",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/hex-901/artifacts/planning/plan.md",
+    "sha256": "625bd89a6b3aff4009dbdf3589f6ed47103ff63f70cf15187d7b43039d58067c",
+    "bytes": 18707
+  }
+}
