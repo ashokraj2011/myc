@@ -1,5 +1,13 @@
 import * as math from 'mathjs';
 
+/**
+ * Converts a whole-number decimal value to its base-2 representation.
+ * @param {number} value
+ * @returns {string}
+ * @clause:BIN-501:REQ-001 Preserve the input's numeric value in base 2.
+ */
+export const decimalToBinary = (value) => value.toString(2);
+
 // Custom evaluator wrapper around mathjs with degree/radian support and error handling
 export const evaluateExpression = (expr, angleUnit = 'DEG') => {
   if (!expr || expr.trim() === '') return { result: '0', rawResult: 0, error: null };

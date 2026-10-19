@@ -1,9 +1,21 @@
 import { describe, it, expect } from 'vitest';
-import { evaluateExpression, formatNumber } from '../utils/evaluator';
+import { decimalToBinary, evaluateExpression, formatNumber } from '../utils/evaluator';
 
 // Verifies WRK-1978:AC-003 and WRK-1978:AC-005: the restyle work must not
 // change calculation semantics, expression evaluation, or number formatting.
 // @ac:AC-003 @ac:AC-005
+describe('decimalToBinary', () => {
+  // @ac:BIN-501:AC-001
+  it('converts zero to its base-2 representation', () => {
+    expect(decimalToBinary(0)).toBe('0');
+  });
+
+  // @ac:BIN-501:AC-001
+  it('converts a positive whole number to its base-2 representation', () => {
+    expect(decimalToBinary(13)).toBe('1101');
+  });
+});
+
 describe('evaluateExpression (calculation behavior regression)', () => {
   it('evaluates basic arithmetic unchanged', () => {
     expect(evaluateExpression('2 + 2')).toEqual({ result: '4', rawResult: 4, error: null });

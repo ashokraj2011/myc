@@ -1,0 +1,381 @@
+{
+  "schemaVersion": 7,
+  "workId": "bin-501",
+  "phase": "implementation",
+  "generation": 1,
+  "agent": "developer",
+  "modelCommit": null,
+  "matchedRules": 0,
+  "mode": "off",
+  "applied": false,
+  "depth": "standard",
+  "evidence": false,
+  "groundingAvailability": {
+    "status": "unavailable",
+    "reasonCode": "WORLD_MODEL_GROUNDING_DISABLED"
+  },
+  "sourceComparison": {
+    "status": "unavailable",
+    "reasonCode": "WORLD_MODEL_GROUNDING_DISABLED"
+  },
+  "requiredViews": [],
+  "requiredSelections": [],
+  "task": null,
+  "supportingEvidence": [],
+  "references": [],
+  "modelSourceTreeSha256": null,
+  "composedSourceTreeSha256": null,
+  "worldModelCommit": null,
+  "manifestSha256": null,
+  "fresh": true,
+  "renderedSha256": "cd59aab718a462dc2bedf93a68cdff46f34b08828d061e699dd4ab2441217396",
+  "promptStudy": null,
+  "promptDefinition": null,
+  "structuralContext": null,
+  "workSource": {
+    "path": "singularity/work-items/bin-501/source.json",
+    "sha256": "216bd2a30213fc22e75610021d581ac239866823e84e5d223c2d916658fc4f05",
+    "bytes": 954
+  },
+  "promptBudget": {
+    "policy": {
+      "mode": "observe",
+      "profile": "standard",
+      "maximumBytes": 72000,
+      "maximumEstimatedPromptTokens": 18000,
+      "policyOnBudgetBreach": "refuse",
+      "assurance": "estimated-prompt-text"
+    },
+    "admission": {
+      "model": null,
+      "logicalPromptBytes": 30865,
+      "logicalPromptTokens": {
+        "value": 7717,
+        "assurance": "estimated"
+      },
+      "systemAndToolReserveTokens": {
+        "value": null,
+        "assurance": "unavailable"
+      },
+      "historyTokens": {
+        "value": null,
+        "assurance": "unavailable"
+      },
+      "totalAdmissionTokens": {
+        "value": 7717,
+        "assurance": "partial"
+      },
+      "maximumInputTokens": 18000,
+      "safeToEnforce": false,
+      "admitted": null,
+      "policyApprovedConservativeUpperBound": false
+    },
+    "compliance": "compliant",
+    "originalBytes": 30865,
+    "originalEstimatedTokens": 7717,
+    "finalBytes": 30865,
+    "finalEstimatedTokens": 7717,
+    "overflow": false,
+    "warnings": [],
+    "economics": {
+      "prompt": {
+        "candidatePromptBytes": 30865,
+        "deduplicatedPromptBytes": 1365,
+        "budgetEvictedPromptBytes": 0,
+        "finalPromptBytes": 30865,
+        "tkrCandidatePromptBytes": null,
+        "tkrCandidateByteDelta": null,
+        "tkrCandidateAssurance": "unavailable",
+        "clauseInputBytesSaved": 618
+      },
+      "provider": {
+        "inputTokens": null,
+        "cachedInputTokens": null,
+        "uncachedInputTokens": null,
+        "assurance": "unavailable"
+      },
+      "system": {
+        "totalSystemTokens": null,
+        "assurance": "unavailable"
+      },
+      "source": {
+        "sourceBytes": 43599,
+        "authoredSourceBytes": 18416,
+        "managedSourceBytesExcluded": 25183,
+        "managedReferenceBytesExcluded": 0,
+        "deliveredSourceBytes": 9524,
+        "assurance": "sflow-measured"
+      }
+    },
+    "sections": [
+      {
+        "id": "phase-contract",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 6846,
+        "estimatedTokens": 1712,
+        "sha256": "326c1420ed8576ead69942d7cf030ecbd35d32a6adbc73951e89df9fe08b482d",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "approved-phase-inputs",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 10808,
+        "estimatedTokens": 2702,
+        "sha256": "f2ddfddfcf91c3a19c1f4fd0400e1d066f20fd10475fa32ec914e88edf4ac1a6",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "work-source",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 869,
+        "estimatedTokens": 218,
+        "sha256": "74bfad29fdc30eae3cf093339f41add411ee7650b6361068ce2f39082b083fce",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "active-clause-capsule",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 1886,
+        "estimatedTokens": 472,
+        "sha256": "f5569b351d9aed8dadfe4f29f6274c2c3524606e5e8ff5168a62d61e8f5a8ade",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "clarification-protocol",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 2987,
+        "estimatedTokens": 747,
+        "sha256": "dc52b9ce23f5ef677447866bcb0627d87d6a2d7ba8da2d8ab5e788755c3a2867",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "governed-agent-policy",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 2646,
+        "estimatedTokens": 662,
+        "sha256": "a81eccc7376512a395e9d4c2d31b741cb67c47080d311feb947d0eef62eb76c2",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "pinned-constitution",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 279,
+        "estimatedTokens": 70,
+        "sha256": "c2bca305dec54257e342fd76fd3ba28043e73a0c8df132fcba273acddcfc4fe9",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "world-model-grounding",
+        "mandatory": false,
+        "priority": 40,
+        "bytes": 2524,
+        "estimatedTokens": 631,
+        "sha256": "1f0af255ca2dc1096688fe3ca2e0fd2780fedb60cdb9841293cd85d49e88e644",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "governed-execution-evidence",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 1662,
+        "estimatedTokens": 416,
+        "sha256": "5d9f0455f794d9f4b1397904970ed2d2700a59aa49c95bfa9c3721c5f203ce08",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "final-clarification-guard",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 339,
+        "estimatedTokens": 85,
+        "sha256": "e951a378c432c51ebc93eb163c2d955fd672ac2bd081511737e92119df23d5b0",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      }
+    ],
+    "omitted": [],
+    "tokenReduction": {
+      "mode": "shadow",
+      "record": {
+        "kind": "tkr/shadow-evaluation",
+        "version": 1,
+        "status": "unavailable",
+        "scope": {
+          "workId": "bin-501",
+          "phase": "implementation",
+          "generation": 1,
+          "sourceRevision": null,
+          "configurationSha256": "1e9ee21b5e311f1c27d56b737efb46c14706df478a45bb6e22dec842f0409d21",
+          "executionMode": "workflow-snapshot"
+        },
+        "code": "TKR_CONTRACT_UNSUPPORTED",
+        "diagnosticSha256": "sha256:bbc1b387ff023d8937e8a5b0c40df298562be324edfc06f94b67a2867c751bce",
+        "delivery": {
+          "state": "shadow-not-delivered",
+          "candidateDelivered": false
+        },
+        "receiptSha256": null,
+        "shadowSha256": "sha256:12175ce35a74a4e3a71c64b8c15829873165bbfb8d5cb6f206046c6e657245ad"
+      }
+    },
+    "deduplicatedReferences": [
+      {
+        "handle": "sfref:v1:story:bin-501:eff6fa9de63ff77994ded669856db2b9879f95e067d91c8557693d9c9686aaeb",
+        "path": "singularity/work-items/bin-501/artifacts/specification/spec.md",
+        "rawSha256": "254423c0478e296b704faad96cf40b7be93fb2aaf185d8e241b47f0c1a8a604c",
+        "rawBytes": 13406,
+        "previewBytes": 485,
+        "reason": "same-governed-reference-handle"
+      },
+      {
+        "handle": "sfref:v1:story:bin-501:a129ab31216bd68bba3cf68defe882438f124ecf0e5aefe1cd2792ba48caa97a",
+        "path": "singularity/work-items/bin-501/artifacts/planning/plan.md",
+        "rawSha256": "6d7b7cc96ee36d201cbb3667d6586f8842cb772eb41aaf74fdf42e7adbb016af",
+        "rawBytes": 19479,
+        "previewBytes": 880,
+        "reason": "same-governed-reference-handle"
+      }
+    ],
+    "inputLinearization": {
+      "sourceBytes": 43599,
+      "authoredBytes": 18416,
+      "managedBytesExcluded": 25183,
+      "injectedBytes": 10142
+    },
+    "inputProjection": {
+      "renderer": "approved-inputs-v3",
+      "capsuleSha256": "sha256:2b95b37e678557afb3d191eec3ca5530cbfe128cc2537cf3ff6d5e551316b1f1",
+      "originalSha256": "eb961e79b57d6a631b8502b02eded2b3f8130fa55427a7417919617ec9e2ca60",
+      "renderedSha256": "ce35dbe23217421483e17f971315baae9ec4c103f7e10373c380497ab11fd569",
+      "originalBytes": 11829,
+      "renderedBytes": 10431,
+      "originalContentBytes": 10142,
+      "renderedContentBytes": 9524,
+      "savedBytes": 618,
+      "metadataBytesSaved": 780,
+      "inputs": [
+        {
+          "phase": "specification",
+          "path": "singularity/work-items/bin-501/artifacts/specification/spec.md",
+          "sourceSha256": "4641cb957c5280a4f23e6f23fe98cda695d1ba938c4c76cf5467651a6b369134",
+          "briefSha256": "908e66d81a0a60660703e5ccd31ad4adc2ab9496dcc802624224f90b72546f69",
+          "originalSha256": "sha256:908e66d81a0a60660703e5ccd31ad4adc2ab9496dcc802624224f90b72546f69",
+          "renderedSha256": "sha256:27473ba6b4b25d107089a182acd899abda4dd4341a76d61bb0890c7992266d5f",
+          "deduplicatedClauseIds": [],
+          "savedBytes": 309
+        },
+        {
+          "phase": "planning",
+          "path": "singularity/work-items/bin-501/artifacts/planning/plan.md",
+          "sourceSha256": "b68055aada83f3116aec48f5c715ec244a48eac18f7b4d9645cb4a1e2947bc3c",
+          "briefSha256": "fb46a2ed151b1976d8842ccd8665754528b17e1bf412946817d856312bc44a84",
+          "originalSha256": "sha256:fb46a2ed151b1976d8842ccd8665754528b17e1bf412946817d856312bc44a84",
+          "renderedSha256": "sha256:aa4a21d32fe0d9060ee23a933a6037501375e6cb35a714fe66f4bbf635f0fa4b",
+          "deduplicatedClauseIds": [],
+          "savedBytes": 309
+        }
+      ]
+    },
+    "inputDigests": [
+      {
+        "phase": "specification",
+        "path": "singularity/work-items/bin-501/artifacts/specification/spec.md",
+        "status": "captured",
+        "sha256": "4641cb957c5280a4f23e6f23fe98cda695d1ba938c4c76cf5467651a6b369134",
+        "briefSha256": "908e66d81a0a60660703e5ccd31ad4adc2ab9496dcc802624224f90b72546f69"
+      },
+      {
+        "phase": "planning",
+        "path": "singularity/work-items/bin-501/artifacts/planning/plan.md",
+        "status": "captured",
+        "sha256": "b68055aada83f3116aec48f5c715ec244a48eac18f7b4d9645cb4a1e2947bc3c",
+        "briefSha256": "fb46a2ed151b1976d8842ccd8665754528b17e1bf412946817d856312bc44a84"
+      }
+    ],
+    "stakeholderProjection": {
+      "renderer": "stakeholder-requests-v2",
+      "referencedRequestIds": [],
+      "requests": [],
+      "capsuleBytesSaved": 0
+    },
+    "executionEvidence": {
+      "projectionSha256": "sha256:c1cf8e7ff9ef2fa80c1b753b7a376d619d84352fe6260796caa0a0306b298bdb",
+      "packets": 2,
+      "omittedPackets": 0,
+      "diagnostics": []
+    },
+    "skillLoading": [],
+    "structuralContext": null,
+    "referenceRepositories": [],
+    "workSource": {
+      "path": "singularity/work-items/bin-501/source.json",
+      "sha256": "216bd2a30213fc22e75610021d581ac239866823e84e5d223c2d916658fc4f05",
+      "bytes": 954
+    },
+    "activeClauseCapsule": {
+      "renderer": "clause-capsule-v4",
+      "renderedSha256": "sha256:f5569b351d9aed8dadfe4f29f6274c2c3524606e5e8ff5168a62d61e8f5a8ade",
+      "sha256": "sha256:2b95b37e678557afb3d191eec3ca5530cbfe128cc2537cf3ff6d5e551316b1f1",
+      "clauses": 4,
+      "openRisks": 0,
+      "clarifications": 0
+    }
+  },
+  "persistedGrounding": null,
+  "tokenReduction": null,
+  "remoteSkills": [],
+  "executionContext": {
+    "mode": "workflow-snapshot",
+    "snapshotHash": "sha256:0818184ea0eb398c836c8a9b0cf21f7b21c8e7b946c8d1024aa2bab8e909e53a",
+    "agentId": "developer",
+    "agentBlobSha256": "sha256:936ef73ff06a815226d372a8ccf2e988e04b3dda3db20f4e4f465604b0db1366",
+    "dependencies": [],
+    "instructions": [],
+    "parserProfile": "sflow-agent-document-v1",
+    "composerProfile": "story-snapshot-agent-v1",
+    "overrideSha256": null
+  },
+  "compositionCache": {
+    "key": "74a34336c0f252d1e937d78cb8f7f6eaf192b1dc21b6905495d8dece2437395a",
+    "promptSha256": "cd59aab718a462dc2bedf93a68cdff46f34b08828d061e699dd4ab2441217396"
+  },
+  "promptPath": "singularity/work-items/bin-501/context/prompts/implementation-gen1.md",
+  "files": [],
+  "injectedAt": "2026-10-19T06:41:29.536Z"
+}

@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "bin-501",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "df1cb277-3dec-42ed-ae4b-74d1d9d5fc28",
+  "changeSet": {
+    "path": "singularity/work-items/bin-501/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:044dc6d0772753422bfa86cdbc67afe52223cad6d868b31f168e1e60be18a2d6",
+    "sourcePaths": [
+      "src/utils/evaluator.js"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [],
+    "executableTestPaths": [
+      "src/utils/evaluator.test.js"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "product-source": 1,
+      "test-source": 1
+    },
+    "entries": [
+      {
+        "changeId": "sha256:2345b24a9f6c7931da77ef24f6b67d7bb9d97d7f211c2de8779eb4eb1139299b",
+        "status": "modified",
+        "oldPath": "src/utils/evaluator.js",
+        "newPath": "src/utils/evaluator.js",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:a69680b84d04c57df5ff10752aaf036821bbf1f7b5f63b585b4ceb45597f94b9",
+        "status": "modified",
+        "oldPath": "src/utils/evaluator.test.js",
+        "newPath": "src/utils/evaluator.test.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "BIN-501:AC-001"
+    ],
+    "bound": [
+      "BIN-501:AC-001"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "BIN-501:AC-001",
+        "testSource": "src/utils/evaluator.test.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "BIN-501:AC-001",
+        "testSource": "src/utils/evaluator.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "decimalToBinary"
+          ],
+          "name": "converts zero to its base-2 representation"
+        },
+        "logicalTestId": "sha256:ee21a23703ac68d1e0b720bd6f21d8a8e2103710a1f8dbecefd693786c8751ed",
+        "declarationSha256": "sha256:56dbb4fab2c552e6ec7310e36d41d2a7cabdbdfc08707e12eaaa528a44f61e31",
+        "supportSha256": null,
+        "line": 9,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "BIN-501:AC-001",
+        "testSource": "src/utils/evaluator.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "decimalToBinary"
+          ],
+          "name": "converts a positive whole number to its base-2 representation"
+        },
+        "logicalTestId": "sha256:c32dbb6fd9574eadc48f203bd7125c8adade421acd898c3978f90e3e2baa7000",
+        "declarationSha256": "sha256:2ab1e7ae98d6eace582c1ae8bc4dd70126b4316d5400090bb711ce48183ad19d",
+        "supportSha256": null,
+        "line": 14,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "src/utils/evaluator.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "BIN-501:REQ-001",
+        "expectedPaths": [
+          "src/utils/evaluator.js"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "BIN-501:REQ-001",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 7,
+        "tag": "clause"
+      }
+    ]
+  },
+  "fulfillment": {
+    "obligations": [
+      {
+        "clauseId": "BIN-501:AC-001",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/bin-501/evidence/decimal-to-binary.png",
+            "state": "present",
+            "sha256": "65c5a8a90dadcc20f203b001241766718536b8cc0c5d8d687da06bb3b0a0a82e"
+          }
+        ]
+      },
+      {
+        "clauseId": "BIN-501:REQ-003",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/bin-501/evidence/decimal-to-binary.png",
+            "state": "present",
+            "sha256": "65c5a8a90dadcc20f203b001241766718536b8cc0c5d8d687da06bb3b0a0a82e"
+          }
+        ]
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "BIN-501:REQ-001",
+        "explanation": {
+          "text": "Preserve the input's numeric value in base 2.",
+          "path": "src/utils/evaluator.js",
+          "line": 7
+        },
+        "regions": [
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 2,
+                "beforeLines": 0,
+                "afterStart": 3,
+                "afterLines": 8
+              }
+            ],
+            "symbols": [
+              {
+                "name": "decimalToBinary",
+                "kind": "function",
+                "line": 9
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:5bac25eb5809930fc4d3d334bedcda12965377c89a61d2a9485c3953463c154f"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:19532122e0711ee508104386b91a462bcbd51c974cc6fb9dfb575146e68b2f7f",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-10-19T06:44:04.366Z"
+}
