@@ -7769,6 +7769,14 @@
       "event": "phase_submitted",
       "phase": "release",
       "detail": "2 artifacts"
+    },
+    {
+      "at": "2026-10-19T15:04:38.701Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "upstream_issue_raised",
+      "phase": "release",
+      "detail": "UPI-002 against implementation (HEX-901:REQ-001, HEX-901:AC-001): The Release report marks HEX-901:REQ-001, HEX-901:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list."
     }
   ],
   "measurement": {
@@ -10676,6 +10684,136 @@
         },
         "createdAt": "2026-10-19T14:55:00.839Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "ccaa6386-b097-401a-9d75-04f4c8637634",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "hex-901",
+          "branch": "hex-901"
+        },
+        "phaseId": "release",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": null,
+        "payload": {
+          "decision": "upstream-issue",
+          "reviewPacketSha256": null,
+          "issue": "UPI-002"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-19T15:04:37.888Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "ccaa6386-b097-401a-9d75-04f4c8637634",
+        "eventType": "decision-made",
+        "capabilityId": "cfa-calc",
+        "subject": {
+          "aliases": [
+            "hex-901"
+          ],
+          "branch": "hex-901",
+          "canonicalBranch": "hex-901",
+          "createdAt": "2026-10-19T13:44:37.535Z",
+          "currentPhase": "release",
+          "generation": 1,
+          "phase": "release",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 5,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 0,
+              "awaiting_approval": 1,
+              "approved": 5,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "release",
+              "status": "awaiting_approval",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "hex",
+          "updatedAt": "2026-10-19T15:04:38.701Z",
+          "workId": "hex-901",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "c04ba8e78b7bce7b70c622003ba3d52066b767c4e9c5b8184a98b77b9f1eebaa",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "1e9ee21b5e311f1c27d56b737efb46c14706df478a45bb6e22dec842f0409d21",
+          "lifecycleEventId": "ccaa6386-b097-401a-9d75-04f4c8637634",
+          "lifecyclePayload": {
+            "decision": "upstream-issue",
+            "reviewPacketSha256": null,
+            "issue": "UPI-002"
+          },
+          "templateSha256": "8f3e84e8e19dfc851d9948f20fbd48c0e43e5d8df9c747404d602106930e14fe",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "ccaa6386-b097-401a-9d75-04f4c8637634",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "hex-901",
+              "branch": "hex-901"
+            },
+            "phaseId": "release",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": null,
+            "payload": {
+              "decision": "upstream-issue",
+              "reviewPacketSha256": null,
+              "issue": "UPI-002"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-19T15:04:37.888Z"
+          }
+        },
+        "createdAt": "2026-10-19T15:04:37.892Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -10811,6 +10949,44 @@
       "authored": "human",
       "agent": "qa",
       "at": "2026-10-19T14:53:55.862Z"
+    },
+    {
+      "id": "UPI-002",
+      "phase": "implementation",
+      "raisedIn": {
+        "phase": "release",
+        "status": "awaiting_approval",
+        "generation": 1
+      },
+      "about": "HEX-901:REQ-001, HEX-901:AC-001",
+      "problem": "The Release report marks HEX-901:REQ-001, HEX-901:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list.",
+      "assumption": null,
+      "impact": null,
+      "proposed": "unknown",
+      "producerGeneration": 1,
+      "producerArtifacts": [
+        {
+          "path": "singularity/work-items/hex-901/artifacts/implementation/implementation-summary.md",
+          "sha256": "0facae80bf7dbd6a70f4862593d48a45ec26c5af93bc903e41b1e8f8a77d4d1a"
+        },
+        {
+          "path": "src/App.jsx",
+          "sha256": "e165af8f7cb67c34f04f396a1b385093c22100d0581d147c7ed608e4279e1487"
+        },
+        {
+          "path": "src/App.test.jsx",
+          "sha256": "b62bb70683b6f8e8d1e68aeb2a5c7376aed830f96ad68aa0b1a6a2efa38096bf"
+        },
+        {
+          "path": "src/components/StandardKeypad.jsx",
+          "sha256": "41fefbb64f230cba5ebdb8c8c3e20e75f74e647389511475d950af6d9fb5278d"
+        }
+      ],
+      "source": null,
+      "raisedBy": "ashokraj2011",
+      "authored": "human",
+      "agent": "qa",
+      "at": "2026-10-19T15:04:38.701Z"
     }
   ]
 }

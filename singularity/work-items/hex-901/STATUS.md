@@ -23,6 +23,7 @@
 
 ## Recent history
 
+- 2026-10-19T15:04:38.701Z — **upstream_issue_raised** (release) by ashokraj2011 · agent qa: UPI-002 against implementation (HEX-901:REQ-001, HEX-901:AC-001): The Release report marks HEX-901:REQ-001, HEX-901:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list.
 - 2026-10-19T14:55:03.463Z — **phase_submitted** (release) by ashokraj2011 · agent qa: 2 artifacts
 - 2026-10-19T14:54:05.233Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 1
 - 2026-10-19T14:53:55.862Z — **upstream_issue_raised** (release) by ashokraj2011 · agent qa: UPI-001 against verification (Acceptance and specification results / Negative, regression, security, and non-functional checks): **Verification, “Acceptance and specification results” and “Negative, regression, security, and non-functional checks”:** the approved report describes 22 targeted tests as passed, but the retained evidence-consistency record says Verification generation 1 has no retained test execution. Assumption: the approved report's test results are producer-reported claims, not retained execution evidence. Impact: the test portion of both clauses cannot be treated as fully source-bound for this release. Proposed owner action: Verification's producer should attach the execution record or rerun and retain the targeted tests.
@@ -37,4 +38,3 @@
 - 2026-10-19T14:41:10.083Z — **phase_submitted** (convergence) by ashokraj2011: 1 artifacts
 - 2026-10-19T14:38:20.004Z — **phase_generated** (convergence) by ashokraj2011: generation 1
 - 2026-10-19T14:32:35.038Z — **phase_self_approved** (implementation) by ashokraj2011 · agent developer: threshold reached; advanced to convergence
-- 2026-10-19T14:32:35.038Z — **work_interval_closed** (implementation) by ashokraj2011 · agent developer: interval INT-implementation-G1-001 closed after phase approval
