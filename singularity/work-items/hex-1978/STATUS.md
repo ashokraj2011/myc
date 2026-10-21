@@ -4,8 +4,8 @@
 - Work type: **spec-driven-standard**
 - Capability: **dfa** (`cfa-calc`)
 - Capability map: `c04ba8e78b7bce7b70c622003ba3d52066b767c4e9c5b8184a98b77b9f1eebaa`
-- Overall status: **in_progress**
-- Current phase: **release**
+- Overall status: **closed**
+- Current phase: **none — every step is decided**
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
@@ -19,10 +19,12 @@
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
 | 5 | Verification (`verification`) | qa | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
-| 6 | Release (`release`) | qa | **awaiting_approval** | 1 | 0 | unavailable |
+| 6 | Release (`release`) | qa | **approved** | 1 | 1 | unavailable |
+|  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
 
 ## Recent history
 
+- 2026-10-21T17:39:32.840Z — **phase_self_approved** (release) by ashokraj2011 · agent qa: threshold reached; closed
 - 2026-10-21T17:37:49.251Z — **witness_recorded** (release) by ashokraj2011 · agent qa: WIT-001: visual of singularity/work-items/hex-1978/evidence/hex-result-2.png for HEX-1978:AC-001 slot hex-result satisfies it. looks fine .there is no need to test again
 - 2026-10-21T17:30:21.500Z — **upstream_issue_decided** (release) by ashokraj2011 · agent qa: UPI-001: accept-risk. i have verified the screenshot
 - 2026-10-21T17:30:16.683Z — **upstream_issue_raised** (release) by ashokraj2011 · agent qa: UPI-001 against implementation (HEX-1978:AC-001): The Release report marks HEX-1978:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list.
@@ -37,4 +39,3 @@
 - 2026-10-21T17:02:56.584Z — **phase_self_approved** (convergence) by ashokraj2011: threshold reached; advanced to verification
 - 2026-10-21T17:01:09.649Z — **phase_submitted** (convergence) by ashokraj2011: 1 artifacts
 - 2026-10-21T16:59:01.073Z — **phase_generated** (convergence) by ashokraj2011: generation 1
-- 2026-10-21T16:57:46.390Z — **phase_self_approved** (implementation) by ashokraj2011 · agent developer: threshold reached; advanced to convergence

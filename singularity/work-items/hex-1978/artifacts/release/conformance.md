@@ -5,7 +5,7 @@
   "workType": "spec-driven-standard",
   "phase": "release",
   "generation": 1,
-  "status": "awaiting_approval",
+  "status": "approved",
   "generatedBy": {
     "name": "Ashok Raj",
     "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -119,8 +119,98 @@
     }
   ],
   "sequenceOverrides": [],
-  "approvals": [],
-  "selfApproval": false,
+  "approvals": [
+    {
+      "decision": "approved",
+      "phase": "release",
+      "at": "2026-10-21T17:39:32.840Z",
+      "actor": {
+        "name": "Ashok Raj",
+        "email": "88361104+ashokraj2011@users.noreply.github.com",
+        "login": "ashokraj2011",
+        "githubLookup": "resolved"
+      },
+      "agent": "qa",
+      "authorityGroup": "quality-reviewers",
+      "identityAssurance": "configured-local",
+      "channel": "copilot-selection-receipt",
+      "generation": 1,
+      "artifactSha256": [
+        {
+          "path": "singularity/work-items/hex-1978/artifacts/release/conformance.md",
+          "sha256": "46145d990ca0dfae2bc3053da4df3744297b5e95326f9c47a7b5ce632245c8d4"
+        },
+        {
+          "path": "singularity/work-items/hex-1978/artifacts/release/verification/evidence-index.md",
+          "sha256": "3aceebb2f4cc560688a6fa0def90a1c5c987a6d5a2e9650e27ad0217a1d02ee7"
+        }
+      ],
+      "artifactSet": "spec-driven-verification",
+      "bundleSha256": "d55da8675dc7f608320625406aa8d395fd8c479b298a1810ae5ca5d55eb6e7b7",
+      "reviewPacketSha256": "8d70bc439a2d122e2ee59d7bcee4614370d00315ccdaa611caef1a3090a79d48",
+      "evidenceCommit": "b0be1f078c240bd0322b00ff49e590cd13bc062d",
+      "artifactSetSha256": "0dfb262664d45d19cab22a07ee31193ce9f75c770e744e0402863837565796d0",
+      "architectureIntent": null,
+      "architectureDecision": null,
+      "actionContext": {
+        "phase": "release",
+        "label": "Release",
+        "generation": 1,
+        "submittedAt": "2026-10-21T17:26:01.001Z",
+        "artifacts": [
+          {
+            "path": "singularity/work-items/hex-1978/artifacts/release/conformance.md",
+            "sha256": "46145d990ca0dfae2bc3053da4df3744297b5e95326f9c47a7b5ce632245c8d4"
+          },
+          {
+            "path": "singularity/work-items/hex-1978/artifacts/release/verification/evidence-index.md",
+            "sha256": "3aceebb2f4cc560688a6fa0def90a1c5c987a6d5a2e9650e27ad0217a1d02ee7"
+          }
+        ],
+        "agentBriefs": [],
+        "reviewPacketSha256": "8d70bc439a2d122e2ee59d7bcee4614370d00315ccdaa611caef1a3090a79d48",
+        "submittedSourceCommit": "d4c0d07c904da864f41214902b5f17d737b97370",
+        "planId": "c40334f6efce613f7c1dd458"
+      },
+      "upstream": {
+        "sha256": "sha256:b42e7acca50612fe7a304cbea2eca632967c8e5202ce09f6539801eb85c06959",
+        "refs": [
+          {
+            "kind": "input",
+            "ref": "convergence",
+            "sha256": "sha256:5c3f4b7ce3bed0c091aa15056bba2165e804d5da89cf91f44cdba2599d4cbb04"
+          },
+          {
+            "kind": "input",
+            "ref": "verification",
+            "sha256": "sha256:a4aa9795e845a32071c838af10011e4e79d4e55444fd48141e80391780b8ebd9"
+          },
+          {
+            "kind": "candidate",
+            "ref": "HEAD",
+            "sha256": "sha256:dc8bd0bef7fc5bc7a5d7fd77bd69037920b51177eea127ee653b0ef13c3eb331"
+          },
+          {
+            "kind": "specification",
+            "ref": "records",
+            "sha256": "sha256:1186a70a38d95ccb351bd2ee3e82a4175235c075dca0c0005365c23a3c13deb6"
+          },
+          {
+            "kind": "documents",
+            "ref": "release",
+            "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+          },
+          {
+            "kind": "decisions",
+            "ref": "story",
+            "sha256": "sha256:1c54dd6baa1ef8bdeeff52eb3adfc353ec409bdb2b2e78ac5706e8e7b53d5c08"
+          }
+        ]
+      },
+      "selfApproval": true
+    }
+  ],
+  "selfApproval": true,
   "conformanceTree": "sha256:955c099c687c61a4d6b7e705bcbbb6dd117a3d09267f5df1f75b26c2e076b8ae"
 }
 -->
