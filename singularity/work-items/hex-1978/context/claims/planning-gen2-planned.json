@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-10-21T16:28:40.955Z",
+  "claims": {
+    "HEX-1978:AC-001": {
+      "expectedPaths": [
+        "singularity/work-items/hex-1978/evidence/hex-result-2.png"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "Screenshot shows hexadecimal result `2` for decimal input `2`; visual review uses the retained screenshot."
+    },
+    "HEX-1978:AC-002": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/StandardKeypad.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Test activates the `hex` button after entering `2` and observes result `2`."
+    },
+    "HEX-1978:REQ-001": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/StandardKeypad.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Activating `hex` converts the displayed positive decimal integer and updates the result."
+    },
+    "HEX-1978:REQ-002": {
+      "expectedPaths": [
+        "src/components/StandardKeypad.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "The calculator exposes a button labeled `hex` in standard and scientific modes."
+    }
+  },
+  "verificationContracts": [
+    {
+      "clauseId": "HEX-1978:AC-001",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "hex-result",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "singularity/work-items/hex-1978/evidence/hex-result-2.png"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    }
+  ],
+  "workId": "hex-1978",
+  "phase": "planning",
+  "generation": 2,
+  "source": {
+    "path": "singularity/work-items/hex-1978/artifacts/planning/plan.md",
+    "sha256": "b877c11a5453d2ef19283f5123ce8c5649dc6921b7bfb7453087d803ca4332bb",
+    "bytes": 16897
+  }
+}

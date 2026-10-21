@@ -11,7 +11,7 @@
 |---:|---|---|---|---:|---:|---:|
 | 1 | Specification (`specification`) | product-owner | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via product-approvers; agent product-owner | **warning** |  |  |  |
-| 2 | Planning (`planning`) | architect | **in_progress** | 1 | 0 | unavailable |
+| 2 | Planning (`planning`) | architect | **in_progress** | 2 | 0 | unavailable |
 | 3 | Implementation (`implementation`) | developer | **not_started** | 0 | 0 | unavailable |
 | 4 | Convergence (`convergence`) | architect | **not_started** | 0 | 0 | unavailable |
 | 5 | Verification (`verification`) | qa | **not_started** | 0 | 0 | unavailable |
@@ -19,6 +19,7 @@
 
 ## Recent history
 
+- 2026-10-21T16:28:41.033Z — **phase_generated** (planning) by ashokraj2011 · agent architect: generation 2
 - 2026-10-21T16:28:31.795Z — **phase_generated** (planning) by ashokraj2011 · agent architect: generation 1
 - 2026-10-21T16:10:36.343Z — **phase_self_approved** (specification) by ashokraj2011 · agent product-owner: threshold reached; advanced to planning
 - 2026-10-21T16:02:48.988Z — **phase_submitted** (specification) by ashokraj2011 · agent product-owner: 1 artifacts
