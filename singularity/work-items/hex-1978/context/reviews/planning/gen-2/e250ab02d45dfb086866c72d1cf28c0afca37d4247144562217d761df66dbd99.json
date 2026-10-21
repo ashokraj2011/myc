@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "phase": "planning",
+  "generation": 2,
+  "reportSha256": "e250ab02d45dfb086866c72d1cf28c0afca37d4247144562217d761df66dbd99",
+  "lifecycleEventId": "b24a8aa9-cc86-4f76-89bf-0d2b055ac0ac",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "planning",
+    "binding": {
+      "workId": "hex-1978",
+      "phase": "planning",
+      "generation": 2,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/hex-1978/USER-STORY.md",
+          "textSha256": "19a601bd4f50586249fa4c2d9568758593bff527b91f8e8cb1adb5cfbc8817c6",
+          "originalSha256": "78f3669e29ca2f1aadccdcba28cf845d58b1be20e3e3524c01600c414ee2c04b"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:approved-scope",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/hex-1978/context/clarifications-specification-gen1.json",
+          "sha256": "06e39d19e8a9f520422b27139754bb374081fae0965ee5c719ea1121d619922f"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/hex-1978/artifacts/planning/plan.md",
+        "sha256": "6fae01924294258bc1cbcfddcf8b5504a854b18feb61884d83e094cc5d3a3707"
+      },
+      "upstreamSpec": {
+        "path": "singularity/work-items/hex-1978/artifacts/specification/spec.md",
+        "sha256": "88758633873db00fb4d08627c61e2fba2b7eb7bb3705198e5ccedd8c7216f299"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:approved-scope"
+    ],
+    "rows": [
+      {
+        "clauseId": "HEX-1978:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Activating `hex` converts the displayed positive decimal integer and updates the result.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "HEX-1978:REQ-002",
+        "expectedPaths": [
+          "src/components/StandardKeypad.jsx"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "The calculator exposes a button labeled `hex` in standard and scientific modes.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "HEX-1978:AC-001",
+        "expectedPaths": [
+          "singularity/work-items/hex-1978/evidence/hex-result-2.png"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "evidence",
+        "observableResult": "Screenshot shows hexadecimal result `2` for decimal input `2`; visual review uses the retained screenshot.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "HEX-1978:AC-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Test activates the `hex` button after entering `2` and observes result `2`.",
+        "assessment": "supported"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "adebae380c85c66b3e158c5e65633b47c3aadd50c6abeabd6fcbb6f42de23991",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "architect",
+    "readOnly": true
+  },
+  "submittedAt": "2026-10-21T16:39:32.695Z",
+  "recordSha256": "71aafb33c91cc1e7204a4285e8561e4bd4ce55f985772902b1f36777bdae05ce"
+}
