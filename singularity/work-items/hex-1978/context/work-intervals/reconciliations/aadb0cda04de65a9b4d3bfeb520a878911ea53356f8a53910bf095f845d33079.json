@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "hex-1978",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G1-001",
+  "phaseId": "implementation",
+  "generation": 1,
+  "baselineSha256": "ab32daeb9dc52e4f24761b88f573bb002eb31b9e97cee4f6326cdc7d65224878",
+  "baseline": {
+    "path": "singularity/work-items/hex-1978/context/work-intervals/implementation-gen1-baseline.json",
+    "sha256": "ab32daeb9dc52e4f24761b88f573bb002eb31b9e97cee4f6326cdc7d65224878",
+    "verified": true,
+    "sourceBaseCommit": "8b4bc4f90a0c7b5f173972b67c10141043187286"
+  },
+  "sourceBaseCommit": "8b4bc4f90a0c7b5f173972b67c10141043187286",
+  "target": {
+    "branch": "hex-1978",
+    "head": "7c3d4c763e1428b9090153244d4b304faeeeb7f4",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": "src/App.jsx",
+      "status": "present",
+      "sha256": "cb1fd9e90e0799fe6a4222a74cf27fc27ed4191690800ca018488eddea00aab1",
+      "bytes": 11052,
+      "verdict": "planned",
+      "clauseIds": [
+        "HEX-1978:AC-002",
+        "HEX-1978:REQ-001"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/App.test.jsx",
+      "status": "present",
+      "sha256": "93615a02f0c121eb3cf34d6fd1820e40882eb3d7a43921b6ea05aaf96af04bae",
+      "bytes": 8410,
+      "verdict": "planned",
+      "clauseIds": [
+        "HEX-1978:AC-001",
+        "HEX-1978:AC-002",
+        "HEX-1978:REQ-001",
+        "HEX-1978:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/components/StandardKeypad.jsx",
+      "status": "present",
+      "sha256": "9cf4547a0e13e492d1613ef6788e46e649b072741c7f5575cb96943af361e24b",
+      "bytes": 6969,
+      "verdict": "planned",
+      "clauseIds": [
+        "HEX-1978:AC-002",
+        "HEX-1978:REQ-001",
+        "HEX-1978:REQ-002"
+      ],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 3,
+    "planned": 3,
+    "unplanned": 0,
+    "protected": 0
+  },
+  "decision": {
+    "status": "aligned",
+    "summaryStatus": "clear",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "aadb0cda04de65a9b4d3bfeb520a878911ea53356f8a53910bf095f845d33079",
+  "reconciledAt": "2026-10-21T16:55:31.783Z",
+  "final": true,
+  "recordedAt": "2026-10-21T16:55:31.786Z",
+  "path": "singularity/work-items/hex-1978/context/work-intervals/reconciliations/aadb0cda04de65a9b4d3bfeb520a878911ea53356f8a53910bf095f845d33079.json"
+}

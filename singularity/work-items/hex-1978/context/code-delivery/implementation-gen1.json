@@ -76,7 +76,13 @@
       {
         "clauseId": "HEX-1978:AC-002",
         "testSource": "src/App.test.jsx",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": ".-node-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       }
     ],
     "witnesses": [
@@ -383,11 +389,19 @@
     ],
     "bindingsSha256": "sha256:1d9d1bade4fb842c0e4eb0bd3fe693f006997dd23b295cc2a9fb13027a9cac21"
   },
-  "testExecutions": [],
+  "testExecutions": [
+    {
+      "commandId": ".-node-tests",
+      "attemptId": "TA-8dc8de88fd3c787911b3",
+      "receiptPath": "singularity/work-items/hex-1978/context/code-delivery/tests/attempts/implementation/TA-8dc8de88fd3c787911b3.json",
+      "receiptSha256": "3bbc821fff6b9088ec5d87c62e26554daba4f6d2f8edec91973488cf2a8d301f",
+      "status": "passed"
+    }
+  ],
   "tree": {
     "workingStateDigest": "sha256:955c099c687c61a4d6b7e705bcbbb6dd117a3d09267f5df1f75b26c2e076b8ae",
-    "generationCommit": null,
-    "generationTree": null
+    "generationCommit": "7c3d4c763e1428b9090153244d4b304faeeeb7f4",
+    "generationTree": "7a77d4580c7e95599501606a086aee971d4ccfe8"
   },
   "model": {
     "task": "code",
@@ -406,6 +420,7 @@
     "observedAt": null,
     "generation": null
   },
-  "status": "pending-tests",
-  "capturedAt": "2026-10-21T16:53:53.447Z"
+  "status": "ready",
+  "capturedAt": "2026-10-21T16:53:53.447Z",
+  "validatedAt": "2026-10-21T16:55:31.508Z"
 }

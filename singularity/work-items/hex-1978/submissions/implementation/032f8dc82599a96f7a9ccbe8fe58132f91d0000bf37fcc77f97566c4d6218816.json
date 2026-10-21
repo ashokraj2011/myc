@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 3,
+  "workId": "hex-1978",
+  "epicId": null,
+  "planId": null,
+  "jiraIssueId": "hex-1978",
+  "initialJiraKey": null,
+  "currentJiraKey": null,
+  "canonicalBranch": "hex-1978",
+  "submittedBranch": "hex-1978",
+  "submissionCommit": "7c3d4c763e1428b9090153244d4b304faeeeb7f4",
+  "sourceCommit": "7c3d4c763e1428b9090153244d4b304faeeeb7f4",
+  "sourceTreeSha256": "sha256:955c099c687c61a4d6b7e705bcbbb6dd117a3d09267f5df1f75b26c2e076b8ae",
+  "phase": "implementation",
+  "generation": 1,
+  "authorship": {
+    "schemaVersion": 1,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "developer"
+    },
+    "kernelModel": {
+      "invoked": false,
+      "status": "exact",
+      "invocationIds": []
+    },
+    "externalAiUse": {
+      "value": "unknown",
+      "status": "unavailable"
+    },
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "implementation-summary.md",
+      "mediaType": "text/markdown",
+      "sha256": "d00badd20276be7c1ce82cf76afea077fe5084b27cada9fcae42bd80d2668705",
+      "bytes": 2494
+    },
+    "generation": 1,
+    "publishedAt": "2026-10-21T16:53:53.447Z"
+  },
+  "artifacts": [
+    {
+      "path": "singularity/work-items/hex-1978/artifacts/implementation/implementation-summary.md",
+      "kind": "document",
+      "sha256": "121794705239b52b84bf4646ff55247741a5187861112c478f5aa4a327f7699d",
+      "size": 15043,
+      "reference": {
+        "handle": "sfref:v1:story:hex-1978:26b41470f3c9f9c02421141f6134313e55702a841db8737a52a3dfa08922ce32",
+        "recordHash": "26b41470f3c9f9c02421141f6134313e55702a841db8737a52a3dfa08922ce32"
+      }
+    },
+    {
+      "path": "src/App.jsx",
+      "kind": "code",
+      "sha256": "cb1fd9e90e0799fe6a4222a74cf27fc27ed4191690800ca018488eddea00aab1",
+      "size": 11052
+    },
+    {
+      "path": "src/App.test.jsx",
+      "kind": "test",
+      "sha256": "93615a02f0c121eb3cf34d6fd1820e40882eb3d7a43921b6ea05aaf96af04bae",
+      "size": 8410
+    },
+    {
+      "path": "src/components/StandardKeypad.jsx",
+      "kind": "code",
+      "sha256": "9cf4547a0e13e492d1613ef6788e46e649b072741c7f5575cb96943af361e24b",
+      "size": 6969
+    }
+  ],
+  "references": [
+    {
+      "handle": "sfref:v1:story:hex-1978:26b41470f3c9f9c02421141f6134313e55702a841db8737a52a3dfa08922ce32",
+      "recordHash": "26b41470f3c9f9c02421141f6134313e55702a841db8737a52a3dfa08922ce32",
+      "purpose": "review-evidence",
+      "required": true
+    }
+  ],
+  "agentBriefs": [
+    {
+      "consumerPhase": "convergence",
+      "status": "ready",
+      "path": "singularity/work-items/hex-1978/context/briefs/implementation-gen1-for-convergence.json",
+      "renderedPath": "singularity/work-items/hex-1978/context/briefs/implementation-gen1-for-convergence.md",
+      "sourceSha256": "59006979939fece2b1a41d2696a9bc2736f2935816715d5c1d83acf82b725a38",
+      "sourceBytes": 14961,
+      "renderedSha256": "031eec32d16f7ce132c087c02ecf5c4a888cd5a4048b8eeb977e57823b4c643f",
+      "integritySha256": "ac4735d818ea3c40b564ece79b121ce04184bbfa2b6c0b3db39dba90dd6bd23e"
+    },
+    {
+      "consumerPhase": "verification",
+      "status": "ready",
+      "path": "singularity/work-items/hex-1978/context/briefs/implementation-gen1-for-verification.json",
+      "renderedPath": "singularity/work-items/hex-1978/context/briefs/implementation-gen1-for-verification.md",
+      "sourceSha256": "59006979939fece2b1a41d2696a9bc2736f2935816715d5c1d83acf82b725a38",
+      "sourceBytes": 14961,
+      "renderedSha256": "8b2073745cc58cb6f8df1db1739e665bd3e7d865be8354662016648f8f8197dc",
+      "integritySha256": "6778423a5e91fb5ed37ce8201a6106ed76354292b3cec31c84eae3cfb3371a8a"
+    }
+  ],
+  "checks": [
+    {
+      "id": ".-node-tests",
+      "command": "npm test -- --reporter=json --outputFile=.sflow/results/node-tests.json",
+      "kind": "test",
+      "requirement": "required",
+      "workingDirectory": ".",
+      "resultIsolated": true,
+      "externalModelPolicy": "never",
+      "timeoutMs": 1800000,
+      "sourceCommit": "7c3d4c763e1428b9090153244d4b304faeeeb7f4",
+      "sourceTreeSha256": "sha256:955c099c687c61a4d6b7e705bcbbb6dd117a3d09267f5df1f75b26c2e076b8ae",
+      "testRuntime": {
+        "node": "v22.14.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "profile": {
+          "nodeOptions": []
+        },
+        "nodeOptionsSha256": "sha256:12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "sha256": "sha256:dbe379c7bb0e9e8a2c3b876d8cb6d1376637cc2489ae3dfb9e67d6262af8f908"
+      },
+      "startedAt": "2026-10-21T16:55:25.049Z",
+      "completedAt": "2026-10-21T16:55:31.399Z",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "\n> calc-app@0.0.0 test\n> vitest run --reporter=json --outputFile=.sflow/results/node-tests.json\n\nJSON report written to /Users/ashokraj/Downloads/cfa/cfa-calc/.singularity-flow/story-worktrees/.w-78a5945e0617048a17345251/.sflow/results/node-tests.json\n",
+      "stderr": "",
+      "stdoutBytes": 252,
+      "stderrBytes": 0,
+      "stdoutTruncated": false,
+      "stderrTruncated": false
+    }
+  ],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-21T16:53:53.447Z",
+      "completedAt": "2026-10-21T16:53:53.447Z",
+      "agent": "developer",
+      "generation": 1
+    }
+  ],
+  "approvals": [],
+  "visualAssurance": null,
+  "submissionEvidence": {
+    "architectureIntent": null,
+    "architectureDecision": null,
+    "codeDelivery": {
+      "path": "singularity/work-items/hex-1978/context/code-delivery/implementation-gen1.json",
+      "sha256": "2d54ba9cd02d8de2c89acefb787c1682823f70135c142af91aee9dd3ca522ba7",
+      "changeSetPath": "singularity/work-items/hex-1978/context/code-delivery/implementation-gen1-changes.json",
+      "changeSetDigest": "sha256:b6616b63d682ef3de4ec4e9aaf870c99610b53aebc8ea73263154f0acd8a8d13",
+      "status": "ready",
+      "autoCandidate": null,
+      "autoCandidateVerification": null
+    },
+    "testExecutions": [
+      {
+        "commandId": ".-node-tests",
+        "path": "singularity/work-items/hex-1978/context/code-delivery/tests/attempts/implementation/TA-8dc8de88fd3c787911b3.json",
+        "sha256": "3bbc821fff6b9088ec5d87c62e26554daba4f6d2f8edec91973488cf2a8d301f",
+        "status": "passed"
+      }
+    ],
+    "claimMaps": [
+      {
+        "kind": "observed",
+        "generation": 1,
+        "path": "singularity/work-items/hex-1978/context/claims/implementation-gen1-observed.json",
+        "sha256": "4938dc763d97727646cfc68ecf55381e7ff150a456c4931bd27f0e7c2902ea51"
+      }
+    ],
+    "checksSha256": "f621e58991b90ef67743b3de308a28b8dd5c53993f13048be80a2bf46dcda9df",
+    "artifactSetSha256": "669de1acf6ed5d61750db7363139e955607180a878fa7b41c464de54558829e6"
+  },
+  "witnessReview": {
+    "enrollment": {
+      "schemaVersion": 1,
+      "mode": "disabled",
+      "witnessedClauses": {
+        "enabled": false,
+        "profiles": []
+      },
+      "testcaseExact": {
+        "mode": "disabled",
+        "profile": null,
+        "requiredAssurance": "unavailable",
+        "policySha256": "sha256:12b50a34a1f03338377ecd76f44b20cbee83e7b91a0b07392ef08e3d8fd60800"
+      },
+      "claimMapContractVersion": 2,
+      "cab": null,
+      "sgos": null,
+      "rollout": {
+        "id": "wel-v0.2-observe",
+        "version": 1,
+        "enrollment": "new-story-only"
+      },
+      "configurationAuthority": {
+        "repository": "https://github.com/ashokraj2011/myc.git",
+        "branch": "sflow/config",
+        "commit": "78459db67c6f9f26532e78670a0fbf58d4780f9c",
+        "projectionSha256": "eccd83f33d6631cc569765138e50eddab9b449cde9cc9f6714843c40325fe70d"
+      }
+    },
+    "enrollmentClassification": "enrolled",
+    "enrollmentReason": null,
+    "clauseMappings": [
+      {
+        "mappingSha256": "sha256:0068e7377425dbd8faea85e2891dd547adda01529b91e3c49baad54e7830e400",
+        "clauseId": "HEX-1978:AC-002",
+        "witnessType": "test",
+        "executionProfile": "vitest-static-v2",
+        "logicalTestId": "sha256:a36eec64649455a022746073f70658d1048bab817758b46dc66817c225209c63",
+        "sourcePath": "src/App.test.jsx",
+        "sourceDeclarationSha256": "sha256:00f2cb12aec33f04c4fe6b6daa4053f6ffdd030c46c18db74d37bdd2aafda7d2",
+        "supportSha256": null,
+        "clauseBodySha256": "sha256:6a15ba34511dcd8a86947d59907fffc420f2aee1eee996f981e64a4fdba70e91",
+        "contractSha256": "sha256:6aae0e881d2783abe53c0f230e2d5770ef764d4354ac35ec4cf8616b6b424169",
+        "slot": "tests",
+        "test": "'hex conversion › converts the displayed positive integer in %s mode' in src/App.test.jsx",
+        "reviewStatus": "unreviewed",
+        "decision": null,
+        "reason": null,
+        "expiresAt": null
+      }
+    ],
+    "testcaseObservations": []
+  },
+  "submittedAt": "2026-10-21T16:55:31.789Z",
+  "submittedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "status": "awaiting_review",
+  "packetSha256": "032f8dc82599a96f7a9ccbe8fe58132f91d0000bf37fcc77f97566c4d6218816"
+}
