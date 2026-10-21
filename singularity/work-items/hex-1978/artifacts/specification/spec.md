@@ -4,27 +4,51 @@
   "workId": "hex-1978",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "88758633873db00fb4d08627c61e2fba2b7eb7bb3705198e5ccedd8c7216f299",
+      "bytes": 7235
+    },
+    "generation": 1,
+    "publishedAt": "2026-10-21T15:57:04.172Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "403729121dfe78e312a1be560265ee8397c07091",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "bfb32f9f48dc5a11a1e51dcc1f3ae0b8a7732fea7b74d413a02826960e9570e3",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/hex-1978/context/clarifications-specification-gen1.json",
+    "sha256": "06e39d19e8a9f520422b27139754bb374081fae0965ee5c719ea1121d619922f",
+    "promptSha256": "651edd8b84802488ea5232a5703d72f99bb5a92f64ebc4e027afb9c9d3873e27",
+    "responses": 3,
+    "markers": [],
+    "recordedAt": "2026-10-21T15:54:39.960Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/hex-1978/telemetry/specification-gen1.json",
+      "sha256": "fc9aecb4ef197281962fcbb954a3541c95dfd7430e34373141a0f97f8ce9e468",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 25683,
+        "estimatedTokens": 6421,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 25683,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-21T15:57:04.172Z",
+      "completedAt": "2026-10-21T15:57:04.172Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -86,15 +167,13 @@ exclusions. Do not introduce claims that are absent from the sections below. Exa
 boundary conditions are preserved separately by the governed projection.
 -->
 
-TODO: Write the Agent brief here as visible text; text inside the comment above is not read.
+Add a `hex` button to the calculator so a user can convert a displayed positive decimal integer to its hexadecimal value. The confirmed acceptance example is decimal `2`, whose hexadecimal result is `2`; the requested verification includes a screenshot of that result and a test for the button and conversion. Negative, zero, and non-integer inputs are outside the confirmed scope. No additional formatting, error behavior, or numeric limit is specified.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+The calculator user invokes the conversion. No separate roles or permissions are specified.
 
 ## User scenarios
-
-Prioritized. Each scenario leads with the situation, then its acceptance cases.
 
 <!-- Before drafting, split the pinned request and recorded answers into observable obligations
 for the actual interfaces (UI, API, event/message, batch/job, CLI, library or mixed). Keep the
@@ -104,34 +183,21 @@ Self-check whether an implementation could meet this draft yet omit an explicit 
 clear omissions in this editable draft and recheck within the returned repair policy; preserve
 published inputs and settled answers. These are authoring instructions, not execution evidence. -->
 
-### S1 — <the most important situation, in the user's words>
+### S1 — Convert a positive integer to hexadecimal
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Calculator user
+**Context:** The calculator displays the positive decimal integer `2`.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
-
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
-
-### S2 — <the next situation>
-
-**Priority:** P2
-
-- **Given** … **When** … **Then** …
+- **Given** the calculator displays decimal `2`
+  **When** the user activates the `hex` button
+  **Then** the calculator displays its hexadecimal value, `2`.
 
 ## Failure and empty states
 
-What happens the first time, with nothing there yet, and when each step fails. These are where
-specifications are usually silent and implementations usually improvise.
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** Behavior with no displayed positive integer is not specified.
+- **Failure:** No conversion failure behavior is specified for the in-scope positive integer input.
+- **Partial:** Not applicable; the confirmed scenario is one calculator display conversion with no described external side effects.
 
 ## Scenario coverage
 
@@ -142,28 +208,28 @@ prose. Use the pinned request and clarification answers; do not invent error tex
 
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `HEX-1978:REQ-001` | S1 | TODO |
-| `HEX-1978:REQ-002` | S2 | TODO |
-| `HEX-1978:AC-001` | S1 | TODO |
+| `HEX-1978:REQ-001` | S1 | success |
+| `HEX-1978:REQ-002` | S1 | success |
+| `HEX-1978:AC-001` | S1 | success |
+| `HEX-1978:AC-002` | S1 | success |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+Not applicable: the Story specifies a calculator operation and no role-based access.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+The confirmed input domain is positive integers. The requested example is decimal `2`. Zero, negative, and non-integer inputs are outside the confirmed scope; their behavior is not specified. No maximum positive integer or additional output-format convention is specified.
 
 ## Requirements
 
-Numbered, testable, one obligation each. Cite the scenario each serves.
-
-- <requirement>. *(S1)* [HEX-1978:REQ-001]
-- <requirement>. *(S1, S2)* [HEX-1978:REQ-002]
+- Activating the calculator's `hex` button converts the currently displayed positive decimal integer to its hexadecimal value. *(S1)* [HEX-1978:REQ-001]
+- The calculator UI exposes a button labeled `hex` for requesting that conversion. *(S1)* [HEX-1978:REQ-002]
 
 Acceptance criteria use the same stable, namespaced form:
 
-- <observable acceptance outcome>. *(S1)* [HEX-1978:AC-001]
+- A screenshot of the calculator shows the hexadecimal result `2` for decimal input `2`. *(S1)* [HEX-1978:AC-001] [scope:SRI-77b88f6611a7]
+- An executable test verifies that the calculator exposes the `hex` button and that activating it for decimal input `2` displays hexadecimal `2`. *(S1)* [HEX-1978:AC-002] [scope:SRI-77b88f6611a7]
 
 ## Verification intent
 
@@ -175,36 +241,29 @@ Planning must inherit these methods and cannot change them without an approved s
 
 | Clause | Methods | Criterion |
 |---|---|---|
-| `HEX-1978:REQ-001` | TODO | - |
-| `HEX-1978:REQ-002` | TODO | - |
-| `HEX-1978:AC-001` | TODO | `HEX-1978:AC-001` |
+| `HEX-1978:REQ-001` | test | - |
+| `HEX-1978:REQ-002` | test | - |
+| `HEX-1978:AC-001` | visual | `HEX-1978:AC-001` |
+| `HEX-1978:AC-002` | test | `HEX-1978:AC-002` |
 
 ## Non-functional requirements
 
-Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
-will be measured; "fast" is not a requirement.
-
-Use governed requirement anchors here too (for example `[HEX-1978:REQ-003]`); `NFR-001` by
-itself is only a display label and is not a stable clause identity.
+Not applicable: no non-functional requirements are stated in the pinned request or recorded clarification.
 
 ## Constitution articles
 
-Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
-cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
-
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-What this specification takes as true without proving. An assumption that turns out false is a
-change request, not a defect — which is only true if it was written down.
+The `hex` button acts on the calculator's currently displayed value. The requested conversion is from a positive decimal integer to its base-16 value.
 
 ## Out of scope
 
-Named explicitly, so the boundary is reviewable rather than inferred.
+Negative, zero, and non-integer input behavior; hexadecimal arithmetic mode; output prefixes or formatting beyond the specified result `2`; and any numeric maximum are not specified by this Story.
 
 ## Sources
 
-Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
-offered to this phase that could not be read or was not available here, named as a gap. Without
-supporting documents, say so.
+- Pinned Story source: `singularity/work-items/hex-1978/source.json` (SHA-256 `78f3669e29ca2f1aadccdcba28cf845d58b1be20e3e3524c01600c414ee2c04b`).
+- Recorded human clarification for specification generation 1: `singularity/work-items/hex-1978/context/clarifications-specification-gen1.json` (SHA-256 `06e39d19e8a9f520422b27139754bb374081fae0965ee5c719ea1121d619922f`).
+- No supporting documents were offered.
