@@ -8017,6 +8017,14 @@
       "event": "upstream_issue_raised",
       "phase": "release",
       "detail": "UPI-001 against implementation (HEX-1978:AC-001): The Release report marks HEX-1978:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list."
+    },
+    {
+      "at": "2026-10-21T17:30:21.500Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "upstream_issue_decided",
+      "phase": "release",
+      "detail": "UPI-001: accept-risk. i have verified the screenshot"
     }
   ],
   "measurement": {
@@ -10921,6 +10929,136 @@
         },
         "createdAt": "2026-10-21T17:30:15.882Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "145d5026-02e0-4f27-8695-ab3f702a2a2e",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "hex-1978",
+          "branch": "hex-1978"
+        },
+        "phaseId": "release",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "decision": "upstream-issue",
+          "reviewPacketSha256": null,
+          "issue": "UPI-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-21T17:30:20.729Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "145d5026-02e0-4f27-8695-ab3f702a2a2e",
+        "eventType": "decision-made",
+        "capabilityId": "cfa-calc",
+        "subject": {
+          "aliases": [
+            "hex-1978"
+          ],
+          "branch": "hex-1978",
+          "canonicalBranch": "hex-1978",
+          "createdAt": "2026-10-21T14:18:12.329Z",
+          "currentPhase": "release",
+          "generation": 1,
+          "phase": "release",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 5,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 0,
+              "awaiting_approval": 1,
+              "approved": 5,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "release",
+              "status": "awaiting_approval",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "hex",
+          "updatedAt": "2026-10-21T17:30:21.500Z",
+          "workId": "hex-1978",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "capabilityMapSha256": "c04ba8e78b7bce7b70c622003ba3d52066b767c4e9c5b8184a98b77b9f1eebaa",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "bfb32f9f48dc5a11a1e51dcc1f3ae0b8a7732fea7b74d413a02826960e9570e3",
+          "lifecycleEventId": "145d5026-02e0-4f27-8695-ab3f702a2a2e",
+          "lifecyclePayload": {
+            "decision": "upstream-issue",
+            "reviewPacketSha256": null,
+            "issue": "UPI-001"
+          },
+          "templateSha256": "8f3e84e8e19dfc851d9948f20fbd48c0e43e5d8df9c747404d602106930e14fe",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "145d5026-02e0-4f27-8695-ab3f702a2a2e",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "hex-1978",
+              "branch": "hex-1978"
+            },
+            "phaseId": "release",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": "engineering-reviewers",
+            "payload": {
+              "decision": "upstream-issue",
+              "reviewPacketSha256": null,
+              "issue": "UPI-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-21T17:30:20.729Z"
+          }
+        },
+        "createdAt": "2026-10-21T17:30:20.735Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -11054,6 +11192,19 @@
       "authored": "human",
       "agent": "qa",
       "at": "2026-10-21T17:30:16.683Z"
+    }
+  ],
+  "upstreamIssueDecisions": [
+    {
+      "issue": "UPI-001",
+      "outcome": "accept-risk",
+      "reason": "i have verified the screenshot",
+      "link": null,
+      "expiresAt": "2026-11-20T00:00:00.000Z",
+      "actor": "ashokraj2011",
+      "authorityGroup": "engineering-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-10-21T17:30:21.500Z"
     }
   ]
 }

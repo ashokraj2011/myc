@@ -23,6 +23,7 @@
 
 ## Recent history
 
+- 2026-10-21T17:30:21.500Z — **upstream_issue_decided** (release) by ashokraj2011 · agent qa: UPI-001: accept-risk. i have verified the screenshot
 - 2026-10-21T17:30:16.683Z — **upstream_issue_raised** (release) by ashokraj2011 · agent qa: UPI-001 against implementation (HEX-1978:AC-001): The Release report marks HEX-1978:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list.
 - 2026-10-21T17:26:01.001Z — **phase_submitted** (release) by ashokraj2011 · agent qa: 2 artifacts
 - 2026-10-21T17:23:46.970Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 1
@@ -37,4 +38,3 @@
 - 2026-10-21T16:59:01.073Z — **phase_generated** (convergence) by ashokraj2011: generation 1
 - 2026-10-21T16:57:46.390Z — **phase_self_approved** (implementation) by ashokraj2011 · agent developer: threshold reached; advanced to convergence
 - 2026-10-21T16:57:46.390Z — **work_interval_closed** (implementation) by ashokraj2011 · agent developer: interval INT-implementation-G1-001 closed after phase approval
-- 2026-10-21T16:55:31.789Z — **phase_submitted** (implementation) by ashokraj2011 · agent developer: 4 artifacts
