@@ -10,6 +10,7 @@ export const StandardKeypad = ({
   onBackspace,
   onNegate,
   onPercent,
+  onHex,
   onMemory,
   soundEnabled,
 }) => {
@@ -51,6 +52,17 @@ export const StandardKeypad = ({
 
       {/* Uniform 4-column digit/operator/equals grid */}
       <div className="keypad-grid">
+        {/* @clause:HEX-1978:AC-002 Dispatch the shared keypad interaction to the App conversion handler. */}
+        {/* @clause:HEX-1978:REQ-001 Send the displayed integer to the shared conversion handler. */}
+        {/* @clause:HEX-1978:REQ-002 Expose the conversion in the shared standard/scientific keypad. */}
+        <button
+          onClick={() => handleBtn('operator', onHex)}
+          className="calc-btn u-bg-btn-func-bg u-text-btn-func-text u-hbg-btn-func-hover font-semibold"
+          style={{ gridColumn: '1 / -1' }}
+        >
+          hex
+        </button>
+
         {/* Row 1: AC, Delete, %, Divide */}
         <button
           onClick={() => handleBtn('clear', onClear)}

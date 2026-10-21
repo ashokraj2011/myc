@@ -125,6 +125,37 @@ describe('App functional regression (all modes/features unchanged)', () => {
   });
 });
 
+describe('hex conversion', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  // @ac:HEX-1978:AC-002
+  it.each(['standard', 'scientific'])(
+    'converts the displayed positive integer in %s mode',
+    async (mode) => {
+      const user = userEvent.setup();
+      const { container } = render(<App />);
+      const modeSelect = screen.getAllByRole('combobox')[0];
+
+      await user.selectOptions(modeSelect, mode);
+      await user.click(screen.getByRole('button', { name: '1' }));
+      await user.click(screen.getByRole('button', { name: '5' }));
+      await user.keyboard('{Enter}');
+      expect(getResultText(container)).toBe('15');
+
+      await user.click(screen.getByRole('button', { name: 'hex' }));
+      expect(getResultText(container)).toBe('f');
+
+      await user.click(screen.getByRole('button', { name: 'AC' }));
+      await user.click(screen.getByRole('button', { name: '2' }));
+      await user.keyboard('{Enter}');
+      await user.click(screen.getByRole('button', { name: 'hex' }));
+      expect(getResultText(container)).toBe('2');
+    }
+  );
+});
+
 // Verifies WRK-1978:AC-001 and WRK-1978:AC-002: the new win11-light/win11-dark
 // themes are selectable app-wide (not just in Standard/Scientific) and are
 // applied via the shared data-theme token mechanism, and every mode continues

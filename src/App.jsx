@@ -129,6 +129,19 @@ export default function App() {
     }
   }, [expression, angleUnit]);
 
+  // @clause:HEX-1978:REQ-001 Convert the displayed positive decimal integer to hexadecimal.
+  // @clause:HEX-1978:AC-002 Keep the conversion in the shared calculator state for both modes.
+  const handleHex = useCallback(() => {
+    const decimalValue = result.replaceAll(',', '');
+    if (!/^\d+$/.test(decimalValue)) return;
+
+    const integerValue = BigInt(decimalValue);
+    if (integerValue <= 0n) return;
+
+    setResult(integerValue.toString(16));
+    setLastEvaluated(true);
+  }, [result]);
+
   const handleMemory = useCallback(
     (type) => {
       const currentNum = parseFloat(result) || 0;
@@ -260,6 +273,7 @@ export default function App() {
               onBackspace={handleBackspace}
               onNegate={handleNegate}
               onPercent={handlePercent}
+              onHex={handleHex}
               onMemory={handleMemory}
               soundEnabled={soundEnabled}
             />
@@ -286,6 +300,7 @@ export default function App() {
               onBackspace={handleBackspace}
               onNegate={handleNegate}
               onPercent={handlePercent}
+              onHex={handleHex}
               onMemory={handleMemory}
               soundEnabled={soundEnabled}
             />
