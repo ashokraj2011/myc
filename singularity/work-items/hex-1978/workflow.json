@@ -8025,6 +8025,14 @@
       "event": "upstream_issue_decided",
       "phase": "release",
       "detail": "UPI-001: accept-risk. i have verified the screenshot"
+    },
+    {
+      "at": "2026-10-21T17:37:49.251Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "witness_recorded",
+      "phase": "release",
+      "detail": "WIT-001: visual of singularity/work-items/hex-1978/evidence/hex-result-2.png for HEX-1978:AC-001 slot hex-result satisfies it. looks fine .there is no need to test again"
     }
   ],
   "measurement": {
@@ -11059,6 +11067,136 @@
         },
         "createdAt": "2026-10-21T17:30:20.735Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "664ea75d-5d50-4ae6-a711-945351ed8b16",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "hex-1978",
+          "branch": "hex-1978"
+        },
+        "phaseId": "release",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "decision": "witness",
+          "reviewPacketSha256": null,
+          "record": "WIT-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-21T17:37:48.392Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "664ea75d-5d50-4ae6-a711-945351ed8b16",
+        "eventType": "decision-made",
+        "capabilityId": "cfa-calc",
+        "subject": {
+          "aliases": [
+            "hex-1978"
+          ],
+          "branch": "hex-1978",
+          "canonicalBranch": "hex-1978",
+          "createdAt": "2026-10-21T14:18:12.329Z",
+          "currentPhase": "release",
+          "generation": 1,
+          "phase": "release",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 5,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 0,
+              "awaiting_approval": 1,
+              "approved": 5,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "release",
+              "status": "awaiting_approval",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "hex",
+          "updatedAt": "2026-10-21T17:37:49.251Z",
+          "workId": "hex-1978",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "capabilityMapSha256": "c04ba8e78b7bce7b70c622003ba3d52066b767c4e9c5b8184a98b77b9f1eebaa",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "bfb32f9f48dc5a11a1e51dcc1f3ae0b8a7732fea7b74d413a02826960e9570e3",
+          "lifecycleEventId": "664ea75d-5d50-4ae6-a711-945351ed8b16",
+          "lifecyclePayload": {
+            "decision": "witness",
+            "reviewPacketSha256": null,
+            "record": "WIT-001"
+          },
+          "templateSha256": "8f3e84e8e19dfc851d9948f20fbd48c0e43e5d8df9c747404d602106930e14fe",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "664ea75d-5d50-4ae6-a711-945351ed8b16",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "hex-1978",
+              "branch": "hex-1978"
+            },
+            "phaseId": "release",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": "engineering-reviewers",
+            "payload": {
+              "decision": "witness",
+              "reviewPacketSha256": null,
+              "record": "WIT-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-21T17:37:48.392Z"
+          }
+        },
+        "createdAt": "2026-10-21T17:37:48.397Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -11205,6 +11343,29 @@
       "authorityGroup": "engineering-reviewers",
       "identityAssurance": "configured-local",
       "at": "2026-10-21T17:30:21.500Z"
+    }
+  ],
+  "witnessRecords": [
+    {
+      "id": "WIT-001",
+      "clauseId": "HEX-1978:AC-001",
+      "slot": "hex-result",
+      "method": "visual",
+      "file": "singularity/work-items/hex-1978/evidence/hex-result-2.png",
+      "sha256": "sha256:76c03d71aeb50d8c222356cb2ade6e1d159a142c118de7aeb9e5baa44f4a29f7",
+      "contextBinding": "sha256:0d7647f4a1f3ebe7fb0dcd4dc1cd02e640a6e3c2c1e638a46f21080d4370c307",
+      "target": "singularity/work-items/hex-1978/evidence/hex-result-2.png",
+      "checklist": {
+        "states-the-outcome": "yes",
+        "matches-the-criterion": "yes",
+        "current-for-this-change": "yes"
+      },
+      "outcome": "met",
+      "reason": "looks fine .there is no need to test again",
+      "actor": "ashokraj2011",
+      "authorityGroup": "engineering-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-10-21T17:37:49.251Z"
     }
   ]
 }
