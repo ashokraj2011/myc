@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "phase": "planning",
+  "generation": 1,
+  "reportSha256": "c77fc5e1d925008e902f44009524d7ca1c3389a5fa4187f380f1443f7e98acfc",
+  "lifecycleEventId": "4b87f2ed-3de2-4785-8527-f4f3ccb6b14d",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "planning",
+    "binding": {
+      "workId": "hex-2018",
+      "phase": "planning",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/hex-2018/USER-STORY.md",
+          "textSha256": "e6a6830b6222ca2637222feebb3044b353ca043f188b33795bba4ea159366ce7",
+          "originalSha256": "63edb570d84ec8510836e72b9680529ff8eb23758182a311d1945fc97ad88569"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:approved-scope",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/hex-2018/context/clarifications-specification-gen1.json",
+          "sha256": "0d63e0cde4344e163bc2e2caab16c0cbe6a411e53f2b5b363011ed0bf699a099"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/hex-2018/artifacts/planning/plan.md",
+        "sha256": "cdde893be57e9f170eeccd40339043f6c195fd4748a368b1aa36ab18e7bf2618"
+      },
+      "upstreamSpec": {
+        "path": "singularity/work-items/hex-2018/artifacts/specification/spec.md",
+        "sha256": "c08b74457e933cb073d7b833ebd263b91313d272f71cd9ad936200a1b63e29ff"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:approved-scope"
+    ],
+    "rows": [
+      {
+        "clauseId": "HEX-2018:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "new",
+        "observableResult": "Activating HEX for a displayed positive integer replaces the result with its base-16 representation.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "HEX-2018:AC-001",
+        "expectedPaths": [
+          "singularity/work-items/hex-2018/evidence/hex-positive-integer.png"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "evidence",
+        "observableResult": "The screenshot shows a positive integer, activation of HEX, and the resulting hexadecimal display.",
+        "assessment": "supported"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "adebae380c85c66b3e158c5e65633b47c3aadd50c6abeabd6fcbb6f42de23991",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "architect",
+    "readOnly": true
+  },
+  "submittedAt": "2026-10-22T05:18:42.500Z",
+  "recordSha256": "206a35fa18e2d19638b8fafcaab08bd31336bc9654603e91aa06be520e0299c0"
+}
