@@ -4,27 +4,51 @@
   "workId": "hex-2018",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "c08b74457e933cb073d7b833ebd263b91313d272f71cd9ad936200a1b63e29ff",
+      "bytes": 7313
+    },
+    "generation": 1,
+    "publishedAt": "2026-10-22T05:00:21.774Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "62e990454d53b8e6ddc0d2d32bb48d3635ab005f",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "bfb32f9f48dc5a11a1e51dcc1f3ae0b8a7732fea7b74d413a02826960e9570e3",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/hex-2018/context/clarifications-specification-gen1.json",
+    "sha256": "0d63e0cde4344e163bc2e2caab16c0cbe6a411e53f2b5b363011ed0bf699a099",
+    "promptSha256": "054f360fdf50766a69e22006e80c250a7e87ae44b66955133287b9a4c8dc90c7",
+    "responses": 4,
+    "markers": [],
+    "recordedAt": "2026-10-22T04:58:18.348Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/hex-2018/telemetry/specification-gen1.json",
+      "sha256": "e24635629223563390b53951a74d56a43af18b0e52b884793d93e6d3e13b898f",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 25808,
+        "estimatedTokens": 6452,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 25808,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-22T05:00:21.774Z",
+      "completedAt": "2026-10-22T05:00:21.774Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -86,11 +167,11 @@ exclusions. Do not introduce claims that are absent from the sections below. Exa
 boundary conditions are preserved separately by the governed projection.
 -->
 
-TODO: Write the Agent brief here as visible text; text inside the comment above is not read.
+The calculator user can invoke a HEX key/button to convert the current displayed positive integer to its hexadecimal representation. Acceptance requires a screenshot showing the interaction and resulting value. This specification does not define behavior outside positive integer inputs or prescribe a particular hexadecimal format or visual layout.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+The calculator user invokes the conversion through the HEX key/button. No separate roles or authorization boundaries are specified.
 
 ## User scenarios
 
@@ -104,34 +185,24 @@ Self-check whether an implementation could meet this draft yet omit an explicit 
 clear omissions in this editable draft and recheck within the returned repair policy; preserve
 published inputs and settled answers. These are authoring instructions, not execution evidence. -->
 
-### S1 — <the most important situation, in the user's words>
+### S1 — Convert a displayed positive integer to hexadecimal
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Calculator user
+**Context:** The calculator displays a positive integer.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
-
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
-
-### S2 — <the next situation>
-
-**Priority:** P2
-
-- **Given** … **When** … **Then** …
+- **Given** the calculator displays a positive integer
+  **When** the user activates the HEX key/button
+  **Then** the current value is displayed in its hexadecimal representation.
 
 ## Failure and empty states
 
 What happens the first time, with nothing there yet, and when each step fails. These are where
 specifications are usually silent and implementations usually improvise.
 
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** An empty display is outside the specified positive-integer input condition; no empty-state behavior is defined.
+- **Failure:** No dependency or failure behavior is specified.
+- **Partial:** No partial-operation behavior is specified.
 
 ## Scenario coverage
 
@@ -142,28 +213,26 @@ prose. Use the pinned request and clarification answers; do not invent error tex
 
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `HEX-2018:REQ-001` | S1 | TODO |
-| `HEX-2018:REQ-002` | S2 | TODO |
-| `HEX-2018:AC-001` | S1 | TODO |
+| `HEX-2018:REQ-001` | S1 | success |
+| `HEX-2018:AC-001` | S1 | success |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+Not applicable: the pinned Story and clarification define no role-based permissions or access restrictions.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+The conversion requirement applies to positive integer values displayed by the calculator. Zero, negative, and non-integer values are outside the confirmed input scope; their behavior is unspecified. No limits on positive integer size are established.
 
 ## Requirements
 
 Numbered, testable, one obligation each. Cite the scenario each serves.
 
-- <requirement>. *(S1)* [HEX-2018:REQ-001]
-- <requirement>. *(S1, S2)* [HEX-2018:REQ-002]
+- Activating the HEX key/button converts the current displayed positive integer to its hexadecimal representation. *(S1)* [HEX-2018:REQ-001]
 
 Acceptance criteria use the same stable, namespaced form:
 
-- <observable acceptance outcome>. *(S1)* [HEX-2018:AC-001]
+- A screenshot showing the user activating the HEX key/button and the resulting hexadecimal value for a positive integer is sufficient to demonstrate acceptance. *(S1)* [HEX-2018:AC-001] [scope:SRI-35efa5d9d09b]
 
 ## Verification intent
 
@@ -175,14 +244,12 @@ Planning must inherit these methods and cannot change them without an approved s
 
 | Clause | Methods | Criterion |
 |---|---|---|
-| `HEX-2018:REQ-001` | TODO | - |
-| `HEX-2018:REQ-002` | TODO | - |
-| `HEX-2018:AC-001` | TODO | `HEX-2018:AC-001` |
+| `HEX-2018:REQ-001` | test | - |
+| `HEX-2018:AC-001` | visual | `HEX-2018:AC-001` |
 
 ## Non-functional requirements
 
-Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
-will be measured; "fast" is not a requirement.
+No non-functional requirements are stated in the pinned Story or clarification.
 
 Use governed requirement anchors here too (for example `[HEX-2018:REQ-003]`); `NFR-001` by
 itself is only a display label and is not a stable clause identity.
@@ -192,19 +259,16 @@ itself is only a display label and is not a stable clause identity.
 Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
 cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
 
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-What this specification takes as true without proving. An assumption that turns out false is a
-change request, not a defect — which is only true if it was written down.
+The existing calculator presents the current value referenced by the Story. The exact hexadecimal prefix/case and visual layout are not specified.
 
 ## Out of scope
 
-Named explicitly, so the boundary is reviewable rather than inferred.
+Conversion of zero, negative, or non-integer values; hexadecimal input or arithmetic; and any particular hexadecimal prefix, letter case, or visual layout.
 
 ## Sources
 
-Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
-offered to this phase that could not be read or was not available here, named as a gap. Without
-supporting documents, say so.
+No supporting documents were supplied. The specification is based on the pinned Story source `singularity/work-items/hex-2018/source.json` (SHA-256 `63edb570d84ec8510836e72b9680529ff8eb23758182a311d1945fc97ad88569`) and the recorded clarification `singularity/work-items/hex-2018/context/clarifications-specification-gen1.json` (SHA-256 `0d63e0cde4344e163bc2e2caab16c0cbe6a411e53f2b5b363011ed0bf699a099`).
