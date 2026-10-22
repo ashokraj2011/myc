@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "resultType": "intent-amendment-proposal",
+  "id": "AMD-001",
+  "workId": "hex-2018",
+  "status": "proposed",
+  "proposedAt": "2026-10-22T11:23:27.574Z",
+  "proposedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "authorship": {
+    "schemaVersion": 1,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "architect"
+    },
+    "kernelModel": {
+      "invoked": false,
+      "status": "exact",
+      "invocationIds": []
+    },
+    "externalAiUse": {
+      "value": "assisted",
+      "status": "self-reported"
+    },
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "intent-amendment",
+      "id": "AMD-001",
+      "path": "singularity/work-items/hex-2018/context/intent-amendments/AMD-001-proposed.md",
+      "sha256": "0f88a662f1e5037966375161c64f6924ed429078dd3d4b4a32e77920ac41ae44"
+    }
+  },
+  "reason": "User requested that the HEX button use the app's theme-aware blue accent; update the requirement and screenshot acceptance wording accordingly.",
+  "source": {
+    "kind": "phase-feedback",
+    "phaseId": "planning",
+    "generation": 1,
+    "status": "awaiting_approval",
+    "artifactPath": "singularity/work-items/hex-2018/artifacts/planning/plan.md",
+    "artifactPresent": true,
+    "artifactSha256": "2258e88a65e90292f2db7137b9b788470b3968ee2a65556d667c2f54f6620265",
+    "sourceTreeSha256": "sha256:cc61d54d67cc7f17f5a1971d2668b159f2a7d039d7b0bd7634692d885727b6a5"
+  },
+  "specification": {
+    "artifact": "singularity/work-items/hex-2018/artifacts/specification/spec.md",
+    "generation": 1,
+    "beforePath": "singularity/work-items/hex-2018/context/intent-amendments/AMD-001-before.md",
+    "beforeSha256": "50f0df1784da59ac116d911a9f278c0e6ac1b4d69c865847caf0a0118726b1c2",
+    "proposedPath": "singularity/work-items/hex-2018/context/intent-amendments/AMD-001-proposed.md",
+    "proposedSha256": "0f88a662f1e5037966375161c64f6924ed429078dd3d4b4a32e77920ac41ae44"
+  },
+  "requiredClauses": [
+    "HEX-2018:AC-001",
+    "HEX-2018:REQ-002"
+  ],
+  "diff": {
+    "added": [
+      "HEX-2018:REQ-002"
+    ],
+    "revised": [
+      "HEX-2018:AC-001"
+    ],
+    "removed": [],
+    "unchanged": [
+      "HEX-2018:REQ-001"
+    ],
+    "changed": [
+      "HEX-2018:AC-001",
+      "HEX-2018:REQ-002"
+    ],
+    "sha256": "00cafe94d5d8f81821bafb8d3350b7524e13e6953ce2c8523e71b5828ae0496c"
+  },
+  "radius": {
+    "resultType": "amendment-blast-radius",
+    "schemaVersion": 1,
+    "changed": [
+      "HEX-2018:AC-001",
+      "HEX-2018:REQ-002"
+    ],
+    "affected": [
+      {
+        "clauseId": "HEX-2018:AC-001",
+        "change": "revised",
+        "artifacts": [
+          "singularity/work-items/hex-2018/evidence/hex-positive-integer.png"
+        ],
+        "tests": [
+          "src/App.test.jsx"
+        ],
+        "verdict": null
+      }
+    ],
+    "untouched": [
+      {
+        "clauseId": "HEX-2018:REQ-001",
+        "change": "unchanged",
+        "artifacts": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx"
+        ],
+        "tests": [
+          "src/App.test.jsx"
+        ],
+        "verdict": null
+      }
+    ],
+    "unclaimed": [
+      "HEX-2018:REQ-002"
+    ],
+    "artifacts": [
+      "singularity/work-items/hex-2018/evidence/hex-positive-integer.png"
+    ],
+    "tests": [
+      "src/App.test.jsx"
+    ],
+    "totals": {
+      "claims": 2,
+      "affected": 1,
+      "untouched": 1
+    }
+  },
+  "decisions": [],
+  "proposalSha256": "cc3488925287df0d6964f5a83373a7e20c7e8f978b6677727041dc6e08a80f35",
+  "recordPath": "singularity/work-items/hex-2018/context/intent-amendments/AMD-001.json"
+}

@@ -4918,6 +4918,14 @@
       "event": "phase_submitted",
       "phase": "planning",
       "detail": "1 artifacts"
+    },
+    {
+      "at": "2026-10-22T11:23:27.574Z",
+      "actor": "ashokraj2011",
+      "agent": null,
+      "event": "intent_amendment_proposed",
+      "phase": "planning",
+      "detail": "AMD-001 proposes 2 clause change(s): HEX-2018:AC-001, HEX-2018:REQ-002"
     }
   ],
   "measurement": {
@@ -5984,6 +5992,151 @@
         },
         "createdAt": "2026-10-22T05:19:17.464Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "a7ef8c74-ff01-447b-b02e-8db6765800d9",
+        "type": "intent-amendment-proposed",
+        "subject": {
+          "kind": "story",
+          "id": "hex-2018",
+          "branch": "hex-2018"
+        },
+        "phaseId": "specification",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "product-owner",
+        "authorityGroup": "product-approvers",
+        "payload": {
+          "proposalId": "AMD-001",
+          "proposalSha256": "cc3488925287df0d6964f5a83373a7e20c7e8f978b6677727041dc6e08a80f35",
+          "changedClauses": [
+            "HEX-2018:AC-001",
+            "HEX-2018:REQ-002"
+          ],
+          "decision": "approved",
+          "reviewPacketSha256": "8379f6eaf4e79da5ad2f3b90edb89c45eca19e297996515ddb156ded7ebc74f1"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-22T11:23:27.622Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "a7ef8c74-ff01-447b-b02e-8db6765800d9",
+        "eventType": "intent-amendment-proposed",
+        "capabilityId": "cfa-calc",
+        "subject": {
+          "aliases": [
+            "hex-2018"
+          ],
+          "branch": "hex-2018",
+          "canonicalBranch": "hex-2018",
+          "createdAt": "2026-10-22T04:53:58.563Z",
+          "currentPhase": "planning",
+          "generation": 1,
+          "phase": "specification",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 1,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 4,
+              "in_progress": 0,
+              "awaiting_approval": 1,
+              "approved": 1,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "planning",
+              "status": "awaiting_approval",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "hex",
+          "updatedAt": "2026-10-22T11:23:27.574Z",
+          "workId": "hex-2018",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "product-owner",
+        "authorityGroup": "product-approvers",
+        "payload": {
+          "capabilityMapSha256": "c04ba8e78b7bce7b70c622003ba3d52066b767c4e9c5b8184a98b77b9f1eebaa",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "bfb32f9f48dc5a11a1e51dcc1f3ae0b8a7732fea7b74d413a02826960e9570e3",
+          "lifecycleEventId": "a7ef8c74-ff01-447b-b02e-8db6765800d9",
+          "lifecyclePayload": {
+            "changedClauses": [
+              "HEX-2018:AC-001",
+              "HEX-2018:REQ-002"
+            ],
+            "decision": "approved",
+            "proposalId": "AMD-001",
+            "proposalSha256": "cc3488925287df0d6964f5a83373a7e20c7e8f978b6677727041dc6e08a80f35",
+            "reviewPacketSha256": "8379f6eaf4e79da5ad2f3b90edb89c45eca19e297996515ddb156ded7ebc74f1"
+          },
+          "templateSha256": "c6e1ea9cb3d43631d47fedc023295faf39204e7efa40da81db1a51c3d4c0f1d9",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "a7ef8c74-ff01-447b-b02e-8db6765800d9",
+            "type": "intent-amendment-proposed",
+            "subject": {
+              "kind": "story",
+              "id": "hex-2018",
+              "branch": "hex-2018"
+            },
+            "phaseId": "specification",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "product-owner",
+            "authorityGroup": "product-approvers",
+            "payload": {
+              "proposalId": "AMD-001",
+              "proposalSha256": "cc3488925287df0d6964f5a83373a7e20c7e8f978b6677727041dc6e08a80f35",
+              "changedClauses": [
+                "HEX-2018:AC-001",
+                "HEX-2018:REQ-002"
+              ],
+              "decision": "approved",
+              "reviewPacketSha256": "8379f6eaf4e79da5ad2f3b90edb89c45eca19e297996515ddb156ded7ebc74f1"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-22T11:23:27.622Z"
+          }
+        },
+        "createdAt": "2026-10-22T11:23:27.628Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -6028,6 +6181,29 @@
       "previousRevisionSha256": null,
       "at": "2026-10-22T05:12:44.541Z",
       "revisionSha256": "sha256:cba2373f08cb4aa25a181a3b3b61228e119a9d4bcd25500ce864c4b98e2ea5ae"
+    }
+  ],
+  "intentAmendments": [
+    {
+      "id": "AMD-001",
+      "status": "proposed",
+      "proposedAt": "2026-10-22T11:23:27.574Z",
+      "proposedBy": {
+        "name": "Ashok Raj",
+        "email": "88361104+ashokraj2011@users.noreply.github.com",
+        "login": "ashokraj2011",
+        "githubLookup": "resolved"
+      },
+      "reason": "User requested that the HEX button use the app's theme-aware blue accent; update the requirement and screenshot acceptance wording accordingly.",
+      "proposalSha256": "cc3488925287df0d6964f5a83373a7e20c7e8f978b6677727041dc6e08a80f35",
+      "recordPath": "singularity/work-items/hex-2018/context/intent-amendments/AMD-001.json",
+      "changedClauses": [
+        "HEX-2018:AC-001",
+        "HEX-2018:REQ-002"
+      ],
+      "findingIds": [],
+      "affectedClaims": 1,
+      "acknowledgementRequired": false
     }
   ]
 }

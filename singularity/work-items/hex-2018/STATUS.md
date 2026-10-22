@@ -19,6 +19,7 @@
 
 ## Recent history
 
+- 2026-10-22T11:23:27.574Z — **intent_amendment_proposed** (planning) by ashokraj2011: AMD-001 proposes 2 clause change(s): HEX-2018:AC-001, HEX-2018:REQ-002
 - 2026-10-22T05:19:18.775Z — **phase_submitted** (planning) by ashokraj2011 · agent architect: 1 artifacts
 - 2026-10-22T05:18:42.500Z — **source_review_submitted** (planning) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: c77fc5e1d925008e902f44009524d7ca1c3389a5fa4187f380f1443f7e98acfc
 - 2026-10-22T05:16:32.928Z — **phase_generated** (planning) by ashokraj2011 · agent architect: generation 1
