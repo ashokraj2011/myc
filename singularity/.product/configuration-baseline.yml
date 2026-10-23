@@ -1,7 +1,7 @@
 format: singularity-flow-configuration-baseline/v1
 product:
   version: 0.9.0
-  revision: 5121bfb58439fab4a56b62fe9295ce1b4a349ae2
+  revision: 32e3605f85ab32e5af38ae4b1007e0983df94a23
 workflow:
   version: 2
   inputsMode: enforce
@@ -738,6 +738,20 @@ workflow:
           inputs:
             - intake
             - implement
+    careful-change:
+      label: Careful change
+      description: Careful change, run as one step (user-defined agent).
+      phases:
+        - careful-change
+      omits:
+        - responsibility: scope
+          reason: Careful change is a user-defined agent run as one step; it defines no
+            requirement clauses.
+          authority: engineering-reviewers
+        - responsibility: plan
+          reason: Careful change plans and makes the change itself, in its one step, from
+            its own instructions.
+          authority: engineering-reviewers
     classic-delivery:
       label: Classic delivery
       description: Intake, code, testing, and code checking with committed test
@@ -2110,6 +2124,7 @@ workflow:
           - implementation
           - verification
       qualityCommands: []
+      repositoryTests: run
     testing:
       label: Testing
       defaultTemplate: benchmark/testing.md
@@ -2134,6 +2149,7 @@ workflow:
           - implementation
           - testing
       qualityCommands: []
+      repositoryTests: run
     visual-verification:
       label: Mobile visual verification
       defaultTemplate: figma-mobile/visual-verification.md
@@ -3300,6 +3316,23 @@ workflow:
             - diff
             - --check
           modelPolicy: never
+    careful-change:
+      label: Careful change
+      description: Runs Careful change, the user-defined agent from the careful-change
+        folder.
+      defaultTemplate: common/careful-change.md
+      artifact:
+        path: artifacts/careful-change/careful-change.md
+        kind: careful-change
+        minimumBytes: 200
+      generation:
+        task: code
+      writeScope: source-and-artifact
+      inputs: []
+      approval:
+        authorities:
+          - engineering-reviewers
+        minimum: 1
   governance:
     requireAcceptanceCriteriaTags: true
     protectedPaths:
@@ -3317,6 +3350,8 @@ workflow:
 assets:
   .github/agents/architect.agent.md:
     sha256: d75713542fb455b2bff883f290f7610bca1895228080ff4e77ce14e3e549be62
+  .github/agents/careful-change.agent.md:
+    sha256: eb3e023e045ab108a481a1feb17de8f27ebb30e8b01fb6b9fbc2626c9ea0ebad
   .github/agents/demo-code-checker.agent.md:
     sha256: 6d1003200dd3f29cd45cc597489a65f99f37ced0582d1de973d9b0561393acf8
   .github/agents/demo-code-repairer.agent.md:
@@ -3435,6 +3470,8 @@ assets:
     sha256: 54e29e22388aebec1dfd70e9046dfd3f88b60b6479b2ee4a58b93200fbd581eb
   singularity/templates/classic-delivery/testing.md:
     sha256: af701aa3de1057e07f62f88753dfdd633185e7e66d83bc6ae7c66e93ed507bd9
+  singularity/templates/common/careful-change.md:
+    sha256: 28de53a2eec7fb9d0cb495102e1e064a8b201615d9a599038064d2524d403dfc
   singularity/templates/common/conformance.md:
     sha256: be71314c915f967e1f1c3d5789fed1d192fda5ed33371cb1aff94b665669b9da
   singularity/templates/common/implementation.md:
@@ -3641,6 +3678,7 @@ ownership:
       chore: framework
       figma-mobile: framework
       quick-fix: framework
+      careful-change: framework
       classic-delivery: framework
       spec-code-test-loop: framework
       document-test-repair: framework
@@ -3674,6 +3712,7 @@ ownership:
       visual-verification: framework
       implement: framework
       verify: framework
+      careful-change: framework
       testing: framework
       specification: framework
       document-intake: framework
@@ -3746,6 +3785,7 @@ ownership:
       playwright-imported: repository
   assets:
     .github/agents/architect.agent.md: framework
+    .github/agents/careful-change.agent.md: framework
     .github/agents/demo-code-checker.agent.md: framework
     .github/agents/demo-code-repairer.agent.md: framework
     .github/agents/demo-instruction-analyst.agent.md: framework
@@ -3805,6 +3845,7 @@ ownership:
     singularity/templates/classic-delivery/code-checking.md: framework
     singularity/templates/classic-delivery/intake.md: framework
     singularity/templates/classic-delivery/testing.md: framework
+    singularity/templates/common/careful-change.md: framework
     singularity/templates/common/conformance.md: framework
     singularity/templates/common/implementation.md: framework
     singularity/templates/common/intake.md: framework
