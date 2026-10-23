@@ -1348,6 +1348,18 @@ workTypes:
       ashok-dev: quick-fix/implement.md
       ashok-intake: quick-fix/intake.md
       ashok-test: quick-fix/verify.md
+  careful-change:
+    label: Careful change
+    description: Careful change, run as one step (user-defined agent).
+    phases:
+      - careful-change
+    omits:
+      - responsibility: scope
+        reason: Careful change is a user-defined agent run as one step; it defines no requirement clauses.
+        authority: engineering-reviewers
+      - responsibility: plan
+        reason: Careful change plans and makes the change itself, in its one step, from its own instructions.
+        authority: engineering-reviewers
 phases:
   intake:
     label: Intake
@@ -1478,6 +1490,7 @@ phases:
     writeScope: source-and-artifact
     approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [implementation, verification] }
     qualityCommands: []
+    repositoryTests: run
   testing:
     label: Testing
     defaultTemplate: benchmark/testing.md
@@ -1486,6 +1499,7 @@ phases:
     writeScope: source-and-artifact
     approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [implementation, testing] }
     qualityCommands: []
+    repositoryTests: run
   visual-verification:
     label: Mobile visual verification
     defaultTemplate: figma-mobile/visual-verification.md
@@ -2990,6 +3004,22 @@ phases:
         modelPolicy: never
     worldModel: {}
     writeScope: source-and-artifact
+  careful-change:
+    label: Careful change
+    description: Runs Careful change, the user-defined agent from the careful-change folder.
+    defaultTemplate: common/careful-change.md
+    artifact:
+      path: artifacts/careful-change/careful-change.md
+      kind: careful-change
+      minimumBytes: 200
+    generation:
+      task: code
+    writeScope: source-and-artifact
+    inputs: []
+    approval:
+      authorities:
+        - engineering-reviewers
+      minimum: 1
 governance:
   requireAcceptanceCriteriaTags: true
   protectedPaths:
