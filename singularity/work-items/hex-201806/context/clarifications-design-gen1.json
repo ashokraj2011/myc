@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "workId": "hex-201806",
+  "phase": "design",
+  "generation": 1,
+  "mode": "required",
+  "promptPath": "singularity/work-items/hex-201806/context/prompts/design-gen1.md",
+  "promptSha256": "5b40ce4d97f6a752360754331cb0cbef033f5bd3fccbd10e9d152ac2e6dfc04a",
+  "groundingRecordPath": "singularity/work-items/hex-201806/context/design-gen1.json",
+  "groundingRecordSha256": "d82219d9d2738d34c95e18b3b12c7ddae9030820580f45a0508f3ecf8672be83",
+  "responses": [
+    {
+      "id": "Q-001",
+      "question": "What positive integer range should conversion support?",
+      "answer": "Accept positive safe integers only; defer larger values.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-002",
+      "question": "What hexadecimal output formatting should be used?",
+      "answer": "Lowercase hexadecimal digits with no prefix (255 → ff).",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-003",
+      "question": "How should invalid or boundary inputs be handled?",
+      "answer": "Reject invalid inputs with a clear validation message and no conversion result.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-004",
+      "question": "Which representative screenshot scenario and test cases should be used?",
+      "answer": "Screenshot 255 → ff; test 1, 15, 16, 255, the maximum supported value, and representative invalid values.",
+      "status": "answered",
+      "blocking": false
+    }
+  ],
+  "completed": true,
+  "recordedAt": "2026-10-24T23:52:47.143Z",
+  "recordedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "agent": "architect"
+}

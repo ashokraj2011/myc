@@ -13,7 +13,7 @@
 |  | ⚠ self-approval | Ashok Raj via product-approvers; agent product-owner | **warning** |  |  |  |
 | 2 | Requirements (`requirements`) | product-owner | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via product-approvers; agent product-owner | **warning** |  |  |  |
-| 3 | Architecture and design (`design`) | architect | **in_progress** | 0 | 0 | unavailable |
+| 3 | Architecture and design (`design`) | architect | **in_progress** | 1 | 0 | unavailable |
 | 4 | Implementation specification (`implementation-spec`) | architect | **not_started** | 0 | 0 | unavailable |
 | 5 | Implementation (`implementation`) | developer | **not_started** | 0 | 0 | unavailable |
 | 6 | Verification (`verification`) | qa | **not_started** | 0 | 0 | unavailable |
@@ -21,6 +21,7 @@
 
 ## Recent history
 
+- 2026-10-24T23:55:06.405Z — **phase_generated** (design) by ashokraj2011 · agent architect: generation 1
 - 2026-10-24T23:43:53.913Z — **phase_self_approved** (requirements) by ashokraj2011 · agent product-owner: threshold reached; advanced to design
 - 2026-10-24T23:38:27.543Z — **phase_submitted** (requirements) by ashokraj2011 · agent product-owner: 1 artifacts
 - 2026-10-24T23:37:15.599Z — **phase_generated** (requirements) by ashokraj2011 · agent product-owner: generation 1
