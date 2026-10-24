@@ -9,7 +9,7 @@
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
-| 1 | Intake (`intake`) | product-owner | **in_progress** | 1 | 0 | unavailable |
+| 1 | Intake (`intake`) | product-owner | **awaiting_approval** | 1 | 0 | unavailable |
 | 2 | Requirements (`requirements`) | product-owner | **not_started** | 0 | 0 | unavailable |
 | 3 | Architecture and design (`design`) | architect | **not_started** | 0 | 0 | unavailable |
 | 4 | Implementation specification (`implementation-spec`) | architect | **not_started** | 0 | 0 | unavailable |
@@ -19,5 +19,6 @@
 
 ## Recent history
 
+- 2026-10-24T22:51:57.980Z — **phase_submitted** (intake) by ashokraj2011 · agent product-owner: 1 artifacts
 - 2026-10-24T22:49:18.900Z — **phase_generated** (intake) by ashokraj2011 · agent product-owner: generation 1
 - 2026-10-24T22:39:47.492Z — **work_started** (intake) by ashokraj2011 · agent product-owner: Created feature branch hex-201806
