@@ -10,7 +10,7 @@
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
 | 1 | Specification (`specification`) | product-owner | **approved** | 1 | 1 | unavailable |
-| 2 | Planning (`planning`) | architect | **in_progress** | 2 | 0 | unavailable |
+| 2 | Planning (`planning`) | architect | **awaiting_approval** | 2 | 0 | unavailable |
 | 3 | Implementation (`implementation`) | developer | **not_started** | 0 | 0 | unavailable |
 | 4 | Convergence (`convergence`) | architect | **not_started** | 0 | 0 | unavailable |
 | 5 | Verification (`verification`) | qa | **not_started** | 0 | 0 | unavailable |
@@ -18,6 +18,7 @@
 
 ## Recent history
 
+- 2026-10-25T22:25:01.170Z — **phase_submitted** (planning) by ashokraj2011 · agent architect: 1 artifacts
 - 2026-10-25T21:04:25.488Z — **source_review_submitted** (planning) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 6514cc38c74963433eab822b442eff0618cdabe6c6037cfad9b60f79c7385e70
 - 2026-10-25T21:03:23.621Z — **phase_generated** (planning) by ashokraj2011 · agent architect: generation 2
 - 2026-10-25T21:00:32.013Z — **source_review_submitted** (planning) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 466646e1aef00f98d383f7c026a46ebae714165a2e9b9e6dddc26fe9ba4b23d1
