@@ -5,7 +5,7 @@
   "workType": "spec-driven-standard",
   "phase": "convergence",
   "generation": 1,
-  "status": "awaiting_approval",
+  "status": "approved",
   "generatedBy": {
     "name": "Ashok Raj",
     "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -83,8 +83,93 @@
   "remoteOutputs": [],
   "usage": [],
   "sequenceOverrides": [],
-  "approvals": [],
-  "selfApproval": false,
+  "approvals": [
+    {
+      "decision": "approved",
+      "phase": "convergence",
+      "at": "2026-10-25T23:28:56.405Z",
+      "actor": {
+        "name": "Ashok Raj",
+        "email": "88361104+ashokraj2011@users.noreply.github.com",
+        "login": "ashokraj2011",
+        "githubLookup": "resolved"
+      },
+      "agent": null,
+      "authorityGroup": "architecture-reviewers",
+      "identityAssurance": "configured-local",
+      "channel": "copilot-selection-receipt",
+      "generation": 1,
+      "artifactSha256": [
+        {
+          "path": "singularity/work-items/fact-01/artifacts/convergence/convergence.md",
+          "sha256": "00a0b0f8ff0d80db2317549184924264317ff44356efe2da8493d0f517781ae8"
+        }
+      ],
+      "reviewPacketSha256": "b931013ade8b9c78f9c52857bbc50bb636758a6ddd7d5da20c873b76478b6b35",
+      "evidenceCommit": "ae48a199987205d3b5f71959b8b87197aefd3a02",
+      "artifactSetSha256": "ddddbeb21a85d8e1d58d14e20aa2f45107131860e832f2f15b5990de44ddf6a8",
+      "architectureIntent": null,
+      "architectureDecision": null,
+      "actionContext": {
+        "phase": "convergence",
+        "label": "Convergence",
+        "generation": 1,
+        "submittedAt": "2026-10-25T23:21:26.926Z",
+        "artifacts": [
+          {
+            "path": "singularity/work-items/fact-01/artifacts/convergence/convergence.md",
+            "sha256": "00a0b0f8ff0d80db2317549184924264317ff44356efe2da8493d0f517781ae8"
+          }
+        ],
+        "agentBriefs": [],
+        "reviewPacketSha256": "b931013ade8b9c78f9c52857bbc50bb636758a6ddd7d5da20c873b76478b6b35",
+        "submittedSourceCommit": "1ef1133fa33675537d93e72d7e180f8c4af99b67",
+        "planId": "e9d72122ac90232662589a3b"
+      },
+      "upstream": {
+        "sha256": "sha256:33abf0a15224c204ee80f0366a3f666af8964b5782074658bced585585f2438e",
+        "refs": [
+          {
+            "kind": "input",
+            "ref": "implementation",
+            "sha256": "sha256:364c1a29af58c84ebcc035e3448c0c819fc1d76756b88f01f34c9416eed60de2"
+          },
+          {
+            "kind": "input",
+            "ref": "planning",
+            "sha256": "sha256:d69557d66c9b60b8451e98978815e9c60d803881fa4427e4c766c868da9fef71"
+          },
+          {
+            "kind": "input",
+            "ref": "specification",
+            "sha256": "sha256:34c557d40d1ac8e26ff5c57ea5d0a6c62c6cd231a0e3e6cf28816269b1b9519b"
+          },
+          {
+            "kind": "candidate",
+            "ref": "HEAD",
+            "sha256": "sha256:da093a34e9df6d2f9e12a502c52ee8b6c16357ebbfcda37f76cedd3123a184c3"
+          },
+          {
+            "kind": "specification",
+            "ref": "records",
+            "sha256": "sha256:00034895bfdf3b1a5e61a001c1afb9e6ef48c3fac96c64b899614b6072026334"
+          },
+          {
+            "kind": "documents",
+            "ref": "convergence",
+            "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+          },
+          {
+            "kind": "decisions",
+            "ref": "story",
+            "sha256": "sha256:aef867ad10d29bb784f3f121b9972acad468ed98c45313753498bd324e8cefc8"
+          }
+        ]
+      },
+      "selfApproval": true
+    }
+  ],
+  "selfApproval": true,
   "conformanceTree": null
 }
 -->
