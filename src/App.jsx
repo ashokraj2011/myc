@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Header } from './components/Header';
 import { Display } from './components/Display';
 import { StandardKeypad } from './components/StandardKeypad';
 import { ScientificKeypad } from './components/ScientificKeypad';
 import { UnitConverter } from './components/UnitConverter';
 import { FinancialCalculator } from './components/FinancialCalculator';
+import { CombinationCalculator } from './components/CombinationCalculator';
 import { FunctionGrapher } from './components/FunctionGrapher';
 import { HistoryDrawer } from './components/HistoryDrawer';
 import { KeyboardShortcutsModal } from './components/KeyboardShortcutsModal';
@@ -239,6 +240,18 @@ export default function App() {
           toggleKeyboardModal={() => setIsKeyboardOpen(true)}
         />
 
+        <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end', marginBottom: '1rem' }}>
+          <button
+            type="button"
+            aria-pressed={activeMode === 'combination'}
+            onClick={() => setActiveMode('combination')}
+            className="calc-btn u-bg-btn-op-bg u-text-btn-op-text u-hbg-btn-op-hover font-semibold"
+            style={{ padding: '0.625rem 1rem' }}
+          >
+            Combination
+          </button>
+        </div>
+
         {/* Dynamic Content based on Active Mode */}
         {activeMode === 'standard' && (
           <div className="w-full flex flex-col items-center animate-fade-in">
@@ -295,6 +308,9 @@ export default function App() {
         {activeMode === 'converter' && <UnitConverter soundEnabled={soundEnabled} />}
 
         {activeMode === 'financial' && <FinancialCalculator soundEnabled={soundEnabled} />}
+
+        {/* @clause:FACT-01:REQ-002 routes the combination mode to its calculator UI */}
+        {activeMode === 'combination' && <CombinationCalculator />}
 
         {activeMode === 'grapher' && <FunctionGrapher soundEnabled={soundEnabled} />}
       </main>

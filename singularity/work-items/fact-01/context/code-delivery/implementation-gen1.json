@@ -1,0 +1,461 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "fact-01",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "f3127a6c-54cc-486b-b422-de74b91219a7",
+  "changeSet": {
+    "path": "singularity/work-items/fact-01/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:16e7dca938b8bb0c834243ad232c8f40e450e606e940e8af03d7420dcf62cf69",
+    "sourcePaths": [
+      "src/App.jsx",
+      "src/components/CombinationCalculator.jsx",
+      "src/utils/evaluator.js"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [],
+    "executableTestPaths": [
+      "src/App.test.jsx",
+      "src/utils/evaluator.test.js"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "product-source": 3,
+      "test-source": 2
+    },
+    "entries": [
+      {
+        "changeId": "sha256:f717a7f72de08b6bc87822127178a3ec3eeb0bd51705de779498333c63ea4d7e",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "src/components/CombinationCalculator.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:0db5e94a0776472e2da4cf273207bdea52a87ba5d17116e8208d5dee97a17eb4",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:5aca030f62ea7924659414afef7b87fcfd6c3f34801dbf9f9c3399b1a2c82e7b",
+        "status": "modified",
+        "oldPath": "src/App.test.jsx",
+        "newPath": "src/App.test.jsx",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:cd1a469826c1887f484ea149880146913d8afbfbcea323518cc6fc6c14d9bf6a",
+        "status": "modified",
+        "oldPath": "src/utils/evaluator.js",
+        "newPath": "src/utils/evaluator.js",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:5b376244c745af119a32120614579c7791d229ecda849cb1822ea5b7d1682c47",
+        "status": "modified",
+        "oldPath": "src/utils/evaluator.test.js",
+        "newPath": "src/utils/evaluator.test.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [],
+    "bound": [
+      "FACT-01:AC-001"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "FACT-01:AC-001",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "FACT-01:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "Combination calculator"
+          ],
+          "name": "displays the representative nCr result for valid inputs"
+        },
+        "logicalTestId": "sha256:18afe608ffbaca9e848c17b769c4643b658e82f3ca90dcfd00ec618c8dd4f8b4",
+        "declarationSha256": "sha256:2767977f73834dba464180a0a6d7b4f2086e44fe5849b28ef6398ebeb9f9b458",
+        "supportSha256": null,
+        "assertions": {
+          "count": 0,
+          "tautological": 0,
+          "negative": false,
+          "boundary": false,
+          "nullability": false,
+          "adequacy": "missing",
+          "subjects": [
+            "async",
+            "click",
+            "getByLabelText",
+            "getByRole",
+            "queryByLabelText",
+            "render",
+            "setup",
+            "toBeInTheDocument",
+            "toHaveTextContent",
+            "type"
+          ]
+        },
+        "line": 207,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "FACT-01:REQ-001",
+        "expectedPaths": [
+          "src/utils/evaluator.js"
+        ]
+      },
+      {
+        "clauseId": "FACT-01:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/CombinationCalculator.jsx"
+        ]
+      },
+      {
+        "clauseId": "FACT-01:REQ-003",
+        "expectedPaths": [
+          "src/utils/evaluator.js"
+        ]
+      },
+      {
+        "clauseId": "FACT-01:REQ-004",
+        "expectedPaths": [
+          "src/components/CombinationCalculator.jsx",
+          "src/utils/evaluator.js"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "FACT-01:REQ-001",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 240,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "FACT-01:REQ-002",
+        "sourcePath": "src/App.jsx",
+        "line": 312,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "FACT-01:REQ-002",
+        "sourcePath": "src/components/CombinationCalculator.jsx",
+        "line": 48,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "FACT-01:REQ-003",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 241,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "FACT-01:REQ-004",
+        "sourcePath": "src/components/CombinationCalculator.jsx",
+        "line": 49,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "FACT-01:REQ-004",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 242,
+        "tag": "clause"
+      }
+    ]
+  },
+  "fulfillment": {
+    "obligations": [
+      {
+        "clauseId": "FACT-01:AC-001",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/fact-01/evidence/ncr-result.png",
+            "state": "present",
+            "sha256": "5818ced3e9acc34e2142c0e4fad1966bca5774581364c20291126bb7af4c0b61"
+          }
+        ]
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "FACT-01:REQ-001",
+        "explanation": {
+          "text": "returns the exact count of r-item selections from n",
+          "path": "src/utils/evaluator.js",
+          "line": 240
+        },
+        "regions": [
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 218,
+                "beforeLines": 0,
+                "afterStart": 219,
+                "afterLines": 46
+              }
+            ],
+            "symbols": [
+              {
+                "name": "calculateTip",
+                "kind": "function",
+                "line": 200
+              },
+              {
+                "name": "nCr",
+                "kind": "function",
+                "line": 250
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "FACT-01:REQ-002",
+        "explanation": {
+          "text": "routes the combination mode to its calculator UI",
+          "path": "src/App.jsx",
+          "line": 312
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 7,
+                "beforeLines": 0,
+                "afterStart": 8,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 241,
+                "beforeLines": 0,
+                "afterStart": 243,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 298,
+                "beforeLines": 0,
+                "afterStart": 312,
+                "afterLines": 3
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 15
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/CombinationCalculator.jsx",
+            "change": "added",
+            "hunks": [
+              {
+                "beforeStart": 0,
+                "beforeLines": 0,
+                "afterStart": 1,
+                "afterLines": 136
+              }
+            ],
+            "symbols": [
+              {
+                "name": "CombinationCalculator",
+                "kind": "function",
+                "line": 51
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "FACT-01:REQ-003",
+        "explanation": {
+          "text": "returns zero when r exceeds n",
+          "path": "src/utils/evaluator.js",
+          "line": 241
+        },
+        "regions": [
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 218,
+                "beforeLines": 0,
+                "afterStart": 219,
+                "afterLines": 46
+              }
+            ],
+            "symbols": [
+              {
+                "name": "calculateTip",
+                "kind": "function",
+                "line": 200
+              },
+              {
+                "name": "nCr",
+                "kind": "function",
+                "line": 250
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "FACT-01:REQ-004",
+        "explanation": {
+          "text": "withholds results for invalid or incomplete inputs",
+          "path": "src/components/CombinationCalculator.jsx",
+          "line": 49
+        },
+        "regions": [
+          {
+            "path": "src/components/CombinationCalculator.jsx",
+            "change": "added",
+            "hunks": [
+              {
+                "beforeStart": 0,
+                "beforeLines": 0,
+                "afterStart": 1,
+                "afterLines": 136
+              }
+            ],
+            "symbols": [
+              {
+                "name": "CombinationCalculator",
+                "kind": "function",
+                "line": 51
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 218,
+                "beforeLines": 0,
+                "afterStart": 219,
+                "afterLines": 46
+              }
+            ],
+            "symbols": [
+              {
+                "name": "calculateTip",
+                "kind": "function",
+                "line": 200
+              },
+              {
+                "name": "nCr",
+                "kind": "function",
+                "line": 250
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:b1fc18925dcda5088b1be9eb855633589d1f56e00985d181910c3a84d68bddb7"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:08da5be72df383ee81b97338bbb5cfc4d30ac5088384e9a4a20351c6a88075ff",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-10-25T23:07:11.026Z"
+}

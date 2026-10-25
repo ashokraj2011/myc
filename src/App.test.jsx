@@ -197,3 +197,43 @@ describe('Responsive navigation (desktop rail + mobile dropdown)', () => {
     expect(mobileSelect.value).toBe('financial');
   });
 });
+
+describe('Combination calculator', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  // @ac:FACT-01:AC-001
+  it('displays the representative nCr result for valid inputs', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await user.click(screen.getByRole('button', { name: 'Combination' }));
+
+    expect(screen.queryByLabelText('Combination result')).not.toBeInTheDocument();
+
+    await user.type(screen.getByLabelText('n (total items)'), '5');
+    await user.type(screen.getByLabelText('r (items to choose)'), '2');
+    await user.click(screen.getByRole('button', { name: 'Calculate nCr' }));
+
+    expect(screen.getByLabelText('Combination result')).toHaveTextContent('10');
+  });
+
+  it('does not retain a result after inputs become invalid or incomplete', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await user.click(screen.getByRole('button', { name: 'Combination' }));
+    await user.type(screen.getByLabelText('n (total items)'), '5');
+    await user.type(screen.getByLabelText('r (items to choose)'), '2');
+    await user.click(screen.getByRole('button', { name: 'Calculate nCr' }));
+    expect(screen.getByLabelText('Combination result')).toHaveTextContent('10');
+
+    await user.clear(screen.getByLabelText('r (items to choose)'));
+    expect(screen.queryByLabelText('Combination result')).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: 'Calculate nCr' }));
+    expect(screen.getByRole('alert')).toHaveTextContent('Enter positive integer values for n and r.');
+    expect(screen.queryByLabelText('Combination result')).not.toBeInTheDocument();
+  });
+});

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { evaluateExpression, formatNumber } from '../utils/evaluator';
+import { evaluateExpression, formatNumber, nCr } from '../utils/evaluator';
 
 // Verifies WRK-1978:AC-003 and WRK-1978:AC-005: the restyle work must not
 // change calculation semantics, expression evaluation, or number formatting.
@@ -72,4 +72,25 @@ describe('formatNumber (display formatting regression)', () => {
   it('switches to exponential notation for very large numbers', () => {
     expect(formatNumber(1e13)).toContain('e+');
   });
+});
+
+describe('nCr', () => {
+  it('returns exact combination counts for positive integer inputs', () => {
+    expect(nCr(5, 2)).toBe(10n);
+    expect(nCr(67, 33)).toBe(14226520737620288370n);
+    expect(nCr('100000000000000000000', '1')).toBe(100000000000000000000n);
+    expect(nCr(5, 5)).toBe(1n);
+  });
+
+  it('returns zero when r exceeds n', () => {
+    expect(nCr(3, 4)).toBe(0n);
+  });
+
+  it.each([0, -1, 1.5, Number.NaN, '0', '-2', '1.5', '', null])(
+    'rejects invalid input %s',
+    (value) => {
+      expect(() => nCr(value, 1)).toThrow(TypeError);
+      expect(() => nCr(5, value)).toThrow(TypeError);
+    }
+  );
 });

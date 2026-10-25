@@ -216,3 +216,49 @@ export const calculateTip = (billAmount, tipPercent, peopleCount) => {
     perPerson: parseFloat(perPerson.toFixed(2)),
   };
 };
+
+const toPositiveBigInt = (value) => {
+  if (typeof value === 'bigint' && value > 0n) return value;
+
+  if (typeof value === 'number' && Number.isSafeInteger(value) && value > 0) {
+    return BigInt(value);
+  }
+
+  if (typeof value === 'string') {
+    const trimmed = value.trim();
+    const decimalInteger = trimmed.match(/^\+?(\d+)(?:\.0+)?$/);
+
+    if (decimalInteger) {
+      const parsed = BigInt(decimalInteger[1]);
+      if (parsed > 0n) return parsed;
+    }
+  }
+
+  throw new TypeError('n and r must be positive integers.');
+};
+
+// @clause:FACT-01:REQ-001 returns the exact count of r-item selections from n
+// @clause:FACT-01:REQ-003 returns zero when r exceeds n
+// @clause:FACT-01:REQ-004 rejects non-integer and non-positive inputs
+/**
+ * Counts the ways to choose r items from n without losing integer precision.
+ * @param {number|bigint|string} n Total number of items.
+ * @param {number|bigint|string} r Number of items to choose.
+ * @returns {bigint} The exact combination count, or 0n when r exceeds n.
+ * @throws {TypeError} When either input is not a positive integer.
+ */
+export const nCr = (n, r) => {
+  const total = toPositiveBigInt(n);
+  const chosen = toPositiveBigInt(r);
+
+  if (chosen > total) return 0n;
+
+  const terms = chosen > total - chosen ? total - chosen : chosen;
+  let result = 1n;
+
+  for (let index = 1n; index <= terms; index += 1n) {
+    result = (result * (total - terms + index)) / index;
+  }
+
+  return result;
+};
