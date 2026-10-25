@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "phase": "planning",
+  "generation": 2,
+  "reportSha256": "6514cc38c74963433eab822b442eff0618cdabe6c6037cfad9b60f79c7385e70",
+  "lifecycleEventId": "a29b110c-2d03-4850-aa60-06720905b315",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "planning",
+    "binding": {
+      "workId": "fact-01",
+      "phase": "planning",
+      "generation": 2,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/fact-01/USER-STORY.md",
+          "textSha256": "06593abf303585459cc7734b1b4baf803912d256f687b7357c138a7893a1721f",
+          "originalSha256": "998e7f5318d6f2f94edef4ef6b52c66144001ec736e4a9d6e1d83ba54307da0c"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:approved-scope",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/fact-01/context/clarifications-specification-gen1.json",
+          "sha256": "59da6572f9d2e2399cf282c35089e06b5b56727227e2e3155c56e80cd5a92d99"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/fact-01/artifacts/planning/plan.md",
+        "sha256": "ef7cc7d86f87eac91aa12db93f3aa3618151044ced305aa84b2b38a04385ab72"
+      },
+      "upstreamSpec": {
+        "path": "singularity/work-items/fact-01/artifacts/specification/spec.md",
+        "sha256": "849d3740a63e4a7a029d380cc3bc9c62acd606bb43891e1ca5c1dec05707dbe8"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:approved-scope"
+    ],
+    "rows": [
+      {
+        "clauseId": "FACT-01:REQ-001",
+        "expectedPaths": [
+          "src/utils/evaluator.js"
+        ],
+        "plannedTests": [
+          "src/utils/evaluator.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "The callable function returns an exact BigInt count; nCr(5, 2) is 10n and nCr(67, 33) is 14226520737620288370n.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "FACT-01:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/CombinationCalculator.jsx"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "A user can enter both values, request a calculation, and see the valid result.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "FACT-01:REQ-003",
+        "expectedPaths": [
+          "src/utils/evaluator.js"
+        ],
+        "plannedTests": [
+          "src/utils/evaluator.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Positive integer inputs with r > n return 0.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "FACT-01:REQ-004",
+        "expectedPaths": [
+          "src/components/CombinationCalculator.jsx",
+          "src/utils/evaluator.js"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/evaluator.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Non-integer, non-positive, or missing values produce no nCr result.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "FACT-01:AC-001",
+        "expectedPaths": [
+          "singularity/work-items/fact-01/evidence/ncr-result.png"
+        ],
+        "plannedTests": [],
+        "testDisposition": "non-test",
+        "testReason": null,
+        "verificationCriterion": "FACT-01:AC-001",
+        "fulfillment": "evidence",
+        "observableResult": "Screenshot shows n = 5, r = 2 and the displayed result 10.",
+        "assessment": "supported"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "adebae380c85c66b3e158c5e65633b47c3aadd50c6abeabd6fcbb6f42de23991",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "architect",
+    "readOnly": true
+  },
+  "submittedAt": "2026-10-25T21:04:25.488Z",
+  "recordSha256": "0a6ee47c6d88450e5d6e317bcf62adca2d139e3968fd9f566f9f1c795633a1b0"
+}
