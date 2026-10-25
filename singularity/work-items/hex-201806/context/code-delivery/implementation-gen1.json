@@ -1,0 +1,931 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "hex-201806",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "0d567539-57f8-41c9-a82a-0a845fb626ee",
+  "changeSet": {
+    "path": "singularity/work-items/hex-201806/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:89aee7d22cae569ec80e89f825858791dbbd6f19c31a94b939b17fd520c6d261",
+    "sourcePaths": [
+      "src/App.jsx",
+      "src/components/StandardKeypad.jsx",
+      "src/utils/evaluator.js"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [],
+    "executableTestPaths": [
+      "src/App.test.jsx",
+      "src/utils/evaluator.test.js"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "product-source": 3,
+      "test-source": 2
+    },
+    "entries": [
+      {
+        "changeId": "sha256:e9820d159f0b9ed045309202b8717272744da804e3c12adf8b799b324744d2cf",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:60d696a2964ebbdf10210071187f3efc239a948640fb514db506f557c043db8f",
+        "status": "modified",
+        "oldPath": "src/App.test.jsx",
+        "newPath": "src/App.test.jsx",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:42273503e89bab047db1d95d7ef3068fe829ec809f9166ce02fadcf438e810f0",
+        "status": "modified",
+        "oldPath": "src/components/StandardKeypad.jsx",
+        "newPath": "src/components/StandardKeypad.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:f11dd419d401dec61b8cdd2cb6c50ca83699b4b3c1d2072c8ec4f7db1c999d95",
+        "status": "modified",
+        "oldPath": "src/utils/evaluator.js",
+        "newPath": "src/utils/evaluator.js",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:48e9888b4f4a23f7b89513e12915385d768dcfc5de1aaafc442570c4c04496fe",
+        "status": "modified",
+        "oldPath": "src/utils/evaluator.test.js",
+        "newPath": "src/utils/evaluator.test.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "HEX-201806:AC-001"
+    ],
+    "bound": [
+      "HEX-201806:AC-001"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "HEX-201806:AC-001",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "HEX-201806:AC-001",
+        "testSource": "src/utils/evaluator.test.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "HEX-201806:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "HEX conversion interaction"
+          ],
+          "name": "converts 255 in %s mode and records history"
+        },
+        "logicalTestId": "sha256:bac1cf29ff06b705e0765d3bdb6ec580dddeebb30c01605654db6833efae32f7",
+        "declarationSha256": "sha256:532d824bb6043feac3c63ad63040759324a0bc22cac1f67a62fe195f66c62d0e",
+        "supportSha256": null,
+        "assertions": {
+          "count": 2,
+          "tautological": 0,
+          "negative": false,
+          "boundary": true,
+          "nullability": false,
+          "adequacy": "adequate",
+          "subjects": [
+            "async",
+            "click",
+            "clickButton",
+            "getAllByRole",
+            "getAllByText",
+            "getByText",
+            "getByTitle",
+            "getResultText",
+            "render",
+            "selectOptions",
+            "setup",
+            "toBeInTheDocument"
+          ]
+        },
+        "line": 29,
+        "parameters": {
+          "kind": "static",
+          "count": 2,
+          "titlePattern": "^converts 255 in .*? mode and records history$"
+        },
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "HEX-201806:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "HEX conversion interaction"
+          ],
+          "name": "shows validation feedback for unsupported input without recording a conversion"
+        },
+        "logicalTestId": "sha256:a3fa2be60dfe78af42f45bb72f57a6167f64dc6f1e77850cb0fb989e3faa99e0",
+        "declarationSha256": "sha256:1bba69a18251e7a0681b675a291fd57a84381d55594c7e9eb79b6254e12419e3",
+        "supportSha256": null,
+        "assertions": {
+          "count": 1,
+          "tautological": 0,
+          "negative": false,
+          "boundary": false,
+          "nullability": false,
+          "adequacy": "adequate",
+          "subjects": [
+            "async",
+            "click",
+            "clickButton",
+            "getByTitle",
+            "getResultText",
+            "queryByText",
+            "render",
+            "setup",
+            "toBeInTheDocument"
+          ]
+        },
+        "line": 46,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "HEX-201806:AC-001",
+        "testSource": "src/utils/evaluator.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "convertDecimalToHex"
+          ],
+          "name": "converts %s to lowercase hexadecimal"
+        },
+        "logicalTestId": "sha256:d34146e66e9e0c9a41089562e8bd6415a3357fe1bcd4ba579e2c14451e8fd181",
+        "declarationSha256": "sha256:83227c7e7bad8bf83dd3964afabf0cdc0c52cf9177f403e34c2b0d96a863c782",
+        "supportSha256": null,
+        "assertions": {
+          "count": 1,
+          "tautological": 0,
+          "negative": false,
+          "boundary": false,
+          "nullability": true,
+          "adequacy": "adequate",
+          "subjects": [
+            "Number",
+            "convertDecimalToHex"
+          ]
+        },
+        "line": 6,
+        "parameters": {
+          "kind": "static",
+          "count": 5,
+          "titlePattern": "^converts .*? to lowercase hexadecimal$"
+        },
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "HEX-201806:AC-001",
+        "testSource": "src/utils/evaluator.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "convertDecimalToHex"
+          ],
+          "name": "rejects unsupported input %j"
+        },
+        "logicalTestId": "sha256:fc05cc4c56a43e932563b6b1d9d46f9be5790e123c2847acd688a928f35b8666",
+        "declarationSha256": "sha256:3d5ae04ce8d4ab8d311234b0633fb7e0b38f08ff6dddea532cfe0dbc13af09c4",
+        "supportSha256": null,
+        "assertions": {
+          "count": 2,
+          "tautological": 0,
+          "negative": false,
+          "boundary": false,
+          "nullability": true,
+          "adequacy": "adequate",
+          "subjects": [
+            "convertDecimalToHex"
+          ]
+        },
+        "line": 21,
+        "parameters": {
+          "kind": "static",
+          "count": 7,
+          "titlePattern": "^rejects unsupported input .*?$"
+        },
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      },
+      {
+        "testSource": "src/utils/evaluator.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "HEX-201806:AC-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx",
+          "src/utils/evaluator.js"
+        ]
+      },
+      {
+        "clauseId": "HEX-201806:CON-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx",
+          "src/utils/evaluator.js"
+        ]
+      },
+      {
+        "clauseId": "HEX-201806:CON-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/utils/evaluator.js"
+        ]
+      },
+      {
+        "clauseId": "HEX-201806:IFC-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx",
+          "src/utils/evaluator.js"
+        ]
+      },
+      {
+        "clauseId": "HEX-201806:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx",
+          "src/utils/evaluator.js"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "HEX-201806:AC-001",
+        "sourcePath": "src/App.jsx",
+        "line": 132,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-201806:AC-001",
+        "sourcePath": "src/components/StandardKeypad.jsx",
+        "line": 184,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-201806:AC-001",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 3,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-201806:CON-001",
+        "sourcePath": "src/App.jsx",
+        "line": 133,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-201806:CON-001",
+        "sourcePath": "src/components/StandardKeypad.jsx",
+        "line": 185,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-201806:CON-001",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 4,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-201806:CON-002",
+        "sourcePath": "src/App.jsx",
+        "line": 134,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-201806:CON-002",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 5,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-201806:IFC-001",
+        "sourcePath": "src/App.jsx",
+        "line": 135,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-201806:IFC-001",
+        "sourcePath": "src/components/StandardKeypad.jsx",
+        "line": 186,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-201806:IFC-001",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 6,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-201806:REQ-001",
+        "sourcePath": "src/App.jsx",
+        "line": 136,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-201806:REQ-001",
+        "sourcePath": "src/components/StandardKeypad.jsx",
+        "line": 187,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "HEX-201806:REQ-001",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 7,
+        "tag": "clause"
+      }
+    ]
+  },
+  "fulfillment": {
+    "obligations": [
+      {
+        "clauseId": "HEX-201806:AC-002",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/hex-201806/evidence/implementation-spec/hex-conversion-255.png",
+            "state": "present",
+            "sha256": "cbf8c9e66ef503b90ec01c59504f379229120612be1d4336153e510e581d23c2"
+          }
+        ]
+      },
+      {
+        "clauseId": "HEX-201806:AC-003",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/hex-201806/evidence/implementation-spec/hex-conversion-test-results.txt",
+            "state": "present",
+            "sha256": "f869705506b83fc7a67a0b488be8a843c14aab791d101de97bfbc56b1dceaaac"
+          }
+        ]
+      },
+      {
+        "clauseId": "HEX-201806:REQ-002",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/hex-201806/evidence/implementation-spec/hex-conversion-test-results.txt",
+            "state": "present",
+            "sha256": "f869705506b83fc7a67a0b488be8a843c14aab791d101de97bfbc56b1dceaaac"
+          }
+        ]
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "HEX-201806:AC-001",
+        "explanation": {
+          "text": "Updates the shared display and history on successful conversion.",
+          "path": "src/App.jsx",
+          "line": 132
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 1,
+                "afterStart": 11,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 132,
+                "afterLines": 28
+              },
+              {
+                "beforeStart": 262,
+                "beforeLines": 0,
+                "afterStart": 291,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 288,
+                "beforeLines": 0,
+                "afterStart": 318,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/StandardKeypad.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 12,
+                "beforeLines": 0,
+                "afterStart": 13,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 182,
+                "beforeLines": 0,
+                "afterStart": 184,
+                "afterLines": 10
+              }
+            ],
+            "symbols": [
+              {
+                "name": "StandardKeypad",
+                "kind": "function",
+                "line": 5
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 2,
+                "beforeLines": 0,
+                "afterStart": 3,
+                "afterLines": 26
+              }
+            ],
+            "symbols": [
+              {
+                "name": "convertDecimalToHex",
+                "kind": "function",
+                "line": 8
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "HEX-201806:CON-001",
+        "explanation": {
+          "text": "Keeps conversion handling additive to existing arithmetic.",
+          "path": "src/App.jsx",
+          "line": 133
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 1,
+                "afterStart": 11,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 132,
+                "afterLines": 28
+              },
+              {
+                "beforeStart": 262,
+                "beforeLines": 0,
+                "afterStart": 291,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 288,
+                "beforeLines": 0,
+                "afterStart": 318,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/StandardKeypad.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 12,
+                "beforeLines": 0,
+                "afterStart": 13,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 182,
+                "beforeLines": 0,
+                "afterStart": 184,
+                "afterLines": 10
+              }
+            ],
+            "symbols": [
+              {
+                "name": "StandardKeypad",
+                "kind": "function",
+                "line": 5
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 2,
+                "beforeLines": 0,
+                "afterStart": 3,
+                "afterLines": 26
+              }
+            ],
+            "symbols": [
+              {
+                "name": "convertDecimalToHex",
+                "kind": "function",
+                "line": 8
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "HEX-201806:CON-002",
+        "explanation": {
+          "text": "Shows invalid input and records only successful conversions.",
+          "path": "src/App.jsx",
+          "line": 134
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 1,
+                "afterStart": 11,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 132,
+                "afterLines": 28
+              },
+              {
+                "beforeStart": 262,
+                "beforeLines": 0,
+                "afterStart": 291,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 288,
+                "beforeLines": 0,
+                "afterStart": 318,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 2,
+                "beforeLines": 0,
+                "afterStart": 3,
+                "afterLines": 26
+              }
+            ],
+            "symbols": [
+              {
+                "name": "convertDecimalToHex",
+                "kind": "function",
+                "line": 8
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "HEX-201806:IFC-001",
+        "explanation": {
+          "text": "Converts the current decimal entry without decimal formatting.",
+          "path": "src/App.jsx",
+          "line": 135
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 1,
+                "afterStart": 11,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 132,
+                "afterLines": 28
+              },
+              {
+                "beforeStart": 262,
+                "beforeLines": 0,
+                "afterStart": 291,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 288,
+                "beforeLines": 0,
+                "afterStart": 318,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/StandardKeypad.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 12,
+                "beforeLines": 0,
+                "afterStart": 13,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 182,
+                "beforeLines": 0,
+                "afterStart": 184,
+                "afterLines": 10
+              }
+            ],
+            "symbols": [
+              {
+                "name": "StandardKeypad",
+                "kind": "function",
+                "line": 5
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 2,
+                "beforeLines": 0,
+                "afterStart": 3,
+                "afterLines": 26
+              }
+            ],
+            "symbols": [
+              {
+                "name": "convertDecimalToHex",
+                "kind": "function",
+                "line": 8
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "HEX-201806:REQ-001",
+        "explanation": {
+          "text": "Handles the HEX action in standard and scientific modes.",
+          "path": "src/App.jsx",
+          "line": 136
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 1,
+                "afterStart": 11,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 132,
+                "afterLines": 28
+              },
+              {
+                "beforeStart": 262,
+                "beforeLines": 0,
+                "afterStart": 291,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 288,
+                "beforeLines": 0,
+                "afterStart": 318,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/StandardKeypad.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 12,
+                "beforeLines": 0,
+                "afterStart": 13,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 182,
+                "beforeLines": 0,
+                "afterStart": 184,
+                "afterLines": 10
+              }
+            ],
+            "symbols": [
+              {
+                "name": "StandardKeypad",
+                "kind": "function",
+                "line": 5
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 2,
+                "beforeLines": 0,
+                "afterStart": 3,
+                "afterLines": 26
+              }
+            ],
+            "symbols": [
+              {
+                "name": "convertDecimalToHex",
+                "kind": "function",
+                "line": 8
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:eccdc1db6f0713588434abc72e435d3b5a2975c2d4afeccc19b7b9235a71153b"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:ca969f55d61c67302c9db291a1c8413711d5cbeb63142f1db556a2067e6e48fe",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-10-25T01:44:53.805Z"
+}

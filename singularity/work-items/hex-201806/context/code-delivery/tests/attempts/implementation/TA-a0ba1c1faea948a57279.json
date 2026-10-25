@@ -1,0 +1,448 @@
+{
+  "schemaVersion": 5,
+  "kind": "test-execution",
+  "attemptId": "TA-a0ba1c1faea948a57279",
+  "nonce": "e82a9559de2e7858181183d739161862",
+  "parentAttemptId": null,
+  "purpose": "preflight",
+  "workId": "hex-201806",
+  "phase": "implementation",
+  "generation": 1,
+  "commandId": ".-node-tests",
+  "commandSha256": "sha256:365a3f7fa75a6c536f4c2b3d33b5accc770995e7294753ce19d1fe5466a341ce",
+  "argvSha256": "7ea91cb57633bb94e24395e7b34f059abecf6ac68b822ee60f2db1c06646d5a9",
+  "selection": {
+    "selection": "complete",
+    "gaps": [],
+    "selectionSha256": "sha256:8684f0528fd02325e4a466ce66e7714105b5cb351a343ea1f7c045e9ceca5bd5"
+  },
+  "environment": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "host": "node 22.14.0"
+  },
+  "environmentSha256": "sha256:8b2f19bc62046a55f9c0d1e9f0704dc0088b6439bb1cab77461903a9c454f8d7",
+  "platform": "darwin",
+  "workingDirectory": ".",
+  "affectedRoots": [
+    "."
+  ],
+  "adapter": "vitest-json",
+  "profile": "vitest-static-v2",
+  "candidate": {
+    "commit": "2892db85a7bb7e56f55e451e55c914a20ec96581",
+    "treeSha256": "sha256:ca969f55d61c67302c9db291a1c8413711d5cbeb63142f1db556a2067e6e48fe"
+  },
+  "process": {
+    "status": "failed",
+    "exitCode": 1,
+    "signal": null,
+    "timedOut": false,
+    "infrastructureUnavailable": false,
+    "startedAt": "2026-10-25T01:41:41.865Z",
+    "completedAt": "2026-10-25T01:42:04.196Z"
+  },
+  "status": "failed",
+  "terminal": true,
+  "exitCode": 1,
+  "timedOut": false,
+  "skipped": false,
+  "suppressed": false,
+  "tests": {
+    "discovered": 46,
+    "passed": 44,
+    "failed": 2,
+    "skipped": 0
+  },
+  "result": {
+    "path": ".sflow/results/node-tests.json",
+    "sha256": "b5215d82c1d6f9a651acf0f3cc3ed3b92142dcb99d471a10fcbdbb5af3be13c9",
+    "bytes": 18919,
+    "files": [
+      {
+        "sourcePath": ".sflow/results/node-tests.json",
+        "sha256": "b5215d82c1d6f9a651acf0f3cc3ed3b92142dcb99d471a10fcbdbb5af3be13c9",
+        "bytes": 18919
+      }
+    ]
+  },
+  "rawReports": [
+    {
+      "path": "singularity/work-items/hex-201806/context/code-delivery/tests/raw/b5215d82c1d6f9a651acf0f3cc3ed3b92142dcb99d471a10fcbdbb5af3be13c9.bin",
+      "sha256": "b5215d82c1d6f9a651acf0f3cc3ed3b92142dcb99d471a10fcbdbb5af3be13c9",
+      "bytes": 18919
+    }
+  ],
+  "occurrences": [
+    {
+      "suitePath": [
+        "HEX conversion interaction"
+      ],
+      "name": "converts 255 in standard mode and records history",
+      "outcome": "passed",
+      "durationMs": 384
+    },
+    {
+      "suitePath": [
+        "HEX conversion interaction"
+      ],
+      "name": "converts 255 in scientific mode and records history",
+      "outcome": "passed",
+      "durationMs": 239
+    },
+    {
+      "suitePath": [
+        "HEX conversion interaction"
+      ],
+      "name": "shows validation feedback for unsupported input without recording a conversion",
+      "outcome": "passed",
+      "durationMs": 381
+    },
+    {
+      "suitePath": [
+        "App functional regression (all modes/features unchanged)"
+      ],
+      "name": "performs digit entry and arithmetic in Standard mode",
+      "outcome": "failed",
+      "durationMs": 6233
+    },
+    {
+      "suitePath": [
+        "App functional regression (all modes/features unchanged)"
+      ],
+      "name": "supports memory recall (MC/MR/M+/M-) without changing calculation results",
+      "outcome": "failed",
+      "durationMs": 7787
+    },
+    {
+      "suitePath": [
+        "App functional regression (all modes/features unchanged)"
+      ],
+      "name": "clears memory with MC",
+      "outcome": "passed",
+      "durationMs": 391
+    },
+    {
+      "suitePath": [
+        "App functional regression (all modes/features unchanged)"
+      ],
+      "name": "clears the expression with AC and supports backspace",
+      "outcome": "passed",
+      "durationMs": 346
+    },
+    {
+      "suitePath": [
+        "App functional regression (all modes/features unchanged)"
+      ],
+      "name": "records a calculation in history and clears it",
+      "outcome": "passed",
+      "durationMs": 335
+    },
+    {
+      "suitePath": [
+        "App functional regression (all modes/features unchanged)"
+      ],
+      "name": "switches between all calculator modes",
+      "outcome": "passed",
+      "durationMs": 578
+    },
+    {
+      "suitePath": [
+        "App functional regression (all modes/features unchanged)"
+      ],
+      "name": "opens the keyboard shortcuts modal",
+      "outcome": "passed",
+      "durationMs": 45
+    },
+    {
+      "suitePath": [
+        "App functional regression (all modes/features unchanged)"
+      ],
+      "name": "toggles sound on and off",
+      "outcome": "passed",
+      "durationMs": 49
+    },
+    {
+      "suitePath": [
+        "Windows 11 Fluent theme coverage across modes"
+      ],
+      "name": "exposes win11-light and win11-dark as selectable themes",
+      "outcome": "passed",
+      "durationMs": 48
+    },
+    {
+      "suitePath": [
+        "Windows 11 Fluent theme coverage across modes"
+      ],
+      "name": "applies win11-dark theme via the shared data-theme attribute",
+      "outcome": "passed",
+      "durationMs": 39
+    },
+    {
+      "suitePath": [
+        "Windows 11 Fluent theme coverage across modes"
+      ],
+      "name": "renders standard mode using the shared design-token classes under win11-light",
+      "outcome": "passed",
+      "durationMs": 73
+    },
+    {
+      "suitePath": [
+        "Windows 11 Fluent theme coverage across modes"
+      ],
+      "name": "renders scientific mode using the shared design-token classes under win11-light",
+      "outcome": "passed",
+      "durationMs": 69
+    },
+    {
+      "suitePath": [
+        "Windows 11 Fluent theme coverage across modes"
+      ],
+      "name": "renders converter mode using the shared design-token classes under win11-light",
+      "outcome": "passed",
+      "durationMs": 45
+    },
+    {
+      "suitePath": [
+        "Windows 11 Fluent theme coverage across modes"
+      ],
+      "name": "renders financial mode using the shared design-token classes under win11-light",
+      "outcome": "passed",
+      "durationMs": 64
+    },
+    {
+      "suitePath": [
+        "Windows 11 Fluent theme coverage across modes"
+      ],
+      "name": "renders grapher mode using the shared design-token classes under win11-light",
+      "outcome": "passed",
+      "durationMs": 72
+    },
+    {
+      "suitePath": [
+        "Responsive navigation (desktop rail + mobile dropdown)"
+      ],
+      "name": "renders both the desktop nav rail and the mobile dropdown markup",
+      "outcome": "passed",
+      "durationMs": 13
+    },
+    {
+      "suitePath": [
+        "Responsive navigation (desktop rail + mobile dropdown)"
+      ],
+      "name": "keeps the mobile mode dropdown in sync with the active mode",
+      "outcome": "passed",
+      "durationMs": 33
+    },
+    {
+      "suitePath": [
+        "production build"
+      ],
+      "name": "completes successfully and emits the expected bundle",
+      "outcome": "passed",
+      "durationMs": 1454
+    },
+    {
+      "suitePath": [
+        "convertDecimalToHex"
+      ],
+      "name": "converts 1 to lowercase hexadecimal",
+      "outcome": "passed",
+      "durationMs": 1
+    },
+    {
+      "suitePath": [
+        "convertDecimalToHex"
+      ],
+      "name": "converts 15 to lowercase hexadecimal",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "convertDecimalToHex"
+      ],
+      "name": "converts 16 to lowercase hexadecimal",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "convertDecimalToHex"
+      ],
+      "name": "converts 255 to lowercase hexadecimal",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "convertDecimalToHex"
+      ],
+      "name": "converts 9007199254740991 to lowercase hexadecimal",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "convertDecimalToHex"
+      ],
+      "name": "rejects unsupported input \"\"",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "convertDecimalToHex"
+      ],
+      "name": "rejects unsupported input \"0\"",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "convertDecimalToHex"
+      ],
+      "name": "rejects unsupported input \"-1\"",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "convertDecimalToHex"
+      ],
+      "name": "rejects unsupported input \"1.5\"",
+      "outcome": "passed",
+      "durationMs": 1
+    },
+    {
+      "suitePath": [
+        "convertDecimalToHex"
+      ],
+      "name": "rejects unsupported input \"1+2\"",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "convertDecimalToHex"
+      ],
+      "name": "rejects unsupported input \"0x10\"",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "convertDecimalToHex"
+      ],
+      "name": "rejects unsupported input \"9007199254740992\"",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "evaluateExpression (calculation behavior regression)"
+      ],
+      "name": "evaluates basic arithmetic unchanged",
+      "outcome": "passed",
+      "durationMs": 4
+    },
+    {
+      "suitePath": [
+        "evaluateExpression (calculation behavior regression)"
+      ],
+      "name": "handles empty expressions",
+      "outcome": "passed",
+      "durationMs": 1
+    },
+    {
+      "suitePath": [
+        "evaluateExpression (calculation behavior regression)"
+      ],
+      "name": "evaluates percentages",
+      "outcome": "passed",
+      "durationMs": 1
+    },
+    {
+      "suitePath": [
+        "evaluateExpression (calculation behavior regression)"
+      ],
+      "name": "evaluates factorials",
+      "outcome": "passed",
+      "durationMs": 1
+    },
+    {
+      "suitePath": [
+        "evaluateExpression (calculation behavior regression)"
+      ],
+      "name": "applies degree-mode trig conversion",
+      "outcome": "passed",
+      "durationMs": 2
+    },
+    {
+      "suitePath": [
+        "evaluateExpression (calculation behavior regression)"
+      ],
+      "name": "applies radian-mode trig conversion (no deg wrapping)",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "evaluateExpression (calculation behavior regression)"
+      ],
+      "name": "supports constants pi and e",
+      "outcome": "passed",
+      "durationMs": 3
+    },
+    {
+      "suitePath": [
+        "evaluateExpression (calculation behavior regression)"
+      ],
+      "name": "reports a recoverable error for malformed expressions",
+      "outcome": "passed",
+      "durationMs": 2
+    },
+    {
+      "suitePath": [
+        "evaluateExpression (calculation behavior regression)"
+      ],
+      "name": "reports a math error for divide-by-zero style overflow",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "formatNumber (display formatting regression)"
+      ],
+      "name": "adds thousands separators",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "formatNumber (display formatting regression)"
+      ],
+      "name": "fixes floating point precision artifacts",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "formatNumber (display formatting regression)"
+      ],
+      "name": "returns Error for NaN input",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "formatNumber (display formatting regression)"
+      ],
+      "name": "switches to exponential notation for very large numbers",
+      "outcome": "passed",
+      "durationMs": 1
+    }
+  ],
+  "reportError": null,
+  "assurance": "module-executed"
+}

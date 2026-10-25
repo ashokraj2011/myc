@@ -1,0 +1,59 @@
+
+> calc-app@0.0.0 test
+> vitest run --reporter=verbose
+
+
+ RUN  v4.1.10 /Users/ashokraj/Downloads/cfa/cfa-calc/.singularity-flow/story-worktrees/.w-a6f4c5890b1916de430f0207
+
+ ✓ src/utils/evaluator.test.js > convertDecimalToHex > converts 1 to lowercase hexadecimal 2ms
+ ✓ src/utils/evaluator.test.js > convertDecimalToHex > converts 15 to lowercase hexadecimal 1ms
+ ✓ src/utils/evaluator.test.js > convertDecimalToHex > converts 16 to lowercase hexadecimal 0ms
+ ✓ src/utils/evaluator.test.js > convertDecimalToHex > converts 255 to lowercase hexadecimal 1ms
+ ✓ src/utils/evaluator.test.js > convertDecimalToHex > converts 9007199254740991 to lowercase hexadecimal 0ms
+ ✓ src/utils/evaluator.test.js > convertDecimalToHex > rejects unsupported input "" 1ms
+ ✓ src/utils/evaluator.test.js > convertDecimalToHex > rejects unsupported input "0" 0ms
+ ✓ src/utils/evaluator.test.js > convertDecimalToHex > rejects unsupported input "-1" 0ms
+ ✓ src/utils/evaluator.test.js > convertDecimalToHex > rejects unsupported input "1.5" 1ms
+ ✓ src/utils/evaluator.test.js > convertDecimalToHex > rejects unsupported input "1+2" 0ms
+ ✓ src/utils/evaluator.test.js > convertDecimalToHex > rejects unsupported input "0x10" 0ms
+ ✓ src/utils/evaluator.test.js > convertDecimalToHex > rejects unsupported input "9007199254740992" 0ms
+ ✓ src/utils/evaluator.test.js > evaluateExpression (calculation behavior regression) > evaluates basic arithmetic unchanged 5ms
+ ✓ src/utils/evaluator.test.js > evaluateExpression (calculation behavior regression) > handles empty expressions 0ms
+ ✓ src/utils/evaluator.test.js > evaluateExpression (calculation behavior regression) > evaluates percentages 1ms
+ ✓ src/utils/evaluator.test.js > evaluateExpression (calculation behavior regression) > evaluates factorials 1ms
+ ✓ src/utils/evaluator.test.js > evaluateExpression (calculation behavior regression) > applies degree-mode trig conversion 1ms
+ ✓ src/utils/evaluator.test.js > evaluateExpression (calculation behavior regression) > applies radian-mode trig conversion (no deg wrapping) 0ms
+ ✓ src/utils/evaluator.test.js > evaluateExpression (calculation behavior regression) > supports constants pi and e 1ms
+ ✓ src/utils/evaluator.test.js > evaluateExpression (calculation behavior regression) > reports a recoverable error for malformed expressions 0ms
+ ✓ src/utils/evaluator.test.js > evaluateExpression (calculation behavior regression) > reports a math error for divide-by-zero style overflow 0ms
+ ✓ src/utils/evaluator.test.js > formatNumber (display formatting regression) > adds thousands separators 0ms
+ ✓ src/utils/evaluator.test.js > formatNumber (display formatting regression) > fixes floating point precision artifacts 0ms
+ ✓ src/utils/evaluator.test.js > formatNumber (display formatting regression) > returns Error for NaN input 0ms
+ ✓ src/utils/evaluator.test.js > formatNumber (display formatting regression) > switches to exponential notation for very large numbers 0ms
+ ✓ src/build.test.js > production build > completes successfully and emits the expected bundle 1712ms
+ ✓ src/App.test.jsx > HEX conversion interaction > converts 255 in standard mode and records history 427ms
+ ✓ src/App.test.jsx > HEX conversion interaction > converts 255 in scientific mode and records history 180ms
+ ✓ src/App.test.jsx > HEX conversion interaction > shows validation feedback for unsupported input without recording a conversion 86ms
+ ✓ src/App.test.jsx > App functional regression (all modes/features unchanged) > performs digit entry and arithmetic in Standard mode 84ms
+ ✓ src/App.test.jsx > App functional regression (all modes/features unchanged) > supports memory recall (MC/MR/M+/M-) without changing calculation results 125ms
+ ✓ src/App.test.jsx > App functional regression (all modes/features unchanged) > clears memory with MC 142ms
+ ✓ src/App.test.jsx > App functional regression (all modes/features unchanged) > clears the expression with AC and supports backspace 92ms
+ ✓ src/App.test.jsx > App functional regression (all modes/features unchanged) > records a calculation in history and clears it 81ms
+ ✓ src/App.test.jsx > App functional regression (all modes/features unchanged) > switches between all calculator modes 192ms
+ ✓ src/App.test.jsx > App functional regression (all modes/features unchanged) > opens the keyboard shortcuts modal 51ms
+ ✓ src/App.test.jsx > App functional regression (all modes/features unchanged) > toggles sound on and off 47ms
+ ✓ src/App.test.jsx > Windows 11 Fluent theme coverage across modes > exposes win11-light and win11-dark as selectable themes 29ms
+ ✓ src/App.test.jsx > Windows 11 Fluent theme coverage across modes > applies win11-dark theme via the shared data-theme attribute 53ms
+ ✓ src/App.test.jsx > Windows 11 Fluent theme coverage across modes > renders standard mode using the shared design-token classes under win11-light 75ms
+ ✓ src/App.test.jsx > Windows 11 Fluent theme coverage across modes > renders scientific mode using the shared design-token classes under win11-light 79ms
+ ✓ src/App.test.jsx > Windows 11 Fluent theme coverage across modes > renders converter mode using the shared design-token classes under win11-light 73ms
+ ✓ src/App.test.jsx > Windows 11 Fluent theme coverage across modes > renders financial mode using the shared design-token classes under win11-light 89ms
+ ✓ src/App.test.jsx > Windows 11 Fluent theme coverage across modes > renders grapher mode using the shared design-token classes under win11-light 75ms
+ ✓ src/App.test.jsx > Responsive navigation (desktop rail + mobile dropdown) > renders both the desktop nav rail and the mobile dropdown markup 16ms
+ ✓ src/App.test.jsx > Responsive navigation (desktop rail + mobile dropdown) > keeps the mobile mode dropdown in sync with the active mode 43ms
+
+ Test Files  3 passed (3)
+      Tests  46 passed (46)
+   Start at  07:13:48
+   Duration  6.36s (transform 541ms, setup 828ms, import 3.39s, tests 3.78s, environment 5.67s)
+

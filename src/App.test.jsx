@@ -20,6 +20,41 @@ const getResultText = (container) => {
   return lines[lines.length - 1].textContent;
 };
 
+describe('HEX conversion interaction', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  // @ac:HEX-201806:AC-001
+  it.each(['standard', 'scientific'])('converts 255 in %s mode and records history', async (mode) => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+    const modeSelect = screen.getAllByRole('combobox')[0];
+    await user.selectOptions(modeSelect, mode);
+    await clickButton(container, '2');
+    await clickButton(container, '5');
+    await clickButton(container, '5');
+    await clickButton(container, 'HEX');
+
+    expect(getResultText(container)).toBe('ff');
+    await user.click(screen.getByTitle('Calculation History'));
+    expect(screen.getByText('HEX(255)')).toBeInTheDocument();
+    expect(screen.getAllByText('ff')).toHaveLength(2);
+  });
+
+  // @ac:HEX-201806:AC-001
+  it('shows validation feedback for unsupported input without recording a conversion', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+    await clickButton(container, '0');
+    await clickButton(container, 'HEX');
+
+    expect(getResultText(container)).toMatch(/positive/);
+    await user.click(screen.getByTitle('Calculation History'));
+    expect(screen.queryByText('HEX(0)')).not.toBeInTheDocument();
+  });
+});
+
 // Full end-to-end functional regression across modes, themes, memory,
 // history, and keyboard shortcuts.
 // @ac:AC-003

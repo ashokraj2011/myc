@@ -10,6 +10,7 @@ export const StandardKeypad = ({
   onBackspace,
   onNegate,
   onPercent,
+  onHex,
   onMemory,
   soundEnabled,
 }) => {
@@ -179,6 +180,16 @@ export const StandardKeypad = ({
           className="calc-btn u-bg-btn-eq-bg u-text-btn-eq-text u-hbg-btn-eq-hover font-bold shadow-lg"
         >
           <Equal className="w-5 h-5" />
+        </button>
+        {/* @clause:HEX-201806:AC-001 Exposes conversion through the shared keypad in both modes. */}
+        {/* @clause:HEX-201806:CON-001 Adds only the requested calculator action. */}
+        {/* @clause:HEX-201806:IFC-001 Sends the current input to App's strict conversion handler. */}
+        {/* @clause:HEX-201806:REQ-001 Provides the decimal-to-hexadecimal control. */}
+        <button
+          onClick={() => handleBtn('operator', onHex)}
+          className="calc-btn col-span-4 u-bg-btn-func-bg u-text-btn-func-text u-hbg-btn-func-hover font-semibold"
+        >
+          HEX
         </button>
       </div>
     </div>

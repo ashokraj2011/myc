@@ -1,5 +1,31 @@
 import * as math from 'mathjs';
 
+// @clause:HEX-201806:AC-001 Provides the conversion used by the shared calculator control.
+// @clause:HEX-201806:CON-001 Keeps the requested conversion scoped to a separate helper.
+// @clause:HEX-201806:CON-002 Rejects unsupported input without changing expression evaluation.
+// @clause:HEX-201806:IFC-001 Validates decimal input before returning unformatted hexadecimal.
+// @clause:HEX-201806:REQ-001 Converts a positive decimal integer to base 16.
+export const convertDecimalToHex = (input) => {
+  if (typeof input !== 'string' || !/^\d+$/.test(input)) {
+    return {
+      result: 'Error',
+      rawResult: null,
+      error: 'Enter a positive decimal integer.',
+    };
+  }
+
+  const value = Number(input);
+  if (!Number.isSafeInteger(value) || value < 1) {
+    return {
+      result: 'Error',
+      rawResult: null,
+      error: 'Enter a positive safe integer.',
+    };
+  }
+
+  return { result: value.toString(16), rawResult: value, error: null };
+};
+
 // Custom evaluator wrapper around mathjs with degree/radian support and error handling
 export const evaluateExpression = (expr, angleUnit = 'DEG') => {
   if (!expr || expr.trim() === '') return { result: '0', rawResult: 0, error: null };

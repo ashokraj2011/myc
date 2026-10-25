@@ -8,7 +8,7 @@ import { FinancialCalculator } from './components/FinancialCalculator';
 import { FunctionGrapher } from './components/FunctionGrapher';
 import { HistoryDrawer } from './components/HistoryDrawer';
 import { KeyboardShortcutsModal } from './components/KeyboardShortcutsModal';
-import { evaluateExpression } from './utils/evaluator';
+import { convertDecimalToHex, evaluateExpression } from './utils/evaluator';
 import { playSound } from './utils/audio';
 
 export default function App() {
@@ -128,6 +128,34 @@ export default function App() {
       setHistory((prev) => [newEntry, ...prev.slice(0, 49)]); // Keep last 50 items
     }
   }, [expression, angleUnit]);
+
+  // @clause:HEX-201806:AC-001 Updates the shared display and history on successful conversion.
+  // @clause:HEX-201806:CON-001 Keeps conversion handling additive to existing arithmetic.
+  // @clause:HEX-201806:CON-002 Shows invalid input and records only successful conversions.
+  // @clause:HEX-201806:IFC-001 Converts the current decimal entry without decimal formatting.
+  // @clause:HEX-201806:REQ-001 Handles the HEX action in standard and scientific modes.
+  const handleHex = useCallback(() => {
+    const input = expression;
+    const conversion = convertDecimalToHex(input);
+    setLastEvaluated(true);
+
+    if (conversion.error) {
+      setResult(conversion.error);
+      return;
+    }
+
+    const conversionExpression = `HEX(${input})`;
+    setExpression(conversionExpression);
+    setResult(conversion.result);
+    setHistory((prev) => [
+      {
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        expression: conversionExpression,
+        result: conversion.result,
+      },
+      ...prev.slice(0, 49),
+    ]);
+  }, [expression]);
 
   const handleMemory = useCallback(
     (type) => {
@@ -260,6 +288,7 @@ export default function App() {
               onBackspace={handleBackspace}
               onNegate={handleNegate}
               onPercent={handlePercent}
+              onHex={handleHex}
               onMemory={handleMemory}
               soundEnabled={soundEnabled}
             />
@@ -286,6 +315,7 @@ export default function App() {
               onBackspace={handleBackspace}
               onNegate={handleNegate}
               onPercent={handlePercent}
+              onHex={handleHex}
               onMemory={handleMemory}
               soundEnabled={soundEnabled}
             />

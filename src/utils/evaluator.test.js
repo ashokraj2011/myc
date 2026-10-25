@@ -1,5 +1,34 @@
 import { describe, it, expect } from 'vitest';
-import { evaluateExpression, formatNumber } from '../utils/evaluator';
+import { convertDecimalToHex, evaluateExpression, formatNumber } from '../utils/evaluator';
+
+describe('convertDecimalToHex', () => {
+  // @ac:HEX-201806:AC-001
+  it.each([
+    ['1', '1'],
+    ['15', 'f'],
+    ['16', '10'],
+    ['255', 'ff'],
+    [String(Number.MAX_SAFE_INTEGER), '1fffffffffffff'],
+  ])('converts %s to lowercase hexadecimal', (input, expected) => {
+    expect(convertDecimalToHex(input)).toEqual({
+      result: expected,
+      rawResult: Number(input),
+      error: null,
+    });
+  });
+
+  // @ac:HEX-201806:AC-001
+  it.each(['', '0', '-1', '1.5', '1+2', '0x10', '9007199254740992'])(
+    'rejects unsupported input %j',
+    (input) => {
+      expect(convertDecimalToHex(input)).toMatchObject({
+        result: 'Error',
+        rawResult: null,
+      });
+      expect(convertDecimalToHex(input).error).toMatch(/positive/);
+    }
+  );
+});
 
 // Verifies WRK-1978:AC-003 and WRK-1978:AC-005: the restyle work must not
 // change calculation semantics, expression evaluation, or number formatting.
