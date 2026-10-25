@@ -4,27 +4,51 @@
   "workId": "fact-01",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": null,
+    "githubLookup": "unavailable"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": null,
+      "githubLookup": "unavailable"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "849d3740a63e4a7a029d380cc3bc9c62acd606bb43891e1ca5c1dec05707dbe8",
+      "bytes": 8640
+    },
+    "generation": 1,
+    "publishedAt": "2026-10-25T16:09:10.274Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "ca5457d9ca9b5ba3bff7a0857607cba2b465d585",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "f08cd2ee2875c8854dcb9cd1c9f4bcbf2e6e0b0d8ca8a1b6e1972f217d097e9c",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/fact-01/context/clarifications-specification-gen1.json",
+    "sha256": "59da6572f9d2e2399cf282c35089e06b5b56727227e2e3155c56e80cd5a92d99",
+    "promptSha256": "97e73a50b2a89833875e33a7f1e6b8e317554856ebe6ca9bd757581b275d413c",
+    "responses": 3,
+    "markers": [],
+    "recordedAt": "2026-10-25T16:03:56.766Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": null,
+      "githubLookup": "unavailable"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/fact-01/telemetry/specification-gen1.json",
+      "sha256": "510369dcf68f1526dc33dcb32966951f81d04a76ac1f9f39f13ea7210e3181b7",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 25934,
+        "estimatedTokens": 6484,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 25934,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-25T16:09:10.274Z",
+      "completedAt": "2026-10-25T16:09:10.274Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -86,11 +167,11 @@ exclusions. Do not introduce claims that are absent from the sections below. Exa
 boundary conditions are preserved separately by the governed projection.
 -->
 
-TODO: Write the Agent brief here as visible text; text inside the comment above is not read.
+Add an nCr calculation function and expose it through the calculator UI. For positive integer inputs n and r, calculate the number of ways to choose r items from n; return 0 when r > n, and reject non-integer or non-positive inputs. A screenshot must show a representative input and its correct result, such as 5 choose 2 = 10. No new controls, wording, roles, or non-functional constraints are specified.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+Not applicable: the Story specifies no roles or authorization; the feature is for calculator users.
 
 ## User scenarios
 
@@ -104,34 +185,44 @@ Self-check whether an implementation could meet this draft yet omit an explicit 
 clear omissions in this editable draft and recheck within the returned repair policy; preserve
 published inputs and settled answers. These are authoring instructions, not execution evidence. -->
 
-### S1 — <the most important situation, in the user's words>
+### S1 — Calculate a combination in the calculator
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Calculator user
+**Context:** The calculator is available and the user wants to count selections of r items from n.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+- **Given** the user supplies n = 5 and r = 2 through the calculator UI
+  **When** the user requests an nCr calculation
+  **Then** the UI displays the result 10.
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
+- **Given** positive integer inputs n and r with r <= n
+  **When** the user requests an nCr calculation
+  **Then** the callable function returns the number of ways to choose r items from n.
 
-### S2 — <the next situation>
+### S2 — Handle input boundaries
 
 **Priority:** P2
 
-- **Given** … **When** … **Then** …
+- **Given** positive integer inputs with r > n
+  **When** the user requests an nCr calculation
+  **Then** the function returns 0.
+
+- **Given** either input is not an integer or is not positive
+  **When** the user requests an nCr calculation
+  **Then** the input is rejected and no nCr result is produced.
+
+- **Given** n or r has not been supplied
+  **When** the user requests an nCr calculation
+  **Then** no nCr result is produced until both inputs are supplied as positive integers.
 
 ## Failure and empty states
 
 What happens the first time, with nothing there yet, and when each step fails. These are where
 specifications are usually silent and implementations usually improvise.
 
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** No result is produced until both n and r are supplied as positive integers.
+- **Failure:** Non-integer and non-positive inputs are rejected without producing an nCr result; no particular error wording is specified.
+- **Partial:** Not applicable: the Story specifies a single calculation and no partial or external operation.
 
 ## Scenario coverage
 
@@ -142,28 +233,33 @@ prose. Use the pinned request and clarification answers; do not invent error tex
 
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `FACT-01:REQ-001` | S1 | TODO |
-| `FACT-01:REQ-002` | S2 | TODO |
-| `FACT-01:AC-001` | S1 | TODO |
+| `FACT-01:REQ-001` | S1 | success |
+| `FACT-01:REQ-002` | S1 | success |
+| `FACT-01:REQ-003` | S2 | boundary |
+| `FACT-01:REQ-004` | S2 | failure |
+| `FACT-01:REQ-004` | S2 | empty |
+| `FACT-01:AC-001` | S1 | success |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+Not applicable: no role-based permissions or restricted actions are specified.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+n and r must be positive integers. If r <= n, the function returns the combination count; if r > n, it returns 0. Non-integer and non-positive inputs are rejected. No maximum input size or other numeric limit is specified.
 
 ## Requirements
 
 Numbered, testable, one obligation each. Cite the scenario each serves.
 
-- <requirement>. *(S1)* [FACT-01:REQ-001]
-- <requirement>. *(S1, S2)* [FACT-01:REQ-002]
+- For positive integer n and r where r <= n, the callable nCr function returns the integer count of ways to choose r items from n; for example, nCr(5, 2) returns 10. *(S1)* [FACT-01:REQ-001]
+- The calculator UI lets a user supply n and r and request an nCr calculation, then displays the computed result for valid inputs. *(S1)* [FACT-01:REQ-002]
+- The function returns 0 for positive integer inputs where r > n. *(S2)* [FACT-01:REQ-003]
+- The function rejects inputs where either value is not an integer or is not positive without producing an nCr result; no result is produced until both inputs are supplied. *(S2)* [FACT-01:REQ-004]
 
 Acceptance criteria use the same stable, namespaced form:
 
-- <observable acceptance outcome>. *(S1)* [FACT-01:AC-001]
+- A screenshot shows the calculator UI with a representative nCr input and its correct output, such as n = 5, r = 2, result = 10. [scope:SRI-35efa5d9d09b] *(S1)* [FACT-01:AC-001]
 
 ## Verification intent
 
@@ -175,14 +271,15 @@ Planning must inherit these methods and cannot change them without an approved s
 
 | Clause | Methods | Criterion |
 |---|---|---|
-| `FACT-01:REQ-001` | TODO | - |
-| `FACT-01:REQ-002` | TODO | - |
-| `FACT-01:AC-001` | TODO | `FACT-01:AC-001` |
+| `FACT-01:REQ-001` | test | - |
+| `FACT-01:REQ-002` | test | - |
+| `FACT-01:REQ-003` | test | - |
+| `FACT-01:REQ-004` | test | - |
+| `FACT-01:AC-001` | visual | `FACT-01:AC-001` |
 
 ## Non-functional requirements
 
-Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
-will be measured; "fast" is not a requirement.
+Not applicable: the pinned request and clarification specify no non-functional requirements.
 
 Use governed requirement anchors here too (for example `[FACT-01:REQ-003]`); `NFR-001` by
 itself is only a display label and is not a stable clause identity.
@@ -192,19 +289,16 @@ itself is only a display label and is not a stable clause identity.
 Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
 cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
 
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-What this specification takes as true without proving. An assumption that turns out false is a
-change request, not a defect — which is only true if it was written down.
+The request's nCr notation means choosing r items from n items. The function and calculator UI are part of the requested feature; exact UI controls and error wording are not specified.
 
 ## Out of scope
 
-Named explicitly, so the boundary is reviewable rather than inferred.
+No additional calculator features, APIs, roles, or constraints beyond the nCr function, UI exposure, positive-integer validation, r > n behavior, and screenshot acceptance are in scope.
 
 ## Sources
 
-Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
-offered to this phase that could not be read or was not available here, named as a gap. Without
-supporting documents, say so.
+No supporting documents were offered. This specification relies on the pinned Story source and the repository brief delivered with the phase context.
