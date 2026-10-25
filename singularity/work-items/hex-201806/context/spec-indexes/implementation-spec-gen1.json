@@ -1,0 +1,42 @@
+{
+  "clauses": [
+    {
+      "anchor": "[HEX-201806:IFC-001]",
+      "body": "The implementation contract is: the HEX control in either calculator mode sends the current decimal input to a pure conversion helper; success returns the exact lowercase base-16 value and updates the existing expression/result display and history, while invalid input returns a visible error and creates no successful history entry. No schema or persistence contract changes.",
+      "bodySha256": "9033f6df3d3d0e83caf24fae587be61cc926fb4a185e6048a03389d6230f8f99",
+      "dependsOn": [],
+      "id": "HEX-201806:IFC-001",
+      "namespace": "HEX-201806",
+      "number": 1,
+      "source": {
+        "line": 172,
+        "path": "singularity/work-items/hex-201806/artifacts/implementation-spec/implementation-spec.md"
+      },
+      "type": "IFC"
+    },
+    {
+      "anchor": "[HEX-201806:CON-002]",
+      "body": "Keep the change additive and isolated to the shared keypad action, app interaction handler, and conversion helper. Preserve existing arithmetic evaluation, decimal formatting, keyboard and keypad behavior, calculator history shape, and persisted settings. No data migration or external service change is needed. If regressions occur, remove the `HEX` action, its handler/helper, and associated tests; existing calculations and stored history require no transformation. These security, observability, compatibility, migration, and rollback constraints form the implementation constraint.",
+      "bodySha256": "cc53acde923ae6646d8f4f97c326272a8488ab68ed08d339fd8802ac24af22ab",
+      "dependsOn": [],
+      "id": "HEX-201806:CON-002",
+      "namespace": "HEX-201806",
+      "number": 2,
+      "source": {
+        "line": 194,
+        "path": "singularity/work-items/hex-201806/artifacts/implementation-spec/implementation-spec.md"
+      },
+      "type": "CON"
+    }
+  ],
+  "generation": 1,
+  "indexSha256": "75016ac5f4b7958d9a54c6f9745d5886d8237eaa3923a84a832091bf966c3f5c",
+  "phase": "implementation-spec",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 29668,
+    "path": "singularity/work-items/hex-201806/artifacts/implementation-spec/implementation-spec.md",
+    "sha256": "cd6e54cdb9a00fa64f5abdd84bb31637e05754099cfec5c989311acc74394be5"
+  },
+  "workId": "hex-201806"
+}

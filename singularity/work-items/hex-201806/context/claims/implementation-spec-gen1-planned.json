@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-10-25T00:27:09.098Z",
+  "claims": {
+    "HEX-201806:AC-001": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/StandardKeypad.jsx",
+        "src/utils/evaluator.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "A user can convert a supported positive safe-integer decimal entry and see the equivalent lowercase hexadecimal result without a prefix."
+    },
+    "HEX-201806:AC-002": {
+      "expectedPaths": [
+        "singularity/work-items/hex-201806/evidence/implementation-spec/hex-conversion-255.png"
+      ],
+      "tests": [],
+      "testDisposition": "not-applicable",
+      "testReason": "the retained screenshot is assessed through the primary visual verification contract below.",
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "The screenshot shows the calculator interaction with decimal input 255 and hexadecimal result `ff`."
+    },
+    "HEX-201806:AC-003": {
+      "expectedPaths": [
+        "singularity/work-items/hex-201806/evidence/implementation-spec/hex-conversion-test-results.txt"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "Retained test results show valid conversions and rejection of zero, negative, fractional, non-decimal, and out-of-range values."
+    },
+    "HEX-201806:CON-001": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/StandardKeypad.jsx",
+        "src/utils/evaluator.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "The change adds only the requested conversion and its evidence, leaves unrelated calculator behavior and UI unchanged, and covers the Story's “screenshot and test resutls” scope [scope:SRI-a091c0445554]."
+    },
+    "HEX-201806:REQ-001": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/StandardKeypad.jsx",
+        "src/utils/evaluator.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "Positive integer decimal input entered through the existing calculator interaction can be converted to its equivalent base-16 value."
+    },
+    "HEX-201806:REQ-002": {
+      "expectedPaths": [
+        "singularity/work-items/hex-201806/evidence/implementation-spec/hex-conversion-test-results.txt"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "Automated results for the valid, invalid, and boundary cases are retained; the screenshot obligation remains owned by AC-002."
+    },
+    "HEX-201806:IFC-001": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/StandardKeypad.jsx",
+        "src/utils/evaluator.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "The shared calculator interaction invokes a strict positive-safe-integer conversion and shows lowercase, unprefixed hexadecimal without changing generic expression evaluation."
+    },
+    "HEX-201806:CON-002": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/utils/evaluator.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "Invalid input is surfaced without a successful result/history entry; conversion is local, preserves existing settings and arithmetic, and requires no migration or new dependency."
+    }
+  },
+  "verificationContracts": [
+    {
+      "clauseId": "HEX-201806:AC-002",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "hex-conversion-255",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "singularity/work-items/hex-201806/evidence/implementation-spec/hex-conversion-255.png"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    },
+    {
+      "clauseId": "HEX-201806:AC-003",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "hex-conversion-test-results",
+          "method": "inspection",
+          "role": "primary",
+          "witness": {
+            "path": "singularity/work-items/hex-201806/evidence/implementation-spec/hex-conversion-test-results.txt"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    }
+  ],
+  "workId": "hex-201806",
+  "phase": "implementation-spec",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/hex-201806/artifacts/implementation-spec/implementation-spec.md",
+    "sha256": "cd6e54cdb9a00fa64f5abdd84bb31637e05754099cfec5c989311acc74394be5",
+    "bytes": 29668
+  }
+}
