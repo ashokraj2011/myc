@@ -4,7 +4,7 @@
   "workId": "fact-01",
   "workType": "spec-driven-standard",
   "phase": "planning",
-  "generation": 1,
+  "generation": 2,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "plan.md",
       "mediaType": "text/markdown",
-      "sha256": "0fadbaa9e892bbd6a217fa480a2dffbb40531ec0d6db60c34813b452d577e95b",
-      "bytes": 6978
+      "sha256": "ef7cc7d86f87eac91aa12db93f3aa3618151044ced305aa84b2b38a04385ab72",
+      "bytes": 7409
     },
-    "generation": 1,
-    "publishedAt": "2026-10-25T20:51:35.259Z"
+    "generation": 2,
+    "publishedAt": "2026-10-25T21:03:23.410Z"
   },
-  "sourceCommit": "b28bc5b39df6ce880d61c933dd56fb431837b17a",
+  "sourceCommit": "a625901b339d0513758c8dc6c3b028a3d1dad7f8",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "f08cd2ee2875c8854dcb9cd1c9f4bcbf2e6e0b0d8ca8a1b6e1972f217d097e9c",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/spec-driven/plan.md"
   },
   "inputs": {
-    "generation": 1,
-    "path": "singularity/work-items/fact-01/context/inputs-planning-gen1.json",
-    "sha256": "146e9a22317d3671c672bff26a458a0c33a9a25a5257512d9b3926813faa33ec",
+    "generation": 2,
+    "path": "singularity/work-items/fact-01/context/inputs-planning-gen2.json",
+    "sha256": "1202ce1cc7aa0af028c6f7884c2ff75b0b8f0b9281ec740597afbc8a456eae60",
     "renderedSha256": "ea11482ad52bccbefc81edc323150bd6042cda82751e5547b3eee0cc97eb59c2",
     "mode": "enforce"
   },
@@ -92,6 +92,26 @@
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 2,
+      "path": "singularity/work-items/fact-01/telemetry/planning-gen2.json",
+      "sha256": "a3aba47d2bbf448abcefa96638715f226871dfc1ff84d9482aee5273ad3d56d7",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 27892,
+        "estimatedTokens": 6973,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 27892,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
     }
   ],
   "remoteOutputs": [],
@@ -116,6 +136,27 @@
       "completedAt": "2026-10-25T20:51:35.259Z",
       "agent": "architect",
       "generation": 1
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-25T21:03:23.410Z",
+      "completedAt": "2026-10-25T21:03:23.410Z",
+      "agent": "architect",
+      "generation": 2
     }
   ],
   "sequenceOverrides": [],
@@ -142,7 +183,7 @@ Add a callable nCr calculation alongside the existing evaluator utilities, then 
 
 ## Approach
 
-Implement the combination calculation as a reusable export from `src/utils/evaluator.js`, following the existing utility module and test conventions. Validate that both supplied values are positive integers before calculating; return 0 for valid inputs where r > n. Use a symmetry-reduced integer calculation so the smaller of r and n - r drives the work. Add a focused `CombinationCalculator` component and mount it in the existing calculator application rather than expanding the expression grammar or adding a new application mode. Keep the UI's input state distinct from the displayed result, and clear or withhold the result on invalid or incomplete input. The specification does not define error wording, so use the application's established form feedback pattern without introducing additional behavior.
+Implement the combination calculation as a reusable export from `src/utils/evaluator.js`, following the existing utility module and test conventions. Validate that both supplied values are positive integers before calculating; return 0 for valid inputs where r > n. Use `BigInt` for the exact count and return a `BigInt` from the callable function; the UI renders its base-10 string so values beyond JavaScript's safe integer range are not rounded. Parse the UI's integer text directly as `BigInt` after validating its decimal-integer form, and use a symmetry-reduced calculation so the smaller of r and n - r drives the work. Add a focused `CombinationCalculator` component and mount it in the existing calculator application rather than expanding the expression grammar or adding a new application mode. Keep the UI's input state distinct from the displayed result, and clear or withhold the result on invalid or incomplete input. The specification does not define error wording, so use the application's established form feedback pattern without introducing additional behavior.
 
 ## Affected surfaces
 
@@ -156,7 +197,7 @@ The callable boundary is the evaluator utility; the UI delegates valid calculati
 
 ## Sequencing
 
-1. Implement and unit-test the callable function, including the example, r > n, non-integer, non-positive, and missing-input cases. This establishes shared calculation and validation behavior for [FACT-01:REQ-001], [FACT-01:REQ-003], and [FACT-01:REQ-004].
+1. Implement and unit-test the callable function, including the example, an exact result above `Number.MAX_SAFE_INTEGER` (for example, nCr(67, 33) = 14226520737620288370), r > n, non-integer, non-positive, and missing-input cases. Assert the large result as an exact `BigInt` value. This establishes shared calculation and validation behavior for [FACT-01:REQ-001], [FACT-01:REQ-003], and [FACT-01:REQ-004].
 2. Build the focused UI around the shared function and add an application-level interaction test for valid submission and invalid/incomplete inputs. This delivers [FACT-01:REQ-002] without duplicating calculation logic.
 3. Run the configured tests, exercise the representative n = 5, r = 2 flow, and retain a screenshot at the planned evidence path for [FACT-01:AC-001].
 
@@ -167,7 +208,7 @@ Use the unit tests for deterministic function behavior and application-level int
 | Clause | Expected paths | Planned tests | Fulfillment | Observable result |
 |---|---|---|---|---|
 | `FACT-01:AC-001` | `singularity/work-items/fact-01/evidence/ncr-result.png` | verification: FACT-01:AC-001 | evidence | Screenshot shows n = 5, r = 2 and the displayed result 10. |
-| `FACT-01:REQ-001` | `src/utils/evaluator.js` | `src/utils/evaluator.test.js` | modified | The callable function returns the integer count; nCr(5, 2) returns 10. |
+| `FACT-01:REQ-001` | `src/utils/evaluator.js` | `src/utils/evaluator.test.js` | modified | The callable function returns an exact BigInt count; nCr(5, 2) is 10n and nCr(67, 33) is 14226520737620288370n. |
 | `FACT-01:REQ-002` | `src/components/CombinationCalculator.jsx` `src/App.jsx` | `src/App.test.jsx` | modified | A user can enter both values, request a calculation, and see the valid result. |
 | `FACT-01:REQ-003` | `src/utils/evaluator.js` | `src/utils/evaluator.test.js` | modified | Positive integer inputs with r > n return 0. |
 | `FACT-01:REQ-004` | `src/utils/evaluator.js` `src/components/CombinationCalculator.jsx` | `src/utils/evaluator.test.js` `src/App.test.jsx` | modified | Non-integer, non-positive, or missing values produce no nCr result. |
@@ -195,7 +236,7 @@ None: this Story pinned no constitution.
 
 ## Risks and rollback
 
-Large combinations may exceed JavaScript's exact integer range; the implementation must avoid silently presenting a rounded count. Preserve the approved positive-integer domain and do not add an unsupported input limit; if the application's numeric contract cannot represent a required result exactly, record the discrepancy for the specification owner rather than silently changing accepted inputs. Invalid or incomplete submissions can also leave stale output visible, so tests must assert that no nCr result is produced in those states. The change is isolated to the new utility behavior and focused UI; rollback can remove the component integration and utility export while retaining existing calculator modes and evaluator behavior.
+The callable API will return `BigInt`; callers must not coerce its result to `Number`, and the UI must render the decimal string directly. This preserves exact integer counts without imposing an input-size cap in the feature contract. Very large inputs may still require substantial computation, so use the symmetry-reduced algorithm and avoid duplicating the calculation. Invalid or incomplete submissions can leave stale output visible, so tests must assert that no nCr result is produced in those states. The change is isolated to the new utility behavior and focused UI; rollback can remove the component integration and utility export while retaining existing calculator modes and evaluator behavior.
 
 <!-- singularity-flow:inputs:start -->
 

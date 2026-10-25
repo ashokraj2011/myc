@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-10-25T21:03:23.509Z",
+  "claims": {
+    "FACT-01:AC-001": {
+      "expectedPaths": [
+        "singularity/work-items/fact-01/evidence/ncr-result.png"
+      ],
+      "tests": [],
+      "testDisposition": "non-test",
+      "testReason": null,
+      "verificationCriterion": "FACT-01:AC-001",
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "Screenshot shows n = 5, r = 2 and the displayed result 10."
+    },
+    "FACT-01:REQ-001": {
+      "expectedPaths": [
+        "src/utils/evaluator.js"
+      ],
+      "tests": [
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "The callable function returns an exact BigInt count; nCr(5, 2) is 10n and nCr(67, 33) is 14226520737620288370n."
+    },
+    "FACT-01:REQ-002": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/CombinationCalculator.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "A user can enter both values, request a calculation, and see the valid result."
+    },
+    "FACT-01:REQ-003": {
+      "expectedPaths": [
+        "src/utils/evaluator.js"
+      ],
+      "tests": [
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Positive integer inputs with r > n return 0."
+    },
+    "FACT-01:REQ-004": {
+      "expectedPaths": [
+        "src/components/CombinationCalculator.jsx",
+        "src/utils/evaluator.js"
+      ],
+      "tests": [
+        "src/App.test.jsx",
+        "src/utils/evaluator.test.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Non-integer, non-positive, or missing values produce no nCr result."
+    }
+  },
+  "verificationContracts": [
+    {
+      "clauseId": "FACT-01:AC-001",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "ncr-result",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "singularity/work-items/fact-01/evidence/ncr-result.png"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    }
+  ],
+  "workId": "fact-01",
+  "phase": "planning",
+  "generation": 2,
+  "source": {
+    "path": "singularity/work-items/fact-01/artifacts/planning/plan.md",
+    "sha256": "b2222c3dfd3a85fe77cbdc5d45c499dda2ff1e8347db8f6676b3e5880cdf405f",
+    "bytes": 18791
+  }
+}
