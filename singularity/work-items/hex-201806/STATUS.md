@@ -5,7 +5,7 @@
 - Capability: **dfa** (`cfa-calc`)
 - Capability map: `c04ba8e78b7bce7b70c622003ba3d52066b767c4e9c5b8184a98b77b9f1eebaa`
 - Overall status: **in_progress**
-- Current phase: **implementation-spec**
+- Current phase: **implementation**
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
@@ -15,13 +15,16 @@
 |  | ⚠ self-approval | Ashok Raj via product-approvers; agent product-owner | **warning** |  |  |  |
 | 3 | Architecture and design (`design`) | architect | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent architect | **warning** |  |  |  |
-| 4 | Implementation specification (`implementation-spec`) | architect | **awaiting_approval** | 1 | 0 | unavailable |
-| 5 | Implementation (`implementation`) | developer | **not_started** | 0 | 0 | unavailable |
+| 4 | Implementation specification (`implementation-spec`) | architect | **approved** | 1 | 1 | unavailable |
+|  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent architect | **warning** |  |  |  |
+| 5 | Implementation (`implementation`) | developer | **in_progress** | 0 | 0 | unavailable |
 | 6 | Verification (`verification`) | qa | **not_started** | 0 | 0 | unavailable |
 | 7 | Spec-to-code conformance (`conformance`) | qa | **not_started** | 0 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-10-25T00:35:47.380Z — **work_interval_started** (implementation) by system: baseline a86d7b1f9ecb at 2987d6e21d8e
+- 2026-10-25T00:35:47.307Z — **phase_self_approved** (implementation-spec) by ashokraj2011 · agent architect: threshold reached; advanced to implementation
 - 2026-10-25T00:30:59.734Z — **phase_submitted** (implementation-spec) by ashokraj2011 · agent architect: 1 artifacts
 - 2026-10-25T00:27:09.576Z — **phase_generated** (implementation-spec) by ashokraj2011 · agent architect: generation 1
 - 2026-10-25T00:11:36.812Z — **phase_self_approved** (design) by ashokraj2011 · agent architect: threshold reached; advanced to implementation-spec

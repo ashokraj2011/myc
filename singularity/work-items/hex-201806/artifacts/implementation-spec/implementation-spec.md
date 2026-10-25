@@ -5,7 +5,7 @@
   "workType": "feature",
   "phase": "implementation-spec",
   "generation": 1,
-  "status": "awaiting_approval",
+  "status": "approved",
   "generatedBy": {
     "name": "Ashok Raj",
     "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -133,8 +133,78 @@
     }
   ],
   "sequenceOverrides": [],
-  "approvals": [],
-  "selfApproval": false,
+  "approvals": [
+    {
+      "decision": "approved",
+      "phase": "implementation-spec",
+      "at": "2026-10-25T00:35:47.307Z",
+      "actor": {
+        "name": "Ashok Raj",
+        "email": "88361104+ashokraj2011@users.noreply.github.com",
+        "login": "ashokraj2011",
+        "githubLookup": "resolved"
+      },
+      "agent": "architect",
+      "authorityGroup": "architecture-reviewers",
+      "identityAssurance": "configured-local",
+      "channel": "copilot-selection-receipt",
+      "generation": 1,
+      "artifactSha256": [
+        {
+          "path": "singularity/work-items/hex-201806/artifacts/implementation-spec/implementation-spec.md",
+          "sha256": "1675dc4e008373f18493ee3e0f8ea75ee602356f418cde8ae5dcda081a5dbcc8"
+        }
+      ],
+      "reviewPacketSha256": "34b7eecc1183bdcd02c86259e8e0bcac85b40860e02414e6f9d2b850fe0f28da",
+      "evidenceCommit": "2987d6e21d8e861300456a7fd96e568f0b3f0f9b",
+      "artifactSetSha256": "642102b5b0118090b76f7762f08d9b3934ea27e65e8d1686cda87ee6f06aa55d",
+      "architectureIntent": null,
+      "architectureDecision": null,
+      "actionContext": {
+        "phase": "implementation-spec",
+        "label": "Implementation specification",
+        "generation": 1,
+        "submittedAt": "2026-10-25T00:30:59.734Z",
+        "artifacts": [
+          {
+            "path": "singularity/work-items/hex-201806/artifacts/implementation-spec/implementation-spec.md",
+            "sha256": "1675dc4e008373f18493ee3e0f8ea75ee602356f418cde8ae5dcda081a5dbcc8"
+          }
+        ],
+        "agentBriefs": [],
+        "reviewPacketSha256": "34b7eecc1183bdcd02c86259e8e0bcac85b40860e02414e6f9d2b850fe0f28da",
+        "submittedSourceCommit": "113e122a2a3ca92aea886e9589bdf6d34d0825ff",
+        "planId": "56dfde816ccbd2064e13c840"
+      },
+      "upstream": {
+        "sha256": "sha256:79c72a5abe509fc37bbd7a3e109469ba08552190e7582351a9ea3c97fc14bcb3",
+        "refs": [
+          {
+            "kind": "input",
+            "ref": "design",
+            "sha256": "sha256:c6779fe3dcaf3a7310850af29cdc9fdc6e2837ce219fb46baca231a2816d4a4b"
+          },
+          {
+            "kind": "input",
+            "ref": "requirements",
+            "sha256": "sha256:90bc108bfbb6c6fb22a71c4e6c05ff9aa6265162bf3c08990eb993fafe22edf0"
+          },
+          {
+            "kind": "documents",
+            "ref": "implementation-spec",
+            "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+          },
+          {
+            "kind": "decisions",
+            "ref": "story",
+            "sha256": "sha256:c55bf5922f085c4e3c10815dcec3c4ff533547e74850fc1d7af1f7ab2fc5cec3"
+          }
+        ]
+      },
+      "selfApproval": true
+    }
+  ],
+  "selfApproval": true,
   "conformanceTree": null
 }
 -->
