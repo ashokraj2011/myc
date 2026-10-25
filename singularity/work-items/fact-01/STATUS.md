@@ -22,6 +22,7 @@
 
 ## Recent history
 
+- 2026-10-25T23:56:15.998Z — **upstream_issue_raised** (release) by ashokraj2011 · agent qa: UPI-001 against implementation (FACT-01:REQ-004): The Release report marks FACT-01:REQ-004 partial, and Implementation's approvers decide the gap. Raised from the decision list.
 - 2026-10-25T23:45:33.721Z — **phase_submitted** (release) by ashokraj2011 · agent qa: 2 artifacts
 - 2026-10-25T23:43:29.956Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 1
 - 2026-10-25T23:39:30.486Z — **phase_self_approved** (verification) by ashokraj2011 · agent qa: threshold reached; advanced to release
@@ -36,4 +37,3 @@
 - 2026-10-25T23:16:26.464Z — **phase_self_approved** (implementation) by ashokraj2011 · agent developer: threshold reached; advanced to convergence
 - 2026-10-25T23:16:26.464Z — **work_interval_closed** (implementation) by ashokraj2011 · agent developer: interval INT-implementation-G1-001 closed after phase approval
 - 2026-10-25T23:11:19.967Z — **phase_submitted** (implementation) by ashokraj2011 · agent developer: 6 artifacts
-- 2026-10-25T23:11:19.965Z — **work_interval_reconciled** (implementation) by system: aligned; 5 changed path(s)
