@@ -18,10 +18,11 @@
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
 | 5 | Verification (`verification`) | qa | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
-| 6 | Release (`release`) | qa | **in_progress** | 0 | 0 | unavailable |
+| 6 | Release (`release`) | qa | **in_progress** | 1 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-10-25T23:43:29.956Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 1
 - 2026-10-25T23:39:30.486Z — **phase_self_approved** (verification) by ashokraj2011 · agent qa: threshold reached; advanced to release
 - 2026-10-25T23:39:30.486Z — **work_interval_closed** (verification) by ashokraj2011 · agent qa: interval INT-verification-G1-002 closed after phase approval
 - 2026-10-25T23:37:26.841Z — **phase_submitted** (verification) by ashokraj2011 · agent qa: 1 artifacts
@@ -36,4 +37,3 @@
 - 2026-10-25T23:11:19.967Z — **phase_submitted** (implementation) by ashokraj2011 · agent developer: 6 artifacts
 - 2026-10-25T23:11:19.965Z — **work_interval_reconciled** (implementation) by system: aligned; 5 changed path(s)
 - 2026-10-25T23:07:11.366Z — **phase_generated** (implementation) by ashokraj2011 · agent developer: generation 1
-- 2026-10-25T22:27:18.132Z — **work_interval_started** (implementation) by system: baseline b06c312f05b6 at 8d67bc50a93d
