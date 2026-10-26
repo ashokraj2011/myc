@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "phase": "specification",
+  "generation": 2,
+  "reportSha256": "7c5b18faf87b314367ccf49508b6df9df4984ebf087a4c5d7deb060253cbedb1",
+  "lifecycleEventId": "887b64cd-b773-482b-aef2-5a30dbeda001",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "specification",
+    "binding": {
+      "workId": "graph-plot",
+      "phase": "specification",
+      "generation": 2,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/graph-plot/USER-STORY.md",
+          "textSha256": "02c47bff1ea8dd71a944188615c0a602d4e0a47061e271f8df60c38040912919",
+          "originalSha256": "1113026516d93949e81f6239fea642dbe91f94ba1362bc77a0d8b2ba31c2cd35"
+        }
+      ],
+      "visualSources": [
+        {
+          "id": "DOC-001",
+          "path": "local-document:DOC-001",
+          "originalSha256": "38c3ce8176b283e4e9e23cfa0f573add262213ce6d77df0aa856c4570aa76a9a",
+          "mimeType": "image/png"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:current-phase",
+          "phase": "specification",
+          "generation": 2,
+          "path": "singularity/work-items/graph-plot/context/clarifications-specification-gen2.json",
+          "sha256": "5e4d7c9aed47b0adf628ec2adf4b5db22e749b63cb1479c93dcf9e36b94922ed"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/graph-plot/artifacts/specification/spec.md",
+        "sha256": "8aad24cb176d5814791c74eb7f72ea908bb0372d2eb01946279ca7af460bbb7e"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "DOC-001"
+    ],
+    "visualSourcesReviewed": [
+      {
+        "sourceId": "DOC-001",
+        "method": "image-tool",
+        "locator": "Entire screenshot, especially the expression panel and graph viewport.",
+        "observations": "The expression panel shows sin(x) and a quadratic expression; the graph viewport is a blank grid with extreme coordinate labels and no visible sine curve or 30-degree evaluation. This supports treating the image as a graphing-interface reference, not as a requirement to reproduce every control or as evidence of a passing plot."
+      }
+    ],
+    "clarificationsReviewed": [
+      "clarification:current-phase"
+    ],
+    "rows": [
+      {
+        "id": "R-SIN30",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "GRAPH-PLOT:REQ-001",
+          "GRAPH-PLOT:AC-001"
+        ],
+        "line": 16,
+        "quote": "screenshot and sin30 plot"
+      },
+      {
+        "id": "R-EQUATION-SCOPE",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "GRAPH-PLOT:REQ-001"
+        ],
+        "line": 7,
+        "quote": "plot a graph for an equation"
+      },
+      {
+        "id": "R-UI-REFERENCE",
+        "sourceId": "DOC-001",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "GRAPH-PLOT:AC-001"
+        ],
+        "attestation": "Entire screenshot: the expression panel contains sin(x) and a quadratic expression beside a graph viewport. The viewport itself is blank; this attests the visual-reference role only and is not evidence that the required sine plot or 30-degree evaluation has passed."
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "adebae380c85c66b3e158c5e65633b47c3aadd50c6abeabd6fcbb6f42de23991",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "product-owner",
+    "readOnly": true
+  },
+  "submittedAt": "2026-10-26T06:34:10.868Z",
+  "recordSha256": "d78a47d68d2e123bb42636ec072dcc7e5ed421e48da81e2fa02ca45153fd2cab"
+}
