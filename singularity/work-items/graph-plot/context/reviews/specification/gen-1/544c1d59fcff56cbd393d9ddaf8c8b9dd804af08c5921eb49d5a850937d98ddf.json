@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "phase": "specification",
+  "generation": 1,
+  "reportSha256": "544c1d59fcff56cbd393d9ddaf8c8b9dd804af08c5921eb49d5a850937d98ddf",
+  "lifecycleEventId": "7dd6755b-50f0-42b5-8042-96ce6889068b",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "specification",
+    "binding": {
+      "workId": "graph-plot",
+      "phase": "specification",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/graph-plot/USER-STORY.md",
+          "textSha256": "02c47bff1ea8dd71a944188615c0a602d4e0a47061e271f8df60c38040912919",
+          "originalSha256": "1113026516d93949e81f6239fea642dbe91f94ba1362bc77a0d8b2ba31c2cd35"
+        }
+      ],
+      "visualSources": [
+        {
+          "id": "DOC-001",
+          "path": "local-document:DOC-001",
+          "originalSha256": "38c3ce8176b283e4e9e23cfa0f573add262213ce6d77df0aa856c4570aa76a9a",
+          "mimeType": "image/png"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:current-phase",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/graph-plot/context/clarifications-specification-gen1.json",
+          "sha256": "056820b0c1458dcf24827bf9f86ebabdb659351beff62c61b3d71c633d6120c9"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/graph-plot/artifacts/specification/spec.md",
+        "sha256": "0a3b6e17bef3d84523f63de34617d83189a1f3ccb518852005963cb2e66cad9f"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "DOC-001"
+    ],
+    "visualSourcesReviewed": [
+      {
+        "sourceId": "DOC-001",
+        "method": "image-tool",
+        "locator": "Entire screenshot, especially the expression panel and graph viewport.",
+        "observations": "The expression panel shows sin(x) and 0.25*x^2-3. The graph viewport is a blank grid with extreme coordinate labels; no sine curve or 30-degree evaluation is visible. This is inspected only as a UI reference, not execution evidence."
+      }
+    ],
+    "clarificationsReviewed": [
+      "clarification:current-phase"
+    ],
+    "rows": [
+      {
+        "id": "R-EQUATION-SCOPE",
+        "sourceId": "story",
+        "line": 7,
+        "quote": "plot a graph for an equation",
+        "outcome": "question",
+        "question": "Does this request require plotting arbitrary user-provided equations, or only the clarified sine-wave case? Specification generation 1, Q-001 clarifies the meaning of sin30 but does not settle the broader equation scope."
+      },
+      {
+        "id": "R-SIN30",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "GRAPH-PLOT:REQ-001",
+          "GRAPH-PLOT:AC-001"
+        ],
+        "line": 16,
+        "quote": "screenshot and sin30 plot"
+      },
+      {
+        "id": "R-UI-REFERENCE",
+        "sourceId": "DOC-001",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "GRAPH-PLOT:AC-001"
+        ],
+        "attestation": "Full screenshot: the expression panel is left of a graph viewport, with sin(x) and a quadratic expression in the panel. The viewport is blank, so the screenshot supports the interface-reference role only and does not show a passing sine plot or evaluation."
+      }
+    ],
+    "findings": [
+      {
+        "id": "F-EQUATION-SCOPE",
+        "severity": "blocking",
+        "message": "The Story description says “plot a graph for an equation” (story line 7), while the specification limits the required behavior to sin(x) and explicitly excludes other equations. An implementation could satisfy GRAPH-PLOT:REQ-001 by hard-coding only sin(x) yet fail the broader reading that the graphing interface plots an equation supplied by the user. The pinned clarification in specification generation 1, Q-001, defines the sin30 case but does not decide whether other equations are in scope; clarify this before treating the scope as complete.",
+        "clauseId": "GRAPH-PLOT:REQ-001",
+        "sourceId": "story",
+        "line": 7,
+        "quote": "plot a graph for an equation"
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "adebae380c85c66b3e158c5e65633b47c3aadd50c6abeabd6fcbb6f42de23991",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "product-owner",
+    "readOnly": true
+  },
+  "submittedAt": "2026-10-26T06:26:41.676Z",
+  "recordSha256": "5f35203c5c9666e55ec49091605e96598897d45d4ebc5118774b86c578f3a4cc"
+}
