@@ -4,7 +4,7 @@
   "workId": "graph-plot",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 1,
+  "generation": 2,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "spec.md",
       "mediaType": "text/markdown",
-      "sha256": "0a3b6e17bef3d84523f63de34617d83189a1f3ccb518852005963cb2e66cad9f",
-      "bytes": 5109
+      "sha256": "8aad24cb176d5814791c74eb7f72ea908bb0372d2eb01946279ca7af460bbb7e",
+      "bytes": 5624
     },
-    "generation": 1,
-    "publishedAt": "2026-10-26T05:48:15.023Z"
+    "generation": 2,
+    "publishedAt": "2026-10-26T06:31:23.197Z"
   },
-  "sourceCommit": "5675679e02fc8a695ed0e5604af5cec529803272",
+  "sourceCommit": "c6203502a28047211a6f21db610fed2fa6835826",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "f08cd2ee2875c8854dcb9cd1c9f4bcbf2e6e0b0d8ca8a1b6e1972f217d097e9c",
@@ -66,13 +66,13 @@
   },
   "remoteAgent": null,
   "clarification": {
-    "generation": 1,
-    "path": "singularity/work-items/graph-plot/context/clarifications-specification-gen1.json",
-    "sha256": "056820b0c1458dcf24827bf9f86ebabdb659351beff62c61b3d71c633d6120c9",
-    "promptSha256": "a154a5db51fc4486dfbe7a63ea89245924733aa4df8077642f85668706e60272",
-    "responses": 3,
+    "generation": 2,
+    "path": "singularity/work-items/graph-plot/context/clarifications-specification-gen2.json",
+    "sha256": "5e4d7c9aed47b0adf628ec2adf4b5db22e749b63cb1479c93dcf9e36b94922ed",
+    "promptSha256": "9184b3257556cd3e727de0a12cc019a00eaaaf3c39a6055a25e5f6cec8893351",
+    "responses": 1,
     "markers": [],
-    "recordedAt": "2026-10-26T04:23:36.131Z",
+    "recordedAt": "2026-10-26T06:29:46.106Z",
     "recordedBy": {
       "name": "Ashok Raj",
       "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -100,6 +100,26 @@
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 2,
+      "path": "singularity/work-items/graph-plot/telemetry/specification-gen2.json",
+      "sha256": "9093499234efa0df1beb0ae5ee594c7f88124c9f273b004bcc6cf20e9d24b50e",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 26901,
+        "estimatedTokens": 6726,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 26901,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
     }
   ],
   "remoteOutputs": [],
@@ -124,6 +144,27 @@
       "completedAt": "2026-10-26T05:48:15.023Z",
       "agent": "product-owner",
       "generation": 1
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-26T06:31:23.197Z",
+      "completedAt": "2026-10-26T06:31:23.197Z",
+      "agent": "product-owner",
+      "generation": 2
     }
   ],
   "sequenceOverrides": [],
@@ -160,10 +201,11 @@ Boundary conditions and the other sections forward, and stop when one is missing
 
 ## Agent brief
 
-Provide a user-facing graph of the sine wave, with the 30-degree evaluation represented as
-sin(30°) = 0.5. Use the supplied screenshot as a visual reference for the graphing interface, not
-as a specification of every visible control. The request names no additional roles, limits,
-failure behavior, or non-functional requirements.
+Provide a user-facing graph of sin(x), with the 30-degree evaluation represented as sin(30°) = 0.5.
+For this Story, general user-entered equation plotting is out of scope, as confirmed in the
+specification generation 2 clarification. Use the supplied screenshot as a visual reference for the
+graphing interface, not as a specification of every visible control. The request names no additional
+roles, limits, failure behavior, or non-functional requirements.
 
 ## Actors
 
@@ -213,7 +255,7 @@ No limits, sizes, counts, timeouts, or other boundary behavior are specified.
 
 Numbered, testable, one obligation each. Cite the scenario each serves.
 
-- The UI shall plot the sine wave and represent the evaluation at 30 degrees, where sin(30°) = 0.5; this covers “screenshot and sin30 plot” [scope:SRI-fa892fa5f5cc] and the confirmed degree unit in the specification generation 1 clarification. *(S1)* [GRAPH-PLOT:REQ-001]
+- The UI shall plot sin(x) and represent its 30-degree evaluation as sin(30°) = 0.5; this covers “screenshot and sin30 plot” [scope:SRI-fa892fa5f5cc], the confirmed degree unit in the specification generation 1 clarification (Q-003), and the sine-only scope confirmed in the specification generation 2 clarification (Q-001). *(S1)* [GRAPH-PLOT:REQ-001]
 
 Acceptance criteria use the same stable, namespaced form:
 
@@ -242,9 +284,10 @@ requirements unless separately specified.
 
 ## Out of scope
 
-Behavior for other equations, interactions with controls visible in the reference screenshot,
+General user-entered equation plotting is out of scope as confirmed in the specification
+generation 2 clarification (Q-001). Interactions with controls visible in the reference screenshot,
 error handling, data persistence, and performance or accessibility targets are not specified by
-the pinned request or clarification.
+the pinned request or clarifications.
 
 ## Sources
 
@@ -253,3 +296,6 @@ the pinned request or clarification.
 - `DOC-001 — Screenshot 2026 10 26 at 9.37.24 AM` — inspected image, used as a UI reference.
 - Clarification: specification generation 1 — the user confirmed a sine-wave plot, the screenshot
   as a UI reference, and 30 degrees.
+- Clarification: specification generation 2 (Q-001) — the user confirmed that this Story is limited
+  to plotting sin(x) and its 30-degree evaluation; general user-entered equation plotting is out of
+  scope.
