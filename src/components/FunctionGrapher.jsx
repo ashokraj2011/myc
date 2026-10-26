@@ -1,29 +1,31 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import * as math from 'mathjs';
-import { ZoomIn, ZoomOut, RotateCcw, Play } from 'lucide-react';
+import { ZoomIn, ZoomOut, RotateCcw } from 'lucide-react';
 import { playSound } from '../utils/audio';
 
-const PRESETS = [
-  { label: 'sin(x)', expr: 'sin(x)' },
-  { label: 'x²', expr: 'x^2 - 4' },
-  { label: 'cos(x) * x', expr: 'cos(x) * x' },
-  { label: 'tan(x)', expr: 'tan(x)' },
-  { label: 'Damped Sine', expr: 'exp(-0.2*x) * sin(3*x)' },
-];
+const sineFunction = math.compile('sin(x)');
+const evaluationX = Math.PI / 6;
+const evaluationY = Math.sin(evaluationX);
 
+// @clause:GRAPH-PLOT:REQ-001 The grapher plots the approved sine function and marks sin(30°) = 0.5 at x = π/6.
+// @clause:GRAPH-PLOT:AC-001 The graph includes the 30° evaluation marker and its visible value label.
+/**
+ * Renders the fixed sine plot and its 30-degree evaluation.
+ * @param {{ soundEnabled: boolean }} props Controls sound for the view buttons.
+ * @returns {JSX.Element} The sine plot controls, evaluation, and canvas.
+ */
 export const FunctionGrapher = ({ soundEnabled }) => {
-  const [equation, setEquation] = useState('sin(x)');
   const [scale, setScale] = useState(40); // Pixels per unit
   const [offset, setOffset] = useState({ x: 0, y: 0 });
-  const [error, setError] = useState(null);
   const canvasRef = useRef(null);
 
-  // Render canvas graph whenever equation, scale, or offset changes
+  // Render the approved sine graph whenever its view changes.
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
+    if (!ctx) return;
     const width = canvas.clientWidth;
     const height = canvas.clientHeight;
     canvas.width = width * window.devicePixelRatio;
@@ -90,47 +92,39 @@ export const FunctionGrapher = ({ soundEnabled }) => {
     ctx.lineTo(centerX, height);
     ctx.stroke();
 
-    // Compile and Plot Function
-    try {
-      const compiled = math.compile(equation);
-      setError(null);
+    ctx.strokeStyle = '#ec4899';
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
 
-      ctx.strokeStyle = '#ec4899';
-      ctx.lineWidth = 2.5;
-      ctx.beginPath();
+    let isDrawing = false;
+    const step = 2; // Pixel step
 
-      let isDrawing = false;
-      const step = 2; // Pixel step
-
-      for (let px = 0; px <= width; px += step) {
-        const xVal = (px - centerX) / scale;
-        try {
-          const yVal = compiled.evaluate({ x: xVal });
-          if (typeof yVal === 'number' && !isNaN(yVal) && isFinite(yVal)) {
-            const py = centerY - yVal * scale;
-            // Prevent crazy asymptote jumps e.g. tan(x)
-            if (py >= -height && py <= height * 2) {
-              if (!isDrawing) {
-                ctx.moveTo(px, py);
-                isDrawing = true;
-              } else {
-                ctx.lineTo(px, py);
-              }
-            } else {
-              isDrawing = false;
-            }
-          } else {
-            isDrawing = false;
-          }
-        } catch (e) {
-          isDrawing = false;
+    for (let px = 0; px <= width; px += step) {
+      const xVal = (px - centerX) / scale;
+      const yVal = sineFunction.evaluate({ x: xVal });
+      const py = centerY - yVal * scale;
+      if (py >= -height && py <= height * 2) {
+        if (!isDrawing) {
+          ctx.moveTo(px, py);
+          isDrawing = true;
+        } else {
+          ctx.lineTo(px, py);
         }
+      } else {
+        isDrawing = false;
       }
-      ctx.stroke();
-    } catch (err) {
-      setError('Invalid function syntax');
     }
-  }, [equation, scale, offset]);
+    ctx.stroke();
+
+    const markerX = centerX + evaluationX * scale;
+    const markerY = centerY - evaluationY * scale;
+    ctx.fillStyle = '#facc15';
+    ctx.beginPath();
+    ctx.arc(markerX, markerY, 5, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.font = '12px monospace';
+    ctx.fillText('sin(30°) = 0.5', markerX + 8, markerY - 8);
+  }, [scale, offset]);
 
   return (
     <div className="w-full flex flex-col gap-4 animate-fade-in p-1">
@@ -139,13 +133,7 @@ export const FunctionGrapher = ({ soundEnabled }) => {
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
           <div className="flex-1 flex items-center u-bg-btn-num-bg border u-border-card-border rounded-xl px-3 py-2 font-mono">
             <span className="u-text-text-accent font-bold mr-2 text-sm">f(x) =</span>
-            <input
-              type="text"
-              value={equation}
-              onChange={(e) => setEquation(e.target.value)}
-              placeholder="e.g. sin(x)"
-              className="bg-transparent border-none outline-none u-text-text-main w-full text-sm font-semibold"
-            />
+            <span className="u-text-text-main w-full text-sm font-semibold">sin(x)</span>
           </div>
 
           <div className="flex items-center gap-1.5 justify-end">
@@ -183,24 +171,9 @@ export const FunctionGrapher = ({ soundEnabled }) => {
           </div>
         </div>
 
-        {/* Preset Badges */}
-        <div className="flex items-center gap-2 overflow-x-auto scrollbar-none py-1">
-          <span className="text-xs u-text-text-muted font-medium shrink-0">Presets:</span>
-          {PRESETS.map((p) => (
-            <button
-              key={p.label}
-              onClick={() => {
-                playSound('click', soundEnabled);
-                setEquation(p.expr);
-              }}
-              className="calc-btn px-2.5 py-1 u-bg-card-bg text-xs u-text-text-muted u-htext-text-accent shrink-0"
-            >
-              {p.label}
-            </button>
-          ))}
-        </div>
-
-        {error && <span className="text-xs text-rose-400 font-semibold">{error}</span>}
+        <p className="text-sm u-text-text-muted" data-testid="sine-evaluation">
+          sin(30°) = 0.5
+        </p>
       </div>
 
       {/* Interactive Canvas */}

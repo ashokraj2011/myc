@@ -1,0 +1,399 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "graph-plot",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "2d3a29ac-0bbd-4019-82fb-59250357eb53",
+  "changeSet": {
+    "path": "singularity/work-items/graph-plot/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:24f5da183cb8bce8650a1c04483af668a1c45da5553e74cd5a32f37df37a23fd",
+    "sourcePaths": [
+      "src/components/FunctionGrapher.jsx"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [],
+    "executableTestPaths": [
+      "src/components/FunctionGrapher.test.jsx"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "product-source": 1,
+      "test-source": 1
+    },
+    "entries": [
+      {
+        "changeId": "sha256:a266cdf7046d4f341273bc2e28098e647f5847f978f9f348c29eff613e1f805c",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "src/components/FunctionGrapher.test.jsx",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:1fd5b507d2413180be9c0fdb94485c1bc0077115ac67a0b4b2fb0270146bcf8b",
+        "status": "modified",
+        "oldPath": "src/components/FunctionGrapher.jsx",
+        "newPath": "src/components/FunctionGrapher.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "GRAPH-PLOT:AC-001"
+    ],
+    "bound": [
+      "GRAPH-PLOT:AC-001"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "GRAPH-PLOT:AC-001",
+        "testSource": "src/components/FunctionGrapher.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "GRAPH-PLOT:AC-001",
+        "testSource": "src/components/FunctionGrapher.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "FunctionGrapher approved sine plot"
+          ],
+          "name": "plots sin(x) and marks the 30-degree evaluation at (π/6, 0.5)"
+        },
+        "logicalTestId": "sha256:9f2197ec12b32bdca455608ec3a44819b270341cc786a677d34894f80d3496c5",
+        "declarationSha256": "sha256:6e31c1c84aa7068de5d748d8458dfef084f9d458a5257640cc9bbe2296586812",
+        "supportSha256": null,
+        "assertions": {
+          "count": 3,
+          "tautological": 0,
+          "negative": false,
+          "boundary": true,
+          "nullability": true,
+          "adequacy": "adequate",
+          "subjects": [
+            "createElement",
+            "getByTestId",
+            "getByText",
+            "mockReturnValue",
+            "querySelector",
+            "render",
+            "spyOn",
+            "toBeInTheDocument",
+            "toHaveTextContent"
+          ]
+        },
+        "line": 25,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "src/components/FunctionGrapher.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "GRAPH-PLOT:AC-001",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      },
+      {
+        "clauseId": "GRAPH-PLOT:REQ-001",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "GRAPH-PLOT:AC-001",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 11,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "GRAPH-PLOT:REQ-001",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 10,
+        "tag": "clause"
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "GRAPH-PLOT:AC-001",
+        "explanation": {
+          "text": "The graph includes the 30° evaluation marker and its visible value label.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 11
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 3,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 6,
+                "beforeLines": 8,
+                "afterStart": 6,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 15,
+                "beforeLines": 1,
+                "afterStart": 17,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 18,
+                "beforeLines": 1,
+                "afterStart": 19,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 21,
+                "beforeLines": 1,
+                "afterStart": 22,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 26,
+                "beforeLines": 0,
+                "afterStart": 28,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 93,
+                "beforeLines": 8,
+                "afterStart": 95,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 102,
+                "beforeLines": 25,
+                "afterStart": 99,
+                "afterLines": 13
+              },
+              {
+                "beforeStart": 127,
+                "beforeLines": 0,
+                "afterStart": 113,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 129,
+                "beforeLines": 3,
+                "afterStart": 115,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 133,
+                "beforeLines": 1,
+                "afterStart": 117,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 142,
+                "beforeLines": 7,
+                "afterStart": 136,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 186,
+                "beforeLines": 18,
+                "afterStart": 174,
+                "afterLines": 3
+              }
+            ],
+            "symbols": [
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 17
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "GRAPH-PLOT:REQ-001",
+        "explanation": {
+          "text": "The grapher plots the approved sine function and marks sin(30°) = 0.5 at x = π/6.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 10
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 3,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 6,
+                "beforeLines": 8,
+                "afterStart": 6,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 15,
+                "beforeLines": 1,
+                "afterStart": 17,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 18,
+                "beforeLines": 1,
+                "afterStart": 19,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 21,
+                "beforeLines": 1,
+                "afterStart": 22,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 26,
+                "beforeLines": 0,
+                "afterStart": 28,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 93,
+                "beforeLines": 8,
+                "afterStart": 95,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 102,
+                "beforeLines": 25,
+                "afterStart": 99,
+                "afterLines": 13
+              },
+              {
+                "beforeStart": 127,
+                "beforeLines": 0,
+                "afterStart": 113,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 129,
+                "beforeLines": 3,
+                "afterStart": 115,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 133,
+                "beforeLines": 1,
+                "afterStart": 117,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 142,
+                "beforeLines": 7,
+                "afterStart": 136,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 186,
+                "beforeLines": 18,
+                "afterStart": 174,
+                "afterLines": 3
+              }
+            ],
+            "symbols": [
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 17
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:863d27171993d3f1a70bf47f60736285dda975d4bb622c79c226346b2db456fe"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:a30f9307e09c261ab3cf3b03030615791c09914a9c7cbae3189a629034c3b7a5",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-10-26T07:09:29.043Z"
+}
