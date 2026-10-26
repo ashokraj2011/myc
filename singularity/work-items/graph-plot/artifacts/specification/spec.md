@@ -4,27 +4,51 @@
   "workId": "graph-plot",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "0a3b6e17bef3d84523f63de34617d83189a1f3ccb518852005963cb2e66cad9f",
+      "bytes": 5109
+    },
+    "generation": 1,
+    "publishedAt": "2026-10-26T05:48:15.023Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "5675679e02fc8a695ed0e5604af5cec529803272",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "f08cd2ee2875c8854dcb9cd1c9f4bcbf2e6e0b0d8ca8a1b6e1972f217d097e9c",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/graph-plot/context/clarifications-specification-gen1.json",
+    "sha256": "056820b0c1458dcf24827bf9f86ebabdb659351beff62c61b3d71c633d6120c9",
+    "promptSha256": "a154a5db51fc4486dfbe7a63ea89245924733aa4df8077642f85668706e60272",
+    "responses": 3,
+    "markers": [],
+    "recordedAt": "2026-10-26T04:23:36.131Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/graph-plot/telemetry/specification-gen1.json",
+      "sha256": "590e39036d812b19982d855e21c258a8b07acaf50609fe770e04c85c04894367",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 26734,
+        "estimatedTokens": 6684,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 26734,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-10-26T05:48:15.023Z",
+      "completedAt": "2026-10-26T05:48:15.023Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -79,132 +160,96 @@ Boundary conditions and the other sections forward, and stop when one is missing
 
 ## Agent brief
 
-<!--
-Summarize the approved intent for downstream agents in a compact, standalone form. Include the
-problem, intended outcome, principal actors, most important scenarios, hard constraints, and major
-exclusions. Do not introduce claims that are absent from the sections below. Exact requirements and
-boundary conditions are preserved separately by the governed projection.
--->
-
-TODO: Write the Agent brief here as visible text; text inside the comment above is not read.
+Provide a user-facing graph of the sine wave, with the 30-degree evaluation represented as
+sin(30°) = 0.5. Use the supplied screenshot as a visual reference for the graphing interface, not
+as a specification of every visible control. The request names no additional roles, limits,
+failure behavior, or non-functional requirements.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+| Actor | Need / authority |
+|---|---|
+| User | Views the sine-wave graph and its 30-degree evaluation. No distinct permission levels are specified. |
 
 ## User scenarios
 
 Prioritized. Each scenario leads with the situation, then its acceptance cases.
 
-<!-- Before drafting, split the pinned request and recorded answers into observable obligations
-for the actual interfaces (UI, API, event/message, batch/job, CLI, library or mixed). Keep the
-source -> REQ/AC -> assertion -> verification mapping in the existing sections. Existing ACs count;
-do not duplicate clauses or invent controls, endpoints, limits, errors or screenshot requirements.
-Self-check whether an implementation could meet this draft yet omit an explicit request. Repair
-clear omissions in this editable draft and recheck within the returned repair policy; preserve
-published inputs and settled answers. These are authoring instructions, not execution evidence. -->
-
-### S1 — <the most important situation, in the user's words>
+### S1 — Viewing the sine-wave plot
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** User
+**Context:** The graphing interface is available.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
-
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
-
-### S2 — <the next situation>
-
-**Priority:** P2
-
-- **Given** … **When** … **Then** …
+- **Given** the user views the sine-wave graph
+  **When** the 30-degree evaluation is considered
+  **Then** the plotted sine wave corresponds to sin(x), and sin(30°) is 0.5.
 
 ## Failure and empty states
 
 What happens the first time, with nothing there yet, and when each step fails. These are where
 specifications are usually silent and implementations usually improvise.
 
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** Not specified in the pinned request or clarification.
+- **Failure:** Not specified in the pinned request or clarification.
+- **Partial:** Not specified in the pinned request or clarification.
 
 ## Scenario coverage
 
-<!-- One row per behavior/acceptance clause; repeat rows for multiple outcomes. Every referenced
-S-number must have complete Given/When/Then acceptance cases above. Outcome is success, failure,
-boundary, or empty. Rejection/error requirements need distinct failure cases, not only happy-path
-prose. Use the pinned request and clarification answers; do not invent error text or new scope. -->
-
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `GRAPH-PLOT:REQ-001` | S1 | TODO |
-| `GRAPH-PLOT:REQ-002` | S2 | TODO |
-| `GRAPH-PLOT:AC-001` | S1 | TODO |
+| `GRAPH-PLOT:REQ-001` | S1 | success |
+| `GRAPH-PLOT:AC-001` | S1 | success |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+Not applicable: the pinned request and clarification specify no roles or permission boundaries.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+No limits, sizes, counts, timeouts, or other boundary behavior are specified.
 
 ## Requirements
 
 Numbered, testable, one obligation each. Cite the scenario each serves.
 
-- <requirement>. *(S1)* [GRAPH-PLOT:REQ-001]
-- <requirement>. *(S1, S2)* [GRAPH-PLOT:REQ-002]
+- The UI shall plot the sine wave and represent the evaluation at 30 degrees, where sin(30°) = 0.5; this covers “screenshot and sin30 plot” [scope:SRI-fa892fa5f5cc] and the confirmed degree unit in the specification generation 1 clarification. *(S1)* [GRAPH-PLOT:REQ-001]
 
 Acceptance criteria use the same stable, namespaced form:
 
-- <observable acceptance outcome>. *(S1)* [GRAPH-PLOT:AC-001]
+- On visual review, the graphing screen uses DOC-001 as a visual reference and shows the sine-wave plot with its 30-degree evaluation; individual controls visible in the reference are not additional requirements. [scope:DOC-001] *(S1)* [GRAPH-PLOT:AC-001]
 
 ## Verification intent
 
-<!-- One row per declared clause, including non-functional requirements. Methods: test, visual,
-inspection, or a comma-separated combination (all required). AC Criterion is its own ID. A
-visual/inspection requirement names the AC proving it; a test-only requirement may use -. Choose
-from the pinned source, not from available tools. A screenshot is visual proof, not a test exemption.
-Planning must inherit these methods and cannot change them without an approved scope amendment. -->
-
 | Clause | Methods | Criterion |
 |---|---|---|
-| `GRAPH-PLOT:REQ-001` | TODO | - |
-| `GRAPH-PLOT:REQ-002` | TODO | - |
-| `GRAPH-PLOT:AC-001` | TODO | `GRAPH-PLOT:AC-001` |
+| `GRAPH-PLOT:REQ-001` | test, visual | `GRAPH-PLOT:AC-001` |
+| `GRAPH-PLOT:AC-001` | test, visual | `GRAPH-PLOT:AC-001` |
 
 ## Non-functional requirements
 
-Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
-will be measured; "fast" is not a requirement.
-
-Use governed requirement anchors here too (for example `[GRAPH-PLOT:REQ-003]`); `NFR-001` by
-itself is only a display label and is not a stable clause identity.
+None specified in the pinned request or clarification.
 
 ## Constitution articles
 
-Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
-cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
-
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-What this specification takes as true without proving. An assumption that turns out false is a
-change request, not a defect — which is only true if it was written down.
+The graphing interface can present a sine-wave plot. The user confirmed that 30 is degrees.
+The supplied screenshot is a UI reference; its individual controls are not additional behavior
+requirements unless separately specified.
 
 ## Out of scope
 
-Named explicitly, so the boundary is reviewable rather than inferred.
+Behavior for other equations, interactions with controls visible in the reference screenshot,
+error handling, data persistence, and performance or accessibility targets are not specified by
+the pinned request or clarification.
 
 ## Sources
 
-Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
-offered to this phase that could not be read or was not available here, named as a gap. Without
-supporting documents, say so.
+- Pinned Story source: `singularity/work-items/graph-plot/source.json` — “plot a graph for an
+  equation”; acceptance criterion “screenshot and sin30 plot.”
+- `DOC-001 — Screenshot 2026 10 26 at 9.37.24 AM` — inspected image, used as a UI reference.
+- Clarification: specification generation 1 — the user confirmed a sine-wave plot, the screenshot
+  as a UI reference, and 30 degrees.
