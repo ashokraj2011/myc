@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-10-26T06:50:03.916Z",
+  "claims": {
+    "GRAPH-PLOT:AC-001": {
+      "expectedPaths": [
+        "src/components/FunctionGrapher.jsx"
+      ],
+      "tests": [
+        "src/components/FunctionGrapher.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "The grapher shows the sin(x) curve and labels the 30° evaluation as 0.5, with the graphing workspace visually reviewed against DOC-001."
+    },
+    "GRAPH-PLOT:REQ-001": {
+      "expectedPaths": [
+        "src/components/FunctionGrapher.jsx"
+      ],
+      "tests": [
+        "src/components/FunctionGrapher.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "The UI plots sin(x) and represents sin(30°) = 0.5 at the degree-equivalent x = π/6 point."
+    }
+  },
+  "verificationContracts": [
+    {
+      "clauseId": "GRAPH-PLOT:AC-001",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "screenshot-reference",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "DOC-001"
+          },
+          "requiredAssurance": "source-bound"
+        },
+        {
+          "slot": "sine-evaluation",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "src/components/FunctionGrapher.test.jsx"
+          },
+          "requiredAssurance": "module-observed"
+        }
+      ]
+    }
+  ],
+  "workId": "graph-plot",
+  "phase": "planning",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/graph-plot/artifacts/planning/plan.md",
+    "sha256": "afa1c96aa532b00c7525bb6abd7f5939293ae18f611cf12c0980d65b5804fbfe",
+    "bytes": 17079
+  }
+}
