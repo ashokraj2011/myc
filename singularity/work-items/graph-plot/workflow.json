@@ -463,6 +463,272 @@
           },
           "status": "awaiting_review"
         }
+      },
+      {
+        "packetSha256": "f35cf9b1bcf7d8225b029d8ad59af4c4346b87f3f9d514740c7b2028d2a06a71",
+        "phase": "implementation",
+        "generation": 1,
+        "branch": "graph-plot",
+        "sourceTreeSha256": "sha256:a30f9307e09c261ab3cf3b03030615791c09914a9c7cbae3189a629034c3b7a5",
+        "path": "singularity/work-items/graph-plot/submissions/implementation/f35cf9b1bcf7d8225b029d8ad59af4c4346b87f3f9d514740c7b2028d2a06a71.json",
+        "submittedAt": "2026-10-26T07:11:55.656Z",
+        "projection": {
+          "schemaVersion": 3,
+          "workId": "graph-plot",
+          "epicId": null,
+          "planId": null,
+          "jiraIssueId": "graph-plot",
+          "initialJiraKey": null,
+          "currentJiraKey": null,
+          "canonicalBranch": "graph-plot",
+          "submittedBranch": "graph-plot",
+          "submissionCommit": "97045d90f726fea43fb17eb1fe9be318718b198c",
+          "sourceCommit": "97045d90f726fea43fb17eb1fe9be318718b198c",
+          "sourceTreeSha256": "sha256:a30f9307e09c261ab3cf3b03030615791c09914a9c7cbae3189a629034c3b7a5",
+          "phase": "implementation",
+          "generation": 1,
+          "authorship": {
+            "schemaVersion": 1,
+            "producer": "governed-agent",
+            "channel": "copilot-host",
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "governedAgentContext": {
+              "agentId": "developer"
+            },
+            "kernelModel": {
+              "invoked": false,
+              "status": "exact",
+              "invocationIds": []
+            },
+            "externalAiUse": {
+              "value": "unknown",
+              "status": "unavailable"
+            },
+            "changeOrigins": [
+              "copilot"
+            ],
+            "source": {
+              "kind": "in-place",
+              "filename": "implementation-summary.md",
+              "mediaType": "text/markdown",
+              "sha256": "3738df60e947f5ebe643b1f64cd3dcfad9f6bba8355c62aa202f81b5d74e5337",
+              "bytes": 2354
+            },
+            "generation": 1,
+            "publishedAt": "2026-10-26T07:09:29.043Z"
+          },
+          "artifacts": [
+            {
+              "path": "singularity/work-items/graph-plot/artifacts/implementation/implementation-summary.md",
+              "kind": "document",
+              "sha256": "7e9e2bb68ca00dc8db940929fbfb496e2c41c0512eb476cc00d3b3a9cab7b46d",
+              "size": 14467,
+              "reference": {
+                "handle": "sfref:v1:story:graph-plot:8d3f68f910cfd806e18069c36d57b35bc39eb437d5066f283f5d3ad0f06fac97",
+                "recordHash": "8d3f68f910cfd806e18069c36d57b35bc39eb437d5066f283f5d3ad0f06fac97"
+              }
+            },
+            {
+              "path": "src/components/FunctionGrapher.jsx",
+              "kind": "code",
+              "sha256": "f45fc64853218e0ecca5c970585236a2ce7a9efc262c23118da057e92bb7c06c",
+              "size": 6149
+            },
+            {
+              "path": "src/components/FunctionGrapher.test.jsx",
+              "kind": "test",
+              "sha256": "b94711dfb9ff94a4b626d93d3b448a162a6bb8c93a690325315cb2da9a48a64b",
+              "size": 1529
+            }
+          ],
+          "references": [
+            {
+              "handle": "sfref:v1:story:graph-plot:8d3f68f910cfd806e18069c36d57b35bc39eb437d5066f283f5d3ad0f06fac97",
+              "recordHash": "8d3f68f910cfd806e18069c36d57b35bc39eb437d5066f283f5d3ad0f06fac97",
+              "purpose": "review-evidence",
+              "required": true
+            }
+          ],
+          "agentBriefs": [
+            {
+              "consumerPhase": "convergence",
+              "status": "ready",
+              "path": "singularity/work-items/graph-plot/context/briefs/implementation-gen1-for-convergence.json",
+              "renderedPath": "singularity/work-items/graph-plot/context/briefs/implementation-gen1-for-convergence.md",
+              "sourceSha256": "a3336068244742e1785188805b65a868c6c4e3815424ddfb8cf0f66eb7ee69b5",
+              "sourceBytes": 14385,
+              "renderedSha256": "4ce8cec73224e0932da43678d12bd376517495c69768a1c8b04c939e234d3498",
+              "integritySha256": "3ee5d07dc7d2f2761a2e40754c8480b99a000097553ce69e338663c002bdf305"
+            },
+            {
+              "consumerPhase": "verification",
+              "status": "ready",
+              "path": "singularity/work-items/graph-plot/context/briefs/implementation-gen1-for-verification.json",
+              "renderedPath": "singularity/work-items/graph-plot/context/briefs/implementation-gen1-for-verification.md",
+              "sourceSha256": "a3336068244742e1785188805b65a868c6c4e3815424ddfb8cf0f66eb7ee69b5",
+              "sourceBytes": 14385,
+              "renderedSha256": "a525581ac8613bbb7c8325aef5af8f0e00255253eb138659e5e62cdb6680ed4f",
+              "integritySha256": "865489f3c48636a3f63d8e0d940f5d3781979dfbe90a7703fd0dd2bca77a435d"
+            }
+          ],
+          "checks": [
+            {
+              "id": ".-node-tests",
+              "command": "npm test -- --reporter=json --outputFile=.sflow/results/node-tests.json",
+              "kind": "test",
+              "requirement": "required",
+              "workingDirectory": ".",
+              "resultIsolated": true,
+              "externalModelPolicy": "never",
+              "timeoutMs": 1800000,
+              "sourceCommit": "97045d90f726fea43fb17eb1fe9be318718b198c",
+              "sourceTreeSha256": "sha256:a30f9307e09c261ab3cf3b03030615791c09914a9c7cbae3189a629034c3b7a5",
+              "testRuntime": {
+                "node": "v22.14.0",
+                "platform": "darwin",
+                "arch": "arm64",
+                "profile": {
+                  "nodeOptions": []
+                },
+                "nodeOptionsSha256": "sha256:12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+                "sha256": "sha256:dbe379c7bb0e9e8a2c3b876d8cb6d1376637cc2489ae3dfb9e67d6262af8f908"
+              },
+              "startedAt": "2026-10-26T07:11:52.935Z",
+              "completedAt": "2026-10-26T07:11:55.489Z",
+              "status": "passed",
+              "exitCode": 0,
+              "signal": null,
+              "stdout": "\n> calc-app@0.0.0 test\n> vitest run --reporter=json --outputFile=.sflow/results/node-tests.json\n\nJSON report written to /Users/ashokraj/Downloads/cfa/cfa-calc/.singularity-flow/story-worktrees/.w-1ba53a9069e84ec4093256c2/.sflow/results/node-tests.json\n",
+              "stderr": "",
+              "stdoutBytes": 252,
+              "stderrBytes": 0,
+              "stdoutTruncated": false,
+              "stderrTruncated": false
+            }
+          ],
+          "usage": [
+            {
+              "status": "unavailable",
+              "source": "copilot-otel-unavailable",
+              "provider": null,
+              "model": null,
+              "requestedModel": null,
+              "resolvedModel": null,
+              "resolvedModelAssurance": "unavailable",
+              "inputTokens": null,
+              "outputTokens": null,
+              "cachedInputTokens": null,
+              "cacheWriteInputTokens": null,
+              "totalTokens": null,
+              "providerCost": null,
+              "costStatus": "unavailable",
+              "spans": null,
+              "startedAt": "2026-10-26T07:09:29.043Z",
+              "completedAt": "2026-10-26T07:09:29.043Z",
+              "agent": "developer",
+              "generation": 1
+            }
+          ],
+          "approvals": [],
+          "visualAssurance": null,
+          "submissionEvidence": {
+            "architectureIntent": null,
+            "architectureDecision": null,
+            "codeDelivery": {
+              "path": "singularity/work-items/graph-plot/context/code-delivery/implementation-gen1.json",
+              "sha256": "536522210166dc0dcddf2bd00e7675dfda3ed7da4d87b871e61d28aef6661ccd",
+              "changeSetPath": "singularity/work-items/graph-plot/context/code-delivery/implementation-gen1-changes.json",
+              "changeSetDigest": "sha256:24f5da183cb8bce8650a1c04483af668a1c45da5553e74cd5a32f37df37a23fd",
+              "status": "ready",
+              "autoCandidate": null,
+              "autoCandidateVerification": null
+            },
+            "testExecutions": [
+              {
+                "commandId": ".-node-tests",
+                "path": "singularity/work-items/graph-plot/context/code-delivery/tests/attempts/implementation/TA-31278364582d7d6797ce.json",
+                "sha256": "ebdeb534d52df9ca8ccef64b8b650ad19e0234145d0169c3c0dabd048d72536e",
+                "status": "passed"
+              }
+            ],
+            "claimMaps": [
+              {
+                "kind": "observed",
+                "generation": 1,
+                "path": "singularity/work-items/graph-plot/context/claims/implementation-gen1-observed.json",
+                "sha256": "f403180446cf63dfcc7f6572b1b4af6a5725be85b8882afdb15b9710e0680bbc"
+              }
+            ],
+            "checksSha256": "27f5e31adecfae32154fd4635c82ccf77d262d0482f3e2e10aea8631dd6c2952",
+            "artifactSetSha256": "7ea6a0adae50c1f2aa320c53a76ac302d6e4f6e657f04cde3c444ce2b74f6be2"
+          },
+          "witnessReview": {
+            "enrollment": {
+              "schemaVersion": 1,
+              "mode": "disabled",
+              "witnessedClauses": {
+                "enabled": false,
+                "profiles": []
+              },
+              "testcaseExact": {
+                "mode": "disabled",
+                "profile": null,
+                "requiredAssurance": "unavailable",
+                "policySha256": "sha256:12b50a34a1f03338377ecd76f44b20cbee83e7b91a0b07392ef08e3d8fd60800"
+              },
+              "claimMapContractVersion": 2,
+              "cab": null,
+              "sgos": null,
+              "rollout": {
+                "id": "wel-v0.2-observe",
+                "version": 1,
+                "enrollment": "new-story-only"
+              },
+              "configurationAuthority": {
+                "repository": "https://github.com/ashokraj2011/myc.git",
+                "branch": "sflow/config",
+                "commit": "ba24237b2a0d04be38521b796c6e9b98c69a359b",
+                "projectionSha256": "56e1177914e8340f609879b19cbcf213c63ad2ab18a7c01a9061d7afe6d62a44"
+              }
+            },
+            "enrollmentClassification": "enrolled",
+            "enrollmentReason": null,
+            "clauseMappings": [
+              {
+                "mappingSha256": "sha256:d34febb8d5998af6edbf00e12513ff22826c09b17ffc9998070d31191e683122",
+                "clauseId": "GRAPH-PLOT:AC-001",
+                "witnessType": "test",
+                "executionProfile": "vitest-static-v2",
+                "logicalTestId": "sha256:9f2197ec12b32bdca455608ec3a44819b270341cc786a677d34894f80d3496c5",
+                "sourcePath": "src/components/FunctionGrapher.test.jsx",
+                "sourceDeclarationSha256": "sha256:6e31c1c84aa7068de5d748d8458dfef084f9d458a5257640cc9bbe2296586812",
+                "supportSha256": null,
+                "clauseBodySha256": "sha256:b54c102bb9c6930c9b017503d214915d78d488b694032a07b3f563c5dcb4684e",
+                "contractSha256": "sha256:9ff48204aed6ec5cfe2131419518a200ab6727b39554195253a200e98d63a17e",
+                "slot": "sine-evaluation",
+                "test": "'FunctionGrapher approved sine plot › plots sin(x) and marks the 30-degree evaluation at (π/6, 0.5)' in src/components/FunctionGrapher.test.jsx",
+                "reviewStatus": "unreviewed",
+                "decision": null,
+                "reason": null,
+                "expiresAt": null
+              }
+            ],
+            "testcaseObservations": []
+          },
+          "submittedAt": "2026-10-26T07:11:55.656Z",
+          "submittedBy": {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com",
+            "login": "ashokraj2011",
+            "githubLookup": "resolved"
+          },
+          "status": "awaiting_review"
+        }
       }
     ]
   },
@@ -4659,7 +4925,7 @@
       "label": "Implementation",
       "order": 2,
       "defaultAgent": "developer",
-      "status": "in_progress",
+      "status": "awaiting_approval",
       "requiredArtifact": {
         "path": "artifacts/implementation/implementation-summary.md",
         "kind": "implementation-summary",
@@ -4747,7 +5013,7 @@
       },
       "qualityCommands": [],
       "startedAt": "2026-10-26T06:57:19.869Z",
-      "submittedAt": null,
+      "submittedAt": "2026-10-26T07:11:55.656Z",
       "approvedAt": null,
       "approvedBy": null,
       "rejectedAt": null,
@@ -4868,10 +5134,10 @@
           "kind": "document",
           "status": "pending",
           "exists": true,
-          "size": 14385,
-          "sha256": "a3336068244742e1785188805b65a868c6c4e3815424ddfb8cf0f66eb7ee69b5",
+          "size": 14467,
+          "sha256": "7e9e2bb68ca00dc8db940929fbfb496e2c41c0512eb476cc00d3b3a9cab7b46d",
           "registeredAt": "2026-10-26T07:09:25.268Z",
-          "updatedAt": "2026-10-26T07:09:29.118Z"
+          "updatedAt": "2026-10-26T07:11:55.657Z"
         },
         {
           "path": "src/components/FunctionGrapher.jsx",
@@ -4894,7 +5160,41 @@
           "updatedAt": "2026-10-26T07:09:29.130Z"
         }
       ],
-      "checks": [],
+      "checks": [
+        {
+          "id": ".-node-tests",
+          "command": "npm test -- --reporter=json --outputFile=.sflow/results/node-tests.json",
+          "kind": "test",
+          "requirement": "required",
+          "workingDirectory": ".",
+          "resultIsolated": true,
+          "externalModelPolicy": "never",
+          "timeoutMs": 1800000,
+          "sourceCommit": "97045d90f726fea43fb17eb1fe9be318718b198c",
+          "sourceTreeSha256": "sha256:a30f9307e09c261ab3cf3b03030615791c09914a9c7cbae3189a629034c3b7a5",
+          "testRuntime": {
+            "node": "v22.14.0",
+            "platform": "darwin",
+            "arch": "arm64",
+            "profile": {
+              "nodeOptions": []
+            },
+            "nodeOptionsSha256": "sha256:12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "sha256": "sha256:dbe379c7bb0e9e8a2c3b876d8cb6d1376637cc2489ae3dfb9e67d6262af8f908"
+          },
+          "startedAt": "2026-10-26T07:11:52.935Z",
+          "completedAt": "2026-10-26T07:11:55.489Z",
+          "status": "passed",
+          "exitCode": 0,
+          "signal": null,
+          "stdout": "\n> calc-app@0.0.0 test\n> vitest run --reporter=json --outputFile=.sflow/results/node-tests.json\n\nJSON report written to /Users/ashokraj/Downloads/cfa/cfa-calc/.singularity-flow/story-worktrees/.w-1ba53a9069e84ec4093256c2/.sflow/results/node-tests.json\n",
+          "stderr": "",
+          "stdoutBytes": 252,
+          "stderrBytes": 0,
+          "stdoutTruncated": false,
+          "stderrTruncated": false
+        }
+      ],
       "remoteOutputs": [],
       "generationIntent": {
         "id": "2d3a29ac-0bbd-4019-82fb-59250357eb53",
@@ -4945,8 +5245,8 @@
         "renderedSha256": "8d1eba5302b4ee0f6b9c12c467842d5dfb64c90a2506c2044fa2cde85963039a",
         "mode": "enforce"
       },
-      "generationCommit": null,
-      "publicationCommit": null,
+      "generationCommit": "97045d90f726fea43fb17eb1fe9be318718b198c",
+      "publicationCommit": "97045d90f726fea43fb17eb1fe9be318718b198c",
       "deliveryEvidence": {
         "requirement": "source-and-tests",
         "baselineCommit": "82bdf0e8f19be66bdf4ea6ed8cccf0662c94a6b6",
@@ -5645,9 +5945,66 @@
         "receiptPath": "singularity/work-items/graph-plot/context/code-delivery/implementation-gen1.json",
         "changeSetPath": "singularity/work-items/graph-plot/context/code-delivery/implementation-gen1-changes.json",
         "sourceTreeSha256": "sha256:a30f9307e09c261ab3cf3b03030615791c09914a9c7cbae3189a629034c3b7a5",
-        "status": "pending-tests",
+        "status": "ready",
         "capturedAt": "2026-10-26T07:09:29.043Z",
-        "validation": null
+        "validation": {
+          "sourceCommit": "97045d90f726fea43fb17eb1fe9be318718b198c",
+          "sourceTreeSha256": "sha256:a30f9307e09c261ab3cf3b03030615791c09914a9c7cbae3189a629034c3b7a5",
+          "commands": [
+            {
+              "id": ".-node-tests",
+              "command": "npm test -- --reporter=json --outputFile=.sflow/results/node-tests.json"
+            }
+          ],
+          "checks": [
+            {
+              "id": ".-node-tests",
+              "status": "passed",
+              "testRuntime": {
+                "node": "v22.14.0",
+                "platform": "darwin",
+                "arch": "arm64",
+                "profile": {
+                  "nodeOptions": []
+                },
+                "nodeOptionsSha256": "sha256:12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+                "sha256": "sha256:dbe379c7bb0e9e8a2c3b876d8cb6d1376637cc2489ae3dfb9e67d6262af8f908"
+              },
+              "sourceTreeSha256": "sha256:a30f9307e09c261ab3cf3b03030615791c09914a9c7cbae3189a629034c3b7a5"
+            }
+          ],
+          "status": "passed",
+          "validatedAt": "2026-10-26T07:11:55.540Z"
+        },
+        "testExecutions": [
+          {
+            "commandId": ".-node-tests",
+            "attemptId": "TA-31278364582d7d6797ce",
+            "receiptPath": "singularity/work-items/graph-plot/context/code-delivery/tests/attempts/implementation/TA-31278364582d7d6797ce.json",
+            "receiptSha256": "ebdeb534d52df9ca8ccef64b8b650ad19e0234145d0169c3c0dabd048d72536e",
+            "status": "passed",
+            "affectedRoots": [
+              "."
+            ]
+          }
+        ],
+        "attemptHistory": [
+          {
+            "attemptId": "TA-7634e95aed5666c0ccbe",
+            "commandId": ".-node-tests",
+            "purpose": "preflight",
+            "generation": 1,
+            "status": "passed"
+          },
+          {
+            "attemptId": "TA-31278364582d7d6797ce",
+            "commandId": ".-node-tests",
+            "purpose": "submission",
+            "generation": 1,
+            "status": "passed"
+          }
+        ],
+        "receiptSha256": "536522210166dc0dcddf2bd00e7675dfda3ed7da4d87b871e61d28aef6661ccd"
       },
       "sourceCommit": "197f2cda4a8b4c8952f1f4d0dc46812732e510d6",
       "sidecars": [
@@ -5690,7 +6047,42 @@
           "renderedSha256": "a525581ac8613bbb7c8325aef5af8f0e00255253eb138659e5e62cdb6680ed4f",
           "integritySha256": "865489f3c48636a3f63d8e0d940f5d3781979dfbe90a7703fd0dd2bca77a435d"
         }
-      ]
+      ],
+      "validationVerdict": "passed",
+      "claimMaps": {
+        "observed": {
+          "generation": 1,
+          "path": "singularity/work-items/graph-plot/context/claims/implementation-gen1-observed.json",
+          "sha256": "f403180446cf63dfcc7f6572b1b4af6a5725be85b8882afdb15b9710e0680bbc"
+        }
+      },
+      "workIntervalReconciliation": {
+        "reconciliationSha256": "470c65fc07dacbf702003145bad02c6353940ee7771c2b0fd0d2eacf976f69ce",
+        "baselineSha256": "5b9bc1a647a4ff294a9d2026442899761aa0e06ed699c8204ab1b638316ea57e",
+        "path": "singularity/work-items/graph-plot/context/work-intervals/reconciliations/470c65fc07dacbf702003145bad02c6353940ee7771c2b0fd0d2eacf976f69ce.json",
+        "status": "aligned",
+        "summaryStatus": "clear",
+        "targetHead": "97045d90f726fea43fb17eb1fe9be318718b198c",
+        "summary": {
+          "changedPaths": 2,
+          "planned": 2,
+          "unplanned": 0,
+          "protected": 0
+        },
+        "decision": {
+          "status": "aligned",
+          "summaryStatus": "clear",
+          "eligibleForSubmission": true,
+          "reasons": [],
+          "escalationTarget": null
+        },
+        "baseline": {
+          "path": "singularity/work-items/graph-plot/context/work-intervals/implementation-gen1-baseline.json",
+          "sha256": "5b9bc1a647a4ff294a9d2026442899761aa0e06ed699c8204ab1b638316ea57e",
+          "verified": true,
+          "sourceBaseCommit": "82bdf0e8f19be66bdf4ea6ed8cccf0662c94a6b6"
+        }
+      }
     },
     "convergence": {
       "id": "convergence",
@@ -6243,6 +6635,22 @@
       "event": "phase_generated",
       "phase": "implementation",
       "detail": "generation 1"
+    },
+    {
+      "at": "2026-10-26T07:11:55.655Z",
+      "actor": "system",
+      "agent": null,
+      "event": "work_interval_reconciled",
+      "phase": "implementation",
+      "detail": "aligned; 2 changed path(s)"
+    },
+    {
+      "at": "2026-10-26T07:11:55.656Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "phase_submitted",
+      "phase": "implementation",
+      "detail": "3 artifacts"
     }
   ],
   "measurement": {
@@ -7882,6 +8290,134 @@
         },
         "createdAt": "2026-10-26T07:09:25.918Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "7645be0a-80ef-42c2-a5bc-c6db590d1f28",
+        "type": "approval-requested",
+        "subject": {
+          "kind": "story",
+          "id": "graph-plot",
+          "branch": "graph-plot"
+        },
+        "phaseId": "implementation",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": null,
+        "payload": {
+          "decision": null,
+          "reviewPacketSha256": null
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-26T07:11:52.236Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "7645be0a-80ef-42c2-a5bc-c6db590d1f28",
+        "eventType": "approval-requested",
+        "capabilityId": "cfa-calc",
+        "subject": {
+          "aliases": [
+            "graph-plot"
+          ],
+          "branch": "graph-plot",
+          "canonicalBranch": "graph-plot",
+          "createdAt": "2026-10-26T04:17:44.569Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 1,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 0,
+              "awaiting_approval": 1,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "awaiting_approval",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "plot",
+          "updatedAt": "2026-10-26T07:11:55.656Z",
+          "workId": "graph-plot",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "20f2bbee1802d438c843140584a77cf3dbf224b6b3424fb6baaec375b0dd5e5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "f08cd2ee2875c8854dcb9cd1c9f4bcbf2e6e0b0d8ca8a1b6e1972f217d097e9c",
+          "lifecycleEventId": "7645be0a-80ef-42c2-a5bc-c6db590d1f28",
+          "lifecyclePayload": {
+            "decision": null,
+            "reviewPacketSha256": null
+          },
+          "templateSha256": "2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "7645be0a-80ef-42c2-a5bc-c6db590d1f28",
+            "type": "approval-requested",
+            "subject": {
+              "kind": "story",
+              "id": "graph-plot",
+              "branch": "graph-plot"
+            },
+            "phaseId": "implementation",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": null,
+            "payload": {
+              "decision": null,
+              "reviewPacketSha256": null
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-26T07:11:52.236Z"
+          }
+        },
+        "createdAt": "2026-10-26T07:11:52.240Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -7895,7 +8431,13 @@
       "sourceBaseCommit": "82bdf0e8f19be66bdf4ea6ed8cccf0662c94a6b6",
       "escalationTarget": null,
       "path": "singularity/work-items/graph-plot/context/work-intervals/implementation-gen1-baseline.json",
-      "status": "open"
+      "status": "reconciled",
+      "finalReconciliation": {
+        "reconciliationSha256": "470c65fc07dacbf702003145bad02c6353940ee7771c2b0fd0d2eacf976f69ce",
+        "path": "singularity/work-items/graph-plot/context/work-intervals/reconciliations/470c65fc07dacbf702003145bad02c6353940ee7771c2b0fd0d2eacf976f69ce.json",
+        "targetHead": "97045d90f726fea43fb17eb1fe9be318718b198c",
+        "recordedAt": "2026-10-26T07:11:55.655Z"
+      }
     },
     "history": [
       {

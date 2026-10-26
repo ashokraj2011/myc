@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "graph-plot",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G1-001",
+  "phaseId": "implementation",
+  "generation": 1,
+  "baselineSha256": "5b9bc1a647a4ff294a9d2026442899761aa0e06ed699c8204ab1b638316ea57e",
+  "baseline": {
+    "path": "singularity/work-items/graph-plot/context/work-intervals/implementation-gen1-baseline.json",
+    "sha256": "5b9bc1a647a4ff294a9d2026442899761aa0e06ed699c8204ab1b638316ea57e",
+    "verified": true,
+    "sourceBaseCommit": "82bdf0e8f19be66bdf4ea6ed8cccf0662c94a6b6"
+  },
+  "sourceBaseCommit": "82bdf0e8f19be66bdf4ea6ed8cccf0662c94a6b6",
+  "target": {
+    "branch": "graph-plot",
+    "head": "97045d90f726fea43fb17eb1fe9be318718b198c",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": "src/components/FunctionGrapher.jsx",
+      "status": "present",
+      "sha256": "f45fc64853218e0ecca5c970585236a2ce7a9efc262c23118da057e92bb7c06c",
+      "bytes": 6149,
+      "verdict": "planned",
+      "clauseIds": [
+        "GRAPH-PLOT:AC-001",
+        "GRAPH-PLOT:REQ-001"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/components/FunctionGrapher.test.jsx",
+      "status": "present",
+      "sha256": "b94711dfb9ff94a4b626d93d3b448a162a6bb8c93a690325315cb2da9a48a64b",
+      "bytes": 1529,
+      "verdict": "planned",
+      "clauseIds": [
+        "GRAPH-PLOT:AC-001",
+        "GRAPH-PLOT:REQ-001"
+      ],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 2,
+    "planned": 2,
+    "unplanned": 0,
+    "protected": 0
+  },
+  "decision": {
+    "status": "aligned",
+    "summaryStatus": "clear",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "470c65fc07dacbf702003145bad02c6353940ee7771c2b0fd0d2eacf976f69ce",
+  "reconciledAt": "2026-10-26T07:11:55.655Z",
+  "final": true,
+  "recordedAt": "2026-10-26T07:11:55.655Z",
+  "path": "singularity/work-items/graph-plot/context/work-intervals/reconciliations/470c65fc07dacbf702003145bad02c6353940ee7771c2b0fd0d2eacf976f69ce.json"
+}

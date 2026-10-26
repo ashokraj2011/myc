@@ -65,7 +65,13 @@
       {
         "clauseId": "GRAPH-PLOT:AC-001",
         "testSource": "src/components/FunctionGrapher.test.jsx",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": ".-node-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       }
     ],
     "witnesses": [
@@ -371,11 +377,19 @@
     ],
     "bindingsSha256": "sha256:863d27171993d3f1a70bf47f60736285dda975d4bb622c79c226346b2db456fe"
   },
-  "testExecutions": [],
+  "testExecutions": [
+    {
+      "commandId": ".-node-tests",
+      "attemptId": "TA-31278364582d7d6797ce",
+      "receiptPath": "singularity/work-items/graph-plot/context/code-delivery/tests/attempts/implementation/TA-31278364582d7d6797ce.json",
+      "receiptSha256": "ebdeb534d52df9ca8ccef64b8b650ad19e0234145d0169c3c0dabd048d72536e",
+      "status": "passed"
+    }
+  ],
   "tree": {
     "workingStateDigest": "sha256:a30f9307e09c261ab3cf3b03030615791c09914a9c7cbae3189a629034c3b7a5",
-    "generationCommit": null,
-    "generationTree": null
+    "generationCommit": "97045d90f726fea43fb17eb1fe9be318718b198c",
+    "generationTree": "1077c30710a9f97ab532deaaa320df4c4e671807"
   },
   "model": {
     "task": "code",
@@ -394,6 +408,7 @@
     "observedAt": null,
     "generation": null
   },
-  "status": "pending-tests",
-  "capturedAt": "2026-10-26T07:09:29.043Z"
+  "status": "ready",
+  "capturedAt": "2026-10-26T07:09:29.043Z",
+  "validatedAt": "2026-10-26T07:11:55.540Z"
 }
