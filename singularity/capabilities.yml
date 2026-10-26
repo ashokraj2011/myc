@@ -1,0 +1,25 @@
+version: 1
+capabilities:
+  cfa-calc:
+    name: dfa
+    kind: delivery
+    parent: null
+    repository: myc
+    jira:
+      projectKey: k
+    teams:
+      - k
+    application:
+      start:
+        - id: w-ebfc34dfceaf41980e3899f0
+          name: npm dev
+          type: npm
+          script: dev
+          workingDirectory: .
+          url: http://localhost:5173/
+          ready:
+            http: /
+            timeoutMs: 90000
+          debug:
+            port: 9229
+      tests: []
