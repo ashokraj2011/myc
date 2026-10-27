@@ -639,3 +639,59 @@ body {
 .u-text-text-accent { color: var(--text-accent); }
 .u-text-text-main { color: var(--text-main); }
 .u-text-text-muted { color: var(--text-muted); }
+
+.grapher-app-shell {
+  width: min(100%, 90rem);
+  max-width: 90rem;
+}
+
+.app-shell > main {
+  width: 100%;
+}
+
+.grapher-app-shell > main {
+  align-items: stretch;
+}
+
+/* @clause:WS-GRAPH:REQ-001 The graphing layout places editable equation controls beside a labeled grid. */
+.function-grapher {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.3fr) minmax(0, 1fr);
+  gap: 1rem;
+  height: min(72vh, 52rem);
+  min-height: min(72vh, 52rem);
+}
+
+.grapher-equations {
+  align-self: start;
+  min-width: 0;
+}
+
+.grapher-equations input {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.grapher-plot {
+  height: 100%;
+  min-width: 0;
+  min-height: 28rem;
+}
+
+.grapher-plot canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .function-grapher {
+    grid-template-columns: minmax(0, 1fr);
+    height: auto;
+  }
+
+  .grapher-plot {
+    height: 24rem;
+    min-height: 24rem;
+  }
+}

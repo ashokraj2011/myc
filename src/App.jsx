@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Header } from './components/Header';
 import { Display } from './components/Display';
 import { StandardKeypad } from './components/StandardKeypad';
@@ -11,6 +11,7 @@ import { KeyboardShortcutsModal } from './components/KeyboardShortcutsModal';
 import { evaluateExpression } from './utils/evaluator';
 import { playSound } from './utils/audio';
 
+// @clause:WS-GRAPH:REQ-001
 export default function App() {
   const [activeMode, setActiveMode] = useState('standard');
   const [expression, setExpression] = useState('');
@@ -28,7 +29,7 @@ export default function App() {
   const [history, setHistory] = useState(() => {
     try {
       return JSON.parse(localStorage.getItem('apex_history')) || [];
-    } catch (e) {
+    } catch {
       return [];
     }
   });
@@ -225,7 +226,11 @@ export default function App() {
   ]);
 
   return (
-    <div className="w-full max-w-xl mx-auto p-4 sm:p-6 min-h-screen flex items-center justify-center">
+    <div
+      className={`app-shell w-full mx-auto p-4 sm:p-6 min-h-screen flex items-center justify-center ${
+        activeMode === 'grapher' ? 'grapher-app-shell' : 'max-w-xl'
+      }`}
+    >
       <main className="glass-card w-full p-5 sm:p-7 flex flex-col items-center">
         {/* Top Header */}
         <Header

@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import * as math from 'mathjs';
-import { ZoomIn, ZoomOut, RotateCcw, Play } from 'lucide-react';
+import { ZoomIn, ZoomOut, RotateCcw } from 'lucide-react';
 import { playSound } from '../utils/audio';
 
 const PRESETS = [
@@ -11,11 +11,28 @@ const PRESETS = [
   { label: 'Damped Sine', expr: 'exp(-0.2*x) * sin(3*x)' },
 ];
 
+const isValidEquation = (equation) => {
+  try {
+    const equality = equation.split('=');
+    if (equality.length === 2) {
+      math.compile(equality[0].trim());
+      math.compile(equality[1].trim());
+    } else {
+      math.compile(equation);
+    }
+    return true;
+  } catch {
+    return false;
+  }
+};
+
+// @clause:WS-GRAPH:REQ-001 The view pairs its editable equation with a labeled coordinate grid.
+// @clause:WS-GRAPH:REQ-002 Implicit equalities are sampled over x/y coordinates and drawn as their zero contour.
 export const FunctionGrapher = ({ soundEnabled }) => {
-  const [equation, setEquation] = useState('sin(x)');
+  const [equation, setEquation] = useState('x^2 + y^2 = 10');
   const [scale, setScale] = useState(40); // Pixels per unit
   const [offset, setOffset] = useState({ x: 0, y: 0 });
-  const [error, setError] = useState(null);
+  const error = isValidEquation(equation) ? null : 'Invalid equation syntax';
   const canvasRef = useRef(null);
 
   // Render canvas graph whenever equation, scale, or offset changes
@@ -90,60 +107,118 @@ export const FunctionGrapher = ({ soundEnabled }) => {
     ctx.lineTo(centerX, height);
     ctx.stroke();
 
-    // Compile and Plot Function
+    // Plot a bounded implicit equality or preserve the existing y=f(x) path.
     try {
-      const compiled = math.compile(equation);
-      setError(null);
-
+      const equality = equation.split('=');
       ctx.strokeStyle = '#ec4899';
       ctx.lineWidth = 2.5;
-      ctx.beginPath();
+      if (equality.length === 2) {
+        const left = math.compile(equality[0].trim());
+        const right = math.compile(equality[1].trim());
+        const step = 4;
+        const columns = Math.ceil(width / step) + 1;
+        const rows = Math.ceil(height / step) + 1;
+        const values = new Float32Array(columns * rows);
 
-      let isDrawing = false;
-      const step = 2; // Pixel step
+        for (let row = 0; row < rows; row++) {
+          for (let column = 0; column < columns; column++) {
+            const px = column * step;
+            const py = row * step;
+            const scope = {
+              x: (px - centerX) / scale,
+              y: (centerY - py) / scale,
+            };
+            values[row * columns + column] =
+              left.evaluate(scope) - right.evaluate(scope);
+          }
+        }
 
-      for (let px = 0; px <= width; px += step) {
-        const xVal = (px - centerX) / scale;
-        try {
-          const yVal = compiled.evaluate({ x: xVal });
-          if (typeof yVal === 'number' && !isNaN(yVal) && isFinite(yVal)) {
-            const py = centerY - yVal * scale;
-            // Prevent crazy asymptote jumps e.g. tan(x)
-            if (py >= -height && py <= height * 2) {
-              if (!isDrawing) {
-                ctx.moveTo(px, py);
-                isDrawing = true;
+        const crossing = (first, second) => {
+          if ((first.value < 0) === (second.value < 0)) return null;
+          const ratio = first.value / (first.value - second.value);
+          return {
+            x: first.x + (second.x - first.x) * ratio,
+            y: first.y + (second.y - first.y) * ratio,
+          };
+        };
+
+        ctx.beginPath();
+        for (let row = 0; row < rows - 1; row++) {
+          for (let column = 0; column < columns - 1; column++) {
+            const x = column * step;
+            const y = row * step;
+            const corners = [
+              { x, y, value: values[row * columns + column] },
+              { x: x + step, y, value: values[row * columns + column + 1] },
+              {
+                x: x + step,
+                y: y + step,
+                value: values[(row + 1) * columns + column + 1],
+              },
+              { x, y: y + step, value: values[(row + 1) * columns + column] },
+            ];
+            const points = corners
+              .map((corner, index) => crossing(corner, corners[(index + 1) % 4]))
+              .filter(Boolean);
+
+            for (let index = 0; index + 1 < points.length; index += 2) {
+              ctx.moveTo(points[index].x, points[index].y);
+              ctx.lineTo(points[index + 1].x, points[index + 1].y);
+            }
+          }
+        }
+        ctx.stroke();
+      } else {
+        const compiled = math.compile(equation);
+        ctx.beginPath();
+        let isDrawing = false;
+
+        for (let px = 0; px <= width; px += 2) {
+          const xVal = (px - centerX) / scale;
+          try {
+            const yVal = compiled.evaluate({ x: xVal });
+            if (typeof yVal === 'number' && !isNaN(yVal) && isFinite(yVal)) {
+              const py = centerY - yVal * scale;
+              if (py >= -height && py <= height * 2) {
+                if (!isDrawing) {
+                  ctx.moveTo(px, py);
+                  isDrawing = true;
+                } else {
+                  ctx.lineTo(px, py);
+                }
               } else {
-                ctx.lineTo(px, py);
+                isDrawing = false;
               }
             } else {
               isDrawing = false;
             }
-          } else {
+          } catch {
             isDrawing = false;
           }
-        } catch (e) {
-          isDrawing = false;
         }
+        ctx.stroke();
       }
-      ctx.stroke();
-    } catch (err) {
-      setError('Invalid function syntax');
+    } catch (error) {
+      console.error('Unable to render equation graph:', error);
     }
   }, [equation, scale, offset]);
 
   return (
-    <div className="w-full flex flex-col gap-4 animate-fade-in p-1">
+    <div className="function-grapher w-full animate-fade-in p-1">
       {/* Controls & Input */}
-      <div className="glass-card p-4 flex flex-col gap-3">
+      <div className="grapher-equations glass-card p-4 flex flex-col gap-3">
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
           <div className="flex-1 flex items-center u-bg-btn-num-bg border u-border-card-border rounded-xl px-3 py-2 font-mono">
-            <span className="u-text-text-accent font-bold mr-2 text-sm">f(x) =</span>
+            <label htmlFor="graph-equation" className="u-text-text-accent font-bold mr-2 text-sm">
+              Equation
+            </label>
             <input
+              id="graph-equation"
               type="text"
               value={equation}
               onChange={(e) => setEquation(e.target.value)}
-              placeholder="e.g. sin(x)"
+              aria-label="Equation"
+              placeholder="e.g. x^2 + y^2 = 10"
               className="bg-transparent border-none outline-none u-text-text-main w-full text-sm font-semibold"
             />
           </div>
@@ -204,8 +279,13 @@ export const FunctionGrapher = ({ soundEnabled }) => {
       </div>
 
       {/* Interactive Canvas */}
-      <div className="glass-card w-full h-[280px] overflow-hidden relative">
-        <canvas ref={canvasRef} className="w-full h-full block cursor-crosshair" />
+      <div className="grapher-plot glass-card overflow-hidden relative">
+        <canvas
+          ref={canvasRef}
+          role="img"
+          aria-label={`Coordinate grid with labeled axes and plot of ${equation}`}
+          className="w-full h-full block cursor-crosshair"
+        />
       </div>
     </div>
   );

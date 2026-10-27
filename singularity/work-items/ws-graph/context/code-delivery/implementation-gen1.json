@@ -1,0 +1,630 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "ws-graph",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "e1a3ff56-70b8-4c6d-9b38-d683647bbf41",
+  "changeSet": {
+    "path": "singularity/work-items/ws-graph/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:44f35d3a54de501b109ec7a743c9284bc9e6ca66d062741d3210951dcd3a51e2",
+    "sourcePaths": [
+      "src/App.jsx",
+      "src/components/FunctionGrapher.jsx",
+      "src/index.css"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [
+      "package-lock.json",
+      "package.json",
+      "playwright.config.js"
+    ],
+    "executableTestPaths": [
+      "tests/graph.spec.js"
+    ],
+    "supportingTestPaths": [
+      "playwright.config.js"
+    ]
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "build-configuration": 2,
+      "dependency-lock": 1,
+      "product-source": 3,
+      "test-output": 1,
+      "test-source": 1
+    },
+    "entries": [
+      {
+        "changeId": "sha256:0e871666e92f50125c6fdd03b17c2c5714988d665d4441d98ec114d56062c0fb",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "playwright.config.js",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:160244465edd4003edca1434d49a91ebc95d58bcb080ea5a4166675dd8c21b50",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "test-results/.last-run.json",
+        "role": "test-output",
+        "generated": false,
+        "likelyOrigin": "test-runner",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:86b8a9db6f27376e885a55a5d7e4f1a99b5b96c4df088e1a52958cda0bd52ac5",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "tests/graph.spec.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:c0d37f729ace2848fcc416dfa8996142b3979be24c1718acd0cfe2ccd1038373",
+        "status": "modified",
+        "oldPath": "package-lock.json",
+        "newPath": "package-lock.json",
+        "role": "dependency-lock",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:a78ba6384cc9cbf017ebcbd829f2fcfcf25cc55d63e7bc8aebe72965ce55b7ba",
+        "status": "modified",
+        "oldPath": "package.json",
+        "newPath": "package.json",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:80dd306b575ac0b55374925b4d586d6db7453a2d6d2ad09c3806e000f007ad77",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:4ed9033fd9ac326b6985258784fa126ff17a497bb5e50f53d87f8768d8d678c5",
+        "status": "modified",
+        "oldPath": "src/components/FunctionGrapher.jsx",
+        "newPath": "src/components/FunctionGrapher.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:48863940391425c35001c7a8059bd4fb72a658e991fd0603a4f3a14e39a6e936",
+        "status": "modified",
+        "oldPath": "src/index.css",
+        "newPath": "src/index.css",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "WS-GRAPH:AC-001"
+    ],
+    "bound": [
+      "WS-GRAPH:AC-001"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "WS-GRAPH:AC-001",
+        "testSource": "tests/graph.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "WS-GRAPH:AC-001",
+        "testSource": "tests/graph.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "identity": {
+          "framework": "playwright",
+          "suitePath": [],
+          "name": "plots the reference implicit equation on a labeled coordinate grid"
+        },
+        "logicalTestId": "sha256:a05b9f44e1bc83d0591062afdd23c32b818da3197500c94a60bc804cac32ac7c",
+        "declarationSha256": "sha256:b36d2416232e52ce5f06d2485e3ab6a3106ab2791c6ddfd5ef35b583637ffd00",
+        "supportSha256": null,
+        "assertions": {
+          "count": 3,
+          "tautological": 0,
+          "negative": false,
+          "boundary": true,
+          "nullability": false,
+          "adequacy": "adequate",
+          "subjects": [
+            "async",
+            "click",
+            "evaluate",
+            "fill",
+            "for",
+            "getByRole",
+            "getContext",
+            "getImageData",
+            "goto",
+            "if",
+            "screenshot",
+            "setViewportSize",
+            "slice",
+            "toBeVisible",
+            "toHaveValue"
+          ]
+        },
+        "line": 4,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "tests/graph.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "WS-GRAPH:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/FunctionGrapher.jsx",
+          "src/index.css"
+        ]
+      },
+      {
+        "clauseId": "WS-GRAPH:REQ-002",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "WS-GRAPH:REQ-001",
+        "sourcePath": "src/App.jsx",
+        "line": 14,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "WS-GRAPH:REQ-001",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 29,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "WS-GRAPH:REQ-001",
+        "sourcePath": "src/index.css",
+        "line": 656,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "WS-GRAPH:REQ-002",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 30,
+        "tag": "clause"
+      }
+    ]
+  },
+  "fulfillment": {
+    "obligations": [
+      {
+        "clauseId": "WS-GRAPH:AC-001",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/ws-graph/evidence/graph-tool.png",
+            "state": "present",
+            "sha256": "9d7c8b182bdf08e0d0fa7acd9456ab27d26e96a70e00657aaf3fb99aa4e005aa"
+          }
+        ]
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "WS-GRAPH:REQ-001",
+        "explanation": {
+          "text": "The view pairs its editable equation with a labeled coordinate grid.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 29
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 31,
+                "beforeLines": 1,
+                "afterStart": 32,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 228,
+                "beforeLines": 1,
+                "afterStart": 229,
+                "afterLines": 5
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 15
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 3,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 17
+              },
+              {
+                "beforeStart": 15,
+                "beforeLines": 1,
+                "afterStart": 32,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 18,
+                "beforeLines": 1,
+                "afterStart": 35,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 93,
+                "beforeLines": 1,
+                "afterStart": 110,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 95,
+                "beforeLines": 3,
+                "afterStart": 112,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 100,
+                "beforeLines": 1,
+                "afterStart": 115,
+                "afterLines": 20
+              },
+              {
+                "beforeStart": 102,
+                "beforeLines": 14,
+                "afterStart": 136,
+                "afterLines": 53
+              },
+              {
+                "beforeStart": 117,
+                "beforeLines": 1,
+                "afterStart": 190,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 122,
+                "beforeLines": 1,
+                "afterStart": 195,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 125,
+                "beforeLines": 2,
+                "afterStart": 197,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 127,
+                "beforeLines": 0,
+                "afterStart": 199,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 129,
+                "beforeLines": 3,
+                "afterStart": 201,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 136,
+                "beforeLines": 1,
+                "afterStart": 207,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 138,
+                "beforeLines": 1,
+                "afterStart": 209,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 141,
+                "beforeLines": 1,
+                "afterStart": 212,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 142,
+                "beforeLines": 0,
+                "afterStart": 216,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 146,
+                "beforeLines": 1,
+                "afterStart": 220,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 207,
+                "beforeLines": 2,
+                "afterStart": 282,
+                "afterLines": 7
+              }
+            ],
+            "symbols": [
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 31
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/index.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 641,
+                "beforeLines": 0,
+                "afterStart": 642,
+                "afterLines": 56
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          }
+        ]
+      },
+      {
+        "clauseId": "WS-GRAPH:REQ-002",
+        "explanation": {
+          "text": "Implicit equalities are sampled over x/y coordinates and drawn as their zero contour.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 30
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 3,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 17
+              },
+              {
+                "beforeStart": 15,
+                "beforeLines": 1,
+                "afterStart": 32,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 18,
+                "beforeLines": 1,
+                "afterStart": 35,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 93,
+                "beforeLines": 1,
+                "afterStart": 110,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 95,
+                "beforeLines": 3,
+                "afterStart": 112,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 100,
+                "beforeLines": 1,
+                "afterStart": 115,
+                "afterLines": 20
+              },
+              {
+                "beforeStart": 102,
+                "beforeLines": 14,
+                "afterStart": 136,
+                "afterLines": 53
+              },
+              {
+                "beforeStart": 117,
+                "beforeLines": 1,
+                "afterStart": 190,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 122,
+                "beforeLines": 1,
+                "afterStart": 195,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 125,
+                "beforeLines": 2,
+                "afterStart": 197,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 127,
+                "beforeLines": 0,
+                "afterStart": 199,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 129,
+                "beforeLines": 3,
+                "afterStart": 201,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 136,
+                "beforeLines": 1,
+                "afterStart": 207,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 138,
+                "beforeLines": 1,
+                "afterStart": 209,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 141,
+                "beforeLines": 1,
+                "afterStart": 212,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 142,
+                "beforeLines": 0,
+                "afterStart": 216,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 146,
+                "beforeLines": 1,
+                "afterStart": 220,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 207,
+                "beforeLines": 2,
+                "afterStart": 282,
+                "afterLines": 7
+              }
+            ],
+            "symbols": [
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 31
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:110abd7a6d712b0a92f83f583295ddc19ca25706bdb89ee4715467ab5ef7d31c"
+  },
+  "excludedChanges": [
+    "test-results/.last-run.json"
+  ],
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:4f0d37122b5b85599524f46413470c275e5c9c37ddcedd2af0eab0f16dc49318",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-10-27T06:31:50.659Z"
+}
