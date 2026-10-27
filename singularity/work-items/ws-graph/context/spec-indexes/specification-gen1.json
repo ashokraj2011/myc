@@ -1,0 +1,77 @@
+{
+  "clauses": [
+    {
+      "anchor": "[WS-GRAPH:REQ-001]",
+      "body": "The graphing view shall present an editable equation area and a labeled coordinate grid in a\nlayout guided by the supplied screenshot. *(S1)*",
+      "bodySha256": "9f485339a993c5abe785cbf85efeae35e226b7fad378e135202383a15aa75d8f",
+      "dependsOn": [],
+      "id": "WS-GRAPH:REQ-001",
+      "namespace": "WS-GRAPH",
+      "number": 1,
+      "source": {
+        "line": 251,
+        "path": "singularity/work-items/ws-graph/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "WS-GRAPH:AC-001",
+        "methods": [
+          "test",
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[WS-GRAPH:REQ-002]",
+      "body": "The graphing tool shall accept the single implicit equation `x^2 + y^2 = 10` and display its\ncircle on the coordinate grid. *(S1)*",
+      "bodySha256": "248c5419b769ac5f2f542112b058c171fde1e715a185a4fb5a1ccaa34240fb51",
+      "dependsOn": [],
+      "id": "WS-GRAPH:REQ-002",
+      "namespace": "WS-GRAPH",
+      "number": 2,
+      "source": {
+        "line": 253,
+        "path": "singularity/work-items/ws-graph/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "WS-GRAPH:AC-001",
+        "methods": [
+          "test",
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[WS-GRAPH:AC-001]",
+      "body": "A screenshot of the tool shall show the equation area, labeled coordinate grid, and plotted\ncircle guided by DOC-001; a Playwright test shall enter `x^2 + y^2 = 10` and verify that the\ncircle and coordinate axes/grid appear. *(S1)* [scope:SRI-85d903c6a8a4]",
+      "bodySha256": "036bf3e8122ec456b48ac8fedca0663fbc935eb4143508e1643f3eab171c6a24",
+      "dependsOn": [],
+      "id": "WS-GRAPH:AC-001",
+      "namespace": "WS-GRAPH",
+      "number": 1,
+      "source": {
+        "line": 259,
+        "path": "singularity/work-items/ws-graph/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "WS-GRAPH:AC-001",
+        "methods": [
+          "test",
+          "visual"
+        ]
+      }
+    }
+  ],
+  "generation": 1,
+  "indexSha256": "dfe825d5cf77343fe3085749d3788b6d8f8e38d231c4c19e94386ea49b0aa2e4",
+  "phase": "specification",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 12961,
+    "path": "singularity/work-items/ws-graph/artifacts/specification/spec.md",
+    "sha256": "458fd4c63fd907ca762fd30580c9c393e48a085675c6c84f9a6111e6e173f23b"
+  },
+  "workId": "ws-graph"
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "workId": "ws-graph",
+  "phase": "specification",
+  "generation": 1,
+  "mode": "required",
+  "promptPath": "singularity/work-items/ws-graph/context/prompts/specification-gen1.md",
+  "promptSha256": "76b3e205f9045d07d67a1647e8e38a27c6f201fb7c44ed0c5940c45c6dedef95",
+  "groundingRecordPath": "singularity/work-items/ws-graph/context/specification-gen1.json",
+  "groundingRecordSha256": "2a071e72a882bd8459448865e4eb2a392a4cb962fff20f6437d5418eaed7ccfe",
+  "responses": [
+    {
+      "id": "Q-001",
+      "question": "Does this interpretation match your intent: add a graphing experience to the existing React app, with an editable equation area and a labeled coordinate grid that plots the screenshot's circle equation? The screenshot would be the visual reference.",
+      "answer": "Yes — add an editable equation area and labeled coordinate grid to the existing React app, able to plot the screenshot's x² + y² = 10 circle; use the screenshot as the visual reference.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-002",
+      "question": "Which expressions and graph interactions are in scope? Proposed minimum: one entered equation including the screenshot's implicit x/y equation. Should it also support y=f(x), multiple expressions, or pan/zoom?",
+      "answer": "Start with one entered equation, including the screenshot's implicit x/y equation; defer y=f(x), multiple equations, and pan/zoom unless specified.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-003",
+      "question": "What should the screenshot and Playwright checks prove? Proposed minimum: screenshot compares the graphing layout to the reference; Playwright verifies entering the example equation displays the circle with axes/grid.",
+      "answer": "Capture the tool against the reference layout; Playwright enters x² + y² = 10 and verifies the plotted circle and coordinate axes/grid appear.",
+      "status": "answered",
+      "blocking": false
+    }
+  ],
+  "completed": true,
+  "recordedAt": "2026-10-27T02:40:34.921Z",
+  "recordedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "agent": "product-owner"
+}
