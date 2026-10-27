@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 5,
+  "kind": "test-execution",
+  "attemptId": "TA-12c5c33baa01bfa2213c",
+  "nonce": "e675708fa8eb170da1cf2ded794fd01b",
+  "parentAttemptId": "TA-0d8d4eb991531a60052c",
+  "purpose": "submission",
+  "workId": "ws-graph",
+  "phase": "implementation",
+  "generation": 1,
+  "commandId": "playwright-tests",
+  "commandSha256": "sha256:6d98c29c94909555b78d1c3d1304755b2c9b8d8346941b0e792eb7340854441c",
+  "argvSha256": "e9c3f81587b101b6b2e6a7ea683e36eedcd03c26a244cfed81fb433fd5b4598c",
+  "selection": {
+    "selection": "complete",
+    "gaps": [],
+    "selectionSha256": "sha256:039da759343cefbe790fa07d5890dfc79e172fc47cc0799b373bd49048c130bb"
+  },
+  "environment": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "ci": "1",
+    "removed": [],
+    "declaredSha256": null,
+    "toolchain": {
+      "node": "22.14.0",
+      "npm": "10.9.2",
+      "playwright": "1.64.1"
+    },
+    "host": "node 22.14.0"
+  },
+  "environmentSha256": "sha256:f14a6c08487b907daf5c740bcd4d87ce2368e598937630570b6fa7af263d1c2f",
+  "platform": "darwin",
+  "workingDirectory": ".",
+  "affectedRoots": [
+    "."
+  ],
+  "adapter": "playwright-json",
+  "profile": "playwright-json-v1",
+  "candidate": {
+    "commit": "6b9fd4919d9405b02264f6c41934c1e399cdde5b",
+    "treeSha256": "sha256:4f0d37122b5b85599524f46413470c275e5c9c37ddcedd2af0eab0f16dc49318"
+  },
+  "process": {
+    "status": "passed",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "infrastructureUnavailable": false,
+    "startedAt": "2026-10-27T06:33:42.962Z",
+    "completedAt": "2026-10-27T06:33:47.773Z"
+  },
+  "status": "passed",
+  "terminal": true,
+  "exitCode": 0,
+  "timedOut": false,
+  "skipped": false,
+  "suppressed": false,
+  "tests": {
+    "discovered": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0
+  },
+  "result": {
+    "path": ".sflow/results/playwright-tests.json",
+    "sha256": "1540184098f621c0d339a0c0962c71ac660d48b7506a27cf06b214d8bcbe1628",
+    "bytes": 4481,
+    "files": [
+      {
+        "sourcePath": ".sflow/results/playwright-tests.json",
+        "sha256": "1540184098f621c0d339a0c0962c71ac660d48b7506a27cf06b214d8bcbe1628",
+        "bytes": 4481
+      }
+    ]
+  },
+  "rawReports": [
+    {
+      "path": "singularity/work-items/ws-graph/context/code-delivery/tests/raw/1540184098f621c0d339a0c0962c71ac660d48b7506a27cf06b214d8bcbe1628.bin",
+      "sha256": "1540184098f621c0d339a0c0962c71ac660d48b7506a27cf06b214d8bcbe1628",
+      "bytes": 4481
+    }
+  ],
+  "occurrences": [
+    {
+      "suitePath": [],
+      "name": "plots the reference implicit equation on a labeled coordinate grid",
+      "file": "graph.spec.js",
+      "line": 4,
+      "outcome": "passed",
+      "durationMs": 1664
+    }
+  ],
+  "reportError": null,
+  "assurance": "module-executed",
+  "pin": {
+    "commandId": "playwright-tests",
+    "source": {
+      "kind": "inferred"
+    },
+    "argv": [
+      "npm",
+      "run",
+      "test:e2e",
+      "--",
+      "--reporter=json"
+    ],
+    "workingDirectory": ".",
+    "affectedRoots": [
+      "."
+    ],
+    "adapter": "playwright-json",
+    "definition": [
+      {
+        "path": "package.json",
+        "selector": "scripts.test:e2e",
+        "sha256": "cfd10b01d174664b54cfcac2326926df03a15051afb6e7af180bbcf265789612"
+      },
+      {
+        "path": "playwright.config.js",
+        "selector": null,
+        "sha256": "c4ba113ec5ff55af31d32883dd44c2024e2bb9f18ee9480d1705f92e36c4f16c"
+      },
+      {
+        "path": "vite.config.js",
+        "selector": null,
+        "sha256": "22585fc2be374450c9a7342fe4b5a22b30fce9d9db77def4b2d45302997b2eee"
+      }
+    ],
+    "sha256": "sha256:8df8a8344796a01a1a453e088352e904808dc381a167e7e2ab0cf1d8e7e4024e"
+  },
+  "narrowing": {
+    "reasons": [],
+    "filters": [],
+    "focused": [],
+    "skipped": 0,
+    "discovered": 1,
+    "baseline": 1,
+    "shortfall": 0
+  }
+}

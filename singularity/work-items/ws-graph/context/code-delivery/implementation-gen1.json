@@ -136,7 +136,13 @@
       {
         "clauseId": "WS-GRAPH:AC-001",
         "testSource": "tests/graph.spec.js",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": "playwright-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       }
     ],
     "witnesses": [
@@ -602,11 +608,26 @@
   "excludedChanges": [
     "test-results/.last-run.json"
   ],
-  "testExecutions": [],
+  "testExecutions": [
+    {
+      "commandId": ".-node-tests",
+      "attemptId": "TA-9db0576a7edbd8d2acf6",
+      "receiptPath": "singularity/work-items/ws-graph/context/code-delivery/tests/attempts/implementation/TA-9db0576a7edbd8d2acf6.json",
+      "receiptSha256": "fc40cc7a373c967e21f378f99694f3ebde17e5ca7dd8b4fcf2194d5b07bd85a6",
+      "status": "passed"
+    },
+    {
+      "commandId": "playwright-tests",
+      "attemptId": "TA-12c5c33baa01bfa2213c",
+      "receiptPath": "singularity/work-items/ws-graph/context/code-delivery/tests/attempts/implementation/TA-12c5c33baa01bfa2213c.json",
+      "receiptSha256": "4021ffec47138da25d76f5399aa57356a7f5faf35ad84c10f49385cc3050cf8e",
+      "status": "passed"
+    }
+  ],
   "tree": {
     "workingStateDigest": "sha256:4f0d37122b5b85599524f46413470c275e5c9c37ddcedd2af0eab0f16dc49318",
-    "generationCommit": null,
-    "generationTree": null
+    "generationCommit": "6b9fd4919d9405b02264f6c41934c1e399cdde5b",
+    "generationTree": "8ede979eb1abd6835c94e1dd1085a9cc001952db"
   },
   "model": {
     "task": "code",
@@ -625,6 +646,7 @@
     "observedAt": null,
     "generation": null
   },
-  "status": "pending-tests",
-  "capturedAt": "2026-10-27T06:31:50.659Z"
+  "status": "ready",
+  "capturedAt": "2026-10-27T06:31:50.659Z",
+  "validatedAt": "2026-10-27T06:33:49.364Z"
 }

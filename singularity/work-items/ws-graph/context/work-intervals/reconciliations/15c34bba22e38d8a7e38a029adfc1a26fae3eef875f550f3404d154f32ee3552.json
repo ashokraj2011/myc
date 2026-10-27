@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "ws-graph",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G1-001",
+  "phaseId": "implementation",
+  "generation": 1,
+  "baselineSha256": "3d508e7d8deafc370bfbc9502b81fc7d5555287043e3852d80d6b627790d7c62",
+  "baseline": {
+    "path": "singularity/work-items/ws-graph/context/work-intervals/implementation-gen1-baseline.json",
+    "sha256": "3d508e7d8deafc370bfbc9502b81fc7d5555287043e3852d80d6b627790d7c62",
+    "verified": true,
+    "sourceBaseCommit": "07ac7f61a4b4c858e1cb8f86e03dc46e874332e5"
+  },
+  "sourceBaseCommit": "07ac7f61a4b4c858e1cb8f86e03dc46e874332e5",
+  "target": {
+    "branch": "ws-graph",
+    "head": "6b9fd4919d9405b02264f6c41934c1e399cdde5b",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": "package-lock.json",
+      "status": "present",
+      "sha256": "82a67262355dab242cbe88804f6d27c63099ca23e0cc86490bb5993aa0bb63bf",
+      "bytes": 126376,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "package.json",
+      "status": "present",
+      "sha256": "faa004ea6d353814eafb01277ad22050238303feaf0d98b146018058e7ed96cc",
+      "bytes": 939,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "playwright.config.js",
+      "status": "present",
+      "sha256": "c4ba113ec5ff55af31d32883dd44c2024e2bb9f18ee9480d1705f92e36c4f16c",
+      "bytes": 360,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "src/App.jsx",
+      "status": "present",
+      "sha256": "d717a7e94bc22688cb29c29c0693fa20a387c7ae91d163149842e85d295a867e",
+      "bytes": 10599,
+      "verdict": "planned",
+      "clauseIds": [
+        "WS-GRAPH:REQ-001"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/components/FunctionGrapher.jsx",
+      "status": "present",
+      "sha256": "4f37f00d3c21d3ca0d80540a8879367cab083870a64911fa5978547ce3377617",
+      "bytes": 9996,
+      "verdict": "planned",
+      "clauseIds": [
+        "WS-GRAPH:REQ-001",
+        "WS-GRAPH:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/index.css",
+      "status": "present",
+      "sha256": "40d3124060e781b9551d262f82949a94fe94a740f45e76d06618667d2ba837ee",
+      "bytes": 17774,
+      "verdict": "planned",
+      "clauseIds": [
+        "WS-GRAPH:REQ-001"
+      ],
+      "protected": false
+    },
+    {
+      "path": "test-results/.last-run.json",
+      "status": "present",
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "bytes": 45,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "tests/graph.spec.js",
+      "status": "present",
+      "sha256": "aced55f54c5dbc5d4581bb71dfa4842356a4593e2ae87d4f048df47690dfe66d",
+      "bytes": 1505,
+      "verdict": "planned",
+      "clauseIds": [
+        "WS-GRAPH:AC-001",
+        "WS-GRAPH:REQ-001",
+        "WS-GRAPH:REQ-002"
+      ],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 8,
+    "planned": 4,
+    "unplanned": 4,
+    "protected": 0
+  },
+  "decision": {
+    "status": "review",
+    "summaryStatus": "attention",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "15c34bba22e38d8a7e38a029adfc1a26fae3eef875f550f3404d154f32ee3552",
+  "reconciledAt": "2026-10-27T06:33:49.619Z",
+  "final": true,
+  "recordedAt": "2026-10-27T06:33:49.620Z",
+  "path": "singularity/work-items/ws-graph/context/work-intervals/reconciliations/15c34bba22e38d8a7e38a029adfc1a26fae3eef875f550f3404d154f32ee3552.json"
+}
