@@ -4578,7 +4578,45 @@
       "artifactRegistrationRepairs": [],
       "artifacts": [],
       "checks": [],
-      "remoteOutputs": []
+      "remoteOutputs": [],
+      "generationIntent": {
+        "id": "e1a3ff56-70b8-4c6d-9b38-d683647bbf41",
+        "generation": 1,
+        "status": "open",
+        "path": "singularity/work-items/ws-graph/context/generation-start/implementation-gen1.json",
+        "receiptSha256": "sha256:24a305db97b1de6bcda9830d452905b8d070fec1861cb2f509dccfcc670d3dd3",
+        "baseline": {
+          "commit": "07ac7f61a4b4c858e1cb8f86e03dc46e874332e5",
+          "tree": "df4be91ec860f420e9e25fefba7a0a53ad37d022",
+          "initialChangeSetDigest": "sha256:edab5e7bd4ba3c82df084123636ff6a5a8737dcc968f5dbd8ad156a90c7f36f8",
+          "mode": "clean",
+          "previousGenerationCommit": null
+        },
+        "startedAt": "2026-10-27T04:48:43.242Z",
+        "startedBy": {
+          "actor": {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com",
+            "login": "ashokraj2011",
+            "githubLookup": "resolved"
+          },
+          "agent": "developer"
+        },
+        "publication": null
+      },
+      "authoringBaseline": {
+        "generation": 1,
+        "path": "artifacts/implementation/implementation-summary.md",
+        "fingerprint": "sha256:03e7ccd4f830c1957ad6b840f28ceb1b625d778fc08cfb5018036870264e1122",
+        "bytes": 1424
+      },
+      "inputContext": {
+        "generation": 1,
+        "path": "singularity/work-items/ws-graph/context/inputs-implementation-gen1.json",
+        "sha256": "8d0222e1eba3f856ce9c5f5fda762a68dc6965e1a870a75a59452b84d5dab80e",
+        "renderedSha256": "6ea7490f54b3980f9d5ccf0a98a65d28136010569a1ed6222f8f7313e06ee6cf",
+        "mode": "enforce"
+      }
     },
     "convergence": {
       "id": "convergence",
@@ -5095,6 +5133,14 @@
       "event": "work_interval_started",
       "phase": "implementation",
       "detail": "baseline 3d508e7d8dea at 07ac7f61a4b4"
+    },
+    {
+      "at": "2026-10-27T06:02:05.075Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "test_command_decided",
+      "phase": "implementation",
+      "detail": "TCD-001 requests that implementation re-pin test command .-node-tests (package.json scripts.test changed; vite.config.js changed) for this Story. The planned Playwright spec at tests/graph.spec.js is auto-discovered by Vitest's default npm test command and causes the required Vitest process to exit nonzero. Scoping Vitest to src preserves the existing unit suite and keeps the browser test in its dedicated runner."
     }
   ],
   "measurement": {
@@ -6324,6 +6370,140 @@
         },
         "createdAt": "2026-10-27T04:46:54.910Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "cdb9e301-fb03-4fc2-b808-cbeb257e9cbf",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "ws-graph",
+          "branch": "ws-graph"
+        },
+        "phaseId": "implementation",
+        "generation": 0,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": null,
+        "payload": {
+          "decision": "test-command",
+          "reviewPacketSha256": null,
+          "record": "TCD-001",
+          "outcome": "request"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-27T06:02:05.111Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "cdb9e301-fb03-4fc2-b808-cbeb257e9cbf",
+        "eventType": "decision-made",
+        "capabilityId": "cfa-calc",
+        "subject": {
+          "aliases": [
+            "ws-graph"
+          ],
+          "branch": "ws-graph",
+          "canonicalBranch": "ws-graph",
+          "createdAt": "2026-10-27T02:36:23.070Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 0,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph",
+          "updatedAt": "2026-10-27T06:02:05.075Z",
+          "workId": "ws-graph",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "20f2bbee1802d438c843140584a77cf3dbf224b6b3424fb6baaec375b0dd5e5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "f08cd2ee2875c8854dcb9cd1c9f4bcbf2e6e0b0d8ca8a1b6e1972f217d097e9c",
+          "lifecycleEventId": "cdb9e301-fb03-4fc2-b808-cbeb257e9cbf",
+          "lifecyclePayload": {
+            "decision": "test-command",
+            "reviewPacketSha256": null,
+            "record": "TCD-001",
+            "outcome": "request"
+          },
+          "templateSha256": "2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "cdb9e301-fb03-4fc2-b808-cbeb257e9cbf",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "ws-graph",
+              "branch": "ws-graph"
+            },
+            "phaseId": "implementation",
+            "generation": 0,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": null,
+            "payload": {
+              "decision": "test-command",
+              "reviewPacketSha256": null,
+              "record": "TCD-001",
+              "outcome": "request"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-27T06:02:05.111Z"
+          }
+        },
+        "createdAt": "2026-10-27T06:02:05.116Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -6394,6 +6574,82 @@
       "previousRevisionSha256": null,
       "at": "2026-10-27T04:37:17.858Z",
       "revisionSha256": "sha256:382c551a678628add4105abaac49e3d91a4bde8607a83ddbe6eb9432e0e11609"
+    }
+  ],
+  "testCommandDecisions": [
+    {
+      "id": "TCD-001",
+      "phase": "implementation",
+      "command": {
+        "id": ".-node-tests",
+        "kind": "test",
+        "argv": [
+          "npm",
+          "test",
+          "--",
+          "--reporter=json",
+          "--outputFile=.sflow/results/node-tests.json"
+        ],
+        "workingDirectory": ".",
+        "affectedRoots": [
+          "."
+        ],
+        "modelPolicy": "never",
+        "result": {
+          "adapter": "vitest-json",
+          "path": ".sflow/results/node-tests.json",
+          "minimumDiscovered": 1,
+          "minimumPassed": 1,
+          "sourceExtensions": []
+        }
+      },
+      "repin": {
+        "commandId": ".-node-tests",
+        "sha256": "sha256:1d613ea247ba07f4fa45e63501f6a7e1d795dc24d471a6ed7c4c04ddb4064ab3",
+        "pinned": "sha256:51df686817b4f570253e5adee99d7ffca58415a1fec6fb7714eec2f071c3c581",
+        "pin": {
+          "commandId": ".-node-tests",
+          "source": {
+            "kind": "inferred"
+          },
+          "argv": [
+            "npm",
+            "test",
+            "--",
+            "--reporter=json",
+            "--outputFile=.sflow/results/node-tests.json"
+          ],
+          "workingDirectory": ".",
+          "affectedRoots": [
+            "."
+          ],
+          "adapter": "vitest-json",
+          "definition": [
+            {
+              "path": "package.json",
+              "selector": "scripts.test",
+              "sha256": "5b8455a68c1c2ba8f15c92fb95c920a2e5d0ab18b04a1a03c602a8543ea8c639"
+            },
+            {
+              "path": "playwright.config.js",
+              "selector": null,
+              "sha256": "c4ba113ec5ff55af31d32883dd44c2024e2bb9f18ee9480d1705f92e36c4f16c"
+            },
+            {
+              "path": "vite.config.js",
+              "selector": null,
+              "sha256": "22585fc2be374450c9a7342fe4b5a22b30fce9d9db77def4b2d45302997b2eee"
+            }
+          ]
+        },
+        "changes": [
+          "package.json scripts.test changed",
+          "vite.config.js changed"
+        ]
+      },
+      "reason": "The planned Playwright spec at tests/graph.spec.js is auto-discovered by Vitest's default npm test command and causes the required Vitest process to exit nonzero. Scoping Vitest to src preserves the existing unit suite and keeps the browser test in its dedicated runner.",
+      "requestedBy": "ashokraj2011",
+      "at": "2026-10-27T06:02:05.075Z"
     }
   ]
 }
