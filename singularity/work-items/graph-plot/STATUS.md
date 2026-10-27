@@ -23,6 +23,7 @@
 
 ## Recent history
 
+- 2026-10-27T01:24:43.644Z — **scope_decided** (release) by ashokraj2011 · agent qa: DOC-001 is included (GRAPH-PLOT:AC-001, GRAPH-PLOT:REQ-001). Reason: it is validated by ashok ,no need to check agian ok
 - 2026-10-27T01:19:17.097Z — **upstream_issue_decided** (release) by ashokraj2011 · agent qa: UPI-001: accept-risk. Accepted as a risk until the date: AC-001 is partial as the Release report says.
 - 2026-10-27T01:19:09.479Z — **upstream_issue_raised** (release) by ashokraj2011 · agent qa: UPI-001 against implementation (GRAPH-PLOT:AC-001): The Release report marks GRAPH-PLOT:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list.
 - 2026-10-26T07:55:12.902Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 1
@@ -37,4 +38,3 @@
 - 2026-10-26T07:20:36.372Z — **phase_generated** (convergence) by ashokraj2011: generation 1
 - 2026-10-26T07:17:30.013Z — **phase_self_approved** (implementation) by ashokraj2011 · agent developer: threshold reached; advanced to convergence
 - 2026-10-26T07:17:30.013Z — **work_interval_closed** (implementation) by ashokraj2011 · agent developer: interval INT-implementation-G1-001 closed after phase approval
-- 2026-10-26T07:11:55.656Z — **phase_submitted** (implementation) by ashokraj2011 · agent developer: 3 artifacts

@@ -7943,6 +7943,14 @@
       "event": "upstream_issue_decided",
       "phase": "release",
       "detail": "UPI-001: accept-risk. Accepted as a risk until the date: AC-001 is partial as the Release report says."
+    },
+    {
+      "at": "2026-10-27T01:24:43.644Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "scope_decided",
+      "phase": "release",
+      "detail": "DOC-001 is included (GRAPH-PLOT:AC-001, GRAPH-PLOT:REQ-001). Reason: it is validated by ashok ,no need to check agian ok"
     }
   ],
   "measurement": {
@@ -11023,6 +11031,140 @@
         },
         "createdAt": "2026-10-27T01:19:16.063Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "ca0d4d0c-cec8-4e2a-b4ff-6de49f56d3dc",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "graph-plot",
+          "branch": "graph-plot"
+        },
+        "phaseId": "release",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": "product-approvers",
+        "payload": {
+          "decision": "scope",
+          "item": "DOC-001",
+          "disposition": "included",
+          "reviewPacketSha256": null
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-27T01:24:42.726Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "ca0d4d0c-cec8-4e2a-b4ff-6de49f56d3dc",
+        "eventType": "decision-made",
+        "capabilityId": "cfa-calc",
+        "subject": {
+          "aliases": [
+            "graph-plot"
+          ],
+          "branch": "graph-plot",
+          "canonicalBranch": "graph-plot",
+          "createdAt": "2026-10-26T04:17:44.569Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "release",
+          "generation": 1,
+          "phase": "release",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 5,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 5,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "release",
+              "status": "in_progress",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "plot",
+          "updatedAt": "2026-10-27T01:24:43.644Z",
+          "workId": "graph-plot",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": "product-approvers",
+        "payload": {
+          "capabilityMapSha256": "20f2bbee1802d438c843140584a77cf3dbf224b6b3424fb6baaec375b0dd5e5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "f08cd2ee2875c8854dcb9cd1c9f4bcbf2e6e0b0d8ca8a1b6e1972f217d097e9c",
+          "lifecycleEventId": "ca0d4d0c-cec8-4e2a-b4ff-6de49f56d3dc",
+          "lifecyclePayload": {
+            "decision": "scope",
+            "item": "DOC-001",
+            "disposition": "included",
+            "reviewPacketSha256": null
+          },
+          "templateSha256": "8f3e84e8e19dfc851d9948f20fbd48c0e43e5d8df9c747404d602106930e14fe",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "ca0d4d0c-cec8-4e2a-b4ff-6de49f56d3dc",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "graph-plot",
+              "branch": "graph-plot"
+            },
+            "phaseId": "release",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": "product-approvers",
+            "payload": {
+              "decision": "scope",
+              "item": "DOC-001",
+              "disposition": "included",
+              "reviewPacketSha256": null
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-27T01:24:42.726Z"
+          }
+        },
+        "createdAt": "2026-10-27T01:24:42.730Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -11194,6 +11336,22 @@
       "authorityGroup": "engineering-reviewers",
       "identityAssurance": "configured-local",
       "at": "2026-10-27T01:19:17.097Z"
+    }
+  ],
+  "scopeDispositions": [
+    {
+      "item": "DOC-001",
+      "disposition": "included",
+      "clauseIds": [
+        "GRAPH-PLOT:AC-001",
+        "GRAPH-PLOT:REQ-001"
+      ],
+      "reason": "it is validated by ashok ,no need to check agian ok",
+      "statementSha256": "38c3ce8176b283e4e9e23cfa0f573add262213ce6d77df0aa856c4570aa76a9a",
+      "actor": "ashokraj2011",
+      "authorityGroup": "product-approvers",
+      "identityAssurance": "configured-local",
+      "at": "2026-10-27T01:24:43.644Z"
     }
   ]
 }
