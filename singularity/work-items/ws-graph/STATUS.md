@@ -19,10 +19,11 @@
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
 | 5 | Verification (`verification`) | qa | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
-| 6 | Release (`release`) | qa | **in_progress** | 0 | 0 | unavailable |
+| 6 | Release (`release`) | qa | **in_progress** | 1 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-10-27T08:51:41.928Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 1
 - 2026-10-27T08:43:07.256Z — **phase_self_approved** (verification) by ashokraj2011 · agent qa: threshold reached; advanced to release
 - 2026-10-27T08:43:07.256Z — **work_interval_closed** (verification) by ashokraj2011 · agent qa: interval INT-verification-G1-002 closed after phase approval
 - 2026-10-27T08:39:38.944Z — **phase_submitted** (verification) by ashokraj2011 · agent qa: 1 artifacts
@@ -37,4 +38,3 @@
 - 2026-10-27T06:33:49.621Z — **phase_submitted** (implementation) by ashokraj2011 · agent developer: 8 artifacts
 - 2026-10-27T06:33:49.620Z — **work_interval_reconciled** (implementation) by system: review; 8 changed path(s)
 - 2026-10-27T06:31:51.014Z — **phase_generated** (implementation) by ashokraj2011 · agent developer: generation 1
-- 2026-10-27T06:30:10.449Z — **test_command_decided** (implementation) by ashokraj2011 · agent developer: TCD-001 accepted through engineering-reviewers. .-node-tests runs Implementation's tests for this Story.
