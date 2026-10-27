@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-10-27T04:40:26.147Z",
+  "claims": {
+    "WS-GRAPH:AC-001": {
+      "expectedPaths": [
+        "singularity/work-items/ws-graph/evidence/graph-tool.png"
+      ],
+      "tests": [
+        "tests/graph.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "Browser test enters `x^2 + y^2 = 10` and verifies the circle and coordinate axes/grid; retained screenshot shows the equation area, labeled grid, and circle for visual review against DOC-001."
+    },
+    "WS-GRAPH:REQ-001": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/FunctionGrapher.jsx",
+        "src/index.css"
+      ],
+      "tests": [
+        "tests/graph.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Graphing mode exposes an editable equation field and labeled coordinate grid in the reference-guided layout."
+    },
+    "WS-GRAPH:REQ-002": {
+      "expectedPaths": [
+        "src/components/FunctionGrapher.jsx"
+      ],
+      "tests": [
+        "tests/graph.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Entering the single implicit equation `x^2 + y^2 = 10` displays a circle on the coordinate grid."
+    }
+  },
+  "supportingFiles": [
+    "package-lock.json",
+    "package.json",
+    "playwright.config.js"
+  ],
+  "supportingFileDetails": [
+    {
+      "path": "package-lock.json",
+      "class": "dependency-lock",
+      "reason": "lock the selected Playwright dependency and its resolved packages."
+    },
+    {
+      "path": "package.json",
+      "class": "build-configuration",
+      "reason": "add the browser-test script and Playwright development dependency."
+    },
+    {
+      "path": "playwright.config.js",
+      "class": "build-configuration",
+      "reason": "configure the local app base URL and browser test discovery."
+    }
+  ],
+  "verificationContracts": [
+    {
+      "clauseId": "WS-GRAPH:AC-001",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "graph-entry-playwright",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "tests/graph.spec.js"
+          },
+          "requiredAssurance": "module-observed"
+        },
+        {
+          "slot": "graph-reference-screenshot",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "singularity/work-items/ws-graph/evidence/graph-tool.png"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    }
+  ],
+  "workId": "ws-graph",
+  "phase": "planning",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/ws-graph/artifacts/planning/plan.md",
+    "sha256": "b2efd599646ee1598921d33aa10dd867e443f3351d21a0e7362dbc8cc5e01650",
+    "bytes": 20760
+  }
+}
