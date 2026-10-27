@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "phase": "planning",
+  "generation": 1,
+  "reportSha256": "264e0ae1694db0b8f2b447aaf49998c6545dd2080840a6b9ed66d26cbe61bdbf",
+  "lifecycleEventId": "c8b0fb0d-ac52-4b6b-b36d-469c3d028104",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "planning",
+    "binding": {
+      "workId": "ws-graph",
+      "phase": "planning",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/ws-graph/USER-STORY.md",
+          "textSha256": "2b38aba240bbdfade8a5bd36c2eceab472da668de4332f41bcce068c026f2d7a",
+          "originalSha256": "22a0ed933ff17839158bae16a9fba927d5f8c45134c73afb59e5bc92143d9210"
+        }
+      ],
+      "visualSources": [
+        {
+          "id": "DOC-001",
+          "path": "local-document:DOC-001",
+          "originalSha256": "1ad52d1cf49e17a9780752244dfc36373199a3b7e648040b79f03b9722ab47ab",
+          "mimeType": "image/png"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:approved-scope",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/ws-graph/context/clarifications-specification-gen1.json",
+          "sha256": "6bba2f4c1a50a634f8208a1b8af5a3b327150bfffaf35492cadda8de8b041392"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/ws-graph/artifacts/planning/plan.md",
+        "sha256": "deed8ef3e7d0b0da54dd530dc58715cac36cc9f9db7f5d1b03088ae61f1cc7dc"
+      },
+      "upstreamSpec": {
+        "path": "singularity/work-items/ws-graph/artifacts/specification/spec.md",
+        "sha256": "f25599c43fb67a18f1547f2c5ac7acc01c678e0abca2ac3218aaf6ca306733d4"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "DOC-001"
+    ],
+    "visualSourcesReviewed": [
+      {
+        "sourceId": "DOC-001",
+        "method": "image-tool",
+        "locator": "Full image: equation pane on the left and graph grid on the right.",
+        "observations": "The reference shows an editable row containing x^2 + y^2 = 10 on the left; the right side is a labeled Cartesian grid with visible horizontal and vertical axes and a centered green circle crossing the axes."
+      }
+    ],
+    "clarificationsReviewed": [
+      "clarification:approved-scope"
+    ],
+    "rows": [
+      {
+        "clauseId": "WS-GRAPH:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/FunctionGrapher.jsx",
+          "src/index.css"
+        ],
+        "plannedTests": [
+          "tests/graph.spec.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Graphing mode exposes an editable equation field and labeled coordinate grid in the reference-guided layout.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "WS-GRAPH:REQ-002",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ],
+        "plannedTests": [
+          "tests/graph.spec.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Entering the single implicit equation `x^2 + y^2 = 10` displays a circle on the coordinate grid.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "WS-GRAPH:AC-001",
+        "expectedPaths": [
+          "singularity/work-items/ws-graph/evidence/graph-tool.png"
+        ],
+        "plannedTests": [
+          "tests/graph.spec.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "evidence",
+        "observableResult": "Browser test enters `x^2 + y^2 = 10` and verifies the circle and coordinate axes/grid; retained screenshot shows the equation area, labeled grid, and circle for visual review against DOC-001.",
+        "assessment": "supported"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "adebae380c85c66b3e158c5e65633b47c3aadd50c6abeabd6fcbb6f42de23991",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "architect",
+    "readOnly": true
+  },
+  "submittedAt": "2026-10-27T04:42:55.719Z",
+  "recordSha256": "cb8848d190e0d0d8a829b3466d4368898d2fa88feeeff6d7cead583549c9ce0f"
+}
