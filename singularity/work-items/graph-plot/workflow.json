@@ -7927,6 +7927,14 @@
       "event": "phase_generated",
       "phase": "release",
       "detail": "generation 1"
+    },
+    {
+      "at": "2026-10-27T01:19:09.479Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "upstream_issue_raised",
+      "phase": "release",
+      "detail": "UPI-001 against implementation (GRAPH-PLOT:AC-001): The Release report marks GRAPH-PLOT:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list."
     }
   ],
   "measurement": {
@@ -10745,6 +10753,137 @@
         },
         "createdAt": "2026-10-26T07:55:12.162Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "b4192103-cb0a-4516-bcf3-f0aa83877e4d",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "graph-plot",
+          "branch": "graph-plot"
+        },
+        "phaseId": "release",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": null,
+        "payload": {
+          "decision": "upstream-issue",
+          "reviewPacketSha256": null,
+          "issue": "UPI-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-27T01:18:39.408Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "b4192103-cb0a-4516-bcf3-f0aa83877e4d",
+        "eventType": "decision-made",
+        "capabilityId": "cfa-calc",
+        "subject": {
+          "aliases": [
+            "graph-plot"
+          ],
+          "branch": "graph-plot",
+          "canonicalBranch": "graph-plot",
+          "createdAt": "2026-10-26T04:17:44.569Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "release",
+          "generation": 1,
+          "phase": "release",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 5,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 5,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "release",
+              "status": "in_progress",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "plot",
+          "updatedAt": "2026-10-27T01:19:09.479Z",
+          "workId": "graph-plot",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "20f2bbee1802d438c843140584a77cf3dbf224b6b3424fb6baaec375b0dd5e5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "f08cd2ee2875c8854dcb9cd1c9f4bcbf2e6e0b0d8ca8a1b6e1972f217d097e9c",
+          "lifecycleEventId": "b4192103-cb0a-4516-bcf3-f0aa83877e4d",
+          "lifecyclePayload": {
+            "decision": "upstream-issue",
+            "reviewPacketSha256": null,
+            "issue": "UPI-001"
+          },
+          "templateSha256": "8f3e84e8e19dfc851d9948f20fbd48c0e43e5d8df9c747404d602106930e14fe",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "b4192103-cb0a-4516-bcf3-f0aa83877e4d",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "graph-plot",
+              "branch": "graph-plot"
+            },
+            "phaseId": "release",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": null,
+            "payload": {
+              "decision": "upstream-issue",
+              "reviewPacketSha256": null,
+              "issue": "UPI-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-27T01:18:39.408Z"
+          }
+        },
+        "createdAt": "2026-10-27T01:18:39.408Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -10867,6 +11006,42 @@
         "attemptId": "TA-7634e95aed5666c0ccbe"
       },
       "at": "2026-10-26T07:09:28.911Z"
+    }
+  ],
+  "upstreamIssues": [
+    {
+      "id": "UPI-001",
+      "phase": "implementation",
+      "raisedIn": {
+        "phase": "release",
+        "status": "in_progress",
+        "generation": 1
+      },
+      "about": "GRAPH-PLOT:AC-001",
+      "problem": "The Release report marks GRAPH-PLOT:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list.",
+      "assumption": null,
+      "impact": null,
+      "proposed": "unknown",
+      "producerGeneration": 1,
+      "producerArtifacts": [
+        {
+          "path": "singularity/work-items/graph-plot/artifacts/implementation/implementation-summary.md",
+          "sha256": "6328a6ba6350e43c68adbaf887c681c91322743ee714be39ab78db7b253aa49b"
+        },
+        {
+          "path": "src/components/FunctionGrapher.jsx",
+          "sha256": "f45fc64853218e0ecca5c970585236a2ce7a9efc262c23118da057e92bb7c06c"
+        },
+        {
+          "path": "src/components/FunctionGrapher.test.jsx",
+          "sha256": "b94711dfb9ff94a4b626d93d3b448a162a6bb8c93a690325315cb2da9a48a64b"
+        }
+      ],
+      "source": null,
+      "raisedBy": "ashokraj2011",
+      "authored": "human",
+      "agent": "qa",
+      "at": "2026-10-27T01:19:09.479Z"
     }
   ]
 }
