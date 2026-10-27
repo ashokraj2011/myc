@@ -5141,6 +5141,14 @@
       "event": "test_command_decided",
       "phase": "implementation",
       "detail": "TCD-001 requests that implementation re-pin test command .-node-tests (package.json scripts.test changed; vite.config.js changed) for this Story. The planned Playwright spec at tests/graph.spec.js is auto-discovered by Vitest's default npm test command and causes the required Vitest process to exit nonzero. Scoping Vitest to src preserves the existing unit suite and keeps the browser test in its dedicated runner."
+    },
+    {
+      "at": "2026-10-27T06:30:10.449Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "test_command_decided",
+      "phase": "implementation",
+      "detail": "TCD-001 accepted through engineering-reviewers. .-node-tests runs Implementation's tests for this Story."
     }
   ],
   "measurement": {
@@ -6504,6 +6512,140 @@
         },
         "createdAt": "2026-10-27T06:02:05.116Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "1fb824a0-074d-4e1a-a1b8-bd6949be23aa",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "ws-graph",
+          "branch": "ws-graph"
+        },
+        "phaseId": "implementation",
+        "generation": 0,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "decision": "test-command",
+          "reviewPacketSha256": null,
+          "record": "TCD-001",
+          "outcome": "accept"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-27T06:30:10.513Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "1fb824a0-074d-4e1a-a1b8-bd6949be23aa",
+        "eventType": "decision-made",
+        "capabilityId": "cfa-calc",
+        "subject": {
+          "aliases": [
+            "ws-graph"
+          ],
+          "branch": "ws-graph",
+          "canonicalBranch": "ws-graph",
+          "createdAt": "2026-10-27T02:36:23.070Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 0,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph",
+          "updatedAt": "2026-10-27T06:30:10.449Z",
+          "workId": "ws-graph",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "capabilityMapSha256": "20f2bbee1802d438c843140584a77cf3dbf224b6b3424fb6baaec375b0dd5e5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "f08cd2ee2875c8854dcb9cd1c9f4bcbf2e6e0b0d8ca8a1b6e1972f217d097e9c",
+          "lifecycleEventId": "1fb824a0-074d-4e1a-a1b8-bd6949be23aa",
+          "lifecyclePayload": {
+            "decision": "test-command",
+            "reviewPacketSha256": null,
+            "record": "TCD-001",
+            "outcome": "accept"
+          },
+          "templateSha256": "2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "1fb824a0-074d-4e1a-a1b8-bd6949be23aa",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "ws-graph",
+              "branch": "ws-graph"
+            },
+            "phaseId": "implementation",
+            "generation": 0,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "engineering-reviewers",
+            "payload": {
+              "decision": "test-command",
+              "reviewPacketSha256": null,
+              "record": "TCD-001",
+              "outcome": "accept"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-27T06:30:10.513Z"
+          }
+        },
+        "createdAt": "2026-10-27T06:30:10.523Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -6650,6 +6792,15 @@
       "reason": "The planned Playwright spec at tests/graph.spec.js is auto-discovered by Vitest's default npm test command and causes the required Vitest process to exit nonzero. Scoping Vitest to src preserves the existing unit suite and keeps the browser test in its dedicated runner.",
       "requestedBy": "ashokraj2011",
       "at": "2026-10-27T06:02:05.075Z"
+    },
+    {
+      "accepts": "TCD-001",
+      "phase": "implementation",
+      "reason": ".-node-tests runs Implementation's tests for this Story.",
+      "actor": "ashokraj2011",
+      "authorityGroup": "engineering-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-10-27T06:30:10.449Z"
     }
   ]
 }

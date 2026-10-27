@@ -20,6 +20,7 @@
 
 ## Recent history
 
+- 2026-10-27T06:30:10.449Z — **test_command_decided** (implementation) by ashokraj2011 · agent developer: TCD-001 accepted through engineering-reviewers. .-node-tests runs Implementation's tests for this Story.
 - 2026-10-27T06:02:05.075Z — **test_command_decided** (implementation) by ashokraj2011 · agent developer: TCD-001 requests that implementation re-pin test command .-node-tests (package.json scripts.test changed; vite.config.js changed) for this Story. The planned Playwright spec at tests/graph.spec.js is auto-discovered by Vitest's default npm test command and causes the required Vitest process to exit nonzero. Scoping Vitest to src preserves the existing unit suite and keeps the browser test in its dedicated runner.
 - 2026-10-27T04:46:55.228Z — **work_interval_started** (implementation) by system: baseline 3d508e7d8dea at 07ac7f61a4b4
 - 2026-10-27T04:46:55.214Z — **phase_self_approved** (planning) by ashokraj2011 · agent architect: threshold reached; advanced to implementation
