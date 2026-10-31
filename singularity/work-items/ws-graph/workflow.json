@@ -8596,6 +8596,14 @@
       "event": "phase_generated",
       "phase": "release",
       "detail": "generation 1"
+    },
+    {
+      "at": "2026-10-31T04:06:45.783Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "upstream_issue_raised",
+      "phase": "release",
+      "detail": "UPI-001 against implementation (WS-GRAPH:REQ-001, WS-GRAPH:AC-001): The Release report marks WS-GRAPH:REQ-001, WS-GRAPH:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list."
     }
   ],
   "measurement": {
@@ -11421,6 +11429,137 @@
         },
         "createdAt": "2026-10-27T08:51:41.376Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "d54d60cf-5006-44f0-b3ac-01c0e7e2b2c5",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "ws-graph",
+          "branch": "ws-graph"
+        },
+        "phaseId": "release",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": null,
+        "payload": {
+          "decision": "upstream-issue",
+          "reviewPacketSha256": null,
+          "issue": "UPI-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-10-31T04:06:44.985Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "d54d60cf-5006-44f0-b3ac-01c0e7e2b2c5",
+        "eventType": "decision-made",
+        "capabilityId": "cfa-calc",
+        "subject": {
+          "aliases": [
+            "ws-graph"
+          ],
+          "branch": "ws-graph",
+          "canonicalBranch": "ws-graph",
+          "createdAt": "2026-10-27T02:36:23.070Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "release",
+          "generation": 1,
+          "phase": "release",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 5,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 5,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "release",
+              "status": "in_progress",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph",
+          "updatedAt": "2026-10-31T04:06:45.783Z",
+          "workId": "ws-graph",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "20f2bbee1802d438c843140584a77cf3dbf224b6b3424fb6baaec375b0dd5e5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "f08cd2ee2875c8854dcb9cd1c9f4bcbf2e6e0b0d8ca8a1b6e1972f217d097e9c",
+          "lifecycleEventId": "d54d60cf-5006-44f0-b3ac-01c0e7e2b2c5",
+          "lifecyclePayload": {
+            "decision": "upstream-issue",
+            "reviewPacketSha256": null,
+            "issue": "UPI-001"
+          },
+          "templateSha256": "8f3e84e8e19dfc851d9948f20fbd48c0e43e5d8df9c747404d602106930e14fe",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "d54d60cf-5006-44f0-b3ac-01c0e7e2b2c5",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "ws-graph",
+              "branch": "ws-graph"
+            },
+            "phaseId": "release",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": null,
+            "payload": {
+              "decision": "upstream-issue",
+              "reviewPacketSha256": null,
+              "issue": "UPI-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-10-31T04:06:44.985Z"
+          }
+        },
+        "createdAt": "2026-10-31T04:06:44.986Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -11684,6 +11823,62 @@
         "attemptId": "TA-0d8d4eb991531a60052c"
       },
       "at": "2026-10-27T06:31:50.304Z"
+    }
+  ],
+  "upstreamIssues": [
+    {
+      "id": "UPI-001",
+      "phase": "implementation",
+      "raisedIn": {
+        "phase": "release",
+        "status": "in_progress",
+        "generation": 1
+      },
+      "about": "WS-GRAPH:REQ-001, WS-GRAPH:AC-001",
+      "problem": "The Release report marks WS-GRAPH:REQ-001, WS-GRAPH:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list.",
+      "assumption": null,
+      "impact": null,
+      "proposed": "unknown",
+      "producerGeneration": 1,
+      "producerArtifacts": [
+        {
+          "path": "package-lock.json",
+          "sha256": "82a67262355dab242cbe88804f6d27c63099ca23e0cc86490bb5993aa0bb63bf"
+        },
+        {
+          "path": "package.json",
+          "sha256": "faa004ea6d353814eafb01277ad22050238303feaf0d98b146018058e7ed96cc"
+        },
+        {
+          "path": "playwright.config.js",
+          "sha256": "c4ba113ec5ff55af31d32883dd44c2024e2bb9f18ee9480d1705f92e36c4f16c"
+        },
+        {
+          "path": "singularity/work-items/ws-graph/artifacts/implementation/implementation-summary.md",
+          "sha256": "841a1cc5ee5ab4b23035bc7e0f454447961a6a7596dc6c9cd90e613b52c5d64a"
+        },
+        {
+          "path": "src/App.jsx",
+          "sha256": "d717a7e94bc22688cb29c29c0693fa20a387c7ae91d163149842e85d295a867e"
+        },
+        {
+          "path": "src/components/FunctionGrapher.jsx",
+          "sha256": "4f37f00d3c21d3ca0d80540a8879367cab083870a64911fa5978547ce3377617"
+        },
+        {
+          "path": "src/index.css",
+          "sha256": "40d3124060e781b9551d262f82949a94fe94a740f45e76d06618667d2ba837ee"
+        },
+        {
+          "path": "tests/graph.spec.js",
+          "sha256": "aced55f54c5dbc5d4581bb71dfa4842356a4593e2ae87d4f048df47690dfe66d"
+        }
+      ],
+      "source": null,
+      "raisedBy": "ashokraj2011",
+      "authored": "human",
+      "agent": "qa",
+      "at": "2026-10-31T04:06:45.783Z"
     }
   ]
 }

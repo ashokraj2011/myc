@@ -23,6 +23,7 @@
 
 ## Recent history
 
+- 2026-10-31T04:06:45.783Z — **upstream_issue_raised** (release) by ashokraj2011 · agent qa: UPI-001 against implementation (WS-GRAPH:REQ-001, WS-GRAPH:AC-001): The Release report marks WS-GRAPH:REQ-001, WS-GRAPH:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list.
 - 2026-10-27T08:51:41.928Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 1
 - 2026-10-27T08:43:07.256Z — **phase_self_approved** (verification) by ashokraj2011 · agent qa: threshold reached; advanced to release
 - 2026-10-27T08:43:07.256Z — **work_interval_closed** (verification) by ashokraj2011 · agent qa: interval INT-verification-G1-002 closed after phase approval
@@ -37,4 +38,3 @@
 - 2026-10-27T07:15:05.708Z — **work_interval_closed** (implementation) by ashokraj2011 · agent developer: interval INT-implementation-G1-001 closed after phase approval
 - 2026-10-27T06:33:49.621Z — **phase_submitted** (implementation) by ashokraj2011 · agent developer: 8 artifacts
 - 2026-10-27T06:33:49.620Z — **work_interval_reconciled** (implementation) by system: review; 8 changed path(s)
-- 2026-10-27T06:31:51.014Z — **phase_generated** (implementation) by ashokraj2011 · agent developer: generation 1
