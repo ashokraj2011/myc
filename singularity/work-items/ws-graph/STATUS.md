@@ -19,10 +19,11 @@
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
 | 5 | Verification (`verification`) | qa | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
-| 6 | Release (`release`) | qa | **in_progress** | 1 | 0 | unavailable |
+| 6 | Release (`release`) | qa | **awaiting_approval** | 1 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-10-31T04:08:30.502Z — **phase_submitted** (release) by ashokraj2011 · agent qa: 2 artifacts
 - 2026-10-31T04:06:52.256Z — **upstream_issue_decided** (release) by ashokraj2011 · agent qa: UPI-001: accept-risk. Accepted as a risk until the date: REQ-001 and AC-001 are partial as the Release report says.
 - 2026-10-31T04:06:45.783Z — **upstream_issue_raised** (release) by ashokraj2011 · agent qa: UPI-001 against implementation (WS-GRAPH:REQ-001, WS-GRAPH:AC-001): The Release report marks WS-GRAPH:REQ-001, WS-GRAPH:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list.
 - 2026-10-27T08:51:41.928Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 1
@@ -37,4 +38,3 @@
 - 2026-10-27T08:05:02.347Z — **phase_generated** (convergence) by ashokraj2011: generation 1
 - 2026-10-27T07:15:05.708Z — **phase_self_approved** (implementation) by ashokraj2011 · agent developer: threshold reached; advanced to convergence
 - 2026-10-27T07:15:05.708Z — **work_interval_closed** (implementation) by ashokraj2011 · agent developer: interval INT-implementation-G1-001 closed after phase approval
-- 2026-10-27T06:33:49.621Z — **phase_submitted** (implementation) by ashokraj2011 · agent developer: 8 artifacts
