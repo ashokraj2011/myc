@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "phase": "planning",
+  "generation": 1,
+  "reportSha256": "aa0bd4ff518175e9f5dcada8fd21e6474a5f56534ef155000ba9b6d8abe13ac8",
+  "lifecycleEventId": "b50819a5-ced0-416e-bd3b-dfa249de753f",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "planning",
+    "binding": {
+      "workId": "myl-graph",
+      "phase": "planning",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/myl-graph/USER-STORY.md",
+          "textSha256": "de33e003902e6716f2bbaa543c2806d00f08848984f20f53992762477666ceda",
+          "originalSha256": "01d23f89cfb81225417b71ad66c3867676c63290036506c01a1b582f1442a982"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:approved-scope",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/myl-graph/context/clarifications-specification-gen1.json",
+          "sha256": "aabb29f3890c4f51e89e38ed5afc96b1644b228cda02e859d0796e015dce0362"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/myl-graph/artifacts/planning/plan.md",
+        "sha256": "1cffe260951ff1a33f9b5459ac9ab755f3362fc8e34479240f1fc08a8c9d5713"
+      },
+      "upstreamSpec": {
+        "path": "singularity/work-items/myl-graph/artifacts/specification/spec.md",
+        "sha256": "92bff4c1890a95b5b282435dc181bc85a13e1255291648018ed25885b5339558"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:approved-scope"
+    ],
+    "rows": [
+      {
+        "clauseId": "MYL-GRAPH:REQ-001",
+        "expectedPaths": [],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/components/FunctionGrapher.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "test-only",
+        "observableResult": "A person can enter an equation in the graphing mode reached from the application.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "MYL-GRAPH:REQ-002",
+        "expectedPaths": [],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/components/FunctionGrapher.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "test-only",
+        "observableResult": "The graphing mode renders a plot for the supplied equation.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "MYL-GRAPH:AC-001",
+        "expectedPaths": [],
+        "plannedTests": [
+          "src/components/FunctionGrapher.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "test-only",
+        "observableResult": "The entered `sin(x)` expression produces a plotted sine trace over the visible x range.",
+        "assessment": "supported"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "adebae380c85c66b3e158c5e65633b47c3aadd50c6abeabd6fcbb6f42de23991",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "architect",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-02T13:19:11.985Z",
+  "recordSha256": "9f1e88a50841b19a33234f6cc848201555b4853dd8796a7efd1cf987c75a4f41"
+}
