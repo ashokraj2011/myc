@@ -73,12 +73,24 @@
       {
         "clauseId": "MYL-GRAPH:AC-001",
         "testSource": "src/App.test.jsx",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": ".-node-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       },
       {
         "clauseId": "MYL-GRAPH:AC-001",
         "testSource": "src/components/FunctionGrapher.test.jsx",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": ".-node-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       }
     ],
     "witnesses": [
@@ -156,11 +168,19 @@
     "sourceRequired": [],
     "sourceBindings": []
   },
-  "testExecutions": [],
+  "testExecutions": [
+    {
+      "commandId": ".-node-tests",
+      "attemptId": "TA-7aa506dec4a3326df01f",
+      "receiptPath": "singularity/work-items/myl-graph/context/code-delivery/tests/attempts/implementation/TA-7aa506dec4a3326df01f.json",
+      "receiptSha256": "ba2e23b77139cefdeb5047701059ab6e29bf9fbcbeb8c40cc07e6dcf075566ec",
+      "status": "passed"
+    }
+  ],
   "tree": {
     "workingStateDigest": "sha256:98775215b0335455617794ea5a4c16a004cd518e6f7c384f0f636ae6bf092c59",
-    "generationCommit": null,
-    "generationTree": null
+    "generationCommit": "f067db71a873fedc1d7264933cbe65a33a7c18d7",
+    "generationTree": "c081add13e0a40d2a3c7b76bd41cab014df0ba23"
   },
   "model": {
     "task": "code",
@@ -179,6 +199,7 @@
     "observedAt": null,
     "generation": null
   },
-  "status": "pending-tests",
-  "capturedAt": "2026-11-02T16:50:10.036Z"
+  "status": "ready",
+  "capturedAt": "2026-11-02T16:50:10.036Z",
+  "validatedAt": "2026-11-02T16:52:07.614Z"
 }

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "myl-graph",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G1-001",
+  "phaseId": "implementation",
+  "generation": 1,
+  "baselineSha256": "82bec59341e18d5526413bfce2d94fd3e9175f0de1f27376fa3bd2c4478f9d27",
+  "baseline": {
+    "path": "singularity/work-items/myl-graph/context/work-intervals/implementation-gen1-baseline.json",
+    "sha256": "82bec59341e18d5526413bfce2d94fd3e9175f0de1f27376fa3bd2c4478f9d27",
+    "verified": true,
+    "sourceBaseCommit": "5c9402ccb907243499cf0328c872bb207d5bd1fb"
+  },
+  "sourceBaseCommit": "5c9402ccb907243499cf0328c872bb207d5bd1fb",
+  "target": {
+    "branch": "myl-graph",
+    "head": "f067db71a873fedc1d7264933cbe65a33a7c18d7",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": "src/App.test.jsx",
+      "status": "present",
+      "sha256": "a9d4aa248dc3f1a9515f491db943a3b7c2030daab9b681765eca208a50a18612",
+      "bytes": 7904,
+      "verdict": "planned",
+      "clauseIds": [
+        "MYL-GRAPH:REQ-001",
+        "MYL-GRAPH:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/components/FunctionGrapher.test.jsx",
+      "status": "present",
+      "sha256": "7b921bb72731f0e0be591e90c24a1c71c8fc1f55aa03421d2c4b8a4ce89de407",
+      "bytes": 2149,
+      "verdict": "planned",
+      "clauseIds": [
+        "MYL-GRAPH:AC-001",
+        "MYL-GRAPH:REQ-001",
+        "MYL-GRAPH:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/test/setup.js",
+      "status": "present",
+      "sha256": "4bd4c04014fb90b12a7b0989df9bbe448b2531d2a6db55a780c6a0d0c827d529",
+      "bytes": 2198,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 3,
+    "planned": 2,
+    "unplanned": 1,
+    "protected": 0
+  },
+  "decision": {
+    "status": "review",
+    "summaryStatus": "attention",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "f3e8213709fb07e30506662640d054eccd32d520b865b4bd0c64e5c445096fdc",
+  "reconciledAt": "2026-11-02T16:52:07.778Z",
+  "final": true,
+  "recordedAt": "2026-11-02T16:52:07.778Z",
+  "path": "singularity/work-items/myl-graph/context/work-intervals/reconciliations/f3e8213709fb07e30506662640d054eccd32d520b865b4bd0c64e5c445096fdc.json"
+}

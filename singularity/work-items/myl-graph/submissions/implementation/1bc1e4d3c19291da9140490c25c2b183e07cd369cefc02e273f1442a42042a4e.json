@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 3,
+  "workId": "myl-graph",
+  "epicId": null,
+  "planId": null,
+  "jiraIssueId": "myl-graph",
+  "initialJiraKey": null,
+  "currentJiraKey": null,
+  "canonicalBranch": "myl-graph",
+  "submittedBranch": "myl-graph",
+  "submissionCommit": "f067db71a873fedc1d7264933cbe65a33a7c18d7",
+  "sourceCommit": "f067db71a873fedc1d7264933cbe65a33a7c18d7",
+  "sourceTreeSha256": "sha256:98775215b0335455617794ea5a4c16a004cd518e6f7c384f0f636ae6bf092c59",
+  "phase": "implementation",
+  "generation": 1,
+  "authorship": {
+    "schemaVersion": 1,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "developer"
+    },
+    "kernelModel": {
+      "invoked": false,
+      "status": "exact",
+      "invocationIds": []
+    },
+    "externalAiUse": {
+      "value": "unknown",
+      "status": "unavailable"
+    },
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "implementation-summary.md",
+      "mediaType": "text/markdown",
+      "sha256": "ca1e2fc17b463611d35ed43be0b69b420fb2a9aa7b99d8e8bfce5134c97e4abe",
+      "bytes": 3208
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-02T16:50:10.036Z"
+  },
+  "artifacts": [
+    {
+      "path": "singularity/work-items/myl-graph/artifacts/implementation/implementation-summary.md",
+      "kind": "document",
+      "sha256": "eb52bcd3b19e47bde4c13bb13c84f072b75b8c53ed82b87383348875dd62ee30",
+      "size": 16727,
+      "reference": {
+        "handle": "sfref:v1:story:myl-graph:f509e95addd5f3017738c76e07fefb1ca84995c2d5342168eb9daeea18006553",
+        "recordHash": "f509e95addd5f3017738c76e07fefb1ca84995c2d5342168eb9daeea18006553"
+      }
+    },
+    {
+      "path": "src/App.test.jsx",
+      "kind": "test",
+      "sha256": "a9d4aa248dc3f1a9515f491db943a3b7c2030daab9b681765eca208a50a18612",
+      "size": 7904
+    },
+    {
+      "path": "src/components/FunctionGrapher.test.jsx",
+      "kind": "test",
+      "sha256": "7b921bb72731f0e0be591e90c24a1c71c8fc1f55aa03421d2c4b8a4ce89de407",
+      "size": 2149
+    },
+    {
+      "path": "src/test/setup.js",
+      "kind": "test",
+      "sha256": "4bd4c04014fb90b12a7b0989df9bbe448b2531d2a6db55a780c6a0d0c827d529",
+      "size": 2198
+    }
+  ],
+  "references": [
+    {
+      "handle": "sfref:v1:story:myl-graph:f509e95addd5f3017738c76e07fefb1ca84995c2d5342168eb9daeea18006553",
+      "recordHash": "f509e95addd5f3017738c76e07fefb1ca84995c2d5342168eb9daeea18006553",
+      "purpose": "review-evidence",
+      "required": true
+    }
+  ],
+  "agentBriefs": [
+    {
+      "consumerPhase": "convergence",
+      "status": "ready",
+      "path": "singularity/work-items/myl-graph/context/briefs/implementation-gen1-for-convergence.json",
+      "renderedPath": "singularity/work-items/myl-graph/context/briefs/implementation-gen1-for-convergence.md",
+      "sourceSha256": "f1fcac443e92abdeaf2a99a99c2e06be9c12b92864fadf644e5ff204ce6d85ad",
+      "sourceBytes": 16645,
+      "renderedSha256": "66a7d1ff384cf4f54174e310e62f4b345c9e5917968a696d8115e2e7c9eb10d8",
+      "integritySha256": "11834d8608c011a83db29ab4a7772a268239c54f6004062d055ec6262df8f83a"
+    },
+    {
+      "consumerPhase": "verification",
+      "status": "ready",
+      "path": "singularity/work-items/myl-graph/context/briefs/implementation-gen1-for-verification.json",
+      "renderedPath": "singularity/work-items/myl-graph/context/briefs/implementation-gen1-for-verification.md",
+      "sourceSha256": "f1fcac443e92abdeaf2a99a99c2e06be9c12b92864fadf644e5ff204ce6d85ad",
+      "sourceBytes": 16645,
+      "renderedSha256": "b6e3e50770e19d70d6371ee7ca1708bba05f45cd3b336727880467542d8a6dce",
+      "integritySha256": "5aa0496978d37eb5ebf48194d59f2ba09265fcac676f236499194a80d4e962e3"
+    }
+  ],
+  "checks": [
+    {
+      "id": ".-node-tests",
+      "command": "npm test -- --reporter=json --outputFile=.sflow/results/node-tests.json",
+      "kind": "test",
+      "requirement": "required",
+      "workingDirectory": ".",
+      "resultIsolated": true,
+      "externalModelPolicy": "never",
+      "timeoutMs": 1800000,
+      "sourceCommit": "f067db71a873fedc1d7264933cbe65a33a7c18d7",
+      "sourceTreeSha256": "sha256:98775215b0335455617794ea5a4c16a004cd518e6f7c384f0f636ae6bf092c59",
+      "testRuntime": {
+        "node": "v26.12.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "profile": {
+          "nodeOptions": []
+        },
+        "nodeOptionsSha256": "sha256:12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "sha256": "sha256:f15dcad9c80b6efa9c83161aec98ae14475b39f8c90cbe5c3c5f656cc23e1fb0"
+      },
+      "startedAt": "2026-11-02T16:52:04.872Z",
+      "completedAt": "2026-11-02T16:52:07.542Z",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "\n> calc-app@0.0.0 test\n> vitest run --reporter=json --outputFile=.sflow/results/node-tests.json\n\nJSON report written to /Users/ashokraj/Downloads/cfa/cfa-calc/.singularity-flow/story-worktrees/.w-d5401076e0784676a8409dda/.sflow/results/node-tests.json\n",
+      "stderr": "",
+      "stdoutBytes": 252,
+      "stderrBytes": 0,
+      "stdoutTruncated": false,
+      "stderrTruncated": false
+    }
+  ],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-02T16:50:10.036Z",
+      "completedAt": "2026-11-02T16:50:10.036Z",
+      "agent": "developer",
+      "generation": 1
+    }
+  ],
+  "approvals": [],
+  "visualAssurance": null,
+  "submissionEvidence": {
+    "architectureIntent": null,
+    "architectureDecision": null,
+    "codeDelivery": {
+      "path": "singularity/work-items/myl-graph/context/code-delivery/implementation-gen1.json",
+      "sha256": "fe955d18791158376c9da6c0ad1cee9bad74dc92e700b99f07a0f2f6534edc5a",
+      "changeSetPath": "singularity/work-items/myl-graph/context/code-delivery/implementation-gen1-changes.json",
+      "changeSetDigest": "sha256:054fcb579894300cc6439effcb12b36d8d7f7faf6372597f14ac7d3945c4fb10",
+      "status": "ready",
+      "autoCandidate": null,
+      "autoCandidateVerification": null
+    },
+    "testExecutions": [
+      {
+        "commandId": ".-node-tests",
+        "path": "singularity/work-items/myl-graph/context/code-delivery/tests/attempts/implementation/TA-7aa506dec4a3326df01f.json",
+        "sha256": "ba2e23b77139cefdeb5047701059ab6e29bf9fbcbeb8c40cc07e6dcf075566ec",
+        "status": "passed"
+      }
+    ],
+    "claimMaps": [
+      {
+        "kind": "observed",
+        "generation": 1,
+        "path": "singularity/work-items/myl-graph/context/claims/implementation-gen1-observed.json",
+        "sha256": "b6278ccedf5cda1807862896f66026bdfea128c29b27920ba2d6867e5a4cdc55"
+      }
+    ],
+    "checksSha256": "1ae712b64ec8be80edcfd5f6c4f140cf3c2f2798886a3c43a2bace6da0714e7a",
+    "artifactSetSha256": "d47549ff06f39844ee5847ab1f0659a552f5cc35505346eef7ace742fcc1e76a"
+  },
+  "witnessReview": {
+    "enrollment": {
+      "schemaVersion": 1,
+      "mode": "disabled",
+      "witnessedClauses": {
+        "enabled": false,
+        "profiles": []
+      },
+      "testcaseExact": {
+        "mode": "disabled",
+        "profile": null,
+        "requiredAssurance": "unavailable",
+        "policySha256": "sha256:12b50a34a1f03338377ecd76f44b20cbee83e7b91a0b07392ef08e3d8fd60800"
+      },
+      "claimMapContractVersion": 2,
+      "cab": null,
+      "sgos": null,
+      "rollout": {
+        "id": "wel-v0.2-observe",
+        "version": 1,
+        "enrollment": "new-story-only"
+      },
+      "configurationAuthority": {
+        "repository": "https://github.com/ashokraj2011/myc.git",
+        "branch": "sflow/config",
+        "commit": "98ed1b9d4a10838757017f25b377118b23d00285",
+        "projectionSha256": "9c9465f7c98557552ce54fd0375995f0e8418e568132a530fadd42bbd8392041"
+      }
+    },
+    "enrollmentClassification": "enrolled",
+    "enrollmentReason": null,
+    "clauseMappings": [
+      {
+        "mappingSha256": "sha256:b357a78df2001a30e81d14c3501a3601b68b1c8929041bf41fbc8f72abdf0c7f",
+        "clauseId": "MYL-GRAPH:AC-001",
+        "witnessType": "test",
+        "executionProfile": "vitest-static-v2",
+        "logicalTestId": "sha256:0b7a90407dc0accda2bd4ae48df4a2b19fce0ea2a981d4f9604ce75cd1f16c6a",
+        "sourcePath": "src/App.test.jsx",
+        "sourceDeclarationSha256": "sha256:42a1443aefb93cdf0e1d3328923a9425243e7a7b4ada7bb7c6d9628996af6144",
+        "supportSha256": null,
+        "clauseBodySha256": "sha256:293c5ffc89d1ce8b42d1d7e40634607d86a0969a230c9bbe9372a8757f389333",
+        "contractSha256": "sha256:2149f627b872b0519caa685a190f3e818d92177d13d604e7eb431fca20a12b99",
+        "slot": null,
+        "test": "'Grapher mode integration › lets a person enter an equation and renders the graph in the app' in src/App.test.jsx",
+        "reviewStatus": "unreviewed",
+        "decision": null,
+        "reason": null,
+        "expiresAt": null
+      }
+    ],
+    "testcaseObservations": []
+  },
+  "submittedAt": "2026-11-02T16:52:07.779Z",
+  "submittedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "status": "awaiting_review",
+  "packetSha256": "1bc1e4d3c19291da9140490c25c2b183e07cd369cefc02e273f1442a42042a4e"
+}
