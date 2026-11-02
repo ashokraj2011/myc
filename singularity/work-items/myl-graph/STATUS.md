@@ -20,6 +20,7 @@
 
 ## Recent history
 
+- 2026-11-02T15:31:30.576Z — **test_command_decided** (implementation) by ashokraj2011 · agent developer: TCD-001 requests that implementation re-pin test command .-node-tests (vite.config.js changed) for this Story. vite.config.js now gives jsdom a non-opaque browser origin so the App tests can use jsdom localStorage; src/test/setup.js binds localStorage and sessionStorage to the jsdom window instead of Node globals. The configured 34-test suite passed; this changes test environment behavior, not the package test script or application runtime.
 - 2026-11-02T13:21:39.100Z — **work_interval_started** (implementation) by system: baseline 82bec59341e1 at 5c9402ccb907
 - 2026-11-02T13:21:39.086Z — **phase_self_approved** (planning) by ashokraj2011 · agent architect: threshold reached; advanced to implementation
 - 2026-11-02T13:19:59.737Z — **phase_submitted** (planning) by ashokraj2011 · agent architect: 1 artifacts
