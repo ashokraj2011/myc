@@ -4,27 +4,51 @@
   "workId": "myl-graph",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "92bff4c1890a95b5b282435dc181bc85a13e1255291648018ed25885b5339558",
+      "bytes": 7019
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-02T12:58:14.002Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "e426ce0dcb0c83c0be8943e590d6638c89730e3e",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "f08cd2ee2875c8854dcb9cd1c9f4bcbf2e6e0b0d8ca8a1b6e1972f217d097e9c",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/myl-graph/context/clarifications-specification-gen1.json",
+    "sha256": "aabb29f3890c4f51e89e38ed5afc96b1644b228cda02e859d0796e015dce0362",
+    "promptSha256": "775b02a60af0af2e4513b4e649d176a05ebb8a0ecf93858b31e20f59c10fb7f4",
+    "responses": 2,
+    "markers": [],
+    "recordedAt": "2026-11-02T12:56:01.072Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/myl-graph/telemetry/specification-gen1.json",
+      "sha256": "265b9e4e538ef661d354c6adce46a721e617abb71f26d9ea5d554933b64f265f",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 26934,
+        "estimatedTokens": 6734,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 26934,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-02T12:58:14.002Z",
+      "completedAt": "2026-11-02T12:58:14.002Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -86,15 +167,13 @@ exclusions. Do not introduce claims that are absent from the sections below. Exa
 boundary conditions are preserved separately by the governed projection.
 -->
 
-TODO: Write the Agent brief here as visible text; text inside the comment above is not read.
+Enable a person using the existing application to provide an equation and see its graph. The confirmed example is plotting `sin(x)` over an x range. The request does not specify equation syntax, range endpoints, limits, or error behavior; do not infer them as acceptance requirements.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+A person using the application provides an equation and views its graph. No distinct roles or permission levels are specified.
 
 ## User scenarios
-
-Prioritized. Each scenario leads with the situation, then its acceptance cases.
 
 <!-- Before drafting, split the pinned request and recorded answers into observable obligations
 for the actual interfaces (UI, API, event/message, batch/job, CLI, library or mixed). Keep the
@@ -104,34 +183,26 @@ Self-check whether an implementation could meet this draft yet omit an explicit 
 clear omissions in this editable draft and recheck within the returned repair policy; preserve
 published inputs and settled answers. These are authoring instructions, not execution evidence. -->
 
-### S1 — <the most important situation, in the user's words>
+### S1 — Plot an equation supplied to the application
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** A person using the application
+**Context:** The person has an equation they want to plot.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+- **Given** the person provides an equation
+  **When** they request its graph
+  **Then** the application displays a plot of that equation.
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
+- **Given** the person provides `sin(x)` as the equation
+  **When** they request its graph
+  **Then** the application plots the sine function over an x range.
 
-### S2 — <the next situation>
-
-**Priority:** P2
-
-- **Given** … **When** … **Then** …
 
 ## Failure and empty states
 
-What happens the first time, with nothing there yet, and when each step fails. These are where
-specifications are usually silent and implementations usually improvise.
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** No saved graph history or other stored records are requested; initial empty-state behavior is unspecified.
+- **Failure:** The request does not define equation-validation or plotting failure behavior, including messages or recovery.
+- **Partial:** Partial results or multi-equation behavior are not specified.
 
 ## Scenario coverage
 
@@ -142,28 +213,26 @@ prose. Use the pinned request and clarification answers; do not invent error tex
 
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `MYL-GRAPH:REQ-001` | S1 | TODO |
-| `MYL-GRAPH:REQ-002` | S2 | TODO |
-| `MYL-GRAPH:AC-001` | S1 | TODO |
+| `MYL-GRAPH:REQ-001` | S1 | success |
+| `MYL-GRAPH:REQ-002` | S1 | success |
+| `MYL-GRAPH:AC-001` | S1 | success |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+Not applicable: the request specifies no roles or permission distinctions.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+The request does not specify equation syntax, supported equation classes, x-range endpoints, axis limits, numeric precision, or behavior for unsupported equations. The confirmed sine example is `sin(x)` plotted over an x range; no particular range is prescribed.
 
 ## Requirements
 
-Numbered, testable, one obligation each. Cite the scenario each serves.
-
-- <requirement>. *(S1)* [MYL-GRAPH:REQ-001]
-- <requirement>. *(S1, S2)* [MYL-GRAPH:REQ-002]
+- A person can provide an equation to the application for plotting. *(S1)* [MYL-GRAPH:REQ-001]
+- For an equation provided by the person, the application displays its graph. *(S1)* [MYL-GRAPH:REQ-002]
 
 Acceptance criteria use the same stable, namespaced form:
 
-- <observable acceptance outcome>. *(S1)* [MYL-GRAPH:AC-001]
+- For the confirmed example, the application plots `sin(x)` over an x range. *(S1)* [MYL-GRAPH:AC-001] [scope:SRI-f44a7707dbb8]
 
 ## Verification intent
 
@@ -177,36 +246,30 @@ Planning must inherit these methods and cannot change them without an approved s
 
 | Clause | Methods | Criterion |
 |---|---|---|
-| `MYL-GRAPH:REQ-001` | TODO | - |
-| `MYL-GRAPH:REQ-002` | TODO | - |
-| `MYL-GRAPH:AC-001` | TODO | `MYL-GRAPH:AC-001` |
+| `MYL-GRAPH:REQ-001` | test | - |
+| `MYL-GRAPH:REQ-002` | test, visual | `MYL-GRAPH:AC-001` |
+| `MYL-GRAPH:AC-001` | test, visual | `MYL-GRAPH:AC-001` |
 
 ## Non-functional requirements
 
-Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
-will be measured; "fast" is not a requirement.
-
-Use governed requirement anchors here too (for example `[MYL-GRAPH:REQ-003]`); `NFR-001` by
-itself is only a display label and is not a stable clause identity.
+None are specified by the pinned request or the recorded clarification.
 
 ## Constitution articles
 
-Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
-cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
-
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-What this specification takes as true without proving. An assumption that turns out false is a
-change request, not a defect — which is only true if it was written down.
+The feature is for a person using the existing application. The request and clarification do not establish equation syntax, range endpoints, or additional graphing controls.
 
 ## Out of scope
 
-Named explicitly, so the boundary is reviewable rather than inferred.
+The pinned request establishes no additional exclusions. Saving or sharing graphs, graph styling, multiple-graph behavior, and specific error handling are not requirements in this specification.
 
 ## Sources
 
-Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
-offered to this phase that could not be read or was not available here, named as a gap. Without
-supporting documents, say so.
+Pinned Story source: `singularity/work-items/myl-graph/source.json` (SHA-256 `01d23f89cfb81225417b71ad66c3867676c63290036506c01a1b582f1442a982`).
+
+Recorded human clarification: `singularity/work-items/myl-graph/context/clarifications-specification-gen1.json` (SHA-256 `aabb29f3890c4f51e89e38ed5afc96b1644b228cda02e859d0796e015dce0362`).
+
+No supporting documents were offered to this phase.
