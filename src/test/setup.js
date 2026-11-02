@@ -1,5 +1,15 @@
 import '@testing-library/jest-dom/vitest';
 
+// Vitest aliases window to globalThis. On Node 25+, native storage globals
+// can prevent jsdom's storage from being copied there; use the real DOM window.
+for (const name of ['localStorage', 'sessionStorage']) {
+  Object.defineProperty(globalThis, name, {
+    configurable: true,
+    writable: true,
+    value: globalThis.jsdom.window[name],
+  });
+}
+
 // jsdom does not implement matchMedia; components/tests that read
 // responsive breakpoints via CSS need a stub so render() doesn't throw.
 if (!window.matchMedia) {

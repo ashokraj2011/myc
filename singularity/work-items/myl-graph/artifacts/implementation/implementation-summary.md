@@ -4,27 +4,51 @@
   "workId": "myl-graph",
   "workType": "spec-driven-standard",
   "phase": "implementation",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "developer",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "developer"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "implementation-summary.md",
+      "mediaType": "text/markdown",
+      "sha256": "ca1e2fc17b463611d35ed43be0b69b420fb2a9aa7b99d8e8bfce5134c97e4abe",
+      "bytes": 3208
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-02T16:50:10.036Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "298db1e8a351e8dbad698690d56ba53a82b98c26",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "f08cd2ee2875c8854dcb9cd1c9f4bcbf2e6e0b0d8ca8a1b6e1972f217d097e9c",
@@ -38,7 +62,7 @@
   "inputs": {
     "generation": 1,
     "path": "singularity/work-items/myl-graph/context/inputs-implementation-gen1.json",
-    "sha256": "418e42a8e113cfbf48ee705ac76929304e110245f5a8e54fd88424104bcb75b1",
+    "sha256": "06b77c8b7485b1f54adf8ee238793089c5835de74572913512274fc3cdbdd283",
     "renderedSha256": "331a6083c1e024415537a67d02749a8cbb309450a0944c3b8321b93ba93f341f",
     "mode": "enforce"
   },
@@ -48,9 +72,52 @@
   },
   "remoteAgent": null,
   "clarification": null,
-  "telemetry": [],
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/myl-graph/telemetry/implementation-gen1.json",
+      "sha256": "ba25f154414b46818502ce4c0055786373142af7c2e16b1440446303fa5fd1a1",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 30241,
+        "estimatedTokens": 7561,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 30241,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-02T16:50:10.036Z",
+      "completedAt": "2026-11-02T16:50:10.036Z",
+      "agent": "developer",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -68,7 +135,7 @@ remaining limitations, and rollout considerations for downstream agents. Keep it
 the detailed changed-components and test sections are preserved separately.
 -->
 
-The existing client-side grapher accepts an equation and draws its sampled curve on a canvas. This generation preserves that implementation and adds component and application-mode regression coverage for entering equations and plotting the approved `sin(x)` example. The complete configured test command passed 34 tests across four files after repairing browser storage in the test environment. Test configuration supplies a browser origin; setup binds localStorage and sessionStorage from the actual jsdom window. The specification leaves the x-range unspecified, so the existing default view remains unchanged. Automated canvas assertions do not establish visual acceptance; no visual review is recorded here.
+The existing client-side grapher accepts an equation and draws its sampled curve on a canvas. This generation preserves that implementation and adds component and application-mode regression coverage for entering equations and plotting the approved `sin(x)` example. The complete configured test command passed 34 tests across four files after repairing browser storage in the test environment. Vitest already supplies a non-opaque browser origin; setup binds localStorage and sessionStorage from the actual jsdom window. The original test configuration and its command pin are preserved. The specification leaves the x-range unspecified, so the existing default view remains unchanged. Automated canvas assertions do not establish visual acceptance; no visual review is recorded here.
 
 ## Implemented outcome
 
@@ -76,7 +143,7 @@ In grapher mode, a person can enter an equation and see its graph. The existing 
 
 ## Changed components and decisions
 
-The planned test-only disposition is retained: the existing `src/components/FunctionGrapher.jsx` implementation already supplies the equation input and canvas plot, so application logic is unchanged. `src/components/FunctionGrapher.test.jsx` checks the plotted `sin(x)` sample and an updated equation; `src/App.test.jsx` verifies grapher-mode access and equation entry. The acceptance-mapped tests carry `@ac:MYL-GRAPH:AC-001`. Supporting test configuration in `vite.config.js` supplies a non-opaque browser origin. `src/test/setup.js` binds storage from `globalThis.jsdom.window`, because this Vitest version aliases `window` to the Node global and omits those storage properties on Node 26. No dependency, migration, or deployment changes were made.
+The planned test-only disposition is retained: the existing `src/components/FunctionGrapher.jsx` implementation already supplies the equation input and canvas plot, so application logic is unchanged. `src/components/FunctionGrapher.test.jsx` checks the plotted `sin(x)` sample and an updated equation; `src/App.test.jsx` verifies grapher-mode access and equation entry. The acceptance-mapped tests carry `@ac:MYL-GRAPH:AC-001`. `src/test/setup.js` binds storage from `globalThis.jsdom.window`, because this Vitest version aliases `window` to the Node global and omits those storage properties on Node 26. The temporary `vite.config.js` URL override was redundant and has been removed: Vitest's existing default provides `http://localhost:3000/`. Fresh command-pin validation matches the original pin exactly; no test-command acceptance or repinning was performed. No dependency, migration, or deployment changes were made.
 
 ## Tests and operational notes
 

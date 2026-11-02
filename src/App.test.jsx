@@ -197,3 +197,20 @@ describe('Responsive navigation (desktop rail + mobile dropdown)', () => {
     expect(mobileSelect.value).toBe('financial');
   });
 });
+
+describe('Grapher mode integration', () => {
+  // @ac:MYL-GRAPH:AC-001
+  it('lets a person enter an equation and renders the graph in the app', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await user.selectOptions(screen.getAllByRole('combobox')[0], 'grapher');
+
+    const equationInput = screen.getByPlaceholderText('e.g. sin(x)');
+    await user.clear(equationInput);
+    await user.type(equationInput, 'sin(x)');
+
+    expect(equationInput).toHaveValue('sin(x)');
+    expect(document.querySelector('canvas')).toBeInTheDocument();
+  });
+});

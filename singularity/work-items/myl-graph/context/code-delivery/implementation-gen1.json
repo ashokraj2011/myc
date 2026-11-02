@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "myl-graph",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "fdd20493-6c0a-4ba8-a747-0d342235fbe7",
+  "changeSet": {
+    "path": "singularity/work-items/myl-graph/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:054fcb579894300cc6439effcb12b36d8d7f7faf6372597f14ac7d3945c4fb10",
+    "sourcePaths": [],
+    "deletedSourcePaths": [],
+    "configurationPaths": [],
+    "executableTestPaths": [
+      "src/App.test.jsx",
+      "src/components/FunctionGrapher.test.jsx"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "test-source": 3
+    },
+    "entries": [
+      {
+        "changeId": "sha256:eee1a143217e8f5b4411b828e37689107f511bf8ab1c518b6d565297ebb130c4",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "src/components/FunctionGrapher.test.jsx",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:afe72f55059c133967a8e900cf722b7b5d43f9dab3a1d8dc6091e6978bc89a4c",
+        "status": "modified",
+        "oldPath": "src/App.test.jsx",
+        "newPath": "src/App.test.jsx",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:162036b573d5b1290afc91a52681ae416d8df7c8dd13da44001e656ff31a27a5",
+        "status": "modified",
+        "oldPath": "src/test/setup.js",
+        "newPath": "src/test/setup.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "MYL-GRAPH:AC-001"
+    ],
+    "bound": [
+      "MYL-GRAPH:AC-001"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "MYL-GRAPH:AC-001",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "MYL-GRAPH:AC-001",
+        "testSource": "src/components/FunctionGrapher.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "MYL-GRAPH:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "Grapher mode integration"
+          ],
+          "name": "lets a person enter an equation and renders the graph in the app"
+        },
+        "logicalTestId": "sha256:0b7a90407dc0accda2bd4ae48df4a2b19fce0ea2a981d4f9604ce75cd1f16c6a",
+        "declarationSha256": "sha256:42a1443aefb93cdf0e1d3328923a9425243e7a7b4ada7bb7c6d9628996af6144",
+        "supportSha256": null,
+        "assertions": {
+          "count": 0,
+          "tautological": 0,
+          "negative": false,
+          "boundary": true,
+          "nullability": false,
+          "adequacy": "missing",
+          "subjects": [
+            "async",
+            "clear",
+            "getAllByRole",
+            "getByPlaceholderText",
+            "querySelector",
+            "render",
+            "selectOptions",
+            "setup",
+            "toBeInTheDocument",
+            "toHaveValue",
+            "type"
+          ]
+        },
+        "line": 203,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [
+      {
+        "testSource": "src/components/FunctionGrapher.test.jsx",
+        "line": 46,
+        "clauseIds": [
+          "MYL-GRAPH:AC-001"
+        ],
+        "code": "JAVASCRIPT_SOURCE_UNREADABLE",
+        "message": "the file cannot be read as data: unterminated regular expression on line 49"
+      }
+    ],
+    "adapterProfiles": [
+      {
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      },
+      {
+        "testSource": "src/components/FunctionGrapher.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [],
+    "sourceBindings": []
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:98775215b0335455617794ea5a4c16a004cd518e6f7c384f0f636ae6bf092c59",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-11-02T16:50:10.036Z"
+}
