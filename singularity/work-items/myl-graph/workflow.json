@@ -6357,6 +6357,14 @@
       "event": "phase_submitted",
       "phase": "implementation",
       "detail": "4 artifacts"
+    },
+    {
+      "at": "2026-11-03T03:23:22.715Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "plan_amended",
+      "phase": "implementation",
+      "detail": "PAM-001: src/test/setup.js added to MYL-GRAPH:AC-001. it is tested ,no need to check agian"
     }
   ],
   "measurement": {
@@ -7979,6 +7987,137 @@
         },
         "createdAt": "2026-11-02T16:52:04.021Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "fc6dac05-42ec-45aa-908e-9f536d7d8d6f",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "myl-graph",
+          "branch": "myl-graph"
+        },
+        "phaseId": "implementation",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "decision": "plan",
+          "reviewPacketSha256": null,
+          "amendment": "PAM-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-03T03:23:21.941Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "fc6dac05-42ec-45aa-908e-9f536d7d8d6f",
+        "eventType": "decision-made",
+        "capabilityId": "cfa-calc",
+        "subject": {
+          "aliases": [
+            "myl-graph"
+          ],
+          "branch": "myl-graph",
+          "canonicalBranch": "myl-graph",
+          "createdAt": "2026-11-02T12:51:09.836Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 1,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 0,
+              "awaiting_approval": 1,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "awaiting_approval",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph",
+          "updatedAt": "2026-11-03T03:23:22.715Z",
+          "workId": "myl-graph",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "capabilityMapSha256": "20f2bbee1802d438c843140584a77cf3dbf224b6b3424fb6baaec375b0dd5e5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "f08cd2ee2875c8854dcb9cd1c9f4bcbf2e6e0b0d8ca8a1b6e1972f217d097e9c",
+          "lifecycleEventId": "fc6dac05-42ec-45aa-908e-9f536d7d8d6f",
+          "lifecyclePayload": {
+            "decision": "plan",
+            "reviewPacketSha256": null,
+            "amendment": "PAM-001"
+          },
+          "templateSha256": "2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "fc6dac05-42ec-45aa-908e-9f536d7d8d6f",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "myl-graph",
+              "branch": "myl-graph"
+            },
+            "phaseId": "implementation",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "architecture-reviewers",
+            "payload": {
+              "decision": "plan",
+              "reviewPacketSha256": null,
+              "amendment": "PAM-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-03T03:23:21.941Z"
+          }
+        },
+        "createdAt": "2026-11-03T03:23:21.945Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -8168,6 +8307,23 @@
         "attemptId": "TA-f2d247a4f0dbad1d12f7"
       },
       "at": "2026-11-02T16:50:09.896Z"
+    }
+  ],
+  "planAmendments": [
+    {
+      "id": "PAM-001",
+      "changes": [
+        {
+          "kind": "add-location",
+          "clauseId": "MYL-GRAPH:AC-001",
+          "path": "src/test/setup.js"
+        }
+      ],
+      "reason": "it is tested ,no need to check agian",
+      "actor": "ashokraj2011",
+      "authorityGroup": "architecture-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-03T03:23:22.715Z"
     }
   ]
 }
