@@ -1,0 +1,430 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "bin-opr",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "964b2b28-d3e0-465b-961a-69ddade60f57",
+  "changeSet": {
+    "path": "singularity/work-items/bin-opr/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:fc6917e1c17badc740944141d6e446d0bb9e4c23d147ec1126c83f69e2ba6cc6",
+    "sourcePaths": [
+      "src/App.jsx",
+      "src/components/Display.jsx"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [
+      "package-lock.json",
+      "package.json",
+      "playwright.config.js"
+    ],
+    "executableTestPaths": [
+      "e2e/binary-conversion.spec.js"
+    ],
+    "supportingTestPaths": [
+      "playwright.config.js"
+    ]
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "build-configuration": 2,
+      "dependency-lock": 1,
+      "product-source": 2,
+      "test-source": 2
+    },
+    "entries": [
+      {
+        "changeId": "sha256:9f203e85e703e9841bf37ecfa50d02c8e88f9d86bda05d619836bc114d24283c",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "e2e/binary-conversion.spec.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:0870d7cb05ce163d3e30adadaf90d6b2b19d5a98f386634ec4fa0f751cd3dd36",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "playwright.config.js",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:f59c2409ca00d1ac35831626721519d7d3f3619897f2770ed9c740f7173ab969",
+        "status": "modified",
+        "oldPath": "package-lock.json",
+        "newPath": "package-lock.json",
+        "role": "dependency-lock",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:c7f89dd5d417c90c02983c87da141ed8e86963de3be3d50e34efd2f605314a1a",
+        "status": "modified",
+        "oldPath": "package.json",
+        "newPath": "package.json",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:e8a8fb46e96c7512cd8724665892123d4b28ac3a3a527fb9d6e183f25db9cb0e",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:9ab6151ee737c7a8c570e0ea504dcb61f31aa9cedb979c29aa223ef5cc2dfb18",
+        "status": "modified",
+        "oldPath": "src/components/Display.jsx",
+        "newPath": "src/components/Display.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:f1d9d0c87d4057dbd7808c1ad3719ed17b4eee6f673d05edd72720d2f45a1ddc",
+        "status": "modified",
+        "oldPath": "src/test/setup.js",
+        "newPath": "src/test/setup.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "BIN-OPR:AC-001"
+    ],
+    "bound": [
+      "BIN-OPR:AC-001"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "BIN-OPR:AC-001",
+        "testSource": "e2e/binary-conversion.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "BIN-OPR:AC-001",
+        "testSource": "e2e/binary-conversion.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "identity": {
+          "framework": "playwright",
+          "suitePath": [],
+          "name": "converts the current calculator result and shows it beside the display"
+        },
+        "logicalTestId": "sha256:c95c205ea8986113eccc721b7feba2cfe16743d16a9daa868154904789834201",
+        "declarationSha256": "sha256:e490ce2eeb9a3ccf17255e31c5e6c4a0fea85e2cf0c0967d93bf9e05ecaa6b41",
+        "supportSha256": null,
+        "assertions": {
+          "count": 0,
+          "tautological": 0,
+          "negative": false,
+          "boundary": false,
+          "nullability": false,
+          "adequacy": "missing",
+          "subjects": [
+            "async",
+            "click",
+            "getByRole",
+            "goto",
+            "locator",
+            "press",
+            "screenshot",
+            "toBeVisible",
+            "toHaveText",
+            "type"
+          ]
+        },
+        "line": 4,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "e2e/binary-conversion.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "BIN-OPR:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx"
+        ]
+      },
+      {
+        "clauseId": "BIN-OPR:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "BIN-OPR:REQ-001",
+        "sourcePath": "src/App.jsx",
+        "line": 133,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "BIN-OPR:REQ-001",
+        "sourcePath": "src/components/Display.jsx",
+        "line": 98,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "BIN-OPR:REQ-002",
+        "sourcePath": "src/App.jsx",
+        "line": 251,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "BIN-OPR:REQ-002",
+        "sourcePath": "src/components/Display.jsx",
+        "line": 110,
+        "tag": "clause"
+      }
+    ]
+  },
+  "fulfillment": {
+    "obligations": [
+      {
+        "clauseId": "BIN-OPR:AC-001",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/bin-opr/evidence/binary-conversion.png",
+            "state": "present",
+            "sha256": "32e5a7b23356ccf222bbedd1b202c822ab651709b32f84326fdc207681ce285e"
+          }
+        ]
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "BIN-OPR:REQ-001",
+        "explanation": {
+          "text": "This handler converts the current calculator result to base 2.",
+          "path": "src/App.jsx",
+          "line": 133
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 17,
+                "beforeLines": 0,
+                "afterStart": 18,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 133,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 244,
+                "beforeLines": 0,
+                "afterStart": 251,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 247,
+                "beforeLines": 0,
+                "afterStart": 255,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 273,
+                "beforeLines": 0,
+                "afterStart": 283,
+                "afterLines": 2
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/Display.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 7,
+                "beforeLines": 0,
+                "afterStart": 8,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 94,
+                "beforeLines": 0,
+                "afterStart": 97,
+                "afterLines": 25
+              }
+            ],
+            "symbols": [
+              {
+                "name": "Display",
+                "kind": "function",
+                "line": 5
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "BIN-OPR:REQ-002",
+        "explanation": {
+          "text": "The matching binary value is passed with the calculator result.",
+          "path": "src/App.jsx",
+          "line": 251
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 17,
+                "beforeLines": 0,
+                "afterStart": 18,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 133,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 244,
+                "beforeLines": 0,
+                "afterStart": 251,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 247,
+                "beforeLines": 0,
+                "afterStart": 255,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 273,
+                "beforeLines": 0,
+                "afterStart": 283,
+                "afterLines": 2
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/Display.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 7,
+                "beforeLines": 0,
+                "afterStart": 8,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 94,
+                "beforeLines": 0,
+                "afterStart": 97,
+                "afterLines": 25
+              }
+            ],
+            "symbols": [
+              {
+                "name": "Display",
+                "kind": "function",
+                "line": 5
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:0c00e8096e45e1b475836e9cda45a40397416b5571074fc16b3747d483c45164"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:d742574148196477b417abe807012762d29e62ba85317a654518e52e4d3d09a0",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-11-06T05:31:36.142Z"
+}

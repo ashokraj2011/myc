@@ -15,6 +15,7 @@ export default function App() {
   const [activeMode, setActiveMode] = useState('standard');
   const [expression, setExpression] = useState('');
   const [result, setResult] = useState('0');
+  const [binaryResult, setBinaryResult] = useState(null);
   const [lastEvaluated, setLastEvaluated] = useState(false);
   const [angleUnit, setAngleUnit] = useState('DEG');
   const [memoryValue, setMemoryValue] = useState(0);
@@ -129,6 +130,11 @@ export default function App() {
     }
   }, [expression, angleUnit]);
 
+  // @clause:BIN-OPR:REQ-001 This handler converts the current calculator result to base 2.
+  const handleConvertToBinary = useCallback(() => {
+    setBinaryResult({ source: result, value: Number(result).toString(2) });
+  }, [result]);
+
   const handleMemory = useCallback(
     (type) => {
       const currentNum = parseFloat(result) || 0;
@@ -242,9 +248,12 @@ export default function App() {
         {/* Dynamic Content based on Active Mode */}
         {activeMode === 'standard' && (
           <div className="w-full flex flex-col items-center animate-fade-in">
+            {/* @clause:BIN-OPR:REQ-002 The matching binary value is passed with the calculator result. */}
             <Display
               expression={expression}
               result={result}
+              binaryResult={binaryResult?.source === result ? binaryResult.value : null}
+              onConvertToBinary={handleConvertToBinary}
               angleUnit={angleUnit}
               setAngleUnit={setAngleUnit}
               memoryValue={memoryValue}
@@ -271,6 +280,8 @@ export default function App() {
             <Display
               expression={expression}
               result={result}
+              binaryResult={binaryResult?.source === result ? binaryResult.value : null}
+              onConvertToBinary={handleConvertToBinary}
               angleUnit={angleUnit}
               setAngleUnit={setAngleUnit}
               memoryValue={memoryValue}

@@ -1,5 +1,18 @@
 import '@testing-library/jest-dom/vitest';
 
+if (typeof globalThis.localStorage === 'undefined') {
+  const values = new Map();
+  Object.defineProperty(globalThis, 'localStorage', {
+    configurable: true,
+    value: {
+      getItem: (key) => values.get(String(key)) ?? null,
+      setItem: (key, value) => values.set(String(key), String(value)),
+      removeItem: (key) => values.delete(String(key)),
+      clear: () => values.clear(),
+    },
+  });
+}
+
 // jsdom does not implement matchMedia; components/tests that read
 // responsive breakpoints via CSS need a stub so render() doesn't throw.
 if (!window.matchMedia) {

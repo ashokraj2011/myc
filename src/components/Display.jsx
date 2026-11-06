@@ -5,6 +5,8 @@ import { playSound } from '../utils/audio';
 export const Display = ({
   expression,
   result,
+  binaryResult,
+  onConvertToBinary,
   angleUnit,
   setAngleUnit,
   memoryValue,
@@ -91,6 +93,31 @@ export const Display = ({
       {/* Main Result Output */}
       <div className="w-full text-right font-mono text-3xl sm:text-4xl font-bold u-text-text-main overflow-x-auto whitespace-nowrap scrollbar-none tracking-tight mt-1 transition-all">
         {result || '0'}
+      </div>
+      <div className="w-full flex items-center justify-between gap-3 mt-3">
+        {/* @clause:BIN-OPR:REQ-001 This button invokes conversion for the current calculator result. */}
+        <button
+          type="button"
+          aria-label="Convert to binary"
+          onClick={() => {
+            playSound('click', soundEnabled);
+            onConvertToBinary();
+          }}
+          className="px-2 py-1 rounded-md u-bg-btn-func-bg border u-border-card-border u-htext-text-main text-xs font-semibold transition-colors"
+        >
+          Convert to binary
+        </button>
+        {/* @clause:BIN-OPR:REQ-002 The output displays the converted value beside the unchanged result. */}
+        {binaryResult !== null && (
+          <output
+            className="font-mono text-sm u-text-text-main"
+            role="status"
+            aria-label="Binary representation"
+            style={{ marginLeft: '0.75rem' }}
+          >
+            Binary: {binaryResult}
+          </output>
+        )}
       </div>
     </div>
   );
