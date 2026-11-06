@@ -4887,7 +4887,45 @@
       "artifactRegistrationRepairs": [],
       "artifacts": [],
       "checks": [],
-      "remoteOutputs": []
+      "remoteOutputs": [],
+      "generationIntent": {
+        "id": "c48e1436-787f-4cbc-8e6b-45be4701c3ec",
+        "generation": 1,
+        "status": "open",
+        "path": "singularity/work-items/bin-opr2/context/generation-start/implementation-gen1.json",
+        "receiptSha256": "sha256:f068ddef1248c62098d6bb14c5e4cf1f8d3f7afd2943de73f4f3bfe86998d687",
+        "baseline": {
+          "commit": "02bccf1df31fa62e4d61e2c690b5f8a293f018db",
+          "tree": "0f742a5554191eb79a41b1165568dc06425eea3b",
+          "initialChangeSetDigest": "sha256:6d8df505b8951ab5edef693828b10a625639455ec70fa825b01f0ca5c35db066",
+          "mode": "clean",
+          "previousGenerationCommit": null
+        },
+        "startedAt": "2026-11-06T13:03:02.822Z",
+        "startedBy": {
+          "actor": {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com",
+            "login": "ashokraj2011",
+            "githubLookup": "resolved"
+          },
+          "agent": "developer"
+        },
+        "publication": null
+      },
+      "authoringBaseline": {
+        "generation": 1,
+        "path": "artifacts/implementation/implementation-summary.md",
+        "fingerprint": "sha256:1d8a566b8790c0e548376032e28fe5f5b2349424feedc1a64bfc676847040dad",
+        "bytes": 1424
+      },
+      "inputContext": {
+        "generation": 1,
+        "path": "singularity/work-items/bin-opr2/context/inputs-implementation-gen1.json",
+        "sha256": "1fb45dd4777ecabffb20915a84ae1b846bb18472bb1d9334f37284b67486ebd9",
+        "renderedSha256": "4f7d7ab5467bb1aa2d9aab4e676a0e20bc1a3dfe16543cc873ab0c4f04555df7",
+        "mode": "enforce"
+      }
     },
     "convergence": {
       "id": "convergence",
@@ -5443,6 +5481,14 @@
       "event": "work_interval_started",
       "phase": "implementation",
       "detail": "baseline 03c606553eb7 at 02bccf1df31f"
+    },
+    {
+      "at": "2026-11-06T13:20:40.151Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "plan_amended",
+      "phase": "implementation",
+      "detail": "PAM-001: .nvmrc listed as build-configuration. The project pins its Node version for its tests."
     }
   ],
   "measurement": {
@@ -5870,6 +5916,47 @@
       ],
       "blockedCode": null,
       "recordSha256": "d59bab897f6d1d9d650b4ac59592ea9a459862270492c73fbbb792532ba80131"
+    },
+    "WT-b8951707d205798e90ddba1b0ced5febbb21470bca0140e6a14978f87126f2f0": {
+      "schemaVersion": 1,
+      "kind": "workflow-task-record",
+      "authority": "progress-only",
+      "workId": "bin-opr2",
+      "phaseId": "implementation",
+      "generation": 1,
+      "role": "author",
+      "repositoryIdentity": "4dc77d5a23f27a2786b99b5cefbd15198ad2df58d473326391512e1516c5491f",
+      "storyIdentity": "130df9362035d8de60d0cdd47b8e5c0f04ef6f4186410510ea049a6a268b711b",
+      "id": "WT-b8951707d205798e90ddba1b0ced5febbb21470bca0140e6a14978f87126f2f0",
+      "inputSha256": "e506376d7613646776512991d3ae2bfc2615f3af538e27bfe9f459d0472c7dff",
+      "revision": 11,
+      "state": "validate-draft",
+      "continuations": 0,
+      "maximumContinuations": 3,
+      "repairConsumed": 0,
+      "conditions": [
+        "2b12395795db9a3b64670d0cad1cabbf069204a34b0d27b7396799506dda58ce",
+        "4fc475e6989bbe9fe484a863a97d6823701be67aa5ab70e10cdc42252da2b92f"
+      ],
+      "checkpoints": [
+        {
+          "kind": "prepared",
+          "inputSha256": "e506376d7613646776512991d3ae2bfc2615f3af538e27bfe9f459d0472c7dff",
+          "fingerprint": "4f7d7ab5467bb1aa2d9aab4e676a0e20bc1a3dfe16543cc873ab0c4f04555df7"
+        },
+        {
+          "kind": "publication-requested",
+          "inputSha256": "e506376d7613646776512991d3ae2bfc2615f3af538e27bfe9f459d0472c7dff",
+          "fingerprint": "e506376d7613646776512991d3ae2bfc2615f3af538e27bfe9f459d0472c7dff"
+        },
+        {
+          "kind": "validation",
+          "inputSha256": "e506376d7613646776512991d3ae2bfc2615f3af538e27bfe9f459d0472c7dff",
+          "fingerprint": "893fc29c7b46658c6c5d9a574682bba5cd307bf0bb4a9e4f54bf4b1af9455154"
+        }
+      ],
+      "blockedCode": null,
+      "recordSha256": "635a52785ace654d2e8ebcae2406c3e022fd7c680ba02d311017272d1493bd21"
     }
   },
   "publicationProjections": [
@@ -7840,6 +7927,137 @@
         },
         "createdAt": "2026-11-06T13:01:51.414Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "367a6cfe-a846-40db-9dc7-343e130dc67e",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "bin-opr2",
+          "branch": "bin-opr2"
+        },
+        "phaseId": "implementation",
+        "generation": 0,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "decision": "plan",
+          "reviewPacketSha256": null,
+          "amendment": "PAM-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-06T13:20:39.285Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "367a6cfe-a846-40db-9dc7-343e130dc67e",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "bin-opr2"
+          ],
+          "branch": "bin-opr2",
+          "canonicalBranch": "bin-opr2",
+          "createdAt": "2026-11-06T12:14:12.554Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 0,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "bin",
+          "updatedAt": "2026-11-06T13:20:40.151Z",
+          "workId": "bin-opr2",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "941f398a5fec468916fc77322b77b18f3e9c7cb1423ce74d648a9e2906b74a2a",
+          "lifecycleEventId": "367a6cfe-a846-40db-9dc7-343e130dc67e",
+          "lifecyclePayload": {
+            "decision": "plan",
+            "reviewPacketSha256": null,
+            "amendment": "PAM-001"
+          },
+          "templateSha256": "2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "367a6cfe-a846-40db-9dc7-343e130dc67e",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "bin-opr2",
+              "branch": "bin-opr2"
+            },
+            "phaseId": "implementation",
+            "generation": 0,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "architecture-reviewers",
+            "payload": {
+              "decision": "plan",
+              "reviewPacketSha256": null,
+              "amendment": "PAM-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-06T13:20:39.285Z"
+          }
+        },
+        "createdAt": "2026-11-06T13:20:39.286Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -7910,6 +8128,24 @@
       "previousRevisionSha256": null,
       "at": "2026-11-06T12:50:03.160Z",
       "revisionSha256": "sha256:15c912a4118a5de3aa52f40ca265ba3baa09e7e823001adc6979edad099baab7"
+    }
+  ],
+  "planAmendments": [
+    {
+      "id": "PAM-001",
+      "changes": [
+        {
+          "kind": "add-supporting",
+          "path": ".nvmrc",
+          "class": "build-configuration",
+          "reason": "Tests need Node 22; Vitest's jsdom fails on Node 26."
+        }
+      ],
+      "reason": "The project pins its Node version for its tests.",
+      "actor": "ashokraj2011",
+      "authorityGroup": "architecture-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-06T13:20:40.151Z"
     }
   ]
 }
