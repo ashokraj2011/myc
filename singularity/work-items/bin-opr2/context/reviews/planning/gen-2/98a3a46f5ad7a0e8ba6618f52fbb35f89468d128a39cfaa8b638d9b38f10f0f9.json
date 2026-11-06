@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "phase": "planning",
+  "generation": 2,
+  "reportSha256": "98a3a46f5ad7a0e8ba6618f52fbb35f89468d128a39cfaa8b638d9b38f10f0f9",
+  "lifecycleEventId": "9af08307-a89b-4711-95a3-53cf5273c845",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "planning",
+    "binding": {
+      "workId": "bin-opr2",
+      "phase": "planning",
+      "generation": 2,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/bin-opr2/USER-STORY.md",
+          "textSha256": "5cfa0c7a7d711fad8aa68e80da1b8441964bfadc3f1042b0596e46cb9602a121",
+          "originalSha256": "9691c2b1a5ce2dbb46a9db942f9f931dc87fb221d7bcb684773ad21cc7ef8536"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:approved-scope",
+          "phase": "specification",
+          "generation": 2,
+          "path": "singularity/work-items/bin-opr2/context/clarifications-specification-gen2.json",
+          "sha256": "d26397d0674f22c6edb8060f497d699f7d776c2c5529548123670716d5fff22b"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/bin-opr2/artifacts/planning/plan.md",
+        "sha256": "32551c4ba8eb0ce991234f2fe3a4dce387227d4cf0743d70c2bd74f521812615"
+      },
+      "upstreamSpec": {
+        "path": "singularity/work-items/bin-opr2/artifacts/specification/spec.md",
+        "sha256": "c3872014b194e6e1a80f398698752adbe0161387f0002cedae88e47c482be477"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:approved-scope"
+    ],
+    "rows": [
+      {
+        "clauseId": "BIN-OPR2:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx"
+        ],
+        "plannedTests": [
+          "tests/bin-conversion.spec.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "The Standard calculator exposes a button that converts the decimal value currently displayed and shows its binary representation.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "BIN-OPR2:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx"
+        ],
+        "plannedTests": [
+          "tests/bin-conversion.spec.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Positive and negative whole and up-to-two-place decimal inputs convert; negatives have a leading minus, and fractional output has exactly two binary digits truncated after that precision.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "BIN-OPR2:AC-001",
+        "expectedPaths": [
+          "singularity/work-items/bin-opr2/evidence/bin-conversion.png"
+        ],
+        "plannedTests": [
+          "tests/bin-conversion.spec.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "evidence",
+        "observableResult": "Playwright exercises supported conversions; the retained screenshot shows the conversion control and binary results for whole-number and decimal inputs.",
+        "assessment": "unsupported"
+      }
+    ],
+    "findings": [
+      {
+        "id": "planning-ac001-visual-cases",
+        "severity": "blocking",
+        "message": "The plan names one retained PNG and describes capturing a browser state with a binary output visible, but does not explain how that evidence will show both whole-number and decimal conversion results. A single calculator display state shows one result; therefore the proposed evidence does not yet establish the required visual coverage. Specify separate retained screenshots or a single composite that visibly includes both result types, and map each retained file to the AC-001 evidence row.",
+        "clauseId": "BIN-OPR2:AC-001",
+        "sourceId": "story",
+        "line": 16,
+        "quote": "Screenshot playright testcases"
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "0a3aa938dc74e28fa2e914fd2b999b0f51973b59dd454b19936a76d395c783bb",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "architect",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-06T12:57:25.944Z",
+  "recordSha256": "d21bdb04f4b94e60a214dad2e29d358a1c5b7ef7c7b972d2fc8c534cabe9f179"
+}
