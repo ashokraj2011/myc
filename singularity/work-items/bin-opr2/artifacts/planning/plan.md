@@ -4,7 +4,7 @@
   "workId": "bin-opr2",
   "workType": "spec-driven-standard",
   "phase": "planning",
-  "generation": 3,
+  "generation": 4,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -45,10 +45,10 @@
       "sha256": "49f957be8e92bf49b37a1184193f76765132c473ae6d7977bb57c81951789d6a",
       "bytes": 11230
     },
-    "generation": 3,
-    "publishedAt": "2026-11-06T12:58:43.129Z"
+    "generation": 4,
+    "publishedAt": "2026-11-06T12:58:55.572Z"
   },
-  "sourceCommit": "cc68c331abffd83debbb47508de64a5b288d959d",
+  "sourceCommit": "9a5a8eef2c2ea8910a102b92c1a492449551b03a",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "941f398a5fec468916fc77322b77b18f3e9c7cb1423ce74d648a9e2906b74a2a",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/spec-driven/plan.md"
   },
   "inputs": {
-    "generation": 3,
-    "path": "singularity/work-items/bin-opr2/context/inputs-planning-gen3.json",
-    "sha256": "cad305493ddbb0f152297b59f64eaf7d5c38a15c340bce7e7f6532e4d461ef2a",
+    "generation": 4,
+    "path": "singularity/work-items/bin-opr2/context/inputs-planning-gen4.json",
+    "sha256": "a2473556ebaa0c9c643b7e42a69c45966df2623e014f89c6d953e28b08300973",
     "renderedSha256": "97f13c97b7f455c1ba4f90cf41f6f297d39846fe537dcba44acdde0afe40d07f",
     "mode": "enforce"
   },
@@ -120,6 +120,15 @@
         "originalBytes": 31806,
         "omittedSections": 0
       },
+      "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 4,
+      "path": "singularity/work-items/bin-opr2/telemetry/planning-gen4.json",
+      "sha256": "fb6c9ad46505c3617cc544e93e12b5057c27ab8cdc11c0e2c1c582e0a0d090af",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
       "captureGap": "no-metered-session"
     }
   ],
@@ -187,6 +196,27 @@
       "completedAt": "2026-11-06T12:58:43.128Z",
       "agent": "architect",
       "generation": 3
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-06T12:58:55.572Z",
+      "completedAt": "2026-11-06T12:58:55.572Z",
+      "agent": "architect",
+      "generation": 4
     }
   ],
   "sequenceOverrides": [],
