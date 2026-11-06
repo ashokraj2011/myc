@@ -4,27 +4,51 @@
   "workId": "bin-opr",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "b59cf7bfca2806d78c6ab5da695fbf38d4aeac7a5296b5aa24303a827f0ee401",
+      "bytes": 7529
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-06T04:53:41.282Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "5ac8f90e807270ef26721bdd87444cd6a0e50c44",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "ece34bebf699bd016761306f85eb0a38c9eb13e453e52f100944569c96215590",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/bin-opr/context/clarifications-specification-gen1.json",
+    "sha256": "eba8e407e552aab7821f2999961f58b99cacbbc7143243f0a108f655750dc39e",
+    "promptSha256": "de3b3979b05aec60be83ab6f7de188a2befae1c5748b062950d5195fdfa16f30",
+    "responses": 3,
+    "markers": [],
+    "recordedAt": "2026-11-06T03:47:00.386Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/bin-opr/telemetry/specification-gen1.json",
+      "sha256": "d1b9e55fe0c823e4617d6b67e47ac96ca63a4d6eee284066c2bf25483bd6e263",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 27595,
+        "estimatedTokens": 6899,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 27595,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-06T04:53:41.282Z",
+      "completedAt": "2026-11-06T04:53:41.282Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -86,11 +167,14 @@ exclusions. Do not introduce claims that are absent from the sections below. Exa
 boundary conditions are preserved separately by the governed projection.
 -->
 
-TODO: Write the Agent brief here as visible text; text inside the comment above is not read.
+The calculator user can convert the current calculator value to its binary representation using a
+button. The converted value appears alongside the calculator display. The UI behavior must be
+covered by a screenshot and Playwright tests. No additional boundary or special behavior was
+confirmed. Do not infer extra controls, supported ranges, or error behavior.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+- Calculator user: requests conversion of the current calculator value.
 
 ## User scenarios
 
@@ -104,34 +188,26 @@ Self-check whether an implementation could meet this draft yet omit an explicit 
 clear omissions in this editable draft and recheck within the returned repair policy; preserve
 published inputs and settled answers. These are authoring instructions, not execution evidence. -->
 
-### S1 — <the most important situation, in the user's words>
+### S1 — Convert the current calculator value to binary
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Calculator user
+**Context:** A value is currently shown in the calculator display.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+- **Given** a value is shown in the calculator display
+  **When** the user activates the binary-conversion button
+  **Then** the calculator shows that current value's binary representation alongside the display.
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
-
-### S2 — <the next situation>
-
-**Priority:** P2
-
-- **Given** … **When** … **Then** …
+- **Given** the user has requested binary conversion for the current calculator value
+  **When** the conversion behavior is evaluated
+  **Then** a screenshot demonstrates the UI behavior and a Playwright test covers the behavior.
 
 ## Failure and empty states
 
-What happens the first time, with nothing there yet, and when each step fails. These are where
-specifications are usually silent and implementations usually improvise.
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** Behavior when no calculator value is present is not specified by the pinned request or
+  clarification.
+- **Failure:** Conversion failure behavior and error presentation are not specified.
+- **Partial:** Partial completion behavior is not specified.
 
 ## Scenario coverage
 
@@ -142,28 +218,34 @@ prose. Use the pinned request and clarification answers; do not invent error tex
 
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `BIN-OPR:REQ-001` | S1 | TODO |
-| `BIN-OPR:REQ-002` | S2 | TODO |
-| `BIN-OPR:AC-001` | S1 | TODO |
+| `BIN-OPR:REQ-001` | S1 | success |
+| `BIN-OPR:REQ-002` | S1 | success |
+| `BIN-OPR:AC-001` | S1 | success |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+Not applicable: the pinned request defines no roles or access restrictions; the calculator user
+performs the described UI action.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+The pinned request and clarification specify no numeric range, precision, or special-value behavior.
+No additional boundary behavior is required by this specification.
 
 ## Requirements
 
 Numbered, testable, one obligation each. Cite the scenario each serves.
 
-- <requirement>. *(S1)* [BIN-OPR:REQ-001]
-- <requirement>. *(S1, S2)* [BIN-OPR:REQ-002]
+- The calculator provides a button that converts the current calculator value, not a separately
+  entered value, to its binary representation. *(S1)* [BIN-OPR:REQ-001]
+- The converted binary representation is shown alongside the calculator display. *(S1)*
+  [BIN-OPR:REQ-002]
 
 Acceptance criteria use the same stable, namespaced form:
 
-- <observable acceptance outcome>. *(S1)* [BIN-OPR:AC-001]
+- The UI behavior for converting the current calculator value and showing its binary representation
+  alongside the display is demonstrated by screenshot evidence and covered by Playwright tests.
+  *(S1)* [scope:SRI-2c51c258be3b] [BIN-OPR:AC-001]
 
 ## Verification intent
 
@@ -177,36 +259,36 @@ Planning must inherit these methods and cannot change them without an approved s
 
 | Clause | Methods | Criterion |
 |---|---|---|
-| `BIN-OPR:REQ-001` | TODO | - |
-| `BIN-OPR:REQ-002` | TODO | - |
-| `BIN-OPR:AC-001` | TODO | `BIN-OPR:AC-001` |
+| `BIN-OPR:REQ-001` | test, visual | `BIN-OPR:AC-001` |
+| `BIN-OPR:REQ-002` | test, visual | `BIN-OPR:AC-001` |
+| `BIN-OPR:AC-001` | test, visual | `BIN-OPR:AC-001` |
 
 ## Non-functional requirements
 
-Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
-will be measured; "fast" is not a requirement.
-
-Use governed requirement anchors here too (for example `[BIN-OPR:REQ-003]`); `NFR-001` by
-itself is only a display label and is not a stable clause identity.
+None specified by the pinned request or clarification.
 
 ## Constitution articles
 
 Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
 cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
 
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-What this specification takes as true without proving. An assumption that turns out false is a
-change request, not a defect — which is only true if it was written down.
+- A calculator value is already shown when the user requests conversion, as confirmed in
+  clarification Q-001.
+- The binary representation is displayed alongside the calculator display, as confirmed in
+  clarification Q-002.
 
 ## Out of scope
 
-Named explicitly, so the boundary is reviewable rather than inferred.
+- Converting a separately entered number that is not the current calculator value.
+- Additional boundary or special behavior; clarification Q-003 confirmed none.
 
 ## Sources
 
-Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
-offered to this phase that could not be read or was not available here, named as a gap. Without
-supporting documents, say so.
+- Pinned Story source `singularity/work-items/bin-opr/source.json` (immutable source SHA-256:
+  `a3d8f1190123768f13760c60fc40fc74f3b1b07c392dfc8fd656ae5c7d4e3a89`).
+- Recorded human clarifications Q-001, Q-002, and Q-003 for specification generation 1.
+- No supporting documents were offered to this phase.
