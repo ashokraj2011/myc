@@ -3894,7 +3894,7 @@
     "policySha256": "sha256:aaefb1f4c624c2845ff1a17cb0eae825ad6477031c941fd3755d6d986d113ef6"
   },
   "status": "in_progress",
-  "currentPhase": "convergence",
+  "currentPhase": "verification",
   "phaseOrder": [
     "specification",
     "planning",
@@ -7143,7 +7143,7 @@
       "label": "Convergence",
       "order": 3,
       "defaultAgent": "architect",
-      "status": "awaiting_approval",
+      "status": "approved",
       "requiredArtifact": {
         "path": "artifacts/convergence/convergence.md",
         "kind": "convergence-report",
@@ -7246,8 +7246,8 @@
       "qualityCommands": [],
       "startedAt": "2026-11-06T13:41:22.930Z",
       "submittedAt": "2026-11-06T13:46:01.221Z",
-      "approvedAt": null,
-      "approvedBy": null,
+      "approvedAt": "2026-11-06T13:48:27.104Z",
+      "approvedBy": "ashokraj2011",
       "rejectedAt": null,
       "rejectedBy": null,
       "rejectionReason": null,
@@ -7305,7 +7305,95 @@
           "providerCost": null
         }
       ],
-      "approvals": [],
+      "approvals": [
+        {
+          "decision": "approved",
+          "phase": "convergence",
+          "at": "2026-11-06T13:48:27.104Z",
+          "actor": {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com",
+            "login": "ashokraj2011",
+            "githubLookup": "resolved"
+          },
+          "agent": null,
+          "authorityGroup": "architecture-reviewers",
+          "identityAssurance": "configured-local",
+          "channel": "copilot-selection-receipt",
+          "generation": 1,
+          "artifactSha256": [
+            {
+              "path": "singularity/work-items/bin-opr2/artifacts/convergence/convergence.md",
+              "sha256": "d921f18b137cd6b36f0051162f1df23ae1d8e073260f4b71bb73c12e0228d507"
+            }
+          ],
+          "reviewPacketSha256": "d2280567f48d52a308d54029edf1198cddd4347d7197813bc422dbd4bc5e5c27",
+          "evidenceCommit": "dca862b75bc33f0d3a66b778cbe294ed3e28a331",
+          "artifactSetSha256": "4bebf8287ab30db0190cef673b8f47ce414bb6a6f471b95d8c4fa7b6cb5905fc",
+          "architectureIntent": null,
+          "architectureDecision": null,
+          "actionContext": {
+            "phase": "convergence",
+            "label": "Convergence",
+            "generation": 1,
+            "submittedAt": "2026-11-06T13:46:01.221Z",
+            "artifacts": [
+              {
+                "path": "singularity/work-items/bin-opr2/artifacts/convergence/convergence.md",
+                "sha256": "d921f18b137cd6b36f0051162f1df23ae1d8e073260f4b71bb73c12e0228d507"
+              }
+            ],
+            "agentBriefs": [],
+            "reviewPacketSha256": "d2280567f48d52a308d54029edf1198cddd4347d7197813bc422dbd4bc5e5c27",
+            "submittedSourceCommit": "8a72060013f9c1c85dd7d7da346ca640d4f0524b",
+            "planId": "ff50b1bfbea15763f7af04a3"
+          },
+          "upstream": {
+            "sha256": "sha256:d0e984c1acc47385ed6038efb9b22c0ae6f92e1d5ac78a034fa1c9897be38b7b",
+            "refs": [
+              {
+                "kind": "input",
+                "ref": "implementation",
+                "sha256": "sha256:225a39b14dfc34ba328d8811a207303e476df8108f956323a78e670bc9d1e5fa",
+                "authoredSha256": "sha256:d24db05291f2626db89ecfb028e031e632270ae113b0445f4ae54b3286574614"
+              },
+              {
+                "kind": "input",
+                "ref": "planning",
+                "sha256": "sha256:5f445bbcd690d84b4ee867eb108505b29f23851791d7813867cc287d85612e14",
+                "authoredSha256": "sha256:f4c62e96fe0140fdbd54987b6f3c4f6ff24a872668005647d0b757ba9a81be39"
+              },
+              {
+                "kind": "input",
+                "ref": "specification",
+                "sha256": "sha256:632f5404203d1071753e5de258b251520a0eb049df612d0337682719288c9b35",
+                "authoredSha256": "sha256:a4335162b32bc6d1b649eb30fde5f6711c9f406db58594998166449973b47d01"
+              },
+              {
+                "kind": "candidate",
+                "ref": "HEAD",
+                "sha256": "sha256:dae2c9e08523fc59be21e14cb55804ed6a3702e92fa5cea958866dba78975226"
+              },
+              {
+                "kind": "specification",
+                "ref": "records",
+                "sha256": "sha256:af2516b98507b96fc1a3168303c1a6a214880c78a020daf991bc03e0117b7495"
+              },
+              {
+                "kind": "documents",
+                "ref": "convergence",
+                "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+              },
+              {
+                "kind": "decisions",
+                "ref": "story",
+                "sha256": "sha256:ca916b5b57c22f5bad18df0d943c137c9fa5dae8c902a3c4e517087a2bb1e634"
+              }
+            ]
+          },
+          "selfApproval": true
+        }
+      ],
       "generationPublications": [
         {
           "generation": 1,
@@ -7328,12 +7416,14 @@
         {
           "path": "singularity/work-items/bin-opr2/artifacts/convergence/convergence.md",
           "kind": "document",
-          "status": "pending",
+          "status": "approved",
           "exists": true,
-          "size": 21200,
-          "sha256": "d921f18b137cd6b36f0051162f1df23ae1d8e073260f4b71bb73c12e0228d507",
+          "size": 24687,
+          "sha256": "a4cb6737b75c8bb66a32a6237a7163b56956eec5644bdcb824512935a0060e64",
           "registeredAt": "2026-11-06T13:43:45.672Z",
-          "updatedAt": "2026-11-06T13:46:01.227Z"
+          "updatedAt": "2026-11-06T13:48:27.110Z",
+          "approvedAt": "2026-11-06T13:48:27.104Z",
+          "approvedBy": "ashokraj2011"
         }
       ],
       "checks": [],
@@ -7362,7 +7452,7 @@
       "label": "Verification",
       "order": 4,
       "defaultAgent": "qa",
-      "status": "not_started",
+      "status": "in_progress",
       "requiredArtifact": {
         "path": "artifacts/verification/test-evidence.md",
         "kind": "test-evidence",
@@ -7465,7 +7555,7 @@
         }
       },
       "qualityCommands": [],
-      "startedAt": null,
+      "startedAt": "2026-11-06T13:48:27.104Z",
       "submittedAt": null,
       "approvedAt": null,
       "approvedBy": null,
@@ -7867,6 +7957,22 @@
       "event": "phase_submitted",
       "phase": "convergence",
       "detail": "1 artifacts"
+    },
+    {
+      "at": "2026-11-06T13:48:27.104Z",
+      "actor": "ashokraj2011",
+      "agent": null,
+      "event": "phase_self_approved",
+      "phase": "convergence",
+      "detail": "threshold reached; advanced to verification"
+    },
+    {
+      "at": "2026-11-06T13:48:27.141Z",
+      "actor": "system",
+      "agent": null,
+      "event": "work_interval_started",
+      "phase": "verification",
+      "detail": "baseline a03f9e1fb153 at dca862b75bc3"
     }
   ],
   "measurement": {
@@ -11285,27 +11391,157 @@
         },
         "createdAt": "2026-11-06T13:45:57.705Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "069e1708-3c20-4e20-8807-57369f35008d",
+        "type": "phase-approved",
+        "subject": {
+          "kind": "story",
+          "id": "bin-opr2",
+          "branch": "bin-opr2"
+        },
+        "phaseId": "convergence",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": null,
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "decision": "approved",
+          "reviewPacketSha256": "d2280567f48d52a308d54029edf1198cddd4347d7197813bc422dbd4bc5e5c27",
+          "evidenceCommit": "dca862b75bc33f0d3a66b778cbe294ed3e28a331",
+          "artifactSetSha256": "4bebf8287ab30db0190cef673b8f47ce414bb6a6f471b95d8c4fa7b6cb5905fc",
+          "witnessMappingsSha256": null
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-06T13:48:25.138Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "069e1708-3c20-4e20-8807-57369f35008d",
+        "eventType": "phase-approved",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "bin-opr2"
+          ],
+          "branch": "bin-opr2",
+          "canonicalBranch": "bin-opr2",
+          "createdAt": "2026-11-06T12:14:12.554Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "verification",
+          "generation": 1,
+          "phase": "convergence",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 4,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 1,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 4,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "verification",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "bin",
+          "updatedAt": "2026-11-06T13:48:27.141Z",
+          "workId": "bin-opr2",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": null,
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "941f398a5fec468916fc77322b77b18f3e9c7cb1423ce74d648a9e2906b74a2a",
+          "lifecycleEventId": "069e1708-3c20-4e20-8807-57369f35008d",
+          "lifecyclePayload": {
+            "decision": "approved",
+            "reviewPacketSha256": "d2280567f48d52a308d54029edf1198cddd4347d7197813bc422dbd4bc5e5c27",
+            "evidenceCommit": "dca862b75bc33f0d3a66b778cbe294ed3e28a331",
+            "artifactSetSha256": "4bebf8287ab30db0190cef673b8f47ce414bb6a6f471b95d8c4fa7b6cb5905fc",
+            "witnessMappingsSha256": null
+          },
+          "templateSha256": "eb257477afca0229ed858875499736c57498015aaee0a527b714356819a9dde2",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "069e1708-3c20-4e20-8807-57369f35008d",
+            "type": "phase-approved",
+            "subject": {
+              "kind": "story",
+              "id": "bin-opr2",
+              "branch": "bin-opr2"
+            },
+            "phaseId": "convergence",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": null,
+            "authorityGroup": "architecture-reviewers",
+            "payload": {
+              "decision": "approved",
+              "reviewPacketSha256": "d2280567f48d52a308d54029edf1198cddd4347d7197813bc422dbd4bc5e5c27",
+              "evidenceCommit": "dca862b75bc33f0d3a66b778cbe294ed3e28a331",
+              "artifactSetSha256": "4bebf8287ab30db0190cef673b8f47ce414bb6a6f471b95d8c4fa7b6cb5905fc",
+              "witnessMappingsSha256": null
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-06T13:48:25.138Z"
+          }
+        },
+        "createdAt": "2026-11-06T13:48:25.149Z"
+      }
     }
   ],
   "repairBudgets": {},
   "workIntervals": {
     "schemaVersion": 1,
     "current": {
-      "intervalId": "INT-implementation-G1-001",
-      "phaseId": "implementation",
+      "intervalId": "INT-verification-G1-002",
+      "phaseId": "verification",
       "generation": 1,
-      "baselineSha256": "03c606553eb7be29bfc38a4a09b9823a50e7dcf84eb0339b772b31d8bfa19e17",
-      "sourceBaseCommit": "02bccf1df31fa62e4d61e2c690b5f8a293f018db",
+      "baselineSha256": "a03f9e1fb15333ede6d9fb714b4db84c6fd236648fa4c34efa7f98c281e06e84",
+      "sourceBaseCommit": "dca862b75bc33f0d3a66b778cbe294ed3e28a331",
       "escalationTarget": null,
-      "path": "singularity/work-items/bin-opr2/context/work-intervals/implementation-gen1-baseline.json",
-      "status": "closed",
-      "finalReconciliation": {
-        "reconciliationSha256": "f28db7e023a42a42f1336dc00db5994d2f380f08a7a834fdcc7f04f07ea4187f",
-        "path": "singularity/work-items/bin-opr2/context/work-intervals/reconciliations/f28db7e023a42a42f1336dc00db5994d2f380f08a7a834fdcc7f04f07ea4187f.json",
-        "targetHead": "3d3dc5c217fb97a18c20ffde0afdfb88576a89b2",
-        "recordedAt": "2026-11-06T13:27:15.964Z"
-      },
-      "closedAt": "2026-11-06T13:41:22.930Z"
+      "path": "singularity/work-items/bin-opr2/context/work-intervals/verification-gen1-baseline.json",
+      "status": "open"
     },
     "history": [
       {
@@ -11316,6 +11552,16 @@
         "sourceBaseCommit": "02bccf1df31fa62e4d61e2c690b5f8a293f018db",
         "escalationTarget": null,
         "path": "singularity/work-items/bin-opr2/context/work-intervals/implementation-gen1-baseline.json",
+        "status": "open"
+      },
+      {
+        "intervalId": "INT-verification-G1-002",
+        "phaseId": "verification",
+        "generation": 1,
+        "baselineSha256": "a03f9e1fb15333ede6d9fb714b4db84c6fd236648fa4c34efa7f98c281e06e84",
+        "sourceBaseCommit": "dca862b75bc33f0d3a66b778cbe294ed3e28a331",
+        "escalationTarget": null,
+        "path": "singularity/work-items/bin-opr2/context/work-intervals/verification-gen1-baseline.json",
         "status": "open"
       }
     ],
