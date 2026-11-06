@@ -4,27 +4,51 @@
   "workId": "bin-opr2",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "a7fc3bbbb471cd12cdbd4b97d7930a3cb84d163d6dac87f49c16ef58b8de0ea0",
+      "bytes": 8472
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-06T12:34:14.891Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "b122d7a208b73477c32a40eac956653e5f839871",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "941f398a5fec468916fc77322b77b18f3e9c7cb1423ce74d648a9e2906b74a2a",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/bin-opr2/context/clarifications-specification-gen1.json",
+    "sha256": "e48438198783ccf09227631d606487694ab3455919a6e93ac4e7e2bcc383ab59",
+    "promptSha256": "892d4eec7f1ac577246fac7e3cb3617d14583a8bb3931b11ae10a54074853b5f",
+    "responses": 4,
+    "markers": [],
+    "recordedAt": "2026-11-06T12:31:41.677Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/bin-opr2/telemetry/specification-gen1.json",
+      "sha256": "8476cd24d1caa7f08d509bce038df47d5739e58d4be51583f72a9e035500b634",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 27839,
+        "estimatedTokens": 6960,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 27839,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-06T12:34:14.891Z",
+      "completedAt": "2026-11-06T12:34:14.891Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -86,11 +167,18 @@ exclusions. Do not introduce claims that are absent from the sections below. Exa
 boundary conditions are preserved separately by the governed projection.
 -->
 
-TODO: Write the Agent brief here as visible text; text inside the comment above is not read.
+The calculator user needs a button that converts the decimal value currently shown in the
+calculator display to its binary representation. The user indicated that all supported values are
+intended and confirmed that acceptance requires both Playwright test cases and screenshot/visual
+evidence. The exact treatment of negative and fractional values, including repeating binary
+fractions, remains unknown and is recorded as an open question. This specification does not
+authorize changes to unrelated calculator behavior.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+- **Calculator user:** selects the conversion button for the value currently shown.
+- **Test runner:** exercises the conversion flow with Playwright and captures screenshot/visual
+  evidence for acceptance.
 
 ## User scenarios
 
@@ -104,34 +192,33 @@ Self-check whether an implementation could meet this draft yet omit an explicit 
 clear omissions in this editable draft and recheck within the returned repair policy; preserve
 published inputs and settled answers. These are authoring instructions, not execution evidence. -->
 
-### S1 — <the most important situation, in the user's words>
+### S1 — Convert the value shown in the calculator
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Calculator user
+**Context:** The calculator displays a decimal value.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+- **Given** a decimal value is visible in the calculator display
+  **When** the user selects the conversion button
+  **Then** the calculator displays the binary representation of that value.
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
+### S2 — Verify the conversion
 
-### S2 — <the next situation>
+**Priority:** P1
+**Actor:** Test runner
+**Context:** The conversion behavior is available.
 
-**Priority:** P2
-
-- **Given** … **When** … **Then** …
+- **Given** the conversion button and a decimal value in the calculator display
+  **When** a Playwright test exercises the conversion and captures screenshot evidence
+  **Then** the test and screenshot/visual evidence show the conversion control and binary result.
 
 ## Failure and empty states
 
-What happens the first time, with nothing there yet, and when each step fails. These are where
-specifications are usually silent and implementations usually improvise.
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** No stored records are part of this feature. Behavior when the display has no value is
+  not specified by the Story.
+- **Failure:** No dependency failure behavior or error wording is specified.
+- **Partial:** No multi-step or persistence behavior is specified; partial completion is not
+  applicable to the stated conversion flow.
 
 ## Scenario coverage
 
@@ -142,28 +229,35 @@ prose. Use the pinned request and clarification answers; do not invent error tex
 
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `BIN-OPR2:REQ-001` | S1 | TODO |
-| `BIN-OPR2:REQ-002` | S2 | TODO |
-| `BIN-OPR2:AC-001` | S1 | TODO |
+| `BIN-OPR2:REQ-001` | S1 | success |
+| `BIN-OPR2:REQ-002` | S1 | success |
+| `BIN-OPR2:AC-001` | S2 | success |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+No feature-specific permission or role restriction is stated. The calculator user may invoke the
+conversion button under the application's existing access rules.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+The requested scope is “all” values, but the exact supported numeric domain and output precision
+are not established. Negative and fractional values, including repeating binary fractions, are
+covered by the open question below; this specification invents no numeric limits or rounding rule.
 
 ## Requirements
 
-Numbered, testable, one obligation each. Cite the scenario each serves.
+Numbered, testable obligations cite the scenario each serves.
 
-- <requirement>. *(S1)* [BIN-OPR2:REQ-001]
-- <requirement>. *(S1, S2)* [BIN-OPR2:REQ-002]
+- The calculator provides a button that converts the decimal value currently shown in its display
+  and displays that value's binary representation. *(S1)* [BIN-OPR2:REQ-001]
+- The conversion action is available for all decimal values supported and shown by the calculator.
+  *(S1)* [BIN-OPR2:REQ-002]
 
 Acceptance criteria use the same stable, namespaced form:
 
-- <observable acceptance outcome>. *(S1)* [BIN-OPR2:AC-001]
+- A Playwright test exercises the conversion flow, and screenshot/visual evidence shows the
+  conversion control and binary result. This covers the Story's “Screenshot playright testcases”
+  acceptance statement. *(S2)* [BIN-OPR2:AC-001] [scope:SRI-bfb83cd3d1fd]
 
 ## Verification intent
 
@@ -177,36 +271,42 @@ Planning must inherit these methods and cannot change them without an approved s
 
 | Clause | Methods | Criterion |
 |---|---|---|
-| `BIN-OPR2:REQ-001` | TODO | - |
-| `BIN-OPR2:REQ-002` | TODO | - |
-| `BIN-OPR2:AC-001` | TODO | `BIN-OPR2:AC-001` |
+| `BIN-OPR2:REQ-001` | test, visual | `BIN-OPR2:AC-001` |
+| `BIN-OPR2:REQ-002` | test | - |
+| `BIN-OPR2:AC-001` | test, visual | `BIN-OPR2:AC-001` |
 
 ## Non-functional requirements
 
-Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
-will be measured; "fast" is not a requirement.
-
-Use governed requirement anchors here too (for example `[BIN-OPR2:REQ-003]`); `NFR-001` by
-itself is only a display label and is not a stable clause identity.
+No non-functional requirement is stated in the pinned Story or recorded clarifications.
 
 ## Constitution articles
 
-Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
-cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
-
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-What this specification takes as true without proving. An assumption that turns out false is a
-change request, not a defect — which is only true if it was written down.
+- “Calc” means the existing calculator interface; the user confirmed the conversion is initiated by
+  a button.
+- “Value in display” means the decimal value currently shown when the user activates that button.
 
 ## Out of scope
 
-Named explicitly, so the boundary is reviewable rather than inferred.
+No changes to unrelated calculator operations or additional interfaces are requested. Application
+implementation is outside this specification-authoring phase.
 
 ## Sources
 
-Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
-offered to this phase that could not be read or was not available here, named as a gap. Without
-supporting documents, say so.
+The pinned Story source and the four recorded clarification replies for specification generation 1
+are the evidence used here. No supporting documents were offered to this phase.
+
+## Open questions
+
+- **Negative and fractional values, including repeating binary fractions:** The user answered
+  “unknown” when asked whether “all” includes negative/fractional values and how repeating binary
+  fractions should be represented. **Impact:** exact edge-case output and precision expectations
+  cannot yet be tested. **Owner:** Story owner/product owner to clarify before those cases are
+  treated as settled acceptance behavior.
+
+## Upstream discrepancies
+
+None identified; no approved earlier-phase inputs were provided.
