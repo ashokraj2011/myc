@@ -125,7 +125,13 @@
       {
         "clauseId": "BIN-OPR2:AC-001",
         "testSource": "tests/bin-conversion.spec.js",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": "playwright-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       }
     ],
     "witnesses": [
@@ -338,11 +344,26 @@
     ],
     "bindingsSha256": "sha256:63ed54374ea692781ab21a94e18b69aa8775b79bc9a56fd4c1baf5e7d7e677f9"
   },
-  "testExecutions": [],
+  "testExecutions": [
+    {
+      "commandId": ".-node-tests",
+      "attemptId": "TA-a7a5273abf00b880ba0b",
+      "receiptPath": "singularity/work-items/bin-opr2/context/code-delivery/tests/attempts/implementation/TA-a7a5273abf00b880ba0b.json",
+      "receiptSha256": "895ba19aaddaf032dcb35226df7bfff107e6e3a84f9fcfbde7e71a866f9d2ce2",
+      "status": "passed"
+    },
+    {
+      "commandId": "playwright-tests",
+      "attemptId": "TA-f5a99e08689408290e54",
+      "receiptPath": "singularity/work-items/bin-opr2/context/code-delivery/tests/attempts/implementation/TA-f5a99e08689408290e54.json",
+      "receiptSha256": "0bf00590e179956bdad96a980daead0589efb51a9c18269a8b0fc14d2dcba030",
+      "status": "passed"
+    }
+  ],
   "tree": {
     "workingStateDigest": "sha256:91ec53031f1bb2814bfeeba539d6c91049bd0d092049bed53655e4b7231e4e22",
-    "generationCommit": null,
-    "generationTree": null
+    "generationCommit": "9d9138dedbddfb1eefae951f7b41928e7c7b616e",
+    "generationTree": "18200fb6d6c6b997375298d96cea5d57f4a94a46"
   },
   "model": {
     "task": "code",
@@ -361,6 +382,7 @@
     "observedAt": null,
     "generation": null
   },
-  "status": "pending-tests",
-  "capturedAt": "2026-11-06T13:25:21.326Z"
+  "status": "ready",
+  "capturedAt": "2026-11-06T13:25:21.326Z",
+  "validatedAt": "2026-11-06T13:27:15.479Z"
 }

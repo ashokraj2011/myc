@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "bin-opr2",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G1-001",
+  "phaseId": "implementation",
+  "generation": 1,
+  "baselineSha256": "03c606553eb7be29bfc38a4a09b9823a50e7dcf84eb0339b772b31d8bfa19e17",
+  "baseline": {
+    "path": "singularity/work-items/bin-opr2/context/work-intervals/implementation-gen1-baseline.json",
+    "sha256": "03c606553eb7be29bfc38a4a09b9823a50e7dcf84eb0339b772b31d8bfa19e17",
+    "verified": true,
+    "sourceBaseCommit": "02bccf1df31fa62e4d61e2c690b5f8a293f018db"
+  },
+  "sourceBaseCommit": "02bccf1df31fa62e4d61e2c690b5f8a293f018db",
+  "target": {
+    "branch": "bin-opr2",
+    "head": "3d3dc5c217fb97a18c20ffde0afdfb88576a89b2",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": ".nvmrc",
+      "status": "present",
+      "sha256": "f14b4987904bcb5814e4459a057ed4d20f58a633152288a761214dcd28780b56",
+      "bytes": 3,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "package-lock.json",
+      "status": "present",
+      "sha256": "903587964c05b2402a86d059a9e7dd8ab0a53c968f358a3c09268e06cd2f89b6",
+      "bytes": 126376,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "package.json",
+      "status": "present",
+      "sha256": "9b8c6c3020b8849c2cb99592211076fa70f2e7701e01d05a1d51bab1e8da81bc",
+      "bytes": 939,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "playwright.config.js",
+      "status": "present",
+      "sha256": "a078ac4c1032d5e43a6a98048e83b2adf61c2421a33af12fc67036d018ca4bad",
+      "bytes": 451,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "src/App.jsx",
+      "status": "present",
+      "sha256": "9851e5c0838c794fd6ff4eb177c8de82ebc6a78e68ec5daec8627776b9ffad47",
+      "bytes": 11533,
+      "verdict": "planned",
+      "clauseIds": [
+        "BIN-OPR2:REQ-001",
+        "BIN-OPR2:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/components/StandardKeypad.jsx",
+      "status": "present",
+      "sha256": "df8a4e8bb5b4bf313f74a60824f83bac700df04507ff14aec3150e663aa23884",
+      "bytes": 6753,
+      "verdict": "planned",
+      "clauseIds": [
+        "BIN-OPR2:REQ-001"
+      ],
+      "protected": false
+    },
+    {
+      "path": "tests/bin-conversion.spec.js",
+      "status": "present",
+      "sha256": "1f491de50f7ef19b10dc53ba61f8cac9ee00a2af8d37945eb316787dbbcb4b43",
+      "bytes": 2401,
+      "verdict": "planned",
+      "clauseIds": [
+        "BIN-OPR2:AC-001",
+        "BIN-OPR2:REQ-001",
+        "BIN-OPR2:REQ-002"
+      ],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 7,
+    "planned": 3,
+    "unplanned": 4,
+    "protected": 0
+  },
+  "decision": {
+    "status": "review",
+    "summaryStatus": "attention",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "f28db7e023a42a42f1336dc00db5994d2f380f08a7a834fdcc7f04f07ea4187f",
+  "reconciledAt": "2026-11-06T13:27:15.963Z",
+  "final": true,
+  "recordedAt": "2026-11-06T13:27:15.964Z",
+  "path": "singularity/work-items/bin-opr2/context/work-intervals/reconciliations/f28db7e023a42a42f1336dc00db5994d2f380f08a7a834fdcc7f04f07ea4187f.json"
+}

@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 5,
+  "kind": "test-execution",
+  "attemptId": "TA-f5a99e08689408290e54",
+  "nonce": "ce13e847327ef772ab84711b8226df07",
+  "parentAttemptId": "TA-2548eb22b9a3fa10bac4",
+  "purpose": "submission",
+  "workId": "bin-opr2",
+  "phase": "implementation",
+  "generation": 1,
+  "commandId": "playwright-tests",
+  "commandSha256": "sha256:6d98c29c94909555b78d1c3d1304755b2c9b8d8346941b0e792eb7340854441c",
+  "argvSha256": "e9c3f81587b101b6b2e6a7ea683e36eedcd03c26a244cfed81fb433fd5b4598c",
+  "selection": {
+    "selection": "complete",
+    "gaps": [],
+    "selectionSha256": "sha256:039da759343cefbe790fa07d5890dfc79e172fc47cc0799b373bd49048c130bb"
+  },
+  "environment": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "ci": "1",
+    "removed": [],
+    "declaredSha256": null,
+    "toolchain": {
+      "node": "22.14.0",
+      "npm": "10.9.2",
+      "playwright": "1.65.0"
+    },
+    "nodeVersion": {
+      "file": ".nvmrc",
+      "wanted": "22",
+      "status": "selected",
+      "node": "22.14.0",
+      "manager": "Homebrew"
+    },
+    "host": "node 26.12.0"
+  },
+  "environmentSha256": "sha256:44451f3e76fcbf68a26977dd5221903cd3f6558e3ac240b1983b320f04d9873e",
+  "platform": "darwin",
+  "workingDirectory": ".",
+  "affectedRoots": [
+    "."
+  ],
+  "adapter": "playwright-json",
+  "profile": "playwright-json-v1",
+  "candidate": {
+    "commit": "9d9138dedbddfb1eefae951f7b41928e7c7b616e",
+    "treeSha256": "sha256:91ec53031f1bb2814bfeeba539d6c91049bd0d092049bed53655e4b7231e4e22"
+  },
+  "process": {
+    "status": "passed",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "infrastructureUnavailable": false,
+    "startedAt": "2026-11-06T13:26:23.426Z",
+    "completedAt": "2026-11-06T13:26:27.881Z"
+  },
+  "status": "passed",
+  "terminal": true,
+  "exitCode": 0,
+  "timedOut": false,
+  "skipped": false,
+  "suppressed": false,
+  "tests": {
+    "discovered": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0
+  },
+  "result": {
+    "path": ".sflow/results/playwright-tests.json",
+    "sha256": "a2a373e6c1cefdb1c486f74ee2146be3262c387400aebed9c63233eb7723bba1",
+    "bytes": 4315,
+    "files": [
+      {
+        "sourcePath": ".sflow/results/playwright-tests.json",
+        "sha256": "a2a373e6c1cefdb1c486f74ee2146be3262c387400aebed9c63233eb7723bba1",
+        "bytes": 4315
+      }
+    ]
+  },
+  "rawReports": [
+    {
+      "path": "singularity/work-items/bin-opr2/context/code-delivery/tests/raw/a2a373e6c1cefdb1c486f74ee2146be3262c387400aebed9c63233eb7723bba1.bin",
+      "sha256": "a2a373e6c1cefdb1c486f74ee2146be3262c387400aebed9c63233eb7723bba1",
+      "bytes": 4315
+    }
+  ],
+  "occurrences": [
+    {
+      "suitePath": [],
+      "name": "converts whole and fractional values and captures visual evidence",
+      "file": "bin-conversion.spec.js",
+      "line": 18,
+      "outcome": "passed",
+      "durationMs": 2260
+    }
+  ],
+  "reportError": null,
+  "assurance": "module-executed",
+  "reusedFrom": {
+    "attemptId": "TA-2548eb22b9a3fa10bac4",
+    "phase": "implementation",
+    "generation": 2,
+    "purpose": "local",
+    "at": "2026-11-06T13:27:15.187Z"
+  },
+  "pin": {
+    "commandId": "playwright-tests",
+    "source": {
+      "kind": "inferred"
+    },
+    "argv": [
+      "npm",
+      "run",
+      "test:e2e",
+      "--",
+      "--reporter=json"
+    ],
+    "workingDirectory": ".",
+    "affectedRoots": [
+      "."
+    ],
+    "adapter": "playwright-json",
+    "definition": [
+      {
+        "path": "package.json",
+        "selector": "scripts.test:e2e",
+        "sha256": "cfd10b01d174664b54cfcac2326926df03a15051afb6e7af180bbcf265789612"
+      },
+      {
+        "path": "playwright.config.js",
+        "selector": null,
+        "sha256": "a078ac4c1032d5e43a6a98048e83b2adf61c2421a33af12fc67036d018ca4bad"
+      },
+      {
+        "path": "vite.config.js",
+        "selector": null,
+        "sha256": "22585fc2be374450c9a7342fe4b5a22b30fce9d9db77def4b2d45302997b2eee"
+      }
+    ],
+    "definitionVersion": 2,
+    "sha256": "sha256:b75abc631d38c1aae03ee5395538d19a2bd75ee80249f4cda050350bbb8ebd56"
+  },
+  "narrowing": {
+    "reasons": [],
+    "filters": [],
+    "focused": [],
+    "skipped": 0,
+    "discovered": 1,
+    "baseline": 1,
+    "shortfall": 0
+  }
+}
