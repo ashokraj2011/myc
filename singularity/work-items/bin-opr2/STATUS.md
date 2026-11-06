@@ -19,10 +19,11 @@
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
 | 5 | Verification (`verification`) | qa | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
-| 6 | Release (`release`) | qa | **in_progress** | 0 | 0 | unavailable |
+| 6 | Release (`release`) | qa | **in_progress** | 1 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-11-06T13:55:28.304Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 1
 - 2026-11-06T13:53:02.691Z — **phase_self_approved** (verification) by ashokraj2011 · agent qa: threshold reached; advanced to release
 - 2026-11-06T13:53:02.691Z — **work_interval_closed** (verification) by ashokraj2011 · agent qa: interval INT-verification-G1-002 closed after phase approval
 - 2026-11-06T13:51:19.371Z — **phase_submitted** (verification) by ashokraj2011 · agent qa: 1 artifacts
@@ -37,4 +38,3 @@
 - 2026-11-06T13:27:15.965Z — **phase_submitted** (implementation) by ashokraj2011 · agent developer: 8 artifacts
 - 2026-11-06T13:27:15.964Z — **work_interval_reconciled** (implementation) by system: review; 7 changed path(s)
 - 2026-11-06T13:26:53.408Z — **witness_recorded** (implementation) by ashokraj2011 · agent developer: WIT-001: visual of singularity/work-items/bin-opr2/evidence/bin-conversion-composite.png for BIN-OPR2:AC-001 slot conversion-screen satisfies it. looks same i love this
-- 2026-11-06T13:25:21.837Z — **phase_generated** (implementation) by ashokraj2011 · agent developer: generation 1
