@@ -1,0 +1,148 @@
+{
+  "allowedNext": [
+    "advance-to-verification"
+  ],
+  "bindings": {
+    "clauseIndexSha256": [
+      "38b3255141d487741b937b5a1c8edab40a921a2b45fdbe66181c45e447412078"
+    ],
+    "configurationRevision": "2273474f62fb3b3fa54b69a3b049f5f521028741",
+    "configurationSha256": "ece34bebf699bd016761306f85eb0a38c9eb13e453e52f100944569c96215590",
+    "constitutionSha256": null,
+    "evidenceSha256": [],
+    "iteration": 1,
+    "observedClaimsSha256": [
+      "a99b12c1da60bbe6c13eaea1040ae57213006bc08f21be421b5d155340fb8920"
+    ],
+    "plannedClaimsSha256": [
+      "86432ea69e88f67fd8c1aa296bf90cf4bf5ce071d1525c8dcf134bf664494be0",
+      "ef955c6703e18e1069da014ce0b8f4e8295c6adc772ada74d056406e66cc3438"
+    ],
+    "planning": {
+      "generation": 1,
+      "sha256": "cf4625b7d2fb98ba98b26b3905a5b26e21d73c1b1f2bcbd6b3f79b1742735264"
+    },
+    "reconciliation": {
+      "intervalId": "INT-implementation-G1-001",
+      "path": "singularity/work-items/bin-opr/context/work-intervals/reconciliations/77967b812ebb33eff735dcba4777271e5cd646fd0b077b592be1594bb0617bcb.json",
+      "sha256": "77967b812ebb33eff735dcba4777271e5cd646fd0b077b592be1594bb0617bcb"
+    },
+    "sourceBaseCommit": "dcafc075901060b88ce1da7963e57431ac72956f",
+    "sourceTargetCommit": "5babc96eb6e10137fa24f9053e9a90969b4a7159",
+    "specification": {
+      "generation": 1,
+      "sha256": "85f42fda9c03b700a2fac0b369d3c88d80e0e7cea3e09bb2e9e07ccecf3d4625"
+    }
+  },
+  "candidateRecordBindings": [],
+  "candidateRecords": [],
+  "candidateSnapshot": [],
+  "candidates": [],
+  "convergenceSha256": "e3f140f19345c3e5742490920a5769ce34c08242222d6f5d0b690bc3cadc50b7",
+  "facts": [
+    {
+      "clauseIds": [],
+      "detail": "package.json changed and no observed claim cites it; this is missing trace evidence, not a finding that the change was unplanned",
+      "evidence": [],
+      "id": "CF-21034d278357",
+      "kind": "unclaimed-changed-path",
+      "paths": [
+        "package.json"
+      ]
+    },
+    {
+      "clauseIds": [],
+      "detail": "package-lock.json changed and no observed claim cites it; this is missing trace evidence, not a finding that the change was unplanned",
+      "evidence": [],
+      "id": "CF-418b395c70fc",
+      "kind": "unclaimed-changed-path",
+      "paths": [
+        "package-lock.json"
+      ]
+    },
+    {
+      "clauseIds": [],
+      "detail": "playwright.config.js changed and no observed claim cites it; this is missing trace evidence, not a finding that the change was unplanned",
+      "evidence": [],
+      "id": "CF-82d0ecf747f0",
+      "kind": "unclaimed-changed-path",
+      "paths": [
+        "playwright.config.js"
+      ]
+    },
+    {
+      "clauseIds": [],
+      "detail": "src/test/setup.js changed and no observed claim cites it; this is missing trace evidence, not a finding that the change was unplanned",
+      "evidence": [],
+      "id": "CF-d481d2555b77",
+      "kind": "unclaimed-changed-path",
+      "paths": [
+        "src/test/setup.js"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "classification": null,
+      "clauseIds": [],
+      "decision": {
+        "actor": "ashokraj2011",
+        "at": "2026-11-06T06:25:01.660Z",
+        "reason": "part of test setup"
+      },
+      "disposition": "accepted-deviation",
+      "id": "GF-8a3cd62756af",
+      "itemId": "CF-418b395c70fc",
+      "kind": "unclaimed-changed-path",
+      "source": "deterministic"
+    },
+    {
+      "classification": null,
+      "clauseIds": [],
+      "decision": {
+        "actor": "ashokraj2011",
+        "at": "2026-11-06T06:25:25.484Z",
+        "reason": "part of playright setup"
+      },
+      "disposition": "accepted-deviation",
+      "id": "GF-a28b04054fae",
+      "itemId": "CF-82d0ecf747f0",
+      "kind": "unclaimed-changed-path",
+      "source": "deterministic"
+    },
+    {
+      "classification": null,
+      "clauseIds": [],
+      "decision": {
+        "actor": "ashokraj2011",
+        "at": "2026-11-06T06:25:45.402Z",
+        "reason": "test setup conf done"
+      },
+      "disposition": "accepted-deviation",
+      "id": "GF-c9ec1729e88e",
+      "itemId": "CF-d481d2555b77",
+      "kind": "unclaimed-changed-path",
+      "source": "deterministic"
+    },
+    {
+      "classification": null,
+      "clauseIds": [],
+      "decision": {
+        "actor": "ashokraj2011",
+        "at": "2026-11-06T06:22:30.488Z",
+        "reason": "it is part of the test setup"
+      },
+      "disposition": "accepted-deviation",
+      "id": "GF-cf6d3fc60339",
+      "itemId": "CF-21034d278357",
+      "kind": "unclaimed-changed-path",
+      "source": "deterministic"
+    }
+  ],
+  "iteration": 1,
+  "legacyMigration": null,
+  "resultType": "convergence",
+  "schemaVersion": 4,
+  "unresolvedBlockers": [],
+  "workId": "bin-opr"
+}
