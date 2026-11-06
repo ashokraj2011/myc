@@ -1,0 +1,119 @@
+{
+  "allowedNext": [
+    "advance-to-verification"
+  ],
+  "bindings": {
+    "clauseIndexSha256": [
+      "577e604424dad8cabfa1f1024648b41ba76f5bf4d20c3310687e5bb44b8de233"
+    ],
+    "configurationRevision": "128443b85021e4b21d3436ede75d359415daa09a",
+    "configurationSha256": "941f398a5fec468916fc77322b77b18f3e9c7cb1423ce74d648a9e2906b74a2a",
+    "constitutionSha256": null,
+    "evidenceSha256": [],
+    "iteration": 1,
+    "observedClaimsSha256": [
+      "4c660bd30bc0c7793c6d0457875f4b01c87220d8dfb63c3e55ddd371c60b9078"
+    ],
+    "plannedClaimsSha256": [
+      "a7e5b2e5af1e4b012477152aabff5ad3ede8bcc07e278256cb9eade078973843",
+      "d1152fb3fd9a515e24306aa47b4fbf4f3ae536177c2ef0d5bb47bc4565288e71"
+    ],
+    "planning": {
+      "generation": 4,
+      "sha256": "c04b38dc494d2cfe4a78673da87c494c76f03ea9797472e71828fefbb7084b50"
+    },
+    "reconciliation": {
+      "intervalId": "INT-implementation-G1-001",
+      "path": "singularity/work-items/bin-opr2/context/work-intervals/reconciliations/f28db7e023a42a42f1336dc00db5994d2f380f08a7a834fdcc7f04f07ea4187f.json",
+      "sha256": "f28db7e023a42a42f1336dc00db5994d2f380f08a7a834fdcc7f04f07ea4187f"
+    },
+    "sourceBaseCommit": "02bccf1df31fa62e4d61e2c690b5f8a293f018db",
+    "sourceTargetCommit": "3d3dc5c217fb97a18c20ffde0afdfb88576a89b2",
+    "specification": {
+      "generation": 2,
+      "sha256": "efb3ddb29ce77b2bea87b91c897edd6f8f328ae09c172a03e1758795e6591bd4"
+    }
+  },
+  "candidateRecordBindings": [],
+  "candidateRecords": [],
+  "candidateSnapshot": [],
+  "candidates": [],
+  "convergenceSha256": "cc9b231ebe73847deaa935cb3634e640eb2ec1a31f58ff2ebdc9053289f7fd2b",
+  "facts": [],
+  "findings": [],
+  "iteration": 1,
+  "legacyMigration": null,
+  "resultType": "convergence",
+  "schemaVersion": 5,
+  "settledByPlan": [
+    {
+      "clauseIds": [],
+      "detail": "package.json changed and no observed claim cites it; this is missing trace evidence, not a finding that the change was unplanned",
+      "evidence": [],
+      "id": "CF-21034d278357",
+      "kind": "unclaimed-changed-path",
+      "paths": [
+        "package.json"
+      ],
+      "settledBy": {
+        "class": "build-configuration",
+        "generation": 4,
+        "kind": "supporting",
+        "phase": "planning",
+        "text": "add the Playwright test command and browser-test dependency."
+      }
+    },
+    {
+      "clauseIds": [],
+      "detail": "package-lock.json changed and no observed claim cites it; this is missing trace evidence, not a finding that the change was unplanned",
+      "evidence": [],
+      "id": "CF-418b395c70fc",
+      "kind": "unclaimed-changed-path",
+      "paths": [
+        "package-lock.json"
+      ],
+      "settledBy": {
+        "class": "dependency-lock",
+        "generation": 4,
+        "kind": "supporting",
+        "phase": "planning",
+        "text": "lock the declared Playwright dependency."
+      }
+    },
+    {
+      "clauseIds": [],
+      "detail": "playwright.config.js changed and no observed claim cites it; this is missing trace evidence, not a finding that the change was unplanned",
+      "evidence": [],
+      "id": "CF-82d0ecf747f0",
+      "kind": "unclaimed-changed-path",
+      "paths": [
+        "playwright.config.js"
+      ],
+      "settledBy": {
+        "class": "build-configuration",
+        "generation": 4,
+        "kind": "supporting",
+        "phase": "planning",
+        "text": "configure the local Vite application and browser test execution."
+      }
+    },
+    {
+      "clauseIds": [],
+      "detail": ".nvmrc changed and no observed claim cites it; this is missing trace evidence, not a finding that the change was unplanned",
+      "evidence": [],
+      "id": "CF-fcfa04dc67b1",
+      "kind": "unclaimed-changed-path",
+      "paths": [
+        ".nvmrc"
+      ],
+      "settledBy": {
+        "class": "build-configuration",
+        "id": "PAM-001",
+        "kind": "amendment",
+        "text": "Tests need Node 22; Vitest's jsdom fails on Node 26."
+      }
+    }
+  ],
+  "unresolvedBlockers": [],
+  "workId": "bin-opr2"
+}
