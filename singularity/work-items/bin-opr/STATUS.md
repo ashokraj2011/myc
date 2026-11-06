@@ -20,6 +20,7 @@
 
 ## Recent history
 
+- 2026-11-06T06:13:22.189Z — **plan_amended** (implementation) by ashokraj2011 · agent developer: PAM-001: src/test/setup.js added to BIN-OPR:REQ-001. Test-only: gives the Vitest suite a localStorage stand-in; no product behaviour changes.
 - 2026-11-06T05:49:36.995Z — **witness_recorded** (implementation) by ashokraj2011 · agent developer: WIT-001: visual of singularity/work-items/bin-opr/evidence/binary-conversion.png for BIN-OPR:AC-001 slot converted-display satisfies it. good to go come
 - 2026-11-06T05:42:19.560Z — **phase_submitted** (implementation) by ashokraj2011 · agent developer: 8 artifacts
 - 2026-11-06T05:42:19.560Z — **work_interval_reconciled** (implementation) by system: review; 7 changed path(s)

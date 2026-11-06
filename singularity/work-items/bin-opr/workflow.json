@@ -6691,6 +6691,14 @@
       "event": "witness_recorded",
       "phase": "implementation",
       "detail": "WIT-001: visual of singularity/work-items/bin-opr/evidence/binary-conversion.png for BIN-OPR:AC-001 slot converted-display satisfies it. good to go come"
+    },
+    {
+      "at": "2026-11-06T06:13:22.189Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "plan_amended",
+      "phase": "implementation",
+      "detail": "PAM-001: src/test/setup.js added to BIN-OPR:REQ-001. Test-only: gives the Vitest suite a localStorage stand-in; no product behaviour changes."
     }
   ],
   "measurement": {
@@ -8524,6 +8532,137 @@
         },
         "createdAt": "2026-11-06T05:49:35.813Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "2606cb03-743b-45a8-a834-d992c3ef438c",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "bin-opr",
+          "branch": "bin-opr"
+        },
+        "phaseId": "implementation",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "decision": "plan",
+          "reviewPacketSha256": null,
+          "amendment": "PAM-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-06T06:13:21.169Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "2606cb03-743b-45a8-a834-d992c3ef438c",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "bin-opr"
+          ],
+          "branch": "bin-opr",
+          "canonicalBranch": "bin-opr",
+          "createdAt": "2026-11-06T03:39:47.734Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 1,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 0,
+              "awaiting_approval": 1,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "awaiting_approval",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "bimary",
+          "updatedAt": "2026-11-06T06:13:22.189Z",
+          "workId": "bin-opr",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "ece34bebf699bd016761306f85eb0a38c9eb13e453e52f100944569c96215590",
+          "lifecycleEventId": "2606cb03-743b-45a8-a834-d992c3ef438c",
+          "lifecyclePayload": {
+            "decision": "plan",
+            "reviewPacketSha256": null,
+            "amendment": "PAM-001"
+          },
+          "templateSha256": "2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "2606cb03-743b-45a8-a834-d992c3ef438c",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "bin-opr",
+              "branch": "bin-opr"
+            },
+            "phaseId": "implementation",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "architecture-reviewers",
+            "payload": {
+              "decision": "plan",
+              "reviewPacketSha256": null,
+              "amendment": "PAM-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-06T06:13:21.169Z"
+          }
+        },
+        "createdAt": "2026-11-06T06:13:21.170Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -8715,6 +8854,23 @@
       "authorityGroup": "engineering-reviewers",
       "identityAssurance": "configured-local",
       "at": "2026-11-06T05:49:36.995Z"
+    }
+  ],
+  "planAmendments": [
+    {
+      "id": "PAM-001",
+      "changes": [
+        {
+          "kind": "add-location",
+          "clauseId": "BIN-OPR:REQ-001",
+          "path": "src/test/setup.js"
+        }
+      ],
+      "reason": "Test-only: gives the Vitest suite a localStorage stand-in; no product behaviour changes.",
+      "actor": "ashokraj2011",
+      "authorityGroup": "architecture-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-06T06:13:22.189Z"
     }
   ]
 }
