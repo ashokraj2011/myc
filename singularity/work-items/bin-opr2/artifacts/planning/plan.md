@@ -4,7 +4,7 @@
   "workId": "bin-opr2",
   "workType": "spec-driven-standard",
   "phase": "planning",
-  "generation": 2,
+  "generation": 3,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "plan.md",
       "mediaType": "text/markdown",
-      "sha256": "32551c4ba8eb0ce991234f2fe3a4dce387227d4cf0743d70c2bd74f521812615",
-      "bytes": 10865
+      "sha256": "49f957be8e92bf49b37a1184193f76765132c473ae6d7977bb57c81951789d6a",
+      "bytes": 11230
     },
-    "generation": 2,
-    "publishedAt": "2026-11-06T12:54:33.814Z"
+    "generation": 3,
+    "publishedAt": "2026-11-06T12:58:43.129Z"
   },
-  "sourceCommit": "d22f657b2a9bcd09606d91dbe563a0c772b8cb1a",
+  "sourceCommit": "cc68c331abffd83debbb47508de64a5b288d959d",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "941f398a5fec468916fc77322b77b18f3e9c7cb1423ce74d648a9e2906b74a2a",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/spec-driven/plan.md"
   },
   "inputs": {
-    "generation": 2,
-    "path": "singularity/work-items/bin-opr2/context/inputs-planning-gen2.json",
-    "sha256": "01e80244f21d375b98cc010e3d47fc158316311c87a873e4974303803271a3ab",
+    "generation": 3,
+    "path": "singularity/work-items/bin-opr2/context/inputs-planning-gen3.json",
+    "sha256": "cad305493ddbb0f152297b59f64eaf7d5c38a15c340bce7e7f6532e4d461ef2a",
     "renderedSha256": "97f13c97b7f455c1ba4f90cf41f6f297d39846fe537dcba44acdde0afe40d07f",
     "mode": "enforce"
   },
@@ -100,6 +100,26 @@
       "status": "pending",
       "models": [],
       "providerCost": null,
+      "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 3,
+      "path": "singularity/work-items/bin-opr2/telemetry/planning-gen3.json",
+      "sha256": "ed1013464b75056f89f24fcabff4b42a1bf3c7e262ae278532ce3a29c868a94f",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 31806,
+        "estimatedTokens": 7952,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 31806,
+        "omittedSections": 0
+      },
       "captureGap": "no-metered-session"
     }
   ],
@@ -146,6 +166,27 @@
       "completedAt": "2026-11-06T12:54:33.814Z",
       "agent": "architect",
       "generation": 2
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-06T12:58:43.128Z",
+      "completedAt": "2026-11-06T12:58:43.128Z",
+      "agent": "architect",
+      "generation": 3
     }
   ],
   "sequenceOverrides": [],
@@ -171,8 +212,9 @@ The complete approved plan remains available through its hash-bound expansion re
 Add a conversion action to the existing Standard calculator keypad and handle it in `src/App.jsx`
 using the current displayed decimal value. Keep the change local to Standard mode; preserve existing
 arithmetic, history, keyboard, and other calculator modes. Cover positive/negative integers and
-decimals with up to two decimal places in a Playwright browser test, and retain a screenshot at the
-planned Story evidence path for the required human visual review. The main risks are
+decimals with up to two decimal places in a Playwright browser test. Capture separate whole-number
+and decimal browser states, then compose them side by side into one retained image that clearly
+shows the conversion control and binary result for both cases. The main risks are
 conversion precision/sign errors and adding E2E tooling to a project that currently declares only
 Vitest; protect against regressions with focused conversion cases and the existing test/build suite.
 
@@ -211,10 +253,12 @@ narrow plan amendment or private preservation; they never require rewriting this
 1. Add the conversion action and callback wiring to `src/App.jsx` and
    `src/components/StandardKeypad.jsx`; this enables direct user invocation of the conversion.
 2. Add Playwright configuration and `tests/bin-conversion.spec.js`, including supported positive
-   and negative whole-number and decimal cases, and capture the browser state with the button and
-   binary output visible.
+   and negative whole-number and decimal cases. Capture a whole-number state and a decimal state
+   separately, then compose the two captures side by side into one image showing each state’s
+   conversion control and binary output.
 3. Run the focused Playwright test, then the existing Vitest suite and production build. Preserve
-   the screenshot from runner output at the exact Story evidence path listed in the clause table.
+   the composite screenshot from runner output at the exact Story evidence path listed in the
+   clause table; never write a transient test capture directly to the retained evidence path.
 
 ## Test strategy
 
@@ -242,7 +286,7 @@ not an exemption; human visual acceptance remains separate. Inherit all Specific
 
 | Clause | Expected paths | Planned tests | Fulfillment | Observable result |
 |---|---|---|---|---|
-| `BIN-OPR2:AC-001` | `singularity/work-items/bin-opr2/evidence/bin-conversion.png` | `tests/bin-conversion.spec.js` | evidence | Playwright exercises supported conversions; the retained screenshot shows the conversion control and binary results for whole-number and decimal inputs. |
+| `BIN-OPR2:AC-001` | `singularity/work-items/bin-opr2/evidence/bin-conversion-composite.png` | `tests/bin-conversion.spec.js` | evidence | The retained side-by-side composite shows the conversion control and binary output for both a whole-number case and a decimal case exercised by Playwright. |
 | `BIN-OPR2:REQ-001` | `src/App.jsx` `src/components/StandardKeypad.jsx` | `tests/bin-conversion.spec.js` | modified | The Standard calculator exposes a button that converts the decimal value currently displayed and shows its binary representation. |
 | `BIN-OPR2:REQ-002` | `src/App.jsx` | `tests/bin-conversion.spec.js` | modified | Positive and negative whole and up-to-two-place decimal inputs convert; negatives have a leading minus, and fractional output has exactly two binary digits truncated after that precision. |
 
@@ -273,7 +317,7 @@ an inspection or visual witness. For example (a fenced example is never read as 
 | Criterion | Slot | Method | Witness | Role | Required assurance |
 |---|---|---|---|---|---|
 | `BIN-OPR2:AC-001` | browser-test | test | `tests/bin-conversion.spec.js` | primary | module-observed |
-| `BIN-OPR2:AC-001` | conversion-screen | visual | `Standard calculator display showing the conversion control and binary results` | primary | source-bound |
+| `BIN-OPR2:AC-001` | conversion-screen | visual | `Side-by-side Playwright captures showing the Standard calculator conversion control and binary results for whole-number and decimal cases` | primary | source-bound |
 
 ## Supporting files
 
