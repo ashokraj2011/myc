@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "phase": "planning",
+  "generation": 1,
+  "reportSha256": "ba3d685f6147397a7d12e28908cad0817d94d4cc3cf0525291131f2e8b5ac261",
+  "lifecycleEventId": "f4f32989-be32-4991-bc7f-3f0224daed67",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "planning",
+    "binding": {
+      "workId": "bin-opr",
+      "phase": "planning",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/bin-opr/USER-STORY.md",
+          "textSha256": "db7f10ce23ba307e7e60fd06de65fe4cb07e91e3181a2c6c0a849c8f716f7f88",
+          "originalSha256": "a3d8f1190123768f13760c60fc40fc74f3b1b07c392dfc8fd656ae5c7d4e3a89"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:approved-scope",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/bin-opr/context/clarifications-specification-gen1.json",
+          "sha256": "eba8e407e552aab7821f2999961f58b99cacbbc7143243f0a108f655750dc39e"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/bin-opr/artifacts/planning/plan.md",
+        "sha256": "37ed06320ec3c82d894cc71b1e7d5dee4659b418c25203612e1bb4c7d9adff36"
+      },
+      "upstreamSpec": {
+        "path": "singularity/work-items/bin-opr/artifacts/specification/spec.md",
+        "sha256": "b59cf7bfca2806d78c6ab5da695fbf38d4aeac7a5296b5aa24303a827f0ee401"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:approved-scope"
+    ],
+    "rows": [
+      {
+        "clauseId": "BIN-OPR:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx"
+        ],
+        "plannedTests": [
+          "e2e/binary-conversion.spec.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "new",
+        "observableResult": "The user activates the conversion button and the action uses the calculator's current displayed value",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "BIN-OPR:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx"
+        ],
+        "plannedTests": [
+          "e2e/binary-conversion.spec.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "new",
+        "observableResult": "The binary representation appears alongside the calculator display",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "BIN-OPR:AC-001",
+        "expectedPaths": [
+          "singularity/work-items/bin-opr/evidence/binary-conversion.png"
+        ],
+        "plannedTests": [
+          "e2e/binary-conversion.spec.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "evidence",
+        "observableResult": "Playwright demonstrates the user converting the current displayed value and the retained screenshot shows the binary output alongside it",
+        "assessment": "supported"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "0a3aa938dc74e28fa2e914fd2b999b0f51973b59dd454b19936a76d395c783bb",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "architect",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-06T05:12:11.395Z",
+  "recordSha256": "c6861436a98f78301159608115528b5c3ca2a95a3424ca4365bc6203e2f54319"
+}
