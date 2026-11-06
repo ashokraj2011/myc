@@ -5,7 +5,7 @@
 - Capability: **calc** (`raj-calc`)
 - Capability map: `a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d`
 - Overall status: **in_progress**
-- Current phase: **verification**
+- Current phase: **release**
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
@@ -17,11 +17,14 @@
 |  | ⚠ self-approval | Ashok Raj via engineering-reviewers; agent developer | **warning** |  |  |  |
 | 4 | Convergence (`convergence`) | architect | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
-| 5 | Verification (`verification`) | qa | **awaiting_approval** | 1 | 0 | unavailable |
-| 6 | Release (`release`) | qa | **not_started** | 0 | 0 | unavailable |
+| 5 | Verification (`verification`) | qa | **approved** | 1 | 1 | unavailable |
+|  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
+| 6 | Release (`release`) | qa | **in_progress** | 0 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-11-06T08:10:01.936Z — **phase_self_approved** (verification) by ashokraj2011 · agent qa: threshold reached; advanced to release
+- 2026-11-06T08:10:01.936Z — **work_interval_closed** (verification) by ashokraj2011 · agent qa: interval INT-verification-G1-002 closed after phase approval
 - 2026-11-06T08:05:25.441Z — **phase_submitted** (verification) by ashokraj2011 · agent qa: 1 artifacts
 - 2026-11-06T08:05:25.441Z — **work_interval_reconciled** (verification) by system: aligned; 0 changed path(s)
 - 2026-11-06T08:03:59.120Z — **phase_generated** (verification) by ashokraj2011 · agent qa: generation 1
@@ -35,5 +38,3 @@
 - 2026-11-06T05:49:36.995Z — **witness_recorded** (implementation) by ashokraj2011 · agent developer: WIT-001: visual of singularity/work-items/bin-opr/evidence/binary-conversion.png for BIN-OPR:AC-001 slot converted-display satisfies it. good to go come
 - 2026-11-06T05:42:19.560Z — **phase_submitted** (implementation) by ashokraj2011 · agent developer: 8 artifacts
 - 2026-11-06T05:42:19.560Z — **work_interval_reconciled** (implementation) by system: review; 7 changed path(s)
-- 2026-11-06T05:31:36.376Z — **phase_generated** (implementation) by ashokraj2011 · agent developer: generation 1
-- 2026-11-06T05:17:13.795Z — **work_interval_started** (implementation) by system: baseline f4d959e1cab0 at dcafc0759010
