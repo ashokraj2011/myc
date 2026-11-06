@@ -5,7 +5,7 @@
 - Capability: **calc** (`raj-calc`)
 - Capability map: `a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d`
 - Overall status: **in_progress**
-- Current phase: **convergence**
+- Current phase: **verification**
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
@@ -15,12 +15,15 @@
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent architect | **warning** |  |  |  |
 | 3 | Implementation (`implementation`) | developer | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via engineering-reviewers; agent developer | **warning** |  |  |  |
-| 4 | Convergence (`convergence`) | architect | **awaiting_approval** | 1 | 0 | unavailable |
-| 5 | Verification (`verification`) | qa | **not_started** | 0 | 0 | unavailable |
+| 4 | Convergence (`convergence`) | architect | **approved** | 1 | 1 | unavailable |
+|  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
+| 5 | Verification (`verification`) | qa | **in_progress** | 0 | 0 | unavailable |
 | 6 | Release (`release`) | qa | **not_started** | 0 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-11-06T06:29:14.838Z — **work_interval_started** (verification) by system: baseline 9c656d21a864 at b53c5d60adc6
+- 2026-11-06T06:29:14.820Z — **phase_self_approved** (convergence) by ashokraj2011: threshold reached; advanced to verification
 - 2026-11-06T06:27:12.749Z — **phase_submitted** (convergence) by ashokraj2011: 1 artifacts
 - 2026-11-06T06:25:59.204Z — **phase_generated** (convergence) by ashokraj2011: generation 1
 - 2026-11-06T06:19:16.503Z — **phase_self_approved** (implementation) by ashokraj2011 · agent developer: threshold reached; advanced to convergence
@@ -34,5 +37,3 @@
 - 2026-11-06T05:17:13.765Z — **phase_self_approved** (planning) by ashokraj2011 · agent architect: threshold reached; advanced to implementation
 - 2026-11-06T05:12:55.648Z — **phase_submitted** (planning) by ashokraj2011 · agent architect: 1 artifacts
 - 2026-11-06T05:12:11.395Z — **source_review_submitted** (planning) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: ba3d685f6147397a7d12e28908cad0817d94d4cc3cf0525291131f2e8b5ac261
-- 2026-11-06T05:10:25.417Z — **phase_generated** (planning) by ashokraj2011 · agent architect: generation 1
-- 2026-11-06T04:59:25.574Z — **phase_self_approved** (specification) by ashokraj2011 · agent product-owner: threshold reached; advanced to planning
