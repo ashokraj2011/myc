@@ -9047,6 +9047,14 @@
       "event": "upstream_issue_raised",
       "phase": "release",
       "detail": "UPI-001 against implementation (BIN-OPR2:REQ-001, BIN-OPR2:REQ-002, BIN-OPR2:AC-001): The Release report marks BIN-OPR2:REQ-001, BIN-OPR2:REQ-002, BIN-OPR2:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list."
+    },
+    {
+      "at": "2026-11-06T16:42:17.841Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "upstream_issue_decided",
+      "phase": "release",
+      "detail": "UPI-001: accept-risk. sdsaadasdsadasdasad ada"
     }
   ],
   "measurement": {
@@ -13468,6 +13476,137 @@
         },
         "createdAt": "2026-11-06T16:42:07.514Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "73179d64-a88d-4549-babc-b51b9d697301",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "bin-opr2",
+          "branch": "bin-opr2"
+        },
+        "phaseId": "release",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "decision": "upstream-issue",
+          "reviewPacketSha256": null,
+          "issue": "UPI-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-06T16:42:17.101Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "73179d64-a88d-4549-babc-b51b9d697301",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "bin-opr2"
+          ],
+          "branch": "bin-opr2",
+          "canonicalBranch": "bin-opr2",
+          "createdAt": "2026-11-06T12:14:12.554Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "release",
+          "generation": 1,
+          "phase": "release",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 5,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 0,
+              "awaiting_approval": 1,
+              "approved": 5,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "release",
+              "status": "awaiting_approval",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "bin",
+          "updatedAt": "2026-11-06T16:42:17.841Z",
+          "workId": "bin-opr2",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "941f398a5fec468916fc77322b77b18f3e9c7cb1423ce74d648a9e2906b74a2a",
+          "lifecycleEventId": "73179d64-a88d-4549-babc-b51b9d697301",
+          "lifecyclePayload": {
+            "decision": "upstream-issue",
+            "reviewPacketSha256": null,
+            "issue": "UPI-001"
+          },
+          "templateSha256": "8f3e84e8e19dfc851d9948f20fbd48c0e43e5d8df9c747404d602106930e14fe",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "73179d64-a88d-4549-babc-b51b9d697301",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "bin-opr2",
+              "branch": "bin-opr2"
+            },
+            "phaseId": "release",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": "engineering-reviewers",
+            "payload": {
+              "decision": "upstream-issue",
+              "reviewPacketSha256": null,
+              "issue": "UPI-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-06T16:42:17.101Z"
+          }
+        },
+        "createdAt": "2026-11-06T16:42:17.106Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -13744,6 +13883,19 @@
       "authored": "human",
       "agent": "qa",
       "at": "2026-11-06T16:42:08.237Z"
+    }
+  ],
+  "upstreamIssueDecisions": [
+    {
+      "issue": "UPI-001",
+      "outcome": "accept-risk",
+      "reason": "sdsaadasdsadasdasad ada",
+      "link": null,
+      "expiresAt": "2027-02-04T00:00:00.000Z",
+      "actor": "ashokraj2011",
+      "authorityGroup": "engineering-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-06T16:42:17.841Z"
     }
   ]
 }
