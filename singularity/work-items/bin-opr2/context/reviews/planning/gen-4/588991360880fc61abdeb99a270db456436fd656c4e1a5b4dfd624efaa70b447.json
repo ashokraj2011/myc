@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "phase": "planning",
+  "generation": 4,
+  "reportSha256": "588991360880fc61abdeb99a270db456436fd656c4e1a5b4dfd624efaa70b447",
+  "lifecycleEventId": "aacea4dd-84a9-4dbb-88d7-cf6aa5117521",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "planning",
+    "binding": {
+      "workId": "bin-opr2",
+      "phase": "planning",
+      "generation": 4,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/bin-opr2/USER-STORY.md",
+          "textSha256": "5cfa0c7a7d711fad8aa68e80da1b8441964bfadc3f1042b0596e46cb9602a121",
+          "originalSha256": "9691c2b1a5ce2dbb46a9db942f9f931dc87fb221d7bcb684773ad21cc7ef8536"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:approved-scope",
+          "phase": "specification",
+          "generation": 2,
+          "path": "singularity/work-items/bin-opr2/context/clarifications-specification-gen2.json",
+          "sha256": "d26397d0674f22c6edb8060f497d699f7d776c2c5529548123670716d5fff22b"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/bin-opr2/artifacts/planning/plan.md",
+        "sha256": "49f957be8e92bf49b37a1184193f76765132c473ae6d7977bb57c81951789d6a"
+      },
+      "upstreamSpec": {
+        "path": "singularity/work-items/bin-opr2/artifacts/specification/spec.md",
+        "sha256": "c3872014b194e6e1a80f398698752adbe0161387f0002cedae88e47c482be477"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:approved-scope"
+    ],
+    "rows": [
+      {
+        "clauseId": "BIN-OPR2:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx"
+        ],
+        "plannedTests": [
+          "tests/bin-conversion.spec.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "The Standard calculator exposes a button that converts the decimal value currently displayed and shows its binary representation.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "BIN-OPR2:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx"
+        ],
+        "plannedTests": [
+          "tests/bin-conversion.spec.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Positive and negative whole and up-to-two-place decimal inputs convert; negatives have a leading minus, and fractional output has exactly two binary digits truncated after that precision.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "BIN-OPR2:AC-001",
+        "expectedPaths": [
+          "singularity/work-items/bin-opr2/evidence/bin-conversion-composite.png"
+        ],
+        "plannedTests": [
+          "tests/bin-conversion.spec.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "evidence",
+        "observableResult": "The retained side-by-side composite shows the conversion control and binary output for both a whole-number case and a decimal case exercised by Playwright.",
+        "assessment": "supported"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "0a3aa938dc74e28fa2e914fd2b999b0f51973b59dd454b19936a76d395c783bb",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "architect",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-06T13:00:18.253Z",
+  "recordSha256": "e59c804cc723c47fcc8d8530b215798e784b7e06bc75fa67ff4d3ed4ace66d6c"
+}
