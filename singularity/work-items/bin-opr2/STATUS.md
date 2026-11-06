@@ -4,8 +4,8 @@
 - Work type: **spec-driven-standard**
 - Capability: **calc** (`raj-calc`)
 - Capability map: `a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d`
-- Overall status: **in_progress**
-- Current phase: **release**
+- Overall status: **closed**
+- Current phase: **none — every step is decided**
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
@@ -19,10 +19,12 @@
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
 | 5 | Verification (`verification`) | qa | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
-| 6 | Release (`release`) | qa | **awaiting_approval** | 1 | 0 | unavailable |
+| 6 | Release (`release`) | qa | **approved** | 1 | 1 | unavailable |
+|  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
 
 ## Recent history
 
+- 2026-11-06T16:44:46.413Z — **phase_self_approved** (release) by ashokraj2011 · agent qa: threshold reached; closed
 - 2026-11-06T16:42:17.841Z — **upstream_issue_decided** (release) by ashokraj2011 · agent qa: UPI-001: accept-risk. sdsaadasdsadasdasad ada
 - 2026-11-06T16:42:08.237Z — **upstream_issue_raised** (release) by ashokraj2011 · agent qa: UPI-001 against implementation (BIN-OPR2:REQ-001, BIN-OPR2:REQ-002, BIN-OPR2:AC-001): The Release report marks BIN-OPR2:REQ-001, BIN-OPR2:REQ-002, BIN-OPR2:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list.
 - 2026-11-06T16:34:33.957Z — **phase_submitted** (release) by ashokraj2011 · agent qa: 2 artifacts
@@ -37,4 +39,3 @@
 - 2026-11-06T13:46:01.221Z — **phase_submitted** (convergence) by ashokraj2011: 1 artifacts
 - 2026-11-06T13:43:47.854Z — **phase_generated** (convergence) by ashokraj2011: generation 1
 - 2026-11-06T13:41:22.930Z — **phase_self_approved** (implementation) by ashokraj2011 · agent developer: threshold reached; advanced to convergence
-- 2026-11-06T13:41:22.930Z — **work_interval_closed** (implementation) by ashokraj2011 · agent developer: interval INT-implementation-G1-001 closed after phase approval

@@ -5,7 +5,7 @@
   "workType": "spec-driven-standard",
   "phase": "release",
   "generation": 1,
-  "status": "awaiting_approval",
+  "status": "approved",
   "generatedBy": {
     "name": "Ashok Raj",
     "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -119,8 +119,100 @@
     }
   ],
   "sequenceOverrides": [],
-  "approvals": [],
-  "selfApproval": false,
+  "approvals": [
+    {
+      "decision": "approved",
+      "phase": "release",
+      "at": "2026-11-06T16:44:46.413Z",
+      "actor": {
+        "name": "Ashok Raj",
+        "email": "88361104+ashokraj2011@users.noreply.github.com",
+        "login": "ashokraj2011",
+        "githubLookup": "resolved"
+      },
+      "agent": "qa",
+      "authorityGroup": "quality-reviewers",
+      "identityAssurance": "configured-local",
+      "channel": "copilot-selection-receipt",
+      "generation": 1,
+      "artifactSha256": [
+        {
+          "path": "singularity/work-items/bin-opr2/artifacts/release/conformance.md",
+          "sha256": "a2ce222c640adee1c97a98e9daba88928d20705dc6bdb797267f9a0ac62d9b59"
+        },
+        {
+          "path": "singularity/work-items/bin-opr2/artifacts/release/verification/evidence-index.md",
+          "sha256": "cbcb0264b67b3abcbd70cad21412eaa5eb6e2d01d9f9ca6f053544f05d149622"
+        }
+      ],
+      "artifactSet": "spec-driven-verification",
+      "bundleSha256": "8aecec4f17233413c094ea42dba31ea93795d12295d1a5b30c78ee2e1996ccb0",
+      "reviewPacketSha256": "92accd4af99bccc3fe6976df4c26c0a6f194ece362b838f67c0c457a9e3cce02",
+      "evidenceCommit": "64a983b042dadf75d6b60b4439d5b6e7d5f110bc",
+      "artifactSetSha256": "a7a8023de3dc06958260ea0948dddd0db1577fb78410d7d5eeb63d8407c393fc",
+      "architectureIntent": null,
+      "architectureDecision": null,
+      "actionContext": {
+        "phase": "release",
+        "label": "Release",
+        "generation": 1,
+        "submittedAt": "2026-11-06T16:34:33.957Z",
+        "artifacts": [
+          {
+            "path": "singularity/work-items/bin-opr2/artifacts/release/conformance.md",
+            "sha256": "a2ce222c640adee1c97a98e9daba88928d20705dc6bdb797267f9a0ac62d9b59"
+          },
+          {
+            "path": "singularity/work-items/bin-opr2/artifacts/release/verification/evidence-index.md",
+            "sha256": "cbcb0264b67b3abcbd70cad21412eaa5eb6e2d01d9f9ca6f053544f05d149622"
+          }
+        ],
+        "agentBriefs": [],
+        "reviewPacketSha256": "92accd4af99bccc3fe6976df4c26c0a6f194ece362b838f67c0c457a9e3cce02",
+        "submittedSourceCommit": "ee8f3d306d0240c92869539cca8fe529591dd117",
+        "planId": "5b91c94614985c2eb3988415"
+      },
+      "upstream": {
+        "sha256": "sha256:b6d438bafbb70aeb27b46dcf93f70d95567ba19b80f0ea59f0b9561a0bbcee2e",
+        "refs": [
+          {
+            "kind": "input",
+            "ref": "convergence",
+            "sha256": "sha256:a0d68afacc87c44ede7fe2cce7f7b97c3cd3c86041f21d73ef5923b1c2fbd8f7",
+            "authoredSha256": "sha256:74debdb79c7bb42463df7cef97227b58883166ab3e2e017748e9f52232b47755"
+          },
+          {
+            "kind": "input",
+            "ref": "verification",
+            "sha256": "sha256:1cc7415782ae1499224364e9b15695292c63debc7b86d3c7ec1f2a52372c43b7",
+            "authoredSha256": "sha256:28460b03cfab12c40f5ede9cc88f9386b3ebbe6b11eff63e986cc6eb63864536"
+          },
+          {
+            "kind": "candidate",
+            "ref": "HEAD",
+            "sha256": "sha256:dae2c9e08523fc59be21e14cb55804ed6a3702e92fa5cea958866dba78975226"
+          },
+          {
+            "kind": "specification",
+            "ref": "records",
+            "sha256": "sha256:af2516b98507b96fc1a3168303c1a6a214880c78a020daf991bc03e0117b7495"
+          },
+          {
+            "kind": "documents",
+            "ref": "release",
+            "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+          },
+          {
+            "kind": "decisions",
+            "ref": "story",
+            "sha256": "sha256:ca916b5b57c22f5bad18df0d943c137c9fa5dae8c902a3c4e517087a2bb1e634"
+          }
+        ]
+      },
+      "selfApproval": true
+    }
+  ],
+  "selfApproval": true,
   "conformanceTree": "sha256:91ec53031f1bb2814bfeeba539d6c91049bd0d092049bed53655e4b7231e4e22"
 }
 -->
