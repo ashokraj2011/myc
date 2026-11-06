@@ -6683,6 +6683,14 @@
       "event": "phase_submitted",
       "phase": "implementation",
       "detail": "8 artifacts"
+    },
+    {
+      "at": "2026-11-06T05:49:36.995Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "witness_recorded",
+      "phase": "implementation",
+      "detail": "WIT-001: visual of singularity/work-items/bin-opr/evidence/binary-conversion.png for BIN-OPR:AC-001 slot converted-display satisfies it. good to go come"
     }
   ],
   "measurement": {
@@ -8385,6 +8393,137 @@
         },
         "createdAt": "2026-11-06T05:42:18.556Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "a31f4b14-f07d-406c-bee5-464ec9c46e29",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "bin-opr",
+          "branch": "bin-opr"
+        },
+        "phaseId": "implementation",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "decision": "witness",
+          "reviewPacketSha256": null,
+          "record": "WIT-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-06T05:49:35.813Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "a31f4b14-f07d-406c-bee5-464ec9c46e29",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "bin-opr"
+          ],
+          "branch": "bin-opr",
+          "canonicalBranch": "bin-opr",
+          "createdAt": "2026-11-06T03:39:47.734Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 1,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 0,
+              "awaiting_approval": 1,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "awaiting_approval",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "bimary",
+          "updatedAt": "2026-11-06T05:49:36.995Z",
+          "workId": "bin-opr",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "ece34bebf699bd016761306f85eb0a38c9eb13e453e52f100944569c96215590",
+          "lifecycleEventId": "a31f4b14-f07d-406c-bee5-464ec9c46e29",
+          "lifecyclePayload": {
+            "decision": "witness",
+            "reviewPacketSha256": null,
+            "record": "WIT-001"
+          },
+          "templateSha256": "2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "a31f4b14-f07d-406c-bee5-464ec9c46e29",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "bin-opr",
+              "branch": "bin-opr"
+            },
+            "phaseId": "implementation",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "engineering-reviewers",
+            "payload": {
+              "decision": "witness",
+              "reviewPacketSha256": null,
+              "record": "WIT-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-06T05:49:35.813Z"
+          }
+        },
+        "createdAt": "2026-11-06T05:49:35.813Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -8553,6 +8692,29 @@
         "attemptId": "TA-8e95a3074570853f207b"
       },
       "at": "2026-11-06T05:31:35.884Z"
+    }
+  ],
+  "witnessRecords": [
+    {
+      "id": "WIT-001",
+      "clauseId": "BIN-OPR:AC-001",
+      "slot": "converted-display",
+      "method": "visual",
+      "file": "singularity/work-items/bin-opr/evidence/binary-conversion.png",
+      "sha256": "sha256:32e5a7b23356ccf222bbedd1b202c822ab651709b32f84326fdc207681ce285e",
+      "contextBinding": "sha256:1a256f64868057d0076d7c4481fea0eb103edf0998d52f5c69d9b7ba1fce4c62",
+      "target": "Standard calculator display after binary conversion",
+      "checklist": {
+        "states-the-outcome": "yes",
+        "matches-the-criterion": "yes",
+        "current-for-this-change": "yes"
+      },
+      "outcome": "met",
+      "reason": "good to go come",
+      "actor": "ashokraj2011",
+      "authorityGroup": "engineering-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-06T05:49:36.995Z"
     }
   ]
 }
