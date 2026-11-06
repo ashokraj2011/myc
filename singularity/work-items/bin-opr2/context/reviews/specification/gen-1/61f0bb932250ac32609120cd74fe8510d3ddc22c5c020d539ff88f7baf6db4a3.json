@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "phase": "specification",
+  "generation": 1,
+  "reportSha256": "61f0bb932250ac32609120cd74fe8510d3ddc22c5c020d539ff88f7baf6db4a3",
+  "lifecycleEventId": "eb3bdfab-6ee3-420e-b32b-d923893bf7bc",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "specification",
+    "binding": {
+      "workId": "bin-opr2",
+      "phase": "specification",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/bin-opr2/USER-STORY.md",
+          "textSha256": "5cfa0c7a7d711fad8aa68e80da1b8441964bfadc3f1042b0596e46cb9602a121",
+          "originalSha256": "9691c2b1a5ce2dbb46a9db942f9f931dc87fb221d7bcb684773ad21cc7ef8536"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:current-phase",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/bin-opr2/context/clarifications-specification-gen1.json",
+          "sha256": "e48438198783ccf09227631d606487694ab3455919a6e93ac4e7e2bcc383ab59"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/bin-opr2/artifacts/specification/spec.md",
+        "sha256": "a7fc3bbbb471cd12cdbd4b97d7930a3cb84d163d6dac87f49c16ef58b8de0ea0"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:current-phase"
+    ],
+    "rows": [
+      {
+        "id": "decimal-to-binary",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "BIN-OPR2:REQ-001",
+          "BIN-OPR2:REQ-002"
+        ],
+        "line": 7,
+        "quote": "Convert a decimal value to binary value in calc"
+      },
+      {
+        "id": "playwright-screenshot-acceptance",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S2",
+        "clauseIds": [
+          "BIN-OPR2:AC-001"
+        ],
+        "line": 16,
+        "quote": "Screenshot playright testcases"
+      }
+    ],
+    "findings": [
+      {
+        "id": "numeric-domain-unresolved",
+        "severity": "blocking",
+        "message": "The artifact leaves BIN-OPR2:REQ-002 as “all decimal values supported and shown by the calculator” but does not define the supported numeric domain or representation precision. Clarification Q-002 answered “all,” while Q-004 explicitly answered “unknown” for negative/fractional values and repeating binary fractions. An implementation could satisfy the current wording with only a narrow subset of decimal inputs, leaving the clarified all-values scope and its boundary behavior unverifiable. Resolve the numeric domain and fractional representation before treating this clause as fully specified.",
+        "clauseId": "BIN-OPR2:REQ-002",
+        "sourceId": "story",
+        "line": 7,
+        "quote": "Convert a decimal value to binary value in calc"
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "0a3aa938dc74e28fa2e914fd2b999b0f51973b59dd454b19936a76d395c783bb",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "product-owner",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-06T12:37:23.351Z",
+  "recordSha256": "0f778b75eb7a66be8a02bca3845443286caf9bd76ca96a8ba87ca5ba18f2ea46"
+}
