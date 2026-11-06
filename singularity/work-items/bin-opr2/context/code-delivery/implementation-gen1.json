@@ -1,0 +1,366 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "bin-opr2",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "c48e1436-787f-4cbc-8e6b-45be4701c3ec",
+  "changeSet": {
+    "path": "singularity/work-items/bin-opr2/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:be63161c2c97669480c7498b3f63a06c07637052bb0d1fa6e2f9cb26a36b959a",
+    "sourcePaths": [
+      "src/App.jsx",
+      "src/components/StandardKeypad.jsx"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [
+      ".nvmrc",
+      "package-lock.json",
+      "package.json",
+      "playwright.config.js"
+    ],
+    "executableTestPaths": [
+      "tests/bin-conversion.spec.js"
+    ],
+    "supportingTestPaths": [
+      "playwright.config.js"
+    ]
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "build-configuration": 3,
+      "dependency-lock": 1,
+      "product-source": 2,
+      "test-source": 1
+    },
+    "entries": [
+      {
+        "changeId": "sha256:fde8b995e5502a55312a5f0ea2312cb352075fff9e36be04293f33e2daf774ba",
+        "status": "added",
+        "oldPath": null,
+        "newPath": ".nvmrc",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:9d85ecf882524ca46af17e9b6935ff7194d0a2d5587a0e91107fac86a4e16856",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "playwright.config.js",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:731fef707b4d59f7738ae661a08d94b084f65b8e5ddf7fc36a72856f61388386",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "tests/bin-conversion.spec.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:9326c90eb9194992b895d73ff1277b70e5933fb11c58bee626022834c1c536ec",
+        "status": "modified",
+        "oldPath": "package-lock.json",
+        "newPath": "package-lock.json",
+        "role": "dependency-lock",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:2b1fb1fa5513820f70de005bdeacd09f9e62a908e0a2439d1011e9d93993792f",
+        "status": "modified",
+        "oldPath": "package.json",
+        "newPath": "package.json",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:83e6f6f4912b9a78f139d73371b1d07eab7cbe3959a6b458f242c6836cca2aea",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:50d179e29585968e40fcc8bf9dcd2f32286a6cd1e593e012d9189144f0849a2f",
+        "status": "modified",
+        "oldPath": "src/components/StandardKeypad.jsx",
+        "newPath": "src/components/StandardKeypad.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "BIN-OPR2:AC-001"
+    ],
+    "bound": [
+      "BIN-OPR2:AC-001"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "BIN-OPR2:AC-001",
+        "testSource": "tests/bin-conversion.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "BIN-OPR2:AC-001",
+        "testSource": "tests/bin-conversion.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "identity": {
+          "framework": "playwright",
+          "suitePath": [],
+          "name": "converts whole and fractional values and captures visual evidence"
+        },
+        "logicalTestId": "sha256:bd0f4ca28abb0a1609dc3bfb59492abe810b2a919a4d9ab4984cb5259fdb30e4",
+        "declarationSha256": "sha256:c245e94a0b79521619a91e0891e1c50735633ace0c4a19d0099e2f5c929fb050",
+        "supportSha256": null,
+        "assertions": {
+          "count": 0,
+          "tautological": 0,
+          "negative": false,
+          "boundary": false,
+          "nullability": false,
+          "adequacy": "missing",
+          "subjects": [
+            "async",
+            "click",
+            "displayedResult",
+            "enterValue",
+            "getByAltText",
+            "getByRole",
+            "goto",
+            "locator",
+            "outputPath",
+            "screenshot",
+            "setContent",
+            "toBeVisible",
+            "toHaveText",
+            "toString"
+          ]
+        },
+        "line": 18,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "tests/bin-conversion.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "BIN-OPR2:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx"
+        ]
+      },
+      {
+        "clauseId": "BIN-OPR2:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "BIN-OPR2:REQ-001",
+        "sourcePath": "src/App.jsx",
+        "line": 132,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "BIN-OPR2:REQ-001",
+        "sourcePath": "src/components/StandardKeypad.jsx",
+        "line": 185,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "BIN-OPR2:REQ-002",
+        "sourcePath": "src/App.jsx",
+        "line": 133,
+        "tag": "clause"
+      }
+    ]
+  },
+  "fulfillment": {
+    "obligations": [
+      {
+        "clauseId": "BIN-OPR2:AC-001",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/bin-opr2/evidence/bin-conversion-composite.png",
+            "state": "present",
+            "sha256": "1069b2b80993d12efa244fe58c9da1f16ea0629bfb58d04c44180c05487fde58"
+          }
+        ]
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "BIN-OPR2:REQ-001",
+        "explanation": {
+          "text": "Convert the currently displayed decimal value.",
+          "path": "src/App.jsx",
+          "line": 132
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 132,
+                "afterLines": 23
+              },
+              {
+                "beforeStart": 263,
+                "beforeLines": 0,
+                "afterStart": 287,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/StandardKeypad.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 183,
+                "beforeLines": 0,
+                "afterStart": 185,
+                "afterLines": 8
+              }
+            ],
+            "symbols": [
+              {
+                "name": "StandardKeypad",
+                "kind": "function",
+                "line": 5
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "BIN-OPR2:REQ-002",
+        "explanation": {
+          "text": "Keep the sign and truncate binary fractions to two bits.",
+          "path": "src/App.jsx",
+          "line": 133
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 132,
+                "afterLines": 23
+              },
+              {
+                "beforeStart": 263,
+                "beforeLines": 0,
+                "afterStart": 287,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:63ed54374ea692781ab21a94e18b69aa8775b79bc9a56fd4c1baf5e7d7e677f9"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:91ec53031f1bb2814bfeeba539d6c91049bd0d092049bed53655e4b7231e4e22",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-11-06T13:25:21.326Z"
+}

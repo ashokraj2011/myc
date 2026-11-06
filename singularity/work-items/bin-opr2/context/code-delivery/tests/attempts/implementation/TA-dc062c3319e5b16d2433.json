@@ -1,0 +1,404 @@
+{
+  "schemaVersion": 5,
+  "kind": "test-execution",
+  "attemptId": "TA-dc062c3319e5b16d2433",
+  "nonce": "a75f5ec51e089af6dec6a3bef94f89ae",
+  "parentAttemptId": "TA-47f4cbc58d3977b61e7d",
+  "purpose": "preflight",
+  "workId": "bin-opr2",
+  "phase": "implementation",
+  "generation": 1,
+  "commandId": ".-node-tests",
+  "commandSha256": "sha256:365a3f7fa75a6c536f4c2b3d33b5accc770995e7294753ce19d1fe5466a341ce",
+  "argvSha256": "7ea91cb57633bb94e24395e7b34f059abecf6ac68b822ee60f2db1c06646d5a9",
+  "selection": {
+    "selection": "complete",
+    "gaps": [],
+    "selectionSha256": "sha256:8684f0528fd02325e4a466ce66e7714105b5cb351a343ea1f7c045e9ceca5bd5"
+  },
+  "environment": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "ci": "1",
+    "removed": [],
+    "declaredSha256": null,
+    "toolchain": {
+      "node": "26.12.0",
+      "npm": "11.20.0"
+    },
+    "host": "node 26.12.0"
+  },
+  "environmentSha256": "sha256:69c4a59593ce22ef5d3589590725638759633d2d4ce6ce68a2d01c6eca56b4d8",
+  "platform": "darwin",
+  "workingDirectory": ".",
+  "affectedRoots": [
+    "."
+  ],
+  "adapter": "vitest-json",
+  "profile": "vitest-static-v2",
+  "candidate": {
+    "commit": "96d65efb95df40f0715ad9ee35ce1ef908b74d27",
+    "treeSha256": "sha256:ec898305dc2ccc4d8134a3cf2299c4bc6ba35fbb086e6aa18d8aa1bb612eaf98"
+  },
+  "process": {
+    "status": "failed",
+    "exitCode": 1,
+    "signal": null,
+    "timedOut": false,
+    "infrastructureUnavailable": false,
+    "startedAt": "2026-11-06T13:21:26.161Z",
+    "completedAt": "2026-11-06T13:21:29.756Z"
+  },
+  "status": "failed",
+  "terminal": true,
+  "exitCode": 1,
+  "timedOut": false,
+  "skipped": false,
+  "suppressed": false,
+  "tests": {
+    "discovered": 31,
+    "passed": 14,
+    "failed": 17,
+    "skipped": 0
+  },
+  "result": {
+    "path": ".sflow/results/node-tests.json",
+    "sha256": "cfd3dbbb50732f6f14471e0b5e7e0592f28fe448930a3b9b63eb5b20a1c67876",
+    "bytes": 40962,
+    "files": [
+      {
+        "sourcePath": ".sflow/results/node-tests.json",
+        "sha256": "cfd3dbbb50732f6f14471e0b5e7e0592f28fe448930a3b9b63eb5b20a1c67876",
+        "bytes": 40962
+      }
+    ]
+  },
+  "rawReports": [
+    {
+      "path": "singularity/work-items/bin-opr2/context/code-delivery/tests/raw/cfd3dbbb50732f6f14471e0b5e7e0592f28fe448930a3b9b63eb5b20a1c67876.bin",
+      "sha256": "cfd3dbbb50732f6f14471e0b5e7e0592f28fe448930a3b9b63eb5b20a1c67876",
+      "bytes": 40962
+    }
+  ],
+  "occurrences": [
+    {
+      "suitePath": [
+        "App functional regression (all modes/features unchanged)"
+      ],
+      "name": "performs digit entry and arithmetic in Standard mode",
+      "outcome": "failed",
+      "durationMs": 7
+    },
+    {
+      "suitePath": [
+        "App functional regression (all modes/features unchanged)"
+      ],
+      "name": "supports memory recall (MC/MR/M+/M-) without changing calculation results",
+      "outcome": "failed",
+      "durationMs": 1
+    },
+    {
+      "suitePath": [
+        "App functional regression (all modes/features unchanged)"
+      ],
+      "name": "clears memory with MC",
+      "outcome": "failed",
+      "durationMs": 1
+    },
+    {
+      "suitePath": [
+        "App functional regression (all modes/features unchanged)"
+      ],
+      "name": "clears the expression with AC and supports backspace",
+      "outcome": "failed",
+      "durationMs": 1
+    },
+    {
+      "suitePath": [
+        "App functional regression (all modes/features unchanged)"
+      ],
+      "name": "records a calculation in history and clears it",
+      "outcome": "failed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "App functional regression (all modes/features unchanged)"
+      ],
+      "name": "switches between all calculator modes",
+      "outcome": "failed",
+      "durationMs": 1
+    },
+    {
+      "suitePath": [
+        "App functional regression (all modes/features unchanged)"
+      ],
+      "name": "opens the keyboard shortcuts modal",
+      "outcome": "failed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "App functional regression (all modes/features unchanged)"
+      ],
+      "name": "toggles sound on and off",
+      "outcome": "failed",
+      "durationMs": 1
+    },
+    {
+      "suitePath": [
+        "Windows 11 Fluent theme coverage across modes"
+      ],
+      "name": "exposes win11-light and win11-dark as selectable themes",
+      "outcome": "failed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "Windows 11 Fluent theme coverage across modes"
+      ],
+      "name": "applies win11-dark theme via the shared data-theme attribute",
+      "outcome": "failed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "Windows 11 Fluent theme coverage across modes"
+      ],
+      "name": "renders standard mode using the shared design-token classes under win11-light",
+      "outcome": "failed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "Windows 11 Fluent theme coverage across modes"
+      ],
+      "name": "renders scientific mode using the shared design-token classes under win11-light",
+      "outcome": "failed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "Windows 11 Fluent theme coverage across modes"
+      ],
+      "name": "renders converter mode using the shared design-token classes under win11-light",
+      "outcome": "failed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "Windows 11 Fluent theme coverage across modes"
+      ],
+      "name": "renders financial mode using the shared design-token classes under win11-light",
+      "outcome": "failed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "Windows 11 Fluent theme coverage across modes"
+      ],
+      "name": "renders grapher mode using the shared design-token classes under win11-light",
+      "outcome": "failed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "Responsive navigation (desktop rail + mobile dropdown)"
+      ],
+      "name": "renders both the desktop nav rail and the mobile dropdown markup",
+      "outcome": "failed",
+      "durationMs": 20
+    },
+    {
+      "suitePath": [
+        "Responsive navigation (desktop rail + mobile dropdown)"
+      ],
+      "name": "keeps the mobile mode dropdown in sync with the active mode",
+      "outcome": "failed",
+      "durationMs": 5
+    },
+    {
+      "suitePath": [
+        "production build"
+      ],
+      "name": "completes successfully and emits the expected bundle",
+      "outcome": "passed",
+      "durationMs": 1226
+    },
+    {
+      "suitePath": [
+        "evaluateExpression (calculation behavior regression)"
+      ],
+      "name": "evaluates basic arithmetic unchanged",
+      "outcome": "passed",
+      "durationMs": 18
+    },
+    {
+      "suitePath": [
+        "evaluateExpression (calculation behavior regression)"
+      ],
+      "name": "handles empty expressions",
+      "outcome": "passed",
+      "durationMs": 1
+    },
+    {
+      "suitePath": [
+        "evaluateExpression (calculation behavior regression)"
+      ],
+      "name": "evaluates percentages",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "evaluateExpression (calculation behavior regression)"
+      ],
+      "name": "evaluates factorials",
+      "outcome": "passed",
+      "durationMs": 2
+    },
+    {
+      "suitePath": [
+        "evaluateExpression (calculation behavior regression)"
+      ],
+      "name": "applies degree-mode trig conversion",
+      "outcome": "passed",
+      "durationMs": 5
+    },
+    {
+      "suitePath": [
+        "evaluateExpression (calculation behavior regression)"
+      ],
+      "name": "applies radian-mode trig conversion (no deg wrapping)",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "evaluateExpression (calculation behavior regression)"
+      ],
+      "name": "supports constants pi and e",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "evaluateExpression (calculation behavior regression)"
+      ],
+      "name": "reports a recoverable error for malformed expressions",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "evaluateExpression (calculation behavior regression)"
+      ],
+      "name": "reports a math error for divide-by-zero style overflow",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "formatNumber (display formatting regression)"
+      ],
+      "name": "adds thousands separators",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "formatNumber (display formatting regression)"
+      ],
+      "name": "fixes floating point precision artifacts",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "formatNumber (display formatting regression)"
+      ],
+      "name": "returns Error for NaN input",
+      "outcome": "passed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "formatNumber (display formatting regression)"
+      ],
+      "name": "switches to exponential notation for very large numbers",
+      "outcome": "passed",
+      "durationMs": 1
+    }
+  ],
+  "reportError": null,
+  "assurance": "module-executed",
+  "cause": {
+    "category": "code",
+    "class": "assertion-failure",
+    "basis": "tests",
+    "signal": "failed test",
+    "failedTests": 17
+  },
+  "pin": {
+    "commandId": ".-node-tests",
+    "source": {
+      "kind": "inferred"
+    },
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "--reporter=json",
+      "--outputFile=.sflow/results/node-tests.json"
+    ],
+    "workingDirectory": ".",
+    "affectedRoots": [
+      "."
+    ],
+    "adapter": "vitest-json",
+    "definition": [
+      {
+        "path": "package.json",
+        "selector": "scripts.test",
+        "sha256": "5b8455a68c1c2ba8f15c92fb95c920a2e5d0ab18b04a1a03c602a8543ea8c639"
+      },
+      {
+        "path": "playwright.config.js",
+        "selector": null,
+        "sha256": "a078ac4c1032d5e43a6a98048e83b2adf61c2421a33af12fc67036d018ca4bad"
+      },
+      {
+        "path": "vite.config.js",
+        "selector": null,
+        "sha256": "22585fc2be374450c9a7342fe4b5a22b30fce9d9db77def4b2d45302997b2eee"
+      }
+    ],
+    "definitionVersion": 2,
+    "sha256": "sha256:2421d1961c2b3e7ced146a763d770ca2f10839bd35df9d6bf00067a53b8debca"
+  },
+  "narrowing": {
+    "reasons": [],
+    "filters": [],
+    "focused": [],
+    "skipped": 0,
+    "discovered": 31,
+    "baseline": null,
+    "shortfall": 0,
+    "paths": [
+      {
+        "source": "package.json#scripts.test",
+        "runner": "vitest",
+        "operands": [
+          "src"
+        ],
+        "added": [
+          "src"
+        ],
+        "before": [],
+        "tests": 3,
+        "droppedCount": 0,
+        "dropped": []
+      }
+    ]
+  }
+}

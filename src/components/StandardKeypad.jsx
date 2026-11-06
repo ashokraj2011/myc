@@ -11,6 +11,7 @@ export const StandardKeypad = ({
   onNegate,
   onPercent,
   onMemory,
+  onBinaryConversion,
   soundEnabled,
 }) => {
   const handleBtn = (type, fn, val) => {
@@ -181,6 +182,14 @@ export const StandardKeypad = ({
           <Equal className="w-5 h-5" />
         </button>
       </div>
+      {/* @clause:BIN-OPR2:REQ-001 Exposes the conversion action in Standard mode. */}
+      <button
+        onClick={() => handleBtn('operator', onBinaryConversion)}
+        aria-label="Convert to binary"
+        className="calc-btn u-bg-btn-func-bg u-text-btn-func-text u-hbg-btn-func-hover font-semibold mt-2"
+      >
+        BIN
+      </button>
     </div>
   );
 };

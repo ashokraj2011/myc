@@ -129,6 +129,29 @@ export default function App() {
     }
   }, [expression, angleUnit]);
 
+  // @clause:BIN-OPR2:REQ-001 Convert the currently displayed decimal value.
+  // @clause:BIN-OPR2:REQ-002 Keep the sign and truncate binary fractions to two bits.
+  const handleBinaryConversion = useCallback(() => {
+    const displayedValue =
+      result !== '0' ? result : evaluateExpression(expression, angleUnit).result;
+    const decimalValue = Number(displayedValue.replaceAll(',', ''));
+    if (!Number.isFinite(decimalValue) || displayedValue === 'Error') {
+      setResult('Error');
+      return;
+    }
+
+    const magnitude = Math.abs(decimalValue);
+    const wholePart = Math.floor(magnitude);
+    const fraction = Math.round((magnitude - wholePart) * 100);
+    const wholeBits = BigInt(wholePart).toString(2);
+    const fractionBits = Math.floor((fraction * 4) / 100)
+      .toString(2)
+      .padStart(2, '0');
+    const sign = decimalValue < 0 ? '-' : '';
+
+    setResult(`${sign}${wholeBits}${fraction ? `.${fractionBits}` : ''}`);
+  }, [expression, angleUnit, result]);
+
   const handleMemory = useCallback(
     (type) => {
       const currentNum = parseFloat(result) || 0;
@@ -261,6 +284,7 @@ export default function App() {
               onNegate={handleNegate}
               onPercent={handlePercent}
               onMemory={handleMemory}
+              onBinaryConversion={handleBinaryConversion}
               soundEnabled={soundEnabled}
             />
           </div>
