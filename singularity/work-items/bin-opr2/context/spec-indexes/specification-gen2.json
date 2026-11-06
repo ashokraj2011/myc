@@ -1,0 +1,76 @@
+{
+  "clauses": [
+    {
+      "anchor": "[BIN-OPR2:REQ-001]",
+      "body": "The calculator provides a button that converts the decimal value currently shown in its display\nand displays that value's binary representation. *(S1, S2)*",
+      "bodySha256": "bd94f91cbbc1b8be3379c5abfaed7581832043bcc0e9bf425dceee63e93c8a12",
+      "dependsOn": [],
+      "id": "BIN-OPR2:REQ-001",
+      "namespace": "BIN-OPR2",
+      "number": 1,
+      "source": {
+        "line": 313,
+        "path": "singularity/work-items/bin-opr2/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "BIN-OPR2:AC-001",
+        "methods": [
+          "test",
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[BIN-OPR2:REQ-002]",
+      "body": "The conversion supports positive and negative whole numbers and decimal inputs with up to two\nfractional decimal places. Negative values display a leading minus sign followed by the binary\nmagnitude; fractional results display exactly two binary fractional digits, truncating remaining\nbits. *(S1, S2)*",
+      "bodySha256": "acdd0afacc4a29a2a69c69c29d199dff0b0d22ea48e2c0a8e2523ec5aeabe790",
+      "dependsOn": [],
+      "id": "BIN-OPR2:REQ-002",
+      "namespace": "BIN-OPR2",
+      "number": 2,
+      "source": {
+        "line": 317,
+        "path": "singularity/work-items/bin-opr2/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[BIN-OPR2:AC-001]",
+      "body": "A Playwright test exercises the conversion flow, and screenshot/visual evidence shows the\nconversion control and binary results for the supported whole-number and decimal inputs. This\ncovers the Story's “Screenshot playright testcases” acceptance statement. *(S3)*\n[scope:SRI-bfb83cd3d1fd]",
+      "bodySha256": "f27f54f824e19764b2d698ff34685f84c27213e065ffe7fbe2a9585271c48864",
+      "dependsOn": [],
+      "id": "BIN-OPR2:AC-001",
+      "namespace": "BIN-OPR2",
+      "number": 1,
+      "source": {
+        "line": 324,
+        "path": "singularity/work-items/bin-opr2/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "BIN-OPR2:AC-001",
+        "methods": [
+          "test",
+          "visual"
+        ]
+      }
+    }
+  ],
+  "generation": 2,
+  "indexSha256": "54f8d0b5bad0d2e7c504439747813a5c99fb0fecb16c5ba63d923f5122cd4838",
+  "phase": "specification",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 14872,
+    "path": "singularity/work-items/bin-opr2/artifacts/specification/spec.md",
+    "sha256": "a416ea26b6f70ce5388c9dd60b1cb3e0c11b4519efb21c9684b905d5280081f7"
+  },
+  "workId": "bin-opr2"
+}

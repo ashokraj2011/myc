@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "workId": "bin-opr2",
+  "phase": "specification",
+  "generation": 2,
+  "mode": "required",
+  "promptPath": "singularity/work-items/bin-opr2/context/prompts/specification-gen2.md",
+  "promptSha256": "b6762751d449592ff0910d07898f3023c3ccbcb8d178262165ef1cb73c7d76f8",
+  "groundingRecordPath": "singularity/work-items/bin-opr2/context/specification-gen2.json",
+  "groundingRecordSha256": "0d1cb49473cb5acf4a0f76aea59770aebe3cedfff7ac0e6b789ac102791009a7",
+  "responses": [
+    {
+      "id": "Q-001",
+      "question": "To make the conversion requirement testable, should the feature cover only nonnegative integers, or also negative and fractional values? If fractional values are included, what representation/precision should apply to repeating binary fractions?",
+      "answer": "numericDomain: nonnegative integers only, include negatives, include decimels with 2 points; fractionFormat: no",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-002",
+      "question": "Your recorded reply mixes integer-only and decimal input and does not specify what “fractionFormat: no” means. Which numeric inputs are in scope, and how should fractional binary output be represented?",
+      "answer": "numericScope: whole-and-two-decimal; fractionOutput: 2",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-003",
+      "question": "Does “2” mean two binary digits after the binary point, or something else? If two binary digits, should the remaining value be rounded or truncated?",
+      "answer": "fractionOutputPrecision: 2-binary-digits-truncate; otherPrecision: 2 means only 2 decimal palaces to be taken or round off to two",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-004",
+      "question": "Please confirm or correct: accept positive and negative whole numbers plus decimal inputs with up to two decimal places; for fractional results, display exactly two binary digits after the binary point and truncate remaining fractional bits.",
+      "answer": "fractionRule: confirm-proposal; correction:",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-005",
+      "question": "Should a negative value use a leading minus sign followed by the binary digits of its magnitude?",
+      "answer": "negativeRepresentation: minus-magnitude; otherConvention:",
+      "status": "answered",
+      "blocking": false
+    }
+  ],
+  "completed": true,
+  "recordedAt": "2026-11-06T12:44:05.740Z",
+  "recordedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "agent": "product-owner"
+}
