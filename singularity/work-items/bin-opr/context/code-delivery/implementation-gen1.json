@@ -124,7 +124,13 @@
       {
         "clauseId": "BIN-OPR:AC-001",
         "testSource": "e2e/binary-conversion.spec.js",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": "playwright-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       }
     ],
     "witnesses": [
@@ -402,11 +408,26 @@
     ],
     "bindingsSha256": "sha256:0c00e8096e45e1b475836e9cda45a40397416b5571074fc16b3747d483c45164"
   },
-  "testExecutions": [],
+  "testExecutions": [
+    {
+      "commandId": ".-node-tests",
+      "attemptId": "TA-05f7a7bfa69fecd51d86",
+      "receiptPath": "singularity/work-items/bin-opr/context/code-delivery/tests/attempts/implementation/TA-05f7a7bfa69fecd51d86.json",
+      "receiptSha256": "f17ace5877a4f4206ad801900a996687f9da33e7c9c09fa7ca4719006cffff12",
+      "status": "passed"
+    },
+    {
+      "commandId": "playwright-tests",
+      "attemptId": "TA-6ad02e5338c2ff48f0ba",
+      "receiptPath": "singularity/work-items/bin-opr/context/code-delivery/tests/attempts/implementation/TA-6ad02e5338c2ff48f0ba.json",
+      "receiptSha256": "164793d3d81020a756375abd486098048047f66e5f4757fd8e8fbf588521e097",
+      "status": "passed"
+    }
+  ],
   "tree": {
     "workingStateDigest": "sha256:d742574148196477b417abe807012762d29e62ba85317a654518e52e4d3d09a0",
-    "generationCommit": null,
-    "generationTree": null
+    "generationCommit": "5babc96eb6e10137fa24f9053e9a90969b4a7159",
+    "generationTree": "46bb69d483a1e8571c783fd9d7f5735cb43caa54"
   },
   "model": {
     "task": "code",
@@ -425,6 +446,7 @@
     "observedAt": null,
     "generation": null
   },
-  "status": "pending-tests",
-  "capturedAt": "2026-11-06T05:31:36.142Z"
+  "status": "ready",
+  "capturedAt": "2026-11-06T05:31:36.142Z",
+  "validatedAt": "2026-11-06T05:42:19.393Z"
 }
