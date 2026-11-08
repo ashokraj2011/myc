@@ -5,3 +5,15 @@ capabilities:
     kind: delivery
     parent: null
     repository: myc
+    application:
+      start:
+        - id: w-e86df32ac26fd01866d1dfac
+          type: npm
+          script: dev
+          workingDirectory: .
+          url: http://localhost:5173/
+          ready:
+            http: /
+            timeoutMs: 90000
+          debug:
+            port: 9229
