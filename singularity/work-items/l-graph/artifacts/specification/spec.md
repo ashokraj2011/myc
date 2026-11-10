@@ -4,7 +4,7 @@
   "workId": "l-graph",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 2,
+  "generation": 3,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "spec.md",
       "mediaType": "text/markdown",
-      "sha256": "b289f3d54f4af0cce9a9bd64d3e43339e035defa14bb8645408a3ed81b626c26",
-      "bytes": 9237
+      "sha256": "e9bbc116d233ee746f4a9b84544c8b2d2f355be09af28e1c13425573371e7010",
+      "bytes": 9821
     },
-    "generation": 2,
-    "publishedAt": "2026-11-10T23:16:48.033Z"
+    "generation": 3,
+    "publishedAt": "2026-11-10T23:23:53.808Z"
   },
-  "sourceCommit": "5a087f983c39a8c15e83644534ae9ca562ed3a18",
+  "sourceCommit": "39db9497b373f2c4e326522ad19a35c4e253c7df",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
@@ -66,13 +66,13 @@
   },
   "remoteAgent": null,
   "clarification": {
-    "generation": 2,
-    "path": "singularity/work-items/l-graph/context/clarifications-specification-gen2.json",
-    "sha256": "7c91c090177db6b80a8be3f4072b4f5168599702cdfcb270229a609af5c9889e",
-    "promptSha256": "45175c2b1fb59f4bfb53162c0f2074cfbdeb041060cb2fdaf91b4bf19a3a2708",
+    "generation": 3,
+    "path": "singularity/work-items/l-graph/context/clarifications-specification-gen3.json",
+    "sha256": "de3f600e14bc20f36fe267f47fc19263f88b0a5702a7019d0357fe4e8c38efaa",
+    "promptSha256": "e6f50750dcd0cc77cd0884645bc0099a5bb741be9c8afad7f75b2edafe17fe54",
     "responses": 1,
     "markers": [],
-    "recordedAt": "2026-11-10T23:15:42.834Z",
+    "recordedAt": "2026-11-10T23:23:06.366Z",
     "recordedBy": {
       "name": "Ashok Raj",
       "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -105,6 +105,26 @@
       "generation": 2,
       "path": "singularity/work-items/l-graph/telemetry/specification-gen2.json",
       "sha256": "e98082ae58337c648f4e38b5812b3e71f1da8b1e57b43276082c6a802e25de58",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 28462,
+        "estimatedTokens": 7116,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 28462,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 3,
+      "path": "singularity/work-items/l-graph/telemetry/specification-gen3.json",
+      "sha256": "12539b94ee07495a32335582d4bb305413ec4e61da01d6cbd2c2368ad356f327",
       "status": "pending",
       "models": [],
       "providerCost": null,
@@ -165,6 +185,27 @@
       "completedAt": "2026-11-10T23:16:48.033Z",
       "agent": "product-owner",
       "generation": 2
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-10T23:23:53.808Z",
+      "completedAt": "2026-11-10T23:23:53.808Z",
+      "agent": "product-owner",
+      "generation": 3
     }
   ],
   "sequenceOverrides": [],
@@ -208,7 +249,7 @@ exclusions. Do not introduce claims that are absent from the sections below. Exa
 boundary conditions are preserved separately by the governed projection.
 -->
 
-Create a polished, responsive graphing-calculator UI where a user can enter any equation and see its graph. Users can edit or replace the equation and see the plotted curve update. The design should be inspired by Desmos without requiring pixel matching or Desmos branding. Playwright tests must verify equation plotting, updates, and graph usability at the expected viewport. The broad equation scope was confirmed in clarification Q-004 for specification generation 2, superseding the narrower equation scope recorded in generation 1.
+Create a polished, responsive graphing-calculator UI where a user can enter an equation and see its graph. Required equation forms are explicit `y=f(x)`, parametric, and polar. The implementation chooses and documents input syntax and supported function families. Users can edit or replace an equation and see the plotted curve update. The design should be inspired by Desmos without requiring pixel matching or Desmos branding. Playwright tests must verify plotting for each required form, updates, and graph usability at the expected viewport. These requirements follow clarification Q-001 for specification generation 3, which confirms broad equation support and names the required forms.
 
 ## Actors
 
@@ -233,8 +274,16 @@ published inputs and settled answers. These are authoring instructions, not exec
 **Context:** The graphing calculator is open.
 
 - **Given** the calculator is open with no equation plotted
-  **When** the user enters an equation of their choice
+  **When** the user enters an explicit equation in the form `y=f(x)`
   **Then** the UI displays its graph. *(SRI-8d1790c722db)*
+
+- **Given** the calculator is open
+  **When** the user enters a parametric equation
+  **Then** the UI displays its graph.
+
+- **Given** the calculator is open
+  **When** the user enters a polar equation
+  **Then** the UI displays its graph.
 
 - **Given** an equation is plotted
   **When** the user edits or replaces that equation
@@ -281,20 +330,20 @@ Not applicable: the requested graphing calculator specifies no separate roles or
 
 ## Boundary conditions
 
-The clarified intent is to support any equation, as confirmed in clarification Q-004 for specification generation 2; this supersedes the narrower scope recorded in generation 1. No particular equation syntax, numeric limits, viewport dimensions, or timeouts are specified.
+Required equation forms are explicit `y=f(x)`, parametric, and polar, as confirmed in clarification Q-001 for specification generation 3. The implementation chooses and documents input syntax and supported function families; none are prescribed by the user. No numeric limits, viewport dimensions, or timeouts are specified.
 
 ## Requirements
 
 Numbered, testable, one obligation each. Cite the scenario each serves.
 
-- The calculator UI accepts an equation of the user's choice and displays its graph, honoring the broad “any equation” scope confirmed in clarification Q-004 for specification generation 2. *(S1)* [L-GRAPH:REQ-001]
+- The calculator UI accepts and graphs explicit `y=f(x)`, parametric, and polar equations. The implementation chooses and documents input syntax and supported function families. *(S1)* [L-GRAPH:REQ-001]
 - The calculator UI updates the displayed curve when the user edits or replaces the equation. *(S1)* [L-GRAPH:REQ-002]
-- Playwright tests verify that entering an equation displays its graph and that editing or replacing the equation updates the curve. *(S1)* [L-GRAPH:REQ-003] [scope:SRI-8d1790c722db]
+- Playwright tests verify that each required equation form can be entered and graphed, and that editing or replacing an equation updates the curve. *(S1)* [L-GRAPH:REQ-003] [scope:SRI-8d1790c722db]
 - The graphing calculator presents a clean, responsive layout inspired by Desmos, without requiring pixel matching or Desmos branding. *(S2)* [L-GRAPH:REQ-004]
 
 Acceptance criteria use the same stable, namespaced form:
 
-- A Playwright test enters an equation and observes its graph, then edits or replaces it and observes the updated curve. *(S1)* [L-GRAPH:AC-001]
+- Playwright tests enter an explicit `y=f(x)`, a parametric equation, and a polar equation and observe each graph; they also edit or replace an equation and observe the updated curve. *(S1)* [L-GRAPH:AC-001]
 - Visual and inspection review finds a clean, responsive graphing-calculator layout inspired by Desmos, without pixel matching or Desmos branding, at the expected viewport. *(S2)* [L-GRAPH:AC-002]
 
 ## Verification intent
@@ -332,7 +381,7 @@ cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
 
 ## Assumptions
 
-The broad “any equation” intent in clarification Q-004 for specification generation 2 supersedes the narrower equation scope recorded in generation 1. “Expected viewport” has no dimensions specified in the source.
+Clarification Q-001 for specification generation 3 confirms the required equation forms and leaves input syntax and supported function families to implementation, which must document them. “Expected viewport” has no dimensions specified in the source.
 
 ## Out of scope
 
@@ -340,4 +389,4 @@ Pixel matching and Desmos branding are not required.
 
 ## Sources
 
-No supporting documents were provided to this Story. The pinned source notes that supporting documents and images from the copied Story were not copied; those materials were not available to this phase. Clarification Q-004 for specification generation 2 confirms the broad “any equation” intent and supersedes the narrower equation scope recorded in generation 1.
+No supporting documents were provided to this Story. The pinned source notes that supporting documents and images from the copied Story were not copied; those materials were not available to this phase. Clarification Q-001 for specification generation 3 confirms explicit `y=f(x)`, parametric, and polar equation forms, with input syntax and supported function families left to implementation.

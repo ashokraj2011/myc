@@ -1,0 +1,136 @@
+{
+  "clauses": [
+    {
+      "anchor": "[L-GRAPH:REQ-001]",
+      "body": "The calculator UI accepts and graphs explicit `y=f(x)`, parametric, and polar equations. The implementation chooses and documents input syntax and supported function families. *(S1)*",
+      "bodySha256": "d8d9e52f8409f0f20701b1f74573f9efafbd830d56a444f8d45d25d32d5a96f5",
+      "dependsOn": [],
+      "id": "L-GRAPH:REQ-001",
+      "namespace": "L-GRAPH",
+      "number": 1,
+      "source": {
+        "line": 339,
+        "path": "singularity/work-items/l-graph/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "L-GRAPH:AC-001",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[L-GRAPH:REQ-002]",
+      "body": "The calculator UI updates the displayed curve when the user edits or replaces the equation. *(S1)*",
+      "bodySha256": "2daa67a0f178b4e04ae4a923c95b534361315fa8545ad984899a542cfb1ecbe6",
+      "dependsOn": [],
+      "id": "L-GRAPH:REQ-002",
+      "namespace": "L-GRAPH",
+      "number": 2,
+      "source": {
+        "line": 340,
+        "path": "singularity/work-items/l-graph/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "L-GRAPH:AC-001",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[L-GRAPH:REQ-003]",
+      "body": "Playwright tests verify that each required equation form can be entered and graphed, and that editing or replacing an equation updates the curve. *(S1)* [scope:SRI-8d1790c722db]",
+      "bodySha256": "a76c86aa90ebc89859dd65ba3b31cf7832cc8805e9fb14f777dff293cd4d7cd1",
+      "dependsOn": [],
+      "id": "L-GRAPH:REQ-003",
+      "namespace": "L-GRAPH",
+      "number": 3,
+      "source": {
+        "line": 341,
+        "path": "singularity/work-items/l-graph/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[L-GRAPH:REQ-004]",
+      "body": "The graphing calculator presents a clean, responsive layout inspired by Desmos, without requiring pixel matching or Desmos branding. *(S2)*",
+      "bodySha256": "f6604b1c62ef85e17d7e9a9573cc3af64fada38bbba5d63a3e7a2c0fb93da0d7",
+      "dependsOn": [],
+      "id": "L-GRAPH:REQ-004",
+      "namespace": "L-GRAPH",
+      "number": 4,
+      "source": {
+        "line": 342,
+        "path": "singularity/work-items/l-graph/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "L-GRAPH:AC-002",
+        "methods": [
+          "inspection",
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[L-GRAPH:AC-001]",
+      "body": "Playwright tests enter an explicit `y=f(x)`, a parametric equation, and a polar equation and observe each graph; they also edit or replace an equation and observe the updated curve. *(S1)*",
+      "bodySha256": "94434be63dffc5b7e34a045cac1cb9af392ba001d7cad996b33d4a2d6a85f5f2",
+      "dependsOn": [],
+      "id": "L-GRAPH:AC-001",
+      "namespace": "L-GRAPH",
+      "number": 1,
+      "source": {
+        "line": 346,
+        "path": "singularity/work-items/l-graph/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "L-GRAPH:AC-001",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[L-GRAPH:AC-002]",
+      "body": "Visual and inspection review finds a clean, responsive graphing-calculator layout inspired by Desmos, without pixel matching or Desmos branding, at the expected viewport. *(S2)*",
+      "bodySha256": "a6a1e333c824d7bc8574d73173b7d8703fd33f7bd0f4d761bd4568699f285325",
+      "dependsOn": [],
+      "id": "L-GRAPH:AC-002",
+      "namespace": "L-GRAPH",
+      "number": 2,
+      "source": {
+        "line": 347,
+        "path": "singularity/work-items/l-graph/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "L-GRAPH:AC-002",
+        "methods": [
+          "inspection",
+          "visual"
+        ]
+      }
+    }
+  ],
+  "generation": 3,
+  "indexSha256": "ef54ba7b70346b3f06e8f749e9fc68f0b57a11a910171e032990c20a321affae",
+  "phase": "specification",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 16463,
+    "path": "singularity/work-items/l-graph/artifacts/specification/spec.md",
+    "sha256": "01a144e853343bcd94716832aa5afd6e68b3d8f3b5e18a132982ce733f7a29c8"
+  },
+  "workId": "l-graph"
+}
