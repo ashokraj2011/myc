@@ -9,7 +9,7 @@
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
-| 1 | Specification (`specification`) | product-owner | **in_progress** | 0 | 0 | unavailable |
+| 1 | Specification (`specification`) | product-owner | **in_progress** | 1 | 0 | unavailable |
 | 2 | Planning (`planning`) | architect | **not_started** | 0 | 0 | unavailable |
 | 3 | Implementation (`implementation`) | developer | **not_started** | 0 | 0 | unavailable |
 | 4 | Convergence (`convergence`) | architect | **not_started** | 0 | 0 | unavailable |
@@ -18,5 +18,6 @@
 
 ## Recent history
 
+- 2026-11-10T23:09:34.746Z — **phase_generated** (specification) by ashokraj2011 · agent product-owner: generation 1
 - 2026-11-10T23:09:28.049Z — **asked_for_recorded** (specification) by ashokraj2011 · agent product-owner: What the person asked for in specification generation 1: instruction 1.
 - 2026-11-10T21:33:49.582Z — **work_started** (specification) by ashokraj2011 · agent product-owner: Created spec-driven-standard branch l-graph

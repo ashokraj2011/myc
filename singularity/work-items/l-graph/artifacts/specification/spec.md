@@ -4,27 +4,51 @@
   "workId": "l-graph",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "0135c3df99a46f0965c1403cd1df7b2efc5cbf7540d4ee4a2b67a225be612d62",
+      "bytes": 9094
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-10T23:09:34.644Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "ced899fd2ad05b051291fa459c7133ddaeced8e3",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/l-graph/context/clarifications-specification-gen1.json",
+    "sha256": "0222e132bf3f65d4350fcf0220210d98a32fa5b05973a6bdb08009561065b5fc",
+    "promptSha256": "b9ada80838b9b4569aa2ca46aa09b07a732e1b2f62f4b657c46c15557bf09a73",
+    "responses": 3,
+    "markers": [],
+    "recordedAt": "2026-11-10T23:07:30.069Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/l-graph/telemetry/specification-gen1.json",
+      "sha256": "5999d9ca65712601f04fd289d1813b4b0b69e1ce8a03a5641be9cc587275408a",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 28635,
+        "estimatedTokens": 7159,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 28635,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-10T23:09:34.644Z",
+      "completedAt": "2026-11-10T23:09:34.644Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -86,11 +167,11 @@ exclusions. Do not introduce claims that are absent from the sections below. Exa
 boundary conditions are preserved separately by the governed projection.
 -->
 
-TODO: Write the Agent brief here as visible text; text inside the comment above is not read.
+Create a polished, responsive graphing-calculator UI where a user can enter one equation using common arithmetic, x, and standard functions and see its graph. Users can edit or replace the equation and see the plotted curve update. The design should be inspired by Desmos without requiring pixel matching or Desmos branding. Parametric and implicit equations and multiple expressions are deferred. Playwright tests must verify the supported-equation plotting flow, updates, and graph usability at the expected viewport.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+The calculator user enters and edits the equation to be plotted. No separate roles or access authorities are specified.
 
 ## User scenarios
 
@@ -104,34 +185,38 @@ Self-check whether an implementation could meet this draft yet omit an explicit 
 clear omissions in this editable draft and recheck within the returned repair policy; preserve
 published inputs and settled answers. These are authoring instructions, not execution evidence. -->
 
-### S1 — <the most important situation, in the user's words>
+### S1 — Plot and update an equation
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Calculator user
+**Context:** The graphing calculator is open.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+- **Given** the calculator is open with no equation plotted
+  **When** the user enters one supported equation using common arithmetic, x, and a standard function
+  **Then** the UI displays the equation's graph. *(SRI-8d1790c722db)*
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
+- **Given** an equation is plotted
+  **When** the user edits or replaces that equation
+  **Then** the displayed curve updates to represent the edited or replacement equation.
 
-### S2 — <the next situation>
+### S2 — Use the graphing calculator at the expected viewport
 
 **Priority:** P2
+**Actor:** Calculator user
+**Context:** The calculator is open at the viewport used for the product.
 
-- **Given** … **When** … **Then** …
+- **Given** the calculator is displayed at the expected viewport
+  **When** the user views the graphing calculator
+  **Then** its layout is clean and responsive, inspired by the Desmos reference without pixel matching or Desmos branding.
 
 ## Failure and empty states
 
 What happens the first time, with nothing there yet, and when each step fails. These are where
 specifications are usually silent and implementations usually improvise.
 
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** Before an equation is entered, no equation graph is required to be displayed.
+- **Failure:** The source does not specify equation-error behavior or error wording; these remain unspecified.
+- **Partial:** The source does not specify partial-success behavior.
 
 ## Scenario coverage
 
@@ -142,28 +227,34 @@ prose. Use the pinned request and clarification answers; do not invent error tex
 
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `L-GRAPH:REQ-001` | S1 | TODO |
-| `L-GRAPH:REQ-002` | S2 | TODO |
-| `L-GRAPH:AC-001` | S1 | TODO |
+| `L-GRAPH:REQ-001` | S1 | success |
+| `L-GRAPH:REQ-002` | S1 | success |
+| `L-GRAPH:REQ-003` | S1 | success |
+| `L-GRAPH:REQ-004` | S2 | success |
+| `L-GRAPH:AC-001` | S1 | success |
+| `L-GRAPH:AC-002` | S2 | success |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+Not applicable: the requested graphing calculator specifies no separate roles or access controls.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+One equation at a time is in scope. Inputs use common arithmetic, x, and standard functions. Parametric and implicit equations and multiple expressions are deferred. No numeric limits, viewport dimensions, or timeout requirements are specified.
 
 ## Requirements
 
 Numbered, testable, one obligation each. Cite the scenario each serves.
 
-- <requirement>. *(S1)* [L-GRAPH:REQ-001]
-- <requirement>. *(S1, S2)* [L-GRAPH:REQ-002]
+- The calculator UI accepts one equation at a time using common arithmetic, x, and standard functions, and displays its graph. *(S1)* [L-GRAPH:REQ-001]
+- The calculator UI updates the displayed curve when the user edits or replaces the equation. *(S1)* [L-GRAPH:REQ-002]
+- Playwright tests verify that entering a supported equation displays its graph and that editing or replacing the equation updates the curve. *(S1)* [L-GRAPH:REQ-003] [scope:SRI-8d1790c722db]
+- The graphing calculator presents a clean, responsive layout inspired by Desmos, without requiring pixel matching or Desmos branding. *(S2)* [L-GRAPH:REQ-004]
 
 Acceptance criteria use the same stable, namespaced form:
 
-- <observable acceptance outcome>. *(S1)* [L-GRAPH:AC-001]
+- A Playwright test enters a supported equation and observes its graph, then edits or replaces it and observes the updated curve. *(S1)* [L-GRAPH:AC-001]
+- Visual and inspection review finds a clean, responsive graphing-calculator layout inspired by Desmos, without pixel matching or Desmos branding, at the expected viewport. *(S2)* [L-GRAPH:AC-002]
 
 ## Verification intent
 
@@ -177,14 +268,16 @@ Planning must inherit these methods and cannot change them without an approved s
 
 | Clause | Methods | Criterion |
 |---|---|---|
-| `L-GRAPH:REQ-001` | TODO | - |
-| `L-GRAPH:REQ-002` | TODO | - |
-| `L-GRAPH:AC-001` | TODO | `L-GRAPH:AC-001` |
+| `L-GRAPH:REQ-001` | test | `L-GRAPH:AC-001` |
+| `L-GRAPH:REQ-002` | test | `L-GRAPH:AC-001` |
+| `L-GRAPH:REQ-003` | test | - |
+| `L-GRAPH:REQ-004` | visual, inspection | `L-GRAPH:AC-002` |
+| `L-GRAPH:AC-001` | test | `L-GRAPH:AC-001` |
+| `L-GRAPH:AC-002` | visual, inspection | `L-GRAPH:AC-002` |
 
 ## Non-functional requirements
 
-Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
-will be measured; "fast" is not a requirement.
+No numeric latency, throughput, availability, accessibility, privacy, or retention requirements are specified in the pinned source or clarification.
 
 Use governed requirement anchors here too (for example `[L-GRAPH:REQ-003]`); `NFR-001` by
 itself is only a display label and is not a stable clause identity.
@@ -194,19 +287,16 @@ itself is only a display label and is not a stable clause identity.
 Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
 cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
 
-- <ART-…>
+- None: this Story pinned no constitution.
 
 ## Assumptions
 
-What this specification takes as true without proving. An assumption that turns out false is a
-change request, not a defect — which is only true if it was written down.
+The clarified equation scope and visual direction are accepted as the requested product boundaries for this specification. “Expected viewport” has no dimensions specified in the source.
 
 ## Out of scope
 
-Named explicitly, so the boundary is reviewable rather than inferred.
+Parametric equations, implicit equations, and plotting multiple expressions are deferred. Pixel matching and Desmos branding are not required.
 
 ## Sources
 
-Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
-offered to this phase that could not be read or was not available here, named as a gap. Without
-supporting documents, say so.
+No supporting documents were provided to this Story. The pinned source notes that supporting documents and images from the copied Story were not copied; those materials were not available to this phase.
