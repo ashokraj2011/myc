@@ -4,7 +4,7 @@
   "workId": "new-graph-plot",
   "workType": "spec-driven-standard",
   "phase": "planning",
-  "generation": 1,
+  "generation": 2,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "plan.md",
       "mediaType": "text/markdown",
-      "sha256": "5d4bffc3b44a3cf3dfaf7e6720bff4a2d6db6c77c7e6f33eecaac0fc20e58c64",
-      "bytes": 9702
+      "sha256": "c6e51f8c64bc3a09eb2781dc4da85d70d9798441662842734032216b47fa9926",
+      "bytes": 10392
     },
-    "generation": 1,
-    "publishedAt": "2026-11-10T11:14:49.948Z"
+    "generation": 2,
+    "publishedAt": "2026-11-10T12:37:26.220Z"
   },
-  "sourceCommit": "62afb73c91aadf776da1f1a58fe8970036623ca0",
+  "sourceCommit": "692b3fda30d0620ffdc7a6d220cff0d004ba836c",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/spec-driven/plan.md"
   },
   "inputs": {
-    "generation": 1,
-    "path": "singularity/work-items/new-graph-plot/context/inputs-planning-gen1.json",
-    "sha256": "d7f8de190d12eb2a12f8959d05762cdb23abd3b2d2f9bfd5e54fbbdbbb86b9cc",
+    "generation": 2,
+    "path": "singularity/work-items/new-graph-plot/context/inputs-planning-gen2.json",
+    "sha256": "e9d9eb8c549344e01be65699d1b52b63a5cb2bedf81a13ed99c8e7efdc26637c",
     "renderedSha256": "47e773e27a4bc458e1f893316bc9712432ad7e21307c587b2212d33d2e2e212c",
     "mode": "enforce"
   },
@@ -92,6 +92,26 @@
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 2,
+      "path": "singularity/work-items/new-graph-plot/telemetry/planning-gen2.json",
+      "sha256": "21c3c57a045099a72391ff59978cdf7955b61e7aebe136c1103091138b439e24",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 31061,
+        "estimatedTokens": 7766,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 31061,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
     }
   ],
   "remoteOutputs": [],
@@ -116,6 +136,27 @@
       "completedAt": "2026-11-10T11:14:49.948Z",
       "agent": "architect",
       "generation": 1
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-10T12:37:26.220Z",
+      "completedAt": "2026-11-10T12:37:26.220Z",
+      "agent": "architect",
+      "generation": 2
     }
   ],
   "sequenceOverrides": [],
@@ -138,11 +179,11 @@ for downstream agents. Keep exact commands and source paths when they are operat
 The complete approved plan remains available through its hash-bound expansion reference.
 -->
 
-Extend the existing React canvas grapher in `src/components/FunctionGrapher.jsx`, preserving its mathjs-backed `y=f(x)` plotting path and adding circle inputs for center and radius. Plot the circle parametrically on the same coordinate plane, using one pixel scale for both axes and fitting the requested circle in the viewport. Add Playwright coverage for a supplied function and for the complete circle centered at `(0,0)` with radius `6`. The repository currently has Vitest coverage but no Playwright setup, so implementation must add the browser-test configuration and required package scripts/dependencies. Principal risks are canvas sizing/device-pixel-ratio errors and clipping or distorting the circle; geometry assertions should inspect rendered canvas pixels at graph-coordinate landmarks and along the full perimeter.
+Extend the existing React canvas grapher in `src/components/FunctionGrapher.jsx`, retaining its mathjs-backed `y=f(x)` plotting path and adding circle inputs for center and radius. The calculator already integrates this component as its grapher mode through `src/App.jsx`; no additional app-level wiring is planned. Plot the circle parametrically on the same coordinate plane, use equal pixel scales for both axes, and fit the requested circle in the viewport. Add Playwright browser coverage for a supplied function and for the complete circle centered at `(0,0)` with radius `6`. The repository currently uses Vitest and has no Playwright setup, so add the browser-test configuration, script, and test dependency. Principal risks are canvas sizing/device-pixel-ratio errors and clipping or distorting the circle; geometry assertions should sample rendered pixels at graph-coordinate landmarks and around the full perimeter.
 
 ## Approach
 
-Keep the existing grapher mode and canvas renderer; add only the circle input/rendering path needed alongside the existing function expression. For circle center `(h,k)` and radius `r`, render `(h + r cos(t), k + r sin(t))` for a full turn, map both axes with the same scale, close the path, and choose a scale that leaves the complete circle visible. Retain the current function plotting behavior and its expression controls. This reuses the calculator's established React, mathjs, and canvas implementation rather than introducing a separate charting library. The approved scope does not specify control styling or syntax; a simple graph-type selector and center/radius fields are an implementation assumption, not new acceptance criteria.
+Keep the existing grapher mode and canvas renderer; add only the circle input/rendering path needed alongside the existing function expression. For circle center `(h,k)` and radius `r`, render `(h + r cos(t), k + r sin(t))` for a full turn, map both axes with the same scale, close the path, and choose a scale that leaves the complete circle visible. Retain the current function plotting behavior and expression controls. This reuses the calculator's established React, mathjs, and canvas implementation rather than introducing a separate charting library. The approved scope does not specify control styling or syntax; a simple graph-type selector and center/radius fields are an implementation assumption, not new acceptance criteria. The supplied `DOC-001 — Screenshot 2026 11 10 at 4.17.35 PM` is only a general visual reference, consistent with the approved specification; it does not add control or styling criteria.
 
 ## Affected surfaces
 
@@ -154,14 +195,14 @@ narrow plan amendment or private preservation; they never require rewriting this
 
 | Surface | Change | Serves |
 |---|---|---|
-| `src/components/FunctionGrapher.jsx` | Extend existing function plotter with circle inputs, parametric rendering, and an auto-fit coordinate scale while retaining function plotting. | [NEW-GRAPH-PLOT:REQ-001], [NEW-GRAPH-PLOT:REQ-002] |
+| `src/components/FunctionGrapher.jsx` | Extend the existing function plotter with circle inputs, parametric rendering, and an auto-fit coordinate scale while retaining function plotting. The existing App mode integration remains unchanged. | [NEW-GRAPH-PLOT:REQ-002] |
 | `tests/e2e/graph-plotter.spec.js` | Add Playwright browser tests for a supplied function curve and the full radius-6 origin circle. | [NEW-GRAPH-PLOT:AC-001], [NEW-GRAPH-PLOT:AC-002] |
 
 ## Sequencing
 
-1. Add Playwright configuration, a browser-test script, and the required test dependency as supporting tooling; keep existing Vitest tests intact.
-2. Extend `FunctionGrapher` with circle inputs and coordinate transforms that preserve equal axis scales and fit the entire circle, without changing the existing function-expression workflow.
-3. Add Playwright tests that select grapher mode, plot a representative function, and plot center `(0,0)` / radius `6`; inspect canvas pixels against expected graph-coordinate landmarks and perimeter coverage. Run the new browser tests and the existing build/test checks.
+1. Add Playwright configuration, a `test:e2e` script, and `@playwright/test` as supporting tooling; keep the existing Vitest configuration and tests intact.
+2. Extend `FunctionGrapher` with circle inputs and coordinate transforms that preserve equal axis scales and fit the entire circle, without changing the existing function-expression workflow or App mode integration.
+3. Add Playwright tests that select grapher mode, plot a representative function, and plot center `(0,0)` / radius `6`; inspect canvas pixels against expected graph-coordinate landmarks and perimeter coverage. Run `npm run test:e2e` plus the existing `npm test` and `npm run build` checks.
 
 ## Test strategy
 
@@ -185,9 +226,9 @@ not an exemption; human visual acceptance remains separate. Inherit all Specific
 
 | Clause | Expected paths | Planned tests | Fulfillment | Observable result |
 |---|---|---|---|---|
-| `NEW-GRAPH-PLOT:AC-001` | `src/components/FunctionGrapher.jsx` | `tests/e2e/graph-plotter.spec.js` | modified | Playwright verifies the supplied `y=f(x)` function's rendered curve at representative x coordinates. |
-| `NEW-GRAPH-PLOT:AC-002` | `src/components/FunctionGrapher.jsx` | `tests/e2e/graph-plotter.spec.js` | modified | Playwright verifies the full circle's center, radius, and continuous perimeter for `(0,0)` and `6`. |
-| `NEW-GRAPH-PLOT:REQ-001` | `src/components/FunctionGrapher.jsx` | `tests/e2e/graph-plotter.spec.js` | modified | The existing calculator grapher accepts a user-supplied `y=f(x)` and presents its corresponding curve. |
+| `NEW-GRAPH-PLOT:AC-001` | - | `tests/e2e/graph-plotter.spec.js` | test-only | Playwright verifies the existing supplied `y=f(x)` plotting behavior at representative graph coordinates. |
+| `NEW-GRAPH-PLOT:AC-002` | `src/components/FunctionGrapher.jsx` | `tests/e2e/graph-plotter.spec.js` | modified | Playwright verifies the complete perimeter, center `(0,0)`, and radius `6` of the plotted circle. |
+| `NEW-GRAPH-PLOT:REQ-001` | `src/components/FunctionGrapher.jsx` | `tests/e2e/graph-plotter.spec.js` | existing | The integrated calculator already accepts a user-supplied `y=f(x)` and presents its corresponding curve; Playwright will verify it remains available. |
 | `NEW-GRAPH-PLOT:REQ-002` | `src/components/FunctionGrapher.jsx` | `tests/e2e/graph-plotter.spec.js` | modified | Circle inputs for origin and radius `6` produce a complete, undistorted circle in the graph viewport. |
 
 <!-- Fulfillment: new, modified, existing (behaviour already at the listed paths), removed, test-only (tests are the whole delivery; Expected paths is -), document, configuration, or evidence (retained files under this Story's evidence/ directory). Do not put screenshots in Planned tests or product-source rows. An evidence AC needs a primary visual/inspection Verification contract; file presence is not a visual pass. Observable result states what is observed. Multi-code-step plans add Steps to allocate each row. -->
@@ -218,13 +259,17 @@ an inspection or visual witness. For example (a fenced example is never read as 
 
 <!-- Optional. List each file the code may change that cannot carry a @clause tag (a manifest, a lockfile, CI configuration, repository metadata, documentation): one exact backticked repository path per bullet, then its reason, for example: - `go.mod` — adds the ledger client, or - `.github/workflows/ci.yml` — runs the new job. Application source, tests and migrations are never supporting files: give them a clause row. Approval refuses any other changed path no clause claims. Delete this section when there are none. -->
 
+- `package.json` — adds `@playwright/test` and the `test:e2e` script for the required browser tests.
+- `package-lock.json` — records the browser-test dependency and its resolved dependency tree.
+- `playwright.config.js` — configures the Playwright test runner and local Vite application.
+
 ## Constitution articles
 
 None: this Story pinned no constitution.
 
 ## Risks and rollback
 
-Canvas dimensions or device-pixel-ratio handling could make coordinate assertions flaky; use the canvas's measured CSS dimensions and sample expected landmarks with a documented color tolerance. A nonuniform axis scale or insufficient auto-fit margin could distort or clip the circle; the Playwright geometry check should compare horizontal and vertical radii and probe the full perimeter, not only the top and bottom. Browser installation or headless execution may be unavailable in the environment; report that as a test-runner prerequisite rather than weakening the required Playwright acceptance tests. If the grapher regression is not acceptable, revert the scoped grapher and test-tooling changes while preserving the existing calculator modes and Vitest suite.
+Canvas dimensions or device-pixel-ratio handling could make coordinate assertions flaky; use the canvas's measured CSS dimensions and sample expected landmarks with a documented color tolerance. A nonuniform axis scale or insufficient auto-fit margin could distort or clip the circle; the Playwright geometry check should compare horizontal and vertical radii and probe the full perimeter, not only the top and bottom. Browser installation or headless execution may be unavailable in the environment; report that as a test-runner prerequisite rather than weakening the required Playwright acceptance tests. If the grapher regression is not acceptable, revert only the scoped grapher and test-tooling changes while preserving the existing calculator mode integration and Vitest suite.
 
 <!-- singularity-flow:inputs:start -->
 

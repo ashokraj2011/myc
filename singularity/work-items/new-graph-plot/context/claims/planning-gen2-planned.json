@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-11-10T12:37:26.369Z",
+  "claims": {
+    "NEW-GRAPH-PLOT:AC-001": {
+      "expectedPaths": [],
+      "tests": [
+        "tests/e2e/graph-plotter.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "test-only",
+      "observableResult": "Playwright verifies the existing supplied `y=f(x)` plotting behavior at representative graph coordinates."
+    },
+    "NEW-GRAPH-PLOT:AC-002": {
+      "expectedPaths": [
+        "src/components/FunctionGrapher.jsx"
+      ],
+      "tests": [
+        "tests/e2e/graph-plotter.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Playwright verifies the complete perimeter, center `(0,0)`, and radius `6` of the plotted circle."
+    },
+    "NEW-GRAPH-PLOT:REQ-001": {
+      "expectedPaths": [
+        "src/components/FunctionGrapher.jsx"
+      ],
+      "tests": [
+        "tests/e2e/graph-plotter.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "existing",
+      "observableResult": "The integrated calculator already accepts a user-supplied `y=f(x)` and presents its corresponding curve; Playwright will verify it remains available."
+    },
+    "NEW-GRAPH-PLOT:REQ-002": {
+      "expectedPaths": [
+        "src/components/FunctionGrapher.jsx"
+      ],
+      "tests": [
+        "tests/e2e/graph-plotter.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Circle inputs for origin and radius `6` produce a complete, undistorted circle in the graph viewport."
+    }
+  },
+  "supportingFiles": [
+    "package-lock.json",
+    "package.json",
+    "playwright.config.js"
+  ],
+  "supportingFileDetails": [
+    {
+      "path": "package-lock.json",
+      "class": "dependency-lock",
+      "reason": "records the browser-test dependency and its resolved dependency tree."
+    },
+    {
+      "path": "package.json",
+      "class": "build-configuration",
+      "reason": "adds `@playwright/test` and the `test:e2e` script for the required browser tests."
+    },
+    {
+      "path": "playwright.config.js",
+      "class": "build-configuration",
+      "reason": "configures the Playwright test runner and local Vite application."
+    }
+  ],
+  "workId": "new-graph-plot",
+  "phase": "planning",
+  "generation": 2,
+  "source": {
+    "path": "singularity/work-items/new-graph-plot/artifacts/planning/plan.md",
+    "sha256": "8163048e317eed9cb8477429b7e1e161b02d870df8f99c416b0b33705f4e6118",
+    "bytes": 20467
+  }
+}
