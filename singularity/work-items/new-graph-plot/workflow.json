@@ -5038,6 +5038,14 @@
       "event": "departure_recorded",
       "phase": "implementation",
       "detail": "DEP-001 (supporting): vite.config.js changed as a supporting change (build-configuration). vite.config.js changed in this generation, and no row of the approved plan names it."
+    },
+    {
+      "at": "2026-11-10T13:02:04.122Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "plan_amended",
+      "phase": "implementation",
+      "detail": "PAM-001: .nvmrc listed as build-configuration. reivews it is ok to go ahead"
     }
   ],
   "measurement": {
@@ -5325,21 +5333,33 @@
       "storyIdentity": "f4681aea8469db2cb7504ecf1272afd1483c8dd7e28a77121777f41ec3664f70",
       "id": "WT-b5c5d8ea62083a9a544da56cfdad160cc60a228394226b22baa310d71bcc3b37",
       "inputSha256": "95c12ffab3b79827b3aeff361a59b7de57cb1b085389b08d80ef4b050a5de691",
-      "revision": 1,
-      "state": "author-draft",
+      "revision": 4,
+      "state": "publication-requested",
       "continuations": 0,
       "maximumContinuations": 3,
       "repairConsumed": 0,
-      "conditions": [],
+      "conditions": [
+        "ee87b9a1034711a1fa6fb0309d042ade307021b9dedd15467d9b2201bdb9224b"
+      ],
       "checkpoints": [
         {
           "kind": "prepared",
           "inputSha256": "95c12ffab3b79827b3aeff361a59b7de57cb1b085389b08d80ef4b050a5de691",
           "fingerprint": "228644fdef154c256c2d335f81fc7f9084159cbdc327472a7a999b329c11bd29"
+        },
+        {
+          "kind": "validation",
+          "inputSha256": "95c12ffab3b79827b3aeff361a59b7de57cb1b085389b08d80ef4b050a5de691",
+          "fingerprint": "4ddd43ca1d4f0410c4ca08b60ce299a47ae35739f9d6e7897c97b200dd8adeb9"
+        },
+        {
+          "kind": "publication-requested",
+          "inputSha256": "95c12ffab3b79827b3aeff361a59b7de57cb1b085389b08d80ef4b050a5de691",
+          "fingerprint": "95c12ffab3b79827b3aeff361a59b7de57cb1b085389b08d80ef4b050a5de691"
         }
       ],
       "blockedCode": null,
-      "recordSha256": "a16e6dbdcc3068798c831ebff02454a98791412a8a85c8c8cd1a24aca9cc87b1"
+      "recordSha256": "a57d062ed33352bbd4fd60c7323dd50c4ca7b8384af90813a09695f5ea31289d"
     }
   },
   "publicationProjections": [
@@ -6947,6 +6967,137 @@
         },
         "createdAt": "2026-11-10T12:51:32.364Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "27b44943-fb26-4193-89df-f38a8d6b23cd",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "new-graph-plot",
+          "branch": "new-graph-plot"
+        },
+        "phaseId": "implementation",
+        "generation": 0,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "decision": "plan",
+          "reviewPacketSha256": null,
+          "amendment": "PAM-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-10T13:02:02.751Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "27b44943-fb26-4193-89df-f38a8d6b23cd",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "new-graph-plot"
+          ],
+          "branch": "new-graph-plot",
+          "canonicalBranch": "new-graph-plot",
+          "createdAt": "2026-11-10T10:49:29.658Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 0,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph",
+          "updatedAt": "2026-11-10T13:02:04.122Z",
+          "workId": "new-graph-plot",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
+          "lifecycleEventId": "27b44943-fb26-4193-89df-f38a8d6b23cd",
+          "lifecyclePayload": {
+            "decision": "plan",
+            "reviewPacketSha256": null,
+            "amendment": "PAM-001"
+          },
+          "templateSha256": "2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "27b44943-fb26-4193-89df-f38a8d6b23cd",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "new-graph-plot",
+              "branch": "new-graph-plot"
+            },
+            "phaseId": "implementation",
+            "generation": 0,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "architecture-reviewers",
+            "payload": {
+              "decision": "plan",
+              "reviewPacketSha256": null,
+              "amendment": "PAM-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-10T13:02:02.751Z"
+          }
+        },
+        "createdAt": "2026-11-10T13:02:02.762Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -7059,6 +7210,27 @@
       },
       "supersedes": null,
       "at": "2026-11-10T12:51:32.284Z"
+    }
+  ],
+  "planAmendments": [
+    {
+      "id": "PAM-001",
+      "changes": [
+        {
+          "kind": "add-supporting",
+          "path": ".nvmrc",
+          "class": "build-configuration",
+          "reason": "reivews it is ok to go ahead"
+        }
+      ],
+      "contentHashes": {
+        ".nvmrc": "f14b4987904bcb5814e4459a057ed4d20f58a633152288a761214dcd28780b56"
+      },
+      "reason": "reivews it is ok to go ahead",
+      "actor": "ashokraj2011",
+      "authorityGroup": "architecture-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-10T13:02:04.122Z"
     }
   ]
 }
