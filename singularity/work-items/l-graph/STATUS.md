@@ -9,7 +9,7 @@
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
-| 1 | Specification (`specification`) | product-owner | **in_progress** | 3 | 0 | unavailable |
+| 1 | Specification (`specification`) | product-owner | **awaiting_approval** | 3 | 0 | unavailable |
 | 2 | Planning (`planning`) | architect | **not_started** | 0 | 0 | unavailable |
 | 3 | Implementation (`implementation`) | developer | **not_started** | 0 | 0 | unavailable |
 | 4 | Convergence (`convergence`) | architect | **not_started** | 0 | 0 | unavailable |
@@ -18,6 +18,7 @@
 
 ## Recent history
 
+- 2026-11-10T23:37:03.362Z — **phase_submitted** (specification) by ashokraj2011 · agent product-owner: 1 artifacts
 - 2026-11-10T23:31:09.518Z — **source_review_submitted** (specification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: b2dab0899c2c1df20d68d61c89a6cedcfd8066e8e2470a572f2ca56746bed406
 - 2026-11-10T23:23:53.908Z — **phase_generated** (specification) by ashokraj2011 · agent product-owner: generation 3
 - 2026-11-10T23:19:02.320Z — **source_review_submitted** (specification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 2a92c9ecbef6203fc0ade753ba4e613e6429e79db5230d592e1215f6d9a22058
