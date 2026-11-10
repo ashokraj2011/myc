@@ -1,0 +1,137 @@
+{
+  "allowedNext": [
+    "advance-to-verification"
+  ],
+  "bindings": {
+    "clauseIndexSha256": [
+      "2f3a10a1d64a71b76877bf45e04574425f3808e5c87480eb867a60d886a691a1"
+    ],
+    "configurationRevision": "2926236a5d2740b897b6c437ff732cb3a2677425",
+    "configurationSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
+    "constitutionSha256": null,
+    "evidenceSha256": [],
+    "iteration": 1,
+    "observedClaimsSha256": [
+      "2798c2556aa296ab37de581e9edd972ff57067f9206747ded0ae8e55157efdbd"
+    ],
+    "plannedClaimsSha256": [
+      "36c36ef511a9b4e9d21054984641dd53767202acf96212ee3978c3a6fa354a73",
+      "5245785ba42604034fb4e98c16ed0a0cbdf5a3e1ccd1e873d17a72314aa65625"
+    ],
+    "planning": {
+      "generation": 2,
+      "sha256": "19a46fb30432f3f7d43553e6ef3fe383cb311601a5ba16758a175a2e413f76ba"
+    },
+    "reconciliation": {
+      "intervalId": "INT-implementation-G1-001",
+      "path": "singularity/work-items/new-graph-plot/context/work-intervals/reconciliations/0beb7c199bac70a74c752297c6f4af18bbc930ad0fcee5dea93adf3622cb4e65.json",
+      "sha256": "0beb7c199bac70a74c752297c6f4af18bbc930ad0fcee5dea93adf3622cb4e65"
+    },
+    "sourceBaseCommit": "34b63a1515be1f43713abf7e9efe3e978e73a110",
+    "sourceTargetCommit": "ffc90e9fe83400e573693359a15ca9084d99f45d",
+    "specification": {
+      "generation": 1,
+      "sha256": "c91336ecd6ee0f7f5cf2e636eaa9445b576c408610d6302e7123d5eaa65f64c8"
+    }
+  },
+  "candidateRecordBindings": [],
+  "candidateRecords": [],
+  "candidateSnapshot": [],
+  "candidates": [],
+  "convergenceSha256": "cf1899b47e5603da7b13480d1e21c7e00d99d89d383aecd0b0cbe435f5bf4ace",
+  "facts": [],
+  "findings": [],
+  "iteration": 1,
+  "legacyMigration": null,
+  "resultType": "convergence",
+  "schemaVersion": 6,
+  "settledByPlan": [
+    {
+      "clauseIds": [],
+      "detail": "vite.config.js changed and no observed claim cites it; this is missing trace evidence, not a finding that the change was unplanned",
+      "evidence": [],
+      "id": "CF-1532e6380eb3",
+      "kind": "unclaimed-changed-path",
+      "paths": [
+        "vite.config.js"
+      ],
+      "settledBy": {
+        "class": "build-configuration",
+        "id": "PAM-002",
+        "kind": "amendment",
+        "sha256": "b40277ffdf33f4b6a4c8398988cbe05e15c66467bafb6babd30b766786c98f06",
+        "text": "go ahead with the things..it is ok"
+      }
+    },
+    {
+      "clauseIds": [],
+      "detail": "package.json changed and no observed claim cites it; this is missing trace evidence, not a finding that the change was unplanned",
+      "evidence": [],
+      "id": "CF-21034d278357",
+      "kind": "unclaimed-changed-path",
+      "paths": [
+        "package.json"
+      ],
+      "settledBy": {
+        "class": "build-configuration",
+        "generation": 2,
+        "kind": "supporting",
+        "phase": "planning",
+        "text": "adds `@playwright/test` and the `test:e2e` script for the required browser tests."
+      }
+    },
+    {
+      "clauseIds": [],
+      "detail": "package-lock.json changed and no observed claim cites it; this is missing trace evidence, not a finding that the change was unplanned",
+      "evidence": [],
+      "id": "CF-418b395c70fc",
+      "kind": "unclaimed-changed-path",
+      "paths": [
+        "package-lock.json"
+      ],
+      "settledBy": {
+        "class": "dependency-lock",
+        "generation": 2,
+        "kind": "supporting",
+        "phase": "planning",
+        "text": "records the browser-test dependency and its resolved dependency tree."
+      }
+    },
+    {
+      "clauseIds": [],
+      "detail": "playwright.config.js changed and no observed claim cites it; this is missing trace evidence, not a finding that the change was unplanned",
+      "evidence": [],
+      "id": "CF-82d0ecf747f0",
+      "kind": "unclaimed-changed-path",
+      "paths": [
+        "playwright.config.js"
+      ],
+      "settledBy": {
+        "class": "build-configuration",
+        "generation": 2,
+        "kind": "supporting",
+        "phase": "planning",
+        "text": "configures the Playwright test runner and local Vite application."
+      }
+    },
+    {
+      "clauseIds": [],
+      "detail": ".nvmrc changed and no observed claim cites it; this is missing trace evidence, not a finding that the change was unplanned",
+      "evidence": [],
+      "id": "CF-fcfa04dc67b1",
+      "kind": "unclaimed-changed-path",
+      "paths": [
+        ".nvmrc"
+      ],
+      "settledBy": {
+        "class": "build-configuration",
+        "id": "PAM-001",
+        "kind": "amendment",
+        "sha256": "f14b4987904bcb5814e4459a057ed4d20f58a633152288a761214dcd28780b56",
+        "text": "reivews it is ok to go ahead"
+      }
+    }
+  ],
+  "unresolvedBlockers": [],
+  "workId": "new-graph-plot"
+}
