@@ -1,0 +1,94 @@
+{
+  "clauses": [
+    {
+      "anchor": "[NEW-GRAPH-PLOT:REQ-001]",
+      "body": "The existing calculator shall provide a graph plotter that accepts a user-supplied `y=f(x)` function and presents its plotted curve. This is the integrated-calculator scope selected in clarification `Q-001`. *(S1)*",
+      "bodySha256": "b4dbbc898e30b79e1849bdd80b91f8ce999aaba0def87beefbeca51873c36e45",
+      "dependsOn": [],
+      "id": "NEW-GRAPH-PLOT:REQ-001",
+      "namespace": "NEW-GRAPH-PLOT",
+      "number": 1,
+      "source": {
+        "line": 194,
+        "path": "singularity/work-items/new-graph-plot/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "NEW-GRAPH-PLOT:AC-001",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[NEW-GRAPH-PLOT:REQ-002]",
+      "body": "When the supplied graph inputs specify a circle centered at `(0,0)` with radius `6`, the plotter shall render the complete circle. This fulfills the pinned circle-test request [scope:SRI-15d4e5bd263a] and the full-circle clarification `Q-004`. *(S2)*",
+      "bodySha256": "ed578328f2a797708c6c9dce5b86f0eb05550ac70212fd7ddb0e1d48237f1d85",
+      "dependsOn": [],
+      "id": "NEW-GRAPH-PLOT:REQ-002",
+      "namespace": "NEW-GRAPH-PLOT",
+      "number": 2,
+      "source": {
+        "line": 195,
+        "path": "singularity/work-items/new-graph-plot/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "NEW-GRAPH-PLOT:AC-002",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[NEW-GRAPH-PLOT:AC-001]",
+      "body": "A Playwright test verifies that a supplied `y=f(x)` function is presented as its corresponding plotted curve. *(S1)*",
+      "bodySha256": "504cbcf4ff5de9d530ed1bd1f2b0a02cdebd0a903f9198584a0619ff61f34236",
+      "dependsOn": [],
+      "id": "NEW-GRAPH-PLOT:AC-001",
+      "namespace": "NEW-GRAPH-PLOT",
+      "number": 1,
+      "source": {
+        "line": 199,
+        "path": "singularity/work-items/new-graph-plot/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "NEW-GRAPH-PLOT:AC-001",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[NEW-GRAPH-PLOT:AC-002]",
+      "body": "A Playwright test verifies that the plotted circle is complete, centered at `(0,0)`, and has radius `6`. *(S2)*",
+      "bodySha256": "402f4b2fac9832c173379b1d56ae2c52a4c5f8fefaa2b3a8578659a0ba3a563c",
+      "dependsOn": [],
+      "id": "NEW-GRAPH-PLOT:AC-002",
+      "namespace": "NEW-GRAPH-PLOT",
+      "number": 2,
+      "source": {
+        "line": 200,
+        "path": "singularity/work-items/new-graph-plot/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "NEW-GRAPH-PLOT:AC-002",
+        "methods": [
+          "test"
+        ]
+      }
+    }
+  ],
+  "generation": 1,
+  "indexSha256": "86f58e61fa1d895208581a01a9a6b2af6e6c8c24a8515d62a0711abd1f002cf8",
+  "phase": "specification",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 8694,
+    "path": "singularity/work-items/new-graph-plot/artifacts/specification/spec.md",
+    "sha256": "a3708cd059d3558ef6ac2b082430d83deb676a8958261ed04121bad414bb469d"
+  },
+  "workId": "new-graph-plot"
+}
