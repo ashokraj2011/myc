@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "new-graph-plot",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G1-001",
+  "phaseId": "implementation",
+  "generation": 1,
+  "baselineSha256": "81971dc1096d12b79415ffaf57bd93c511de8eca3bb26178dd9162d44be3d909",
+  "baseline": {
+    "path": "singularity/work-items/new-graph-plot/context/work-intervals/implementation-gen1-baseline.json",
+    "sha256": "81971dc1096d12b79415ffaf57bd93c511de8eca3bb26178dd9162d44be3d909",
+    "verified": true,
+    "sourceBaseCommit": "34b63a1515be1f43713abf7e9efe3e978e73a110"
+  },
+  "sourceBaseCommit": "34b63a1515be1f43713abf7e9efe3e978e73a110",
+  "target": {
+    "branch": "new-graph-plot",
+    "head": "ffc90e9fe83400e573693359a15ca9084d99f45d",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": ".nvmrc",
+      "status": "present",
+      "sha256": "f14b4987904bcb5814e4459a057ed4d20f58a633152288a761214dcd28780b56",
+      "bytes": 3,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "package-lock.json",
+      "status": "present",
+      "sha256": "60680c03139aab40bf1ffbbefcab8449e3197aee492988788121232b02bc7b08",
+      "bytes": 126376,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "package.json",
+      "status": "present",
+      "sha256": "30443e8b43e55d037f4a390cae020e8f162bf3d4535248edab540ca1e0b270f4",
+      "bytes": 935,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "playwright.config.js",
+      "status": "present",
+      "sha256": "0d4bbfb62a348f0fefa5fd2034b1f7b33d458123bf1c6cb8c7fb5016b3358477",
+      "bytes": 328,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "src/components/FunctionGrapher.jsx",
+      "status": "present",
+      "sha256": "8805a362c58232853c8fe2ac9275571517b76cbb35060a54077214a76cb0d238",
+      "bytes": 10707,
+      "verdict": "planned",
+      "clauseIds": [
+        "NEW-GRAPH-PLOT:AC-002",
+        "NEW-GRAPH-PLOT:REQ-001",
+        "NEW-GRAPH-PLOT:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "tests/e2e/graph-plotter.spec.js",
+      "status": "present",
+      "sha256": "2333d7437116f1f98b317cb234d9e2c305a45157deb10cdb7d58ad7be0ebd838",
+      "bytes": 2318,
+      "verdict": "planned",
+      "clauseIds": [
+        "NEW-GRAPH-PLOT:AC-001",
+        "NEW-GRAPH-PLOT:AC-002",
+        "NEW-GRAPH-PLOT:REQ-001",
+        "NEW-GRAPH-PLOT:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "vite.config.js",
+      "status": "present",
+      "sha256": "b40277ffdf33f4b6a4c8398988cbe05e15c66467bafb6babd30b766786c98f06",
+      "bytes": 317,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 7,
+    "planned": 2,
+    "unplanned": 5,
+    "protected": 0
+  },
+  "decision": {
+    "status": "review",
+    "summaryStatus": "attention",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "0beb7c199bac70a74c752297c6f4af18bbc930ad0fcee5dea93adf3622cb4e65",
+  "reconciledAt": "2026-11-10T13:19:44.545Z",
+  "final": true,
+  "recordedAt": "2026-11-10T13:19:44.547Z",
+  "path": "singularity/work-items/new-graph-plot/context/work-intervals/reconciliations/0beb7c199bac70a74c752297c6f4af18bbc930ad0fcee5dea93adf3622cb4e65.json"
+}
