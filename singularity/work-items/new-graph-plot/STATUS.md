@@ -20,6 +20,7 @@
 
 ## Recent history
 
+- 2026-11-10T12:51:32.284Z — **departure_recorded** (implementation) by ashokraj2011 · agent developer: DEP-001 (supporting): vite.config.js changed as a supporting change (build-configuration). vite.config.js changed in this generation, and no row of the approved plan names it.
 - 2026-11-10T12:45:17.403Z — **work_interval_started** (implementation) by system: baseline 81971dc1096d at 34b63a1515be
 - 2026-11-10T12:45:17.366Z — **phase_self_approved** (planning) by ashokraj2011 · agent architect: threshold reached; advanced to implementation
 - 2026-11-10T12:41:50.752Z — **phase_submitted** (planning) by ashokraj2011 · agent architect: 1 artifacts
