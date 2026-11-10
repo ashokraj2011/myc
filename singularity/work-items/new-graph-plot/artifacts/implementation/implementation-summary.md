@@ -4,27 +4,51 @@
   "workId": "new-graph-plot",
   "workType": "spec-driven-standard",
   "phase": "implementation",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "developer",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "developer"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "implementation-summary.md",
+      "mediaType": "text/markdown",
+      "sha256": "d36ff2842bc205d316668f6f411a8b4b1d6cb4175c565be1b7939ab05caedf46",
+      "bytes": 3108
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-10T13:08:35.762Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "ccc84e99a50ada2e59c9001cc9f33e5dd01ed9b9",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
@@ -38,7 +62,7 @@
   "inputs": {
     "generation": 1,
     "path": "singularity/work-items/new-graph-plot/context/inputs-implementation-gen1.json",
-    "sha256": "cd0d66e3561cdb089eb586c970cbe2633d7e1cc5b9e68bf7016f6656b1ff99ea",
+    "sha256": "0166653018defc1babb681704d78130e85770e9fdf25a9ced06107db74236648",
     "renderedSha256": "228644fdef154c256c2d335f81fc7f9084159cbdc327472a7a999b329c11bd29",
     "mode": "enforce"
   },
@@ -48,9 +72,52 @@
   },
   "remoteAgent": null,
   "clarification": null,
-  "telemetry": [],
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/new-graph-plot/telemetry/implementation-gen1.json",
+      "sha256": "59b1a5127f78ac64c683fa0736ebf4e687f7a57d6bba043608caad1ddbac57dd",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 33204,
+        "estimatedTokens": 8301,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 33204,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-10T13:08:35.761Z",
+      "completedAt": "2026-11-10T13:08:35.761Z",
+      "agent": "developer",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -68,7 +135,7 @@ remaining limitations, and rollout considerations for downstream agents. Keep it
 the detailed changed-components and test sections are preserved separately.
 -->
 
-The existing calculator grapher now retains its mathjs-backed function plotting mode and adds a circle mode with center and positive-radius inputs. Circle plotting uses equal axis scales and fits the requested circle within the canvas. Playwright coverage exercises a supplied function and samples 48 perimeter points for the origin-centered radius-6 circle. The browser checks, production build, and changed-file lint passed; the existing Vitest suite remains blocked by Node 26's localStorage behavior in this environment.
+The existing calculator grapher now retains its mathjs-backed function plotting mode and adds a circle mode with center and positive-radius inputs. Circle plotting uses equal axis scales and fits the requested circle within the canvas. Playwright coverage exercises a supplied function and samples 48 perimeter points for the origin-centered radius-6 circle. The browser checks, production build, and changed-file lint passed. The initial Vitest diagnostic failed under Node 26's localStorage behavior; the person subsequently chose Node 22 and recorded its pin for the required publication test run.
 
 ## Implemented outcome
 
@@ -80,7 +147,7 @@ Users can choose Function or Circle in the existing grapher. Function mode conti
 
 ## Tests and operational notes
 
-`npm run test:e2e` — passed, 2 Playwright tests: `@ac:NEW-GRAPH-PLOT:AC-001` found the supplied `y=x` curve at `(1,1)`; `@ac:NEW-GRAPH-PLOT:AC-002` found the circle at 48 evenly spaced perimeter samples for center `(0,0)` and radius `6`. `npm run build` — passed, with Vite's existing large-chunk advisory. `npx eslint src/components/FunctionGrapher.jsx playwright.config.js tests/e2e/graph-plotter.spec.js vite.config.js` — passed without findings. `npm test` — 14 tests passed and 17 failed in `src/App.test.jsx` because Node `26.12.0` exposes an unavailable `localStorage` ahead of jsdom; the test setup's known compatible Node `22.14.0` is installed but not on PATH. No `.nvmrc` was added; pinning Node 22 requires the person's `/sf-decide` decision. The browser suite uses the configured local Vite server and its default headless browser; browser geometry is sampled from canvas pixels. The attached screenshot was treated as a general reference, not a styling requirement.
+`npm run test:e2e` — passed, 2 Playwright tests: `@ac:NEW-GRAPH-PLOT:AC-001` found the supplied `y=x` curve at `(1,1)`; `@ac:NEW-GRAPH-PLOT:AC-002` found the circle at 48 evenly spaced perimeter samples for center `(0,0)` and radius `6`. `npm run build` — passed, with Vite's existing large-chunk advisory. `npx eslint src/components/FunctionGrapher.jsx playwright.config.js tests/e2e/graph-plotter.spec.js vite.config.js` — passed without findings. An initial `npm test` diagnostic on Node `26.12.0` had 14 passes and 17 failures in `src/App.test.jsx`, because that runtime's `localStorage` is unavailable ahead of jsdom. The person then chose Node 22; SFlow recorded the `.nvmrc` pin and its plan accounting as PAM-001. That diagnostic is not gate evidence; publication's required run is authoritative. The browser suite uses the configured local Vite server and its default headless browser; browser geometry is sampled from canvas pixels. The attached screenshot was treated as a general reference, not a styling requirement.
 
 <!-- singularity-flow:inputs:start -->
 

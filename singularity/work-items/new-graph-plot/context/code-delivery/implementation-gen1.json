@@ -1,0 +1,617 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "new-graph-plot",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "3d2d9404-25ac-448d-a86f-b50387edc31e",
+  "changeSet": {
+    "path": "singularity/work-items/new-graph-plot/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:ff4cf76470754d0df6fa4c91dd66b64473736ea166fc12f92574fb7a5bf3e123",
+    "sourcePaths": [
+      "src/components/FunctionGrapher.jsx"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [
+      ".nvmrc",
+      "package-lock.json",
+      "package.json",
+      "playwright.config.js",
+      "vite.config.js"
+    ],
+    "executableTestPaths": [
+      "tests/e2e/graph-plotter.spec.js"
+    ],
+    "supportingTestPaths": [
+      "playwright.config.js"
+    ]
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "build-configuration": 4,
+      "dependency-lock": 1,
+      "product-source": 1,
+      "test-source": 1
+    },
+    "entries": [
+      {
+        "changeId": "sha256:fde8b995e5502a55312a5f0ea2312cb352075fff9e36be04293f33e2daf774ba",
+        "status": "added",
+        "oldPath": null,
+        "newPath": ".nvmrc",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:d4758a6411d51ffe991e22e12b5b0f5c8e9ea820627fbcfbbb9e2b4bde7eafaa",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "playwright.config.js",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:a19455b7db0e1bd8983ccfc7d289e64781c126fc11567c95aafa1b4199a10e3d",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "tests/e2e/graph-plotter.spec.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:f59c2409ca00d1ac35831626721519d7d3f3619897f2770ed9c740f7173ab969",
+        "status": "modified",
+        "oldPath": "package-lock.json",
+        "newPath": "package-lock.json",
+        "role": "dependency-lock",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:1be2b01b7320ab6e1b20079bc38dc338e1e94dcbd0095e329e93824ea46f8b8d",
+        "status": "modified",
+        "oldPath": "package.json",
+        "newPath": "package.json",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:68ba9a2c50431d5540cd2bc4e78f43cf78827a2f809530dff1e34c3f508298f0",
+        "status": "modified",
+        "oldPath": "src/components/FunctionGrapher.jsx",
+        "newPath": "src/components/FunctionGrapher.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:035ad42bc60c00abca9979da586ff24b46adf7d77e1d9e6bb1a2474d37b0db56",
+        "status": "modified",
+        "oldPath": "vite.config.js",
+        "newPath": "vite.config.js",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "NEW-GRAPH-PLOT:AC-001",
+      "NEW-GRAPH-PLOT:AC-002"
+    ],
+    "bound": [
+      "NEW-GRAPH-PLOT:AC-001",
+      "NEW-GRAPH-PLOT:AC-002"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "NEW-GRAPH-PLOT:AC-001",
+        "testSource": "tests/e2e/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "NEW-GRAPH-PLOT:AC-002",
+        "testSource": "tests/e2e/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "NEW-GRAPH-PLOT:AC-001",
+        "testSource": "tests/e2e/graph-plotter.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "identity": {
+          "framework": "playwright",
+          "suitePath": [],
+          "name": "plots a supplied y=f(x) function"
+        },
+        "logicalTestId": "sha256:6cbf305cdd9a4040532865c93c17a430021cd777521483a0f540996b1a6cffad",
+        "declarationSha256": "sha256:04c17c09b8a90ac5233fb76480fe19eb456aad5360bd9cac0dd646c44a28a696",
+        "supportSha256": null,
+        "assertions": {
+          "count": 1,
+          "tautological": 0,
+          "negative": false,
+          "boundary": true,
+          "nullability": false,
+          "adequacy": "adequate",
+          "subjects": [
+            "async",
+            "boundingBox",
+            "fill",
+            "getByLabel",
+            "hasPinkPixelNear",
+            "locator",
+            "poll"
+          ]
+        },
+        "line": 29,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "NEW-GRAPH-PLOT:AC-002",
+        "testSource": "tests/e2e/graph-plotter.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "identity": {
+          "framework": "playwright",
+          "suitePath": [],
+          "name": "renders a complete radius-6 circle centered at the origin"
+        },
+        "logicalTestId": "sha256:14c68bdd739833c1f1aaf919872d76e146959d692f4bc25e02a1b7b3df30889e",
+        "declarationSha256": "sha256:7c1b71e0d7de4354c0dc9e45d0e9f85082ce007857e8e7a6af7653430fff46c7",
+        "supportSha256": null,
+        "assertions": {
+          "count": 2,
+          "tautological": 0,
+          "negative": false,
+          "boundary": true,
+          "nullability": true,
+          "adequacy": "adequate",
+          "subjects": [
+            "async",
+            "boundingBox",
+            "cos",
+            "every",
+            "for",
+            "getByLabel",
+            "hasPinkPixelNear",
+            "locator",
+            "min",
+            "poll",
+            "push",
+            "selectOption",
+            "sin"
+          ]
+        },
+        "line": 43,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "tests/e2e/graph-plotter.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "NEW-GRAPH-PLOT:AC-002",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      },
+      {
+        "clauseId": "NEW-GRAPH-PLOT:REQ-002",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "NEW-GRAPH-PLOT:AC-002",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 123,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "NEW-GRAPH-PLOT:REQ-002",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 123,
+        "tag": "clause"
+      }
+    ]
+  },
+  "fulfillment": {
+    "obligations": [
+      {
+        "clauseId": "NEW-GRAPH-PLOT:REQ-001",
+        "fulfillment": "existing",
+        "paths": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "state": "present",
+            "sha256": "8805a362c58232853c8fe2ac9275571517b76cbb35060a54077214a76cb0d238"
+          }
+        ]
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "NEW-GRAPH-PLOT:AC-002",
+        "explanation": {
+          "text": "@clause:NEW-GRAPH-PLOT:REQ-002 Circle rendering uses equal pixel scales and fits the requested radius inside the canvas.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 123
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 3,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 15,
+                "beforeLines": 0,
+                "afterStart": 21,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 18,
+                "beforeLines": 1,
+                "afterStart": 25,
+                "afterLines": 13
+              },
+              {
+                "beforeStart": 37,
+                "beforeLines": 2,
+                "afterStart": 56,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 45,
+                "beforeLines": 2,
+                "afterStart": 73,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 48,
+                "beforeLines": 1,
+                "afterStart": 76,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 63,
+                "beforeLines": 2,
+                "afterStart": 91,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 66,
+                "beforeLines": 1,
+                "afterStart": 94,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 93,
+                "beforeLines": 4,
+                "afterStart": 121,
+                "afterLines": 17
+              },
+              {
+                "beforeStart": 98,
+                "beforeLines": 3,
+                "afterStart": 139,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 102,
+                "beforeLines": 14,
+                "afterStart": 142,
+                "afterLines": 14
+              },
+              {
+                "beforeStart": 117,
+                "beforeLines": 1,
+                "afterStart": 157,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 122,
+                "beforeLines": 1,
+                "afterStart": 162,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 125,
+                "beforeLines": 2,
+                "afterStart": 164,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 127,
+                "beforeLines": 0,
+                "afterStart": 166,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 129,
+                "beforeLines": 3,
+                "afterStart": 169,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 133,
+                "beforeLines": 1,
+                "afterStart": 171,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 138,
+                "beforeLines": 0,
+                "afterStart": 177,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 140,
+                "beforeLines": 10,
+                "afterStart": 190,
+                "afterLines": 45
+              },
+              {
+                "beforeStart": 189,
+                "beforeLines": 1,
+                "afterStart": 274,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 19
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "NEW-GRAPH-PLOT:REQ-002",
+        "explanation": {
+          "text": "Circle rendering uses equal pixel scales and fits the requested radius inside the canvas.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 123
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 3,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 15,
+                "beforeLines": 0,
+                "afterStart": 21,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 18,
+                "beforeLines": 1,
+                "afterStart": 25,
+                "afterLines": 13
+              },
+              {
+                "beforeStart": 37,
+                "beforeLines": 2,
+                "afterStart": 56,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 45,
+                "beforeLines": 2,
+                "afterStart": 73,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 48,
+                "beforeLines": 1,
+                "afterStart": 76,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 63,
+                "beforeLines": 2,
+                "afterStart": 91,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 66,
+                "beforeLines": 1,
+                "afterStart": 94,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 93,
+                "beforeLines": 4,
+                "afterStart": 121,
+                "afterLines": 17
+              },
+              {
+                "beforeStart": 98,
+                "beforeLines": 3,
+                "afterStart": 139,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 102,
+                "beforeLines": 14,
+                "afterStart": 142,
+                "afterLines": 14
+              },
+              {
+                "beforeStart": 117,
+                "beforeLines": 1,
+                "afterStart": 157,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 122,
+                "beforeLines": 1,
+                "afterStart": 162,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 125,
+                "beforeLines": 2,
+                "afterStart": 164,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 127,
+                "beforeLines": 0,
+                "afterStart": 166,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 129,
+                "beforeLines": 3,
+                "afterStart": 169,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 133,
+                "beforeLines": 1,
+                "afterStart": 171,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 138,
+                "beforeLines": 0,
+                "afterStart": 177,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 140,
+                "beforeLines": 10,
+                "afterStart": 190,
+                "afterLines": 45
+              },
+              {
+                "beforeStart": 189,
+                "beforeLines": 1,
+                "afterStart": 274,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 19
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:55d500925673a08c5bb3e7dfa22fc058f6984b330905329d99e186bc2aa70158"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:d3d3277704faa5d90d92cbf007f6de31bd1501971d5b309472f09140cdad7b09",
+    "codeTreeSha256": "sha256:125e29bae7abf4cac730b67fcb671e8e0aa80ccb4ffff38086f99f300c5e06d8",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-11-10T13:08:35.762Z"
+}
