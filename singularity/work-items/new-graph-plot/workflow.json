@@ -5046,6 +5046,14 @@
       "event": "plan_amended",
       "phase": "implementation",
       "detail": "PAM-001: .nvmrc listed as build-configuration. reivews it is ok to go ahead"
+    },
+    {
+      "at": "2026-11-10T13:02:12.183Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "plan_amended",
+      "phase": "implementation",
+      "detail": "PAM-002: vite.config.js listed as build-configuration, accepting DEP-001. go ahead with the things..it is ok"
     }
   ],
   "measurement": {
@@ -7098,6 +7106,137 @@
         },
         "createdAt": "2026-11-10T13:02:02.762Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "6e06272c-a14b-4c63-b996-518fc279d2e5",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "new-graph-plot",
+          "branch": "new-graph-plot"
+        },
+        "phaseId": "implementation",
+        "generation": 0,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "decision": "plan",
+          "reviewPacketSha256": null,
+          "amendment": "PAM-002"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-10T13:02:11.136Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "6e06272c-a14b-4c63-b996-518fc279d2e5",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "new-graph-plot"
+          ],
+          "branch": "new-graph-plot",
+          "canonicalBranch": "new-graph-plot",
+          "createdAt": "2026-11-10T10:49:29.658Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 0,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph",
+          "updatedAt": "2026-11-10T13:02:12.183Z",
+          "workId": "new-graph-plot",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
+          "lifecycleEventId": "6e06272c-a14b-4c63-b996-518fc279d2e5",
+          "lifecyclePayload": {
+            "decision": "plan",
+            "reviewPacketSha256": null,
+            "amendment": "PAM-002"
+          },
+          "templateSha256": "2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "6e06272c-a14b-4c63-b996-518fc279d2e5",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "new-graph-plot",
+              "branch": "new-graph-plot"
+            },
+            "phaseId": "implementation",
+            "generation": 0,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "architecture-reviewers",
+            "payload": {
+              "decision": "plan",
+              "reviewPacketSha256": null,
+              "amendment": "PAM-002"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-10T13:02:11.136Z"
+          }
+        },
+        "createdAt": "2026-11-10T13:02:11.150Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -7231,6 +7370,28 @@
       "authorityGroup": "architecture-reviewers",
       "identityAssurance": "configured-local",
       "at": "2026-11-10T13:02:04.122Z"
+    },
+    {
+      "id": "PAM-002",
+      "changes": [
+        {
+          "kind": "add-supporting",
+          "path": "vite.config.js",
+          "class": "build-configuration",
+          "reason": "go ahead with the things..it is ok"
+        }
+      ],
+      "contentHashes": {
+        "vite.config.js": "b40277ffdf33f4b6a4c8398988cbe05e15c66467bafb6babd30b766786c98f06"
+      },
+      "departures": [
+        "DEP-001"
+      ],
+      "reason": "go ahead with the things..it is ok",
+      "actor": "ashokraj2011",
+      "authorityGroup": "architecture-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-10T13:02:12.183Z"
     }
   ]
 }
