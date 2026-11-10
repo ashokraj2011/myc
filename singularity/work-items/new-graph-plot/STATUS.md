@@ -11,7 +11,7 @@
 |---:|---|---|---|---:|---:|---:|
 | 1 | Specification (`specification`) | product-owner | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via product-approvers; agent product-owner | **warning** |  |  |  |
-| 2 | Planning (`planning`) | architect | **in_progress** | 2 | 0 | unavailable |
+| 2 | Planning (`planning`) | architect | **awaiting_approval** | 2 | 0 | unavailable |
 | 3 | Implementation (`implementation`) | developer | **not_started** | 0 | 0 | unavailable |
 | 4 | Convergence (`convergence`) | architect | **not_started** | 0 | 0 | unavailable |
 | 5 | Verification (`verification`) | qa | **not_started** | 0 | 0 | unavailable |
@@ -19,6 +19,7 @@
 
 ## Recent history
 
+- 2026-11-10T12:41:50.752Z — **phase_submitted** (planning) by ashokraj2011 · agent architect: 1 artifacts
 - 2026-11-10T12:40:59.659Z — **source_review_submitted** (planning) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: e2fb361ba3ba9bdc259ad1869fc8ba6973e3d25f1e4b795c4d94773b26c892c2
 - 2026-11-10T12:37:26.622Z — **phase_generated** (planning) by ashokraj2011 · agent architect: generation 2
 - 2026-11-10T11:17:25.916Z — **source_review_submitted** (planning) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: a535b1ef8dbfb3901094042c345aa90e1aea1fdeea9f7599bb109dc81327f17f
