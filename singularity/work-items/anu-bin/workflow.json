@@ -8359,6 +8359,14 @@
       "event": "upstream_issue_raised",
       "phase": "release",
       "detail": "UPI-001 against implementation (ANU-BIN:REQ-001, ANU-BIN:AC-001): The Release report marks ANU-BIN:REQ-001, ANU-BIN:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list."
+    },
+    {
+      "at": "2026-11-11T09:01:24.241Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "upstream_issue_decided",
+      "phase": "release",
+      "detail": "UPI-001: accept-risk. o accept the rik man ok dont worry"
     }
   ],
   "measurement": {
@@ -12833,6 +12841,137 @@
         },
         "createdAt": "2026-11-11T09:01:10.935Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "d842b560-1e82-4d80-91fe-817388e92819",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "anu-bin",
+          "branch": "anu-bin"
+        },
+        "phaseId": "release",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "decision": "upstream-issue",
+          "reviewPacketSha256": null,
+          "issue": "UPI-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-11T09:01:22.567Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "d842b560-1e82-4d80-91fe-817388e92819",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "anu-bin"
+          ],
+          "branch": "anu-bin",
+          "canonicalBranch": "anu-bin",
+          "createdAt": "2026-11-11T05:34:33.551Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "release",
+          "generation": 1,
+          "phase": "release",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 5,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 0,
+              "awaiting_approval": 1,
+              "approved": 5,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "release",
+              "status": "awaiting_approval",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "bin (copy) (copy)",
+          "updatedAt": "2026-11-11T09:01:24.241Z",
+          "workId": "anu-bin",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
+          "lifecycleEventId": "d842b560-1e82-4d80-91fe-817388e92819",
+          "lifecyclePayload": {
+            "decision": "upstream-issue",
+            "reviewPacketSha256": null,
+            "issue": "UPI-001"
+          },
+          "templateSha256": "8f3e84e8e19dfc851d9948f20fbd48c0e43e5d8df9c747404d602106930e14fe",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "d842b560-1e82-4d80-91fe-817388e92819",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "anu-bin",
+              "branch": "anu-bin"
+            },
+            "phaseId": "release",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": "engineering-reviewers",
+            "payload": {
+              "decision": "upstream-issue",
+              "reviewPacketSha256": null,
+              "issue": "UPI-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-11T09:01:22.567Z"
+          }
+        },
+        "createdAt": "2026-11-11T09:01:22.579Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -13049,6 +13188,19 @@
       "authored": "human",
       "agent": "qa",
       "at": "2026-11-11T09:01:12.151Z"
+    }
+  ],
+  "upstreamIssueDecisions": [
+    {
+      "issue": "UPI-001",
+      "outcome": "accept-risk",
+      "reason": "o accept the rik man ok dont worry",
+      "link": null,
+      "expiresAt": "2027-02-01T00:00:00.000Z",
+      "actor": "ashokraj2011",
+      "authorityGroup": "engineering-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-11T09:01:24.241Z"
     }
   ]
 }
