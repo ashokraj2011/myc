@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "phase": "specification",
+  "generation": 1,
+  "reportSha256": "8b26d53e389e0778366d0e02a11d71feb9136a6de752bad576f6bafd365a71ce",
+  "lifecycleEventId": "83d24de6-3ea9-4cf5-a6ff-c879aa609266",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "specification",
+    "binding": {
+      "workId": "b-bin",
+      "phase": "specification",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/b-bin/USER-STORY.md",
+          "textSha256": "c8b76e1524d34c866c0da65396a7b60e7b34b1c79c87b0c8077dd8d3716e88cf",
+          "originalSha256": "00fc6582cfef677b1272ca3c464f48edf98a587ff28680bce13ebb7dc62f3f51"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:current-phase",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/b-bin/context/clarifications-specification-gen1.json",
+          "sha256": "888d0da4de9034b8b4087abfb1a646f35c77f012b9ac5161ed74ce228fe0eb27"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/b-bin/artifacts/specification/spec.md",
+        "sha256": "2a1dbd3b449571257b46203a0f3117799e408717a1401356e5a736290f717c11"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:current-phase"
+    ],
+    "rows": [
+      {
+        "id": "src-convert",
+        "sourceId": "story",
+        "line": 8,
+        "quote": "Convert a decimal value to binary value in calc",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "B-BIN:REQ-001"
+        ]
+      },
+      {
+        "id": "src-tests",
+        "sourceId": "story",
+        "line": 17,
+        "quote": "Unit test cases",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "B-BIN:REQ-002",
+          "B-BIN:AC-001"
+        ]
+      }
+    ],
+    "findings": [
+      {
+        "id": "test-verification-gap",
+        "severity": "blocking",
+        "sourceId": "story",
+        "line": 17,
+        "quote": "Unit test cases",
+        "message": "The pinned source obligation is to provide unit test cases. REQ-002 states that obligation, but its only verification criterion is AC-001 conversion output (2 to 10 and 10 to 1010). A conforming implementation could demonstrate those outputs manually or via non-unit checks while providing no unit tests, yet satisfy the current AC. Specify verifiable unit-test evidence for the conversion, with the clarified examples 2 and 10. This assessment accounts for specification generation 1 clarification Q-003 (confirmed unit-test cases are 2 and 10); Q-001 and Q-002 confirm calculator UI and positive integer scope."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "ed1ec38ca099daeaff2e2bb72e730359a27da3f400491c267b51f84acc3a7d3a",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "product-owner",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-11T12:20:30.938Z",
+  "recordSha256": "54331ccc1e3d98ad99d8ac686eec41d3c0a5037497c673bd3c94801fa0552d34"
+}
