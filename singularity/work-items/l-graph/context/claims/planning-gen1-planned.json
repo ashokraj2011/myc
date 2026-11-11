@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-11-11T00:30:24.397Z",
+  "claims": {
+    "L-GRAPH:AC-001": {
+      "expectedPaths": [],
+      "tests": [
+        "e2e/function-grapher.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "test-only",
+      "observableResult": "Browser scenarios observe explicit, parametric, and polar plots and a changed plot after editing/replacement."
+    },
+    "L-GRAPH:AC-002": {
+      "expectedPaths": [
+        "src/App.css",
+        "src/App.jsx",
+        "src/components/FunctionGrapher.jsx",
+        "src/index.css"
+      ],
+      "tests": [],
+      "testDisposition": "non-test",
+      "testReason": null,
+      "verificationCriterion": "L-GRAPH:AC-002",
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Reviewer finds the graph workspace clean and usable at the expected desktop viewport and a narrow viewport, without Desmos branding or required pixel matching."
+    },
+    "L-GRAPH:REQ-001": {
+      "expectedPaths": [
+        "src/components/FunctionGrapher.jsx"
+      ],
+      "tests": [
+        "e2e/function-grapher.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "The documented explicit, parametric, and polar syntaxes each produce a plotted curve using the documented supported mathjs functions."
+    },
+    "L-GRAPH:REQ-002": {
+      "expectedPaths": [
+        "src/components/FunctionGrapher.jsx"
+      ],
+      "tests": [
+        "e2e/function-grapher.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Editing or replacing the equation redraws the curve to reflect the new expression."
+    },
+    "L-GRAPH:REQ-003": {
+      "expectedPaths": [],
+      "tests": [
+        "e2e/function-grapher.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "test-only",
+      "observableResult": "Playwright exercises all required forms and confirms an edited/replaced equation changes the plotted output."
+    },
+    "L-GRAPH:REQ-004": {
+      "expectedPaths": [
+        "src/App.css",
+        "src/App.jsx",
+        "src/components/FunctionGrapher.jsx",
+        "src/index.css"
+      ],
+      "tests": [
+        "e2e/function-grapher.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Grapher layout is clean and responsive, inspired by the reference without pixel matching or Desmos branding."
+    }
+  },
+  "supportingFiles": [
+    "package.json",
+    "playwright.config.js"
+  ],
+  "supportingFileDetails": [
+    {
+      "path": "package.json",
+      "class": "build-configuration",
+      "reason": "add Playwright dependency and scripts for the browser suite."
+    },
+    {
+      "path": "playwright.config.js",
+      "class": "build-configuration",
+      "reason": "configure the local Vite web server, browser project, and expected desktop viewport."
+    }
+  ],
+  "verificationContracts": [
+    {
+      "clauseId": "L-GRAPH:AC-002",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "inspection",
+          "method": "inspection",
+          "role": "primary",
+          "witness": {
+            "path": "src/components/FunctionGrapher.jsx"
+          },
+          "requiredAssurance": "source-bound"
+        },
+        {
+          "slot": "visual",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "Graphing calculator at the expected viewport"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    }
+  ],
+  "workId": "l-graph",
+  "phase": "planning",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/l-graph/artifacts/planning/plan.md",
+    "sha256": "ae8cc128a95d3d77fd11d4ffd39e82137440f006df28dd6d7281db72a1972b46",
+    "bytes": 24916
+  }
+}
