@@ -1,0 +1,361 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "anu-bin",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "cff014dc-16b4-43c0-a72d-8fc2b7076b38",
+  "changeSet": {
+    "path": "singularity/work-items/anu-bin/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:11bedf62ec0f57d179dccd75a880e34219b26e68d6f4bed17c6825976bb95733",
+    "sourcePaths": [
+      "src/App.jsx",
+      "src/components/StandardKeypad.jsx",
+      "src/utils/evaluator.js"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [
+      ".nvmrc"
+    ],
+    "executableTestPaths": [
+      "src/App.test.jsx",
+      "src/utils/evaluator.test.js"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "build-configuration": 1,
+      "product-source": 3,
+      "test-source": 2
+    },
+    "entries": [
+      {
+        "changeId": "sha256:fde8b995e5502a55312a5f0ea2312cb352075fff9e36be04293f33e2daf774ba",
+        "status": "added",
+        "oldPath": null,
+        "newPath": ".nvmrc",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:bdb5b6693b0035e9835691d8800569856f2ec707419f645b6402b55996dd11f8",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:d9cab9d10ec9dc98f87a646f57ea2ed2e94b5f50e1cd4c194b5fd2c9e286f397",
+        "status": "modified",
+        "oldPath": "src/App.test.jsx",
+        "newPath": "src/App.test.jsx",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:4b9734d795e04e68ad2de79641a71168714b049bc3c382219ea8e1e0cc8b95d7",
+        "status": "modified",
+        "oldPath": "src/components/StandardKeypad.jsx",
+        "newPath": "src/components/StandardKeypad.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:78f7210db74096abb69a6d6cd66236a616c9ef10e64b5324fd453a598b43f4bc",
+        "status": "modified",
+        "oldPath": "src/utils/evaluator.js",
+        "newPath": "src/utils/evaluator.js",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:8675ecdb35e514b52da74c896610df312863847cad6f13954f25fa332c085a28",
+        "status": "modified",
+        "oldPath": "src/utils/evaluator.test.js",
+        "newPath": "src/utils/evaluator.test.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "ANU-BIN:AC-001"
+    ],
+    "bound": [
+      "ANU-BIN:AC-001"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "ANU-BIN:AC-001",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "ANU-BIN:AC-001",
+        "testSource": "src/utils/evaluator.test.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "ANU-BIN:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "Standard-mode binary conversion"
+          ],
+          "name": "shows the evaluated decimal value in binary"
+        },
+        "logicalTestId": "sha256:cee0e413cc5de12076811634a9b180d9bbac44f69c99036bca19ef27e932516a",
+        "declarationSha256": "sha256:69c68f8176cc91bbd83a4e483ff8d0b977bc964527f21b27288ab224a8c441d0",
+        "supportSha256": null,
+        "assertions": {
+          "count": 1,
+          "tautological": 0,
+          "negative": false,
+          "boundary": false,
+          "nullability": false,
+          "adequacy": "adequate",
+          "subjects": [
+            "async",
+            "clickButton",
+            "getResultText",
+            "render",
+            "setup"
+          ]
+        },
+        "line": 207,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "ANU-BIN:AC-001",
+        "testSource": "src/utils/evaluator.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "convertToBinary"
+          ],
+          "name": "converts an evaluated decimal value to binary"
+        },
+        "logicalTestId": "sha256:65a029fe6e597db4907abc1f318f92ed4cdf550ba2ea41c512322fb10217bb69",
+        "declarationSha256": "sha256:3bf5a26c18e6c09a9bd0454a3c1d35ce9880fe31b9cede01a41d3136782b31a5",
+        "supportSha256": null,
+        "assertions": {
+          "count": 1,
+          "tautological": 0,
+          "negative": false,
+          "boundary": false,
+          "nullability": true,
+          "adequacy": "adequate",
+          "subjects": [
+            "convertToBinary"
+          ]
+        },
+        "line": 79,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      },
+      {
+        "testSource": "src/utils/evaluator.test.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "ANU-BIN:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/StandardKeypad.jsx",
+          "src/utils/evaluator.js"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "ANU-BIN:REQ-001",
+        "sourcePath": "src/App.jsx",
+        "line": 132,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "ANU-BIN:REQ-001",
+        "sourcePath": "src/components/StandardKeypad.jsx",
+        "line": 27,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "ANU-BIN:REQ-001",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 56,
+        "tag": "clause"
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "ANU-BIN:REQ-001",
+        "explanation": {
+          "text": "Convert the evaluated result without changing expression evaluation.",
+          "path": "src/App.jsx",
+          "line": 132
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 1,
+                "afterStart": 11,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 132,
+                "afterLines": 13
+              },
+              {
+                "beforeStart": 262,
+                "beforeLines": 0,
+                "afterStart": 276,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/StandardKeypad.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 12,
+                "beforeLines": 0,
+                "afterStart": 13,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 25,
+                "beforeLines": 0,
+                "afterStart": 27,
+                "afterLines": 8
+              }
+            ],
+            "symbols": [
+              {
+                "name": "StandardKeypad",
+                "kind": "function",
+                "line": 5
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 55,
+                "beforeLines": 0,
+                "afterStart": 56,
+                "afterLines": 8
+              }
+            ],
+            "symbols": [
+              {
+                "name": "convertToBinary",
+                "kind": "function",
+                "line": 57
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:1d742af064cc446f41fa99eeb751f6de4f41dbb545f4be9709d51563a6c6478f"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:b6445b8544a8faafd9bef05772c68138a3868d1aaa98935c21c3c3cb7a1ce1c2",
+    "codeTreeSha256": "sha256:5f903cf642bcedca6c6ab474df5131cae3fdf533912ee04b3fd7c0ec3e388f65",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-11-11T06:58:04.724Z"
+}

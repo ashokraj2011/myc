@@ -53,6 +53,14 @@ export const evaluateExpression = (expr, angleUnit = 'DEG') => {
   }
 };
 
+// @clause:ANU-BIN:REQ-001 Convert a finite evaluated decimal value to its binary representation.
+export const convertToBinary = (value) => {
+  if (typeof value !== 'number' || !Number.isFinite(value)) {
+    return { result: 'Error', error: 'Math Error' };
+  }
+  return { result: value.toString(2), error: null };
+};
+
 // Formats big numbers, floats, and removes precision artifacts like 0.1 + 0.2 = 0.30000000000000004
 export const formatNumber = (num) => {
   if (num === null || num === undefined || isNaN(num)) return 'Error';

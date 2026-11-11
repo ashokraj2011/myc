@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { evaluateExpression, formatNumber } from '../utils/evaluator';
+import { convertToBinary, evaluateExpression, formatNumber } from '../utils/evaluator';
 
 // Verifies WRK-1978:AC-003 and WRK-1978:AC-005: the restyle work must not
 // change calculation semantics, expression evaluation, or number formatting.
@@ -71,5 +71,16 @@ describe('formatNumber (display formatting regression)', () => {
 
   it('switches to exponential notation for very large numbers', () => {
     expect(formatNumber(1e13)).toContain('e+');
+  });
+});
+
+describe('convertToBinary', () => {
+  // @ac:ANU-BIN:AC-001
+  it('converts an evaluated decimal value to binary', () => {
+    expect(convertToBinary(10)).toEqual({ result: '1010', error: null });
+  });
+
+  it('reports an error for non-finite values', () => {
+    expect(convertToBinary(Infinity)).toEqual({ result: 'Error', error: 'Math Error' });
   });
 });

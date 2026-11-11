@@ -4,27 +4,51 @@
   "workId": "anu-bin",
   "workType": "spec-driven-standard",
   "phase": "implementation",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "developer",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "developer"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "implementation-summary.md",
+      "mediaType": "text/markdown",
+      "sha256": "dcbed3d5e14f239021a757165fd663b50c81aaec2ab7200c65c0a2fbb8a11c95",
+      "bytes": 2952
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-11T06:58:04.724Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "25653d858965b96d2ee24001db53fec87cb1d84d",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
@@ -38,7 +62,7 @@
   "inputs": {
     "generation": 1,
     "path": "singularity/work-items/anu-bin/context/inputs-implementation-gen1.json",
-    "sha256": "8613833f5588845c3206012d1c91d59d86d8e5551a75a74564fc7d82a7f4cbc4",
+    "sha256": "e03189a261d156ba61e988622cb586cb9d17a4097769f9fba16996c1b259cb88",
     "renderedSha256": "464af9f267b2f76148ffbcc7abef1c5a116d0d336b43dbd94c6e1a97e46edfb5",
     "mode": "enforce"
   },
@@ -48,9 +72,52 @@
   },
   "remoteAgent": null,
   "clarification": null,
-  "telemetry": [],
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/anu-bin/telemetry/implementation-gen1.json",
+      "sha256": "b334a8ca4bb41a82727babd9b590b6c95129247b05471e6a066bea14d303d40f",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 30469,
+        "estimatedTokens": 7618,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 30469,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-11T06:58:04.724Z",
+      "completedAt": "2026-11-11T06:58:04.724Z",
+      "agent": "developer",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -68,7 +135,7 @@ remaining limitations, and rollout considerations for downstream agents. Keep it
 the detailed changed-components and test sections are preserved separately.
 -->
 
-Added a distinct BIN action to the Standard keypad. It evaluates the current expression through the existing evaluator, converts its finite numeric result through a focused binary-conversion utility, and presents the binary value in the existing result display; ordinary equals and expression evaluation remain unchanged. The utility tests and production build passed. The app interaction test is present but could not run successfully under Node 26.12.0 because the existing jsdom environment exposes no `localStorage`; no workaround was added. No repository configuration or dependency manifest was changed.
+Added a distinct BIN action to the Standard keypad. It evaluates the current expression through the existing evaluator, converts its finite numeric result through a focused binary-conversion utility, and presents the binary value in the existing result display; ordinary equals and expression evaluation remain unchanged. Utility and app tests passed in a diagnostic run on Node 22.14.0, and the production build passed. Node 22 was pinned through the approved PAM-001 decision; the publication test run is still required. No dependency manifest was changed.
 
 ## Implemented outcome
 
@@ -76,11 +143,11 @@ The Standard calculator now converts an evaluated decimal expression to its bina
 
 ## Changed components and decisions
 
-Product source changed in `src/utils/evaluator.js` (focused finite-number conversion utility with `@clause:ANU-BIN:REQ-001`), `src/App.jsx` (converts the evaluated expression and updates the existing result display; `@clause:ANU-BIN:REQ-001`), and `src/components/StandardKeypad.jsx` (exposes the distinct BIN action). Tests changed in `src/utils/evaluator.test.js` and `src/App.test.jsx`; both contain `@ac:ANU-BIN:AC-001` on the relevant tests. No configuration, migration, or dependency changes were made. The change follows the approved plan's separation between evaluation, UI action, and result display.
+Product source changed in `src/utils/evaluator.js` (focused finite-number conversion utility with `@clause:ANU-BIN:REQ-001`), `src/App.jsx` (converts the evaluated expression and updates the existing result display; `@clause:ANU-BIN:REQ-001`), and `src/components/StandardKeypad.jsx` (exposes the distinct BIN action; `@clause:ANU-BIN:REQ-001`). Tests changed in `src/utils/evaluator.test.js` and `src/App.test.jsx`; both contain `@ac:ANU-BIN:AC-001` on the relevant tests. `.nvmrc` pins Node 22 per the recorded PAM-001 decision and is listed as a supporting build-configuration change. No migration or dependency changes were made. The change follows the approved plan's separation between evaluation, UI action, and result display.
 
 ## Tests and operational notes
 
-`npm test -- --run src/utils/evaluator.test.js src/App.test.jsx` (cwd: repository root; Node 26.12.0; exit 1): the evaluator test file passed all 15 tests, including the new conversion checks. The App test file's 18 tests, including the new BIN interaction test, failed before test bodies because `localStorage` was undefined in the jsdom environment. The test handoff identifies Node 26's built-in localStorage behavior as the cause and advises Node 22; do not stub localStorage. A person may pin Node 22 through `/sf-decide`; no decision or `.nvmrc` change has been made. `npm run build` (same cwd; exit 0) produced the production bundle, with Vite's existing large-chunk advisory. `npm ci` succeeded; npm reported 13 dependency audit findings (6 moderate, 7 high), not investigated or changed in this Story. The planned Standard-mode UI behavior still requires a successful test run on the supported runtime before approval.
+`npm test -- --run src/utils/evaluator.test.js src/App.test.jsx` (cwd: repository root; Node 26.12.0; exit 1): the evaluator test file passed all 15 tests, including the new conversion checks. The App test file's 18 tests, including the new BIN interaction test, failed before test bodies because `localStorage` was undefined in the jsdom environment; no workaround was added. `singularity-flow tests node --work-id anu-bin --phase implementation --node 22` (Node 22.14.0) reported 34 of 34 tests passed. This is diagnostic only, not retained publication evidence; the gate must still run its configured test command. `npm run build` (same cwd; exit 0) produced the production bundle, with Vite's large-chunk advisory. `npm ci` succeeded; npm reported 13 dependency audit findings (6 moderate, 7 high), not investigated or changed in this Story.
 
 <!-- singularity-flow:inputs:start -->
 

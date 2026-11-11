@@ -197,3 +197,21 @@ describe('Responsive navigation (desktop rail + mobile dropdown)', () => {
     expect(mobileSelect.value).toBe('financial');
   });
 });
+
+describe('Standard-mode binary conversion', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  // @ac:ANU-BIN:AC-001
+  it('shows the evaluated decimal value in binary', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+
+    await clickButton(container, '1');
+    await clickButton(container, '0');
+    await clickButton(container, 'BIN');
+
+    expect(getResultText(container)).toBe('1010');
+  });
+});

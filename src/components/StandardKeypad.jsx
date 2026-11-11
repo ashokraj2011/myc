@@ -10,6 +10,7 @@ export const StandardKeypad = ({
   onBackspace,
   onNegate,
   onPercent,
+  onBinary,
   onMemory,
   soundEnabled,
 }) => {
@@ -23,6 +24,14 @@ export const StandardKeypad = ({
       {/* Memory Strip: slim row docked above the main keypad, mirroring
           Windows 11 Calculator's memory row placement. */}
       <div className="memory-strip">
+        {/* @clause:ANU-BIN:REQ-001 Exposes the binary conversion action in Standard mode. */}
+        <button
+          onClick={() => handleBtn('operator', onBinary)}
+          aria-label="Convert to binary"
+          className="calc-btn u-bg-btn-func-bg u-text-btn-func-text u-hbg-btn-func-hover font-semibold"
+        >
+          BIN
+        </button>
         <button
           onClick={() => handleBtn('mode', onMemory, 'MC')}
           className="calc-btn u-bg-btn-func-bg u-text-btn-func-text u-hbg-btn-func-hover font-semibold"

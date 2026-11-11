@@ -8,7 +8,7 @@ import { FinancialCalculator } from './components/FinancialCalculator';
 import { FunctionGrapher } from './components/FunctionGrapher';
 import { HistoryDrawer } from './components/HistoryDrawer';
 import { KeyboardShortcutsModal } from './components/KeyboardShortcutsModal';
-import { evaluateExpression } from './utils/evaluator';
+import { convertToBinary, evaluateExpression } from './utils/evaluator';
 import { playSound } from './utils/audio';
 
 export default function App() {
@@ -127,6 +127,19 @@ export default function App() {
       };
       setHistory((prev) => [newEntry, ...prev.slice(0, 49)]); // Keep last 50 items
     }
+  }, [expression, angleUnit]);
+
+  // @clause:ANU-BIN:REQ-001 Convert the evaluated result without changing expression evaluation.
+  const handleBinary = useCallback(() => {
+    if (!expression || expression.trim() === '') return;
+
+    const evalRes = evaluateExpression(expression, angleUnit);
+    if (evalRes.error || typeof evalRes.rawResult !== 'number') {
+      setResult(evalRes.result);
+    } else {
+      setResult(convertToBinary(evalRes.rawResult).result);
+    }
+    setLastEvaluated(true);
   }, [expression, angleUnit]);
 
   const handleMemory = useCallback(
@@ -260,6 +273,7 @@ export default function App() {
               onBackspace={handleBackspace}
               onNegate={handleNegate}
               onPercent={handlePercent}
+              onBinary={handleBinary}
               onMemory={handleMemory}
               soundEnabled={soundEnabled}
             />
