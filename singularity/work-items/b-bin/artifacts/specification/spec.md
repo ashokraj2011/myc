@@ -4,27 +4,51 @@
   "workId": "b-bin",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "2a1dbd3b449571257b46203a0f3117799e408717a1401356e5a736290f717c11",
+      "bytes": 6379
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-11T12:19:13.744Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "2bf9b0022d73189975ca9972afe08f63fba6d498",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/b-bin/context/clarifications-specification-gen1.json",
+    "sha256": "888d0da4de9034b8b4087abfb1a646f35c77f012b9ac5161ed74ce228fe0eb27",
+    "promptSha256": "5c9474eba35501084acc4ea19277ae9e18500e77b2bf3d602ff98f23821988f8",
+    "responses": 3,
+    "markers": [],
+    "recordedAt": "2026-11-11T12:17:00.801Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/b-bin/telemetry/specification-gen1.json",
+      "sha256": "9f53243dbfbe34a13a45a9bb76fa99a54495d3dfd42a9519b1e0981ece3da185",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 28907,
+        "estimatedTokens": 7227,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 28907,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-11T12:19:13.744Z",
+      "completedAt": "2026-11-11T12:19:13.744Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -86,7 +167,7 @@ exclusions. Do not introduce claims that are absent from the sections below. Exa
 boundary conditions are preserved separately by the governed projection.
 -->
 
-TODO: Write the Agent brief here as visible text; text inside the comment above is not read.
+Add calculator UI behavior that converts a user-entered positive integer decimal value to its binary representation. Unit tests must cover converting 2 and 10. Fractional and negative inputs are outside this confirmed scope; behavior for other invalid input is unspecified.
 
 ## Actors
 
@@ -104,34 +185,25 @@ Self-check whether an implementation could meet this draft yet omit an explicit 
 clear omissions in this editable draft and recheck within the returned repair policy; preserve
 published inputs and settled answers. These are authoring instructions, not execution evidence. -->
 
-### S1 — <the most important situation, in the user's words>
+### S1 — Convert a positive integer in the calculator
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Calculator user
+**Context:** The calculator is available and the user has a positive integer decimal value to convert.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+- **Given** the user enters the positive integer decimal value 2 in the calculator
+  **When** the conversion is performed
+  **Then** the calculator displays its binary representation, 10.
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
-
-### S2 — <the next situation>
-
-**Priority:** P2
-
-- **Given** … **When** … **Then** …
+- **Given** the user enters the positive integer decimal value 10 in the calculator
+  **When** the conversion is performed
+  **Then** the calculator displays its binary representation, 1010.
 
 ## Failure and empty states
 
-What happens the first time, with nothing there yet, and when each step fails. These are where
-specifications are usually silent and implementations usually improvise.
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** Not applicable: this conversion does not operate on a collection of records.
+- **Failure:** The pinned request does not define failure behavior for invalid input or a failed conversion.
+- **Partial:** Not applicable: no partial operation is specified.
 
 ## Scenario coverage
 
@@ -142,71 +214,51 @@ prose. Use the pinned request and clarification answers; do not invent error tex
 
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `B-BIN:REQ-001` | S1 | TODO |
-| `B-BIN:REQ-002` | S2 | TODO |
-| `B-BIN:AC-001` | S1 | TODO |
+| `B-BIN:REQ-001` | S1 | success |
+| `B-BIN:REQ-002` | S1 | success |
+| `B-BIN:AC-001` | S1 | success |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+Not applicable: no role-based permissions are identified for local calculator use.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+The confirmed conversion domain is positive integer decimal values. Fractional and negative values are outside the confirmed scope. No upper bound is specified. Behavior for other invalid input is unspecified.
 
 ## Requirements
 
-Numbered, testable, one obligation each. Cite the scenario each serves.
-
-- <requirement>. *(S1)* [B-BIN:REQ-001]
-- <requirement>. *(S1, S2)* [B-BIN:REQ-002]
+- The calculator UI converts a user-entered positive integer decimal value to its binary representation. *(S1)* [B-BIN:REQ-001]
+- Provide unit test cases for the conversion, including the source-stated unit-test obligation [scope:SRI-bf17ce947d7f]. *(S1)* [B-BIN:REQ-002]
 
 Acceptance criteria use the same stable, namespaced form:
 
-- <observable acceptance outcome>. *(S1)* [B-BIN:AC-001]
+- For input 2 the calculator displays 10, and for input 10 it displays 1010. *(S1)* [B-BIN:AC-001]
 
 ## Verification intent
 
-<!-- One row per declared clause, including non-functional requirements. Methods: test, visual,
-inspection, or a comma-separated combination (all required). AC Criterion is its own ID. A
-visual/inspection requirement names the AC proving it; a test-only requirement may use -. An AC a
-requirement names lists every method that requirement lists: a `test, visual` requirement needs a
-`test, visual` AC. Choose from the pinned source, not from available tools. A screenshot is visual
-proof, not a test exemption.
-Planning must inherit these methods and cannot change them without an approved scope amendment. -->
-
 | Clause | Methods | Criterion |
 |---|---|---|
-| `B-BIN:REQ-001` | TODO | - |
-| `B-BIN:REQ-002` | TODO | - |
-| `B-BIN:AC-001` | TODO | `B-BIN:AC-001` |
+| `B-BIN:REQ-001` | test | `B-BIN:AC-001` |
+| `B-BIN:REQ-002` | test | `B-BIN:AC-001` |
+| `B-BIN:AC-001` | test | `B-BIN:AC-001` |
 
 ## Non-functional requirements
 
-Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
-will be measured; "fast" is not a requirement.
-
-Use governed requirement anchors here too (for example `[B-BIN:REQ-003]`); `NFR-001` by
-itself is only a display label and is not a stable clause identity.
+None specified by the pinned request or clarification.
 
 ## Constitution articles
 
-Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
-cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
-
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-What this specification takes as true without proving. An assumption that turns out false is a
-change request, not a defect — which is only true if it was written down.
+The calculator UI is the interface for this conversion, as confirmed in clarification. No particular control, placement, or presentation beyond displaying the binary representation is specified.
 
 ## Out of scope
 
-Named explicitly, so the boundary is reviewable rather than inferred.
+Fractional and negative input are outside the confirmed positive-integer scope. Additional behavior for invalid input and any conversion features beyond the confirmed request are not specified.
 
 ## Sources
 
-Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
-offered to this phase that could not be read or was not available here, named as a gap. Without
-supporting documents, say so.
+Pinned Story source: `singularity/work-items/b-bin/source.json` (request: “Convert a decimal value to binary value in calc”; acceptance criterion: “Unit test cases”). Clarification checkpoint for Story `b-bin`, specification generation 1: calculator UI conversion, positive integer input, and unit-test examples 2 and 10. No supporting documents.
