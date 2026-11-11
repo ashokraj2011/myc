@@ -4,7 +4,7 @@
   "workId": "b-bin",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 1,
+  "generation": 2,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "spec.md",
       "mediaType": "text/markdown",
-      "sha256": "2a1dbd3b449571257b46203a0f3117799e408717a1401356e5a736290f717c11",
-      "bytes": 6379
+      "sha256": "9316c4f5810b2f699ee3c7745d4cecff8117267be65acbc6c2c7109d91a5a407",
+      "bytes": 6438
     },
-    "generation": 1,
-    "publishedAt": "2026-11-11T12:19:13.744Z"
+    "generation": 2,
+    "publishedAt": "2026-11-11T12:23:27.246Z"
   },
-  "sourceCommit": "2bf9b0022d73189975ca9972afe08f63fba6d498",
+  "sourceCommit": "5a80c21ff74782b4f7b615164bd98b33d594bf40",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
@@ -66,13 +66,13 @@
   },
   "remoteAgent": null,
   "clarification": {
-    "generation": 1,
-    "path": "singularity/work-items/b-bin/context/clarifications-specification-gen1.json",
-    "sha256": "888d0da4de9034b8b4087abfb1a646f35c77f012b9ac5161ed74ce228fe0eb27",
-    "promptSha256": "5c9474eba35501084acc4ea19277ae9e18500e77b2bf3d602ff98f23821988f8",
-    "responses": 3,
+    "generation": 2,
+    "path": "singularity/work-items/b-bin/context/clarifications-specification-gen2.json",
+    "sha256": "3dae2175a60e4427a0e4f6e63533a1a2d63e2d2a9cf28b214141902e7e716d61",
+    "promptSha256": "fbe405c6bf652bfde5c5cb82809127a6cea916d44387d6d33c33ec7274cc4f0a",
+    "responses": 1,
     "markers": [],
-    "recordedAt": "2026-11-11T12:17:00.801Z",
+    "recordedAt": "2026-11-11T12:23:03.299Z",
     "recordedBy": {
       "name": "Ashok Raj",
       "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -100,6 +100,26 @@
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 2,
+      "path": "singularity/work-items/b-bin/telemetry/specification-gen2.json",
+      "sha256": "f4b4eff788f7086bdf5d6d931af6105f2c020febc24b93df7da27cc2118d8b2e",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 28736,
+        "estimatedTokens": 7184,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 28736,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
     }
   ],
   "remoteOutputs": [],
@@ -124,6 +144,27 @@
       "completedAt": "2026-11-11T12:19:13.744Z",
       "agent": "product-owner",
       "generation": 1
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-11T12:23:27.246Z",
+      "completedAt": "2026-11-11T12:23:27.246Z",
+      "agent": "product-owner",
+      "generation": 2
     }
   ],
   "sequenceOverrides": [],
@@ -229,11 +270,11 @@ The confirmed conversion domain is positive integer decimal values. Fractional a
 ## Requirements
 
 - The calculator UI converts a user-entered positive integer decimal value to its binary representation. *(S1)* [B-BIN:REQ-001]
-- Provide unit test cases for the conversion, including the source-stated unit-test obligation [scope:SRI-bf17ce947d7f]. *(S1)* [B-BIN:REQ-002]
+- Unit tests exercise the conversion and assert its binary output, satisfying the source-stated unit-test obligation [scope:SRI-bf17ce947d7f]. *(S1)* [B-BIN:REQ-002]
 
 Acceptance criteria use the same stable, namespaced form:
 
-- For input 2 the calculator displays 10, and for input 10 it displays 1010. *(S1)* [B-BIN:AC-001]
+- Unit test cases assert that decimal input 2 converts to binary 10 and decimal input 10 converts to binary 1010. *(S1)* [B-BIN:AC-001]
 
 ## Verification intent
 
