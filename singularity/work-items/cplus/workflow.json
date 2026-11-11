@@ -4149,6 +4149,14 @@
       "event": "phase_submitted",
       "phase": "specification",
       "detail": "1 artifacts"
+    },
+    {
+      "at": "2026-11-11T03:20:01.526Z",
+      "actor": "ashokraj2011",
+      "agent": "product-owner",
+      "event": "scope_decided",
+      "phase": "specification",
+      "detail": "SRI-bfb83cd3d1fd is included (CPLUS:AC-001, CPLUS:REQ-001, CPLUS:REQ-002). Reason: ok go ahead with the it"
     }
   ],
   "measurement": {
@@ -4781,6 +4789,140 @@
         },
         "createdAt": "2026-11-11T03:18:39.766Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "16a1e361-1e8d-46a8-a092-2767aaa71b23",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "cplus",
+          "branch": "cplus"
+        },
+        "phaseId": "specification",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "product-owner",
+        "authorityGroup": "product-approvers",
+        "payload": {
+          "decision": "scope",
+          "item": "SRI-bfb83cd3d1fd",
+          "disposition": "included",
+          "reviewPacketSha256": null
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-11T03:20:00.433Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "16a1e361-1e8d-46a8-a092-2767aaa71b23",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "cplus"
+          ],
+          "branch": "cplus",
+          "canonicalBranch": "cplus",
+          "createdAt": "2026-11-11T03:06:31.698Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "specification",
+          "generation": 1,
+          "phase": "specification",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 0,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 5,
+              "in_progress": 0,
+              "awaiting_approval": 1,
+              "approved": 0,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "specification",
+              "status": "awaiting_approval",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "bin (copy)",
+          "updatedAt": "2026-11-11T03:20:01.526Z",
+          "workId": "cplus",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "product-owner",
+        "authorityGroup": "product-approvers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
+          "lifecycleEventId": "16a1e361-1e8d-46a8-a092-2767aaa71b23",
+          "lifecyclePayload": {
+            "decision": "scope",
+            "item": "SRI-bfb83cd3d1fd",
+            "disposition": "included",
+            "reviewPacketSha256": null
+          },
+          "templateSha256": "fbb7f5f29844d24836c6b918e2796940cbc21c24ae0a7aa252d4e1207588e2cb",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "16a1e361-1e8d-46a8-a092-2767aaa71b23",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "cplus",
+              "branch": "cplus"
+            },
+            "phaseId": "specification",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "product-owner",
+            "authorityGroup": "product-approvers",
+            "payload": {
+              "decision": "scope",
+              "item": "SRI-bfb83cd3d1fd",
+              "disposition": "included",
+              "reviewPacketSha256": null
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-11T03:20:00.433Z"
+          }
+        },
+        "createdAt": "2026-11-11T03:20:00.442Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -4789,5 +4931,22 @@
     "current": null,
     "history": [],
     "escalations": []
-  }
+  },
+  "scopeDispositions": [
+    {
+      "item": "SRI-bfb83cd3d1fd",
+      "disposition": "included",
+      "clauseIds": [
+        "CPLUS:AC-001",
+        "CPLUS:REQ-001",
+        "CPLUS:REQ-002"
+      ],
+      "reason": "ok go ahead with the it",
+      "statementSha256": "13ad84dc717f26ef100673aecdc9375feb967d5bdf896625c8c0d0a398d2f9bc",
+      "actor": "ashokraj2011",
+      "authorityGroup": "product-approvers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-11T03:20:01.526Z"
+    }
+  ]
 }
