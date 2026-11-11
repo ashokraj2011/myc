@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "phase": "verification",
+  "generation": 2,
+  "reportSha256": "2fa3025da9caabe12d7cbc466576ae337a91c3038aad4ad988fea0c55b1ff07b",
+  "lifecycleEventId": "b9226a28-d3c7-4c9a-87b7-d2e929014b47",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "anu-bin",
+      "phase": "verification",
+      "generation": 2,
+      "sources": [
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/anu-bin/artifacts/implementation/implementation-summary.md",
+          "textSha256": "dcbed3d5e14f239021a757165fd663b50c81aaec2ab7200c65c0a2fbb8a11c95"
+        },
+        {
+          "id": "input:planning",
+          "path": "singularity/work-items/anu-bin/artifacts/planning/plan.md",
+          "textSha256": "9079e660a18a42c894693cc12ffa7a93579ef3b6b90112dc8107d8880b04a7e2"
+        },
+        {
+          "id": "input:specification",
+          "path": "singularity/work-items/anu-bin/artifacts/specification/spec.md",
+          "textSha256": "5959146ca845328067250d90b0539a45cc2561c68fb454866559e684af5cd9ed"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/anu-bin/USER-STORY.md",
+          "textSha256": "434d9a53909b423f7cb36727cce5c95af46fe39b4a105b3f7dbb694a50c7100d",
+          "originalSha256": "7a8c7d3e229c9c89676bb62972e684b8507486190cc98e73ddececd8305d276c"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/anu-bin/artifacts/verification/test-evidence.md",
+        "sha256": "83bf334f62a3fe5887d958393aef30063d26f6602c56d5e746459219fb41ddc3"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:specification",
+      "input:planning",
+      "input:implementation"
+    ],
+    "rows": [
+      {
+        "id": "story-intent",
+        "sourceId": "story",
+        "line": 8,
+        "quote": "Convert a decimal value to binary value in calc",
+        "attestation": "The verification artifact retains decimal-to-binary conversion as its scope and does not add behavior beyond the approved inputs.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "spec-requirement",
+        "sourceId": "input:specification",
+        "line": 89,
+        "quote": "The calculator shall convert a supplied decimal value to its corresponding binary value when evaluated. *(S1)* [ANU-BIN:REQ-001]",
+        "attestation": "The artifact maps ANU-BIN:REQ-001 to the planned evaluator, App and keypad paths and records the relevant App interaction test without claiming its suite count alone proves acceptance.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "plan-paths",
+        "sourceId": "input:planning",
+        "line": 79,
+        "quote": "| `ANU-BIN:REQ-001` | `src/utils/evaluator.js`, `src/App.jsx`, `src/components/StandardKeypad.jsx` | `src/utils/evaluator.test.js`, `src/App.test.jsx` | new | A user can invoke conversion in Standard mode and see the resulting binary value. |",
+        "attestation": "The artifact names the planned product and test paths and separates retained suite-level evidence from a clause verdict.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "implementation-test-status",
+        "sourceId": "input:implementation",
+        "line": 11,
+        "quote": "Utility and app tests passed in a diagnostic run on Node 22.14.0, and the production build passed.",
+        "attestation": "The artifact distinguishes retained implementation execution from the implementation summary's diagnostic-only status for the fresh publication-test requirement; it states that no verification-generation run is retained and does not claim a clause verdict from the aggregate count.",
+        "outcome": "consistent"
+      }
+    ],
+    "findings": [
+      {
+        "id": "regression-coverage-unsupported",
+        "severity": "blocking",
+        "message": "In “Negative, regression, security, and non-functional checks,” the artifact says “Existing arithmetic was included in the retained 34-test Node 22 implementation execution.” The pinned implementation summary reports an aggregate 34-test result and names the test files, but does not identify which tests cover existing arithmetic. The same artifact acknowledges that the retained summary has no per-test names. This inclusion claim is not established by the reviewed sources; revise it to say that arithmetic regression coverage is not independently established, or provide a source-supported test-level citation."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "3d003456673613ac0dc10080e3dfe257177ea713f5900f8a895d931d852d2434",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-11T08:44:38.165Z",
+  "recordSha256": "e7afabcb4d76b0012d59fc5d60d9eb22a344821718151c6b281eaee47d5cb125"
+}
