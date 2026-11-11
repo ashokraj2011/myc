@@ -4081,7 +4081,7 @@
     "policySha256": "sha256:2b712b561579da5eddda64b01a0857ab727d995526e9ed614ca3821ac007c914"
   },
   "status": "in_progress",
-  "currentPhase": "verification",
+  "currentPhase": "release",
   "phaseOrder": [
     "specification",
     "planning",
@@ -6807,7 +6807,7 @@
       "label": "Verification",
       "order": 4,
       "defaultAgent": "qa",
-      "status": "awaiting_approval",
+      "status": "approved",
       "requiredArtifact": {
         "path": "artifacts/verification/test-evidence.md",
         "kind": "test-evidence",
@@ -6912,8 +6912,8 @@
       "qualityCommands": [],
       "startedAt": "2026-11-11T08:28:36.427Z",
       "submittedAt": "2026-11-11T08:50:06.741Z",
-      "approvedAt": null,
-      "approvedBy": null,
+      "approvedAt": "2026-11-11T08:51:45.018Z",
+      "approvedBy": "ashokraj2011",
       "rejectedAt": null,
       "rejectedBy": null,
       "rejectionReason": null,
@@ -7159,7 +7159,107 @@
           "captureGap": "no-metered-session"
         }
       ],
-      "approvals": [],
+      "approvals": [
+        {
+          "decision": "approved",
+          "phase": "verification",
+          "at": "2026-11-11T08:51:45.018Z",
+          "actor": {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com",
+            "login": "ashokraj2011",
+            "githubLookup": "resolved"
+          },
+          "agent": "qa",
+          "authorityGroup": "quality-reviewers",
+          "identityAssurance": "configured-local",
+          "channel": "copilot-selection-receipt",
+          "generation": 3,
+          "artifactSha256": [
+            {
+              "path": "singularity/work-items/anu-bin/artifacts/verification/test-evidence.md",
+              "sha256": "46a1eba52fdb191653f3ee784e6b21591aecd997166ab353fdcde89b71a2224c"
+            }
+          ],
+          "reviewPacketSha256": "507685d09fbb1562c99190ff4ef3f8ee95aafbb95bbc71ec2053e17b2c8cd263",
+          "evidenceCommit": "66a6071d7c0d30ee26c85a4fd7ecd668abcd8926",
+          "artifactSetSha256": "281b2bfe13b1d942ee5f37e87c1286374c32c2192b00aa0381abaa8dc4193b87",
+          "architectureIntent": null,
+          "architectureDecision": null,
+          "actionContext": {
+            "phase": "verification",
+            "label": "Verification",
+            "generation": 3,
+            "submittedAt": "2026-11-11T08:50:06.741Z",
+            "artifacts": [
+              {
+                "path": "singularity/work-items/anu-bin/artifacts/verification/test-evidence.md",
+                "sha256": "46a1eba52fdb191653f3ee784e6b21591aecd997166ab353fdcde89b71a2224c"
+              }
+            ],
+            "agentBriefs": [
+              {
+                "consumerPhase": "release",
+                "status": "ready",
+                "path": "singularity/work-items/anu-bin/context/briefs/verification-gen3-for-release.json",
+                "renderedPath": "singularity/work-items/anu-bin/context/briefs/verification-gen3-for-release.md",
+                "renderedSha256": "780e364dc479171062278c70b7907d4f83cef624494aa5ca284d047db3fdf99c",
+                "integritySha256": "fdb55ffa626d389a2bcd415f954720ecf75459ac64099841c725c1776c541b41",
+                "documentId": "agent-brief-verification-gen3-release",
+                "documentPath": "singularity/work-items/anu-bin/context/briefs/verification-gen3-for-release.md",
+                "documentSha256": "780e364dc479171062278c70b7907d4f83cef624494aa5ca284d047db3fdf99c"
+              }
+            ],
+            "reviewPacketSha256": "507685d09fbb1562c99190ff4ef3f8ee95aafbb95bbc71ec2053e17b2c8cd263",
+            "submittedSourceCommit": "9f79e9f6e080e951c5f9f9332fbf1a03ba48c105",
+            "planId": "505b27f8e89731b0e609a1e8"
+          },
+          "upstream": {
+            "sha256": "sha256:98489314ef50e6ef8e3d56d836f02d2babc00b0c6062bb0123d6287d5eb43368",
+            "refs": [
+              {
+                "kind": "input",
+                "ref": "implementation",
+                "sha256": "sha256:d88a77b40c325c928767296f7518c9d6e9826295b75846120dfc62347797c116",
+                "authoredSha256": "sha256:cf47b0031702b074aed2452407ab81a65c79e8c4c0227a65ab6d4db2ae58ee1f"
+              },
+              {
+                "kind": "input",
+                "ref": "planning",
+                "sha256": "sha256:5fd252781f9b926aca11bcf6b50a8d636fa715f4e45d1c255b8e49c43ac86918",
+                "authoredSha256": "sha256:fa7a9ed151477ec1495aebe5318a379480d1057ac111f74356547beb03925a48"
+              },
+              {
+                "kind": "input",
+                "ref": "specification",
+                "sha256": "sha256:50bc02fc9bea68e65fb8577e7a82e77033c2e3e50881ef5e399dabcab6c92365",
+                "authoredSha256": "sha256:fd680e59b1503c1a8622dd91d5511bff762d6cb10ef33d296cce2633b034029e"
+              },
+              {
+                "kind": "candidate",
+                "ref": "HEAD",
+                "sha256": "sha256:8ee94abb2364d9007ef8fbcbf0c0b652fb107d1327f042f79171f6b2f38708d3"
+              },
+              {
+                "kind": "specification",
+                "ref": "records",
+                "sha256": "sha256:cefd1b7927dc81f1f76c80c34903553d7b147edc7eae2b79e3020b3f1813fb11"
+              },
+              {
+                "kind": "documents",
+                "ref": "verification",
+                "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+              },
+              {
+                "kind": "decisions",
+                "ref": "story",
+                "sha256": "sha256:aa3d3bff38fef444dddd1c3b126a329b596f6bf28bea081693b5194f7d6042ba"
+              }
+            ]
+          },
+          "selfApproval": true
+        }
+      ],
       "generationPublications": [
         {
           "generation": 1,
@@ -7208,12 +7308,14 @@
         {
           "path": "singularity/work-items/anu-bin/artifacts/verification/test-evidence.md",
           "kind": "document",
-          "status": "pending",
+          "status": "approved",
           "exists": true,
-          "size": 23896,
-          "sha256": "46a1eba52fdb191653f3ee784e6b21591aecd997166ab353fdcde89b71a2224c",
+          "size": 28175,
+          "sha256": "b39a22fddb2f1eed76b146565aa1a48a7fe449f1b4f395a38f5e82112a4d02b0",
           "registeredAt": "2026-11-11T08:33:49.638Z",
-          "updatedAt": "2026-11-11T08:50:06.743Z"
+          "updatedAt": "2026-11-11T08:51:45.020Z",
+          "approvedAt": "2026-11-11T08:51:45.018Z",
+          "approvedBy": "ashokraj2011"
         }
       ],
       "checks": [
@@ -7407,7 +7509,7 @@
       "label": "Release",
       "order": 5,
       "defaultAgent": "qa",
-      "status": "not_started",
+      "status": "in_progress",
       "requiredArtifact": {
         "path": "artifacts/release/conformance.md",
         "kind": "conformance-report",
@@ -7482,7 +7584,7 @@
         }
       },
       "qualityCommands": [],
-      "startedAt": null,
+      "startedAt": "2026-11-11T08:51:45.018Z",
       "submittedAt": null,
       "approvedAt": null,
       "approvedBy": null,
@@ -7842,6 +7944,22 @@
       "event": "phase_submitted",
       "phase": "verification",
       "detail": "1 artifacts"
+    },
+    {
+      "at": "2026-11-11T08:51:45.018Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "work_interval_closed",
+      "phase": "verification",
+      "detail": "interval INT-verification-G3-004 closed after phase approval"
+    },
+    {
+      "at": "2026-11-11T08:51:45.018Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "phase_self_approved",
+      "phase": "verification",
+      "detail": "threshold reached; advanced to release"
     }
   ],
   "measurement": {
@@ -11577,6 +11695,143 @@
         },
         "createdAt": "2026-11-11T08:50:04.690Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "e51675b6-f76c-48e2-9800-d2a5b3957783",
+        "type": "phase-approved",
+        "subject": {
+          "kind": "story",
+          "id": "anu-bin",
+          "branch": "anu-bin"
+        },
+        "phaseId": "verification",
+        "generation": 3,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": "quality-reviewers",
+        "payload": {
+          "decision": "approved",
+          "reviewPacketSha256": "507685d09fbb1562c99190ff4ef3f8ee95aafbb95bbc71ec2053e17b2c8cd263",
+          "evidenceCommit": "66a6071d7c0d30ee26c85a4fd7ecd668abcd8926",
+          "artifactSetSha256": "281b2bfe13b1d942ee5f37e87c1286374c32c2192b00aa0381abaa8dc4193b87",
+          "witnessMappingsSha256": null
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-11T08:51:44.239Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "e51675b6-f76c-48e2-9800-d2a5b3957783",
+        "eventType": "phase-approved",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "anu-bin"
+          ],
+          "branch": "anu-bin",
+          "canonicalBranch": "anu-bin",
+          "createdAt": "2026-11-11T05:34:33.551Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "release",
+          "generation": 3,
+          "phase": "verification",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 5,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 5,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "release",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "bin (copy) (copy)",
+          "updatedAt": "2026-11-11T08:51:45.018Z",
+          "workId": "anu-bin",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": "quality-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
+          "lifecycleEventId": "e51675b6-f76c-48e2-9800-d2a5b3957783",
+          "lifecyclePayload": {
+            "decision": "approved",
+            "reviewPacketSha256": "507685d09fbb1562c99190ff4ef3f8ee95aafbb95bbc71ec2053e17b2c8cd263",
+            "evidenceCommit": "66a6071d7c0d30ee26c85a4fd7ecd668abcd8926",
+            "artifactSetSha256": "281b2bfe13b1d942ee5f37e87c1286374c32c2192b00aa0381abaa8dc4193b87",
+            "witnessMappingsSha256": null
+          },
+          "templateSha256": "fdda5ab9e701142bd6d1f12e90b85b4e24dddffb0f4f5d89c5b534bd9137e4e0",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "e51675b6-f76c-48e2-9800-d2a5b3957783",
+            "type": "phase-approved",
+            "subject": {
+              "kind": "story",
+              "id": "anu-bin",
+              "branch": "anu-bin"
+            },
+            "phaseId": "verification",
+            "generation": 3,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": "quality-reviewers",
+            "payload": {
+              "decision": "approved",
+              "reviewPacketSha256": "507685d09fbb1562c99190ff4ef3f8ee95aafbb95bbc71ec2053e17b2c8cd263",
+              "evidenceCommit": "66a6071d7c0d30ee26c85a4fd7ecd668abcd8926",
+              "artifactSetSha256": "281b2bfe13b1d942ee5f37e87c1286374c32c2192b00aa0381abaa8dc4193b87",
+              "witnessMappingsSha256": null
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-11T08:51:44.239Z"
+          }
+        },
+        "createdAt": "2026-11-11T08:51:44.245Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -11590,13 +11845,14 @@
       "sourceBaseCommit": "8a353b3fd553d28cc8c7c0a7452601d3419d2d9f",
       "escalationTarget": null,
       "path": "singularity/work-items/anu-bin/context/work-intervals/verification-gen3-baseline.json",
-      "status": "reconciled",
+      "status": "closed",
       "finalReconciliation": {
         "reconciliationSha256": "4593001f50ed68805f45c24fbababef32f48856c7c6e14389bf5e800f03862fb",
         "path": "singularity/work-items/anu-bin/context/work-intervals/reconciliations/4593001f50ed68805f45c24fbababef32f48856c7c6e14389bf5e800f03862fb.json",
         "targetHead": "6303d36cdde63995239ee3706775bde1c12107dd",
         "recordedAt": "2026-11-11T08:50:06.741Z"
-      }
+      },
+      "closedAt": "2026-11-11T08:51:45.018Z"
     },
     "history": [
       {
