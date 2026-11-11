@@ -4,7 +4,7 @@
   "workId": "anu-bin",
   "workType": "spec-driven-standard",
   "phase": "verification",
-  "generation": 2,
+  "generation": 3,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "test-evidence.md",
       "mediaType": "text/markdown",
-      "sha256": "83bf334f62a3fe5887d958393aef30063d26f6602c56d5e746459219fb41ddc3",
-      "bytes": 5053
+      "sha256": "84248589a54ad7e4cf30bb45b9f72e0612dcaf6c77753915fb3421e0cb3d39d3",
+      "bytes": 5009
     },
-    "generation": 2,
-    "publishedAt": "2026-11-11T08:40:31.926Z"
+    "generation": 3,
+    "publishedAt": "2026-11-11T08:46:33.296Z"
   },
-  "sourceCommit": "ab6bf4e20eee6d901acf62f61b7b1b59911ea863",
+  "sourceCommit": "8a353b3fd553d28cc8c7c0a7452601d3419d2d9f",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/common/verification.md"
   },
   "inputs": {
-    "generation": 2,
-    "path": "singularity/work-items/anu-bin/context/inputs-verification-gen2.json",
-    "sha256": "c624e6ea734bd93fa8a778919a29441ab5cca9a782cc0a91e73fdead1d9141c0",
+    "generation": 3,
+    "path": "singularity/work-items/anu-bin/context/inputs-verification-gen3.json",
+    "sha256": "836899c6675a3c1cb250cca319e522cdd0147bb1d22222a491f7cee0a280fa85",
     "renderedSha256": "4041dd6589a48525add19da5ecc97c4494792e4f14939db26dd9a06d18a059a3",
     "mode": "enforce"
   },
@@ -97,6 +97,26 @@
       "generation": 2,
       "path": "singularity/work-items/anu-bin/telemetry/verification-gen2.json",
       "sha256": "e82b7255e3920d7d5ea5602a66376c9abc61a66110f39f1092b8d05556c79a0b",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 36979,
+        "estimatedTokens": 9245,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 36979,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 3,
+      "path": "singularity/work-items/anu-bin/telemetry/verification-gen3.json",
+      "sha256": "9223d506e5a27de9c90f80a3e46da8d8779590e2bd7725febb9338c870c9b1b1",
       "status": "pending",
       "models": [],
       "providerCost": null,
@@ -157,6 +177,27 @@
       "completedAt": "2026-11-11T08:40:31.926Z",
       "agent": "qa",
       "generation": 2
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-11T08:46:33.296Z",
+      "completedAt": "2026-11-11T08:46:33.296Z",
+      "agent": "qa",
+      "generation": 3
     }
   ],
   "sequenceOverrides": [],
@@ -199,7 +240,7 @@ No separate build, CI, or inspection claim is made for this behavior. Not applic
 
 ## Negative, regression, security, and non-functional checks
 
-Existing arithmetic was included in the retained 34-test Node 22 implementation execution, which passed with no skipped tests; the retained summary does not provide per-test names or independent coverage counts. The Node 26 App test failure is recorded above as an environment-specific diagnostic and must not be presented as a passing result. No negative, boundary, accessibility, security, resilience, or observability requirements were specified; no separate checks for them are established here. Fractional-value handling, numeric limits, and output formatting remain unspecified and are not asserted.
+The retained 34-test Node 22 run does not identify individual test cases, so existing arithmetic regression coverage is not independently established by this evidence. The Node 26 App test failure is recorded above as an environment-specific diagnostic and must not be presented as a passing result. No negative, boundary, accessibility, security, resilience, or observability requirements were specified; no separate checks for them are established here. Fractional-value handling, numeric limits, and output formatting remain unspecified and are not asserted.
 
 ## Constitution articles
 
