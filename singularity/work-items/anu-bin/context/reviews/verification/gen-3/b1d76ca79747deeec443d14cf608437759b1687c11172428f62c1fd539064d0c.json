@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "phase": "verification",
+  "generation": 3,
+  "reportSha256": "b1d76ca79747deeec443d14cf608437759b1687c11172428f62c1fd539064d0c",
+  "lifecycleEventId": "18b9d8c1-d3e5-421c-b46b-9ba517e9e355",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "anu-bin",
+      "phase": "verification",
+      "generation": 3,
+      "sources": [
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/anu-bin/artifacts/implementation/implementation-summary.md",
+          "textSha256": "dcbed3d5e14f239021a757165fd663b50c81aaec2ab7200c65c0a2fbb8a11c95"
+        },
+        {
+          "id": "input:planning",
+          "path": "singularity/work-items/anu-bin/artifacts/planning/plan.md",
+          "textSha256": "9079e660a18a42c894693cc12ffa7a93579ef3b6b90112dc8107d8880b04a7e2"
+        },
+        {
+          "id": "input:specification",
+          "path": "singularity/work-items/anu-bin/artifacts/specification/spec.md",
+          "textSha256": "5959146ca845328067250d90b0539a45cc2561c68fb454866559e684af5cd9ed"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/anu-bin/USER-STORY.md",
+          "textSha256": "434d9a53909b423f7cb36727cce5c95af46fe39b4a105b3f7dbb694a50c7100d",
+          "originalSha256": "7a8c7d3e229c9c89676bb62972e684b8507486190cc98e73ddececd8305d276c"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/anu-bin/artifacts/verification/test-evidence.md",
+        "sha256": "84248589a54ad7e4cf30bb45b9f72e0612dcaf6c77753915fb3421e0cb3d39d3"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:specification",
+      "input:planning",
+      "input:implementation"
+    ],
+    "rows": [
+      {
+        "id": "story-intent",
+        "sourceId": "story",
+        "line": 8,
+        "quote": "Convert a decimal value to binary value in calc",
+        "attestation": "The verification artifact retains decimal-to-binary conversion as its scope and does not add behavior beyond the approved inputs.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "spec-requirement",
+        "sourceId": "input:specification",
+        "line": 89,
+        "quote": "The calculator shall convert a supplied decimal value to its corresponding binary value when evaluated. *(S1)* [ANU-BIN:REQ-001]",
+        "attestation": "The artifact maps ANU-BIN:REQ-001 to the planned evaluator, App and keypad paths and states that aggregate test counts alone do not establish its verdict.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "spec-acceptance-test",
+        "sourceId": "input:specification",
+        "line": 93,
+        "quote": "- Unit tests shall verify the calculator's decimal-to-binary conversion behavior. *(S1)* [ANU-BIN:AC-001] [scope:SRI-bf17ce947d7f]",
+        "attestation": "The artifact identifies the evaluator unit-test path and distinguishes the retained suite count from an established AC-001 verdict.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "plan-acceptance-path",
+        "sourceId": "input:planning",
+        "line": 78,
+        "quote": "| `ANU-BIN:AC-001` | - | `src/utils/evaluator.test.js` | test-only | Unit tests demonstrate decimal-to-binary conversion behavior. |",
+        "attestation": "The artifact names the planned test-only evaluator test and does not claim that suite counts alone prove the acceptance criterion.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "plan-requirement-paths",
+        "sourceId": "input:planning",
+        "line": 79,
+        "quote": "| `ANU-BIN:REQ-001` | `src/utils/evaluator.js`, `src/App.jsx`, `src/components/StandardKeypad.jsx` | `src/utils/evaluator.test.js`, `src/App.test.jsx` | new | A user can invoke conversion in Standard mode and see the resulting binary value. |",
+        "attestation": "The artifact repeats the planned source and test paths, records the App test limitation, and makes no unsupported clause-verdict claim.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "implementation-evidence-status",
+        "sourceId": "input:implementation",
+        "line": 11,
+        "quote": "Added a distinct BIN action to the Standard keypad. It evaluates the current expression through the existing evaluator, converts its finite numeric result through a focused binary-conversion utility, and presents the binary value in the existing result display; ordinary equals and expression evaluation remain unchanged. Utility and app tests passed in a diagnostic run on Node 22.14.0, and the production build passed. Node 22 was pinned through the approved PAM-001 decision; the publication test run is still required. No dependency manifest was changed.",
+        "attestation": "The artifact preserves the distinction between retained implementation execution and the absence of a fresh verification run, and reports the Node 26 App test failure without presenting it as a pass.",
+        "outcome": "consistent"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "3d003456673613ac0dc10080e3dfe257177ea713f5900f8a895d931d852d2434",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-11T08:49:29.885Z",
+  "recordSha256": "869e87904ca5eb8f648a26b1f770e0b2c3e9829b3cee61e953a4a1cf225b4b51"
+}
