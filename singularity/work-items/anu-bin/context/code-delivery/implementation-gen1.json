@@ -111,12 +111,24 @@
       {
         "clauseId": "ANU-BIN:AC-001",
         "testSource": "src/App.test.jsx",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": ".-node-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       },
       {
         "clauseId": "ANU-BIN:AC-001",
         "testSource": "src/utils/evaluator.test.js",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": ".-node-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       }
     ],
     "witnesses": [
@@ -332,12 +344,20 @@
     ],
     "bindingsSha256": "sha256:1d742af064cc446f41fa99eeb751f6de4f41dbb545f4be9709d51563a6c6478f"
   },
-  "testExecutions": [],
+  "testExecutions": [
+    {
+      "commandId": ".-node-tests",
+      "attemptId": "TA-c7b76e50714f1641b5a0",
+      "receiptPath": "singularity/work-items/anu-bin/context/code-delivery/tests/attempts/implementation/TA-c7b76e50714f1641b5a0.json",
+      "receiptSha256": "047085279569ca8338473ceb197e9eb26d864d280777a34c945833ee30aa8d9f",
+      "status": "passed"
+    }
+  ],
   "tree": {
     "workingStateDigest": "sha256:b6445b8544a8faafd9bef05772c68138a3868d1aaa98935c21c3c3cb7a1ce1c2",
     "codeTreeSha256": "sha256:5f903cf642bcedca6c6ab474df5131cae3fdf533912ee04b3fd7c0ec3e388f65",
-    "generationCommit": null,
-    "generationTree": null
+    "generationCommit": "d83707e3ee1177426e539a9261afc04e7d84638b",
+    "generationTree": "06f93daa9055dbb95ee7cb2d2f2d3e0f365a7dc3"
   },
   "model": {
     "task": "code",
@@ -356,6 +376,7 @@
     "observedAt": null,
     "generation": null
   },
-  "status": "pending-tests",
-  "capturedAt": "2026-11-11T06:58:04.724Z"
+  "status": "ready",
+  "capturedAt": "2026-11-11T06:58:04.724Z",
+  "validatedAt": "2026-11-11T08:17:18.145Z"
 }

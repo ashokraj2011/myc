@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "anu-bin",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G1-001",
+  "phaseId": "implementation",
+  "generation": 1,
+  "baselineSha256": "8754034a6563f9a0fcc0903c54e6c2a25aa1b24b8a05fced18ec35d2f3dcbfee",
+  "baseline": {
+    "path": "singularity/work-items/anu-bin/context/work-intervals/implementation-gen1-baseline.json",
+    "sha256": "8754034a6563f9a0fcc0903c54e6c2a25aa1b24b8a05fced18ec35d2f3dcbfee",
+    "verified": true,
+    "sourceBaseCommit": "16d73e4367b84aab6b3b4b196dfe0946d5f2e4e6"
+  },
+  "sourceBaseCommit": "16d73e4367b84aab6b3b4b196dfe0946d5f2e4e6",
+  "target": {
+    "branch": "anu-bin",
+    "head": "ee2db2c242df3dfd8edf55d7b713ea22a335b260",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": ".nvmrc",
+      "status": "present",
+      "sha256": "f14b4987904bcb5814e4459a057ed4d20f58a633152288a761214dcd28780b56",
+      "bytes": 3,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "src/App.jsx",
+      "status": "present",
+      "sha256": "c3e293a243434da8bd239f4be0f53ed8dc8ed8e7fb71544961d86e73f848e39f",
+      "bytes": 11044,
+      "verdict": "planned",
+      "clauseIds": [
+        "ANU-BIN:REQ-001"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/App.test.jsx",
+      "status": "present",
+      "sha256": "a8f3395df10229956a9db8a6b77c84db9e181a4fa9040815ccbab2a87fbc1dfa",
+      "bytes": 7788,
+      "verdict": "planned",
+      "clauseIds": [
+        "ANU-BIN:REQ-001"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/components/StandardKeypad.jsx",
+      "status": "present",
+      "sha256": "36791792279f584351188deb96e4f894adabb4cf48151a10382bdc595f20a85c",
+      "bytes": 6750,
+      "verdict": "planned",
+      "clauseIds": [
+        "ANU-BIN:REQ-001"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/utils/evaluator.js",
+      "status": "present",
+      "sha256": "8d5da51b82efcc9a38715bd622d22ba60ae806c1731e4cb113bd9d9896cb31d8",
+      "bytes": 7466,
+      "verdict": "planned",
+      "clauseIds": [
+        "ANU-BIN:REQ-001"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/utils/evaluator.test.js",
+      "status": "present",
+      "sha256": "6e001d80aafbb652ccc95200d7c259e8153db3d2ae2916c6b7e95be944f9f8ad",
+      "bytes": 3117,
+      "verdict": "planned",
+      "clauseIds": [
+        "ANU-BIN:AC-001",
+        "ANU-BIN:REQ-001"
+      ],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 6,
+    "planned": 5,
+    "unplanned": 1,
+    "protected": 0
+  },
+  "decision": {
+    "status": "review",
+    "summaryStatus": "attention",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "c616be19ef02620ea952fdbf7ae32778ed297c73380dd0cd6961b495a0f62c15",
+  "reconciledAt": "2026-11-11T08:17:18.244Z",
+  "final": true,
+  "recordedAt": "2026-11-11T08:17:18.245Z",
+  "path": "singularity/work-items/anu-bin/context/work-intervals/reconciliations/c616be19ef02620ea952fdbf7ae32778ed297c73380dd0cd6961b495a0f62c15.json"
+}
