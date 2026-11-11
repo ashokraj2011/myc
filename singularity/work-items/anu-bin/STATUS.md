@@ -4,8 +4,8 @@
 - Work type: **spec-driven-standard**
 - Capability: **calc** (`raj-calc`)
 - Capability map: `a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d`
-- Overall status: **in_progress**
-- Current phase: **release**
+- Overall status: **closed**
+- Current phase: **none — every step is decided**
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
@@ -19,10 +19,12 @@
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
 | 5 | Verification (`verification`) | qa | **approved** | 3 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
-| 6 | Release (`release`) | qa | **awaiting_approval** | 1 | 0 | unavailable |
+| 6 | Release (`release`) | qa | **approved** | 1 | 1 | unavailable |
+|  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
 
 ## Recent history
 
+- 2026-11-11T09:04:14.375Z — **phase_self_approved** (release) by ashokraj2011 · agent qa: threshold reached; closed
 - 2026-11-11T09:01:24.241Z — **upstream_issue_decided** (release) by ashokraj2011 · agent qa: UPI-001: accept-risk. o accept the rik man ok dont worry
 - 2026-11-11T09:01:12.151Z — **upstream_issue_raised** (release) by ashokraj2011 · agent qa: UPI-001 against implementation (ANU-BIN:REQ-001, ANU-BIN:AC-001): The Release report marks ANU-BIN:REQ-001, ANU-BIN:AC-001 partial, and Implementation's approvers decide the gap. Raised from the decision list.
 - 2026-11-11T08:56:56.950Z — **phase_submitted** (release) by ashokraj2011 · agent qa: 2 artifacts
@@ -37,4 +39,3 @@
 - 2026-11-11T08:45:46.146Z — **work_interval_started** (verification) by system: baseline b7c9827d5402 at 8a353b3fd553
 - 2026-11-11T08:44:38.165Z — **source_review_submitted** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 2fa3025da9caabe12d7cbc466576ae337a91c3038aad4ad988fea0c55b1ff07b
 - 2026-11-11T08:40:32.007Z — **phase_generated** (verification) by ashokraj2011 · agent qa: generation 2
-- 2026-11-11T08:39:32.319Z — **work_interval_started** (verification) by system: baseline 285ce9fc486c at ab6bf4e20eee
