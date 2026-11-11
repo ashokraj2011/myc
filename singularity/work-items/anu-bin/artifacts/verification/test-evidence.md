@@ -4,7 +4,7 @@
   "workId": "anu-bin",
   "workType": "spec-driven-standard",
   "phase": "verification",
-  "generation": 1,
+  "generation": 2,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "test-evidence.md",
       "mediaType": "text/markdown",
-      "sha256": "a119d32322f1ee1d87d9ec8d2d4ba755fda2f72b1199f741dcf5c0f9273b08a7",
-      "bytes": 4101
+      "sha256": "83bf334f62a3fe5887d958393aef30063d26f6602c56d5e746459219fb41ddc3",
+      "bytes": 5053
     },
-    "generation": 1,
-    "publishedAt": "2026-11-11T08:33:51.163Z"
+    "generation": 2,
+    "publishedAt": "2026-11-11T08:40:31.926Z"
   },
-  "sourceCommit": "642905c6bc48ba8178a7f4ea3f3ab8a6c1951632",
+  "sourceCommit": "ab6bf4e20eee6d901acf62f61b7b1b59911ea863",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/common/verification.md"
   },
   "inputs": {
-    "generation": 1,
-    "path": "singularity/work-items/anu-bin/context/inputs-verification-gen1.json",
-    "sha256": "5d1accbfe603782c0f3e602e6ec38d7d7651deffe0637e85b9969938b20a2cfa",
+    "generation": 2,
+    "path": "singularity/work-items/anu-bin/context/inputs-verification-gen2.json",
+    "sha256": "c624e6ea734bd93fa8a778919a29441ab5cca9a782cc0a91e73fdead1d9141c0",
     "renderedSha256": "4041dd6589a48525add19da5ecc97c4494792e4f14939db26dd9a06d18a059a3",
     "mode": "enforce"
   },
@@ -92,6 +92,26 @@
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 2,
+      "path": "singularity/work-items/anu-bin/telemetry/verification-gen2.json",
+      "sha256": "e82b7255e3920d7d5ea5602a66376c9abc61a66110f39f1092b8d05556c79a0b",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 36979,
+        "estimatedTokens": 9245,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 36979,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
     }
   ],
   "remoteOutputs": [],
@@ -116,6 +136,27 @@
       "completedAt": "2026-11-11T08:33:51.163Z",
       "agent": "qa",
       "generation": 1
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-11T08:40:31.926Z",
+      "completedAt": "2026-11-11T08:40:31.926Z",
+      "agent": "qa",
+      "generation": 2
     }
   ],
   "sequenceOverrides": [],
@@ -135,30 +176,30 @@ release recommendation for downstream agents. Exact acceptance and negative-test
 preserved separately by the governed projection.
 -->
 
-Verification is supported by a retained, source-tree-matched Node 22 test run: 34 passed, 0 failed, and 0 skipped. The retained evidence covers the evaluator and calculator app tests, including the planned binary-conversion behavior. A separate Node 26 diagnostic run failed in the App test environment because `localStorage` was undefined; the tests did not reach their bodies. This does not contradict the retained Node 22 run, but remains an environment-specific diagnostic failure. A fresh verification publication test run is still required. No fractional-value, range, formatting, security, or non-functional behavior was specified; those are not claimed as verified. Recommendation: proceed to the configured publication gate, keeping its test result and any failures visible.
+The approved implementation packet retains a source-tree-matched Node 22 execution (34 passed, 0 failed, 0 skipped). The implementation summary calls that run diagnostic-only because it did not satisfy the fresh publication-test requirement. These statements describe different evidence scopes: it is retained governed evidence for implementation and reusable against this unchanged source tree, but it is not a verification-generation run or a fresh publication test. Its suite count alone does not establish either clause verdict. The separate Node 26 diagnostic run failed before the App test bodies because `localStorage` was undefined. No fractional-value, range, formatting, security, or non-functional behavior was specified; those are not claimed as verified. Recommendation: proceed only through the configured gate, preserving the distinction between retained implementation evidence and any fresh verification result.
 
 ## Commands and environment
 
-Retained implementation-generation test evidence, reused for verification because its source-tree binding matches the current source:
+The implementation generation's approved submission packet retains this governed execution: packet `singularity/work-items/anu-bin/submissions/implementation/0f37a065f4db33924fe3fe31e1c6a8b832d7f2b30967f74c9365760710af7db8.json`, check `.-node-tests`, attempt `TA-c7b76e50714f1641b5a0`, receipt `singularity/work-items/anu-bin/context/code-delivery/tests/attempts/implementation/TA-c7b76e50714f1641b5a0.json`, receipt SHA-256 `047085279569ca8338473ceb197e9eb26d864d280777a34c945833ee30aa8d9f`. Its source-tree SHA-256 matches the current tree. The implementation summary's “diagnostic only” qualification refers to the fact that it did not meet the fresh publication-test requirement; it does not negate the retained implementation execution record.
 
 - `singularity-flow tests node --work-id anu-bin --phase implementation --node 22` — Node 22.14.0; 34 passed, 0 failed, 0 skipped. Attempt `TA-c7b76e50714f1641b5a0`; source-tree SHA-256 `b6445b8544a8faafd9bef05772c68138a3868d1aaa98935c21c3c3cb7a1ce1c2`. This is retained implementation evidence, not a new verification-phase run.
 - `npm test -- --run src/utils/evaluator.test.js src/App.test.jsx` — Node 26.12.0; exit 1. The evaluator file passed 15 tests; the 18 App tests failed before test bodies because `localStorage` was undefined in the jsdom environment. This is diagnostic evidence from the implementation report, not a retained passing run.
 - `npm run build` — Node 26.12.0; exit 0; production bundle generated with a Vite large-chunk advisory (implementation report).
 
-The configured fresh publication test run has not yet been established for verification. The evidence packet does not retain a verification-generation execution. No dependency manifest changed; Node 22 was pinned by the approved PAM-001 decision.
+No verification-generation execution is retained, and the fresh publication-test requirement remains unmet by this implementation-generation run. No dependency manifest changed; Node 22 was pinned by the approved PAM-001 decision.
 
 ## Acceptance and specification results
 
 | Clause | Evidence and verdict |
 |---|---|
-| `ANU-BIN:AC-001` | `src/utils/evaluator.test.js` contains the conversion unit tests tagged `@ac:ANU-BIN:AC-001`. The retained, matched Node 22 suite run passed 34 tests, 0 failed, 0 skipped (attempt `TA-c7b76e50714f1641b5a0`). This is reused implementation-generation evidence, not a fresh verification run. |
-| `ANU-BIN:REQ-001` | `src/utils/evaluator.js`, `src/App.jsx`, and `src/components/StandardKeypad.jsx` carry the planned `@clause:ANU-BIN:REQ-001` source trace; `src/App.test.jsx` exercises the Standard-mode BIN interaction and is tagged `@ac:ANU-BIN:AC-001`. The retained matched Node 22 suite passed 34 tests, but suite-level counts alone do not independently establish a clause verdict. The implementation report's Node 26 App tests did not reach their bodies. Fresh publication testing remains required. |
+| `ANU-BIN:AC-001` | `src/utils/evaluator.test.js` contains the conversion unit tests tagged `@ac:ANU-BIN:AC-001`. The implementation generation's approved packet retains the matched Node 22 execution (34 passed, 0 failed, 0 skipped; attempt `TA-c7b76e50714f1641b5a0`). It is reusable retained implementation evidence, but not a fresh verification run; the packet's criterion verdict is `requires-bound-witness-evaluation`, so passing suite counts do not establish this clause. |
+| `ANU-BIN:REQ-001` | `src/utils/evaluator.js`, `src/App.jsx`, and `src/components/StandardKeypad.jsx` carry the planned `@clause:ANU-BIN:REQ-001` source trace; `src/App.test.jsx` exercises the Standard-mode BIN interaction and is tagged `@ac:ANU-BIN:AC-001`. The retained Node 22 execution is bound to the same source tree, but its suite-level count alone does not establish this clause. The implementation report's separate Node 26 App tests did not reach their bodies. No fresh verification publication test is retained. |
 
 No separate build, CI, or inspection claim is made for this behavior. Not applicable: this Story specifies executable unit-test evidence, not a configuration or documentation outcome.
 
 ## Negative, regression, security, and non-functional checks
 
-Existing arithmetic was included in the 34-test retained Node 22 suite, which passed with no skipped tests; the retained summary does not provide per-test names or independent coverage counts. The Node 26 App test failure is recorded above as an environment-specific diagnostic and must not be presented as a passing result. No negative, boundary, accessibility, security, resilience, or observability requirements were specified; no separate checks for them are established here. Fractional-value handling, numeric limits, and output formatting remain unspecified and are not asserted.
+Existing arithmetic was included in the retained 34-test Node 22 implementation execution, which passed with no skipped tests; the retained summary does not provide per-test names or independent coverage counts. The Node 26 App test failure is recorded above as an environment-specific diagnostic and must not be presented as a passing result. No negative, boundary, accessibility, security, resilience, or observability requirements were specified; no separate checks for them are established here. Fractional-value handling, numeric limits, and output formatting remain unspecified and are not asserted.
 
 ## Constitution articles
 
