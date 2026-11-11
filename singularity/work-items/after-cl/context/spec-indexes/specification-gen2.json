@@ -1,0 +1,134 @@
+{
+  "clauses": [
+    {
+      "anchor": "[AFTER-CL:REQ-001]",
+      "body": "The plotter shall accept and display the 2D solution set for any single implicit quadratic equation in x and y of the form `Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0`, with at least one of A, B, or C non-zero, including mathematically equivalent rearrangements. A graph contains no more than one equation. *(S1; pinned Story request as narrowed by recorded clarification, specification generation 2)*",
+      "bodySha256": "6a2aef1fcf030789b816da8908ed0b8f792ea39e30af8131e2a3197edcdf12cf",
+      "dependsOn": [],
+      "id": "AFTER-CL:REQ-001",
+      "namespace": "AFTER-CL",
+      "number": 1,
+      "source": {
+        "line": 295,
+        "path": "singularity/work-items/after-cl/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "AFTER-CL:AC-001",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[AFTER-CL:REQ-002]",
+      "body": "The graph-plotting experience shall have a polished, Desmos-inspired visual treatment; an exact visual clone is not required. *(S2; pinned Story request and recorded clarification, specification generation 1)*",
+      "bodySha256": "e33b1480a04c3bac5e4255eb1258903fb0500c92f7e8795d7aeb808cce02a632",
+      "dependsOn": [],
+      "id": "AFTER-CL:REQ-002",
+      "namespace": "AFTER-CL",
+      "number": 2,
+      "source": {
+        "line": 296,
+        "path": "singularity/work-items/after-cl/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "AFTER-CL:AC-002",
+        "methods": [
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[AFTER-CL:REQ-003]",
+      "body": "Provide Playwright browser tests that exercise equation entry and verify plotted output for the implicit quadratic scope, including terms in x^2, xy, y^2, x, y, and the constant term. *(S3; pinned Story acceptance criterion “Palyright tests” [scope:SRI-8d1790c722db] and recorded clarification, specification generation 2)*",
+      "bodySha256": "8266ab62df5e3ba4fdcf7256d38aaef35c9f644af4133d7d77ffb4fc62c506fd",
+      "dependsOn": [],
+      "id": "AFTER-CL:REQ-003",
+      "namespace": "AFTER-CL",
+      "number": 3,
+      "source": {
+        "line": 297,
+        "path": "singularity/work-items/after-cl/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "AFTER-CL:AC-003",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[AFTER-CL:AC-001]",
+      "body": "Entering one implicit quadratic equation in x and y of the declared general form displays its corresponding 2D solution set, and the graph does not overlay a second equation. *(S1)*",
+      "bodySha256": "10595b350a9d65ed058e8a67805cda232f592d458fbe7b01f93fa234729d1f23",
+      "dependsOn": [],
+      "id": "AFTER-CL:AC-001",
+      "namespace": "AFTER-CL",
+      "number": 1,
+      "source": {
+        "line": 301,
+        "path": "singularity/work-items/after-cl/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "AFTER-CL:AC-001",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[AFTER-CL:AC-002]",
+      "body": "A visual review finds the graph-plotting experience polished and Desmos-inspired; it need not reproduce Desmos exactly. *(S2)*",
+      "bodySha256": "6e9342075c44cb8fb70e0e7482e66d506803cd690905cd7974a240a0ba9fa95d",
+      "dependsOn": [],
+      "id": "AFTER-CL:AC-002",
+      "namespace": "AFTER-CL",
+      "number": 2,
+      "source": {
+        "line": 302,
+        "path": "singularity/work-items/after-cl/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "AFTER-CL:AC-002",
+        "methods": [
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[AFTER-CL:AC-003]",
+      "body": "The Playwright suite contains browser checks for equation entry and corresponding graph rendering for the implicit quadratic scope, exercising x^2, xy, y^2, x, y, and constant terms. *(S3)*",
+      "bodySha256": "06ffe306238c24d25de068f62d856dff5b5bb1f58c533bbb29e466a38a5bda9f",
+      "dependsOn": [],
+      "id": "AFTER-CL:AC-003",
+      "namespace": "AFTER-CL",
+      "number": 3,
+      "source": {
+        "line": 303,
+        "path": "singularity/work-items/after-cl/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "AFTER-CL:AC-003",
+        "methods": [
+          "test"
+        ]
+      }
+    }
+  ],
+  "generation": 2,
+  "indexSha256": "d74590fbcaaeae2d862d7c852a3b7aa2f3365e03299435c437a608b3c0314f4e",
+  "phase": "specification",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 16512,
+    "path": "singularity/work-items/after-cl/artifacts/specification/spec.md",
+    "sha256": "87f692dca38f77464bbbb7e8eb0decde3ecbcad2499dc12a2c82332ab0e583ad"
+  },
+  "workId": "after-cl"
+}

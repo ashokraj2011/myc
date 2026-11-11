@@ -4,7 +4,7 @@
   "workId": "after-cl",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 1,
+  "generation": 2,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "spec.md",
       "mediaType": "text/markdown",
-      "sha256": "085bfe447820d9aa093a0105f4b0aa9e236be0fc6b9f2f5f4962cf28a64dabcb",
-      "bytes": 10782
+      "sha256": "035625827e19a6c917fefa3dbd0a8b31646d2a6b63b0203ee538cb8b453473ad",
+      "bytes": 11161
     },
-    "generation": 1,
-    "publishedAt": "2026-11-11T02:54:19.539Z"
+    "generation": 2,
+    "publishedAt": "2026-11-11T03:02:13.018Z"
   },
-  "sourceCommit": "e357b8b53b8b2a9959e4446c8157c1f9cdba20d9",
+  "sourceCommit": "3c41331dab3a53887a7ba0eba2ab640637b69999",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
@@ -66,13 +66,13 @@
   },
   "remoteAgent": null,
   "clarification": {
-    "generation": 1,
-    "path": "singularity/work-items/after-cl/context/clarifications-specification-gen1.json",
-    "sha256": "819573d8864a53be684749ea488a60c007063d911c75525ac631a026498147a4",
-    "promptSha256": "34589acccdcb5ef149bebf02d122988edb7832d971462203fd2b0d378e6da04b",
+    "generation": 2,
+    "path": "singularity/work-items/after-cl/context/clarifications-specification-gen2.json",
+    "sha256": "56af660cba1d00825b42581cc5d4adf85519184df01cf6641c26951157410816",
+    "promptSha256": "e4d3dd04829e50732a7c296ba9a0d72011c5a56ab312e1cfbc524b5686486513",
     "responses": 3,
     "markers": [],
-    "recordedAt": "2026-11-11T02:51:00.889Z",
+    "recordedAt": "2026-11-11T03:00:11.976Z",
     "recordedBy": {
       "name": "Ashok Raj",
       "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -100,6 +100,26 @@
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 2,
+      "path": "singularity/work-items/after-cl/telemetry/specification-gen2.json",
+      "sha256": "1c0915a6422be6609add8a98e8539250a5bc9900ec56f90d1ab7eee57a73862a",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 28556,
+        "estimatedTokens": 7139,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 28556,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
     }
   ],
   "remoteOutputs": [],
@@ -124,6 +144,27 @@
       "completedAt": "2026-11-11T02:54:19.539Z",
       "agent": "product-owner",
       "generation": 1
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-11T03:02:13.018Z",
+      "completedAt": "2026-11-11T03:02:13.018Z",
+      "agent": "product-owner",
+      "generation": 2
     }
   ],
   "sequenceOverrides": [],
@@ -167,7 +208,7 @@ exclusions. Do not introduce claims that are absent from the sections below. Exa
 boundary conditions are preserved separately by the governed projection.
 -->
 
-Add a graph-plotting experience to the existing app. A user can enter one equation per graph, covering 2D Cartesian functions, implicit equations, parametric equations, and polar equations. The experience should be polished and Desmos-inspired, without requiring an exact visual clone. Playwright browser tests must exercise equation entry and plotted output. This specification does not set equation syntax, supported operators, graph domains, or numeric rendering limits.
+Add a graph-plotting experience to the existing app. A user can enter one implicit quadratic equation in x and y per graph, represented by `Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0` with at least one of A, B, or C non-zero, or a mathematically equivalent rearrangement. The experience should be polished and Desmos-inspired, without requiring an exact visual clone. Playwright browser tests must exercise equation entry and plotted output for this scope.
 
 ## Actors
 
@@ -185,15 +226,15 @@ Self-check whether an implementation could meet this draft yet omit an explicit 
 clear omissions in this editable draft and recheck within the returned repair policy; preserve
 published inputs and settled answers. These are authoring instructions, not execution evidence. -->
 
-### S1 — Plot one supported equation
+### S1 — Plot one implicit quadratic equation
 
 **Priority:** P1
 **Actor:** Calculator user
 **Context:** The graph-plotting experience is available.
 
 - **Given** the graph-plotting experience is open
-  **When** the user enters one 2D Cartesian function, implicit, parametric, or polar equation
-  **Then** the plotter displays the corresponding graph, with no second equation overlaid on that graph.
+  **When** the user enters one implicit quadratic equation in x and y
+  **Then** the plotter displays the 2D set of coordinate pairs satisfying that equation, with no second equation overlaid on that graph.
 
 ### S2 — Use the graph-plotting experience
 
@@ -211,7 +252,7 @@ published inputs and settled answers. These are authoring instructions, not exec
 **Actor:** Playwright test runner
 
 - **Given** the graph-plotting experience is available in the browser
-  **When** the Playwright suite exercises equation entry for each supported form
+  **When** the Playwright suite exercises equation entry for the supported implicit quadratic scope
   **Then** it verifies that the corresponding graph is rendered.
 
 ## Failure and empty states
@@ -245,21 +286,21 @@ Not applicable: the Story identifies a general app user and defines no permissio
 
 ## Boundary conditions
 
-The graphing scope is 2D: Cartesian functions, implicit equations, parametric equations, and polar equations. Each graph contains one equation; simultaneous equations on the same graph are not in scope. The pinned evidence does not establish an equation grammar, supported operators/functions, graph domain, sampling resolution, or numeric limits, so this specification does not claim particular values for them.
+The graphing scope is one 2D implicit quadratic equation in x and y per graph. Supported equations have the general form `Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0`, where at least one of A, B, or C is non-zero; mathematically equivalent rearrangements are included. Explicit function, parametric, and polar forms are outside this clarified scope. No graph-domain or numeric rendering limits are specified.
 
 ## Requirements
 
 Numbered, testable, one obligation each. Cite the scenario each serves.
 
-- The plotter shall display the corresponding graph for one entered equation in each confirmed 2D form: Cartesian function, implicit, parametric, or polar. A graph contains no more than one equation. *(S1; pinned Story request and recorded clarification, specification generation 1)* [AFTER-CL:REQ-001]
+- The plotter shall accept and display the 2D solution set for any single implicit quadratic equation in x and y of the form `Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0`, with at least one of A, B, or C non-zero, including mathematically equivalent rearrangements. A graph contains no more than one equation. *(S1; pinned Story request as narrowed by recorded clarification, specification generation 2)* [AFTER-CL:REQ-001]
 - The graph-plotting experience shall have a polished, Desmos-inspired visual treatment; an exact visual clone is not required. *(S2; pinned Story request and recorded clarification, specification generation 1)* [AFTER-CL:REQ-002]
-- Provide Playwright browser tests that exercise equation entry and verify plotted output for each supported equation form. *(S3; pinned Story acceptance criterion “Palyright tests” [scope:SRI-8d1790c722db] and recorded clarification, specification generation 1)* [AFTER-CL:REQ-003]
+- Provide Playwright browser tests that exercise equation entry and verify plotted output for the implicit quadratic scope, including terms in x^2, xy, y^2, x, y, and the constant term. *(S3; pinned Story acceptance criterion “Palyright tests” [scope:SRI-8d1790c722db] and recorded clarification, specification generation 2)* [AFTER-CL:REQ-003]
 
 Acceptance criteria use the same stable, namespaced form:
 
-- For each of the four confirmed equation forms, entering one equation displays its corresponding graph, and the graph does not overlay a second equation. *(S1)* [AFTER-CL:AC-001]
+- Entering one implicit quadratic equation in x and y of the declared general form displays its corresponding 2D solution set, and the graph does not overlay a second equation. *(S1)* [AFTER-CL:AC-001]
 - A visual review finds the graph-plotting experience polished and Desmos-inspired; it need not reproduce Desmos exactly. *(S2)* [AFTER-CL:AC-002]
-- The Playwright suite contains browser checks for equation entry and corresponding graph rendering for Cartesian function, implicit, parametric, and polar equations. *(S3)* [AFTER-CL:AC-003]
+- The Playwright suite contains browser checks for equation entry and corresponding graph rendering for the implicit quadratic scope, exercising x^2, xy, y^2, x, y, and constant terms. *(S3)* [AFTER-CL:AC-003]
 
 ## Verification intent
 
@@ -302,9 +343,9 @@ What this specification takes as true without proving. An assumption that turns 
 change request, not a defect — which is only true if it was written down.
 
 ## Out of scope
+- Cartesian explicit functions, parametric equations, polar equations, and implicit equations that are not quadratic in x and y.
 - 3D graphing and multiple equations overlaid on one graph.
 - Exact visual reproduction of Desmos.
-- Equation syntax, operator/function coverage, graph domains, and numeric rendering limits not stated by the pinned evidence.
 
 Named explicitly, so the boundary is reviewable rather than inferred.
 
@@ -314,4 +355,4 @@ Each supporting document this specification relies on, cited as `DOC-nnn — <na
 offered to this phase that could not be read or was not available here, named as a gap. Without
 supporting documents, say so.
 
-The primary source is the pinned Story at `singularity/work-items/after-cl/source.json`; the equation forms, single-equation-per-graph boundary, and visual interpretation are from the recorded specification-generation-1 clarification. The Story references Desmos at `https://www.desmos.com/calculator`. No supporting documents or attached reference images were copied to this Story.
+The primary source is the pinned Story at `singularity/work-items/after-cl/source.json`. The single-equation-per-graph boundary and visual interpretation are from the recorded specification-generation-1 clarification. The implicit quadratic equation form and narrowed scope are from the recorded specification-generation-2 clarification, which resolves “any equation” for this specification. The Story references Desmos at `https://www.desmos.com/calculator`. No supporting documents or attached reference images were copied to this Story.
