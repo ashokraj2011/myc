@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "phase": "release",
+  "generation": 1,
+  "reportSha256": "8fe30ea7504e943775c85a0848032e6c0e4e5876a0ef21be505b4b9dc9cb5152",
+  "lifecycleEventId": "8f7f4e53-21e7-40f6-b1e2-47cefa86ae4f",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "anu-bin",
+      "phase": "release",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "input:convergence",
+          "path": "singularity/work-items/anu-bin/artifacts/convergence/convergence.md",
+          "textSha256": "d306a2298860991bb2071cae184004d88404b596a9e990b196ec28aec25a8b32"
+        },
+        {
+          "id": "input:verification",
+          "path": "singularity/work-items/anu-bin/artifacts/verification/test-evidence.md",
+          "textSha256": "84248589a54ad7e4cf30bb45b9f72e0612dcaf6c77753915fb3421e0cb3d39d3"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/anu-bin/USER-STORY.md",
+          "textSha256": "434d9a53909b423f7cb36727cce5c95af46fe39b4a105b3f7dbb694a50c7100d",
+          "originalSha256": "7a8c7d3e229c9c89676bb62972e684b8507486190cc98e73ddececd8305d276c"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/anu-bin/artifacts/release/conformance.md",
+        "sha256": "8aa76f46ffa9084a2445a1a831af0a8f0e3ad3feb6311b0dd829071da412f78b"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:convergence",
+      "input:verification"
+    ],
+    "rows": [
+      {
+        "id": "story-aligns",
+        "sourceId": "story",
+        "line": 8,
+        "quote": "Convert a decimal value to binary value in calc",
+        "outcome": "consistent"
+      },
+      {
+        "id": "convergence-aligns",
+        "sourceId": "input:convergence",
+        "line": 14,
+        "quote": "No deterministic trace-evidence gaps were found.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "verification-aligns",
+        "sourceId": "input:verification",
+        "line": 21,
+        "quote": "No verification-generation execution is retained, and the fresh publication-test requirement remains unmet by this implementation-generation run.",
+        "outcome": "consistent"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "3d003456673613ac0dc10080e3dfe257177ea713f5900f8a895d931d852d2434",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-11T08:55:46.184Z",
+  "recordSha256": "d11ee9e08ffb2f8d0c764f616b42e18ea3cc2995256f6ba84c4565cdd9760162"
+}
