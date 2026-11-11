@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "phase": "verification",
+  "generation": 1,
+  "reportSha256": "fd1ffc074c00fcca51ae719e3d37f88f3ebe5282805d08d9ff9db19130afd105",
+  "lifecycleEventId": "29fe59a9-7314-4466-8394-9c3e7864996e",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "anu-bin",
+      "phase": "verification",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/anu-bin/artifacts/implementation/implementation-summary.md",
+          "textSha256": "dcbed3d5e14f239021a757165fd663b50c81aaec2ab7200c65c0a2fbb8a11c95"
+        },
+        {
+          "id": "input:planning",
+          "path": "singularity/work-items/anu-bin/artifacts/planning/plan.md",
+          "textSha256": "9079e660a18a42c894693cc12ffa7a93579ef3b6b90112dc8107d8880b04a7e2"
+        },
+        {
+          "id": "input:specification",
+          "path": "singularity/work-items/anu-bin/artifacts/specification/spec.md",
+          "textSha256": "5959146ca845328067250d90b0539a45cc2561c68fb454866559e684af5cd9ed"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/anu-bin/USER-STORY.md",
+          "textSha256": "434d9a53909b423f7cb36727cce5c95af46fe39b4a105b3f7dbb694a50c7100d",
+          "originalSha256": "7a8c7d3e229c9c89676bb62972e684b8507486190cc98e73ddececd8305d276c"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/anu-bin/artifacts/verification/test-evidence.md",
+        "sha256": "a119d32322f1ee1d87d9ec8d2d4ba755fda2f72b1199f741dcf5c0f9273b08a7"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:specification",
+      "input:planning",
+      "input:implementation"
+    ],
+    "rows": [
+      {
+        "id": "story-review",
+        "sourceId": "story",
+        "line": 8,
+        "quote": "Convert a decimal value to binary value in calc",
+        "outcome": "consistent"
+      },
+      {
+        "id": "spec-review",
+        "sourceId": "input:specification",
+        "line": 89,
+        "quote": "The calculator shall convert a supplied decimal value to its corresponding binary value when evaluated.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "plan-review",
+        "sourceId": "input:planning",
+        "line": 14,
+        "quote": "Add an explicit binary-conversion action to the existing Standard calculator.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "implementation-review",
+        "sourceId": "input:implementation",
+        "line": 11,
+        "quote": "Utility and app tests passed in a diagnostic run on Node 22.14.0, and the production build passed.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "evidence-review",
+        "sourceId": "input:implementation",
+        "line": 11,
+        "quote": "Utility and app tests passed in a diagnostic run on Node 22.14.0, and the production build passed.",
+        "outcome": "inconsistent",
+        "note": "The implementation summary characterizes the Node 22 run as diagnostic only and says the configured publication test run remains required; the verification artifact calls the same attempt retained implementation-generation evidence. This does not establish a fresh verification run, which the evidence artifact itself acknowledges. Please reconcile whether this attempt is retained governed evidence or diagnostic-only before relying on it as verification evidence."
+      }
+    ],
+    "findings": [
+      {
+        "id": "evidence-status",
+        "severity": "blocking",
+        "message": "The verification evidence asserts a retained, source-tree-matched Node 22 test run (artifact, Commands and environment), while the implementation summary describes the Node 22 run as diagnostic only and says the publication test run is still required. These differ in evidence status, so the claimed retained basis for verification is not established by the pinned inputs. Reconcile this status and identify the governed evidence or correct the verification claim. The artifact also explicitly says a fresh verification publication run has not been established."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "3d003456673613ac0dc10080e3dfe257177ea713f5900f8a895d931d852d2434",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-11T08:35:04.184Z",
+  "recordSha256": "ba5909f61923b59dad8147bd3ee890c4da1e3fa7ec4891e1ac2f3b8b3961c293"
+}
