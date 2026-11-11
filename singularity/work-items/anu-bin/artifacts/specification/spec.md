@@ -4,27 +4,51 @@
   "workId": "anu-bin",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "5959146ca845328067250d90b0539a45cc2561c68fb454866559e684af5cd9ed",
+      "bytes": 6576
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-11T06:19:37.870Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "518d3eddb939a49fd769b8f6191123110305a660",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/anu-bin/context/clarifications-specification-gen1.json",
+    "sha256": "fa011e6d060a61aff8699900640a69498b15a5011a649199381b8298e45f20f2",
+    "promptSha256": "30bf93fa655e74eea5891f112628abd6d1a8fb50d076ddd78853512528cddb20",
+    "responses": 1,
+    "markers": [],
+    "recordedAt": "2026-11-11T06:17:41.318Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/anu-bin/telemetry/specification-gen1.json",
+      "sha256": "8280a8d17e1d6ddf1f2f9e3bf04ceedb89ba219ce8cf28c815d020861ca2fab3",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 28315,
+        "estimatedTokens": 7079,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 28315,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-11T06:19:37.870Z",
+      "completedAt": "2026-11-11T06:19:37.870Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -86,11 +167,11 @@ exclusions. Do not introduce claims that are absent from the sections below. Exa
 boundary conditions are preserved separately by the governed projection.
 -->
 
-TODO: Write the Agent brief here as visible text; text inside the comment above is not read.
+Enable a calculator user to convert a decimal value to its binary value. Unit tests are the stated acceptance evidence. The confirmed scope does not define input limits, fractional-value handling, or presentation details; do not assume additional behavior.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+The calculator user supplies a decimal value and requests its evaluation. No other actor or authority is specified.
 
 ## User scenarios
 
@@ -104,34 +185,19 @@ Self-check whether an implementation could meet this draft yet omit an explicit 
 clear omissions in this editable draft and recheck within the returned repair policy; preserve
 published inputs and settled answers. These are authoring instructions, not execution evidence. -->
 
-### S1 — <the most important situation, in the user's words>
+### S1 — Convert a decimal value in the calculator
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Calculator user
+**Context:** The user has a decimal value to evaluate.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
-
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
-
-### S2 — <the next situation>
-
-**Priority:** P2
-
-- **Given** … **When** … **Then** …
+- **Given** the calculator user supplies a decimal value
+  **When** the user evaluates that value in the calculator
+  **Then** the calculator provides the value in binary.
 
 ## Failure and empty states
 
-What happens the first time, with nothing there yet, and when each step fails. These are where
-specifications are usually silent and implementations usually improvise.
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+The pinned request and clarification do not specify empty-input, conversion-failure, or partial-result behavior. These outcomes remain unspecified.
 
 ## Scenario coverage
 
@@ -142,28 +208,24 @@ prose. Use the pinned request and clarification answers; do not invent error tex
 
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `ANU-BIN:REQ-001` | S1 | TODO |
-| `ANU-BIN:REQ-002` | S2 | TODO |
-| `ANU-BIN:AC-001` | S1 | TODO |
+| `ANU-BIN:REQ-001` | S1 | success |
+| `ANU-BIN:AC-001` | S1 | success |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+Not applicable: the Story specifies calculator use and no permission or access-control behavior.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+The Story does not define numeric limits, fractional-value handling, or other boundary behavior.
 
 ## Requirements
 
-Numbered, testable, one obligation each. Cite the scenario each serves.
-
-- <requirement>. *(S1)* [ANU-BIN:REQ-001]
-- <requirement>. *(S1, S2)* [ANU-BIN:REQ-002]
+The calculator shall convert a supplied decimal value to its corresponding binary value when evaluated. *(S1)* [ANU-BIN:REQ-001]
 
 Acceptance criteria use the same stable, namespaced form:
 
-- <observable acceptance outcome>. *(S1)* [ANU-BIN:AC-001]
+- Unit tests shall verify the calculator's decimal-to-binary conversion behavior. *(S1)* [ANU-BIN:AC-001] [scope:SRI-bf17ce947d7f]
 
 ## Verification intent
 
@@ -177,36 +239,28 @@ Planning must inherit these methods and cannot change them without an approved s
 
 | Clause | Methods | Criterion |
 |---|---|---|
-| `ANU-BIN:REQ-001` | TODO | - |
-| `ANU-BIN:REQ-002` | TODO | - |
-| `ANU-BIN:AC-001` | TODO | `ANU-BIN:AC-001` |
+| `ANU-BIN:REQ-001` | test | `ANU-BIN:AC-001` |
+| `ANU-BIN:AC-001` | test | `ANU-BIN:AC-001` |
 
 ## Non-functional requirements
 
-Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
-will be measured; "fast" is not a requirement.
+No non-functional requirements are specified by the pinned Story or confirmed clarification.
 
 Use governed requirement anchors here too (for example `[ANU-BIN:REQ-003]`); `NFR-001` by
 itself is only a display label and is not a stable clause identity.
 
 ## Constitution articles
 
-Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
-cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
-
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-What this specification takes as true without proving. An assumption that turns out false is a
-change request, not a defect — which is only true if it was written down.
+The calculator accepts a decimal value for evaluation. The Story and clarification leave numeric limits, fractional handling, and output presentation unspecified; no behavior for those details is asserted here.
 
 ## Out of scope
 
-Named explicitly, so the boundary is reviewable rather than inferred.
+No additional conversion modes or behaviors are specified. The unspecified numeric and presentation details above are not silently constrained by this specification.
 
 ## Sources
 
-Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
-offered to this phase that could not be read or was not available here, named as a gap. Without
-supporting documents, say so.
+Pinned Story source: `singularity/work-items/anu-bin/source.json` (request: “Convert a decimal value to binary value in calc”; acceptance criterion: “Unit test cases”). Clarification response for specification generation 1 confirmed the proposed interpretation and that unmentioned details remain unspecified. No supporting documents were supplied.
