@@ -4676,7 +4676,32 @@
       "artifactRegistrationRepairs": [],
       "artifacts": [],
       "checks": [],
-      "remoteOutputs": []
+      "remoteOutputs": [],
+      "generationIntent": {
+        "id": "4d7c07e4-45e9-439c-8650-eca80d549636",
+        "generation": 1,
+        "status": "open",
+        "path": "singularity/work-items/l-graph/context/generation-start/implementation-gen1.json",
+        "receiptSha256": "sha256:8ac3a5dbf1c4c46eea2b57d84d935085f8410c360012ba0d7c18e588591ba5f8",
+        "baseline": {
+          "commit": "3ec2ba8a63dcfe67caaa9bcf066ff95d43389863",
+          "tree": "a7ea6f101535f6c1452970e11ee1ef4b7abe7759",
+          "initialChangeSetDigest": "sha256:9796a7ab954b5a146b7678e4d921c68a71535305fa2d47723504e7be65aee087",
+          "mode": "clean",
+          "previousGenerationCommit": null
+        },
+        "startedAt": "2026-11-11T00:36:05.339Z",
+        "startedBy": {
+          "actor": {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com",
+            "login": "ashokraj2011",
+            "githubLookup": "resolved"
+          },
+          "agent": "developer"
+        },
+        "publication": null
+      }
     },
     "convergence": {
       "id": "convergence",
@@ -5224,6 +5249,14 @@
       "event": "work_interval_started",
       "phase": "implementation",
       "detail": "baseline b8badc8e7202 at 3ec2ba8a63dc"
+    },
+    {
+      "at": "2026-11-11T00:53:18.451Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "plan_amended",
+      "phase": "implementation",
+      "detail": "PAM-001: .nvmrc listed as build-configuration. good to go with the version"
     }
   ],
   "measurement": {
@@ -5568,6 +5601,28 @@
       ],
       "blockedCode": null,
       "recordSha256": "c1328eecec762edb95937e541d896412f65976da2ead6cd29ad75e17fd25cf13"
+    },
+    "WT-1eb8146a2beabf12b4f8f669fa6e2b55d7725d9a397fdba16674da8bbd57010e": {
+      "schemaVersion": 1,
+      "kind": "workflow-task-record",
+      "authority": "progress-only",
+      "workId": "l-graph",
+      "phaseId": "implementation",
+      "generation": 1,
+      "role": "author",
+      "repositoryIdentity": "4dc77d5a23f27a2786b99b5cefbd15198ad2df58d473326391512e1516c5491f",
+      "storyIdentity": "007629999912b505da4912e6c65a2cabd0c91e13bbced113a507f22e79cbb56c",
+      "id": "WT-1eb8146a2beabf12b4f8f669fa6e2b55d7725d9a397fdba16674da8bbd57010e",
+      "inputSha256": "7372c48237003b061b123d337ca3caf6b2e10ab1989a176ceb4b39daad6a63d6",
+      "revision": 2,
+      "state": "author-draft",
+      "continuations": 0,
+      "maximumContinuations": 3,
+      "repairConsumed": 0,
+      "conditions": [],
+      "checkpoints": [],
+      "blockedCode": null,
+      "recordSha256": "5329f639a485832892dee13c75fad37e66848dcfae7dbbb31fc6731f8b71489f"
     }
   },
   "publicationProjections": [
@@ -7422,6 +7477,137 @@
         },
         "createdAt": "2026-11-11T00:35:00.902Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "b35c7f23-a1c3-4b91-a8d3-52007f238949",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "l-graph",
+          "branch": "l-graph"
+        },
+        "phaseId": "implementation",
+        "generation": 0,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "decision": "plan",
+          "reviewPacketSha256": null,
+          "amendment": "PAM-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-11T00:53:17.461Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "b35c7f23-a1c3-4b91-a8d3-52007f238949",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "l-graph"
+          ],
+          "branch": "l-graph",
+          "canonicalBranch": "l-graph",
+          "createdAt": "2026-11-10T21:33:49.582Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 0,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph (copy)",
+          "updatedAt": "2026-11-11T00:53:18.451Z",
+          "workId": "l-graph",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
+          "lifecycleEventId": "b35c7f23-a1c3-4b91-a8d3-52007f238949",
+          "lifecyclePayload": {
+            "decision": "plan",
+            "reviewPacketSha256": null,
+            "amendment": "PAM-001"
+          },
+          "templateSha256": "2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "b35c7f23-a1c3-4b91-a8d3-52007f238949",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "l-graph",
+              "branch": "l-graph"
+            },
+            "phaseId": "implementation",
+            "generation": 0,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "architecture-reviewers",
+            "payload": {
+              "decision": "plan",
+              "reviewPacketSha256": null,
+              "amendment": "PAM-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-11T00:53:17.461Z"
+          }
+        },
+        "createdAt": "2026-11-11T00:53:17.472Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -7523,6 +7709,27 @@
       "previousRevisionSha256": null,
       "at": "2026-11-10T23:44:43.358Z",
       "revisionSha256": "sha256:17f1a2ec28539cd099e9fe210497f4050ff9cc67d27fed48477c8cba8d3d6c98"
+    }
+  ],
+  "planAmendments": [
+    {
+      "id": "PAM-001",
+      "changes": [
+        {
+          "kind": "add-supporting",
+          "path": ".nvmrc",
+          "class": "build-configuration",
+          "reason": "good to go with the version"
+        }
+      ],
+      "contentHashes": {
+        ".nvmrc": "f14b4987904bcb5814e4459a057ed4d20f58a633152288a761214dcd28780b56"
+      },
+      "reason": "good to go with the version",
+      "actor": "ashokraj2011",
+      "authorityGroup": "architecture-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-11T00:53:18.451Z"
     }
   ]
 }
