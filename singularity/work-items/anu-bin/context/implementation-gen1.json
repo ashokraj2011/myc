@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 7,
+  "workId": "anu-bin",
+  "phase": "implementation",
+  "generation": 1,
+  "agent": "developer",
+  "modelCommit": null,
+  "matchedRules": 0,
+  "mode": "off",
+  "applied": false,
+  "depth": "standard",
+  "evidence": false,
+  "groundingAvailability": {
+    "status": "unavailable",
+    "reasonCode": "WORLD_MODEL_GROUNDING_DISABLED"
+  },
+  "sourceComparison": {
+    "status": "unavailable",
+    "reasonCode": "WORLD_MODEL_GROUNDING_DISABLED"
+  },
+  "requiredViews": [],
+  "requiredSelections": [],
+  "task": null,
+  "supportingEvidence": [],
+  "references": [],
+  "modelSourceTreeSha256": null,
+  "composedSourceTreeSha256": null,
+  "worldModelCommit": null,
+  "manifestSha256": null,
+  "fresh": true,
+  "renderedSha256": "17d8bc6a9456212a0d33fbdd321871dee21a34ecd2cd547f3ad0774c011684f4",
+  "promptStudy": null,
+  "promptDefinition": null,
+  "structuralContext": null,
+  "workSource": {
+    "path": "singularity/work-items/anu-bin/source.json",
+    "sha256": "7a8c7d3e229c9c89676bb62972e684b8507486190cc98e73ddececd8305d276c",
+    "bytes": 1114
+  },
+  "promptBudget": {
+    "policy": {
+      "mode": "observe",
+      "profile": "standard",
+      "maximumBytes": 72000,
+      "maximumEstimatedPromptTokens": 18000,
+      "policyOnBudgetBreach": "refuse",
+      "assurance": "estimated-prompt-text"
+    },
+    "admission": {
+      "model": null,
+      "logicalPromptBytes": 30469,
+      "logicalPromptTokens": {
+        "value": 7618,
+        "assurance": "estimated"
+      },
+      "systemAndToolReserveTokens": {
+        "value": null,
+        "assurance": "unavailable"
+      },
+      "historyTokens": {
+        "value": null,
+        "assurance": "unavailable"
+      },
+      "totalAdmissionTokens": {
+        "value": 7618,
+        "assurance": "partial"
+      },
+      "maximumInputTokens": 18000,
+      "safeToEnforce": false,
+      "admitted": null,
+      "policyApprovedConservativeUpperBound": false
+    },
+    "compliance": "compliant",
+    "originalBytes": 30469,
+    "originalEstimatedTokens": 7618,
+    "finalBytes": 30469,
+    "finalEstimatedTokens": 7618,
+    "overflow": false,
+    "warnings": [],
+    "economics": {
+      "prompt": {
+        "candidatePromptBytes": 30469,
+        "deduplicatedPromptBytes": 1050,
+        "budgetEvictedPromptBytes": 0,
+        "finalPromptBytes": 30469,
+        "tkrCandidatePromptBytes": null,
+        "tkrCandidateByteDelta": null,
+        "tkrCandidateAssurance": "unavailable",
+        "clauseInputBytesSaved": 618
+      },
+      "provider": {
+        "inputTokens": null,
+        "cachedInputTokens": null,
+        "uncachedInputTokens": null,
+        "assurance": "unavailable"
+      },
+      "system": {
+        "totalSystemTokens": null,
+        "assurance": "unavailable"
+      },
+      "source": {
+        "sourceBytes": 38082,
+        "authoredSourceBytes": 15108,
+        "managedSourceBytesExcluded": 22974,
+        "managedReferenceBytesExcluded": 0,
+        "deliveredSourceBytes": 6612,
+        "assurance": "sflow-measured"
+      }
+    },
+    "sections": [
+      {
+        "id": "phase-contract",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 7855,
+        "estimatedTokens": 1964,
+        "sha256": "996272010685ae9e7ffe6f880dd8f1584b504e6b08f31b51e2db7c4349249ce5",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "approved-phase-inputs",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 7896,
+        "estimatedTokens": 1974,
+        "sha256": "bdd322273d1bad9fd492a1568dac4a1819f56e43209ec6c31ad8c16912774cf6",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "work-source",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 1047,
+        "estimatedTokens": 262,
+        "sha256": "6b471477f5eedbdaed3524bc47bbfac2afa1a0c37eee72f17e1e012a45eb4825",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "active-clause-capsule",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 1180,
+        "estimatedTokens": 295,
+        "sha256": "e0896942fd6633eaaa376992734c656faba601a0496a5b2b484cae06e3106d82",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "clarification-protocol",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 3436,
+        "estimatedTokens": 859,
+        "sha256": "add93654cb264f2ed29411957e85e8a0eac8bbfc46a8a5fcf9c2120b995f6803",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "governed-agent-policy",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 2646,
+        "estimatedTokens": 662,
+        "sha256": "a81eccc7376512a395e9d4c2d31b741cb67c47080d311feb947d0eef62eb76c2",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "pinned-constitution",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 279,
+        "estimatedTokens": 70,
+        "sha256": "c2bca305dec54257e342fd76fd3ba28043e73a0c8df132fcba273acddcfc4fe9",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "world-model-grounding",
+        "mandatory": false,
+        "priority": 40,
+        "bytes": 2719,
+        "estimatedTokens": 680,
+        "sha256": "5b03c733d9b50e077cf38c452966844883f96eaa266bd8b5d283c093a94f035b",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "governed-execution-evidence",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 1912,
+        "estimatedTokens": 478,
+        "sha256": "e796d0b76c11a54e8c29809c92109130fc3eb99c76bc98b389620138da5362a6",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "evidence-consistency",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 1139,
+        "estimatedTokens": 285,
+        "sha256": "4d25b0930b6b63599d9d83181169515c23a267be5872a69ef2a05b623e835b1e",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "final-clarification-guard",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 339,
+        "estimatedTokens": 85,
+        "sha256": "e951a378c432c51ebc93eb163c2d955fd672ac2bd081511737e92119df23d5b0",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      }
+    ],
+    "omitted": [],
+    "tokenReduction": {
+      "mode": "shadow",
+      "record": {
+        "kind": "tkr/shadow-evaluation",
+        "version": 1,
+        "status": "unavailable",
+        "scope": {
+          "workId": "anu-bin",
+          "phase": "implementation",
+          "generation": 1,
+          "sourceRevision": null,
+          "configurationSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
+          "executionMode": "workflow-snapshot"
+        },
+        "code": "TKR_CONTRACT_UNSUPPORTED",
+        "diagnosticSha256": "sha256:bbc1b387ff023d8937e8a5b0c40df298562be324edfc06f94b67a2867c751bce",
+        "delivery": {
+          "state": "shadow-not-delivered",
+          "candidateDelivered": false
+        },
+        "receiptSha256": null,
+        "shadowSha256": "sha256:74ca418bd1d8d60f6617a33d082f6049fb663ae9a6d23c01d19b5de4ceef5ec4"
+      }
+    },
+    "deduplicatedReferences": [
+      {
+        "handle": "sfref:v1:story:anu-bin:4ac3353663e3fc577bb1c7883a7aada83e978198d6b0a4a61c1eb70ed585d1ad",
+        "path": "singularity/work-items/anu-bin/artifacts/specification/spec.md",
+        "rawSha256": "90beecd2bca59c54fff33b1746c46b629f53413a07475c806f15f13fe3d0e73d",
+        "rawBytes": 10624,
+        "previewBytes": 397,
+        "reason": "same-governed-reference-handle"
+      },
+      {
+        "handle": "sfref:v1:story:anu-bin:6ea5bedf5799f069761c0487b46985e4f08a5188a5b132a1e48f763a3fbaf389",
+        "path": "singularity/work-items/anu-bin/artifacts/planning/plan.md",
+        "rawSha256": "5c96d0a6f758d31587173ac6ede7dc0847f49f180290890604c5ce8a7175592a",
+        "rawBytes": 16639,
+        "previewBytes": 653,
+        "reason": "same-governed-reference-handle"
+      }
+    ],
+    "inputLinearization": {
+      "sourceBytes": 38082,
+      "authoredBytes": 15108,
+      "managedBytesExcluded": 22974,
+      "injectedBytes": 7230
+    },
+    "inputProjection": {
+      "renderer": "approved-inputs-v3",
+      "capsuleSha256": "sha256:b6c0a0667a60c5547498218b8398d2e565cf96960818c2034aea6a14e1331ec0",
+      "originalSha256": "464af9f267b2f76148ffbcc7abef1c5a116d0d336b43dbd94c6e1a97e46edfb5",
+      "renderedSha256": "fc0792f9b542a7ba8f6bebf6334a9ea346570d508a61c7580b9ce68d93ee54cd",
+      "originalBytes": 8917,
+      "renderedBytes": 7519,
+      "originalContentBytes": 7230,
+      "renderedContentBytes": 6612,
+      "savedBytes": 618,
+      "metadataBytesSaved": 780,
+      "inputs": [
+        {
+          "phase": "specification",
+          "path": "singularity/work-items/anu-bin/artifacts/specification/spec.md",
+          "sourceSha256": "d0e8306b3bf7a5a8b1e9bbfd17fe8e008a09e6047204d9d9f67d18e456f15553",
+          "briefSha256": "ea53ff25496f15bef8eea51bc2fe8be380b522a2f99def46f8fac18fe975ac1b",
+          "originalSha256": "sha256:ea53ff25496f15bef8eea51bc2fe8be380b522a2f99def46f8fac18fe975ac1b",
+          "renderedSha256": "sha256:518af882b572e5ab2f8fdee69be23bcececcd2992528b60e1bab9e83b39cf771",
+          "deduplicatedClauseIds": [],
+          "savedBytes": 309
+        },
+        {
+          "phase": "planning",
+          "path": "singularity/work-items/anu-bin/artifacts/planning/plan.md",
+          "sourceSha256": "f92646d5da0cdc35a07883ac600cf9452166201f8cd78257f07a1ef981093f03",
+          "briefSha256": "6f08d781d010445edf5a5715d6736a9abd49b475fdff60b6f17669a6686c5f1f",
+          "originalSha256": "sha256:6f08d781d010445edf5a5715d6736a9abd49b475fdff60b6f17669a6686c5f1f",
+          "renderedSha256": "sha256:f62e98ed898d26a775f6dd7c3328659598ba26cb25eea7e5cdd6491a22c2a4a1",
+          "deduplicatedClauseIds": [],
+          "savedBytes": 309
+        }
+      ]
+    },
+    "inputDigests": [
+      {
+        "phase": "specification",
+        "path": "singularity/work-items/anu-bin/artifacts/specification/spec.md",
+        "status": "captured",
+        "sha256": "d0e8306b3bf7a5a8b1e9bbfd17fe8e008a09e6047204d9d9f67d18e456f15553",
+        "briefSha256": "ea53ff25496f15bef8eea51bc2fe8be380b522a2f99def46f8fac18fe975ac1b"
+      },
+      {
+        "phase": "planning",
+        "path": "singularity/work-items/anu-bin/artifacts/planning/plan.md",
+        "status": "captured",
+        "sha256": "f92646d5da0cdc35a07883ac600cf9452166201f8cd78257f07a1ef981093f03",
+        "briefSha256": "6f08d781d010445edf5a5715d6736a9abd49b475fdff60b6f17669a6686c5f1f"
+      }
+    ],
+    "stakeholderProjection": {
+      "renderer": "stakeholder-requests-v2",
+      "referencedRequestIds": [],
+      "requests": [],
+      "capsuleBytesSaved": 0
+    },
+    "executionEvidence": {
+      "projectionSha256": "sha256:42e375d1ef9a7b47e7e6417e9130584ebfde2e1d14419e616a1bfa5b0c2e9e70",
+      "packets": 2,
+      "omittedPackets": 0,
+      "diagnostics": []
+    },
+    "evidenceConsistency": {
+      "projectionSha256": "sha256:ffa3ea4b5fbcf5d0d5b2e93c66d310a796f29c72bb4ccc593830cc6772d52aee"
+    },
+    "skillLoading": [],
+    "structuralContext": null,
+    "referenceRepositories": [],
+    "workSource": {
+      "path": "singularity/work-items/anu-bin/source.json",
+      "sha256": "7a8c7d3e229c9c89676bb62972e684b8507486190cc98e73ddececd8305d276c",
+      "bytes": 1114
+    },
+    "activeClauseCapsule": {
+      "renderer": "clause-capsule-v4",
+      "renderedSha256": "sha256:e0896942fd6633eaaa376992734c656faba601a0496a5b2b484cae06e3106d82",
+      "sha256": "sha256:b6c0a0667a60c5547498218b8398d2e565cf96960818c2034aea6a14e1331ec0",
+      "clauses": 2,
+      "openRisks": 0,
+      "clarifications": 0
+    }
+  },
+  "persistedGrounding": null,
+  "tokenReduction": null,
+  "repositoryBrief": {
+    "renderer": "repository-brief@1",
+    "profile": "implementation",
+    "budget": 3072,
+    "bytes": 2719,
+    "records": [
+      "K-impact-b9b81894fc91",
+      "K-impact-9aad9ca0db74",
+      "K-impact-4ca210dc59aa",
+      "R-a22615085211",
+      "R-97bb2c0f0701",
+      "R-967392389819",
+      "R-8263dd61a5b6",
+      "C-d7c1d8dc4f33",
+      "K-risk-0a5d699b94d8",
+      "K-risk-025426acb0cd",
+      "K-risk-f01ff154b41f",
+      "K-risk-89c6e806de77",
+      "K-risk-38cb025e931a",
+      "K-risk-4d2b06fb119c",
+      "K-risk-da068a1f6f56",
+      "K-risk-c4e46c9c5245",
+      "K-risk-f50777a9b294",
+      "K-risk-16bbb497208e",
+      "K-risk-ad8c5c86bc62",
+      "K-risk-1ca579056eae",
+      "K-risk-17402767e37b",
+      "K-risk-c5c466a7639c",
+      "K-risk-98473ac47c5e",
+      "K-risk-eb42fde1e718"
+    ],
+    "omitted": 32,
+    "phrasing": {
+      "by": "template"
+    }
+  },
+  "remoteSkills": [],
+  "executionContext": {
+    "mode": "workflow-snapshot",
+    "snapshotHash": "sha256:472445051ca9a7c591612d63c730cfd5b2bda28a37adc3315e160dcc3cb228ec",
+    "agentId": "developer",
+    "agentBlobSha256": "sha256:a88a659a79439033c4eb7f43fee9223fe9cf10c013265bbe33fb08da3196047b",
+    "dependencies": [],
+    "instructions": [],
+    "parserProfile": "sflow-agent-document-v1",
+    "composerProfile": "story-snapshot-agent-v1",
+    "overrideSha256": null
+  },
+  "compositionCache": {
+    "key": "4199b4d10dbec5ebad64232eacda9188cc1f569cf3063ee8bedd55ecd85016cd",
+    "promptSha256": "17d8bc6a9456212a0d33fbdd321871dee21a34ecd2cd547f3ad0774c011684f4"
+  },
+  "promptPath": "singularity/work-items/anu-bin/context/prompts/implementation-gen1.md",
+  "files": [],
+  "injectedAt": "2026-11-11T06:51:14.295Z"
+}
