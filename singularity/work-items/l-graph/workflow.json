@@ -5265,6 +5265,14 @@
       "event": "completeness_reviewed",
       "phase": "implementation",
       "detail": "Scope inventory sha256:22e1d58f22a6b9b3fd5f4a54aa671c2a904d2e235c97da162bffb0b29ba76059 reviewed for completeness. not applicable for this change"
+    },
+    {
+      "at": "2026-11-11T00:53:46.392Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "witness_recorded",
+      "phase": "implementation",
+      "detail": "WIT-001: inspection of src/components/FunctionGrapher.jsx for L-GRAPH:AC-002 slot inspection satisfies it. not applicable for this change"
     }
   ],
   "measurement": {
@@ -7747,6 +7755,137 @@
         },
         "createdAt": "2026-11-11T00:53:23.763Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "672b8c15-2259-4e06-a7ea-b2b5bf4c2750",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "l-graph",
+          "branch": "l-graph"
+        },
+        "phaseId": "implementation",
+        "generation": 0,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "decision": "witness",
+          "reviewPacketSha256": null,
+          "record": "WIT-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-11T00:53:45.387Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "672b8c15-2259-4e06-a7ea-b2b5bf4c2750",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "l-graph"
+          ],
+          "branch": "l-graph",
+          "canonicalBranch": "l-graph",
+          "createdAt": "2026-11-10T21:33:49.582Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 0,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph (copy)",
+          "updatedAt": "2026-11-11T00:53:46.392Z",
+          "workId": "l-graph",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
+          "lifecycleEventId": "672b8c15-2259-4e06-a7ea-b2b5bf4c2750",
+          "lifecyclePayload": {
+            "decision": "witness",
+            "reviewPacketSha256": null,
+            "record": "WIT-001"
+          },
+          "templateSha256": "2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "672b8c15-2259-4e06-a7ea-b2b5bf4c2750",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "l-graph",
+              "branch": "l-graph"
+            },
+            "phaseId": "implementation",
+            "generation": 0,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "engineering-reviewers",
+            "payload": {
+              "decision": "witness",
+              "reviewPacketSha256": null,
+              "record": "WIT-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-11T00:53:45.387Z"
+          }
+        },
+        "createdAt": "2026-11-11T00:53:45.396Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -7910,6 +8049,28 @@
       "authorityGroup": "product-approvers",
       "identityAssurance": "configured-local",
       "at": "2026-11-11T00:53:24.672Z"
+    }
+  ],
+  "witnessRecords": [
+    {
+      "id": "WIT-001",
+      "clauseId": "L-GRAPH:AC-002",
+      "slot": "inspection",
+      "method": "inspection",
+      "file": "src/components/FunctionGrapher.jsx",
+      "sha256": "sha256:b3a8f5a9efd46846b941e31ee8286efddecb0af18dad2a30a9768671931d8c48",
+      "contextBinding": "sha256:a82a9953336893a7651452ec882527e8a59e988d87cc66a4838364aad170997d",
+      "checklist": {
+        "states-the-outcome": "yes",
+        "matches-the-criterion": "yes",
+        "current-for-this-change": "yes"
+      },
+      "outcome": "met",
+      "reason": "not applicable for this change",
+      "actor": "ashokraj2011",
+      "authorityGroup": "engineering-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-11T00:53:46.392Z"
     }
   ]
 }
