@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "phase": "implementation",
+  "generation": 1,
+  "reportSha256": "6f8049de4f8457a81ffc73865aab83f27f88a6c52982bf00244b5575695d3952",
+  "lifecycleEventId": "febcf341-0d37-4e98-a87b-a02d8b7e4501",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "code",
+    "binding": {
+      "workId": "anu-bin",
+      "phase": "implementation",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "code:src:App.jsx",
+          "path": "src/App.jsx",
+          "textSha256": "c3e293a243434da8bd239f4be0f53ed8dc8ed8e7fb71544961d86e73f848e39f"
+        },
+        {
+          "id": "code:src:App.test.jsx",
+          "path": "src/App.test.jsx",
+          "textSha256": "a8f3395df10229956a9db8a6b77c84db9e181a4fa9040815ccbab2a87fbc1dfa"
+        },
+        {
+          "id": "code:src:components:StandardKeypad.jsx",
+          "path": "src/components/StandardKeypad.jsx",
+          "textSha256": "36791792279f584351188deb96e4f894adabb4cf48151a10382bdc595f20a85c"
+        },
+        {
+          "id": "code:src:utils:evaluator.js",
+          "path": "src/utils/evaluator.js",
+          "textSha256": "8d5da51b82efcc9a38715bd622d22ba60ae806c1731e4cb113bd9d9896cb31d8"
+        },
+        {
+          "id": "code:src:utils:evaluator.test.js",
+          "path": "src/utils/evaluator.test.js",
+          "textSha256": "6e001d80aafbb652ccc95200d7c259e8153db3d2ae2916c6b7e95be944f9f8ad"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/anu-bin/artifacts/implementation/implementation-summary.md",
+        "sha256": "dcbed3d5e14f239021a757165fd663b50c81aaec2ab7200c65c0a2fbb8a11c95"
+      },
+      "plan": {
+        "path": "singularity/work-items/anu-bin/artifacts/planning/plan.md",
+        "sha256": "9079e660a18a42c894693cc12ffa7a93579ef3b6b90112dc8107d8880b04a7e2"
+      },
+      "evidenceSha256": "a2bd3f0634dd6a18e9016b5b8ee0fc2c6792979cbd778c30151b0251696f423e"
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "code:src:App.jsx",
+      "code:src:App.test.jsx",
+      "code:src:components:StandardKeypad.jsx",
+      "code:src:utils:evaluator.js",
+      "code:src:utils:evaluator.test.js"
+    ],
+    "rows": [
+      {
+        "clauseId": "ANU-BIN:AC-001",
+        "implementation": [],
+        "tests": [
+          {
+            "sourceId": "code:src:utils:evaluator.test.js",
+            "line": 80,
+            "quote": "    expect(convertToBinary(10)).toEqual({ result: '1010', error: null });"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "ANU-BIN:REQ-001",
+        "implementation": [
+          {
+            "sourceId": "code:src:App.jsx",
+            "line": 140,
+            "quote": "      setResult(convertToBinary(evalRes.rawResult).result);"
+          },
+          {
+            "sourceId": "code:src:components:StandardKeypad.jsx",
+            "line": 29,
+            "quote": "          onClick={() => handleBtn('operator', onBinary)}"
+          },
+          {
+            "sourceId": "code:src:utils:evaluator.js",
+            "line": 61,
+            "quote": "  return { result: value.toString(2), error: null };"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:src:App.test.jsx",
+            "line": 215,
+            "quote": "    expect(getResultText(container)).toBe('1010');"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      }
+    ],
+    "unplannedPaths": [],
+    "qualityReviewed": [],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "3d003456673613ac0dc10080e3dfe257177ea713f5900f8a895d931d852d2434",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "developer",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-11T08:16:32.997Z",
+  "recordSha256": "6da1d5e9e09dc14051b15a83b888642e88c78ad1e5c4a13b47279529319af871"
+}
