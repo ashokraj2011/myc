@@ -4,27 +4,51 @@
   "workId": "z-story",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "c129f4b429f3b8ad175c10c39f77e7028d409e281411495cb4fb0d4cdf87c792",
+      "bytes": 9575
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-12T07:03:15.429Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "cc98af5f6e7993599512aff263ec117f1829d2c4",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/z-story/context/clarifications-specification-gen1.json",
+    "sha256": "bf039495ea41dd57f892a3714541bd321a5825436f4c41276e7c9f0987727247",
+    "promptSha256": "7352128a7011f0384d257736afb14c832d58295d9c1ba16767cbbf04bb108170",
+    "responses": 4,
+    "markers": [],
+    "recordedAt": "2026-11-12T07:01:51.932Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/z-story/telemetry/specification-gen1.json",
+      "sha256": "2fb7602d6d1407c95b04d9e363f0bcf870f9be7cbaf5490c2ecb64e633e821f8",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 29919,
+        "estimatedTokens": 7480,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 29919,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-12T07:03:15.429Z",
+      "completedAt": "2026-11-12T07:03:15.429Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -54,133 +135,95 @@
 
 # Specification — z-story
 
-<!-- sflow:guidance
-Scenarios come first, and general requirements come after them `[SPK:REQ-068]`. That ordering is the template's opinion: a requirement written before anyone has described the situation it serves tends to describe the system instead of the need, and nobody notices until verification.
-
-Where the current Story evidence leaves something material unknown, say so with a marker rather than guessing. Use this syntax:
-
-    [NEEDS CLARIFICATION: <one question grounded in the current Story evidence>]
-
-Replace the angle-bracketed placeholder; never copy or ask it as written. The question must be one non-empty line and must arise from the pinned sources, approved upstream artifacts, repository world model, or a contradiction among them. Markers are extracted the same way clauses are, so a marker inside fenced or inline code is ignored `[SPK:REQ-063]`. This phase blocks publication while any marker is unresolved, and a marker is only resolved when a later generation removes it *and* records the answer `[SPK:REQ-067]` — deleting the text alone is an integrity failure, not an answer.
--->
-
-<!-- sflow:guidance Keep every section of this template. When one does not fit this change (for example Permissions for a library or command-line tool with no roles), write `Not applicable: <reason>` under it rather than deleting it: later steps carry Actors, Failure and empty states, Permissions, Boundary conditions and the other sections forward, and stop when one is missing. -->
-
 ## Agent brief
 
-<!-- sflow:guidance Summarize the approved intent for downstream agents in a compact, standalone form. Include the problem, intended outcome, principal actors, most important scenarios, hard constraints, and major exclusions. Do not introduce claims that are absent from the sections below. Exact requirements and boundary conditions are preserved separately by the governed projection. -->
-
-TODO: Write the Agent brief here as visible text; text inside the comment above is not read.
+Add a dedicated conversion operation to the existing calculator so a calculator user can convert a positive whole-number decimal value to its binary representation. Non-positive, fractional, or empty input produces an error indication. Unit tests cover successful conversion and rejected input. No input limit or exact error wording was specified.
 
 ## Actors
 
-<!-- sflow:guidance Who uses this, and what authority does each hold? -->
-
-TODO: Name each actor and the authority each one holds.
+The calculator user may enter a value and invoke the conversion operation; no privileged role is required.
 
 ## User scenarios
 
-<!-- sflow:guidance Prioritized. Each scenario leads with the situation, then its acceptance cases. -->
-
-<!-- sflow:guidance Before drafting, split the pinned request and recorded answers into observable obligations for the actual interfaces (UI, API, event/message, batch/job, CLI, library or mixed). Keep the source -> REQ/AC -> assertion -> verification mapping in the existing sections. Existing ACs count; do not duplicate clauses or invent controls, endpoints, limits, errors or screenshot requirements. Self-check whether an implementation could meet this draft yet omit an explicit request. Repair clear omissions in this editable draft and recheck within the returned repair policy; preserve published inputs and settled answers. These are authoring instructions, not execution evidence. -->
-
-### S1 — <the most important situation, in the user's words>
+### S1 — Convert a positive whole-number decimal value to binary
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Calculator user
+**Context:** The existing calculator is available and the user has a positive whole-number decimal value to convert.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+- **Given** a positive whole-number decimal value
+  **When** the user invokes the dedicated conversion operation
+  **Then** the calculator provides that value's binary representation.
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
+### S2 — Reject values outside the supported input
 
-### S2 — <the next situation>
+**Priority:** P1
+**Actor:** Calculator user
 
-**Priority:** P2
-
-- **Given** … **When** … **Then** …
+- **Given** an empty, zero, negative, or fractional value
+  **When** the user invokes the dedicated conversion operation
+  **Then** the calculator indicates an error rather than providing a conversion result.
 
 ## Failure and empty states
 
-<!-- sflow:guidance What happens the first time, with nothing there yet, and when each step fails. These are where specifications are usually silent and implementations usually improvise. -->
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** An empty input is rejected with an error indication; no conversion result is provided.
+- **Failure:** Zero, negative, and fractional inputs are rejected with an error indication; no conversion result is provided. Exact error wording is unspecified.
+- **Partial:** Not applicable; the requested conversion is a single operation.
 
 ## Scenario coverage
 
-<!-- sflow:guidance One row per behavior/acceptance clause; repeat rows for multiple outcomes. Every referenced S-number must have complete Given/When/Then acceptance cases above. Outcome is success, failure, boundary, or empty. Rejection/error requirements need distinct failure cases, not only happy-path prose. Use the pinned request and clarification answers; do not invent error text or new scope. -->
-
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `Z-STORY:REQ-001` | S1 | TODO |
-| `Z-STORY:REQ-002` | S2 | TODO |
-| `Z-STORY:AC-001` | S1 | TODO |
+| `Z-STORY:REQ-001` | S1 | success |
+| `Z-STORY:REQ-002` | S2 | failure |
+| `Z-STORY:AC-001` | S1 | success |
+| `Z-STORY:AC-002` | S2 | failure |
+| `Z-STORY:AC-003` | S1 | success |
 
 ## Permissions
 
-<!-- sflow:guidance Who may do each thing, and what a reader without that authority sees instead. -->
-
-TODO: Say who may do each thing, and what someone without that authority sees instead.
+Not applicable: the requested calculator operation has no privileged role or access restriction.
 
 ## Boundary conditions
 
-<!-- sflow:guidance Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one. -->
-
-TODO: State each limit, size, count or timeout, and what happens at and beyond it.
+Only positive whole-number values are supported. Zero, negative, fractional, and empty values produce an error indication. No maximum value or exact error wording is specified; conversion is limited by the existing calculator's accepted numeric input.
 
 ## Requirements
 
-<!-- sflow:guidance Numbered, testable, one obligation each. Cite the scenario each serves. -->
+- The existing calculator provides a dedicated operation that converts a positive whole-number decimal input to its binary representation. *(S1)* [Z-STORY:REQ-001]
+- The conversion operation indicates an error and provides no conversion result for empty, zero, negative, or fractional input. *(S2)* [Z-STORY:REQ-002]
 
-- <requirement>. *(S1)* [Z-STORY:REQ-001]
-- <requirement>. *(S1, S2)* [Z-STORY:REQ-002]
-
-<!-- sflow:guidance Acceptance criteria use the same stable, namespaced form: -->
-
-- <observable acceptance outcome>. *(S1)* [Z-STORY:AC-001]
+- A calculator user can invoke the conversion operation and receive the binary representation of a positive whole-number decimal input. *(S1)* [Z-STORY:AC-001]
+- Empty, zero, negative, and fractional inputs produce an error indication rather than a conversion result. *(S2)* [Z-STORY:AC-002]
+- Unit test cases cover successful positive whole-number conversion and rejection of empty, zero, negative, and fractional inputs. *(S1, S2)* [Z-STORY:AC-003] [scope:SRI-bf17ce947d7f]
 
 ## Verification intent
 
-<!-- sflow:guidance One row per declared clause, including non-functional requirements. Methods: test, visual, inspection, or a comma-separated combination (all required). AC Criterion is its own ID. A visual/inspection requirement names the AC proving it; a test-only requirement may use -. An AC a requirement names lists every method that requirement lists: a `test, visual` requirement needs a `test, visual` AC. Choose from the pinned source, not from available tools. A screenshot is visual proof, not a test exemption. Planning must inherit these methods and cannot change them without an approved scope amendment. -->
-
 | Clause | Methods | Criterion |
 |---|---|---|
-| `Z-STORY:REQ-001` | TODO | - |
-| `Z-STORY:REQ-002` | TODO | - |
-| `Z-STORY:AC-001` | TODO | `Z-STORY:AC-001` |
+| `Z-STORY:REQ-001` | test | `Z-STORY:AC-001` |
+| `Z-STORY:REQ-002` | test | `Z-STORY:AC-002` |
+| `Z-STORY:AC-001` | test | `Z-STORY:AC-001` |
+| `Z-STORY:AC-002` | test | `Z-STORY:AC-002` |
+| `Z-STORY:AC-003` | test | `Z-STORY:AC-003` |
 
 ## Non-functional requirements
 
-<!-- sflow:guidance Latency, throughput, availability, accessibility, privacy, retention. State the number and how it will be measured; "fast" is not a requirement. -->
-
-<!-- sflow:guidance Use governed requirement anchors here too (for example `[Z-STORY:REQ-003]`); `NFR-001` by itself is only a display label and is not a stable clause identity. -->
-
-TODO: State each non-functional requirement with its number and how it is measured, or write None for this change.
+None specified for this change.
 
 ## Constitution articles
 
-<!-- sflow:guidance Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each cited ID exists at the pinned revision before publication `[SPK:REQ-101]`. -->
-
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-<!-- sflow:guidance What this specification takes as true without proving. An assumption that turns out false is a change request, not a defect — which is only true if it was written down. -->
-
-TODO: List what this specification takes as true without proving, or write None.
+The existing calculator can accept numeric input and provide an operation for the requested conversion.
 
 ## Out of scope
 
-<!-- sflow:guidance Named explicitly, so the boundary is reviewable rather than inferred. -->
-
-TODO: Name what this change does not do.
+Conversions other than positive whole-number decimal-to-binary conversion, and changes to unrelated calculator operations.
 
 ## Sources
 
-<!-- sflow:guidance Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one offered to this phase that could not be read or was not available here, named as a gap. Without supporting documents, say so. -->
+Pinned Story source: `singularity/work-items/z-story/source.json`.
+Clarification responses for specification generation 1 settle supported values (positive whole numbers), the default dedicated conversion operation, error handling, and user-visible calculator behavior alongside unit-test coverage.
