@@ -18,6 +18,7 @@
 
 ## Recent history
 
+- 2026-11-12T15:06:41.263Z — **scope_decided** (specification) by ashokraj2011 · agent product-owner: SRI-9b082baa4528 is included (ASWHIN:AC-001, ASWHIN:REQ-001). Reason: good to fo we are fine
 - 2026-11-12T14:20:53.280Z — **source_review_submitted** (specification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: c1c004ec84f2cdf5668a734410f02a7d8bce3639a79fa10e84a0762740178dc8
 - 2026-11-12T14:19:57.673Z — **phase_generated** (specification) by ashokraj2011 · agent product-owner: generation 1
 - 2026-11-12T14:13:11.443Z — **work_started** (specification) by ashokraj2011 · agent product-owner: Created spec-driven-standard branch aswhin
