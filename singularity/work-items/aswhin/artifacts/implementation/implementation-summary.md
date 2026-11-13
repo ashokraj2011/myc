@@ -4,27 +4,51 @@
   "workId": "aswhin",
   "workType": "spec-driven-standard",
   "phase": "implementation",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "developer",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "developer"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "implementation-summary.md",
+      "mediaType": "text/markdown",
+      "sha256": "836a3ec64decce9f33da18d352e15f922a4f12680e1e36b50de0196ca30d3ab3",
+      "bytes": 3274
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-13T12:03:08.801Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "d722b0af34fa61138df744b1eeff72aa79c4d3a4",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "ca15617ddc393c9be2db7eb0789df4853f79a7ccfaeae58d2184f9120ef4238d",
@@ -38,7 +62,7 @@
   "inputs": {
     "generation": 1,
     "path": "singularity/work-items/aswhin/context/inputs-implementation-gen1.json",
-    "sha256": "5dbd849859dca4bdf381226d59fce2bdc47a21d00519995e2d850b979deecb30",
+    "sha256": "db004092b54076438fc3d724360fd20d8cdcfe7c2de77e437d082d03568355d3",
     "renderedSha256": "32137b796aace5fa584300b5c6edb246572f104536cd35eddd626228339b3cc5",
     "mode": "enforce"
   },
@@ -48,9 +72,52 @@
   },
   "remoteAgent": null,
   "clarification": null,
-  "telemetry": [],
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/aswhin/telemetry/implementation-gen1.json",
+      "sha256": "8165d53b9b55e7842d369637ff7a5b675976ca18c4a2aca012abe459d47babba",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 29567,
+        "estimatedTokens": 7392,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 29567,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-13T12:03:08.801Z",
+      "completedAt": "2026-11-13T12:03:08.801Z",
+      "agent": "developer",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -61,8 +128,6 @@
 # aswhin — Implementation Summary
 
 ## Agent brief
-
-<!-- sflow:guidance Summarize the implemented outcome, consequential decisions, changed surfaces, validation result, remaining limitations, and rollout considerations for downstream agents. Keep it evidence-based; the detailed changed-components and test sections are preserved separately. -->
 
 Added a BIN action to the shared calculator display. It evaluates the current expression through the existing evaluator and, for positive finite numeric results, displays the JavaScript base-2 representation without changing the ordinary equals/history flow. The evaluator utility covers integer and fractional inputs; the interaction test confirms input 2 displays 10. A retained browser screenshot shows the result. Focused tests passed on Node 22; the publication gate still needs to run its configured checks.
 

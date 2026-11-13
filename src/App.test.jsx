@@ -125,6 +125,23 @@ describe('App functional regression (all modes/features unchanged)', () => {
   });
 });
 
+describe('binary conversion acceptance', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  // @ac:ASWHIN:AC-001
+  it('displays the binary result for 2 when conversion is requested', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+
+    await clickButton(container, '2');
+    await user.click(screen.getByTitle('Convert to Binary'));
+
+    expect(getResultText(container)).toBe('10');
+  });
+});
+
 // Verifies WRK-1978:AC-001 and WRK-1978:AC-002: the new win11-light/win11-dark
 // themes are selectable app-wide (not just in Standard/Scientific) and are
 // applied via the shared data-theme token mechanism, and every mode continues

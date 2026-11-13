@@ -11,6 +11,7 @@ export const Display = ({
   soundEnabled,
   onBackspace,
   onClear,
+  onConvertToBinary,
 }) => {
   const [copied, setCopied] = useState(false);
 
@@ -49,6 +50,17 @@ export const Display = ({
 
         {/* Display Utility Actions */}
         <div className="flex items-center gap-1.5">
+          {/* @clause:ASWHIN:REQ-001 Provides the user action to request binary conversion. */}
+          <button
+            onClick={() => {
+              playSound('click', soundEnabled);
+              onConvertToBinary();
+            }}
+            title="Convert to Binary"
+            className="px-2 py-1 rounded-lg u-hbg-btn-func-bg u-text-text-muted u-htext-text-main transition-colors font-mono"
+          >
+            BIN
+          </button>
           <button
             onClick={() => {
               playSound('clear', soundEnabled);

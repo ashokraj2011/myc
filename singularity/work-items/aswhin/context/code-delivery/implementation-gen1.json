@@ -1,0 +1,339 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "aswhin",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "06cc2b0c-ab88-4b9f-bc74-478699eaad9d",
+  "changeSet": {
+    "path": "singularity/work-items/aswhin/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:9a27da9005331fed4903abed208020fc04bb1f4238c2509b29da2e7a436b5470",
+    "sourcePaths": [
+      "src/App.jsx",
+      "src/components/Display.jsx",
+      "src/utils/evaluator.js"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [
+      ".nvmrc"
+    ],
+    "executableTestPaths": [
+      "src/App.test.jsx",
+      "src/utils/evaluator.test.js"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "build-configuration": 1,
+      "product-source": 3,
+      "test-source": 2
+    },
+    "entries": [
+      {
+        "changeId": "sha256:fde8b995e5502a55312a5f0ea2312cb352075fff9e36be04293f33e2daf774ba",
+        "status": "added",
+        "oldPath": null,
+        "newPath": ".nvmrc",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:1107120e853bcee8dcf7379f7dc11ae66ad85ab4d1a2b874bde2ec7ce1d3aea8",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:2623c269117b3e25be0b1010a6098178d9b9315d6750c48c01c218d6efd2c1ed",
+        "status": "modified",
+        "oldPath": "src/App.test.jsx",
+        "newPath": "src/App.test.jsx",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:a20ae3443cc0bbc5b0840438130786d0fcad713e61949ae823b4c7f8a207a96b",
+        "status": "modified",
+        "oldPath": "src/components/Display.jsx",
+        "newPath": "src/components/Display.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:5ecdd9383f1d9cf4b44f392f4b46e9222676af5c6d971ea6dc39e3a2f5e53d4c",
+        "status": "modified",
+        "oldPath": "src/utils/evaluator.js",
+        "newPath": "src/utils/evaluator.js",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:87ea96d709cd1ef576904665cf2666b87cd1b23f8f0e2e73a0d58745f93488c3",
+        "status": "modified",
+        "oldPath": "src/utils/evaluator.test.js",
+        "newPath": "src/utils/evaluator.test.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "ASWHIN:AC-001"
+    ],
+    "bound": [
+      "ASWHIN:AC-001"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "ASWHIN:AC-001",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "ASWHIN:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "binary conversion acceptance"
+          ],
+          "name": "displays the binary result for 2 when conversion is requested"
+        },
+        "logicalTestId": "sha256:c48664243fd0229327475e5d8238fa14a54fb9fb1800fbecbf0d8adc54189812",
+        "declarationSha256": "sha256:3a4090df8b2b79f591a37bd92055e6a1d6d65193e9af6bdc86f444dfd300614d",
+        "supportSha256": null,
+        "assertions": {
+          "count": 1,
+          "tautological": 0,
+          "negative": false,
+          "boundary": false,
+          "nullability": false,
+          "adequacy": "adequate",
+          "subjects": [
+            "async",
+            "click",
+            "clickButton",
+            "getByTitle",
+            "getResultText",
+            "render",
+            "setup"
+          ]
+        },
+        "line": 134,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "ASWHIN:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx",
+          "src/utils/evaluator.js"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "ASWHIN:REQ-001",
+        "sourcePath": "src/App.jsx",
+        "line": 132,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "ASWHIN:REQ-001",
+        "sourcePath": "src/components/Display.jsx",
+        "line": 53,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "ASWHIN:REQ-001",
+        "sourcePath": "src/utils/evaluator.js",
+        "line": 57,
+        "tag": "clause"
+      }
+    ]
+  },
+  "fulfillment": {
+    "obligations": [
+      {
+        "clauseId": "ASWHIN:AC-001",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/aswhin/evidence/binary-result.png",
+            "state": "present",
+            "sha256": "bca83af97d27f0545863027e93283fb87db180f708cfb009ead58dcf7324dc5b"
+          }
+        ]
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "ASWHIN:REQ-001",
+        "explanation": {
+          "text": "Evaluates the expression and updates the result to its binary representation.",
+          "path": "src/App.jsx",
+          "line": 132
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 11,
+                "beforeLines": 1,
+                "afterStart": 11,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 132,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 253,
+                "beforeLines": 0,
+                "afterStart": 266,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 279,
+                "beforeLines": 0,
+                "afterStart": 293,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/Display.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 51,
+                "beforeLines": 0,
+                "afterStart": 53,
+                "afterLines": 11
+              }
+            ],
+            "symbols": [
+              {
+                "name": "Display",
+                "kind": "function",
+                "line": 5
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/utils/evaluator.js",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 55,
+                "beforeLines": 0,
+                "afterStart": 56,
+                "afterLines": 7
+              }
+            ],
+            "symbols": [
+              {
+                "name": "convertToBinary",
+                "kind": "function",
+                "line": 58
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:0cfb66a0e5cf96cae14b9202708c20cee50a5101cb8a35741f26bb3f20708222"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:17f9c75484dc1288ab1f519d42f9c3932c91be2ef02504924423e1f2d86fcdfe",
+    "codeTreeSha256": "sha256:f1f11387643bc743f2354c9c3a38fa5a310bfc2a73974f16111b5c476e7acf58",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-11-13T12:03:08.801Z"
+}

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { evaluateExpression, formatNumber } from '../utils/evaluator';
+import { convertToBinary, evaluateExpression, formatNumber } from '../utils/evaluator';
 
 // Verifies WRK-1978:AC-003 and WRK-1978:AC-005: the restyle work must not
 // change calculation semantics, expression evaluation, or number formatting.
@@ -59,6 +59,19 @@ describe('evaluateExpression (calculation behavior regression)', () => {
 describe('formatNumber (display formatting regression)', () => {
   it('adds thousands separators', () => {
     expect(formatNumber(1234567)).toBe('1,234,567');
+  });
+
+  describe('convertToBinary', () => {
+    it('converts positive integer and fractional results to base 2', () => {
+      expect(convertToBinary(2)).toBe('10');
+      expect(convertToBinary(0.5)).toBe('0.1');
+    });
+
+    it('returns null outside the supported positive finite input domain', () => {
+      expect(convertToBinary(0)).toBeNull();
+      expect(convertToBinary(-1)).toBeNull();
+      expect(convertToBinary(Infinity)).toBeNull();
+    });
   });
 
   it('fixes floating point precision artifacts', () => {

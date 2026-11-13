@@ -8,7 +8,7 @@ import { FinancialCalculator } from './components/FinancialCalculator';
 import { FunctionGrapher } from './components/FunctionGrapher';
 import { HistoryDrawer } from './components/HistoryDrawer';
 import { KeyboardShortcutsModal } from './components/KeyboardShortcutsModal';
-import { evaluateExpression } from './utils/evaluator';
+import { convertToBinary, evaluateExpression } from './utils/evaluator';
 import { playSound } from './utils/audio';
 
 export default function App() {
@@ -127,6 +127,18 @@ export default function App() {
       };
       setHistory((prev) => [newEntry, ...prev.slice(0, 49)]); // Keep last 50 items
     }
+  }, [expression, angleUnit]);
+
+  // @clause:ASWHIN:REQ-001 Evaluates the expression and updates the result to its binary representation.
+  const handleConvertToBinary = useCallback(() => {
+    if (!expression || expression.trim() === '') return;
+
+    const evalRes = evaluateExpression(expression, angleUnit);
+    const binaryResult = evalRes.error ? null : convertToBinary(evalRes.rawResult);
+    if (binaryResult === null) return;
+
+    setResult(binaryResult);
+    setLastEvaluated(true);
   }, [expression, angleUnit]);
 
   const handleMemory = useCallback(
@@ -251,6 +263,7 @@ export default function App() {
               soundEnabled={soundEnabled}
               onBackspace={handleBackspace}
               onClear={handleClear}
+              onConvertToBinary={handleConvertToBinary}
             />
             <StandardKeypad
               onDigit={handleDigit}
@@ -277,6 +290,7 @@ export default function App() {
               soundEnabled={soundEnabled}
               onBackspace={handleBackspace}
               onClear={handleClear}
+              onConvertToBinary={handleConvertToBinary}
             />
             <ScientificKeypad
               onDigit={handleDigit}

@@ -53,6 +53,13 @@ export const evaluateExpression = (expr, angleUnit = 'DEG') => {
   }
 };
 
+/** Converts a positive finite numeric result to base-2 text; returns null otherwise. */
+// @clause:ASWHIN:REQ-001 Converts positive finite evaluator results to their base-2 display representation.
+export const convertToBinary = (value) => {
+  if (typeof value !== 'number' || !Number.isFinite(value) || value <= 0) return null;
+  return value.toString(2);
+};
+
 // Formats big numbers, floats, and removes precision artifacts like 0.1 + 0.2 = 0.30000000000000004
 export const formatNumber = (num) => {
   if (num === null || num === undefined || isNaN(num)) return 'Error';
