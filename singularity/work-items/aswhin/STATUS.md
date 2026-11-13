@@ -20,6 +20,7 @@
 
 ## Recent history
 
+- 2026-11-13T12:02:25.100Z — **plan_amended** (implementation) by ashokraj2011 · agent developer: PAM-001: .nvmrc listed as build-configuration. yes go ahead with that version
 - 2026-11-13T09:49:33.709Z — **work_interval_started** (implementation) by system: baseline 94ddf8d30ade at d96facde5519
 - 2026-11-13T09:49:33.696Z — **phase_self_approved** (planning) by ashokraj2011 · agent architect: threshold reached; advanced to implementation
 - 2026-11-13T09:45:59.726Z — **phase_submitted** (planning) by ashokraj2011 · agent architect: 1 artifacts
