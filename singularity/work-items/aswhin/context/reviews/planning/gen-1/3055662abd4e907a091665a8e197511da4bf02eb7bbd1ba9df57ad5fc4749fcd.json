@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "phase": "planning",
+  "generation": 1,
+  "reportSha256": "3055662abd4e907a091665a8e197511da4bf02eb7bbd1ba9df57ad5fc4749fcd",
+  "lifecycleEventId": "7793f731-4a4d-4836-b2e3-5827b5a82c18",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "planning",
+    "binding": {
+      "workId": "aswhin",
+      "phase": "planning",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/aswhin/USER-STORY.md",
+          "textSha256": "da9c4bb3b84dd3706ebd648dbd621e1d944223e19e6e84cdcf7100c929ca3bc3",
+          "originalSha256": "b6ceecdd9e16bf133e88dcaae51aa7125649840d723aad02c9db6580bc48d919"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:approved-scope",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/aswhin/context/clarifications-specification-gen1.json",
+          "sha256": "46ec73fd5c50e629b2838c7c5b9e3bb2e30cdba6812764d90da41f3add31fc28"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/aswhin/artifacts/planning/plan.md",
+        "sha256": "8f8665c0608dfc54b221dad63cf16db5b11bc2f9d3bc91ddbaff849836278b2e"
+      },
+      "upstreamSpec": {
+        "path": "singularity/work-items/aswhin/artifacts/specification/spec.md",
+        "sha256": "da7f48b160806a59315de4f239e716e213e2794453c02a2f15de8f6bd59366fa"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:approved-scope"
+    ],
+    "rows": [
+      {
+        "clauseId": "ASWHIN:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx",
+          "src/utils/evaluator.js"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx",
+          "src/utils/evaluator.test.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "new",
+        "observableResult": "A user can request binary representation for a positive decimal input; the displayed result is its base-2 representation.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "ASWHIN:AC-001",
+        "expectedPaths": [
+          "singularity/work-items/aswhin/evidence/binary-result.png"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "evidence",
+        "observableResult": "Request conversion for input 2; the calculator displays `10`, and the retained screenshot shows that result.",
+        "assessment": "supported"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "ed1ec38ca099daeaff2e2bb72e730359a27da3f400491c267b51f84acc3a7d3a",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "architect",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-13T09:41:37.552Z",
+  "recordSha256": "db29f588b8417afd0afd6af374b782e4d1325b04c30cb0e932df4254aec0ad1f"
+}
