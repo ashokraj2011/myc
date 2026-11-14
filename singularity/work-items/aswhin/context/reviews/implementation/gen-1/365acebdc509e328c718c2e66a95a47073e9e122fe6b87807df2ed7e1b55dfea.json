@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "phase": "implementation",
+  "generation": 1,
+  "reportSha256": "365acebdc509e328c718c2e66a95a47073e9e122fe6b87807df2ed7e1b55dfea",
+  "lifecycleEventId": "2808dc53-b084-4c21-85a7-f7450f4b3a64",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "code",
+    "binding": {
+      "workId": "aswhin",
+      "phase": "implementation",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "code:src:App.jsx",
+          "path": "src/App.jsx",
+          "textSha256": "5766387e06be67cec8082ea39c577749c21d67855e44fb4b10310c788ab16874"
+        },
+        {
+          "id": "code:src:App.test.jsx",
+          "path": "src/App.test.jsx",
+          "textSha256": "67ad29ff5782193b36305a0f7836d3bbded318d13fbe100a6f88c7dd7fc4341d"
+        },
+        {
+          "id": "code:src:components:Display.jsx",
+          "path": "src/components/Display.jsx",
+          "textSha256": "4a150d528f59fb6efe03f792a78829dd11766a723c3d53b2e75fc659d1780ca5"
+        },
+        {
+          "id": "code:src:utils:evaluator.js",
+          "path": "src/utils/evaluator.js",
+          "textSha256": "2c7c3c37523fc2d209cc3fc8ccb4e55b7b34cfd120ab236c58ca09e6f48acfed"
+        },
+        {
+          "id": "code:src:utils:evaluator.test.js",
+          "path": "src/utils/evaluator.test.js",
+          "textSha256": "bfbdf1f70cff47784205498b0915187114dbc2fb4cc5fd017af8f2bc68bb1fdb"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/aswhin/artifacts/implementation/implementation-summary.md",
+        "sha256": "133308b6f06a41e76702a787c29bc394fe61b6bd3f3df612b12915fdc9acf37e"
+      },
+      "plan": {
+        "path": "singularity/work-items/aswhin/artifacts/planning/plan.md",
+        "sha256": "8f8665c0608dfc54b221dad63cf16db5b11bc2f9d3bc91ddbaff849836278b2e"
+      },
+      "evidenceSha256": "f49eab7797000dca5a4b33eb48b41ff0a0c76c5a055a0f0566ed1be78ced2790"
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "code:src:App.jsx",
+      "code:src:App.test.jsx",
+      "code:src:components:Display.jsx",
+      "code:src:utils:evaluator.js",
+      "code:src:utils:evaluator.test.js"
+    ],
+    "rows": [
+      {
+        "clauseId": "ASWHIN:AC-001",
+        "implementation": [],
+        "tests": [
+          {
+            "sourceId": "code:src:App.test.jsx",
+            "line": 141,
+            "quote": "expect(getResultText(container)).toBe('10');"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "ASWHIN:REQ-001",
+        "implementation": [
+          {
+            "sourceId": "code:src:App.jsx",
+            "line": 136,
+            "quote": "const evalRes = evaluateExpression(expression, angleUnit);"
+          },
+          {
+            "sourceId": "code:src:components:Display.jsx",
+            "line": 59,
+            "quote": "title=\"Convert to Binary\""
+          },
+          {
+            "sourceId": "code:src:utils:evaluator.js",
+            "line": 58,
+            "quote": "export const convertToBinary = (value) => {"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:src:App.test.jsx",
+            "line": 141,
+            "quote": "expect(getResultText(container)).toBe('10');"
+          },
+          {
+            "sourceId": "code:src:utils:evaluator.test.js",
+            "line": 67,
+            "quote": "expect(convertToBinary(0.5)).toBe('0.1');"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      }
+    ],
+    "unplannedPaths": [],
+    "qualityReviewed": [],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "ed1ec38ca099daeaff2e2bb72e730359a27da3f400491c267b51f84acc3a7d3a",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "developer",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-14T03:55:57.646Z",
+  "recordSha256": "566224cd41541870d565f9a2493475b4e24ee9e5c3a940f93346305f488a78d8"
+}
