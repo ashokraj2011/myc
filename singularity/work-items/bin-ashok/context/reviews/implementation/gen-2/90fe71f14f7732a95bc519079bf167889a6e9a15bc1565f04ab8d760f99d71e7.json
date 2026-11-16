@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "phase": "implementation",
+  "generation": 2,
+  "reportSha256": "90fe71f14f7732a95bc519079bf167889a6e9a15bc1565f04ab8d760f99d71e7",
+  "lifecycleEventId": "4e0160e8-9681-4371-8ed0-5c2ad7ea165b",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "code",
+    "binding": {
+      "workId": "bin-ashok",
+      "phase": "implementation",
+      "generation": 2,
+      "sources": [
+        {
+          "id": "code:src:App.jsx",
+          "path": "src/App.jsx",
+          "textSha256": "118043a50f0abd7ef2031316e9f17eed15f01224b73a871eb197d1a4dd9c5f5b"
+        },
+        {
+          "id": "code:src:App.test.jsx",
+          "path": "src/App.test.jsx",
+          "textSha256": "7e8d0e615e006e08672ce58dc27e1e6886bad4c99882f0b21f1505ed5c9ccaf2"
+        },
+        {
+          "id": "code:src:components:Display.jsx",
+          "path": "src/components/Display.jsx",
+          "textSha256": "a4ed3c3de1c6db277c5a754767654e4f19c7b678edc5d45fa6442f2d25a67299"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/bin-ashok/artifacts/implementation/implementation-summary.md",
+        "sha256": "460c2e4ee1b6e6c4ddde3febf26fd5731d551cb68b5b4abf0182cf56c61f40d2"
+      },
+      "plan": {
+        "path": "singularity/work-items/bin-ashok/artifacts/planning/plan.md",
+        "sha256": "ad8cd11c4c5c35a6e0c7bbee7cfd344f4376ab996b015a1a5772bc06b92a4309"
+      },
+      "evidenceSha256": "0bf33916f550736987c65690e168a4d3391edc0ef2a8ded9b562163f366d92bc"
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "code:src:App.jsx",
+      "code:src:App.test.jsx",
+      "code:src:components:Display.jsx"
+    ],
+    "rows": [
+      {
+        "clauseId": "BIN-ASHOK:AC-001",
+        "implementation": [],
+        "tests": [
+          {
+            "sourceId": "code:src:App.test.jsx",
+            "line": 135,
+            "quote": "it('converts the displayed positive whole number to binary', async () => {"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "BIN-ASHOK:REQ-001",
+        "implementation": [
+          {
+            "sourceId": "code:src:App.jsx",
+            "line": 137,
+            "quote": "const activeValue = !lastEvaluated && expression.trim() ? expression : result;"
+          },
+          {
+            "sourceId": "code:src:App.jsx",
+            "line": 177,
+            "quote": "setResult(BigInt(integerDigits).toString(2));"
+          },
+          {
+            "sourceId": "code:src:components:Display.jsx",
+            "line": 61,
+            "quote": "title=\"Convert to binary\""
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:src:App.test.jsx",
+            "line": 147,
+            "quote": "it('converts the number being entered before equals is pressed', async () => {"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "BIN-ASHOK:REQ-002",
+        "implementation": [
+          {
+            "sourceId": "code:src:App.jsx",
+            "line": 142,
+            "quote": "setResult('not supported');"
+          },
+          {
+            "sourceId": "code:src:components:Display.jsx",
+            "line": 59,
+            "quote": "onConvertToBinary();"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:src:App.test.jsx",
+            "line": 200,
+            "quote": "])('reports unsupported for %s input', async (_label, enterInput) => {"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      }
+    ],
+    "unplannedPaths": [
+      {
+        "sourceId": "code:src:App.test.jsx",
+        "assessment": "supporting",
+        "note": "Planned test file for all three clauses."
+      }
+    ],
+    "qualityReviewed": [],
+    "findings": [
+      {
+        "id": "F-001",
+        "severity": "advisory",
+        "check": "plan",
+        "clauseId": "BIN-ASHOK:AC-001",
+        "sourceId": "code:src:App.test.jsx",
+        "line": 135,
+        "quote": "it('converts the displayed positive whole number to binary', async () => {",
+        "message": "AC-001 is fulfilled by screenshot evidence (binary-conversion-2.png), which is not a reviewable text source, so no implementation line can be cited. The behaviour is covered by the passing AC-001 test, and the conversion logic is cited under REQ-001."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "717dabbe1d71dc4ece8ae0d2b9d20e66e4a59ab36c63301e5f1d6bed0dc3111a",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": null,
+      "githubLookup": "not-checked"
+    },
+    "authorAgentId": "developer",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-16T10:51:35.811Z",
+  "recordSha256": "481093e62ec0d2c9bfbdf578a171c96b28f89fc1afd5789f41c21a33a8a8ca02"
+}
