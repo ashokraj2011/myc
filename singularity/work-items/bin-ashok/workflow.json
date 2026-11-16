@@ -3056,7 +3056,8 @@
         "path": "artifacts/specification/spec.md",
         "fingerprint": "sha256:1126977e0574d611778713df8e785fc09e1970b6acd4301d3ab1b4757b989367",
         "bytes": 7378
-      }
+      },
+      "remoteOutputs": []
     },
     "planning": {
       "id": "planning",
@@ -3154,7 +3155,8 @@
       "designSourceSets": [],
       "artifactRegistrationRepairs": [],
       "artifacts": [],
-      "checks": []
+      "checks": [],
+      "remoteOutputs": []
     },
     "implementation": {
       "id": "implementation",
@@ -3267,7 +3269,8 @@
       "designSourceSets": [],
       "artifactRegistrationRepairs": [],
       "artifacts": [],
-      "checks": []
+      "checks": [],
+      "remoteOutputs": []
     },
     "convergence": {
       "id": "convergence",
@@ -3394,7 +3397,8 @@
       "designSourceSets": [],
       "artifactRegistrationRepairs": [],
       "artifacts": [],
-      "checks": []
+      "checks": [],
+      "remoteOutputs": []
     },
     "verification": {
       "id": "verification",
@@ -3523,7 +3527,8 @@
       "designSourceSets": [],
       "artifactRegistrationRepairs": [],
       "artifacts": [],
-      "checks": []
+      "checks": [],
+      "remoteOutputs": []
     },
     "release": {
       "id": "release",
@@ -3624,7 +3629,8 @@
       "designSourceSets": [],
       "artifactRegistrationRepairs": [],
       "artifacts": [],
-      "checks": []
+      "checks": [],
+      "remoteOutputs": []
     }
   },
   "usage": {
@@ -3660,6 +3666,14 @@
       "event": "work_started",
       "phase": "specification",
       "detail": "Created spec-driven-standard branch bin-ashok"
+    },
+    {
+      "at": "2026-11-16T00:47:25.013Z",
+      "actor": "ashokraj2011",
+      "agent": null,
+      "event": "decision_settled",
+      "phase": "specification",
+      "detail": "STL-001 (story-selection) settled by SFlow: Opened bin-ashok: the only Story whose branch, bin-ashok, is checked out where this session runs. Evidence: bin-ashok is bin-ashok's own branch, recorded in its Story record (singularity/work-items/bin-ashok/workflow.json on bin-ashok); no other Story records a branch checked out where this session runs (the session's checkout)"
     }
   ],
   "measurement": {
@@ -3847,6 +3861,172 @@
         },
         "createdAt": "2026-11-16T00:46:27.746Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "30fb0552-621c-4f2e-b91a-7dd6a304d73b",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "bin-ashok",
+          "branch": "bin-ashok"
+        },
+        "phaseId": "specification",
+        "generation": 0,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": null,
+        "authorityGroup": null,
+        "payload": {
+          "decision": "settled",
+          "reviewPacketSha256": null,
+          "settled": "STL-001",
+          "kind": "story-selection"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-16T00:47:25.081Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "30fb0552-621c-4f2e-b91a-7dd6a304d73b",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "bin-ashok"
+          ],
+          "branch": "bin-ashok",
+          "canonicalBranch": "bin-ashok",
+          "createdAt": "2026-11-16T00:46:27.207Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "specification",
+          "generation": 0,
+          "phase": "specification",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 0,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 5,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 0,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "specification",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "binary",
+          "updatedAt": "2026-11-16T00:47:25.013Z",
+          "workId": "bin-ashok",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": null,
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "68f507ba55c1ea3dcdbe2248e78a71bf606ed208c168257d02cefff1b453f597",
+          "lifecycleEventId": "30fb0552-621c-4f2e-b91a-7dd6a304d73b",
+          "lifecyclePayload": {
+            "decision": "settled",
+            "reviewPacketSha256": null,
+            "settled": "STL-001",
+            "kind": "story-selection"
+          },
+          "templateSha256": "c3b2d1434d1d37fefc2ae168f849e9f801992433a7b81c7eb9f27b78c7f66d4e",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "30fb0552-621c-4f2e-b91a-7dd6a304d73b",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "bin-ashok",
+              "branch": "bin-ashok"
+            },
+            "phaseId": "specification",
+            "generation": 0,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": null,
+            "authorityGroup": null,
+            "payload": {
+              "decision": "settled",
+              "reviewPacketSha256": null,
+              "settled": "STL-001",
+              "kind": "story-selection"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-16T00:47:25.081Z"
+          }
+        },
+        "createdAt": "2026-11-16T00:47:25.091Z"
+      }
+    }
+  ],
+  "repairBudgets": {},
+  "workIntervals": {
+    "schemaVersion": 1,
+    "current": null,
+    "history": [],
+    "escalations": []
+  },
+  "settledDecisions": [
+    {
+      "id": "STL-001",
+      "kind": "story-selection",
+      "subject": "bin-ashok on bin-ashok",
+      "answer": "Opened bin-ashok: the only Story whose branch, bin-ashok, is checked out where this session runs.",
+      "evidence": [
+        {
+          "what": "bin-ashok is bin-ashok's own branch, recorded in its Story record",
+          "where": "singularity/work-items/bin-ashok/workflow.json on bin-ashok"
+        },
+        {
+          "what": "no other Story records a branch checked out where this session runs",
+          "where": "the session's checkout"
+        }
+      ],
+      "by": "sflow",
+      "effect": {
+        "workId": "bin-ashok",
+        "branch": "bin-ashok"
+      },
+      "actor": "ashokraj2011",
+      "at": "2026-11-16T00:47:25.013Z"
     }
   ]
 }

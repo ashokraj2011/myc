@@ -18,4 +18,5 @@
 
 ## Recent history
 
+- 2026-11-16T00:47:25.013Z — **decision_settled** (specification) by ashokraj2011: STL-001 (story-selection) settled by SFlow: Opened bin-ashok: the only Story whose branch, bin-ashok, is checked out where this session runs. Evidence: bin-ashok is bin-ashok's own branch, recorded in its Story record (singularity/work-items/bin-ashok/workflow.json on bin-ashok); no other Story records a branch checked out where this session runs (the session's checkout)
 - 2026-11-16T00:46:27.207Z — **work_started** (specification) by ashokraj2011 · agent product-owner: Created spec-driven-standard branch bin-ashok
