@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-11-16T03:24:34.331Z",
+  "claims": {
+    "BIN-ASHOK:AC-001": {
+      "expectedPaths": [
+        "singularity/work-items/bin-ashok/evidence/binary-conversion-2.png"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "Retained app screenshot visibly shows `2` converted to `10`; App interaction tests exercise the same visible result."
+    },
+    "BIN-ASHOK:REQ-001": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/Display.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "The current displayed positive whole number converts to its base-2 representation."
+    },
+    "BIN-ASHOK:REQ-002": {
+      "expectedPaths": [
+        "src/App.jsx",
+        "src/components/Display.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "new",
+      "observableResult": "Zero, negative, fractional, empty, and non-numeric values each produce “not supported.”"
+    }
+  },
+  "verificationContracts": [
+    {
+      "clauseId": "BIN-ASHOK:AC-001",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "conversion-result",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "Standard calculator screen showing 2 and binary result 10"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    }
+  ],
+  "workId": "bin-ashok",
+  "phase": "planning",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/bin-ashok/artifacts/planning/plan.md",
+    "sha256": "cf386f26f89a6418313979a8e427992839c0d845c573f84518389532c6374a90",
+    "bytes": 13971
+  }
+}
