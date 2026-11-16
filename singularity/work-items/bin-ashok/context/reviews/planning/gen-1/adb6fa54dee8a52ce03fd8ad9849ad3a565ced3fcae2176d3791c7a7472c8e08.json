@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "phase": "planning",
+  "generation": 1,
+  "reportSha256": "adb6fa54dee8a52ce03fd8ad9849ad3a565ced3fcae2176d3791c7a7472c8e08",
+  "lifecycleEventId": "910f75c4-2d11-4951-8592-a9abebefa109",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "planning",
+    "binding": {
+      "workId": "bin-ashok",
+      "phase": "planning",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/bin-ashok/USER-STORY.md",
+          "textSha256": "11e98c62ae19129902fe888e4df27ab2b2b09a141c0fcf81cfca32eafd6d7474",
+          "originalSha256": "93d767683e80e8d3f9086b46e8fdb789f76f6354396862000ecb2e3bd095b1c1"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:approved-scope",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/bin-ashok/context/clarifications-specification-gen1.json",
+          "sha256": "f83318e0e51a0d9205e67c701caa42a18e8a17b7d70d85c55dabaabf710bc554"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/bin-ashok/artifacts/planning/plan.md",
+        "sha256": "ad8cd11c4c5c35a6e0c7bbee7cfd344f4376ab996b015a1a5772bc06b92a4309"
+      },
+      "upstreamSpec": {
+        "path": "singularity/work-items/bin-ashok/artifacts/specification/spec.md",
+        "sha256": "c00737060e5b42b9bd72a212d16a759a723bd450cb626fd46e7bc12540cb6f61"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:approved-scope"
+    ],
+    "rows": [
+      {
+        "clauseId": "BIN-ASHOK:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "new",
+        "observableResult": "The current displayed positive whole number converts to its base-2 representation.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "BIN-ASHOK:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "new",
+        "observableResult": "Zero, negative, fractional, empty, and non-numeric values each produce “not supported.”",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "BIN-ASHOK:AC-001",
+        "expectedPaths": [
+          "singularity/work-items/bin-ashok/evidence/binary-conversion-2.png"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "evidence",
+        "observableResult": "Retained app screenshot visibly shows `2` converted to `10`; App interaction tests exercise the same visible result.",
+        "assessment": "supported"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "717dabbe1d71dc4ece8ae0d2b9d20e66e4a59ab36c63301e5f1d6bed0dc3111a",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "architect",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-16T03:25:52.655Z",
+  "recordSha256": "a197173f671389ee60f68938e00f96f3eeaee5fc538f236960529021d490377b"
+}
