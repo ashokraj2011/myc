@@ -4,27 +4,51 @@
   "workId": "bin-ashok",
   "workType": "spec-driven-standard",
   "phase": "implementation",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": null,
+    "githubLookup": "not-checked"
+  },
+  "generatedAgent": "developer",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": null,
+      "githubLookup": "not-checked"
+    },
+    "governedAgentContext": {
+      "agentId": "developer"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "implementation-summary.md",
+      "mediaType": "text/markdown",
+      "sha256": "8eea85bef2cbd0abdb1766bb5207fb748cd47fb7e9f71204fcec631383045430",
+      "bytes": 2931
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-16T05:10:54.769Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "21259770e9d1ab2b1ca148e9a5a96582a29b00e1",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "68f507ba55c1ea3dcdbe2248e78a71bf606ed208c168257d02cefff1b453f597",
@@ -38,7 +62,7 @@
   "inputs": {
     "generation": 1,
     "path": "singularity/work-items/bin-ashok/context/inputs-implementation-gen1.json",
-    "sha256": "8e0b178aba04430023a55da086ecbab6f6b6ea60104de35896e15ec6bff74328",
+    "sha256": "80761d69a1a7bc1a71897b3585905b9cb60a27d7aed1a5f92b81cdab2d44f2d2",
     "renderedSha256": "34528358e756cbef809ca9f8cd8c309b5a8250459b10b43e0b34812e9a7730b2",
     "mode": "enforce"
   },
@@ -48,9 +72,52 @@
   },
   "remoteAgent": null,
   "clarification": null,
-  "telemetry": [],
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/bin-ashok/telemetry/implementation-gen1.json",
+      "sha256": "f5cf185cd548ed2c4435ec14ed13aa0488e079d6f9ae30e9215b9939854156c5",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 30983,
+        "estimatedTokens": 7746,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 30983,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-16T05:10:54.769Z",
+      "completedAt": "2026-11-16T05:10:54.769Z",
+      "agent": "developer",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -62,9 +129,7 @@
 
 ## Agent brief
 
-<!-- sflow:guidance Summarize the implemented outcome, consequential decisions, changed surfaces, validation result, remaining limitations, and rollout considerations for downstream agents. Keep it evidence-based; the detailed changed-components and test sections are preserved separately. -->
-
-Added a shared Binary action to the calculator display in Standard and Scientific modes. It converts the displayed positive whole number to base 2, including grouped and scientific-notation integer displays, and reports “not supported” for zero, negative, fractional, empty, or invalid results. Focused interactions and the full suite pass; the retained screenshot shows `2` converted to `10`. No persistence, configuration, migration, or external service changes.
+Added a shared Binary action to the calculator display in Standard and Scientific modes. It converts the displayed positive whole number to base 2, including grouped and scientific-notation integer displays, and reports “not supported” for zero, negative, fractional, empty, or invalid results. Focused interactions and the full suite passed on Node 22; the retained screenshot shows `2` converted to `10`. Decision PAM-001 added `.nvmrc` to pin Node 22 for the Vitest environment.
 
 ## Implemented outcome
 
@@ -72,19 +137,19 @@ The calculator now converts the current result display to binary and replaces th
 
 ## Changed components and decisions
 
-`src/App.jsx` owns validation and conversion, using `BigInt` so the result is not constrained by JavaScript's safe-integer range; it recognizes grouped and exponent-form displays without adding an input cap. Qualified `@clause:BIN-ASHOK:REQ-001` and `@clause:BIN-ASHOK:REQ-002` comments bind the behavior. `src/components/Display.jsx` adds the shared accessible Binary button. `src/App.test.jsx` covers positive conversion, larger values, both display modes, and all unsupported categories. No configuration, migration, or external service changes; no approved deviations.
+`src/App.jsx` owns validation and conversion, using `BigInt` so the result is not constrained by JavaScript's safe-integer range; it recognizes grouped and exponent-form displays without adding an input cap. Qualified `@clause:BIN-ASHOK:REQ-001` and `@clause:BIN-ASHOK:REQ-002` comments bind the behavior. `src/components/Display.jsx` adds the shared accessible Binary button. `src/App.test.jsx` covers positive conversion, larger values, both display modes, and all unsupported categories. `.nvmrc` pins Node 22 as approved by decision PAM-001 and recorded as a supporting build-configuration change. No migration or external service changes.
 
 ## Tests and operational notes
 
 `src/App.test.jsx` tags the positive conversion interaction with `@ac:BIN-ASHOK:REQ-001` and `@ac:BIN-ASHOK:AC-001`, and unsupported cases with `@ac:BIN-ASHOK:REQ-002`.
 
-- `PATH=/opt/homebrew/opt/node@22/bin:$PATH npm test -- --run src/App.test.jsx` — 25 tests passed.
-- `PATH=/opt/homebrew/opt/node@22/bin:$PATH npm test` — 39 tests passed across 3 files.
+- `PATH=/opt/homebrew/opt/node@22/bin:$PATH npm test -- --run src/App.test.jsx` — 26 tests passed before the final test-only assertions.
+- `PATH=/opt/homebrew/opt/node@22/bin:$PATH npm test` — 40 tests passed across 3 files after the final changes.
 - `PATH=/opt/homebrew/opt/node@22/bin:$PATH npm run build` — passed; Vite reported the existing large-chunk advisory.
 - `npm run lint` — failed on repository lint errors, including pre-existing unused React imports and unrelated component errors; no automatic fixes were applied.
 - Browser check — entered `2`, evaluated it, activated Binary, and observed display `2` / `10`; retained at `singularity/work-items/bin-ashok/evidence/binary-conversion-2.png`.
 
-The checkout's default Node is 26.12.0, which the runner warns can break localStorage tests; validation used the installed Node 22.14.0. Pinning Node 22 requires a step approver's decision (`/sf-decide bin-ashok`). No other rollout or data migration is required.
+The first required run used Node 26.12.0 and failed because its `localStorage` is incompatible with the test environment. Decision PAM-001 approved `.nvmrc` set to 22; the full local suite passed on Node 22.14.0 after the final changes. No other rollout or data migration is required.
 
 <!-- singularity-flow:inputs:start -->
 

@@ -1,3 +1,4 @@
+import assert from 'node:assert/strict';
 import { describe, it, expect, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -112,7 +113,7 @@ describe('App functional regression (all modes/features unchanged)', () => {
     render(<App />);
 
     await user.click(screen.getByTitle('Keyboard Shortcuts'));
-    expect(screen.getByText(/Keyboard Shortcuts/i)).toBeInTheDocument();
+    assert.equal(screen.getByText(/Keyboard Shortcuts/i).textContent, 'Keyboard Shortcuts');
   });
 
   it('toggles sound on and off', async () => {
@@ -122,6 +123,84 @@ describe('App functional regression (all modes/features unchanged)', () => {
     const soundToggle = screen.getByTitle(/Mute Sounds|Enable Key Sounds/);
     await user.click(soundToggle);
     expect(localStorage.getItem('apex_sound')).toBeDefined();
+  });
+});
+
+describe('binary conversion', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  // @ac:BIN-ASHOK:REQ-001 @ac:BIN-ASHOK:AC-001
+  it('converts the displayed positive whole number to binary', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+
+    await clickButton(container, '2');
+    await user.keyboard('{Enter}');
+    await user.click(screen.getByTitle('Convert to binary'));
+
+    expect(getResultText(container)).toBe('10');
+  });
+
+  // @ac:BIN-ASHOK:REQ-001
+  it('converts large displayed whole numbers without adding a numeric cap', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+
+    await user.keyboard('1000000000000000');
+    await user.keyboard('{Enter}');
+    await user.click(screen.getByTitle('Convert to binary'));
+
+    expect(getResultText(container)).toBe(BigInt('1000000000000000').toString(2));
+  });
+
+  // @ac:BIN-ASHOK:REQ-002
+  it.each([
+    ['zero', async (container) => clickButton(container, '0')],
+    ['negative', async (container) => {
+      await clickButton(container, '2');
+      await clickButton(container, '±');
+    }],
+    ['fractional', async (container) => {
+      await clickButton(container, '2');
+      await clickButton(container, '.');
+      await clickButton(container, '5');
+    }],
+    ['sub-unit fractional', async (container) => {
+      await clickButton(container, '0');
+      await clickButton(container, '.');
+      await clickButton(container, '5');
+    }],
+    ['empty', async (container) => {
+      await clickButton(container, 'AC');
+      expect(
+        container.querySelector('.calculator-display').querySelectorAll('div.font-mono')[1].textContent.trim()
+      ).toBe('');
+    }],
+    ['non-numeric', async (_container, user) => user.keyboard('s')],
+  ])('reports unsupported for %s input', async (_label, enterInput) => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+
+    await enterInput(container, user);
+    if (_label !== 'empty') await user.keyboard('{Enter}');
+    if (_label === 'negative') expect(getResultText(container)).toBe('-2');
+    await user.click(screen.getByTitle('Convert to binary'));
+
+    expect(getResultText(container)).toBe('not supported');
+  });
+
+  it('converts a positive whole number while in Scientific mode', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+
+    await user.selectOptions(screen.getAllByRole('combobox')[0], 'scientific');
+    await clickButton(container, '2');
+    await user.keyboard('{Enter}');
+    await user.click(screen.getByTitle('Convert to binary'));
+
+    expect(getResultText(container)).toBe('10');
   });
 });
 
@@ -185,8 +264,8 @@ describe('Windows 11 Fluent theme coverage across modes', () => {
 describe('Responsive navigation (desktop rail + mobile dropdown)', () => {
   it('renders both the desktop nav rail and the mobile dropdown markup', () => {
     const { container } = render(<App />);
-    expect(container.querySelector('.nav-rail')).toBeInTheDocument();
-    expect(container.querySelector('.nav-mobile')).toBeInTheDocument();
+    assert.equal(container.querySelector('.nav-rail') !== null, true);
+    assert.equal(container.querySelector('.nav-mobile') !== null, true);
   });
 
   it('keeps the mobile mode dropdown in sync with the active mode', async () => {

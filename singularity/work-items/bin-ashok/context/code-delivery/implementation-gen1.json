@@ -1,0 +1,394 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "bin-ashok",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "63e1e40f-552a-45fd-8962-aff56afa1eb4",
+  "changeSet": {
+    "path": "singularity/work-items/bin-ashok/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:be4c24f02053f9ec35c8dfa082bd8f23e0cffc33f10137a6313c96c5a2782b95",
+    "sourcePaths": [
+      "src/App.jsx",
+      "src/components/Display.jsx"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [
+      ".nvmrc"
+    ],
+    "executableTestPaths": [
+      "src/App.test.jsx"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "build-configuration": 1,
+      "product-source": 2,
+      "test-source": 1
+    },
+    "entries": [
+      {
+        "changeId": "sha256:fde8b995e5502a55312a5f0ea2312cb352075fff9e36be04293f33e2daf774ba",
+        "status": "added",
+        "oldPath": null,
+        "newPath": ".nvmrc",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:4ea66bf671e667a8777aeb38335a541c334efd26e2c1d1a45bf957c3430e8cd4",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:7fcbe0328a05741d1c1414ff8274a1db6b2431e367074192bd7f34da19728fe9",
+        "status": "modified",
+        "oldPath": "src/App.test.jsx",
+        "newPath": "src/App.test.jsx",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:9d48b0c15771e194a939977631bedd8c70aba4611fb4629669de32aec59ec95e",
+        "status": "modified",
+        "oldPath": "src/components/Display.jsx",
+        "newPath": "src/components/Display.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [],
+    "bound": [
+      "BIN-ASHOK:AC-001"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "BIN-ASHOK:AC-001",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "BIN-ASHOK:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "binary conversion"
+          ],
+          "name": "converts the displayed positive whole number to binary"
+        },
+        "logicalTestId": "sha256:b65055921679515b53a1534eaea32e8fb2909dff58f34115f679e35bad55f448",
+        "declarationSha256": "sha256:7f926f8cb206913005fc72e153d29c8c686c6eab35bc340fadc95be2cb10d530",
+        "supportSha256": null,
+        "assertions": {
+          "count": 1,
+          "tautological": 0,
+          "negative": false,
+          "boundary": false,
+          "nullability": false,
+          "adequacy": "adequate",
+          "subjects": [
+            "async",
+            "click",
+            "clickButton",
+            "getByTitle",
+            "getResultText",
+            "keyboard",
+            "render",
+            "setup"
+          ]
+        },
+        "line": 135,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "BIN-ASHOK:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx"
+        ]
+      },
+      {
+        "clauseId": "BIN-ASHOK:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/Display.jsx"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "BIN-ASHOK:REQ-001",
+        "sourcePath": "src/App.jsx",
+        "line": 133,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "BIN-ASHOK:REQ-001",
+        "sourcePath": "src/components/Display.jsx",
+        "line": 54,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "BIN-ASHOK:REQ-002",
+        "sourcePath": "src/App.jsx",
+        "line": 134,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "BIN-ASHOK:REQ-002",
+        "sourcePath": "src/components/Display.jsx",
+        "line": 55,
+        "tag": "clause"
+      }
+    ]
+  },
+  "fulfillment": {
+    "obligations": [
+      {
+        "clauseId": "BIN-ASHOK:AC-001",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/bin-ashok/evidence/binary-conversion-2.png",
+            "state": "present",
+            "sha256": "e3d7098beaaa919de59426a007ac8f8f789723ee070dcf18a5032511cd565ce9"
+          }
+        ]
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "BIN-ASHOK:REQ-001",
+        "explanation": {
+          "text": "Convert the displayed whole number to base 2.",
+          "path": "src/App.jsx",
+          "line": 133
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 133,
+                "afterLines": 46
+              },
+              {
+                "beforeStart": 253,
+                "beforeLines": 0,
+                "afterStart": 301,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 279,
+                "beforeLines": 0,
+                "afterStart": 328,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 15
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/Display.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 4,
+                "beforeLines": 0,
+                "afterStart": 5,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 51,
+                "beforeLines": 0,
+                "afterStart": 54,
+                "afterLines": 12
+              }
+            ],
+            "symbols": [
+              {
+                "name": "Display",
+                "kind": "function",
+                "line": 6
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "BIN-ASHOK:REQ-002",
+        "explanation": {
+          "text": "Reject values outside the positive whole-number domain.",
+          "path": "src/App.jsx",
+          "line": 134
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 131,
+                "beforeLines": 0,
+                "afterStart": 133,
+                "afterLines": 46
+              },
+              {
+                "beforeStart": 253,
+                "beforeLines": 0,
+                "afterStart": 301,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 279,
+                "beforeLines": 0,
+                "afterStart": 328,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 15
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/Display.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 4,
+                "beforeLines": 0,
+                "afterStart": 5,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 51,
+                "beforeLines": 0,
+                "afterStart": 54,
+                "afterLines": 12
+              }
+            ],
+            "symbols": [
+              {
+                "name": "Display",
+                "kind": "function",
+                "line": 6
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:56024990838c90ae59f1eff9835051df61e9307b691584e9634eebaffd1ebe14"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:4af003af4979797ce78b2f7347b08f9fb5758c9c9586ddbe896e3c258faaffbd",
+    "codeTreeSha256": "sha256:7fe05a1249b2d5aade0eb52b77c9a572655956b51aaea3dc371189c43cef666e",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-11-16T05:10:54.769Z"
+}

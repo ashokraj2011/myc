@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Copy, Check, Delete, RotateCcw } from 'lucide-react';
 import { playSound } from '../utils/audio';
 
+/** Render the shared calculator result and its display-level actions. */
 export const Display = ({
   expression,
   result,
@@ -11,6 +12,7 @@ export const Display = ({
   soundEnabled,
   onBackspace,
   onClear,
+  onConvertToBinary,
 }) => {
   const [copied, setCopied] = useState(false);
 
@@ -49,6 +51,18 @@ export const Display = ({
 
         {/* Display Utility Actions */}
         <div className="flex items-center gap-1.5">
+          {/* @clause:BIN-ASHOK:REQ-001 Converts the current displayed whole number. */}
+          {/* @clause:BIN-ASHOK:REQ-002 Reports unsupported displayed values. */}
+          <button
+            onClick={() => {
+              playSound('click', soundEnabled);
+              onConvertToBinary();
+            }}
+            title="Convert to binary"
+            className="px-2 py-1 rounded-lg u-hbg-btn-func-bg u-text-text-muted u-htext-text-main transition-colors text-xs font-semibold"
+          >
+            Binary
+          </button>
           <button
             onClick={() => {
               playSound('clear', soundEnabled);

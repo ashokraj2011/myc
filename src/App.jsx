@@ -11,6 +11,7 @@ import { KeyboardShortcutsModal } from './components/KeyboardShortcutsModal';
 import { evaluateExpression } from './utils/evaluator';
 import { playSound } from './utils/audio';
 
+/** Render the calculator modes and coordinate their shared calculation state. */
 export default function App() {
   const [activeMode, setActiveMode] = useState('standard');
   const [expression, setExpression] = useState('');
@@ -128,6 +129,52 @@ export default function App() {
       setHistory((prev) => [newEntry, ...prev.slice(0, 49)]); // Keep last 50 items
     }
   }, [expression, angleUnit]);
+
+  // @clause:BIN-ASHOK:REQ-001 Convert the displayed whole number to base 2.
+  // @clause:BIN-ASHOK:REQ-002 Reject values outside the positive whole-number domain.
+  const handleConvertToBinary = useCallback(() => {
+    const displayedValue = result.trim().replaceAll(',', '');
+    const match = displayedValue.match(/^(\d+)(?:\.(\d+))?(?:e([+-]?\d+))?$/i);
+
+    if (!match) {
+      setResult('not supported');
+      setLastEvaluated(true);
+      return;
+    }
+
+    const fraction = match[2] || '';
+    const exponent = Number(match[3] || 0);
+    const digits = `${match[1]}${fraction}`.replace(/^0+/, '');
+    const scale = exponent - fraction.length;
+
+    if (!digits) {
+      setResult('not supported');
+      setLastEvaluated(true);
+      return;
+    }
+
+    let integerDigits = digits;
+
+    if (scale < 0) {
+      const decimalPlaces = -scale;
+      if (decimalPlaces >= digits.length) {
+        setResult('not supported');
+        setLastEvaluated(true);
+        return;
+      }
+      if (decimalPlaces < digits.length && /[1-9]/.test(digits.slice(-decimalPlaces))) {
+        setResult('not supported');
+        setLastEvaluated(true);
+        return;
+      }
+      integerDigits = digits.slice(0, digits.length - decimalPlaces);
+    } else {
+      integerDigits += '0'.repeat(scale);
+    }
+
+    setResult(BigInt(integerDigits).toString(2));
+    setLastEvaluated(true);
+  }, [result]);
 
   const handleMemory = useCallback(
     (type) => {
@@ -251,6 +298,7 @@ export default function App() {
               soundEnabled={soundEnabled}
               onBackspace={handleBackspace}
               onClear={handleClear}
+              onConvertToBinary={handleConvertToBinary}
             />
             <StandardKeypad
               onDigit={handleDigit}
@@ -277,6 +325,7 @@ export default function App() {
               soundEnabled={soundEnabled}
               onBackspace={handleBackspace}
               onClear={handleClear}
+              onConvertToBinary={handleConvertToBinary}
             />
             <ScientificKeypad
               onDigit={handleDigit}
