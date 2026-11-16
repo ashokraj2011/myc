@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "phase": "implementation",
+  "generation": 1,
+  "reportSha256": "c186f5d83443384ffc25e71f57c7e325346446591139cc3943e2702e88a32da2",
+  "lifecycleEventId": "47c8ccc7-bae0-49d4-8dbe-4a5c04217d80",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "code",
+    "binding": {
+      "workId": "bin-ashok",
+      "phase": "implementation",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "code:src:App.jsx",
+          "path": "src/App.jsx",
+          "textSha256": "730541f4cfc704994f8f9d40c87dd48ceac94f588503214d3c98de501c6c0f2c"
+        },
+        {
+          "id": "code:src:App.test.jsx",
+          "path": "src/App.test.jsx",
+          "textSha256": "d0569df803e1ce603ad5c6d8bf5cb04477f4ac69e2d609b30245a835cabe4393"
+        },
+        {
+          "id": "code:src:components:Display.jsx",
+          "path": "src/components/Display.jsx",
+          "textSha256": "a9768cbbb927138e1b0742f6d0d2ef99ec6695d86a79de23ed4e0f9828a3e465"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/bin-ashok/artifacts/implementation/implementation-summary.md",
+        "sha256": "b2f14a8b55497b1c29cbfb80e5926e2c7bfc7f6ad2ab05ccc4f600d9443b808c"
+      },
+      "plan": {
+        "path": "singularity/work-items/bin-ashok/artifacts/planning/plan.md",
+        "sha256": "ad8cd11c4c5c35a6e0c7bbee7cfd344f4376ab996b015a1a5772bc06b92a4309"
+      },
+      "evidenceSha256": "0bf33916f550736987c65690e168a4d3391edc0ef2a8ded9b562163f366d92bc"
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "code:src:App.jsx",
+      "code:src:App.test.jsx",
+      "code:src:components:Display.jsx"
+    ],
+    "rows": [
+      {
+        "clauseId": "BIN-ASHOK:AC-001",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:Display.jsx",
+            "line": 61,
+            "quote": "title=\"Convert to binary\""
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:src:App.test.jsx",
+            "line": 135,
+            "quote": "it('converts the displayed positive whole number to binary', async () => {"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "BIN-ASHOK:REQ-001",
+        "implementation": [
+          {
+            "sourceId": "code:src:App.jsx",
+            "line": 135,
+            "quote": "const handleConvertToBinary = useCallback(() => {"
+          },
+          {
+            "sourceId": "code:src:components:Display.jsx",
+            "line": 61,
+            "quote": "title=\"Convert to binary\""
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:src:App.test.jsx",
+            "line": 135,
+            "quote": "it('converts the displayed positive whole number to binary', async () => {"
+          }
+        ],
+        "assessment": "not-implemented",
+        "testAssessment": "does-not-prove"
+      },
+      {
+        "clauseId": "BIN-ASHOK:REQ-002",
+        "implementation": [
+          {
+            "sourceId": "code:src:App.jsx",
+            "line": 177,
+            "quote": "  }, [result]);"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:src:App.test.jsx",
+            "line": 158,
+            "quote": "  // @ac:BIN-ASHOK:REQ-002"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      }
+    ],
+    "unplannedPaths": [],
+    "qualityReviewed": [],
+    "findings": [
+      {
+        "id": "BIN-ASHOK-IMPL-REQ001-ACTIVE",
+        "severity": "blocking",
+        "check": "plan",
+        "clauseId": "BIN-ASHOK:REQ-001",
+        "sourceId": "code:src:App.jsx",
+        "line": 177,
+        "quote": "  }, [result]);",
+        "message": "Plan row BIN-ASHOK:REQ-001 names src/App.jsx and says to use the active value while a number is being entered, otherwise the evaluated result. This handler reads only result. For example, entering 2 and activating Binary before pressing equals reads the initial result 0 and reports unsupported rather than converting the displayed positive whole number. Thus an implementation can follow the existing converted-result test yet fail the planned current-display behavior."
+      },
+      {
+        "id": "BIN-ASHOK-IMPL-REQ001-ACTIVE-TEST",
+        "severity": "blocking",
+        "check": "tests",
+        "clauseId": "BIN-ASHOK:REQ-001",
+        "sourceId": "code:src:App.test.jsx",
+        "line": 136,
+        "quote": "    const user = userEvent.setup();",
+        "message": "The planned src/App.test.jsx test only exercises conversion after equals (line 141 presses Enter before Binary), so it does not prove conversion of the current entered/displayed value before evaluation. The uncovered case exposes the same REQ-001 gap: the implementation reads the stale result rather than the active expression."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "717dabbe1d71dc4ece8ae0d2b9d20e66e4a59ab36c63301e5f1d6bed0dc3111a",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": null,
+      "githubLookup": "not-checked"
+    },
+    "authorAgentId": "developer",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-16T05:23:51.698Z",
+  "recordSha256": "d43fe84dd4bb0ea1d3406c1db57291518e0203c4822dbfb55277de5a35cb1461"
+}
