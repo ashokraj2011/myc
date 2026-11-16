@@ -133,7 +133,9 @@ export default function App() {
   // @clause:BIN-ASHOK:REQ-001 Convert the displayed whole number to base 2.
   // @clause:BIN-ASHOK:REQ-002 Reject values outside the positive whole-number domain.
   const handleConvertToBinary = useCallback(() => {
-    const displayedValue = result.trim().replaceAll(',', '');
+    // While a number is being entered the active expression is the displayed value.
+    const activeValue = !lastEvaluated && expression.trim() ? expression : result;
+    const displayedValue = activeValue.trim().replaceAll(',', '');
     const match = displayedValue.match(/^(\d+)(?:\.(\d+))?(?:e([+-]?\d+))?$/i);
 
     if (!match) {
@@ -174,7 +176,7 @@ export default function App() {
 
     setResult(BigInt(integerDigits).toString(2));
     setLastEvaluated(true);
-  }, [result]);
+  }, [expression, lastEvaluated, result]);
 
   const handleMemory = useCallback(
     (type) => {

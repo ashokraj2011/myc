@@ -4,7 +4,7 @@
   "workId": "bin-ashok",
   "workType": "spec-driven-standard",
   "phase": "implementation",
-  "generation": 1,
+  "generation": 2,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "implementation-summary.md",
       "mediaType": "text/markdown",
-      "sha256": "8eea85bef2cbd0abdb1766bb5207fb748cd47fb7e9f71204fcec631383045430",
-      "bytes": 2931
+      "sha256": "460c2e4ee1b6e6c4ddde3febf26fd5731d551cb68b5b4abf0182cf56c61f40d2",
+      "bytes": 3125
     },
-    "generation": 1,
-    "publishedAt": "2026-11-16T05:10:54.769Z"
+    "generation": 2,
+    "publishedAt": "2026-11-16T10:49:09.011Z"
   },
-  "sourceCommit": "21259770e9d1ab2b1ca148e9a5a96582a29b00e1",
+  "sourceCommit": "20198f1024a5ea222c5f5fab60a910157533f37b",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "68f507ba55c1ea3dcdbe2248e78a71bf606ed208c168257d02cefff1b453f597",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/common/implementation.md"
   },
   "inputs": {
-    "generation": 1,
-    "path": "singularity/work-items/bin-ashok/context/inputs-implementation-gen1.json",
-    "sha256": "80761d69a1a7bc1a71897b3585905b9cb60a27d7aed1a5f92b81cdab2d44f2d2",
+    "generation": 2,
+    "path": "singularity/work-items/bin-ashok/context/inputs-implementation-gen2.json",
+    "sha256": "a95247b23326a5ce2bb7ae6113b9b86db246b835c987cce961cba8a928ef82b8",
     "renderedSha256": "34528358e756cbef809ca9f8cd8c309b5a8250459b10b43e0b34812e9a7730b2",
     "mode": "enforce"
   },
@@ -92,6 +92,26 @@
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 2,
+      "path": "singularity/work-items/bin-ashok/telemetry/implementation-gen2.json",
+      "sha256": "baaa733bc95ac39b367dffba1f560f5afeb4732966a81efe7f3da3d26257adc6",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 30838,
+        "estimatedTokens": 7710,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 30838,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
     }
   ],
   "remoteOutputs": [],
@@ -116,6 +136,27 @@
       "completedAt": "2026-11-16T05:10:54.769Z",
       "agent": "developer",
       "generation": 1
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-16T10:49:09.011Z",
+      "completedAt": "2026-11-16T10:49:09.011Z",
+      "agent": "developer",
+      "generation": 2
     }
   ],
   "sequenceOverrides": [],
@@ -129,22 +170,22 @@
 
 ## Agent brief
 
-Added a shared Binary action to the calculator display in Standard and Scientific modes. It converts the displayed positive whole number to base 2, including grouped and scientific-notation integer displays, and reports “not supported” for zero, negative, fractional, empty, or invalid results. Focused interactions and the full suite passed on Node 22; the retained screenshot shows `2` converted to `10`. Decision PAM-001 added `.nvmrc` to pin Node 22 for the Vitest environment.
+Added a shared Binary action to the calculator display in Standard and Scientific modes. It converts the displayed positive whole number to base 2, including grouped and scientific-notation integer displays, and reports “not supported” for zero, negative, fractional, empty, or invalid results. Generation 2 answers the source review: the action now reads the number being entered (the active expression) before equals is pressed, and the evaluated result afterwards. Focused interactions and the full suite passed on Node 22; the retained screenshot shows `2` converted to `10`. Decision PAM-001 added `.nvmrc` to pin Node 22 for the Vitest environment.
 
 ## Implemented outcome
 
-The calculator now converts the current result display to binary and replaces the result with the conversion. Unsupported values display the specified “not supported” message.
+The calculator now converts the current displayed value to binary (the active entry, or the result once evaluated) and replaces the result with the conversion. Unsupported values display the specified “not supported” message.
 
 ## Changed components and decisions
 
-`src/App.jsx` owns validation and conversion, using `BigInt` so the result is not constrained by JavaScript's safe-integer range; it recognizes grouped and exponent-form displays without adding an input cap. Qualified `@clause:BIN-ASHOK:REQ-001` and `@clause:BIN-ASHOK:REQ-002` comments bind the behavior. `src/components/Display.jsx` adds the shared accessible Binary button. `src/App.test.jsx` covers positive conversion, larger values, both display modes, and all unsupported categories. `.nvmrc` pins Node 22 as approved by decision PAM-001 and recorded as a supporting build-configuration change. No migration or external service changes.
+`src/App.jsx` owns validation and conversion, using `BigInt` so the result is not constrained by JavaScript's safe-integer range; it recognizes grouped and exponent-form displays without adding an input cap. Qualified `@clause:BIN-ASHOK:REQ-001` and `@clause:BIN-ASHOK:REQ-002` comments bind the behavior. `src/components/Display.jsx` adds the shared accessible Binary button (title and explicit `aria-label`, so it is announced as "Convert to binary" rather than only "Binary"). `src/App.test.jsx` covers positive conversion (before and after equals), larger values, both display modes, and all unsupported categories. `.nvmrc` pins Node 22 as approved by decision PAM-001 and recorded as a supporting build-configuration change. No migration or external service changes.
 
 ## Tests and operational notes
 
 `src/App.test.jsx` tags the positive conversion interaction with `@ac:BIN-ASHOK:REQ-001` and `@ac:BIN-ASHOK:AC-001`, and unsupported cases with `@ac:BIN-ASHOK:REQ-002`.
 
 - `PATH=/opt/homebrew/opt/node@22/bin:$PATH npm test -- --run src/App.test.jsx` — 26 tests passed before the final test-only assertions.
-- `PATH=/opt/homebrew/opt/node@22/bin:$PATH npm test` — 40 tests passed across 3 files after the final changes.
+- `PATH=/opt/homebrew/opt/node@22/bin:$PATH npm test` — 42 tests passed across 3 files after the generation 2 changes (new tests tagged `@ac:BIN-ASHOK:REQ-001` convert `2` entered without pressing equals and find the button by its accessible name).
 - `PATH=/opt/homebrew/opt/node@22/bin:$PATH npm run build` — passed; Vite reported the existing large-chunk advisory.
 - `npm run lint` — failed on repository lint errors, including pre-existing unused React imports and unrelated component errors; no automatic fixes were applied.
 - Browser check — entered `2`, evaluated it, activated Binary, and observed display `2` / `10`; retained at `singularity/work-items/bin-ashok/evidence/binary-conversion-2.png`.

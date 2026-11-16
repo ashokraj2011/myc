@@ -144,6 +144,24 @@ describe('binary conversion', () => {
   });
 
   // @ac:BIN-ASHOK:REQ-001
+  it('converts the number being entered before equals is pressed', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<App />);
+
+    await clickButton(container, '2');
+    await user.click(screen.getByTitle('Convert to binary'));
+
+    expect(getResultText(container)).toBe('10');
+  });
+
+  // @ac:BIN-ASHOK:REQ-001
+  it('exposes the binary action by its accessible name', () => {
+    render(<App />);
+
+    expect(screen.getByRole('button', { name: 'Convert to binary' })).toBeTruthy();
+  });
+
+  // @ac:BIN-ASHOK:REQ-001
   it('converts large displayed whole numbers without adding a numeric cap', async () => {
     const user = userEvent.setup();
     const { container } = render(<App />);

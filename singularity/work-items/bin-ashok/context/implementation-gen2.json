@@ -1,0 +1,454 @@
+{
+  "schemaVersion": 7,
+  "workId": "bin-ashok",
+  "phase": "implementation",
+  "generation": 2,
+  "agent": "developer",
+  "modelCommit": null,
+  "matchedRules": 0,
+  "mode": "off",
+  "applied": false,
+  "depth": "standard",
+  "evidence": false,
+  "groundingAvailability": {
+    "status": "unavailable",
+    "reasonCode": "WORLD_MODEL_GROUNDING_DISABLED"
+  },
+  "sourceComparison": {
+    "status": "unavailable",
+    "reasonCode": "WORLD_MODEL_GROUNDING_DISABLED"
+  },
+  "requiredViews": [],
+  "requiredSelections": [],
+  "task": null,
+  "supportingEvidence": [],
+  "references": [],
+  "modelSourceTreeSha256": null,
+  "composedSourceTreeSha256": null,
+  "worldModelCommit": null,
+  "manifestSha256": null,
+  "fresh": true,
+  "renderedSha256": "5f429d4d39400c914243219561d14c979e4f7cf5fef2078fb3e5f69257a96a5a",
+  "promptStudy": null,
+  "promptDefinition": null,
+  "structuralContext": null,
+  "workSource": {
+    "path": "singularity/work-items/bin-ashok/source.json",
+    "sha256": "93d767683e80e8d3f9086b46e8fdb789f76f6354396862000ecb2e3bd095b1c1",
+    "bytes": 1056
+  },
+  "promptBudget": {
+    "policy": {
+      "mode": "observe",
+      "profile": "standard",
+      "maximumBytes": 72000,
+      "maximumEstimatedPromptTokens": 18000,
+      "policyOnBudgetBreach": "refuse",
+      "assurance": "estimated-prompt-text"
+    },
+    "admission": {
+      "model": null,
+      "logicalPromptBytes": 30838,
+      "logicalPromptTokens": {
+        "value": 7710,
+        "assurance": "estimated"
+      },
+      "systemAndToolReserveTokens": {
+        "value": null,
+        "assurance": "unavailable"
+      },
+      "historyTokens": {
+        "value": null,
+        "assurance": "unavailable"
+      },
+      "totalAdmissionTokens": {
+        "value": 7710,
+        "assurance": "partial"
+      },
+      "maximumInputTokens": 18000,
+      "safeToEnforce": false,
+      "admitted": null,
+      "policyApprovedConservativeUpperBound": false
+    },
+    "compliance": "compliant",
+    "originalBytes": 30838,
+    "originalEstimatedTokens": 7710,
+    "finalBytes": 30838,
+    "finalEstimatedTokens": 7710,
+    "overflow": false,
+    "warnings": [],
+    "economics": {
+      "prompt": {
+        "candidatePromptBytes": 30838,
+        "deduplicatedPromptBytes": 1473,
+        "budgetEvictedPromptBytes": 0,
+        "finalPromptBytes": 30838,
+        "tkrCandidatePromptBytes": null,
+        "tkrCandidateByteDelta": null,
+        "tkrCandidateAssurance": "unavailable",
+        "clauseInputBytesSaved": 1114
+      },
+      "provider": {
+        "inputTokens": null,
+        "cachedInputTokens": null,
+        "uncachedInputTokens": null,
+        "assurance": "unavailable"
+      },
+      "system": {
+        "totalSystemTokens": null,
+        "assurance": "unavailable"
+      },
+      "source": {
+        "sourceBytes": 32784,
+        "authoredSourceBytes": 9428,
+        "managedSourceBytesExcluded": 23356,
+        "managedReferenceBytesExcluded": 0,
+        "deliveredSourceBytes": 6022,
+        "assurance": "sflow-measured"
+      }
+    },
+    "sections": [
+      {
+        "id": "phase-contract",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 7829,
+        "estimatedTokens": 1958,
+        "sha256": "9a928a5057fa4240b03705194ec1906ab0913bf3af14af4f2cac568c17eabd77",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "approved-phase-inputs",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 7314,
+        "estimatedTokens": 1829,
+        "sha256": "e381914b2be1ca6ed942716931a169b0f34851791dfaf08b86482ba5d9fdc1c3",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "work-source",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 1277,
+        "estimatedTokens": 320,
+        "sha256": "d05e4089955423cb2cd121a11b513022f15c81c40a4a76f2076fcc2414364f7d",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "active-clause-capsule",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 1597,
+        "estimatedTokens": 400,
+        "sha256": "d17a69ad1aadc519692eb1bc1c064fa633aa83c65e25ccbc04abce4ead15d0ce",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "clarification-protocol",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 3472,
+        "estimatedTokens": 868,
+        "sha256": "ed803e3e0a2fda9b871e08c4c5a84f976167f4950e0708dfcbfcd27946041639",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "governed-agent-policy",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 2646,
+        "estimatedTokens": 662,
+        "sha256": "a81eccc7376512a395e9d4c2d31b741cb67c47080d311feb947d0eef62eb76c2",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "pinned-constitution",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 279,
+        "estimatedTokens": 70,
+        "sha256": "c2bca305dec54257e342fd76fd3ba28043e73a0c8df132fcba273acddcfc4fe9",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "world-model-grounding",
+        "mandatory": false,
+        "priority": 40,
+        "bytes": 2632,
+        "estimatedTokens": 658,
+        "sha256": "9651e337ca036a4b35b771f17d9625b477ea025958663db36eaa89d81cbbcd2a",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "governed-execution-evidence",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 2157,
+        "estimatedTokens": 540,
+        "sha256": "3a368d8816653707be039b6458a9edab0f2d26128ce822a1d0adb7b1737cf1e1",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "evidence-consistency",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 1275,
+        "estimatedTokens": 319,
+        "sha256": "5fd8db811072b426885508e3deb2ec7bb97cb789b52ea8832cfb55e29ded43e5",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "final-clarification-guard",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 339,
+        "estimatedTokens": 85,
+        "sha256": "e951a378c432c51ebc93eb163c2d955fd672ac2bd081511737e92119df23d5b0",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      }
+    ],
+    "omitted": [],
+    "tokenReduction": {
+      "mode": "shadow",
+      "record": {
+        "kind": "tkr/shadow-evaluation",
+        "version": 1,
+        "status": "unavailable",
+        "scope": {
+          "workId": "bin-ashok",
+          "phase": "implementation",
+          "generation": 2,
+          "sourceRevision": null,
+          "configurationSha256": "68f507ba55c1ea3dcdbe2248e78a71bf606ed208c168257d02cefff1b453f597",
+          "executionMode": "workflow-snapshot"
+        },
+        "code": "TKR_CONTRACT_UNSUPPORTED",
+        "diagnosticSha256": "sha256:bbc1b387ff023d8937e8a5b0c40df298562be324edfc06f94b67a2867c751bce",
+        "delivery": {
+          "state": "shadow-not-delivered",
+          "candidateDelivered": false
+        },
+        "receiptSha256": null,
+        "shadowSha256": "sha256:59aef8eb8802a48907044d75d63fd584239aee26a6f1cc0f5fbe2fe178d5879e"
+      }
+    },
+    "deduplicatedReferences": [
+      {
+        "handle": "sfref:v1:story:bin-ashok:8716f73d0e396368205a2302962c72952935dbad609bc6af0ed30bf86e61b6e1",
+        "path": "singularity/work-items/bin-ashok/artifacts/specification/spec.md",
+        "rawSha256": "061479461f94369fa5584eddc8703b40f3e17559311e3f8b039f5468ca843814",
+        "rawBytes": 7944,
+        "previewBytes": 624,
+        "reason": "same-governed-reference-handle"
+      },
+      {
+        "handle": "sfref:v1:story:bin-ashok:b7bf9ac451b41b94af43b4a3dd26d1d243dc14fde3a34e3ccb3f46c936502eec",
+        "path": "singularity/work-items/bin-ashok/artifacts/planning/plan.md",
+        "rawSha256": "cf386f26f89a6418313979a8e427992839c0d845c573f84518389532c6374a90",
+        "rawBytes": 13971,
+        "previewBytes": 849,
+        "reason": "same-governed-reference-handle"
+      }
+    ],
+    "inputLinearization": {
+      "sourceBytes": 32784,
+      "authoredBytes": 9428,
+      "managedBytesExcluded": 23356,
+      "injectedBytes": 7136
+    },
+    "inputProjection": {
+      "renderer": "approved-inputs-v3",
+      "capsuleSha256": "sha256:3672672fa9a7864129eb3f50507b4b505d1b73b128c7d8c984a329ebd4543abb",
+      "originalSha256": "34528358e756cbef809ca9f8cd8c309b5a8250459b10b43e0b34812e9a7730b2",
+      "renderedSha256": "9a361f4160a49589001229066099fc832838f38055697afb731f006250bde90c",
+      "originalBytes": 8839,
+      "renderedBytes": 6937,
+      "originalContentBytes": 7136,
+      "renderedContentBytes": 6022,
+      "savedBytes": 1114,
+      "metadataBytesSaved": 788,
+      "inputs": [
+        {
+          "phase": "specification",
+          "path": "singularity/work-items/bin-ashok/artifacts/specification/spec.md",
+          "sourceSha256": "c9b06c94530860cfb64847e4e7da24c25d7e7b5554025dcca543aee4df5fc708",
+          "briefSha256": "ae9ce2619901ccb1bddeacfa647432b9d6815651ff40b19d28eb6dbe7ae189a8",
+          "originalSha256": "sha256:ae9ce2619901ccb1bddeacfa647432b9d6815651ff40b19d28eb6dbe7ae189a8",
+          "renderedSha256": "sha256:07493c03acd4f9fccc30ad523e9ff57677d891ebb54fc0be3984b6548bf6e430",
+          "deduplicatedClauseIds": [
+            "BIN-ASHOK:REQ-001",
+            "BIN-ASHOK:REQ-002",
+            "BIN-ASHOK:AC-001"
+          ],
+          "savedBytes": 803
+        },
+        {
+          "phase": "planning",
+          "path": "singularity/work-items/bin-ashok/artifacts/planning/plan.md",
+          "sourceSha256": "8a9d67e68909db43008a7a52d8521e332a23d11fa267035700f411d3ec60db72",
+          "briefSha256": "d516462d1a856166b2d2b0e929b2ab0184b80aec61d425fd7d3ae01d2d434cbe",
+          "originalSha256": "sha256:d516462d1a856166b2d2b0e929b2ab0184b80aec61d425fd7d3ae01d2d434cbe",
+          "renderedSha256": "sha256:0a53e88c762015f5f53aca2a26892e047ce4716e66c68f300becf7edce97f5e9",
+          "deduplicatedClauseIds": [],
+          "savedBytes": 311
+        }
+      ]
+    },
+    "inputDigests": [
+      {
+        "phase": "specification",
+        "path": "singularity/work-items/bin-ashok/artifacts/specification/spec.md",
+        "status": "captured",
+        "sha256": "c9b06c94530860cfb64847e4e7da24c25d7e7b5554025dcca543aee4df5fc708",
+        "briefSha256": "ae9ce2619901ccb1bddeacfa647432b9d6815651ff40b19d28eb6dbe7ae189a8"
+      },
+      {
+        "phase": "planning",
+        "path": "singularity/work-items/bin-ashok/artifacts/planning/plan.md",
+        "status": "captured",
+        "sha256": "8a9d67e68909db43008a7a52d8521e332a23d11fa267035700f411d3ec60db72",
+        "briefSha256": "d516462d1a856166b2d2b0e929b2ab0184b80aec61d425fd7d3ae01d2d434cbe"
+      }
+    ],
+    "stakeholderProjection": {
+      "renderer": "stakeholder-requests-v2",
+      "referencedRequestIds": [],
+      "requests": [],
+      "capsuleBytesSaved": 0
+    },
+    "executionEvidence": {
+      "projectionSha256": "sha256:5853b76e8152a2a5f18e3b8bef39d1e0b2d019d9ea5377c02bd475a06ae6bb8e",
+      "packets": 2,
+      "omittedPackets": 0,
+      "diagnostics": []
+    },
+    "evidenceConsistency": {
+      "projectionSha256": "sha256:d640228cb774e690c37008922ff1ec3cadff49d654bb9f6f9ccd6673e4ed8d65"
+    },
+    "skillLoading": [],
+    "structuralContext": null,
+    "referenceRepositories": [],
+    "workSource": {
+      "path": "singularity/work-items/bin-ashok/source.json",
+      "sha256": "93d767683e80e8d3f9086b46e8fdb789f76f6354396862000ecb2e3bd095b1c1",
+      "bytes": 1056
+    },
+    "activeClauseCapsule": {
+      "renderer": "clause-capsule-v4",
+      "renderedSha256": "sha256:d17a69ad1aadc519692eb1bc1c064fa633aa83c65e25ccbc04abce4ead15d0ce",
+      "sha256": "sha256:3672672fa9a7864129eb3f50507b4b505d1b73b128c7d8c984a329ebd4543abb",
+      "clauses": 3,
+      "openRisks": 0,
+      "clarifications": 0,
+      "clauseRevisions": [
+        {
+          "id": "BIN-ASHOK:AC-001",
+          "statementSha256": "d5d3f02d2c1b6853980f8298c70276d914c043bf34d771a400ed059f4c6798d3"
+        },
+        {
+          "id": "BIN-ASHOK:REQ-001",
+          "statementSha256": "16b98cd88622e5f02fbaf372f48ab8bd9e9456c4a571c1ed643c6a4fd9444064"
+        },
+        {
+          "id": "BIN-ASHOK:REQ-002",
+          "statementSha256": "da426226fafb545d900985bf485eef74d837d94cf06b01abaeab053c9c1b37c4"
+        }
+      ]
+    }
+  },
+  "persistedGrounding": null,
+  "tokenReduction": null,
+  "repositoryBrief": {
+    "renderer": "repository-brief@1",
+    "profile": "implementation",
+    "budget": 3072,
+    "bytes": 2632,
+    "records": [
+      "K-impact-855247353be7",
+      "K-impact-6c356c72eba4",
+      "R-967392389819",
+      "R-8263dd61a5b6",
+      "R-593066d4a9cd",
+      "R-337efba73b74",
+      "C-d7c1d8dc4f33",
+      "K-risk-4d2b06fb119c",
+      "K-risk-f50777a9b294",
+      "K-risk-f01ff154b41f",
+      "K-risk-0a5d699b94d8",
+      "K-risk-025426acb0cd",
+      "K-risk-89c6e806de77",
+      "K-risk-38cb025e931a",
+      "K-risk-da068a1f6f56",
+      "K-risk-c4e46c9c5245",
+      "K-risk-16bbb497208e",
+      "K-risk-ad8c5c86bc62",
+      "K-risk-1ca579056eae",
+      "K-risk-17402767e37b",
+      "K-risk-c5c466a7639c",
+      "K-risk-98473ac47c5e",
+      "K-risk-eb42fde1e718"
+    ],
+    "omitted": 30,
+    "phrasing": {
+      "by": "template"
+    }
+  },
+  "remoteSkills": [],
+  "executionContext": {
+    "mode": "workflow-snapshot",
+    "snapshotHash": "sha256:4eb86179cd6b5dc324e4aaef929223ab3eb462e73b28f5352dcb7d80a20cf06e",
+    "agentId": "developer",
+    "agentBlobSha256": "sha256:a88a659a79439033c4eb7f43fee9223fe9cf10c013265bbe33fb08da3196047b",
+    "dependencies": [],
+    "instructions": [],
+    "parserProfile": "sflow-agent-document-v1",
+    "composerProfile": "story-snapshot-agent-v1",
+    "overrideSha256": null
+  },
+  "compositionCache": {
+    "key": "ab36ee061f665ee0f47a5c279cbe63750834d7e861eda0d5633185938e6652e7",
+    "promptSha256": "5f429d4d39400c914243219561d14c979e4f7cf5fef2078fb3e5f69257a96a5a"
+  },
+  "scopeRevision": {
+    "revision": 1,
+    "revisionSha256": "sha256:a40f6336d3486089affd115a306112ccd83360c0c47c45c0aa70a49e5c595a51",
+    "amendment": null
+  },
+  "promptPath": "singularity/work-items/bin-ashok/context/prompts/implementation-gen2.md",
+  "files": [],
+  "injectedAt": "2026-11-16T10:20:44.809Z"
+}

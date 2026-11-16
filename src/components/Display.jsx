@@ -59,6 +59,7 @@ export const Display = ({
               onConvertToBinary();
             }}
             title="Convert to binary"
+            aria-label="Convert to binary"
             className="px-2 py-1 rounded-lg u-hbg-btn-func-bg u-text-text-muted u-htext-text-main transition-colors text-xs font-semibold"
           >
             Binary
