@@ -18,4 +18,5 @@
 
 ## Recent history
 
+- 2026-11-17T22:19:25.781Z — **decision_settled** (specification) by ashokraj2011: STL-001 (story-selection) settled by SFlow: Opened new-grapj: the only Story whose branch, new-grapj, is checked out where this session runs. Evidence: new-grapj is new-grapj's own branch, recorded in its Story record (singularity/work-items/new-grapj/workflow.json on new-grapj); no other Story records a branch checked out where this session runs (the session's checkout)
 - 2026-11-17T22:18:27.602Z — **work_started** (specification) by ashokraj2011 · agent product-owner: Created spec-driven-standard branch new-grapj
