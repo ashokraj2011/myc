@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "phase": "verification",
+  "generation": 1,
+  "reportSha256": "ce15f643329d667cbdef6831b93d183b6bb13ade6cdf5a3a506039d3960311cf",
+  "lifecycleEventId": "feeafbb1-a24f-4684-b203-48645ec948ea",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "bin-ashok",
+      "phase": "verification",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/bin-ashok/artifacts/implementation/implementation-summary.md",
+          "textSha256": "460c2e4ee1b6e6c4ddde3febf26fd5731d551cb68b5b4abf0182cf56c61f40d2"
+        },
+        {
+          "id": "input:planning",
+          "path": "singularity/work-items/bin-ashok/artifacts/planning/plan.md",
+          "textSha256": "ad8cd11c4c5c35a6e0c7bbee7cfd344f4376ab996b015a1a5772bc06b92a4309"
+        },
+        {
+          "id": "input:specification",
+          "path": "singularity/work-items/bin-ashok/artifacts/specification/spec.md",
+          "textSha256": "c00737060e5b42b9bd72a212d16a759a723bd450cb626fd46e7bc12540cb6f61"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/bin-ashok/USER-STORY.md",
+          "textSha256": "11e98c62ae19129902fe888e4df27ab2b2b09a141c0fcf81cfca32eafd6d7474",
+          "originalSha256": "93d767683e80e8d3f9086b46e8fdb789f76f6354396862000ecb2e3bd095b1c1"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/bin-ashok/artifacts/verification/test-evidence.md",
+        "sha256": "87d2d95604e89e05a3d239d76fa2f13ee7aca93472b0b7fd2a827c5a6a938cb7"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:specification",
+      "input:planning",
+      "input:implementation"
+    ],
+    "rows": [
+      {
+        "id": "story-outcome",
+        "sourceId": "story",
+        "line": 7,
+        "quote": "create a binary conversion button in calc .It shoul take a positive non decimal value and convert to its binary form",
+        "outcome": "consistent"
+      },
+      {
+        "id": "spec-domain",
+        "sourceId": "input:specification",
+        "line": 5,
+        "quote": "Add a binary conversion button to the calculator. It converts the current displayed positive whole number to base 2 and displays the result. For inputs outside that domain (zero, negative, fractional, empty, or non-numeric), the calculator says “not supported.” The required visual acceptance is an app screenshot showing 2 converted to 10. This specification covers the calculator UI only; it defines no roles, external services, numeric maximum, or additional conversion modes.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "plan-verification",
+        "sourceId": "input:planning",
+        "line": 5,
+        "quote": "Add a binary-conversion action to the shared calculator display, with conversion and input validation owned by `src/App.jsx`. The display is shared by Standard and Scientific modes, so one control serves both without duplicating UI. Add focused App interaction tests for positive whole-number conversion and every unsupported input category. Retain the required screenshot at `singularity/work-items/bin-ashok/evidence/binary-conversion-2.png` and review it visually. Principal risks are validating formatted calculator output without introducing an undocumented numeric cap, and keeping normal arithmetic behavior unchanged. This plan serves [BIN-ASHOK:REQ-001], [BIN-ASHOK:REQ-002], and [BIN-ASHOK:AC-001].",
+        "outcome": "consistent"
+      },
+      {
+        "id": "implementation-tests",
+        "sourceId": "input:implementation",
+        "line": 20,
+        "quote": "- `PATH=/opt/homebrew/opt/node@22/bin:$PATH npm test` — 42 tests passed across 3 files after the generation 2 changes (new tests tagged `@ac:BIN-ASHOK:REQ-001` convert `2` entered without pressing equals and find the button by its accessible name).",
+        "outcome": "consistent"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "717dabbe1d71dc4ece8ae0d2b9d20e66e4a59ab36c63301e5f1d6bed0dc3111a",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-17T09:35:38.215Z",
+  "recordSha256": "0278f64984c67c5d7c6f8718e7dc28feb271ab629e0e680c6cb8cebdf0b0774a"
+}
