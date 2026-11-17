@@ -74,7 +74,13 @@
       {
         "clauseId": "BIN-ASHOK:AC-001",
         "testSource": "src/App.test.jsx",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": ".-node-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       }
     ],
     "witnesses": [
@@ -304,12 +310,20 @@
     ],
     "bindingsSha256": "sha256:94ac34465c92fc7dc8f5696ff97487b89dc003d43c68dee97faac9d840e33adf"
   },
-  "testExecutions": [],
+  "testExecutions": [
+    {
+      "commandId": ".-node-tests",
+      "attemptId": "TA-259718f1e13588ca7c20",
+      "receiptPath": "singularity/work-items/bin-ashok/context/code-delivery/tests/attempts/implementation/TA-259718f1e13588ca7c20.json",
+      "receiptSha256": "5818e08f8763b80b5ba2c91338e4b515cf1ffdf0054df5de0841971db95da808",
+      "status": "passed"
+    }
+  ],
   "tree": {
     "workingStateDigest": "sha256:68bb94778a85704b51d976c09c78a339e51de1e4480ecc9aff028f2a24ef2ca6",
     "codeTreeSha256": "sha256:c6cb5db841b63e6fe9a7eae6ee0c6ad47430441ed35866fffe1a87a2b004516e",
-    "generationCommit": null,
-    "generationTree": null
+    "generationCommit": "1565f4e4acaad52c2ea6ca75a21f141fab71932a",
+    "generationTree": "fcded5e4a20862a750f80995cd172f4e6571840b"
   },
   "model": {
     "task": "code",
@@ -328,6 +342,7 @@
     "observedAt": null,
     "generation": null
   },
-  "status": "pending-tests",
-  "capturedAt": "2026-11-16T10:49:09.011Z"
+  "status": "ready",
+  "capturedAt": "2026-11-16T10:49:09.011Z",
+  "validatedAt": "2026-11-17T09:12:33.035Z"
 }

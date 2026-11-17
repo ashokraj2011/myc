@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "bin-ashok",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G2-002",
+  "phaseId": "implementation",
+  "generation": 2,
+  "baselineSha256": "9e9479295915ab978bf6f12d020a203ea8db7e2aaf0f0fbdbcd62d3351c8ddd7",
+  "baseline": {
+    "path": "singularity/work-items/bin-ashok/context/work-intervals/implementation-gen2-baseline.json",
+    "sha256": "9e9479295915ab978bf6f12d020a203ea8db7e2aaf0f0fbdbcd62d3351c8ddd7",
+    "verified": true,
+    "sourceBaseCommit": "8f643b1a4c44a549a95e2efd642e782defcca28a"
+  },
+  "sourceBaseCommit": "8f643b1a4c44a549a95e2efd642e782defcca28a",
+  "target": {
+    "branch": "bin-ashok",
+    "head": "10a13e8037a2fc525b0f9cf3e89737338e94a281",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": "src/App.jsx",
+      "status": "present",
+      "sha256": "118043a50f0abd7ef2031316e9f17eed15f01224b73a871eb197d1a4dd9c5f5b",
+      "bytes": 12275,
+      "verdict": "planned",
+      "clauseIds": [
+        "BIN-ASHOK:REQ-001",
+        "BIN-ASHOK:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/App.test.jsx",
+      "status": "present",
+      "sha256": "7e8d0e615e006e08672ce58dc27e1e6886bad4c99882f0b21f1505ed5c9ccaf2",
+      "bytes": 10650,
+      "verdict": "planned",
+      "clauseIds": [
+        "BIN-ASHOK:AC-001",
+        "BIN-ASHOK:REQ-001",
+        "BIN-ASHOK:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/components/Display.jsx",
+      "status": "present",
+      "sha256": "a4ed3c3de1c6db277c5a754767654e4f19c7b678edc5d45fa6442f2d25a67299",
+      "bytes": 4112,
+      "verdict": "planned",
+      "clauseIds": [
+        "BIN-ASHOK:REQ-001",
+        "BIN-ASHOK:REQ-002"
+      ],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 3,
+    "planned": 3,
+    "unplanned": 0,
+    "protected": 0
+  },
+  "decision": {
+    "status": "aligned",
+    "summaryStatus": "clear",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "fcc335cd2cd35f71bc50a12aa8cfbeb1d002554ef69496e9dd161b8d6afadba6",
+  "reconciledAt": "2026-11-17T09:12:33.360Z",
+  "final": true,
+  "recordedAt": "2026-11-17T09:12:33.362Z",
+  "path": "singularity/work-items/bin-ashok/context/work-intervals/reconciliations/fcc335cd2cd35f71bc50a12aa8cfbeb1d002554ef69496e9dd161b8d6afadba6.json"
+}
