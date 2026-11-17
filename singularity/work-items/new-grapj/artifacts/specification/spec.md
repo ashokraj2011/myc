@@ -4,27 +4,51 @@
   "workId": "new-grapj",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "6ab982064e75876cc9884867bb3daf79c3b361e714416e09bd240837986bb39e",
+      "bytes": 9269
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-17T22:46:28.341Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "630bae13d1445cd6ae0a6e53c7a674a5f3964acb",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "b8be8eefc29f357791638bbb726ea7c65cf83db480b10f325b73db73e444c8f1",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/new-grapj/context/clarifications-specification-gen1.json",
+    "sha256": "cede194c0f59a74751a950a0f0c9b87debf87a5060c1066cef69ee978de70fbd",
+    "promptSha256": "ba2b812307825b64dc302f110cf39b487eb71ad5fb77d110c5ab6988dfe89918",
+    "responses": 2,
+    "markers": [],
+    "recordedAt": "2026-11-17T22:44:45.758Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": null,
+      "githubLookup": "not-checked"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/new-grapj/telemetry/specification-gen1.json",
+      "sha256": "d39fe6473d2b9cc10d7d1d2a5666a9a5a3f7a84009813d05a011c03bd51046ef",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 29868,
+        "estimatedTokens": 7467,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 29868,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-17T22:46:28.341Z",
+      "completedAt": "2026-11-17T22:46:28.341Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -54,133 +135,93 @@
 
 # Specification — new-grapj
 
-<!-- sflow:guidance
-Scenarios come first, and general requirements come after them `[SPK:REQ-068]`. That ordering is the template's opinion: a requirement written before anyone has described the situation it serves tends to describe the system instead of the need, and nobody notices until verification.
-
-Where the current Story evidence leaves something material unknown, say so with a marker rather than guessing. Use this syntax:
-
-    [NEEDS CLARIFICATION: <one question grounded in the current Story evidence>]
-
-Replace the angle-bracketed placeholder; never copy or ask it as written. The question must be one non-empty line and must arise from the pinned sources, approved upstream artifacts, repository world model, or a contradiction among them. Markers are extracted the same way clauses are, so a marker inside fenced or inline code is ignored `[SPK:REQ-063]`. This phase blocks publication while any marker is unresolved, and a marker is only resolved when a later generation removes it *and* records the answer `[SPK:REQ-067]` — deleting the text alone is an integrity failure, not an answer.
--->
-
-<!-- sflow:guidance Keep every section of this template. When one does not fit this change (for example Permissions for a library or command-line tool with no roles), write `Not applicable: <reason>` under it rather than deleting it: later steps carry Actors, Failure and empty states, Permissions, Boundary conditions and the other sections forward, and stop when one is missing. -->
-
 ## Agent brief
 
-<!-- sflow:guidance Summarize the approved intent for downstream agents in a compact, standalone form. Include the problem, intended outcome, principal actors, most important scenarios, hard constraints, and major exclusions. Do not introduce claims that are absent from the sections below. Exact requirements and boundary conditions are preserved separately by the governed projection. -->
-
-TODO: Write the Agent brief here as visible text; text inside the comment above is not read.
+Create a 2D Cartesian function plotter for an application user. It must render mathematical functions in a Cartesian plane and include the specifically requested circle centered at the origin with radius 6 units. A Playwright test must verify that circle. The missing reference attachment provides no available layout or control details, so this specification does not prescribe them.
 
 ## Actors
 
-<!-- sflow:guidance Who uses this, and what authority does each hold? -->
-
-TODO: Name each actor and the authority each one holds.
+Application user: requests a function plot. No distinct roles or permission authority are specified.
 
 ## User scenarios
 
-<!-- sflow:guidance Prioritized. Each scenario leads with the situation, then its acceptance cases. -->
-
-<!-- sflow:guidance Before drafting, split the pinned request and recorded answers into observable obligations for the actual interfaces (UI, API, event/message, batch/job, CLI, library or mixed). Keep the source -> REQ/AC -> assertion -> verification mapping in the existing sections. Existing ACs count; do not duplicate clauses or invent controls, endpoints, limits, errors or screenshot requirements. Self-check whether an implementation could meet this draft yet omit an explicit request. Repair clear omissions in this editable draft and recheck within the returned repair policy; preserve published inputs and settled answers. These are authoring instructions, not execution evidence. -->
-
-### S1 — <the most important situation, in the user's words>
+### S1 — Plot a mathematical function
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Application user
+**Context:** The plotter is available.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+- **Given** the plotter is available
+  **When** the user requests a mathematical function plot
+  **Then** the plotter renders the function in a two-dimensional Cartesian coordinate plane.
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
+### S2 — Plot and verify the specified circle
 
-### S2 — <the next situation>
+**Priority:** P1
+**Actor:** Application user
+**Context:** The plotter is available.
 
-**Priority:** P2
+- **Given** the plotter is available
+  **When** the user requests a circle centered at the origin with radius 6 units
+  **Then** the rendered graph represents the circle `x² + y² = 36`.
 
-- **Given** … **When** … **Then** …
+- **Given** the circle plot is available
+  **When** the specified Playwright test checks it
+  **Then** the test verifies that the circle is centered at the origin and has radius 6 units.
 
 ## Failure and empty states
 
-<!-- sflow:guidance What happens the first time, with nothing there yet, and when each step fails. These are where specifications are usually silent and implementations usually improvise. -->
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** No empty-state behavior is specified by the pinned request.
+- **Failure:** No failure behavior is specified by the pinned request.
+- **Partial:** No partial-result behavior is specified by the pinned request.
 
 ## Scenario coverage
 
-<!-- sflow:guidance One row per behavior/acceptance clause; repeat rows for multiple outcomes. Every referenced S-number must have complete Given/When/Then acceptance cases above. Outcome is success, failure, boundary, or empty. Rejection/error requirements need distinct failure cases, not only happy-path prose. Use the pinned request and clarification answers; do not invent error text or new scope. -->
-
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `NEW-GRAPJ:REQ-001` | S1 | TODO |
-| `NEW-GRAPJ:REQ-002` | S2 | TODO |
-| `NEW-GRAPJ:AC-001` | S1 | TODO |
+| `NEW-GRAPJ:REQ-001` | S1 | success |
+| `NEW-GRAPJ:REQ-002` | S2 | success |
+| `NEW-GRAPJ:AC-001` | S2 | success |
 
 ## Permissions
 
-<!-- sflow:guidance Who may do each thing, and what a reader without that authority sees instead. -->
-
-TODO: Say who may do each thing, and what someone without that authority sees instead.
+Not applicable: the request identifies an application user and specifies no distinct roles or permission controls.
 
 ## Boundary conditions
 
-<!-- sflow:guidance Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one. -->
-
-TODO: State each limit, size, count or timeout, and what happens at and beyond it.
+The only specified numeric boundary is a circle of radius 6 units centered at the origin. No other domain, range, count, precision, or timeout is specified.
 
 ## Requirements
 
-<!-- sflow:guidance Numbered, testable, one obligation each. Cite the scenario each serves. -->
+- The application shall render requested mathematical functions in a two-dimensional Cartesian coordinate plane. *(S1)* [NEW-GRAPJ:REQ-001]
+- The plotter shall render a circle centered at `(0,0)` with radius 6 units, represented by `x² + y² = 36`. [scope:SRI-15d4e5bd263a] *(S2)* [NEW-GRAPJ:REQ-002]
 
-- <requirement>. *(S1)* [NEW-GRAPJ:REQ-001]
-- <requirement>. *(S1, S2)* [NEW-GRAPJ:REQ-002]
-
-<!-- sflow:guidance Acceptance criteria use the same stable, namespaced form: -->
-
-- <observable acceptance outcome>. *(S1)* [NEW-GRAPJ:AC-001]
+- A Playwright test shall verify that the rendered circle is centered at the origin and has radius 6 units. *(S2)* [NEW-GRAPJ:AC-001]
 
 ## Verification intent
 
-<!-- sflow:guidance One row per declared clause, including non-functional requirements. Methods: test, visual, inspection, or a comma-separated combination (all required). AC Criterion is its own ID. A visual/inspection requirement names the AC proving it; a test-only requirement may use -. An AC a requirement names lists every method that requirement lists: a `test, visual` requirement needs a `test, visual` AC. Choose from the pinned source, not from available tools. A screenshot is visual proof, not a test exemption. Planning must inherit these methods and cannot change them without an approved scope amendment. -->
-
 | Clause | Methods | Criterion |
 |---|---|---|
-| `NEW-GRAPJ:REQ-001` | TODO | - |
-| `NEW-GRAPJ:REQ-002` | TODO | - |
-| `NEW-GRAPJ:AC-001` | TODO | `NEW-GRAPJ:AC-001` |
+| `NEW-GRAPJ:REQ-001` | test | - |
+| `NEW-GRAPJ:REQ-002` | test | - |
+| `NEW-GRAPJ:AC-001` | test | `NEW-GRAPJ:AC-001` |
 
 ## Non-functional requirements
 
-<!-- sflow:guidance Latency, throughput, availability, accessibility, privacy, retention. State the number and how it will be measured; "fast" is not a requirement. -->
-
-<!-- sflow:guidance Use governed requirement anchors here too (for example `[NEW-GRAPJ:REQ-003]`); `NFR-001` by itself is only a display label and is not a stable clause identity. -->
-
-TODO: State each non-functional requirement with its number and how it is measured, or write None for this change.
+None stated in the pinned request or clarification.
 
 ## Constitution articles
 
-<!-- sflow:guidance Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each cited ID exists at the pinned revision before publication `[SPK:REQ-101]`. -->
-
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-<!-- sflow:guidance What this specification takes as true without proving. An assumption that turns out false is a change request, not a defect — which is only true if it was written down. -->
-
-TODO: List what this specification takes as true without proving, or write None.
+The plotter accepts a user request to plot a mathematical function. The pinned request and clarification do not define its input syntax or specific controls.
 
 ## Out of scope
 
-<!-- sflow:guidance Named explicitly, so the boundary is reviewable rather than inferred. -->
-
-TODO: Name what this change does not do.
+Visual parity with the unavailable attachment, specific input syntax or control design, additional plot types, and unrequested numeric or non-functional limits are not defined by this specification.
 
 ## Sources
 
-<!-- sflow:guidance Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one offered to this phase that could not be read or was not available here, named as a gap. Without supporting documents, say so. -->
+The pinned Story source (`singularity/work-items/new-grapj/source.json`) provides the plotter request and circle test criterion. The specification-generation-1 clarification record confirms a 2D Cartesian function plotter and that the circle criterion means radius 6 centered at the origin. No supporting documents are available; the pinned source states that they were not copied, so the referenced attachment cannot inform visual details.
