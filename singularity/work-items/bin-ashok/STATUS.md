@@ -5,7 +5,7 @@
 - Capability: **calc** (`raj-calc`)
 - Capability map: `a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d`
 - Overall status: **in_progress**
-- Current phase: **convergence**
+- Current phase: **verification**
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
@@ -15,12 +15,15 @@
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent architect | **warning** |  |  |  |
 | 3 | Implementation (`implementation`) | developer | **approved** | 2 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via engineering-reviewers; agent developer | **warning** |  |  |  |
-| 4 | Convergence (`convergence`) | architect | **awaiting_approval** | 1 | 0 | unavailable |
-| 5 | Verification (`verification`) | qa | **not_started** | 0 | 0 | unavailable |
+| 4 | Convergence (`convergence`) | architect | **approved** | 1 | 1 | unavailable |
+|  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
+| 5 | Verification (`verification`) | qa | **in_progress** | 0 | 0 | unavailable |
 | 6 | Release (`release`) | qa | **not_started** | 0 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-11-17T09:25:31.008Z — **work_interval_started** (verification) by system: baseline 92e2bf336338 at 5f12eec52510
+- 2026-11-17T09:25:30.985Z — **phase_self_approved** (convergence) by ashokraj2011: threshold reached; advanced to verification
 - 2026-11-17T09:22:47.895Z — **phase_submitted** (convergence) by ashokraj2011: 1 artifacts
 - 2026-11-17T09:19:52.834Z — **phase_generated** (convergence) by ashokraj2011: generation 1
 - 2026-11-17T09:18:04.412Z — **phase_self_approved** (implementation) by ashokraj2011 · agent developer: threshold reached; advanced to convergence
@@ -34,5 +37,3 @@
 - 2026-11-16T10:47:42.203Z — **asked_for_recorded** (implementation) by ashokraj2011 · agent developer: What the person asked for in implementation generation 2: instructions 1, 2.
 - 2026-11-16T05:28:49.971Z — **work_interval_started** (implementation) by system: baseline 9e9479295915 at 8f643b1a4c44
 - 2026-11-16T05:23:51.698Z — **source_review_submitted** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: c186f5d83443384ffc25e71f57c7e325346446591139cc3943e2702e88a32da2
-- 2026-11-16T05:10:55.132Z — **phase_generated** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent developer: generation 1
-- 2026-11-16T04:27:26.371Z — **plan_amended** (implementation) by ashokraj2011 · agent developer: PAM-001: .nvmrc listed as build-configuration. this is k to have htis ..go aheas
