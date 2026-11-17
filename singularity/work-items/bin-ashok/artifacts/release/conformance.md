@@ -4,7 +4,7 @@
   "workId": "bin-ashok",
   "workType": "spec-driven-standard",
   "phase": "release",
-  "generation": 1,
+  "generation": 2,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "conformance.md",
       "mediaType": "text/markdown",
-      "sha256": "0997ba7de1c21998d700d996b384f316f824c4acfb86677dc4ab08fe44201446",
-      "bytes": 4706
+      "sha256": "59d57d7525fcfa1fa6096eace5d09e596d12b85aa3fed0b16cf52cb87287af94",
+      "bytes": 3317
     },
-    "generation": 1,
-    "publishedAt": "2026-11-17T12:31:20.254Z"
+    "generation": 2,
+    "publishedAt": "2026-11-17T12:35:40.878Z"
   },
-  "sourceCommit": "4629dc1065fe8f8c47a5a7b5ce6399fe28d3892d",
+  "sourceCommit": "f7bad4e639c56636ce164f3b8781bbf47b4d7d8e",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "68f507ba55c1ea3dcdbe2248e78a71bf606ed208c168257d02cefff1b453f597",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/spec-driven/release.md"
   },
   "inputs": {
-    "generation": 1,
-    "path": "singularity/work-items/bin-ashok/context/inputs-release-gen1.json",
-    "sha256": "288dd0d13533209519050031559c15212d45c7b9db031c46368f1889a407128e",
+    "generation": 2,
+    "path": "singularity/work-items/bin-ashok/context/inputs-release-gen2.json",
+    "sha256": "89b702fa1ad0d27b20c4b90e4a33a056c4d6ae50ff57fac5043762fe7a448b53",
     "renderedSha256": "a154d3f96f6d1c3c386d41031193cd6eefd4e9b536defa146bff340d7c081590",
     "mode": "enforce"
   },
@@ -92,6 +92,26 @@
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 2,
+      "path": "singularity/work-items/bin-ashok/telemetry/release-gen2.json",
+      "sha256": "68a012cc45da81610b350ba03a3f86dca14df12c47c85be5a7545be5a77f92fd",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 35704,
+        "estimatedTokens": 8926,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 35704,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
     }
   ],
   "remoteOutputs": [],
@@ -116,6 +136,27 @@
       "completedAt": "2026-11-17T12:31:20.254Z",
       "agent": "qa",
       "generation": 1
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-17T12:35:40.878Z",
+      "completedAt": "2026-11-17T12:35:40.878Z",
+      "agent": "qa",
+      "generation": 2
     }
   ],
   "sequenceOverrides": [],
@@ -145,11 +186,11 @@
 
 None.
 
-**Release operations:** This UI-only change has no deployment-specific preconditions, migrations, or feature flags identified in the approved inputs. Validate success with the positive-conversion, unsupported-input, and regression checks listed above; monitor the existing client-side error/usage signals during normal rollout. If conversion behavior regresses, disable or revert the UI change through the repository's normal release process; no project-specific rollback or communication procedure was provided in the approved inputs. The application owner should coordinate release communication and escalation under the team's existing process.
+**Release operations:** This UI-only change has no deployment-specific preconditions, migrations, or feature flags identified in the approved inputs. Validate success with the positive-conversion, unsupported-input, and regression checks listed above. No new metrics or alerts are specified; assess rollout using the team's existing monitoring where available. If conversion behavior regresses, disable or revert the UI change through the repository's normal release process; no project-specific rollback or communication procedure was provided in the approved inputs. The application owner should coordinate release communication and escalation under the team's existing process.
 
 ## Deviations
 
-None recorded in approved convergence generation 1.
+Approved convergence generation 1 is iteration 2. Its findings table records no human dispositions, its unresolved-blockers section is empty, and its deterministic-facts section reports no deterministic trace-evidence gaps. No accepted deviations are listed in that approved convergence state.
 
 ## Self-approval disclosures
 

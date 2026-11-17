@@ -19,10 +19,11 @@
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
 | 5 | Verification (`verification`) | qa | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
-| 6 | Release (`release`) | qa | **in_progress** | 1 | 0 | unavailable |
+| 6 | Release (`release`) | qa | **in_progress** | 2 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-11-17T12:35:40.993Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 2
 - 2026-11-17T12:34:47.025Z — **version_opened** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 2 opened (review-corrections) on the person's yes (question-tool)
 - 2026-11-17T12:32:24.103Z — **source_review_submitted** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: bbf71d9ca6d19b85adda4c32b2d16dfe7c024de07401d831a29a4498b374b217
 - 2026-11-17T12:31:20.384Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 1
@@ -37,4 +38,3 @@
 - 2026-11-17T09:22:47.895Z — **phase_submitted** (convergence) by ashokraj2011: 1 artifacts
 - 2026-11-17T09:19:52.834Z — **phase_generated** (convergence) by ashokraj2011: generation 1
 - 2026-11-17T09:18:04.412Z — **phase_self_approved** (implementation) by ashokraj2011 · agent developer: threshold reached; advanced to convergence
-- 2026-11-17T09:18:04.412Z — **work_interval_closed** (implementation) by ashokraj2011 · agent developer: interval INT-implementation-G2-002 closed after phase approval
