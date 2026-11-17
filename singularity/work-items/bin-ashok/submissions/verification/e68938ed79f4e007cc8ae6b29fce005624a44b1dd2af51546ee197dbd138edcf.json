@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 3,
+  "workId": "bin-ashok",
+  "epicId": null,
+  "planId": null,
+  "jiraIssueId": "bin-ashok",
+  "initialJiraKey": null,
+  "currentJiraKey": null,
+  "canonicalBranch": "bin-ashok",
+  "submittedBranch": "bin-ashok",
+  "submissionCommit": "b35038ee17819748d14577ac365948dd044147c6",
+  "sourceCommit": "b35038ee17819748d14577ac365948dd044147c6",
+  "sourceTreeSha256": "sha256:68bb94778a85704b51d976c09c78a339e51de1e4480ecc9aff028f2a24ef2ca6",
+  "codeTreeSha256": "sha256:c6cb5db841b63e6fe9a7eae6ee0c6ad47430441ed35866fffe1a87a2b004516e",
+  "documentationSha256": "sha256:77cdf82e5b97d084e3884e43def9d07630754df8e53d6e8923d5d0defd16e27d",
+  "phase": "verification",
+  "generation": 1,
+  "authorship": {
+    "schemaVersion": 1,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "qa"
+    },
+    "kernelModel": {
+      "invoked": false,
+      "status": "exact",
+      "invocationIds": []
+    },
+    "externalAiUse": {
+      "value": "unknown",
+      "status": "unavailable"
+    },
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "test-evidence.md",
+      "mediaType": "text/markdown",
+      "sha256": "219a61173bcf8c970bb655f5785521ad8a1c4d7d0671509e8dd311eab1df9ff9",
+      "bytes": 6110
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-17T09:34:06.887Z"
+  },
+  "artifacts": [
+    {
+      "path": "singularity/work-items/bin-ashok/artifacts/verification/test-evidence.md",
+      "kind": "document",
+      "sha256": "66272965a2a36fad85416a92b5164042537ba9a764f15f89ff67500a62f4dddf",
+      "size": 22702,
+      "reference": {
+        "handle": "sfref:v1:story:bin-ashok:2f0b8ef6ba2ee1cf90231ab34ae24532aa5dceccd98358f6927b8c52c9c01273",
+        "recordHash": "2f0b8ef6ba2ee1cf90231ab34ae24532aa5dceccd98358f6927b8c52c9c01273"
+      }
+    }
+  ],
+  "references": [
+    {
+      "handle": "sfref:v1:story:bin-ashok:2f0b8ef6ba2ee1cf90231ab34ae24532aa5dceccd98358f6927b8c52c9c01273",
+      "recordHash": "2f0b8ef6ba2ee1cf90231ab34ae24532aa5dceccd98358f6927b8c52c9c01273",
+      "purpose": "review-evidence",
+      "required": true
+    }
+  ],
+  "agentBriefs": [
+    {
+      "consumerPhase": "release",
+      "status": "ready",
+      "path": "singularity/work-items/bin-ashok/context/briefs/verification-gen1-for-release.json",
+      "renderedPath": "singularity/work-items/bin-ashok/context/briefs/verification-gen1-for-release.md",
+      "sourceSha256": "3131fa274a8eb705c24e08c4562e50977ca735a143cfedbcfac603d90379b270",
+      "sourceBytes": 22620,
+      "renderedSha256": "448e709136ef54f1bcbc37f7514f23b9845378fea8dc8a3c06c4375b3e167bde",
+      "integritySha256": "c63cabd3b2fa797635a0c1261a49d146fb0ad1944df980264e407b05afdcf2cf"
+    }
+  ],
+  "checks": [
+    {
+      "id": "node-tests",
+      "command": "npm test -- --reporter=json --outputFile=.sflow/results/node-tests.json",
+      "kind": "test",
+      "requirement": "required",
+      "workingDirectory": ".",
+      "resultIsolated": true,
+      "externalModelPolicy": "never",
+      "timeoutMs": 1800000,
+      "sourceCommit": "1565f4e4acaad52c2ea6ca75a21f141fab71932a",
+      "sourceTreeSha256": "sha256:68bb94778a85704b51d976c09c78a339e51de1e4480ecc9aff028f2a24ef2ca6",
+      "codeTreeSha256": "sha256:c6cb5db841b63e6fe9a7eae6ee0c6ad47430441ed35866fffe1a87a2b004516e",
+      "testRuntime": {
+        "node": "v26.12.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "profile": {
+          "nodeOptions": []
+        },
+        "nodeOptionsSha256": "sha256:12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "sha256": "sha256:f15dcad9c80b6efa9c83161aec98ae14475b39f8c90cbe5c3c5f656cc23e1fb0"
+      },
+      "startedAt": "2026-11-16T10:49:24.879Z",
+      "completedAt": "2026-11-16T10:49:27.417Z",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "",
+      "stderr": "",
+      "stdoutBytes": 0,
+      "stderrBytes": 0,
+      "stdoutTruncated": false,
+      "stderrTruncated": false,
+      "evidenceUse": "reused",
+      "reusedFrom": {
+        "attemptId": "TA-259718f1e13588ca7c20",
+        "phase": "implementation",
+        "generation": 2,
+        "commit": "1565f4e4acaad52c2ea6ca75a21f141fab71932a",
+        "treeSha256": "sha256:68bb94778a85704b51d976c09c78a339e51de1e4480ecc9aff028f2a24ef2ca6",
+        "receiptPath": "singularity/work-items/bin-ashok/context/code-delivery/tests/attempts/implementation/TA-259718f1e13588ca7c20.json",
+        "receiptSha256": "5818e08f8763b80b5ba2c91338e4b515cf1ffdf0054df5de0841971db95da808",
+        "counts": {
+          "discovered": 42,
+          "passed": 42,
+          "failed": 0,
+          "skipped": 0
+        }
+      },
+      "source": "repository-tests"
+    }
+  ],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-17T09:34:06.887Z",
+      "completedAt": "2026-11-17T09:34:06.887Z",
+      "agent": "qa",
+      "generation": 1
+    }
+  ],
+  "approvals": [],
+  "visualAssurance": null,
+  "submissionEvidence": {
+    "architectureIntent": null,
+    "architectureDecision": null,
+    "testExecutions": [],
+    "claimMaps": [],
+    "checksSha256": "cd25a65277fa5e50b8f2014c7e1a058373189a1903ea10692e77d9c49090909e",
+    "artifactSetSha256": "18abb24f2dc34532e99579b79187f528e69d9ba6ee8261176e14a788c249bf3c"
+  },
+  "witnessReview": {
+    "enrollment": {
+      "schemaVersion": 1,
+      "mode": "disabled",
+      "witnessedClauses": {
+        "enabled": false,
+        "profiles": []
+      },
+      "testcaseExact": {
+        "mode": "disabled",
+        "profile": null,
+        "requiredAssurance": "unavailable",
+        "policySha256": "sha256:12b50a34a1f03338377ecd76f44b20cbee83e7b91a0b07392ef08e3d8fd60800"
+      },
+      "claimMapContractVersion": 2,
+      "cab": null,
+      "sgos": null,
+      "rollout": {
+        "id": "wel-v0.2-observe",
+        "version": 1,
+        "enrollment": "new-story-only"
+      },
+      "configurationAuthority": {
+        "repository": "https://github.com/ashokraj2011/myc.git",
+        "branch": "sflow/config",
+        "commit": "deaee2ef83e8a61319dace2d593d899bc83553b2",
+        "projectionSha256": "b89f4e3999a2f2f66938a34bb7c7fa747edb980136d07b4d86a5e604f03a5cf0"
+      }
+    },
+    "enrollmentClassification": "enrolled",
+    "enrollmentReason": null,
+    "clauseMappings": [],
+    "testcaseObservations": []
+  },
+  "submittedAt": "2026-11-17T10:22:57.924Z",
+  "submittedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "status": "awaiting_review",
+  "packetSha256": "e68938ed79f4e007cc8ae6b29fce005624a44b1dd2af51546ee197dbd138edcf"
+}
