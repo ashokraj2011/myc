@@ -4,8 +4,8 @@
 - Work type: **spec-driven-standard**
 - Capability: **calc** (`raj-calc`)
 - Capability map: `a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d`
-- Overall status: **in_progress**
-- Current phase: **release**
+- Overall status: **closed**
+- Current phase: **none — every step is decided**
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
@@ -19,10 +19,12 @@
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
 | 5 | Verification (`verification`) | qa | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
-| 6 | Release (`release`) | qa | **awaiting_approval** | 2 | 0 | unavailable |
+| 6 | Release (`release`) | qa | **approved** | 2 | 1 | unavailable |
+|  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
 
 ## Recent history
 
+- 2026-11-17T12:46:07.236Z — **phase_self_approved** (release) by ashokraj2011 · agent qa: threshold reached; closed
 - 2026-11-17T12:40:43.608Z — **phase_submitted** (release) by ashokraj2011 · agent qa: 2 artifacts
 - 2026-11-17T12:38:21.287Z — **source_review_submitted** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: eb3e093601f3e12d9c33442ed089fd7d323b619f0a8a2e82c5c16fe131769084
 - 2026-11-17T12:35:40.993Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 2
@@ -37,4 +39,3 @@
 - 2026-11-17T09:34:07.021Z — **phase_generated** (verification) by ashokraj2011 · agent qa: generation 1
 - 2026-11-17T09:25:31.008Z — **work_interval_started** (verification) by system: baseline 92e2bf336338 at 5f12eec52510
 - 2026-11-17T09:25:30.985Z — **phase_self_approved** (convergence) by ashokraj2011: threshold reached; advanced to verification
-- 2026-11-17T09:22:47.895Z — **phase_submitted** (convergence) by ashokraj2011: 1 artifacts
