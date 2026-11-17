@@ -1,0 +1,116 @@
+{
+  "clauses": [
+    {
+      "anchor": "[NEW-GRAPJ:REQ-001]",
+      "body": "The application shall render requested mathematical functions in a two-dimensional Cartesian coordinate plane. *(S1)*",
+      "bodySha256": "7e5a05d90f81180460e08485c90a7cd2cecedb8ef3a852894de8f9848ba974da",
+      "dependsOn": [],
+      "id": "NEW-GRAPJ:REQ-001",
+      "namespace": "NEW-GRAPJ",
+      "number": 1,
+      "source": {
+        "line": 249,
+        "path": "singularity/work-items/new-grapj/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[NEW-GRAPJ:REQ-002]",
+      "body": "The plotter shall render a circle centered at `(0,0)` with radius 6 units, represented by `x² + y² = 36`. [scope:SRI-15d4e5bd263a] *(S2)*",
+      "bodySha256": "f321351154e4d07c5650649f9b44b99602528f8e781c4b06993ff08007e0af8d",
+      "dependsOn": [],
+      "id": "NEW-GRAPJ:REQ-002",
+      "namespace": "NEW-GRAPJ",
+      "number": 2,
+      "source": {
+        "line": 250,
+        "path": "singularity/work-items/new-grapj/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[NEW-GRAPJ:REQ-003]",
+      "body": "The graphing workspace shall show an expression list on the left and a Cartesian grid with labeled axes on the right, along with visible add, undo, redo, settings, panel-collapse, graph-tool, zoom-in, and zoom-out controls; pixel-identical styling is not required. *(S3)*",
+      "bodySha256": "e32eea8a40cffb667ea3b908327abeae3e3cb90eab3c61c599b7ae4e9a28e539",
+      "dependsOn": [],
+      "id": "NEW-GRAPJ:REQ-003",
+      "namespace": "NEW-GRAPJ",
+      "number": 3,
+      "source": {
+        "line": 251,
+        "path": "singularity/work-items/new-grapj/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "NEW-GRAPJ:AC-002",
+        "methods": [
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[NEW-GRAPJ:AC-001]",
+      "body": "A Playwright test shall verify that the rendered circle is centered at the origin and has radius 6 units. *(S2)*",
+      "bodySha256": "e8c7e878e1a941d351a42c177124c4917efbe0bcb84ec99469735f2b930f1be9",
+      "dependsOn": [],
+      "id": "NEW-GRAPJ:AC-001",
+      "namespace": "NEW-GRAPJ",
+      "number": 1,
+      "source": {
+        "line": 253,
+        "path": "singularity/work-items/new-grapj/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "NEW-GRAPJ:AC-001",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[NEW-GRAPJ:AC-002]",
+      "body": "Visual acceptance shall confirm the workspace structure and visible controls in `NEW-GRAPJ:REQ-003`. *(S3)*",
+      "bodySha256": "e2d79ff6901c64d65ed014239a3855e97872acee4f97a0e58c73a498791b145c",
+      "dependsOn": [
+        "NEW-GRAPJ:REQ-003"
+      ],
+      "id": "NEW-GRAPJ:AC-002",
+      "namespace": "NEW-GRAPJ",
+      "number": 2,
+      "source": {
+        "line": 254,
+        "path": "singularity/work-items/new-grapj/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "NEW-GRAPJ:AC-002",
+        "methods": [
+          "visual"
+        ]
+      }
+    }
+  ],
+  "generation": 2,
+  "indexSha256": "e9c4d23c8bc749523b126c317afdadf5ce6e4cb320d7eb05e6d5be3266042bd4",
+  "phase": "specification",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 10422,
+    "path": "singularity/work-items/new-grapj/artifacts/specification/spec.md",
+    "sha256": "16789852f74654e9bf4642f1ec2114bbd00d591bd555f7e5f20a7e399d2030d1"
+  },
+  "workId": "new-grapj"
+}
