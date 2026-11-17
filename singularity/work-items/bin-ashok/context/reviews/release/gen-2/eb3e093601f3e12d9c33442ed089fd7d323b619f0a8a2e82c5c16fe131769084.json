@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "phase": "release",
+  "generation": 2,
+  "reportSha256": "eb3e093601f3e12d9c33442ed089fd7d323b619f0a8a2e82c5c16fe131769084",
+  "lifecycleEventId": "bef3c1d9-0092-4bae-9933-45ca8f06d140",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "bin-ashok",
+      "phase": "release",
+      "generation": 2,
+      "sources": [
+        {
+          "id": "input:convergence",
+          "path": "singularity/work-items/bin-ashok/artifacts/convergence/convergence.md",
+          "textSha256": "7bd30919ac97c4fb2b6005839265154cbb00f85aabb30a8bd4c565017f4f053b"
+        },
+        {
+          "id": "input:verification",
+          "path": "singularity/work-items/bin-ashok/artifacts/verification/test-evidence.md",
+          "textSha256": "87d2d95604e89e05a3d239d76fa2f13ee7aca93472b0b7fd2a827c5a6a938cb7"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/bin-ashok/USER-STORY.md",
+          "textSha256": "11e98c62ae19129902fe888e4df27ab2b2b09a141c0fcf81cfca32eafd6d7474",
+          "originalSha256": "93d767683e80e8d3f9086b46e8fdb789f76f6354396862000ecb2e3bd095b1c1"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/bin-ashok/artifacts/release/conformance.md",
+        "sha256": "59d57d7525fcfa1fa6096eace5d09e596d12b85aa3fed0b16cf52cb87287af94"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:convergence",
+      "input:verification"
+    ],
+    "rows": [
+      {
+        "id": "story-request",
+        "sourceId": "story",
+        "line": 7,
+        "quote": "create a binary conversion button in calc .It shoul take a positive non decimal value and convert to its binary form",
+        "outcome": "consistent"
+      },
+      {
+        "id": "story-acceptance",
+        "sourceId": "story",
+        "line": 16,
+        "quote": "Screen shot of binary value of 2 converted by the app",
+        "outcome": "consistent"
+      },
+      {
+        "id": "convergence-state",
+        "sourceId": "input:convergence",
+        "line": 14,
+        "quote": "- No deterministic trace-evidence gaps were found.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "verification-results",
+        "sourceId": "input:verification",
+        "line": 5,
+        "quote": "Verification passed for the focused App suite and production build on the approved implementation source tree.",
+        "outcome": "consistent"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "717dabbe1d71dc4ece8ae0d2b9d20e66e4a59ab36c63301e5f1d6bed0dc3111a",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-17T12:38:21.287Z",
+  "recordSha256": "e4dd9862566fd2536e43395f14831ffd5593d9246367e1eaba8f86be2de7f7b4"
+}
