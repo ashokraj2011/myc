@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "phase": "specification",
+  "generation": 1,
+  "reportSha256": "b8501d42a9ffa49b263e423949ae1b86abd1f5b3ab6b85f8f12fa85f92ddad16",
+  "lifecycleEventId": "b293146b-5863-4cd9-9b48-cb09bffdf194",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "specification",
+    "binding": {
+      "workId": "new-grapj",
+      "phase": "specification",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/new-grapj/USER-STORY.md",
+          "textSha256": "8e6ef67a26ab63cb98db6a2de96c61633ff1322faa1a978751a704059bc165ec",
+          "originalSha256": "48c9e3980f4a2f393670922524978e4451f1f4c9ad586cc457eeb7f2ad87898d"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:current-phase",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/new-grapj/context/clarifications-specification-gen1.json",
+          "sha256": "cede194c0f59a74751a950a0f0c9b87debf87a5060c1066cef69ee978de70fbd"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/new-grapj/artifacts/specification/spec.md",
+        "sha256": "72e238ca1a81cd568458ecdd515a14db8fb546319d2d8bb977a639a2a47a2eef"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:current-phase"
+    ],
+    "rows": [
+      {
+        "id": "story-general-plotter",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "NEW-GRAPJ:REQ-001"
+        ],
+        "line": 8,
+        "quote": "Create graph plotter like the one attached"
+      },
+      {
+        "id": "story-circle-test",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S2",
+        "clauseIds": [
+          "NEW-GRAPJ:REQ-002",
+          "NEW-GRAPJ:AC-001"
+        ],
+        "line": 17,
+        "quote": "- Palyright tests on cirlce of 6 unit radius in origin"
+      },
+      {
+        "id": "story-missing-reference",
+        "sourceId": "story",
+        "outcome": "question",
+        "line": 8,
+        "quote": "Create graph plotter like the one attached",
+        "question": "What layout, controls, or visual behavior must match the referenced attachment? The Story says supporting documents were not copied, so the attachment cannot be assessed. Attach the reference or confirm the intended parity requirement; the specification currently leaves visual parity out of scope."
+      }
+    ],
+    "findings": [
+      {
+        "id": "missing-reference-details",
+        "severity": "blocking",
+        "message": "The Story's exact request is “Create graph plotter like the one attached” (story, line 8), but the Story notes at line 23 that supporting documents were not copied. The specification-generation-1 clarification Q-001 answers that this is a 2D Cartesian function plotter, and the artifact follows that answer; it does not decide the reference's layout, controls, or visual-parity requirements. The specification's Agent brief acknowledges that the reference attachment is unavailable and its Out of scope section excludes visual parity. The general function-plotter coverage in NEW-GRAPJ:REQ-001 can be satisfied by an implementation with arbitrary layout and controls that does not resemble the requested reference. The attachment's requirements therefore remain unknown; attach it or resolve the intended visual-parity scope before this specification can fully cover the request."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "717dabbe1d71dc4ece8ae0d2b9d20e66e4a59ab36c63301e5f1d6bed0dc3111a",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "product-owner",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-17T22:48:10.073Z",
+  "recordSha256": "db8379f7792831cfaa8480b378f8b8f512279cb356f46f8088a547585bfda34d"
+}
