@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "phase": "implementation",
+  "generation": 2,
+  "reportSha256": "ab460db5f069505bfbb30b771fde0504f6f1095402aa8914afb039ae3dcdf956",
+  "lifecycleEventId": "2167e096-8851-4c15-85d8-65a521b042e0",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "code",
+    "binding": {
+      "workId": "new-ash-graph",
+      "phase": "implementation",
+      "generation": 2,
+      "sources": [
+        {
+          "id": "code:src:App.jsx",
+          "path": "src/App.jsx",
+          "textSha256": "6ffb53872e6a2274377a262dc311731965dbfe1b4b38bcf6ff49f1a3e4d69956"
+        },
+        {
+          "id": "code:src:components:FunctionGrapher.jsx",
+          "path": "src/components/FunctionGrapher.jsx",
+          "textSha256": "c43815296fb883b6c486a70ff8d18450eb5004c26086cd1bfd703597f707b768"
+        },
+        {
+          "id": "code:src:index.css",
+          "path": "src/index.css",
+          "textSha256": "725843eff589dca351ef48a6bebabbadbc32816e19a3dda8310e400a55fc1a3f"
+        },
+        {
+          "id": "code:src:test:setup.js",
+          "path": "src/test/setup.js",
+          "textSha256": "5f734b19af298fcb83b1b04fe7ebb44094bb7a6fc3b68acea3ecf152e003474a"
+        },
+        {
+          "id": "code:tests:graph-plotter.spec.js",
+          "path": "tests/graph-plotter.spec.js",
+          "textSha256": "54c7fa503d5111ca29974eb0496dcadfda6d60b602430763f773b09b771096ca"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/new-ash-graph/artifacts/implementation/implementation-summary.md",
+        "sha256": "a5659bb22446815da12e81b3b80088932c0a16b283339a8ef0bc76436038a536"
+      },
+      "plan": {
+        "path": "singularity/work-items/new-ash-graph/artifacts/planning/plan.md",
+        "sha256": "c49d8ae4096f310da28d374c50a3356b790db9c7f0612b6c83b9bae11bd0f381"
+      },
+      "evidenceSha256": "a7070b51826f928966d710068aeb620025f8b4e548485e8cd7ec609c0aacd8f8"
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "code:src:App.jsx",
+      "code:src:components:FunctionGrapher.jsx",
+      "code:src:index.css",
+      "code:src:test:setup.js",
+      "code:tests:graph-plotter.spec.js"
+    ],
+    "rows": [
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-001",
+        "implementation": [],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 11,
+            "quote": "await expression.fill('x^2 + y^2 = 36');"
+          },
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 50,
+            "quote": "cardinalPointsPlotted: cardinalPoints.every(([x, y]) => hasPinkAt(x, y)),"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-002",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 354,
+            "quote": "<h2>Math keypad</h2>"
+          }
+        ],
+        "tests": [],
+        "assessment": "implemented",
+        "testAssessment": "not-applicable"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-001",
+        "implementation": [
+          {
+            "sourceId": "code:src:App.jsx",
+            "line": 256,
+            "quote": "isGrapherMode ? 'graph-app-shell' : ''"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 259,
+            "quote": "<h2>Expressions</h2>"
+          }
+        ],
+        "tests": [],
+        "assessment": "implemented",
+        "testAssessment": "not-applicable"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-002",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 121,
+            "quote": "const drawRelation = (ctx, left, right, width, height, centerX, centerY, scale) => {"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 50,
+            "quote": "cardinalPointsPlotted: cardinalPoints.every(([x, y]) => hasPinkAt(x, y)),"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      }
+    ],
+    "unplannedPaths": [
+      {
+        "sourceId": "code:src:test:setup.js",
+        "assessment": "supporting",
+        "note": "Test-infrastructure fix supplying an in-memory localStorage so the Vitest regression suite runs under Node 26; no product scope change."
+      }
+    ],
+    "qualityReviewed": [],
+    "findings": [
+      {
+        "id": "F-001",
+        "severity": "advisory",
+        "check": "plan",
+        "clauseId": "NEW-ASH-GRAPH:AC-002",
+        "sourceId": "code:tests:graph-plotter.spec.js",
+        "line": 16,
+        "quote": "await expect(page.getByRole('heading', { name: 'Math keypad' })).toBeVisible();",
+        "message": "The plan proves AC-002 by visual review and source inspection; the spec additionally asserts panel, canvas and keypad visibility, which is a useful extra. context.code.quality is empty, so there are no quality results to acknowledge. Node 22 (.nvmrc) execution is not established, but the setup fix is portable. No blocking defect found."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "717dabbe1d71dc4ece8ae0d2b9d20e66e4a59ab36c63301e5f1d6bed0dc3111a",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "developer",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-18T14:49:45.667Z",
+  "recordSha256": "dbf0ac7eceadca54b62f26812c0c28d3560872e6bed0e56814c37ab808d3433b"
+}
