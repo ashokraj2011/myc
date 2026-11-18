@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "phase": "implementation",
+  "generation": 1,
+  "reportSha256": "14f5b9acbe9e65e5c285b54cc8defa8a2c2f367acb554f902545e4bcc7cdc041",
+  "lifecycleEventId": "26ba6323-44c8-4fdc-b9df-12392572d15d",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "code",
+    "binding": {
+      "workId": "new-ash-graph",
+      "phase": "implementation",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "code:src:App.jsx",
+          "path": "src/App.jsx",
+          "textSha256": "9ff78b91ba20cc1be3f6674bb8a6c8551878004d9bfaee37c5f761581a528c8b"
+        },
+        {
+          "id": "code:src:components:FunctionGrapher.jsx",
+          "path": "src/components/FunctionGrapher.jsx",
+          "textSha256": "1b875d79bf650848c7d0af53088f212cca18a5c98b1abcfd82e2516b85af9940"
+        },
+        {
+          "id": "code:src:index.css",
+          "path": "src/index.css",
+          "textSha256": "4b02eaa5f0318b7ebf545c1a758788e535a75c3949ef6ae5cd5b1b93fadf3cd1"
+        },
+        {
+          "id": "code:tests:graph-plotter.spec.js",
+          "path": "tests/graph-plotter.spec.js",
+          "textSha256": "f17a81d722345052c9ada45bcf01828f573d1cfbde2ca9aa30b34181430d16f6"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:current-phase",
+          "phase": "implementation",
+          "generation": 1,
+          "path": "singularity/work-items/new-ash-graph/context/clarifications-implementation-gen1.json",
+          "sha256": "e3bdd027c9e8f88323d8df9705611cbb4665a2de35fced5264dd5286229e8d8b"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/new-ash-graph/artifacts/implementation/implementation-summary.md",
+        "sha256": "14f9036c4d621ab4b19b04fc73139554f4bdb58f6af0be6b2ffbcce2ff97c18a"
+      },
+      "plan": {
+        "path": "singularity/work-items/new-ash-graph/artifacts/planning/plan.md",
+        "sha256": "c49d8ae4096f310da28d374c50a3356b790db9c7f0612b6c83b9bae11bd0f381"
+      },
+      "evidenceSha256": "fc9185c22be3cc1b24e33ac470f453de73bdba925c74dc0c493c02616e47d820"
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "code:src:App.jsx",
+      "code:src:components:FunctionGrapher.jsx",
+      "code:src:index.css",
+      "code:tests:graph-plotter.spec.js"
+    ],
+    "clarificationsReviewed": [
+      "clarification:current-phase"
+    ],
+    "rows": [
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-001",
+        "implementation": [],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 4,
+            "quote": "test('plots a circle centered at the origin with radius six', async ({ page }) => {"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-002",
+        "implementation": [
+          {
+            "sourceId": "code:src:App.jsx",
+            "line": 229,
+            "quote": "const isGrapherMode = activeMode === 'grapher';"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 255,
+            "quote": "<aside className=\"glass-card graph-expression-panel\">"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 301,
+            "quote": "<section className=\"graph-plot-panel\" aria-label=\"Cartesian graph\">"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 351,
+            "quote": "<section className=\"glass-card graph-keypad\" aria-label=\"Math keypad\">"
+          },
+          {
+            "sourceId": "code:src:index.css",
+            "line": 921,
+            "quote": "grid-template-columns: minmax(0, 1fr);"
+          },
+          {
+            "sourceId": "code:src:index.css",
+            "line": 965,
+            "quote": "grid-template-columns: repeat(4, minmax(0, 1fr));"
+          }
+        ],
+        "tests": [],
+        "assessment": "implemented",
+        "testAssessment": "not-applicable"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-001",
+        "implementation": [
+          {
+            "sourceId": "code:src:App.jsx",
+            "line": 229,
+            "quote": "const isGrapherMode = activeMode === 'grapher';"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 255,
+            "quote": "<aside className=\"glass-card graph-expression-panel\">"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 301,
+            "quote": "<section className=\"graph-plot-panel\" aria-label=\"Cartesian graph\">"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 351,
+            "quote": "<section className=\"glass-card graph-keypad\" aria-label=\"Math keypad\">"
+          },
+          {
+            "sourceId": "code:src:index.css",
+            "line": 667,
+            "quote": "grid-template-columns: minmax(15rem, 18rem) minmax(0, 1fr);"
+          }
+        ],
+        "tests": [],
+        "assessment": "implemented",
+        "testAssessment": "not-applicable"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-002",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 226,
+            "quote": "drawRelation(ctx, math.compile(sides[0]), math.compile(sides[1]), width, height, centerX, centerY, scale);"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 130,
+            "quote": "value: leftValue === null || rightValue === null ? null : leftValue - rightValue,"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 9,
+            "quote": "await expression.fill('x^2 + y^2 = 36');"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      }
+    ],
+    "unplannedPaths": [],
+    "qualityReviewed": [],
+    "findings": [
+      {
+        "id": "test-plan-req-001-regression-run",
+        "severity": "blocking",
+        "check": "tests",
+        "clauseId": "NEW-ASH-GRAPH:REQ-001",
+        "sourceId": "code:tests:graph-plotter.spec.js",
+        "line": 4,
+        "quote": "test('plots a circle centered at the origin with radius six', async ({ page }) => {",
+        "message": "The approved plan's test strategy calls for the existing Vitest suite to check regressions to other calculator modes. The implementation summary reports that the post-repair `npm test` run failed during setup (14/31 passed; 17 failed because `localStorage` was unavailable under Node 26.12) and that the required prepublish rerun remains pending; the only passed published test is this circle browser scenario. The implementation-phase clarification, generation 1, Q-001 chose `repair-in-story`; the shared-button correction appears in this generation, so this finding does not ask to repeat that repair. The remaining regression verification is still unproven: run the planned suite in the supported Node 22 environment or resolve the setup failure and provide a passing run."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "717dabbe1d71dc4ece8ae0d2b9d20e66e4a59ab36c63301e5f1d6bed0dc3111a",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "developer",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-18T13:17:34.420Z",
+  "recordSha256": "dc9b91528d80fced7c98b76825f413424f367727abe46b717e2443ec66a0d962"
+}
