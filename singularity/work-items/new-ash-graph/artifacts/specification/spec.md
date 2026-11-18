@@ -5,7 +5,7 @@
   "workType": "spec-driven-standard",
   "phase": "specification",
   "generation": 1,
-  "status": "awaiting_approval",
+  "status": "approved",
   "generatedBy": {
     "name": "Ashok Raj",
     "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -127,8 +127,115 @@
     }
   ],
   "sequenceOverrides": [],
-  "approvals": [],
-  "selfApproval": false,
+  "approvals": [
+    {
+      "decision": "approved",
+      "phase": "specification",
+      "at": "2026-11-18T11:02:35.535Z",
+      "actor": {
+        "name": "Ashok Raj",
+        "email": "88361104+ashokraj2011@users.noreply.github.com",
+        "login": "ashokraj2011",
+        "githubLookup": "resolved"
+      },
+      "agent": "product-owner",
+      "authorityGroup": "product-approvers",
+      "identityAssurance": "configured-local",
+      "channel": "copilot-selection-receipt",
+      "generation": 1,
+      "artifactSha256": [
+        {
+          "path": "singularity/work-items/new-ash-graph/artifacts/specification/spec.md",
+          "sha256": "40bec06a6a66b9f3152e4abacb5e7831cf415c8458badc5583780951ccb06d41"
+        }
+      ],
+      "artifactSet": "spec-driven-specification",
+      "bundleSha256": "1cf27ccf2c51c47028c75e10568e115fb33ae60e016b6546056a2a1775bef22f",
+      "reviewPacketSha256": "643e754d88233de155546b5abac8e3a343cf50b409f1eeab973ad2566d2957c4",
+      "evidenceCommit": "144d5344d293fd4f0daab403bf25d1e59a87455e",
+      "artifactSetSha256": "5915eb7c65311d0fd84fae5a98a1226c91fb434515e9093adc7f7e76b2b37b0c",
+      "architectureIntent": null,
+      "architectureDecision": null,
+      "actionContext": {
+        "phase": "specification",
+        "label": "Specification",
+        "generation": 1,
+        "submittedAt": "2026-11-18T10:55:01.024Z",
+        "artifacts": [
+          {
+            "path": "singularity/work-items/new-ash-graph/artifacts/specification/spec.md",
+            "sha256": "40bec06a6a66b9f3152e4abacb5e7831cf415c8458badc5583780951ccb06d41"
+          }
+        ],
+        "agentBriefs": [
+          {
+            "consumerPhase": "convergence",
+            "status": "ready",
+            "path": "singularity/work-items/new-ash-graph/context/briefs/specification-gen1-for-convergence.json",
+            "renderedPath": "singularity/work-items/new-ash-graph/context/briefs/specification-gen1-for-convergence.md",
+            "renderedSha256": "b5ef00e0cef30d510467754cd63042010d4b218ee31425c0061c6866e7f62c48",
+            "integritySha256": "eb5ff98bd1bfddea5f4279e1d2db46360184375bd288b73cd2505c3f81035683",
+            "documentId": "agent-brief-specification-gen1-convergence",
+            "documentPath": "singularity/work-items/new-ash-graph/context/briefs/specification-gen1-for-convergence.md",
+            "documentSha256": "b5ef00e0cef30d510467754cd63042010d4b218ee31425c0061c6866e7f62c48"
+          },
+          {
+            "consumerPhase": "implementation",
+            "status": "ready",
+            "path": "singularity/work-items/new-ash-graph/context/briefs/specification-gen1-for-implementation.json",
+            "renderedPath": "singularity/work-items/new-ash-graph/context/briefs/specification-gen1-for-implementation.md",
+            "renderedSha256": "a64c1dc6f74c3c6707c49613b6be635a110890bccb9d34e0388e8bebcc07a375",
+            "integritySha256": "b1132bb14942d90a4b7f3e1363923acd4bdc11fe7618c4bc2f8ee4032a39e7e3",
+            "documentId": "agent-brief-specification-gen1-implementation",
+            "documentPath": "singularity/work-items/new-ash-graph/context/briefs/specification-gen1-for-implementation.md",
+            "documentSha256": "a64c1dc6f74c3c6707c49613b6be635a110890bccb9d34e0388e8bebcc07a375"
+          },
+          {
+            "consumerPhase": "planning",
+            "status": "ready",
+            "path": "singularity/work-items/new-ash-graph/context/briefs/specification-gen1-for-planning.json",
+            "renderedPath": "singularity/work-items/new-ash-graph/context/briefs/specification-gen1-for-planning.md",
+            "renderedSha256": "eaf91148e18f3d174516ed53566fc9109a0c0fb35c53399ee82b8a43e8ec7589",
+            "integritySha256": "038fb4370de2e4d203bd5d5b18a9b96ea54bcd3df8f0e4bbe9eaef3b87816024",
+            "documentId": "agent-brief-specification-gen1-planning",
+            "documentPath": "singularity/work-items/new-ash-graph/context/briefs/specification-gen1-for-planning.md",
+            "documentSha256": "eaf91148e18f3d174516ed53566fc9109a0c0fb35c53399ee82b8a43e8ec7589"
+          },
+          {
+            "consumerPhase": "verification",
+            "status": "ready",
+            "path": "singularity/work-items/new-ash-graph/context/briefs/specification-gen1-for-verification.json",
+            "renderedPath": "singularity/work-items/new-ash-graph/context/briefs/specification-gen1-for-verification.md",
+            "renderedSha256": "6b4488e08f2c3b505836dd3f0802de4ffd53605fd1cbb1455cb5fefbd315af7e",
+            "integritySha256": "a89145132351b9a620fd6d4dcd5a6fb19e9420c4f7d50643458616785cdcbc58",
+            "documentId": "agent-brief-specification-gen1-verification",
+            "documentPath": "singularity/work-items/new-ash-graph/context/briefs/specification-gen1-for-verification.md",
+            "documentSha256": "6b4488e08f2c3b505836dd3f0802de4ffd53605fd1cbb1455cb5fefbd315af7e"
+          }
+        ],
+        "reviewPacketSha256": "643e754d88233de155546b5abac8e3a343cf50b409f1eeab973ad2566d2957c4",
+        "submittedSourceCommit": "4b623600c3591e24d9c975d6f86270da65f7adf9",
+        "planId": "7c7483452373d45a1119e627"
+      },
+      "upstream": {
+        "sha256": "sha256:169cedc30fbae5a7fc862d112da535c1c153261dff209cae106d128145296c66",
+        "refs": [
+          {
+            "kind": "documents",
+            "ref": "specification",
+            "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+          },
+          {
+            "kind": "decisions",
+            "ref": "story",
+            "sha256": "sha256:ebade4dba52a070bc4615535bc642737abe7d357fbe4a032fce8056876cf63f6"
+          }
+        ]
+      },
+      "selfApproval": true
+    }
+  ],
+  "selfApproval": true,
   "conformanceTree": null
 }
 -->
