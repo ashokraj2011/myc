@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "phase": "planning",
+  "generation": 1,
+  "reportSha256": "f7c036743fc66c84c03aa7ff408375136a5c87a93d96c2d766209d48e6fa0fa7",
+  "lifecycleEventId": "febb7ca9-d8e8-43b7-bcb1-efd15a019fa3",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "planning",
+    "binding": {
+      "workId": "new-ash-graph",
+      "phase": "planning",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/new-ash-graph/USER-STORY.md",
+          "textSha256": "e89951d31bba834b775fa087c7c3c88e1742ca4b5c84e9b95a4df43a26ff82f1",
+          "originalSha256": "fe552fb5ad5cc2a7646f23c31a3489d63e41c455b94b535cc2cbfdcfca4a98a6"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:approved-scope",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/new-ash-graph/context/clarifications-specification-gen1.json",
+          "sha256": "0f815f785b16fe2383e3046c47e9e0f00414f4ad754c7803390062fcfc85213d"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/new-ash-graph/artifacts/planning/plan.md",
+        "sha256": "c49d8ae4096f310da28d374c50a3356b790db9c7f0612b6c83b9bae11bd0f381"
+      },
+      "upstreamSpec": {
+        "path": "singularity/work-items/new-ash-graph/artifacts/specification/spec.md",
+        "sha256": "614d49dd1cfee039ffdb97231a0199a8faaf89f4e5aed6fbaf4b23ac4c856055"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:approved-scope"
+    ],
+    "rows": [
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/FunctionGrapher.jsx",
+          "src/index.css"
+        ],
+        "plannedTests": [],
+        "testDisposition": "non-test",
+        "testReason": null,
+        "verificationCriterion": "NEW-ASH-GRAPH:AC-002",
+        "fulfillment": "modified",
+        "observableResult": "Grapher mode presents the left expression/algebra panel, Cartesian axes/grid, and bottom math keypad.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-002",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ],
+        "plannedTests": [
+          "tests/graph-plotter.spec.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "The browser test exercises the plotter with the approved circle and verifies its rendering.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-001",
+        "expectedPaths": [],
+        "plannedTests": [
+          "tests/graph-plotter.spec.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "test-only",
+        "observableResult": "Playwright confirms the plotted circle is centered at the origin and has radius 6 units.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/FunctionGrapher.jsx",
+          "src/index.css"
+        ],
+        "plannedTests": [],
+        "testDisposition": "non-test",
+        "testReason": null,
+        "verificationCriterion": "NEW-ASH-GRAPH:AC-002",
+        "fulfillment": "modified",
+        "observableResult": "The left expression/algebra panel, Cartesian axes/grid, and bottom math keypad appear in the graph layout.",
+        "assessment": "supported"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "717dabbe1d71dc4ece8ae0d2b9d20e66e4a59ab36c63301e5f1d6bed0dc3111a",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "architect",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-18T11:27:33.004Z",
+  "recordSha256": "49d2a1b0ef1eebb99c2dec5ca42a384336a0efab321718950ebc12afee5b5082"
+}
