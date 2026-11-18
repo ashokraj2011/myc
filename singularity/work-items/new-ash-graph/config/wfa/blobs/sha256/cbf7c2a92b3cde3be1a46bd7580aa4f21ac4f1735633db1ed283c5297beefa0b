@@ -1,0 +1,1899 @@
+{
+  "agentPromptsRoot": "singularity/agents",
+  "agents": {
+    "architect": {
+      "defaultFor": [
+        "planning",
+        "convergence"
+      ],
+      "phases": [
+        "planning",
+        "convergence"
+      ],
+      "sha256": "f5b0a036428c434bb7a71d88f41587f8524d294e280500d58921e1e8d33198ca",
+      "source": "singularity/agents/architect.agent.md",
+      "worldModelViews": []
+    },
+    "developer": {
+      "defaultFor": [
+        "implementation"
+      ],
+      "phases": [
+        "implementation"
+      ],
+      "sha256": "e47d149490ea1b535a251cbceed30cb28b3b034c040ca398bb4c67ddbe838705",
+      "source": "singularity/agents/developer.agent.md",
+      "worldModelViews": []
+    },
+    "product-owner": {
+      "defaultFor": [
+        "specification"
+      ],
+      "phases": [
+        "specification"
+      ],
+      "sha256": "0d4d57e44b665636835e4f954b5cc2060c6950918e5f74b7ba48b2d2bef05746",
+      "source": "singularity/agents/product-owner.agent.md",
+      "worldModelViews": []
+    },
+    "qa": {
+      "defaultFor": [
+        "verification",
+        "release"
+      ],
+      "phases": [
+        "verification",
+        "release"
+      ],
+      "sha256": "1118ffb38a5b55e05cbc45f85ed9eb2e716b7ad4a559251b50187d69438d8bab",
+      "source": "singularity/agents/qa.agent.md",
+      "worldModelViews": []
+    },
+    "sflow-source-reviewer": {
+      "defaultFor": [],
+      "phases": [],
+      "sha256": "717dabbe1d71dc4ece8ae0d2b9d20e66e4a59ab36c63301e5f1d6bed0dc3111a",
+      "source": "../../../../../../.vscode/extensions/singularityflow.singularity-flow-vscode-0.9.0/cli/plugin/agents/sflow-source-reviewer.agent.md",
+      "worldModelViews": []
+    },
+    "sflow-utility": {
+      "defaultFor": [],
+      "phases": [],
+      "sha256": "a6938beec838b5435fbf7539d5dceee48dff0095bcd4421cc5c322d7cb4c2a14",
+      "source": "../../../../../../.vscode/extensions/singularityflow.singularity-flow-vscode-0.9.0/cli/plugin/agents/sflow-utility.agent.md",
+      "worldModelViews": []
+    },
+    "sflow-workflow": {
+      "defaultFor": [],
+      "phases": [
+        "intake",
+        "requirements",
+        "design",
+        "implementation-spec",
+        "reproduction",
+        "fix-design",
+        "fix-spec",
+        "design-intake",
+        "design-inventory",
+        "component-mapping",
+        "mobile-spec",
+        "implement",
+        "implementation",
+        "verify",
+        "verification",
+        "visual-verification",
+        "conformance"
+      ],
+      "sha256": "a52435e709af13769cc62cef52836277c6fc094906b873674a70beb9db52c36f",
+      "source": "../../../../../../.vscode/extensions/singularityflow.singularity-flow-vscode-0.9.0/cli/plugin/agents/sflow-workflow.agent.md",
+      "worldModelViews": []
+    }
+  },
+  "analysisLimits": {
+    "maxArtifactBytes": 2097152,
+    "maxChangedPaths": 2000,
+    "maxClauses": 2000,
+    "maxEvidenceRecords": 500,
+    "maxFacts": 500,
+    "maxOutputBytes": 4194304
+  },
+  "approvalAuthorities": {
+    "architecture-reviewers": {
+      "allowAnyGitIdentity": false,
+      "githubTeams": [],
+      "label": "Architecture reviewers",
+      "members": [
+        {
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "name": "Ashok Raj"
+        }
+      ]
+    },
+    "design-reviewers": {
+      "allowAnyGitIdentity": false,
+      "githubTeams": [],
+      "label": "Design reviewers",
+      "members": [
+        {
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "name": "Ashok Raj"
+        }
+      ]
+    },
+    "engineering-reviewers": {
+      "allowAnyGitIdentity": false,
+      "githubTeams": [],
+      "label": "Engineering reviewers",
+      "members": [
+        {
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "name": "Ashok Raj"
+        }
+      ]
+    },
+    "product-approvers": {
+      "allowAnyGitIdentity": false,
+      "githubTeams": [],
+      "label": "Product approvers",
+      "members": [
+        {
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "name": "Ashok Raj"
+        }
+      ]
+    },
+    "quality-reviewers": {
+      "allowAnyGitIdentity": false,
+      "githubTeams": [],
+      "label": "Quality reviewers",
+      "members": [
+        {
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "name": "Ashok Raj"
+        }
+      ]
+    }
+  },
+  "approvalSecurity": {
+    "allowAnyGitIdentity": false,
+    "allowSelfApproval": true,
+    "autoEnrollNewIdentities": true,
+    "profile": "team",
+    "requireNamedMembers": false
+  },
+  "architectureIntent": {
+    "allowedPhases": [],
+    "blockRequiredUnfulfilledAt": [],
+    "enabled": false
+  },
+  "artifactSets": {
+    "spec-driven-planning": {
+      "id": "spec-driven-planning",
+      "members": [
+        {
+          "authority": "governed",
+          "path": "plan.md",
+          "required": true,
+          "role": "implementation-plan"
+        },
+        {
+          "authority": "advisory",
+          "path": "tasks.md",
+          "required": false,
+          "role": "advisory-task-map"
+        }
+      ],
+      "primary": "plan.md"
+    },
+    "spec-driven-specification": {
+      "id": "spec-driven-specification",
+      "members": [
+        {
+          "authority": "governed",
+          "path": "spec.md",
+          "required": true,
+          "role": "specification"
+        },
+        {
+          "authority": "advisory",
+          "path": "checklists/requirements.md",
+          "required": false,
+          "role": "specification-quality"
+        }
+      ],
+      "primary": "spec.md"
+    },
+    "spec-driven-verification": {
+      "id": "spec-driven-verification",
+      "members": [
+        {
+          "authority": "governed",
+          "path": "conformance.md",
+          "required": true,
+          "role": "conformance"
+        },
+        {
+          "authority": "governed",
+          "path": "verification/",
+          "required": true,
+          "role": "evidence-collection"
+        }
+      ],
+      "primary": "conformance.md"
+    }
+  },
+  "capability": {
+    "basePolicy": {
+      "protectedPaths": [],
+      "qualityCommands": [],
+      "requiredAuthorityGroups": [],
+      "requiredChecks": [],
+      "requiredWorldModelViews": []
+    },
+    "deliveries": [
+      {
+        "id": "raj-calc",
+        "name": "calc",
+        "repositories": [
+          "myc"
+        ],
+        "repository": "myc"
+      }
+    ],
+    "effectiveResolution": {
+      "approvalProfileSha256": "sha256:957532c98d98882b301df4f214188248d09c710b9d2e08ff2f9c34662c173747",
+      "approvalRequirementSha256": "sha256:f96a6dcb7346dc0b91cb0cefacd58b6a126983b2021857bc9161bf129c73e974",
+      "approvedConfigurationSha256": "sha256:a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+      "capability": {
+        "dependencies": [],
+        "id": "raj-calc",
+        "kind": "delivery",
+        "label": "calc",
+        "sharedRoots": [],
+        "sourceRoots": [],
+        "teams": []
+      },
+      "capabilityStateSha256": "sha256:a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+      "dependencyContractSha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "kind": "effective-capability-resolution",
+      "mode": "explicit-legacy",
+      "policy": {
+        "protectedPaths": [],
+        "qualityCommands": [],
+        "requiredAuthorityGroups": [],
+        "requiredChecks": [],
+        "requiredWorldModelViews": []
+      },
+      "policySha256": "sha256:9188269dd6529b93b977b4c5f0001e84dd7ecdf0740f7d793427f20ea815399f",
+      "repository": {
+        "id": "myc",
+        "identitySha256": "sha256:b6b0e144b91f734c16c4fa94f91421771d174e23847940487bc5dbe44619bb27"
+      },
+      "resolutionSha256": "sha256:722d4f5f2114e61242d8b5a66d9110560e89b7734a5bf1d9df0ef8c93e1441e3",
+      "resolver": {
+        "id": "sflow-effective-capability",
+        "implementationSha256": "sha256:d8ccc472522ac7620caef72206882ee237ce59337fd4ff638515764d10ad6e19",
+        "version": 1
+      },
+      "schemaVersion": 1,
+      "sourceScopeSha256": "sha256:3cfad3de2ed4ead14186f0fc80c04c385a5bf80df7b7c4ee526ff10ffff6148d"
+    },
+    "id": "raj-calc",
+    "kind": "delivery",
+    "leases": [],
+    "map": {
+      "authority": "pinned-story-configuration",
+      "branch": "sflow/config",
+      "commit": "d75fdc3fa464fbce9738cb9535256f736bd521ac",
+      "path": "singularity/capabilities.yml",
+      "repository": "https://github.com/ashokraj2011/myc.git",
+      "sha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d"
+    },
+    "mode": "explicit-legacy",
+    "name": "calc",
+    "path": [
+      "raj-calc"
+    ],
+    "policy": {
+      "protectedPaths": [],
+      "qualityCommands": [],
+      "requiredAuthorityGroups": [],
+      "requiredChecks": [],
+      "requiredWorldModelViews": []
+    },
+    "repositoryId": "myc",
+    "resolutionSha256": "sha256:722d4f5f2114e61242d8b5a66d9110560e89b7734a5bf1d9df0ef8c93e1441e3",
+    "schemaVersion": 1,
+    "sourceScope": null,
+    "warnings": []
+  },
+  "codeDelivery": {
+    "changeSet": {
+      "includeCommitted": true,
+      "includeIndex": true,
+      "includeUntracked": true,
+      "includeWorktree": true,
+      "renameDetection": "required",
+      "symlinks": "reject"
+    },
+    "display": {
+      "fullDocumentMaximumBytes": 65536,
+      "previewBytes": 4096,
+      "source": "reference-preview"
+    },
+    "generationBoundary": {
+      "dirtyStart": "block",
+      "requireBegin": true
+    },
+    "mode": "enforce",
+    "model": {
+      "minimumAssurance": "unavailable"
+    },
+    "publication": {
+      "idempotency": "generation-intent"
+    },
+    "schemaVersion": 2,
+    "tests": {
+      "executionAssurance": "module",
+      "minimumDiscovered": 1,
+      "minimumPassed": 1,
+      "requireAffectedModuleCoverage": true,
+      "requireExecutableSource": true,
+      "requireResultAdapter": true,
+      "stringCommands": "reject",
+      "unknownModelPolicy": "block"
+    },
+    "traceability": {
+      "bareIdCompatibility": "unique-only",
+      "requireNamespaceQualifiedIds": true,
+      "source": "pinned-spec-index",
+      "sourceBindings": "enforce"
+    }
+  },
+  "collaboration": {
+    "approvalReminderAfterHours": 24,
+    "assignmentMode": "suggested",
+    "notifications": [
+      "terminal"
+    ]
+  },
+  "configSha256": "b8be8eefc29f357791638bbb726ea7c65cf83db480b10f325b73db73e444c8f1",
+  "configurationSource": {
+    "assets": {
+      "singularity/agent-mappings.yml": {
+        "mode": "100644",
+        "object": "701949f4a8a4ab0da2175415071aaf5298202da4",
+        "sha256": "1b39a4f4caa3242749889a291e2259a361c815712bd762abde3db3cbe9f8a688"
+      },
+      "singularity/agents/architect.agent.md": {
+        "mode": "100644",
+        "object": "12d338528186a2df35431e2d79f96e201706bb2f",
+        "sha256": "f5b0a036428c434bb7a71d88f41587f8524d294e280500d58921e1e8d33198ca"
+      },
+      "singularity/agents/developer.agent.md": {
+        "mode": "100644",
+        "object": "f13fb9725f32d2e237f6e8eb24d47da232f94603",
+        "sha256": "e47d149490ea1b535a251cbceed30cb28b3b034c040ca398bb4c67ddbe838705"
+      },
+      "singularity/agents/product-owner.agent.md": {
+        "mode": "100644",
+        "object": "6df53a195752d5a41d6b657f4b66c316487f2ced",
+        "sha256": "0d4d57e44b665636835e4f954b5cc2060c6950918e5f74b7ba48b2d2bef05746"
+      },
+      "singularity/agents/qa.agent.md": {
+        "mode": "100644",
+        "object": "b23face697b3a55e7555ba7a0b6b6e7b5d5f687f",
+        "sha256": "1118ffb38a5b55e05cbc45f85ed9eb2e716b7ad4a559251b50187d69438d8bab"
+      },
+      "singularity/capabilities.yml": {
+        "mode": "100644",
+        "object": "de694bdc86c25d875f3d07af1a86e80bbe848b4e",
+        "sha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d"
+      },
+      "singularity/impact.yml": {
+        "mode": "100644",
+        "object": "ca5caa426515a71bf583c5fe0fa0743e53d651d5",
+        "sha256": "e91000c4f19ba8f8c08812ebea1d3e825919f5b31dadd1f3e22f1749e3b05313"
+      },
+      "singularity/modelTiers.yml": {
+        "mode": "100644",
+        "object": "0c6aebce180bb71580331028dd5e7e58c2932096",
+        "sha256": "da16ef4023221a14aba0b5a87fd80b395d3ea7d48b0ecf65481c291180aec23a"
+      },
+      "singularity/portfolio.yml": {
+        "mode": "100644",
+        "object": "cea5054c7042124ee278087fc256f8c8ffbceec9",
+        "sha256": "111ef18954d1a84c4f63d27b80b17476965d75ddf3650ffb4b0d93aeb25edfaf"
+      },
+      "singularity/prompts/copilot-planning.md": {
+        "mode": "100644",
+        "object": "6dffb3072c8b121cd4b879cd457dd8219255ad42",
+        "sha256": "4128acc6930949e4ba1e50e8b8c7c4f7beb23f4361c2e8428475b081712b77db"
+      },
+      "singularity/templates/common/implementation.md": {
+        "mode": "100644",
+        "object": "e46ddf1775a136aefc5237dc791c621cddfdb0ea",
+        "sha256": "ba0749ab3997579949fc836a839af6606f995c2012a90b410597ebadf211298d"
+      },
+      "singularity/templates/common/verification.md": {
+        "mode": "100644",
+        "object": "03c759962dfbd30d1effa9b5ca87b658b6df529e",
+        "sha256": "4f559684330b34b509cd27e959615ef48fdbda1bf0c44e05456bf70cb7754532"
+      },
+      "singularity/templates/spec-driven/convergence.md": {
+        "mode": "100644",
+        "object": "be939717e10fc67f6099aab3115f48f77c3d7b33",
+        "sha256": "922df3ebcd5e081ca202606f29f640f1b0439d9b9c17a94a2ff2478aad2a4d5a"
+      },
+      "singularity/templates/spec-driven/plan.md": {
+        "mode": "100644",
+        "object": "5b04961bafa2b67e1f2a7b8a5cc35f31ff1dbe9a",
+        "sha256": "8ac870c047c0155d5ca4ca7391a11acb7310b52aae746d66f40e1d77ecdb14ec"
+      },
+      "singularity/templates/spec-driven/release.md": {
+        "mode": "100644",
+        "object": "63ed524ced5ef146cc496475187e0f8afee1e0fd",
+        "sha256": "8f7c0be1d576e781de1724a50bc906ad8f511807e665328e753bf40fd4e881a6"
+      },
+      "singularity/templates/spec-driven/spec.md": {
+        "mode": "100644",
+        "object": "8e8bdc6b9d24306453881b51baa0876f5f6053e4",
+        "sha256": "c3b2d1434d1d37fefc2ae168f849e9f801992433a7b81c7eb9f27b78c7f66d4e"
+      },
+      "singularity/workflow.yml": {
+        "mode": "100644",
+        "object": "a8436f60ac4e1f6699761a75066965dcb73f747c",
+        "sha256": "b8be8eefc29f357791638bbb726ea7c65cf83db480b10f325b73db73e444c8f1"
+      }
+    },
+    "baseCommit": "17e1d25dabf9efff7b894e9d5d5d82a9656ccce4",
+    "branch": "sflow/config",
+    "closure": {
+      "approvedAssetCount": 173,
+      "derived": {
+        "singularity/agents/architect.agent.md": {
+          "object": "22870af72bb6fb554c305aeacf4de950110ae2a4",
+          "sha256": "1a6832345721bb2530cba9e9da6944fb2a6714fddd73b0a8dd18a1d1140625e0",
+          "transform": "agent-steps"
+        },
+        "singularity/agents/developer.agent.md": {
+          "object": "99602150354d1219884750bd3ffa1989a07be40a",
+          "sha256": "a88a659a79439033c4eb7f43fee9223fe9cf10c013265bbe33fb08da3196047b",
+          "transform": "agent-steps"
+        },
+        "singularity/agents/product-owner.agent.md": {
+          "object": "bc21d51ecbcf6700b36c8e8b1ae66b9fec18a1f0",
+          "sha256": "781dbe6c8ce3c8cfdfc894b5796a6e5d5c62c8737d03364ad6459c2cf3b6fb8a",
+          "transform": "agent-steps"
+        },
+        "singularity/agents/qa.agent.md": {
+          "object": "43a6ba9ace5bb0958d25ba2abe09871fa442cd19",
+          "sha256": "0e255fe098bdf64629605d449db145d180e8a7f5c8c9da3efab956422a393018",
+          "transform": "agent-steps"
+        },
+        "singularity/workflow.yml": {
+          "object": "0d04e4e85285c0154e79c2e2b1f65e5a3f6989d1",
+          "sha256": "104a0c47a2b862588a27d7680ddff352784b9799576e10a2e03de9dcb6b4b798",
+          "transform": "work-type-projection"
+        }
+      },
+      "kind": "work-type",
+      "workTypes": [
+        "spec-driven-standard"
+      ]
+    },
+    "commit": "d75fdc3fa464fbce9738cb9535256f736bd521ac",
+    "files": {
+      "singularity/agent-mappings.yml": "1b39a4f4caa3242749889a291e2259a361c815712bd762abde3db3cbe9f8a688",
+      "singularity/agents/architect.agent.md": "f5b0a036428c434bb7a71d88f41587f8524d294e280500d58921e1e8d33198ca",
+      "singularity/agents/developer.agent.md": "e47d149490ea1b535a251cbceed30cb28b3b034c040ca398bb4c67ddbe838705",
+      "singularity/agents/product-owner.agent.md": "0d4d57e44b665636835e4f954b5cc2060c6950918e5f74b7ba48b2d2bef05746",
+      "singularity/agents/qa.agent.md": "1118ffb38a5b55e05cbc45f85ed9eb2e716b7ad4a559251b50187d69438d8bab",
+      "singularity/capabilities.yml": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+      "singularity/impact.yml": "e91000c4f19ba8f8c08812ebea1d3e825919f5b31dadd1f3e22f1749e3b05313",
+      "singularity/modelTiers.yml": "da16ef4023221a14aba0b5a87fd80b395d3ea7d48b0ecf65481c291180aec23a",
+      "singularity/portfolio.yml": "111ef18954d1a84c4f63d27b80b17476965d75ddf3650ffb4b0d93aeb25edfaf",
+      "singularity/prompts/copilot-planning.md": "4128acc6930949e4ba1e50e8b8c7c4f7beb23f4361c2e8428475b081712b77db",
+      "singularity/templates/common/implementation.md": "ba0749ab3997579949fc836a839af6606f995c2012a90b410597ebadf211298d",
+      "singularity/templates/common/verification.md": "4f559684330b34b509cd27e959615ef48fdbda1bf0c44e05456bf70cb7754532",
+      "singularity/templates/spec-driven/convergence.md": "922df3ebcd5e081ca202606f29f640f1b0439d9b9c17a94a2ff2478aad2a4d5a",
+      "singularity/templates/spec-driven/plan.md": "8ac870c047c0155d5ca4ca7391a11acb7310b52aae746d66f40e1d77ecdb14ec",
+      "singularity/templates/spec-driven/release.md": "8f7c0be1d576e781de1724a50bc906ad8f511807e665328e753bf40fd4e881a6",
+      "singularity/templates/spec-driven/spec.md": "c3b2d1434d1d37fefc2ae168f849e9f801992433a7b81c7eb9f27b78c7f66d4e",
+      "singularity/workflow.yml": "b8be8eefc29f357791638bbb726ea7c65cf83db480b10f325b73db73e444c8f1"
+    },
+    "filesSha256": "5dc619b415a8a43a33dddfc702783e8a788264e495ac70178253f650bfbe64a4",
+    "materializedAt": "2026-11-18T10:40:49.718Z",
+    "projectionSha256": "eb46fb015c9666b12a9697b1984c1cd5dc8c83576e2140b0b91e0781f2948025",
+    "removed": {},
+    "repository": "https://github.com/ashokraj2011/myc.git",
+    "schemaVersion": 2
+  },
+  "constitution": {
+    "mode": "warn",
+    "path": "singularity/constitution.md"
+  },
+  "contextPolicy": {
+    "onApproval": "new",
+    "onRejection": "keep",
+    "phaseOverrides": {}
+  },
+  "designSources": null,
+  "documents": {
+    "allowedMimeTypes": [],
+    "allowedPhases": [
+      "specification",
+      "planning"
+    ],
+    "maxFileBytes": 26214400,
+    "maxPreviewBytes": 1048576,
+    "storage": {
+      "allowed": [
+        "local"
+      ],
+      "default": "local"
+    }
+  },
+  "faultRepair": {
+    "boundedAuto": false,
+    "enabled": true,
+    "environmentCeilings": {
+      "ci": "propose",
+      "copilot": "guided",
+      "ide": "guided",
+      "integration": "propose",
+      "local": "guided",
+      "production": "diagnose",
+      "staging": "propose"
+    },
+    "leaseMinutes": 60,
+    "maxAttempts": 3,
+    "maxMinutes": 20,
+    "maxTokens": 30000,
+    "maximumEvidenceBytes": 67108864,
+    "maximumInlineEvidenceBytes": 16384,
+    "protectedPaths": [
+      ".git",
+      "singularity",
+      "infra/production"
+    ]
+  },
+  "governedRoots": [
+    "singularity",
+    "singularity/agents",
+    "singularity/initiatives",
+    "singularity/templates",
+    "singularity/work-items",
+    "singularity/world-model"
+  ],
+  "harnessImports": {
+    "conformance": {
+      "maximumActions": "observe",
+      "previewRespected": "off",
+      "questionPrecedesMutation": "warn",
+      "verbatimRelay": "off"
+    },
+    "knowledge": {
+      "enabled": true,
+      "maximumBytes": 8192
+    },
+    "mode": "record",
+    "previewTextBytes": 16384,
+    "totalEnvelopeBytes": 32768
+  },
+  "impact": {
+    "automaticEnrollment": true,
+    "metricAuthorities": {
+      "approval-wait-ms": {
+        "authority": "kernel-only"
+      },
+      "cached-input-tokens": {
+        "authority": "kernel-only"
+      },
+      "conformance-gap-count": {
+        "authority": "kernel-only"
+      },
+      "cost-usd": {
+        "authority": "kernel-only"
+      },
+      "elapsed-ms": {
+        "authority": "kernel-only"
+      },
+      "escaped-defects": {
+        "authority": "external-provider",
+        "providers": [
+          "quality-system"
+        ]
+      },
+      "first-pass-approval-rate": {
+        "authority": "kernel-only"
+      },
+      "flow-time-excluding-approval-wait-ms": {
+        "authority": "kernel-only"
+      },
+      "input-tokens": {
+        "authority": "kernel-only"
+      },
+      "output-tokens": {
+        "authority": "kernel-only"
+      },
+      "rejections": {
+        "authority": "kernel-only"
+      },
+      "required-check-pass-rate": {
+        "authority": "kernel-only"
+      },
+      "rework-cycles": {
+        "authority": "kernel-only"
+      },
+      "self-approvals": {
+        "authority": "kernel-only"
+      },
+      "sequence-overrides": {
+        "authority": "kernel-only"
+      },
+      "total-tokens": {
+        "authority": "kernel-only"
+      }
+    },
+    "path": "singularity/impact.yml",
+    "sha256": "e91000c4f19ba8f8c08812ebea1d3e825919f5b31dadd1f3e22f1749e3b05313",
+    "studies": [
+      {
+        "eligibility": {
+          "capabilities": [],
+          "workTypes": [
+            "feature",
+            "bugfix",
+            "chore"
+          ]
+        },
+        "enabled": false,
+        "groups": [
+          {
+            "assistanceMode": "baseline",
+            "id": "baseline",
+            "label": "Baseline",
+            "weight": 1
+          },
+          {
+            "assistanceMode": "governed-agent",
+            "id": "governed-agent",
+            "label": "Governed agent",
+            "weight": 1
+          }
+        ],
+        "guardrails": [
+          {
+            "direction": "lower",
+            "id": "rework-cycles",
+            "maximumRegressionPercent": 10,
+            "unit": "count"
+          },
+          {
+            "direction": "lower",
+            "id": "rejections",
+            "maximumRegressionPercent": 10,
+            "unit": "count"
+          }
+        ],
+        "id": "governed-ai-delivery",
+        "kind": "delivery-comparison",
+        "label": "Governed AI delivery",
+        "matching": {
+          "dimensions": [
+            "capability",
+            "repository-class",
+            "work-type",
+            "complexity",
+            "risk",
+            "time-period"
+          ],
+          "seed": "governed-ai-delivery-v1",
+          "timePeriod": "quarter",
+          "weighting": "minimum-cohort-count"
+        },
+        "method": "matched-observational",
+        "primaryMetric": {
+          "direction": "lower",
+          "id": "flow-time-excluding-approval-wait-ms",
+          "unit": "milliseconds"
+        },
+        "privacy": {
+          "allowedDimensions": [
+            "capability",
+            "repository-class",
+            "work-type",
+            "complexity",
+            "risk",
+            "time-period"
+          ],
+          "individualReporting": false,
+          "minimumCohortSize": 5,
+          "pseudonymizeContributors": true
+        },
+        "reporting": {
+          "bootstrapSamples": 1000,
+          "confidenceLevel": 0.95
+        },
+        "rollout": null,
+        "unit": "story"
+      }
+    ],
+    "version": 2
+  },
+  "initiativeRoot": "singularity/initiatives",
+  "inputsMode": "enforce",
+  "intelligence": {
+    "agentBriefs": "inherit",
+    "ast": "inherit",
+    "worldModel": "inherit"
+  },
+  "ledger": {
+    "behind": "warn",
+    "branch": "state",
+    "enabled": true,
+    "enforcement": "shadow",
+    "maxRetries": 4,
+    "pinTransport": "refs",
+    "publication": "warn",
+    "remote": "origin",
+    "retentionDays": 2555,
+    "signing": "off",
+    "trustTier": "T0"
+  },
+  "mcpServers": {
+    "playwright": {
+      "agents": [
+        "qa"
+      ],
+      "approval": "confirm",
+      "evidence": {
+        "captureResults": true,
+        "captureToolCalls": true
+      },
+      "hostReference": "playwright",
+      "id": "playwright",
+      "label": "Playwright browser automation",
+      "phases": [
+        "verification"
+      ],
+      "required": false,
+      "tools": [
+        "browser_navigate",
+        "browser_snapshot",
+        "browser_click",
+        "browser_fill_form",
+        "browser_hover",
+        "browser_press_key",
+        "browser_resize",
+        "browser_take_screenshot",
+        "browser_console_messages",
+        "browser_network_requests"
+      ]
+    }
+  },
+  "obligationGraph": {
+    "compilerVersion": 1,
+    "digest": "sha256:9cdc7670ee4a970305e6702323958659628eac893546bf2c64fe00ce0457d675",
+    "edges": [
+      {
+        "decision": null,
+        "from": "specification",
+        "kind": "next",
+        "omits": [],
+        "route": null,
+        "to": "planning"
+      },
+      {
+        "decision": null,
+        "from": "planning",
+        "kind": "next",
+        "omits": [],
+        "route": null,
+        "to": "implementation"
+      },
+      {
+        "decision": null,
+        "from": "planning",
+        "kind": "rework",
+        "omits": [],
+        "route": null,
+        "to": "specification"
+      },
+      {
+        "decision": null,
+        "from": "implementation",
+        "kind": "next",
+        "omits": [],
+        "route": null,
+        "to": "convergence"
+      },
+      {
+        "decision": null,
+        "from": "implementation",
+        "kind": "rework",
+        "omits": [],
+        "route": null,
+        "to": "specification"
+      },
+      {
+        "decision": null,
+        "from": "implementation",
+        "kind": "rework",
+        "omits": [],
+        "route": null,
+        "to": "planning"
+      },
+      {
+        "decision": null,
+        "from": "convergence",
+        "kind": "next",
+        "omits": [],
+        "route": null,
+        "to": "verification"
+      },
+      {
+        "decision": null,
+        "from": "convergence",
+        "kind": "rework",
+        "omits": [],
+        "route": null,
+        "to": "specification"
+      },
+      {
+        "decision": null,
+        "from": "convergence",
+        "kind": "rework",
+        "omits": [],
+        "route": null,
+        "to": "planning"
+      },
+      {
+        "decision": null,
+        "from": "convergence",
+        "kind": "rework",
+        "omits": [],
+        "route": null,
+        "to": "implementation"
+      },
+      {
+        "decision": null,
+        "from": "verification",
+        "kind": "next",
+        "omits": [],
+        "route": null,
+        "to": "release"
+      },
+      {
+        "decision": null,
+        "from": "verification",
+        "kind": "rework",
+        "omits": [],
+        "route": null,
+        "to": "specification"
+      },
+      {
+        "decision": null,
+        "from": "verification",
+        "kind": "rework",
+        "omits": [],
+        "route": null,
+        "to": "planning"
+      },
+      {
+        "decision": null,
+        "from": "verification",
+        "kind": "rework",
+        "omits": [],
+        "route": null,
+        "to": "implementation"
+      },
+      {
+        "decision": null,
+        "from": "verification",
+        "kind": "rework",
+        "omits": [],
+        "route": null,
+        "to": "convergence"
+      },
+      {
+        "decision": null,
+        "from": "release",
+        "kind": "next",
+        "omits": [],
+        "route": null,
+        "to": "$end"
+      },
+      {
+        "decision": null,
+        "from": "release",
+        "kind": "rework",
+        "omits": [],
+        "route": null,
+        "to": "specification"
+      },
+      {
+        "decision": null,
+        "from": "release",
+        "kind": "rework",
+        "omits": [],
+        "route": null,
+        "to": "planning"
+      },
+      {
+        "decision": null,
+        "from": "release",
+        "kind": "rework",
+        "omits": [],
+        "route": null,
+        "to": "implementation"
+      },
+      {
+        "decision": null,
+        "from": "release",
+        "kind": "rework",
+        "omits": [],
+        "route": null,
+        "to": "convergence"
+      },
+      {
+        "decision": null,
+        "from": "release",
+        "kind": "rework",
+        "omits": [],
+        "route": null,
+        "to": "verification"
+      }
+    ],
+    "endpoints": [
+      {
+        "decision": null,
+        "from": "release",
+        "guaranteed": [
+          "scope",
+          "plan",
+          "implement",
+          "verify",
+          "review"
+        ],
+        "missing": [],
+        "omits": [],
+        "route": null
+      }
+    ],
+    "nodes": [
+      {
+        "id": "specification",
+        "responsibilities": [
+          "scope",
+          "review"
+        ],
+        "reviewKind": "human"
+      },
+      {
+        "id": "planning",
+        "responsibilities": [
+          "plan",
+          "review"
+        ],
+        "reviewKind": "human"
+      },
+      {
+        "id": "implementation",
+        "responsibilities": [
+          "implement",
+          "verify",
+          "review"
+        ],
+        "reviewKind": "human"
+      },
+      {
+        "id": "convergence",
+        "responsibilities": [
+          "review"
+        ],
+        "reviewKind": "human"
+      },
+      {
+        "id": "verification",
+        "responsibilities": [
+          "implement",
+          "verify",
+          "review"
+        ],
+        "reviewKind": "human"
+      },
+      {
+        "id": "release",
+        "responsibilities": [
+          "review"
+        ],
+        "reviewKind": "human"
+      }
+    ],
+    "shapeDigest": "sha256:47c4a8eed46361d7a4b28001155b8753aa5b6f53168abc268ded7a2d7fb39781"
+  },
+  "phaseResponsibility": {
+    "ownerStepChecks": 2
+  },
+  "phaseSemantics": {
+    "profile": "sflow-phase-semantics/v1"
+  },
+  "phases": [
+    {
+      "approval": {
+        "allowSelfApproval": true,
+        "authorities": [
+          "product-approvers"
+        ],
+        "changeRequests": {
+          "commentRequired": true,
+          "reopenCompleted": true
+        },
+        "maximumChangedPaths": null,
+        "minimum": 1,
+        "mode": "required",
+        "policy": null,
+        "rejectTo": [
+          "specification"
+        ],
+        "requiredAuthorities": []
+      },
+      "artifact": {
+        "kind": "requirements",
+        "minimumBytes": 400,
+        "path": "artifacts/specification/spec.md"
+      },
+      "artifactSet": "spec-driven-specification",
+      "clarification": {
+        "markers": {
+          "mode": "block"
+        },
+        "maxQuestions": 5,
+        "mode": "required",
+        "topics": [
+          "scope",
+          "acceptance criteria",
+          "actors",
+          "boundary conditions",
+          "non-functional requirements"
+        ]
+      },
+      "comparison": {},
+      "defaultAgent": "product-owner",
+      "defaultTemplate": "spec-driven/spec.md",
+      "generation": {
+        "allowedProducers": [
+          "governed-agent",
+          "human"
+        ],
+        "defaultProducer": "governed-agent",
+        "producer": "agent",
+        "requirement": "required",
+        "task": null
+      },
+      "id": "specification",
+      "inputs": [],
+      "label": "Specification",
+      "mcp": {
+        "evidence": [],
+        "requireSmoke": false,
+        "requiredServers": []
+      },
+      "order": 0,
+      "qualityCommands": [],
+      "repairBudget": null,
+      "sourceBoundary": "unrestricted",
+      "specificationQuality": {
+        "approvalChecklist": "off",
+        "assisted": false,
+        "checklist": "requirements-quality-v1",
+        "exceptionAuthority": null,
+        "mode": "enforce",
+        "scenarioCoverage": "required"
+      },
+      "template": "spec-driven/spec.md",
+      "templateSnapshot": {
+        "path": "singularity/work-items/new-ash-graph/config/wfa/blobs/sha256/c3b2d1434d1d37fefc2ae168f849e9f801992433a7b81c7eb9f27b78c7f66d4e",
+        "sha256": "c3b2d1434d1d37fefc2ae168f849e9f801992433a7b81c7eb9f27b78c7f66d4e",
+        "source": "workflow-snapshot",
+        "sourcePath": "singularity/templates/spec-driven/spec.md"
+      },
+      "worldModel": {
+        "views": []
+      },
+      "writeScope": "artifact-only"
+    },
+    {
+      "approval": {
+        "allowSelfApproval": true,
+        "authorities": [
+          "architecture-reviewers"
+        ],
+        "changeRequests": {
+          "commentRequired": true,
+          "reopenCompleted": true
+        },
+        "maximumChangedPaths": null,
+        "minimum": 1,
+        "mode": "required",
+        "policy": null,
+        "rejectTo": [
+          "specification",
+          "planning"
+        ],
+        "requiredAuthorities": []
+      },
+      "artifact": {
+        "kind": "design",
+        "minimumBytes": 300,
+        "path": "artifacts/planning/plan.md"
+      },
+      "artifactSet": "spec-driven-planning",
+      "clarification": {
+        "markers": {
+          "mode": "off"
+        },
+        "maxQuestions": 5,
+        "mode": "off",
+        "topics": []
+      },
+      "comparison": {},
+      "defaultAgent": "architect",
+      "defaultTemplate": "spec-driven/plan.md",
+      "generation": {
+        "allowedProducers": [
+          "governed-agent",
+          "human"
+        ],
+        "defaultProducer": "governed-agent",
+        "producer": "agent",
+        "requirement": "required",
+        "task": null
+      },
+      "id": "planning",
+      "inputs": [
+        {
+          "expansion": "hash-bound-reference",
+          "fallback": "block",
+          "maxBytes": null,
+          "maximumSummaryBytes": 32768,
+          "optional": false,
+          "path": "artifacts/specification/spec.md",
+          "phase": "specification",
+          "preserve": [
+            "Actors",
+            "User scenarios",
+            "Failure and empty states",
+            "Permissions",
+            "Boundary conditions",
+            "Requirements",
+            "Non-functional requirements",
+            "Assumptions",
+            "Out of scope"
+          ],
+          "projection": "approved-summary"
+        }
+      ],
+      "label": "Planning",
+      "mcp": {
+        "evidence": [],
+        "requireSmoke": false,
+        "requiredServers": []
+      },
+      "order": 1,
+      "qualityCommands": [],
+      "repairBudget": null,
+      "sourceBoundary": "unrestricted",
+      "specificationQuality": {
+        "assisted": false,
+        "checklist": "requirements-quality-v1",
+        "exceptionAuthority": null,
+        "mode": "off"
+      },
+      "template": "spec-driven/plan.md",
+      "templateSnapshot": {
+        "path": "singularity/work-items/new-ash-graph/config/wfa/blobs/sha256/8ac870c047c0155d5ca4ca7391a11acb7310b52aae746d66f40e1d77ecdb14ec",
+        "sha256": "8ac870c047c0155d5ca4ca7391a11acb7310b52aae746d66f40e1d77ecdb14ec",
+        "source": "workflow-snapshot",
+        "sourcePath": "singularity/templates/spec-driven/plan.md"
+      },
+      "worldModel": {
+        "views": []
+      },
+      "writeScope": "artifact-only"
+    },
+    {
+      "approval": {
+        "allowSelfApproval": true,
+        "authorities": [
+          "engineering-reviewers"
+        ],
+        "changeRequests": {
+          "commentRequired": true,
+          "reopenCompleted": true
+        },
+        "maximumChangedPaths": null,
+        "minimum": 1,
+        "mode": "required",
+        "policy": null,
+        "rejectTo": [
+          "specification",
+          "planning",
+          "implementation"
+        ],
+        "requiredAuthorities": []
+      },
+      "artifact": {
+        "kind": "implementation-summary",
+        "minimumBytes": 250,
+        "path": "artifacts/implementation/implementation-summary.md"
+      },
+      "clarification": {
+        "markers": {
+          "mode": "off"
+        },
+        "maxQuestions": 3,
+        "mode": "when-needed",
+        "topics": [
+          "approved deviations",
+          "implementation blockers"
+        ]
+      },
+      "comparison": {},
+      "defaultAgent": "developer",
+      "defaultTemplate": "common/implementation.md",
+      "generation": {
+        "allowedProducers": [
+          "governed-agent",
+          "human"
+        ],
+        "defaultProducer": "governed-agent",
+        "producer": "agent",
+        "requirement": "required",
+        "task": "code"
+      },
+      "id": "implementation",
+      "inputs": [
+        {
+          "expansion": "hash-bound-reference",
+          "fallback": "block",
+          "maxBytes": null,
+          "maximumSummaryBytes": 32768,
+          "optional": false,
+          "path": "artifacts/specification/spec.md",
+          "phase": "specification",
+          "preserve": [
+            "Actors",
+            "User scenarios",
+            "Failure and empty states",
+            "Permissions",
+            "Boundary conditions",
+            "Requirements",
+            "Non-functional requirements",
+            "Assumptions",
+            "Out of scope"
+          ],
+          "projection": "approved-summary"
+        },
+        {
+          "expansion": "hash-bound-reference",
+          "fallback": "block",
+          "maxBytes": null,
+          "maximumSummaryBytes": 24576,
+          "optional": false,
+          "path": "artifacts/planning/plan.md",
+          "phase": "planning",
+          "preserve": [
+            "Test strategy",
+            "Risks and rollback"
+          ],
+          "projection": "approved-summary"
+        }
+      ],
+      "label": "Implementation",
+      "mcp": {
+        "evidence": [],
+        "requireSmoke": false,
+        "requiredServers": []
+      },
+      "order": 2,
+      "qualityCommands": [],
+      "repairBudget": null,
+      "sourceBoundary": "unrestricted",
+      "specificationQuality": {
+        "assisted": false,
+        "checklist": "requirements-quality-v1",
+        "exceptionAuthority": null,
+        "mode": "off"
+      },
+      "template": "common/implementation.md",
+      "templateSnapshot": {
+        "path": "singularity/work-items/new-ash-graph/config/wfa/blobs/sha256/ba0749ab3997579949fc836a839af6606f995c2012a90b410597ebadf211298d",
+        "sha256": "ba0749ab3997579949fc836a839af6606f995c2012a90b410597ebadf211298d",
+        "source": "workflow-snapshot",
+        "sourcePath": "singularity/templates/common/implementation.md"
+      },
+      "worldModel": {
+        "views": []
+      },
+      "writeScope": "source-and-artifact"
+    },
+    {
+      "approval": {
+        "allowSelfApproval": true,
+        "authorities": [
+          "architecture-reviewers"
+        ],
+        "changeRequests": {
+          "commentRequired": true,
+          "reopenCompleted": true
+        },
+        "maximumChangedPaths": null,
+        "minimum": 1,
+        "mode": "required",
+        "policy": null,
+        "rejectTo": [
+          "specification",
+          "planning",
+          "implementation",
+          "convergence"
+        ],
+        "requiredAuthorities": []
+      },
+      "artifact": {
+        "kind": "convergence-report",
+        "minimumBytes": 200,
+        "path": "artifacts/convergence/convergence.md"
+      },
+      "clarification": {
+        "markers": {
+          "mode": "off"
+        },
+        "maxQuestions": 5,
+        "mode": "off",
+        "topics": []
+      },
+      "comparison": {},
+      "defaultAgent": "architect",
+      "defaultTemplate": "spec-driven/convergence.md",
+      "generation": {
+        "allowedProducers": [
+          "deterministic"
+        ],
+        "defaultProducer": "deterministic",
+        "producer": "deterministic",
+        "requirement": "required",
+        "task": "analyze"
+      },
+      "id": "convergence",
+      "inputs": [
+        {
+          "expansion": "hash-bound-reference",
+          "fallback": "block",
+          "maxBytes": null,
+          "maximumSummaryBytes": 32768,
+          "optional": false,
+          "path": "artifacts/specification/spec.md",
+          "phase": "specification",
+          "preserve": [
+            "Actors",
+            "User scenarios",
+            "Failure and empty states",
+            "Permissions",
+            "Boundary conditions",
+            "Requirements",
+            "Non-functional requirements",
+            "Assumptions",
+            "Out of scope"
+          ],
+          "projection": "approved-summary"
+        },
+        {
+          "expansion": "hash-bound-reference",
+          "fallback": "block",
+          "maxBytes": null,
+          "maximumSummaryBytes": 24576,
+          "optional": false,
+          "path": "artifacts/planning/plan.md",
+          "phase": "planning",
+          "preserve": [
+            "Test strategy",
+            "Risks and rollback"
+          ],
+          "projection": "approved-summary"
+        },
+        {
+          "expansion": "hash-bound-reference",
+          "fallback": "block",
+          "maxBytes": null,
+          "maximumSummaryBytes": 24576,
+          "optional": false,
+          "path": "artifacts/implementation/implementation-summary.md",
+          "phase": "implementation",
+          "preserve": [
+            "Changed components and decisions",
+            "Tests and operational notes"
+          ],
+          "projection": "approved-summary"
+        }
+      ],
+      "label": "Convergence",
+      "mcp": {
+        "evidence": [],
+        "requireSmoke": false,
+        "requiredServers": []
+      },
+      "order": 3,
+      "qualityCommands": [],
+      "repairBudget": null,
+      "sourceBoundary": "unrestricted",
+      "specificationQuality": {
+        "assisted": false,
+        "checklist": "requirements-quality-v1",
+        "exceptionAuthority": null,
+        "mode": "off"
+      },
+      "template": "spec-driven/convergence.md",
+      "templateSnapshot": {
+        "path": "singularity/work-items/new-ash-graph/config/wfa/blobs/sha256/922df3ebcd5e081ca202606f29f640f1b0439d9b9c17a94a2ff2478aad2a4d5a",
+        "sha256": "922df3ebcd5e081ca202606f29f640f1b0439d9b9c17a94a2ff2478aad2a4d5a",
+        "source": "workflow-snapshot",
+        "sourcePath": "singularity/templates/spec-driven/convergence.md"
+      },
+      "worldModel": {
+        "views": []
+      },
+      "writeScope": "artifact-only"
+    },
+    {
+      "approval": {
+        "allowSelfApproval": true,
+        "authorities": [
+          "quality-reviewers"
+        ],
+        "changeRequests": {
+          "commentRequired": true,
+          "reopenCompleted": true
+        },
+        "maximumChangedPaths": null,
+        "minimum": 1,
+        "mode": "required",
+        "policy": null,
+        "rejectTo": [
+          "specification",
+          "planning",
+          "implementation",
+          "convergence",
+          "verification"
+        ],
+        "requiredAuthorities": []
+      },
+      "artifact": {
+        "kind": "test-evidence",
+        "minimumBytes": 300,
+        "path": "artifacts/verification/test-evidence.md"
+      },
+      "clarification": {
+        "markers": {
+          "mode": "off"
+        },
+        "maxQuestions": 3,
+        "mode": "when-needed",
+        "topics": [
+          "test gaps",
+          "environment",
+          "evidence",
+          "deviations"
+        ]
+      },
+      "comparison": {},
+      "defaultAgent": "qa",
+      "defaultTemplate": "common/verification.md",
+      "generation": {
+        "allowedProducers": [
+          "governed-agent",
+          "human"
+        ],
+        "defaultProducer": "governed-agent",
+        "producer": "agent",
+        "requirement": "required",
+        "task": null
+      },
+      "id": "verification",
+      "inputs": [
+        {
+          "expansion": "hash-bound-reference",
+          "fallback": "block",
+          "maxBytes": null,
+          "maximumSummaryBytes": 32768,
+          "optional": false,
+          "path": "artifacts/specification/spec.md",
+          "phase": "specification",
+          "preserve": [
+            "Actors",
+            "User scenarios",
+            "Failure and empty states",
+            "Permissions",
+            "Boundary conditions",
+            "Requirements",
+            "Non-functional requirements",
+            "Assumptions",
+            "Out of scope"
+          ],
+          "projection": "approved-summary"
+        },
+        {
+          "expansion": "hash-bound-reference",
+          "fallback": "block",
+          "maxBytes": null,
+          "maximumSummaryBytes": 24576,
+          "optional": false,
+          "path": "artifacts/planning/plan.md",
+          "phase": "planning",
+          "preserve": [
+            "Test strategy",
+            "Risks and rollback"
+          ],
+          "projection": "approved-summary"
+        },
+        {
+          "expansion": "hash-bound-reference",
+          "fallback": "block",
+          "maxBytes": null,
+          "maximumSummaryBytes": 24576,
+          "optional": false,
+          "path": "artifacts/implementation/implementation-summary.md",
+          "phase": "implementation",
+          "preserve": [
+            "Changed components and decisions",
+            "Tests and operational notes"
+          ],
+          "projection": "approved-summary"
+        }
+      ],
+      "label": "Verification",
+      "mcp": {
+        "evidence": [],
+        "requireSmoke": false,
+        "requiredServers": []
+      },
+      "order": 4,
+      "qualityCommands": [],
+      "repairBudget": null,
+      "repositoryTests": "run",
+      "sourceBoundary": "unrestricted",
+      "specificationQuality": {
+        "assisted": false,
+        "checklist": "requirements-quality-v1",
+        "exceptionAuthority": null,
+        "mode": "off"
+      },
+      "template": "common/verification.md",
+      "templateSnapshot": {
+        "path": "singularity/work-items/new-ash-graph/config/wfa/blobs/sha256/4f559684330b34b509cd27e959615ef48fdbda1bf0c44e05456bf70cb7754532",
+        "sha256": "4f559684330b34b509cd27e959615ef48fdbda1bf0c44e05456bf70cb7754532",
+        "source": "workflow-snapshot",
+        "sourcePath": "singularity/templates/common/verification.md"
+      },
+      "worldModel": {
+        "views": []
+      },
+      "writeScope": "source-and-artifact"
+    },
+    {
+      "approval": {
+        "allowSelfApproval": true,
+        "authorities": [
+          "quality-reviewers"
+        ],
+        "changeRequests": {
+          "commentRequired": true,
+          "reopenCompleted": true
+        },
+        "maximumChangedPaths": null,
+        "minimum": 1,
+        "mode": "required",
+        "policy": null,
+        "rejectTo": [
+          "specification",
+          "planning",
+          "implementation",
+          "convergence",
+          "verification",
+          "release"
+        ],
+        "requiredAuthorities": []
+      },
+      "artifact": {
+        "kind": "conformance-report",
+        "minimumBytes": 300,
+        "path": "artifacts/release/conformance.md"
+      },
+      "artifactSet": "spec-driven-verification",
+      "clarification": {
+        "markers": {
+          "mode": "off"
+        },
+        "maxQuestions": 5,
+        "mode": "off",
+        "topics": []
+      },
+      "comparison": {},
+      "defaultAgent": "qa",
+      "defaultTemplate": "spec-driven/release.md",
+      "generation": {
+        "allowedProducers": [
+          "governed-agent",
+          "human"
+        ],
+        "defaultProducer": "governed-agent",
+        "producer": "agent",
+        "requirement": "required",
+        "task": null
+      },
+      "id": "release",
+      "inputs": [
+        {
+          "maxBytes": null,
+          "optional": false,
+          "path": "artifacts/convergence/convergence.md",
+          "phase": "convergence"
+        },
+        {
+          "expansion": "hash-bound-reference",
+          "fallback": "block",
+          "maxBytes": null,
+          "maximumSummaryBytes": 24576,
+          "optional": false,
+          "path": "artifacts/verification/test-evidence.md",
+          "phase": "verification",
+          "preserve": [
+            "Acceptance and specification results",
+            "Negative, regression, security, and non-functional checks"
+          ],
+          "projection": "approved-summary"
+        }
+      ],
+      "label": "Release",
+      "mcp": {
+        "evidence": [],
+        "requireSmoke": false,
+        "requiredServers": []
+      },
+      "order": 5,
+      "qualityCommands": [],
+      "repairBudget": null,
+      "sourceBoundary": "unrestricted",
+      "specificationQuality": {
+        "assisted": false,
+        "checklist": "requirements-quality-v1",
+        "exceptionAuthority": null,
+        "mode": "off"
+      },
+      "template": "spec-driven/release.md",
+      "templateSnapshot": {
+        "path": "singularity/work-items/new-ash-graph/config/wfa/blobs/sha256/8f7c0be1d576e781de1724a50bc906ad8f511807e665328e753bf40fd4e881a6",
+        "sha256": "8f7c0be1d576e781de1724a50bc906ad8f511807e665328e753bf40fd4e881a6",
+        "source": "workflow-snapshot",
+        "sourcePath": "singularity/templates/spec-driven/release.md"
+      },
+      "worldModel": {
+        "views": []
+      },
+      "writeScope": "artifact-only"
+    }
+  ],
+  "plannedClaims": {
+    "clausePhases": [
+      "specification"
+    ],
+    "mode": "required",
+    "owners": {
+      "implementation": "planning"
+    },
+    "reason": null
+  },
+  "planning": {
+    "enabled": true,
+    "maxContextBytes": 1048576,
+    "promptSource": "singularity/prompts/copilot-planning.md"
+  },
+  "planningPromptSnapshot": {
+    "path": "singularity/work-items/new-ash-graph/config/wfa/blobs/sha256/4128acc6930949e4ba1e50e8b8c7c4f7beb23f4361c2e8428475b081712b77db",
+    "sha256": "4128acc6930949e4ba1e50e8b8c7c4f7beb23f4361c2e8428475b081712b77db",
+    "source": "workflow-snapshot",
+    "sourcePath": "singularity/prompts/copilot-planning.md"
+  },
+  "policySha256": "sha256:7c30b07546f0d2a0b489b159217ad58b8c966282fb846e878401a52eed767285",
+  "qualityGateMode": "hard",
+  "referenceRepositories": [],
+  "referenceRepositoryPolicy": {
+    "mode": "optional"
+  },
+  "sequenceGates": {
+    "binding": "soft",
+    "completion": "hard",
+    "currentPhase": "hard",
+    "default": "soft",
+    "documentPhase": "soft",
+    "freshGeneration": "hard",
+    "generationCommit": "hard",
+    "phaseStatus": "soft",
+    "publicationPending": "hard",
+    "remoteGeneration": "hard"
+  },
+  "session": {
+    "requireBeforeTools": false,
+    "workItemSelection": "prompt"
+  },
+  "sourceReview": {
+    "kinds": {
+      "implementation": "code",
+      "planning": "planning",
+      "release": "document",
+      "specification": "specification",
+      "verification": "document"
+    },
+    "level": 2,
+    "mode": "enforce",
+    "phases": [
+      "specification",
+      "planning",
+      "implementation",
+      "verification",
+      "release"
+    ],
+    "reviewerAgent": "sflow-source-reviewer",
+    "supersededPhases": [
+      "specification",
+      "planning"
+    ]
+  },
+  "sourceSha256": "fe552fb5ad5cc2a7646f23c31a3489d63e41c455b94b535cc2cbfdcfca4a98a6",
+  "spec": {
+    "acceptance": "presence",
+    "changeImpact": "on",
+    "compositionCache": "local",
+    "conformanceDifferences": "decide",
+    "conformanceRows": "qualified",
+    "coverage": "enforce",
+    "excludes": [
+      "singularity",
+      ".github/agents",
+      ".git",
+      "node_modules"
+    ],
+    "limits": {
+      "maxClaimBytes": 2097152,
+      "maxClausesPerArtifact": 2000,
+      "maxDependenciesPerClause": 100,
+      "maxPathsPerClaim": 1000
+    },
+    "mode": "enforce",
+    "namespace": null,
+    "observedDependencies": "on",
+    "preAmendmentDrafts": "refuse",
+    "testCommands": {}
+  },
+  "storage": null,
+  "templates": {
+    "convergence": {
+      "path": "singularity/work-items/new-ash-graph/config/wfa/blobs/sha256/922df3ebcd5e081ca202606f29f640f1b0439d9b9c17a94a2ff2478aad2a4d5a",
+      "sha256": "922df3ebcd5e081ca202606f29f640f1b0439d9b9c17a94a2ff2478aad2a4d5a",
+      "source": "workflow-snapshot",
+      "sourcePath": "singularity/templates/spec-driven/convergence.md"
+    },
+    "implementation": {
+      "path": "singularity/work-items/new-ash-graph/config/wfa/blobs/sha256/ba0749ab3997579949fc836a839af6606f995c2012a90b410597ebadf211298d",
+      "sha256": "ba0749ab3997579949fc836a839af6606f995c2012a90b410597ebadf211298d",
+      "source": "workflow-snapshot",
+      "sourcePath": "singularity/templates/common/implementation.md"
+    },
+    "planning": {
+      "path": "singularity/work-items/new-ash-graph/config/wfa/blobs/sha256/8ac870c047c0155d5ca4ca7391a11acb7310b52aae746d66f40e1d77ecdb14ec",
+      "sha256": "8ac870c047c0155d5ca4ca7391a11acb7310b52aae746d66f40e1d77ecdb14ec",
+      "source": "workflow-snapshot",
+      "sourcePath": "singularity/templates/spec-driven/plan.md"
+    },
+    "release": {
+      "path": "singularity/work-items/new-ash-graph/config/wfa/blobs/sha256/8f7c0be1d576e781de1724a50bc906ad8f511807e665328e753bf40fd4e881a6",
+      "sha256": "8f7c0be1d576e781de1724a50bc906ad8f511807e665328e753bf40fd4e881a6",
+      "source": "workflow-snapshot",
+      "sourcePath": "singularity/templates/spec-driven/release.md"
+    },
+    "specification": {
+      "path": "singularity/work-items/new-ash-graph/config/wfa/blobs/sha256/c3b2d1434d1d37fefc2ae168f849e9f801992433a7b81c7eb9f27b78c7f66d4e",
+      "sha256": "c3b2d1434d1d37fefc2ae168f849e9f801992433a7b81c7eb9f27b78c7f66d4e",
+      "source": "workflow-snapshot",
+      "sourcePath": "singularity/templates/spec-driven/spec.md"
+    },
+    "verification": {
+      "path": "singularity/work-items/new-ash-graph/config/wfa/blobs/sha256/4f559684330b34b509cd27e959615ef48fdbda1bf0c44e05456bf70cb7754532",
+      "sha256": "4f559684330b34b509cd27e959615ef48fdbda1bf0c44e05456bf70cb7754532",
+      "source": "workflow-snapshot",
+      "sourcePath": "singularity/templates/common/verification.md"
+    }
+  },
+  "templatesRoot": "singularity/templates",
+  "testExecutionMode": "changed-and-affected",
+  "tokenEconomy": {
+    "ast": "optional",
+    "cacheStableComposition": true,
+    "composer": "legacy-v1",
+    "enabled": true,
+    "historicalMemory": false,
+    "mode": "observe",
+    "observationFirewall": true,
+    "profile": "standard",
+    "profiles": {
+      "standard": {
+        "maxExpansionTokens": 8000,
+        "maximumEstimatedPromptTokens": 18000,
+        "observationCapsuleTokens": 3000,
+        "policyOnBudgetBreach": "refuse",
+        "reservedOutputTokens": 6000
+      }
+    },
+    "progressiveRetrieval": true,
+    "providerTelemetry": "optional"
+  },
+  "verification": {
+    "comparison": {
+      "channelTolerance": 0,
+      "maxDifferingPixelRatio": null,
+      "maxDifferingPixels": null,
+      "maxPixels": 40000000,
+      "mode": "off"
+    },
+    "coverage": "warn",
+    "profiles": []
+  },
+  "wel": {
+    "cab": null,
+    "claimMapContractVersion": 2,
+    "configurationAuthority": {
+      "branch": "sflow/config",
+      "commit": "d75fdc3fa464fbce9738cb9535256f736bd521ac",
+      "projectionSha256": "eb46fb015c9666b12a9697b1984c1cd5dc8c83576e2140b0b91e0781f2948025",
+      "repository": "https://github.com/ashokraj2011/myc.git"
+    },
+    "mode": "disabled",
+    "rollout": {
+      "enrollment": "new-story-only",
+      "id": "wel-v0.2-observe",
+      "version": 1
+    },
+    "schemaVersion": 1,
+    "sgos": null,
+    "testcaseExact": {
+      "mode": "disabled",
+      "policySha256": "sha256:12b50a34a1f03338377ecd76f44b20cbee83e7b91a0b07392ef08e3d8fd60800",
+      "profile": null,
+      "requiredAssurance": "unavailable"
+    },
+    "witnessedClauses": {
+      "enabled": false,
+      "profiles": []
+    }
+  },
+  "workItemRoot": "singularity/work-items",
+  "workType": "spec-driven-standard",
+  "workTypeLabel": "Spec-Driven Standard",
+  "worldModelGrounding": "off",
+  "worldModelMaterialization": null,
+  "worldModelOutputDir": "singularity/world-model",
+  "worldModelPolicy": {
+    "knowledge": {
+      "prompt": "slice"
+    }
+  },
+  "worldModelSourceScope": null,
+  "worldModelStaleness": "warn"
+}
