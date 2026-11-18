@@ -136,7 +136,13 @@
       {
         "clauseId": "NEW-GRAPJ:AC-001",
         "testSource": "e2e/graphing.spec.js",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": "playwright-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       }
     ],
     "witnesses": [
@@ -922,12 +928,27 @@
     ],
     "bindingsSha256": "sha256:2360e9604aa7225ca135ef52bb9b21fb117cf3b86baf62ba1d9e679aa0b97525"
   },
-  "testExecutions": [],
+  "testExecutions": [
+    {
+      "commandId": ".-node-tests",
+      "attemptId": "TA-8857a40729877d415753",
+      "receiptPath": "singularity/work-items/new-grapj/context/code-delivery/tests/attempts/implementation/TA-8857a40729877d415753.json",
+      "receiptSha256": "5e6124c2de14e110b4e548c20d531547220698440cbe5e2f78c5b0a87b056fce",
+      "status": "passed"
+    },
+    {
+      "commandId": "playwright-tests",
+      "attemptId": "TA-5a59dc0624b912fe65ce",
+      "receiptPath": "singularity/work-items/new-grapj/context/code-delivery/tests/attempts/implementation/TA-5a59dc0624b912fe65ce.json",
+      "receiptSha256": "b397efee1e80969db746b65b5565109a587ede61e2a7676a1fdd5b1c8a435dd2",
+      "status": "passed"
+    }
+  ],
   "tree": {
     "workingStateDigest": "sha256:9d387a6fb32a7e672ce3281d4d1670741e2727988352e985c2d776c9c7b51db6",
     "codeTreeSha256": "sha256:9b7b70781554a7a564f0d48be475638219c7602876bdc42dbee7b408849b144f",
-    "generationCommit": null,
-    "generationTree": null
+    "generationCommit": "798bb4413535b6e3dffb9d9a2a9ffba7fee5833c",
+    "generationTree": "7a8456bfac789dabec867b3b19c11ef78ad82729"
   },
   "model": {
     "task": "code",
@@ -946,6 +967,7 @@
     "observedAt": null,
     "generation": null
   },
-  "status": "pending-tests",
-  "capturedAt": "2026-11-18T01:54:59.502Z"
+  "status": "ready",
+  "capturedAt": "2026-11-18T01:54:59.502Z",
+  "validatedAt": "2026-11-18T02:07:55.416Z"
 }

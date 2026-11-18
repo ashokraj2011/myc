@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "new-grapj",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G1-001",
+  "phaseId": "implementation",
+  "generation": 1,
+  "baselineSha256": "b460b188ba56328575eab0eb37e5e60debbd51caf43f09caba5a0c77a5316dd7",
+  "baseline": {
+    "path": "singularity/work-items/new-grapj/context/work-intervals/implementation-gen1-baseline.json",
+    "sha256": "b460b188ba56328575eab0eb37e5e60debbd51caf43f09caba5a0c77a5316dd7",
+    "verified": true,
+    "sourceBaseCommit": "c1216d8b7e37a59378792956549950ba11491f3d"
+  },
+  "sourceBaseCommit": "c1216d8b7e37a59378792956549950ba11491f3d",
+  "target": {
+    "branch": "new-grapj",
+    "head": "b9243e209aeac5c6c5f4846e5dd54020449e9afb",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": ".nvmrc",
+      "status": "present",
+      "sha256": "f14b4987904bcb5814e4459a057ed4d20f58a633152288a761214dcd28780b56",
+      "bytes": 3,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "e2e/graphing.spec.js",
+      "status": "present",
+      "sha256": "37bbd1cad7eaf1220ff47c034639c91a7f8476a1f15e986d7dfd40e1f52bad9f",
+      "bytes": 4360,
+      "verdict": "planned",
+      "clauseIds": [
+        "NEW-GRAPJ:AC-001",
+        "NEW-GRAPJ:REQ-001",
+        "NEW-GRAPJ:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "package-lock.json",
+      "status": "present",
+      "sha256": "89f271a59e1be831ed464e77506638e20755520a8509c825941be4cfc961d4f6",
+      "bytes": 126376,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "package.json",
+      "status": "present",
+      "sha256": "7d4c24d19e8a84ce0c299c4f15bc3ebca72088d51e588fc775be6acd4a66e347",
+      "bytes": 939,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "playwright.config.js",
+      "status": "present",
+      "sha256": "e818b5bd48091d50dd8ed5b98f0e44ffc35a94769e1dd6ffcf9d94443d6ce0d2",
+      "bytes": 474,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "src/App.jsx",
+      "status": "present",
+      "sha256": "7bdc39856b422e91c02acacb8a8f0dc3e0913f039ad00d6744f462c5d3a4558b",
+      "bytes": 10834,
+      "verdict": "planned",
+      "clauseIds": [
+        "NEW-GRAPJ:AC-002",
+        "NEW-GRAPJ:REQ-003"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/components/FunctionGrapher.jsx",
+      "status": "present",
+      "sha256": "d1ce30bb255051bfaa08874e20ad99bd639327e34c6a606e54f350cb804fd1d7",
+      "bytes": 13221,
+      "verdict": "planned",
+      "clauseIds": [
+        "NEW-GRAPJ:AC-002",
+        "NEW-GRAPJ:REQ-001",
+        "NEW-GRAPJ:REQ-002",
+        "NEW-GRAPJ:REQ-003"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/index.css",
+      "status": "present",
+      "sha256": "a998df60a0420f340502b8afb6d905d1dcdb5d5df39a30ad35f79c990a5361c8",
+      "bytes": 22190,
+      "verdict": "planned",
+      "clauseIds": [
+        "NEW-GRAPJ:AC-002",
+        "NEW-GRAPJ:REQ-003"
+      ],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 8,
+    "planned": 4,
+    "unplanned": 4,
+    "protected": 0
+  },
+  "decision": {
+    "status": "review",
+    "summaryStatus": "attention",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "fb64da6720d8ef11a756ff873209422516e4be121e23df82716ed0058ba535e1",
+  "reconciledAt": "2026-11-18T02:07:55.523Z",
+  "final": true,
+  "recordedAt": "2026-11-18T02:07:55.524Z",
+  "path": "singularity/work-items/new-grapj/context/work-intervals/reconciliations/fb64da6720d8ef11a756ff873209422516e4be121e23df82716ed0058ba535e1.json"
+}
