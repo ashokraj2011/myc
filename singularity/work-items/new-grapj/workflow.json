@@ -3599,6 +3599,19 @@
           "operationId": "vo-407345e2c9697cd9a71507f0d8c4e275"
         },
         "openedAt": "2026-11-18T01:16:14.942Z"
+      },
+      "authoringBaseline": {
+        "generation": 1,
+        "path": "artifacts/implementation/implementation-summary.md",
+        "fingerprint": "sha256:1592b09deeee3db9066b9de9416678bb399c27d814ce1ee2a4a3def27d2145d6",
+        "bytes": 1442
+      },
+      "inputContext": {
+        "generation": 1,
+        "path": "singularity/work-items/new-grapj/context/inputs-implementation-gen1.json",
+        "sha256": "7b69ce7bbc6dce6398440cc014fd23e7f33813b0d86503e714f40fd16811051b",
+        "renderedSha256": "3f6420a91770b317377de9cce19de06ca1870d46e797c53ec310dccfe8e66fba",
+        "mode": "enforce"
       }
     },
     "convergence": {
@@ -4147,6 +4160,14 @@
       "event": "version_opened",
       "phase": "implementation",
       "detail": "version 1 opened (initial)"
+    },
+    {
+      "at": "2026-11-18T01:41:46.813Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "plan_amended",
+      "phase": "implementation",
+      "detail": "PAM-001: .nvmrc listed as build-configuration. iy is fine go ahead iqht node 22"
     }
   ],
   "measurement": {
@@ -4426,15 +4447,31 @@
       "storyIdentity": "18cc2da7419fc7e47b3e7932c804d120d0c1e9cdfc4339e5628077d4dc357da5",
       "id": "WT-5bde4c04dd4dcc26dca73d781dcc6ce49a4fca60bbc6990ce9a5f3a7092cbfc5",
       "inputSha256": "f9890d10d188043e3fed59c47a751fdd374aab003c6e082456be88fa1cc87a36",
-      "revision": 1,
-      "state": "open-code-generation",
+      "revision": 6,
+      "state": "blocked",
       "continuations": 0,
       "maximumContinuations": 3,
       "repairConsumed": 0,
       "conditions": [],
-      "checkpoints": [],
-      "blockedCode": null,
-      "recordSha256": "7c4884666925d6522e1e4ae0b05268213d8e51d3bbfeea4c2d68dbc028c8eb87"
+      "checkpoints": [
+        {
+          "kind": "prepared",
+          "inputSha256": "f9890d10d188043e3fed59c47a751fdd374aab003c6e082456be88fa1cc87a36",
+          "fingerprint": "3f6420a91770b317377de9cce19de06ca1870d46e797c53ec310dccfe8e66fba"
+        },
+        {
+          "kind": "validation",
+          "inputSha256": "f9890d10d188043e3fed59c47a751fdd374aab003c6e082456be88fa1cc87a36",
+          "fingerprint": "d99c4e0daa3c80695a98b288d5cd9cdc9c84a3717b3df1e8e802347d88ba9e81"
+        },
+        {
+          "kind": "publication-requested",
+          "inputSha256": "f9890d10d188043e3fed59c47a751fdd374aab003c6e082456be88fa1cc87a36",
+          "fingerprint": "f9890d10d188043e3fed59c47a751fdd374aab003c6e082456be88fa1cc87a36"
+        }
+      ],
+      "blockedCode": "waiting-person:CODE_TEST_FAILED:b61263fcac81",
+      "recordSha256": "745a2377047827d097b309dfddf0a02d5df813758e3673571e3ba4e9f5019f10"
     }
   },
   "publicationProjections": [
@@ -6319,6 +6356,137 @@
         },
         "createdAt": "2026-11-18T01:16:15.033Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "e42db39d-c1b9-4bbd-bf39-cf0b9299c675",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "new-grapj",
+          "branch": "new-grapj"
+        },
+        "phaseId": "implementation",
+        "generation": 0,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "decision": "plan",
+          "reviewPacketSha256": null,
+          "amendment": "PAM-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-18T01:41:45.644Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "e42db39d-c1b9-4bbd-bf39-cf0b9299c675",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "new-grapj"
+          ],
+          "branch": "new-grapj",
+          "canonicalBranch": "new-grapj",
+          "createdAt": "2026-11-17T22:18:27.602Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 0,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph new",
+          "updatedAt": "2026-11-18T01:41:46.813Z",
+          "workId": "new-grapj",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "b8be8eefc29f357791638bbb726ea7c65cf83db480b10f325b73db73e444c8f1",
+          "lifecycleEventId": "e42db39d-c1b9-4bbd-bf39-cf0b9299c675",
+          "lifecyclePayload": {
+            "decision": "plan",
+            "reviewPacketSha256": null,
+            "amendment": "PAM-001"
+          },
+          "templateSha256": "ba0749ab3997579949fc836a839af6606f995c2012a90b410597ebadf211298d",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "e42db39d-c1b9-4bbd-bf39-cf0b9299c675",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "new-grapj",
+              "branch": "new-grapj"
+            },
+            "phaseId": "implementation",
+            "generation": 0,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "architecture-reviewers",
+            "payload": {
+              "decision": "plan",
+              "reviewPacketSha256": null,
+              "amendment": "PAM-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-18T01:41:45.644Z"
+          }
+        },
+        "createdAt": "2026-11-18T01:41:45.656Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -6449,6 +6617,27 @@
       ],
       "edges": [],
       "revisionSha256": "sha256:d3b85a382e8d2718fe0bc0e0d85a97205d401b31df01a2349d6425f273e1380c"
+    }
+  ],
+  "planAmendments": [
+    {
+      "id": "PAM-001",
+      "changes": [
+        {
+          "kind": "add-supporting",
+          "path": ".nvmrc",
+          "class": "build-configuration",
+          "reason": "iy is fine go ahead iqht node 22"
+        }
+      ],
+      "contentHashes": {
+        ".nvmrc": "f14b4987904bcb5814e4459a057ed4d20f58a633152288a761214dcd28780b56"
+      },
+      "reason": "iy is fine go ahead iqht node 22",
+      "actor": "ashokraj2011",
+      "authorityGroup": "architecture-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-18T01:41:46.813Z"
     }
   ]
 }
