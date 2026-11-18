@@ -3387,6 +3387,19 @@
           "operationId": "vo-7fc2971e4f0a4a2853059861daf8d35e"
         },
         "openedAt": "2026-11-18T11:35:58.652Z"
+      },
+      "authoringBaseline": {
+        "generation": 1,
+        "path": "artifacts/implementation/implementation-summary.md",
+        "fingerprint": "sha256:eac36f08aebbf71fafbf6fdb4692cccc52ae621521ab90441c194d17c3356b8d",
+        "bytes": 1454
+      },
+      "inputContext": {
+        "generation": 1,
+        "path": "singularity/work-items/new-ash-graph/context/inputs-implementation-gen1.json",
+        "sha256": "3364d100bee1c36aa4f79226a0d3d121b3dc041625669ff50e2dfe7cc5d05156",
+        "renderedSha256": "15e2495d397a271c0a701ab8eba0f6b400d5d29091f6f645636c1407b3fd7000",
+        "mode": "enforce"
       }
     },
     "convergence": {
@@ -3911,6 +3924,14 @@
       "event": "version_opened",
       "phase": "implementation",
       "detail": "version 1 opened (initial)"
+    },
+    {
+      "at": "2026-11-18T12:56:31.471Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "plan_amended",
+      "phase": "implementation",
+      "detail": "PAM-001: .nvmrc listed as build-configuration. good i like this version"
     }
   ],
   "measurement": {
@@ -4111,15 +4132,31 @@
       "storyIdentity": "edb0ff2d33afb6c60e3d3deb7ee0c99d4744ede71f99fbee915acbb3bcc4a875",
       "id": "WT-514b4b0fe71562a53a50c4ac87ecbe76d2a9c8d77e60dd0de482785e11819c68",
       "inputSha256": "2ea7cdc2124a6ed81747d21fb92865094eca41e0e547b07419b3c80a96084279",
-      "revision": 1,
-      "state": "open-code-generation",
+      "revision": 6,
+      "state": "blocked",
       "continuations": 0,
       "maximumContinuations": 3,
       "repairConsumed": 0,
       "conditions": [],
-      "checkpoints": [],
-      "blockedCode": null,
-      "recordSha256": "5bc3f8eed58a4ae41555c923b1ab170bc85de8ba8ece51c0f70d22bdc3dff8c6"
+      "checkpoints": [
+        {
+          "kind": "prepared",
+          "inputSha256": "2ea7cdc2124a6ed81747d21fb92865094eca41e0e547b07419b3c80a96084279",
+          "fingerprint": "15e2495d397a271c0a701ab8eba0f6b400d5d29091f6f645636c1407b3fd7000"
+        },
+        {
+          "kind": "validation",
+          "inputSha256": "2ea7cdc2124a6ed81747d21fb92865094eca41e0e547b07419b3c80a96084279",
+          "fingerprint": "3c732ed72bd695ac45e57dc8686b7c77e94e7f6897944ac00f3124e857307d07"
+        },
+        {
+          "kind": "publication-requested",
+          "inputSha256": "2ea7cdc2124a6ed81747d21fb92865094eca41e0e547b07419b3c80a96084279",
+          "fingerprint": "2ea7cdc2124a6ed81747d21fb92865094eca41e0e547b07419b3c80a96084279"
+        }
+      ],
+      "blockedCode": "waiting-person:CODE_TEST_FAILED:2651ecb38c1a",
+      "recordSha256": "f3bdd66af7c75371eefcdfde42c3dbe2a9a7223068e638201708e1258a30db3c"
     }
   },
   "publicationProjections": [
@@ -5602,6 +5639,137 @@
         },
         "createdAt": "2026-11-18T11:35:58.744Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "36174c4b-7431-4389-b218-4bbe3e62ba70",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "new-ash-graph",
+          "branch": "new-ash-graph"
+        },
+        "phaseId": "implementation",
+        "generation": 0,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "decision": "plan",
+          "reviewPacketSha256": null,
+          "amendment": "PAM-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-18T12:56:30.412Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "36174c4b-7431-4389-b218-4bbe3e62ba70",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "new-ash-graph"
+          ],
+          "branch": "new-ash-graph",
+          "canonicalBranch": "new-ash-graph",
+          "createdAt": "2026-11-18T10:40:50.061Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 0,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph new (copy)",
+          "updatedAt": "2026-11-18T12:56:31.471Z",
+          "workId": "new-ash-graph",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "b8be8eefc29f357791638bbb726ea7c65cf83db480b10f325b73db73e444c8f1",
+          "lifecycleEventId": "36174c4b-7431-4389-b218-4bbe3e62ba70",
+          "lifecyclePayload": {
+            "decision": "plan",
+            "reviewPacketSha256": null,
+            "amendment": "PAM-001"
+          },
+          "templateSha256": "ba0749ab3997579949fc836a839af6606f995c2012a90b410597ebadf211298d",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "36174c4b-7431-4389-b218-4bbe3e62ba70",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "new-ash-graph",
+              "branch": "new-ash-graph"
+            },
+            "phaseId": "implementation",
+            "generation": 0,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "architecture-reviewers",
+            "payload": {
+              "decision": "plan",
+              "reviewPacketSha256": null,
+              "amendment": "PAM-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-18T12:56:30.412Z"
+          }
+        },
+        "createdAt": "2026-11-18T12:56:30.422Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -5721,6 +5889,27 @@
       ],
       "edges": [],
       "revisionSha256": "sha256:7a0b0a21af4c4a4d0302e77778de5cb223e26fd61ef0b8aaf145167d710aceb9"
+    }
+  ],
+  "planAmendments": [
+    {
+      "id": "PAM-001",
+      "changes": [
+        {
+          "kind": "add-supporting",
+          "path": ".nvmrc",
+          "class": "build-configuration",
+          "reason": "good i like this version"
+        }
+      ],
+      "contentHashes": {
+        ".nvmrc": "f14b4987904bcb5814e4459a057ed4d20f58a633152288a761214dcd28780b56"
+      },
+      "reason": "good i like this version",
+      "actor": "ashokraj2011",
+      "authorityGroup": "architecture-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-18T12:56:31.471Z"
     }
   ]
 }
