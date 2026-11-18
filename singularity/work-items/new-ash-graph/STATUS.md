@@ -5,20 +5,23 @@
 - Capability: **calc** (`raj-calc`)
 - Capability map: `a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d`
 - Overall status: **in_progress**
-- Current phase: **planning**
+- Current phase: **implementation**
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
 | 1 | Specification (`specification`) | product-owner | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via product-approvers; agent product-owner | **warning** |  |  |  |
-| 2 | Planning (`planning`) | architect | **awaiting_approval** | 1 | 0 | unavailable |
-| 3 | Implementation (`implementation`) | developer | **not_started** | 0 | 0 | unavailable |
+| 2 | Planning (`planning`) | architect | **approved** | 1 | 1 | unavailable |
+|  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent architect | **warning** |  |  |  |
+| 3 | Implementation (`implementation`) | developer | **in_progress** | 0 | 0 | unavailable |
 | 4 | Convergence (`convergence`) | architect | **not_started** | 0 | 0 | unavailable |
 | 5 | Verification (`verification`) | qa | **not_started** | 0 | 0 | unavailable |
 | 6 | Release (`release`) | qa | **not_started** | 0 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-11-18T11:33:55.507Z — **work_interval_started** (implementation) by system: baseline 5dc95981e11d at 230560c37472
+- 2026-11-18T11:33:55.471Z — **phase_self_approved** (planning) by ashokraj2011 · agent architect: threshold reached; advanced to implementation
 - 2026-11-18T11:31:39.288Z — **phase_submitted** (planning) by ashokraj2011 · agent architect: 1 artifacts
 - 2026-11-18T11:27:33.004Z — **source_review_submitted** (planning) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: f7c036743fc66c84c03aa7ff408375136a5c87a93d96c2d766209d48e6fa0fa7
 - 2026-11-18T11:13:57.466Z — **phase_generated** (planning) by ashokraj2011 · agent architect: generation 1
