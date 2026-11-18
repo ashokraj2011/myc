@@ -13,13 +13,20 @@
 |  | ⚠ self-approval | Ashok Raj via product-approvers; agent product-owner | **warning** |  |  |  |
 | 2 | Planning (`planning`) | architect | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent architect | **warning** |  |  |  |
-| 3 | Implementation (`implementation`) | developer | **awaiting_approval** | 1 | 0 | unavailable |
+| 3 | Implementation (`implementation`) | developer | **in_progress** | 1 | 1 | unavailable |
 | 4 | Convergence (`convergence`) | architect | **not_started** | 0 | 0 | unavailable |
 | 5 | Verification (`verification`) | qa | **not_started** | 0 | 0 | unavailable |
 | 6 | Release (`release`) | qa | **not_started** | 0 | 0 | unavailable |
 
+## Open stakeholder change requests
+
+- **CR-001** — return `implementation` to `implementation`: nothing thiws isfine _(requested by Ashok Raj at 2026-11-18T02:17:35.455Z)_
+  - Reversible checkpoint: `RFW-CR-001` — preview with `singularity-flow story rework roll-forward --work-id new-grapj --change-request CR-001 --json`.
+
 ## Recent history
 
+- 2026-11-18T02:17:35.455Z — **phase_rejected** (implementation) by ashokraj2011 · agent developer: CR-001 returned to implementation: nothing thiws isfine
+- 2026-11-18T02:17:35.501Z — **work_interval_started** (implementation) by system: baseline 8c6e68233be3 at bf6db2343f25
 - 2026-11-18T02:07:55.524Z — **phase_submitted** (implementation) by ashokraj2011 · agent developer: 9 artifacts
 - 2026-11-18T02:07:55.524Z — **work_interval_reconciled** (implementation) by system: review; 8 changed path(s)
 - 2026-11-18T01:58:04.027Z — **source_review_submitted** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: f315f74fe010b1e9ed765314b9d1220d30fc13b1e38289b499116befad9906a2
@@ -33,5 +40,3 @@
 - 2026-11-17T23:50:39.288Z — **phase_generated** (planning) by ashokraj2011 · agent architect: generation 1
 - 2026-11-17T23:31:35.755Z — **phase_self_approved** (specification) by ashokraj2011 · agent product-owner: threshold reached; advanced to planning
 - 2026-11-17T23:29:47.307Z — **phase_submitted** (specification) by ashokraj2011 · agent product-owner: 1 artifacts
-- 2026-11-17T23:00:10.139Z — **source_review_submitted** (specification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 3e5eb1b5b8d4ae4f4d77d8a3248daab6357938f23f002c543ce5d22c92536efe
-- 2026-11-17T22:56:09.071Z — **phase_generated** (specification) by ashokraj2011 · agent product-owner: generation 2
