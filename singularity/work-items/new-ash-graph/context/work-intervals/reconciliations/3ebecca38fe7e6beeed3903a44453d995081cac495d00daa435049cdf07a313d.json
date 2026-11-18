@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "new-ash-graph",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G2-002",
+  "phaseId": "implementation",
+  "generation": 2,
+  "baselineSha256": "e9c472fc03349274bb0753a9683d8138fa1300e9ccb15cfb1693eb8962b23109",
+  "baseline": {
+    "path": "singularity/work-items/new-ash-graph/context/work-intervals/implementation-gen2-baseline.json",
+    "sha256": "e9c472fc03349274bb0753a9683d8138fa1300e9ccb15cfb1693eb8962b23109",
+    "verified": true,
+    "sourceBaseCommit": "ffc691f537cb3178b58166ff848191db7a7cf644"
+  },
+  "sourceBaseCommit": "ffc691f537cb3178b58166ff848191db7a7cf644",
+  "target": {
+    "branch": "new-ash-graph",
+    "head": "c3675d32fe90ba734057fbd1ae3b2dd3598e6e53",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": "src/App.jsx",
+      "status": "present",
+      "sha256": "6ffb53872e6a2274377a262dc311731965dbfe1b4b38bcf6ff49f1a3e4d69956",
+      "bytes": 11263,
+      "verdict": "planned",
+      "clauseIds": [
+        "NEW-ASH-GRAPH:AC-002",
+        "NEW-ASH-GRAPH:REQ-001"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/components/FunctionGrapher.jsx",
+      "status": "present",
+      "sha256": "c43815296fb883b6c486a70ff8d18450eb5004c26086cd1bfd703597f707b768",
+      "bytes": 12391,
+      "verdict": "planned",
+      "clauseIds": [
+        "NEW-ASH-GRAPH:AC-002",
+        "NEW-ASH-GRAPH:REQ-001",
+        "NEW-ASH-GRAPH:REQ-002"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/index.css",
+      "status": "present",
+      "sha256": "725843eff589dca351ef48a6bebabbadbc32816e19a3dda8310e400a55fc1a3f",
+      "bytes": 22614,
+      "verdict": "planned",
+      "clauseIds": [
+        "NEW-ASH-GRAPH:AC-002",
+        "NEW-ASH-GRAPH:REQ-001"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/test/setup.js",
+      "status": "present",
+      "sha256": "5f734b19af298fcb83b1b04fe7ebb44094bb7a6fc3b68acea3ecf152e003474a",
+      "bytes": 2555,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "tests/graph-plotter.spec.js",
+      "status": "present",
+      "sha256": "54c7fa503d5111ca29974eb0496dcadfda6d60b602430763f773b09b771096ca",
+      "bytes": 2510,
+      "verdict": "planned",
+      "clauseIds": [
+        "NEW-ASH-GRAPH:AC-001",
+        "NEW-ASH-GRAPH:REQ-002"
+      ],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 5,
+    "planned": 4,
+    "unplanned": 1,
+    "protected": 0
+  },
+  "decision": {
+    "status": "review",
+    "summaryStatus": "attention",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "3ebecca38fe7e6beeed3903a44453d995081cac495d00daa435049cdf07a313d",
+  "reconciledAt": "2026-11-18T15:11:55.782Z",
+  "final": true,
+  "recordedAt": "2026-11-18T15:11:55.784Z",
+  "path": "singularity/work-items/new-ash-graph/context/work-intervals/reconciliations/3ebecca38fe7e6beeed3903a44453d995081cac495d00daa435049cdf07a313d.json"
+}

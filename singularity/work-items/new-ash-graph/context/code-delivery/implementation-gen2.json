@@ -98,12 +98,24 @@
       {
         "clauseId": "NEW-ASH-GRAPH:AC-001",
         "testSource": "tests/graph-plotter.spec.js",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": "playwright-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       },
       {
         "clauseId": "NEW-ASH-GRAPH:AC-002",
         "testSource": "tests/graph-plotter.spec.js",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": "playwright-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       }
     ],
     "witnesses": [
@@ -502,12 +514,27 @@
     ],
     "bindingsSha256": "sha256:b409935971a1ce6301a459372a9fa6b38970435e2271377109ae2a7b2fcf2889"
   },
-  "testExecutions": [],
+  "testExecutions": [
+    {
+      "commandId": ".-node-tests",
+      "attemptId": "TA-b1f3678ee0510c7794c7",
+      "receiptPath": "singularity/work-items/new-ash-graph/context/code-delivery/tests/attempts/implementation/TA-b1f3678ee0510c7794c7.json",
+      "receiptSha256": "6a53125c5900c235ddcc71fe773d1feb222495854b91c19f26b4f619d0d25ff8",
+      "status": "passed"
+    },
+    {
+      "commandId": "playwright-tests",
+      "attemptId": "TA-516d7b29679e8cdc0f38",
+      "receiptPath": "singularity/work-items/new-ash-graph/context/code-delivery/tests/attempts/implementation/TA-516d7b29679e8cdc0f38.json",
+      "receiptSha256": "25be06d1537e033340bbd43b34d942d854ecf644a0fe0523730fae4285a609db",
+      "status": "passed"
+    }
+  ],
   "tree": {
     "workingStateDigest": "sha256:18e6d9c4e43f3d7d76625ab6aeca5fd7ccc87495925bcb31a5f17cfb0c1b40fe",
     "codeTreeSha256": "sha256:2a1ef6c984aea890f3bf11d3f88efbc0c3ce8aece0b9d2df967aaf8c1dbaa24b",
-    "generationCommit": null,
-    "generationTree": null
+    "generationCommit": "950ef3aa0da936ac7270086f1bcb3117c8d547b4",
+    "generationTree": "6da651d86d7c979655249ce67e3f3c7b3d6c68eb"
   },
   "model": {
     "task": "code",
@@ -526,6 +553,7 @@
     "observedAt": null,
     "generation": null
   },
-  "status": "pending-tests",
-  "capturedAt": "2026-11-18T14:45:59.632Z"
+  "status": "ready",
+  "capturedAt": "2026-11-18T14:45:59.632Z",
+  "validatedAt": "2026-11-18T15:11:55.448Z"
 }
