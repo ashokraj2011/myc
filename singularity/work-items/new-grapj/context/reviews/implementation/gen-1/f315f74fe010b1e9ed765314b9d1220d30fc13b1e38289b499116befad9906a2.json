@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "phase": "implementation",
+  "generation": 1,
+  "reportSha256": "f315f74fe010b1e9ed765314b9d1220d30fc13b1e38289b499116befad9906a2",
+  "lifecycleEventId": "1fbcce24-978d-49e5-8f7a-d5d6b8f7c74c",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "code",
+    "binding": {
+      "workId": "new-grapj",
+      "phase": "implementation",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "code:e2e:graphing.spec.js",
+          "path": "e2e/graphing.spec.js",
+          "textSha256": "37bbd1cad7eaf1220ff47c034639c91a7f8476a1f15e986d7dfd40e1f52bad9f"
+        },
+        {
+          "id": "code:src:App.jsx",
+          "path": "src/App.jsx",
+          "textSha256": "7bdc39856b422e91c02acacb8a8f0dc3e0913f039ad00d6744f462c5d3a4558b"
+        },
+        {
+          "id": "code:src:components:FunctionGrapher.jsx",
+          "path": "src/components/FunctionGrapher.jsx",
+          "textSha256": "d1ce30bb255051bfaa08874e20ad99bd639327e34c6a606e54f350cb804fd1d7"
+        },
+        {
+          "id": "code:src:index.css",
+          "path": "src/index.css",
+          "textSha256": "a998df60a0420f340502b8afb6d905d1dcdb5d5df39a30ad35f79c990a5361c8"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/new-grapj/artifacts/implementation/implementation-summary.md",
+        "sha256": "c9b30f4f34db041030482f13f1bee009f803d38a471457e5aa7797c6c758f035"
+      },
+      "plan": {
+        "path": "singularity/work-items/new-grapj/artifacts/planning/plan.md",
+        "sha256": "26928a4564f14243694a49cd1e9d73eba41db6d38ef2ef237d15207b0e2107f6"
+      },
+      "evidenceSha256": "1c2d3877e1fe19b4962404badcece20c2deabb762af9e7f24f669be8b0a72a8b"
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "code:e2e:graphing.spec.js",
+      "code:src:App.jsx",
+      "code:src:components:FunctionGrapher.jsx",
+      "code:src:index.css"
+    ],
+    "rows": [
+      {
+        "clauseId": "NEW-GRAPJ:AC-001",
+        "implementation": [],
+        "tests": [
+          {
+            "sourceId": "code:e2e:graphing.spec.js",
+            "line": 126,
+            "quote": "expect(Math.abs(geometry.circleRadiusX / geometry.unitSpacing - 6)).toBeLessThan(0.15);"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "NEW-GRAPJ:AC-002",
+        "implementation": [
+          {
+            "sourceId": "code:src:App.jsx",
+            "line": 232,
+            "quote": "activeMode === 'grapher' ? 'graph-app-shell' : ''"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 228,
+            "quote": "<section className=\"graph-workspace\">"
+          },
+          {
+            "sourceId": "code:src:index.css",
+            "line": 668,
+            "quote": ".graph-workspace {"
+          }
+        ],
+        "tests": [],
+        "assessment": "implemented",
+        "testAssessment": "not-applicable"
+      },
+      {
+        "clauseId": "NEW-GRAPJ:REQ-001",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 157,
+            "quote": "const yValue = expression.compiled.evaluate({ x: xValue });"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:e2e:graphing.spec.js",
+            "line": 117,
+            "quote": "expect(geometry.functionPixels).toBeGreaterThan(50);"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "NEW-GRAPJ:REQ-002",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 136,
+            "quote": "const px = centerX + 6 * Math.cos(radians) * scale;"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:e2e:graphing.spec.js",
+            "line": 126,
+            "quote": "expect(Math.abs(geometry.circleRadiusX / geometry.unitSpacing - 6)).toBeLessThan(0.15);"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "NEW-GRAPJ:REQ-003",
+        "implementation": [
+          {
+            "sourceId": "code:src:App.jsx",
+            "line": 232,
+            "quote": "activeMode === 'grapher' ? 'graph-app-shell' : ''"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 228,
+            "quote": "<section className=\"graph-workspace\">"
+          },
+          {
+            "sourceId": "code:src:index.css",
+            "line": 668,
+            "quote": ".graph-workspace {"
+          }
+        ],
+        "tests": [],
+        "assessment": "implemented",
+        "testAssessment": "not-applicable"
+      }
+    ],
+    "unplannedPaths": [],
+    "qualityReviewed": [],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "717dabbe1d71dc4ece8ae0d2b9d20e66e4a59ab36c63301e5f1d6bed0dc3111a",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "developer",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-18T01:58:04.027Z",
+  "recordSha256": "62fb61062e109ba3132da4b18b40f43012c32adc152fd39ca26cfa703d438b1d"
+}
