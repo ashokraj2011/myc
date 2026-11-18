@@ -4,27 +4,51 @@
   "workId": "new-ash-graph",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "4caa39be35bc5d52717c0f3a8693fbbbdc43a54a6ca1bb59e8f318e827af9aa7",
+      "bytes": 9555
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-18T10:51:21.950Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "2ff37be6a672a796247880f2dc3e8a671e57db09",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "b8be8eefc29f357791638bbb726ea7c65cf83db480b10f325b73db73e444c8f1",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/new-ash-graph/context/clarifications-specification-gen1.json",
+    "sha256": "0f815f785b16fe2383e3046c47e9e0f00414f4ad754c7803390062fcfc85213d",
+    "promptSha256": "9354017f08fbefb3da4966c706b7e71fd8c5a9063c8656e44e796819177559ea",
+    "responses": 3,
+    "markers": [],
+    "recordedAt": "2026-11-18T10:50:20.415Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/new-ash-graph/telemetry/specification-gen1.json",
+      "sha256": "98f7f469106ca0195d6abc903d3b0c3f1ca8f26ddd6dcbe6175e01a7fcc77752",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 30046,
+        "estimatedTokens": 7512,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 30046,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-18T10:51:21.950Z",
+      "completedAt": "2026-11-18T10:51:21.950Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -54,133 +135,84 @@
 
 # Specification — new-ash-graph
 
-<!-- sflow:guidance
-Scenarios come first, and general requirements come after them `[SPK:REQ-068]`. That ordering is the template's opinion: a requirement written before anyone has described the situation it serves tends to describe the system instead of the need, and nobody notices until verification.
-
-Where the current Story evidence leaves something material unknown, say so with a marker rather than guessing. Use this syntax:
-
-    [NEEDS CLARIFICATION: <one question grounded in the current Story evidence>]
-
-Replace the angle-bracketed placeholder; never copy or ask it as written. The question must be one non-empty line and must arise from the pinned sources, approved upstream artifacts, repository world model, or a contradiction among them. Markers are extracted the same way clauses are, so a marker inside fenced or inline code is ignored `[SPK:REQ-063]`. This phase blocks publication while any marker is unresolved, and a marker is only resolved when a later generation removes it *and* records the answer `[SPK:REQ-067]` — deleting the text alone is an integrity failure, not an answer.
--->
-
-<!-- sflow:guidance Keep every section of this template. When one does not fit this change (for example Permissions for a library or command-line tool with no roles), write `Not applicable: <reason>` under it rather than deleting it: later steps carry Actors, Failure and empty states, Permissions, Boundary conditions and the other sections forward, and stop when one is missing. -->
-
 ## Agent brief
 
-<!-- sflow:guidance Summarize the approved intent for downstream agents in a compact, standalone form. Include the problem, intended outcome, principal actors, most important scenarios, hard constraints, and major exclusions. Do not introduce claims that are absent from the sections below. Exact requirements and boundary conditions are preserved separately by the governed projection. -->
-
-TODO: Write the Agent brief here as visible text; text inside the comment above is not read.
+Create a graph plotter for an application user. The user-provided `graphsc.jpg` is a visual reference for a graphing-calculator layout: an expression panel on the left, a Cartesian graph canvas, and a mathematical keypad along the bottom. The required graph case is a circle centered at the origin with radius 6 units, verified by a Playwright test. No other graph types or behaviors are specified.
 
 ## Actors
 
-<!-- sflow:guidance Who uses this, and what authority does each hold? -->
-
-TODO: Name each actor and the authority each one holds.
+Graph-plotter user: requests and views a plot. No additional roles or authority rules are specified.
 
 ## User scenarios
 
-<!-- sflow:guidance Prioritized. Each scenario leads with the situation, then its acceptance cases. -->
-
-<!-- sflow:guidance Before drafting, split the pinned request and recorded answers into observable obligations for the actual interfaces (UI, API, event/message, batch/job, CLI, library or mixed). Keep the source -> REQ/AC -> assertion -> verification mapping in the existing sections. Existing ACs count; do not duplicate clauses or invent controls, endpoints, limits, errors or screenshot requirements. Self-check whether an implementation could meet this draft yet omit an explicit request. Repair clear omissions in this editable draft and recheck within the returned repair policy; preserve published inputs and settled answers. These are authoring instructions, not execution evidence. -->
-
-### S1 — <the most important situation, in the user's words>
+### S1 — Plot the radius-6 circle
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Graph-plotter user
+**Context:** The graph-plotting interface displays an expression panel and a Cartesian graph canvas.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
-
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
-
-### S2 — <the next situation>
-
-**Priority:** P2
-
-- **Given** … **When** … **Then** …
+- **Given** the graph-plotting interface is available
+  **When** a circle centered at (0,0) with radius 6 units is requested
+  **Then** the circle is represented on the graph canvas and a Playwright test verifies the case.
 
 ## Failure and empty states
 
-<!-- sflow:guidance What happens the first time, with nothing there yet, and when each step fails. These are where specifications are usually silent and implementations usually improvise. -->
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** Behavior when no plot is requested is not specified by the available evidence.
+- **Failure:** Failure behavior is not specified by the available evidence.
+- **Partial:** Partial-result behavior is not specified by the available evidence.
 
 ## Scenario coverage
 
-<!-- sflow:guidance One row per behavior/acceptance clause; repeat rows for multiple outcomes. Every referenced S-number must have complete Given/When/Then acceptance cases above. Outcome is success, failure, boundary, or empty. Rejection/error requirements need distinct failure cases, not only happy-path prose. Use the pinned request and clarification answers; do not invent error text or new scope. -->
-
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `NEW-ASH-GRAPH:REQ-001` | S1 | TODO |
-| `NEW-ASH-GRAPH:REQ-002` | S2 | TODO |
-| `NEW-ASH-GRAPH:AC-001` | S1 | TODO |
+| `NEW-ASH-GRAPH:REQ-001` | S1 | success |
+| `NEW-ASH-GRAPH:REQ-002` | S1 | success |
+| `NEW-ASH-GRAPH:AC-001` | S1 | success |
+| `NEW-ASH-GRAPH:AC-002` | S1 | success |
 
 ## Permissions
 
-<!-- sflow:guidance Who may do each thing, and what a reader without that authority sees instead. -->
-
-TODO: Say who may do each thing, and what someone without that authority sees instead.
+Not applicable: the Story specifies no roles, authentication, or access-control behavior.
 
 ## Boundary conditions
 
-<!-- sflow:guidance Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one. -->
-
-TODO: State each limit, size, count or timeout, and what happens at and beyond it.
+The only specified numeric case is a circle of radius 6 units centered at (0,0). Other ranges, limits, and boundary behavior are unspecified.
 
 ## Requirements
 
-<!-- sflow:guidance Numbered, testable, one obligation each. Cite the scenario each serves. -->
+- The graph-plotter interface shall present an expression/algebra panel on the left, a Cartesian graph canvas with axes and grid, and a mathematical keypad along the bottom, following the generic layout shown in `graphsc.jpg`. *(S1)* [NEW-ASH-GRAPH:REQ-001]
+- A Playwright test shall exercise the plotter with a circle centered at (0,0) with radius 6 units and verify that the circle is represented. [scope:SRI-15d4e5bd263a] *(S1)* [NEW-ASH-GRAPH:REQ-002]
 
-- <requirement>. *(S1)* [NEW-ASH-GRAPH:REQ-001]
-- <requirement>. *(S1, S2)* [NEW-ASH-GRAPH:REQ-002]
-
-<!-- sflow:guidance Acceptance criteria use the same stable, namespaced form: -->
-
-- <observable acceptance outcome>. *(S1)* [NEW-ASH-GRAPH:AC-001]
+- A Playwright test verifies that the graph plotter represents a circle centered at (0,0) with radius 6 units. *(S1)* [NEW-ASH-GRAPH:AC-001]
+- Visual inspection confirms that the graph-plotter layout has a left expression/algebra panel, a Cartesian graph canvas with axes and grid, and a mathematical keypad along the bottom. *(S1)* [NEW-ASH-GRAPH:AC-002]
 
 ## Verification intent
 
-<!-- sflow:guidance One row per declared clause, including non-functional requirements. Methods: test, visual, inspection, or a comma-separated combination (all required). AC Criterion is its own ID. A visual/inspection requirement names the AC proving it; a test-only requirement may use -. An AC a requirement names lists every method that requirement lists: a `test, visual` requirement needs a `test, visual` AC. Choose from the pinned source, not from available tools. A screenshot is visual proof, not a test exemption. Planning must inherit these methods and cannot change them without an approved scope amendment. -->
-
 | Clause | Methods | Criterion |
 |---|---|---|
-| `NEW-ASH-GRAPH:REQ-001` | TODO | - |
-| `NEW-ASH-GRAPH:REQ-002` | TODO | - |
-| `NEW-ASH-GRAPH:AC-001` | TODO | `NEW-ASH-GRAPH:AC-001` |
+| `NEW-ASH-GRAPH:REQ-001` | visual, inspection | `NEW-ASH-GRAPH:AC-002` |
+| `NEW-ASH-GRAPH:REQ-002` | test | `NEW-ASH-GRAPH:AC-001` |
+| `NEW-ASH-GRAPH:AC-001` | test | `NEW-ASH-GRAPH:AC-001` |
+| `NEW-ASH-GRAPH:AC-002` | visual, inspection | `NEW-ASH-GRAPH:AC-002` |
 
 ## Non-functional requirements
 
-<!-- sflow:guidance Latency, throughput, availability, accessibility, privacy, retention. State the number and how it will be measured; "fast" is not a requirement. -->
-
-<!-- sflow:guidance Use governed requirement anchors here too (for example `[NEW-ASH-GRAPH:REQ-003]`); `NFR-001` by itself is only a display label and is not a stable clause identity. -->
-
-TODO: State each non-functional requirement with its number and how it is measured, or write None for this change.
+None specified by the pinned Story or recorded clarification.
 
 ## Constitution articles
 
-<!-- sflow:guidance Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each cited ID exists at the pinned revision before publication `[SPK:REQ-101]`. -->
-
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-<!-- sflow:guidance What this specification takes as true without proving. An assumption that turns out false is a change request, not a defect — which is only true if it was written down. -->
-
-TODO: List what this specification takes as true without proving, or write None.
+“Palyright” is interpreted as Playwright, and “circle of 6 unit radius in origin” is interpreted as a circle centered at (0,0) with radius 6 units; the user confirmed this interpretation. `graphsc.jpg` supplies the generic layout reference; its blank graph area does not specify additional graph types or behaviors.
 
 ## Out of scope
 
-<!-- sflow:guidance Named explicitly, so the boundary is reviewable rather than inferred. -->
-
-TODO: Name what this change does not do.
+Additional graph types, behavior for other navigation destinations, limits, and non-functional targets are not specified by the available evidence.
 
 ## Sources
 
-<!-- sflow:guidance Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one offered to this phase that could not be read or was not available here, named as a gap. Without supporting documents, say so. -->
+- Pinned Story source: `singularity/work-items/new-ash-graph/source.json` — requests a graph plotter like an attachment and a Playwright test for a radius-6 circle at the origin.
+- Human clarification, specification generation 1 — confirmed the circle interpretation and identified `graphsc.jpg` as the visual reference.
+- User-supplied screenshot: `graphsc.jpg` — visual reference for the generic graphing-calculator layout.
