@@ -1,0 +1,971 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "new-ash-graph",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "0abc4ccc-5024-4194-a31a-be2004f0f3d9",
+  "changeSet": {
+    "path": "singularity/work-items/new-ash-graph/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:32cff7db17f0c39b083ca32c203925d17dfd968fd50d2ccd7edfd17e166dd7ac",
+    "sourcePaths": [
+      "src/App.jsx",
+      "src/components/FunctionGrapher.jsx",
+      "src/index.css"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [
+      ".nvmrc",
+      "package-lock.json",
+      "package.json",
+      "playwright.config.js"
+    ],
+    "executableTestPaths": [
+      "tests/graph-plotter.spec.js"
+    ],
+    "supportingTestPaths": [
+      "playwright.config.js"
+    ]
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "build-configuration": 3,
+      "dependency-lock": 1,
+      "product-source": 3,
+      "test-source": 1
+    },
+    "entries": [
+      {
+        "changeId": "sha256:fde8b995e5502a55312a5f0ea2312cb352075fff9e36be04293f33e2daf774ba",
+        "status": "added",
+        "oldPath": null,
+        "newPath": ".nvmrc",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:7732f25e04db6bcb8c9f73b76453bf591fb83da92f5733a9d8fd8e1d530bb6ca",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "playwright.config.js",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:024c670d7e41e3438f10f8d830b0773f3b5bafbcce9369021701a79a1a107482",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "tests/graph-plotter.spec.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:3a9db1541b7ed96bbfbb7bd9083075596a874f237986f734196a06d7e23b436b",
+        "status": "modified",
+        "oldPath": "package-lock.json",
+        "newPath": "package-lock.json",
+        "role": "dependency-lock",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:e8142d5604347d20d1b2833d90f72b29774c1ea22f095000383dcf8ea86260c8",
+        "status": "modified",
+        "oldPath": "package.json",
+        "newPath": "package.json",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:49cde6cb614af1b20d1682e195a72cc76d9cdead26a6f841a3942acb3bcff0f0",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:e1a529a57dff27631d0cc9131909eb294a0baf277903659632b5dbf39c883afe",
+        "status": "modified",
+        "oldPath": "src/components/FunctionGrapher.jsx",
+        "newPath": "src/components/FunctionGrapher.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:4b61e629525d7fe818e9d4d48199880a3f535fe5d077114b01f8280e0739bc85",
+        "status": "modified",
+        "oldPath": "src/index.css",
+        "newPath": "src/index.css",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "NEW-ASH-GRAPH:AC-001"
+    ],
+    "bound": [
+      "NEW-ASH-GRAPH:AC-001"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-001",
+        "testSource": "tests/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-001",
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "identity": {
+          "framework": "playwright",
+          "suitePath": [],
+          "name": "plots a circle centered at the origin with radius six"
+        },
+        "logicalTestId": "sha256:972c5b973b803431bf0a74dbb1ea7acb7a84904d818c9fee749a964aa19f91ee",
+        "declarationSha256": "sha256:2944e55ff9c83f9ef58e16bbc0ef13e6705ccc65a6424c29b73b61e993c75d76",
+        "supportSha256": null,
+        "assertions": {
+          "count": 0,
+          "tautological": 0,
+          "negative": false,
+          "boundary": true,
+          "nullability": false,
+          "adequacy": "missing",
+          "subjects": [
+            "Number",
+            "async",
+            "evaluate",
+            "every",
+            "fill",
+            "for",
+            "getByRole",
+            "getByTestId",
+            "getContext",
+            "getImageData",
+            "goto",
+            "hasPinkAt",
+            "if",
+            "locator",
+            "poll",
+            "round",
+            "selectOption",
+            "toBeVisible",
+            "toHaveCount"
+          ]
+        },
+        "line": 4,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/FunctionGrapher.jsx",
+          "src/index.css"
+        ]
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/FunctionGrapher.jsx",
+          "src/index.css"
+        ]
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-002",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-002",
+        "sourcePath": "src/App.jsx",
+        "line": 227,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-002",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 186,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-002",
+        "sourcePath": "src/index.css",
+        "line": 910,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-001",
+        "sourcePath": "src/App.jsx",
+        "line": 228,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-001",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 185,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-001",
+        "sourcePath": "src/index.css",
+        "line": 909,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-002",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 120,
+        "tag": "clause"
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-002",
+        "explanation": {
+          "text": "Expand the app shell only for the Grapher workspace.",
+          "path": "src/App.jsx",
+          "line": 227
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 226,
+                "beforeLines": 0,
+                "afterStart": 227,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 228,
+                "beforeLines": 2,
+                "afterStart": 232,
+                "afterLines": 10
+              },
+              {
+                "beforeStart": 299,
+                "beforeLines": 1,
+                "afterStart": 311,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 173
+              },
+              {
+                "beforeStart": 16,
+                "beforeLines": 1,
+                "afterStart": 189,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 19,
+                "beforeLines": 0,
+                "afterStart": 193,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 21,
+                "beforeLines": 1,
+                "afterStart": 194,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 26,
+                "beforeLines": 0,
+                "afterStart": 200,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 29,
+                "beforeLines": 7,
+                "afterStart": 203,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 38,
+                "beforeLines": 0,
+                "afterStart": 210,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 40,
+                "beforeLines": 37,
+                "afterStart": 215,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 78,
+                "beforeLines": 16,
+                "afterStart": 219,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 95,
+                "beforeLines": 33,
+                "afterStart": 221,
+                "afterLines": 8
+              },
+              {
+                "beforeStart": 129,
+                "beforeLines": 3,
+                "afterStart": 230,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 134,
+                "beforeLines": 0,
+                "afterStart": 236,
+                "afterLines": 17
+              },
+              {
+                "beforeStart": 136,
+                "beforeLines": 13,
+                "afterStart": 254,
+                "afterLines": 6
+              },
+              {
+                "beforeStart": 149,
+                "beforeLines": 0,
+                "afterStart": 261,
+                "afterLines": 20
+              },
+              {
+                "beforeStart": 151,
+                "beforeLines": 1,
+                "afterStart": 282,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 152,
+                "beforeLines": 0,
+                "afterStart": 286,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 155,
+                "beforeLines": 1,
+                "afterStart": 291,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 157,
+                "beforeLines": 2,
+                "afterStart": 292,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 160,
+                "beforeLines": 1,
+                "afterStart": 294,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 161,
+                "beforeLines": 0,
+                "afterStart": 297,
+                "afterLines": 61
+              },
+              {
+                "beforeStart": 163,
+                "beforeLines": 6,
+                "afterStart": 359,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 170,
+                "beforeLines": 1,
+                "afterStart": 364,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 173,
+                "beforeLines": 7,
+                "afterStart": 367,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 181,
+                "beforeLines": 1,
+                "afterStart": 372,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 185,
+                "beforeLines": 5,
+                "afterStart": 376,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 191,
+                "beforeLines": 6,
+                "afterStart": 379,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 198,
+                "beforeLines": 1,
+                "afterStart": 385,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 202,
+                "beforeLines": 8,
+                "afterStart": 389,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 187
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/index.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 641,
+                "beforeLines": 0,
+                "afterStart": 642,
+                "afterLines": 326
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          }
+        ]
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-001",
+        "explanation": {
+          "text": "Keep the graph workspace full-width without changing other calculator modes.",
+          "path": "src/App.jsx",
+          "line": 228
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 226,
+                "beforeLines": 0,
+                "afterStart": 227,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 228,
+                "beforeLines": 2,
+                "afterStart": 232,
+                "afterLines": 10
+              },
+              {
+                "beforeStart": 299,
+                "beforeLines": 1,
+                "afterStart": 311,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 14
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 173
+              },
+              {
+                "beforeStart": 16,
+                "beforeLines": 1,
+                "afterStart": 189,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 19,
+                "beforeLines": 0,
+                "afterStart": 193,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 21,
+                "beforeLines": 1,
+                "afterStart": 194,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 26,
+                "beforeLines": 0,
+                "afterStart": 200,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 29,
+                "beforeLines": 7,
+                "afterStart": 203,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 38,
+                "beforeLines": 0,
+                "afterStart": 210,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 40,
+                "beforeLines": 37,
+                "afterStart": 215,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 78,
+                "beforeLines": 16,
+                "afterStart": 219,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 95,
+                "beforeLines": 33,
+                "afterStart": 221,
+                "afterLines": 8
+              },
+              {
+                "beforeStart": 129,
+                "beforeLines": 3,
+                "afterStart": 230,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 134,
+                "beforeLines": 0,
+                "afterStart": 236,
+                "afterLines": 17
+              },
+              {
+                "beforeStart": 136,
+                "beforeLines": 13,
+                "afterStart": 254,
+                "afterLines": 6
+              },
+              {
+                "beforeStart": 149,
+                "beforeLines": 0,
+                "afterStart": 261,
+                "afterLines": 20
+              },
+              {
+                "beforeStart": 151,
+                "beforeLines": 1,
+                "afterStart": 282,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 152,
+                "beforeLines": 0,
+                "afterStart": 286,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 155,
+                "beforeLines": 1,
+                "afterStart": 291,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 157,
+                "beforeLines": 2,
+                "afterStart": 292,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 160,
+                "beforeLines": 1,
+                "afterStart": 294,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 161,
+                "beforeLines": 0,
+                "afterStart": 297,
+                "afterLines": 61
+              },
+              {
+                "beforeStart": 163,
+                "beforeLines": 6,
+                "afterStart": 359,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 170,
+                "beforeLines": 1,
+                "afterStart": 364,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 173,
+                "beforeLines": 7,
+                "afterStart": 367,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 181,
+                "beforeLines": 1,
+                "afterStart": 372,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 185,
+                "beforeLines": 5,
+                "afterStart": 376,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 191,
+                "beforeLines": 6,
+                "afterStart": 379,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 198,
+                "beforeLines": 1,
+                "afterStart": 385,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 202,
+                "beforeLines": 8,
+                "afterStart": 389,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 187
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/index.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 641,
+                "beforeLines": 0,
+                "afterStart": 642,
+                "afterLines": 326
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          }
+        ]
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-002",
+        "explanation": {
+          "text": "Render equality expressions as implicit zero contours.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 120
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 173
+              },
+              {
+                "beforeStart": 16,
+                "beforeLines": 1,
+                "afterStart": 189,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 19,
+                "beforeLines": 0,
+                "afterStart": 193,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 21,
+                "beforeLines": 1,
+                "afterStart": 194,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 26,
+                "beforeLines": 0,
+                "afterStart": 200,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 29,
+                "beforeLines": 7,
+                "afterStart": 203,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 38,
+                "beforeLines": 0,
+                "afterStart": 210,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 40,
+                "beforeLines": 37,
+                "afterStart": 215,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 78,
+                "beforeLines": 16,
+                "afterStart": 219,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 95,
+                "beforeLines": 33,
+                "afterStart": 221,
+                "afterLines": 8
+              },
+              {
+                "beforeStart": 129,
+                "beforeLines": 3,
+                "afterStart": 230,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 134,
+                "beforeLines": 0,
+                "afterStart": 236,
+                "afterLines": 17
+              },
+              {
+                "beforeStart": 136,
+                "beforeLines": 13,
+                "afterStart": 254,
+                "afterLines": 6
+              },
+              {
+                "beforeStart": 149,
+                "beforeLines": 0,
+                "afterStart": 261,
+                "afterLines": 20
+              },
+              {
+                "beforeStart": 151,
+                "beforeLines": 1,
+                "afterStart": 282,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 152,
+                "beforeLines": 0,
+                "afterStart": 286,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 155,
+                "beforeLines": 1,
+                "afterStart": 291,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 157,
+                "beforeLines": 2,
+                "afterStart": 292,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 160,
+                "beforeLines": 1,
+                "afterStart": 294,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 161,
+                "beforeLines": 0,
+                "afterStart": 297,
+                "afterLines": 61
+              },
+              {
+                "beforeStart": 163,
+                "beforeLines": 6,
+                "afterStart": 359,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 170,
+                "beforeLines": 1,
+                "afterStart": 364,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 173,
+                "beforeLines": 7,
+                "afterStart": 367,
+                "afterLines": 4
+              },
+              {
+                "beforeStart": 181,
+                "beforeLines": 1,
+                "afterStart": 372,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 185,
+                "beforeLines": 5,
+                "afterStart": 376,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 191,
+                "beforeLines": 6,
+                "afterStart": 379,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 198,
+                "beforeLines": 1,
+                "afterStart": 385,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 202,
+                "beforeLines": 8,
+                "afterStart": 389,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 187
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:cdbb6ef4ee6a214d2604809fee543a4266515056e3a97ff10af5ca28eec81712"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:6855dd24b68f0d6de49a282f12416569e6669912c037f33b8bf0bbf23f0566fa",
+    "codeTreeSha256": "sha256:889a3855aea3b10ff65cefb78191f1ebbd1b2e1d237e36674d65c6bccdfa145d",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-11-18T13:13:08.356Z"
+}

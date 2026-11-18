@@ -639,3 +639,329 @@ body {
 .u-text-text-accent { color: var(--text-accent); }
 .u-text-text-main { color: var(--text-main); }
 .u-text-text-muted { color: var(--text-muted); }
+
+.graph-app-shell {
+  width: 100%;
+  max-width: 96rem;
+  min-height: 100vh;
+  margin-inline: auto;
+  padding: 1.25rem;
+  align-items: stretch;
+}
+
+.graph-app-main {
+  width: 100%;
+  max-width: none;
+  align-items: stretch;
+  gap: 1.5rem;
+  padding: clamp(1rem, 2.5vw, 2rem);
+}
+
+.graph-app-main > header {
+  width: 100%;
+}
+
+.graph-workspace {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(15rem, 18rem) minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.graph-expression-panel {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.graph-panel-heading,
+.graph-keypad-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.graph-panel-eyebrow {
+  margin: 0 0 0.4rem;
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.graph-panel-heading h2,
+.graph-keypad-heading h2 {
+  margin: 0;
+  color: var(--text-main);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.graph-expression-indicator,
+.graph-preset-dot {
+  flex: 0 0 auto;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: #ec4899;
+  box-shadow: 0 0 0.75rem rgba(236, 72, 153, 0.6);
+}
+
+.graph-field-label,
+.graph-presets h3 {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.graph-expression-field {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.65rem;
+  border: 1px solid var(--card-border);
+  border-radius: 0.75rem;
+  background: var(--display-bg);
+  padding: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.graph-expression-field > span {
+  flex: 0 0 auto;
+  color: var(--text-accent);
+  font-weight: 700;
+}
+
+.graph-expression-field input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text-main);
+  font: inherit;
+  font-size: 0.85rem;
+}
+
+.graph-field-hint,
+.graph-keypad-heading p {
+  margin: -0.5rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.graph-presets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.graph-presets h3 {
+  margin-bottom: 0.35rem;
+}
+
+.graph-presets button {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  border: 1px solid transparent;
+  border-radius: 0.65rem;
+  background: var(--btn-num-bg);
+  padding: 0.6rem 0.7rem;
+  color: var(--text-main);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.graph-presets button:hover,
+.graph-presets button:focus-visible {
+  border-color: var(--card-border);
+  color: var(--text-accent);
+}
+
+.graph-preset-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+}
+
+.graph-plot-panel {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.graph-canvas-frame {
+  position: relative;
+  height: clamp(28rem, 62vh, 46rem);
+  overflow: hidden;
+  background: #050a14;
+}
+
+.graph-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.graph-error {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  border: 1px solid rgba(248, 113, 113, 0.5);
+  border-radius: 0.65rem;
+  background: rgba(127, 29, 29, 0.9);
+  padding: 0.65rem 0.8rem;
+  color: #fee2e2;
+  font-size: 0.8rem;
+}
+
+.graph-view-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.graph-view-controls button,
+.graph-keypad-actions button,
+.graph-key-grid button {
+  border: 1px solid var(--card-border);
+  border-radius: 0.55rem;
+  background: var(--btn-func-bg);
+  color: var(--text-main);
+  cursor: pointer;
+  font: inherit;
+}
+
+.graph-view-controls button {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+}
+
+.graph-view-controls svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.graph-view-controls button:hover,
+.graph-keypad-actions button:hover,
+.graph-key-grid button:hover {
+  background: var(--btn-func-hover);
+}
+
+.graph-keypad {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.graph-keypad-heading {
+  align-items: center;
+}
+
+.graph-keypad-heading p {
+  margin: 0.3rem 0 0;
+}
+
+.graph-keypad-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.graph-keypad-actions button {
+  padding: 0.45rem 0.7rem;
+  font-size: 0.75rem;
+}
+
+.graph-key-grid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.graph-key-grid button {
+  min-height: 2.65rem;
+  background: var(--btn-num-bg);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+}
+
+.graph-view-controls button:focus-visible,
+.graph-keypad-actions button:focus-visible,
+.graph-key-grid button:focus-visible {
+  outline: 2px solid var(--text-accent);
+  outline-offset: 2px;
+}
+
+/* @clause:NEW-ASH-GRAPH:REQ-001 Arrange the expression panel, Cartesian canvas, and keypad in graph mode. */
+/* @clause:NEW-ASH-GRAPH:AC-002 Keep the graph controls and keypad usable on narrow screens. */
+@media (max-width: 900px) {
+  .graph-app-shell {
+    padding: 0.75rem;
+  }
+
+  .graph-app-main {
+    padding: 1rem;
+  }
+
+  .graph-workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .graph-expression-panel {
+    gap: 0.75rem;
+  }
+
+  .graph-presets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  }
+
+  .graph-presets h3 {
+    grid-column: 1 / -1;
+  }
+
+  .graph-keypad {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 540px) {
+  .graph-app-shell {
+    padding: 0.5rem;
+  }
+
+  .graph-app-main {
+    padding: 0.75rem;
+  }
+
+  .graph-expression-panel,
+  .graph-keypad {
+    padding: 1rem;
+  }
+
+  .graph-canvas-frame {
+    height: clamp(28rem, 60vh, 34rem);
+  }
+
+  .graph-keypad-heading {
+    align-items: flex-start;
+  }
+
+  .graph-key-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

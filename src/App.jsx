@@ -224,9 +224,21 @@ export default function App() {
     handlePercent,
   ]);
 
+  // @clause:NEW-ASH-GRAPH:AC-002 Expand the app shell only for the Grapher workspace.
+  // @clause:NEW-ASH-GRAPH:REQ-001 Keep the graph workspace full-width without changing other calculator modes.
+  const isGrapherMode = activeMode === 'grapher';
+
   return (
-    <div className="w-full max-w-xl mx-auto p-4 sm:p-6 min-h-screen flex items-center justify-center">
-      <main className="glass-card w-full p-5 sm:p-7 flex flex-col items-center">
+    <div
+      className={`w-full max-w-xl mx-auto p-4 sm:p-6 min-h-screen flex items-center justify-center ${
+        isGrapherMode ? 'graph-app-shell' : ''
+      }`}
+    >
+      <main
+        className={`glass-card w-full p-5 sm:p-7 flex flex-col items-center ${
+          isGrapherMode ? 'graph-app-main' : ''
+        }`}
+      >
         {/* Top Header */}
         <Header
           activeMode={activeMode}
@@ -296,7 +308,7 @@ export default function App() {
 
         {activeMode === 'financial' && <FinancialCalculator soundEnabled={soundEnabled} />}
 
-        {activeMode === 'grapher' && <FunctionGrapher soundEnabled={soundEnabled} />}
+        {isGrapherMode && <FunctionGrapher soundEnabled={soundEnabled} />}
       </main>
 
       {/* History Side Drawer */}

@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 5,
+  "kind": "test-execution",
+  "attemptId": "TA-1e29569776f734c5e79e",
+  "nonce": "896016419940868f07e51fc45e90b31b",
+  "parentAttemptId": null,
+  "purpose": "preflight",
+  "workId": "new-ash-graph",
+  "phase": "implementation",
+  "generation": 1,
+  "commandId": "playwright-tests",
+  "commandSha256": "sha256:6d98c29c94909555b78d1c3d1304755b2c9b8d8346941b0e792eb7340854441c",
+  "argvSha256": "e9c3f81587b101b6b2e6a7ea683e36eedcd03c26a244cfed81fb433fd5b4598c",
+  "selection": {
+    "selection": "complete",
+    "gaps": [],
+    "selectionSha256": "sha256:039da759343cefbe790fa07d5890dfc79e172fc47cc0799b373bd49048c130bb"
+  },
+  "environment": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "ci": "1",
+    "removed": [],
+    "declaredSha256": null,
+    "toolchain": {
+      "node": "26.12.0",
+      "npm": "11.20.0",
+      "playwright": "1.65.1"
+    },
+    "host": "node 26.12.0"
+  },
+  "environmentSha256": "sha256:fca09bf008b57be57887107d0191a0d6ca944a1685fff27f1de09129fd38bb37",
+  "platform": "darwin",
+  "workingDirectory": ".",
+  "affectedRoots": [
+    "."
+  ],
+  "adapter": "playwright-json",
+  "profile": "playwright-json-v1",
+  "candidate": {
+    "commit": "e211fb549340edc9121b1e6bffad131cf20d5e1d",
+    "treeSha256": "sha256:7cb0d205842ed8a005b1b4cc721a44e2c8e32c6768365e9afeccfaa979c4cded",
+    "codeTreeSha256": "sha256:99b42ae7409f31b5eb266d023b721d76294a3acd8870713aeafb143efba73f44"
+  },
+  "process": {
+    "status": "passed",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "infrastructureUnavailable": false,
+    "startedAt": "2026-11-18T11:55:21.563Z",
+    "completedAt": "2026-11-18T11:55:25.585Z"
+  },
+  "status": "passed",
+  "terminal": true,
+  "exitCode": 0,
+  "timedOut": false,
+  "skipped": false,
+  "suppressed": false,
+  "tests": {
+    "discovered": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0
+  },
+  "result": {
+    "path": ".sflow/results/playwright-tests.json",
+    "sha256": "d3003525142ce1d94d5a528d7316ee6b5c0063a754a54a09628bc57ba50daf6d",
+    "bytes": 4318,
+    "files": [
+      {
+        "sourcePath": ".sflow/results/playwright-tests.json",
+        "sha256": "d3003525142ce1d94d5a528d7316ee6b5c0063a754a54a09628bc57ba50daf6d",
+        "bytes": 4318
+      }
+    ]
+  },
+  "rawReports": [
+    {
+      "path": "singularity/work-items/new-ash-graph/context/code-delivery/tests/raw/d3003525142ce1d94d5a528d7316ee6b5c0063a754a54a09628bc57ba50daf6d.bin",
+      "sha256": "d3003525142ce1d94d5a528d7316ee6b5c0063a754a54a09628bc57ba50daf6d",
+      "bytes": 4318
+    }
+  ],
+  "occurrences": [
+    {
+      "suitePath": [],
+      "name": "plots a circle centered at the origin with radius six",
+      "file": "graph-plotter.spec.js",
+      "line": 4,
+      "outcome": "passed",
+      "durationMs": 1159
+    }
+  ],
+  "reportError": null,
+  "assurance": "module-executed",
+  "dependencies": {
+    "lockfiles": [
+      {
+        "path": "package-lock.json",
+        "sha256": "89f271a59e1be831ed464e77506638e20755520a8509c825941be4cfc961d4f6"
+      }
+    ],
+    "runtime": {
+      "node": "26.12.0",
+      "npm": "11.20.0",
+      "playwright": "1.65.1"
+    },
+    "sha256": "sha256:552568b0684b0b67842306eab7b8c1922031a3aad7b082e0ce11d18f82e6133d"
+  },
+  "testPolicySha256": "sha256:c58c3f4771779839da31587ea1c6732697a2da2a42d3e3a1c3d3335f8fe2ec76",
+  "pin": {
+    "commandId": "playwright-tests",
+    "source": {
+      "kind": "inferred"
+    },
+    "argv": [
+      "npm",
+      "run",
+      "test:e2e",
+      "--",
+      "--reporter=json"
+    ],
+    "workingDirectory": ".",
+    "affectedRoots": [
+      "."
+    ],
+    "adapter": "playwright-json",
+    "definition": [
+      {
+        "path": "package.json",
+        "selector": "scripts.test:e2e",
+        "sha256": "cfd10b01d174664b54cfcac2326926df03a15051afb6e7af180bbcf265789612"
+      },
+      {
+        "path": "playwright.config.js",
+        "selector": null,
+        "sha256": "bf0451f3e005169c7e70fc9e237ea3cfe27034abb2271d6d9ac931f1b2f5e4a8"
+      }
+    ],
+    "definitionVersion": 3,
+    "sha256": "sha256:71f5872950fa07e3b617f48093e6035b92c6ffaa35771ad5d3ecfbbc5595e552"
+  },
+  "narrowing": {
+    "reasons": [],
+    "filters": [],
+    "focused": [],
+    "skipped": 0,
+    "discovered": 1,
+    "baseline": null,
+    "shortfall": 0
+  }
+}
