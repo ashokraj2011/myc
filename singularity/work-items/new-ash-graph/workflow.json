@@ -2050,7 +2050,8 @@
         "path": "artifacts/specification/spec.md",
         "fingerprint": "sha256:4cccb05c0574ba5eb6a74011b6c2f0a3b076f8078d3ae090dea018cef35a5acb",
         "bytes": 7426
-      }
+      },
+      "remoteOutputs": []
     },
     "planning": {
       "id": "planning",
@@ -2148,7 +2149,8 @@
       "designSourceSets": [],
       "artifactRegistrationRepairs": [],
       "artifacts": [],
-      "checks": []
+      "checks": [],
+      "remoteOutputs": []
     },
     "implementation": {
       "id": "implementation",
@@ -2261,7 +2263,8 @@
       "designSourceSets": [],
       "artifactRegistrationRepairs": [],
       "artifacts": [],
-      "checks": []
+      "checks": [],
+      "remoteOutputs": []
     },
     "convergence": {
       "id": "convergence",
@@ -2388,7 +2391,8 @@
       "designSourceSets": [],
       "artifactRegistrationRepairs": [],
       "artifacts": [],
-      "checks": []
+      "checks": [],
+      "remoteOutputs": []
     },
     "verification": {
       "id": "verification",
@@ -2517,7 +2521,8 @@
       "designSourceSets": [],
       "artifactRegistrationRepairs": [],
       "artifacts": [],
-      "checks": []
+      "checks": [],
+      "remoteOutputs": []
     },
     "release": {
       "id": "release",
@@ -2618,7 +2623,8 @@
       "designSourceSets": [],
       "artifactRegistrationRepairs": [],
       "artifacts": [],
-      "checks": []
+      "checks": [],
+      "remoteOutputs": []
     }
   },
   "usage": {
@@ -2654,6 +2660,14 @@
       "event": "work_started",
       "phase": "specification",
       "detail": "Created spec-driven-standard branch new-ash-graph"
+    },
+    {
+      "at": "2026-11-18T10:51:13.721Z",
+      "actor": "ashokraj2011",
+      "agent": "product-owner",
+      "event": "asked_for_recorded",
+      "phase": "specification",
+      "detail": "What the person asked for in specification generation 1: instructions 1, 2."
     }
   ],
   "measurement": {
@@ -2690,21 +2704,28 @@
       "storyIdentity": "edb0ff2d33afb6c60e3d3deb7ee0c99d4744ede71f99fbee915acbb3bcc4a875",
       "id": "WT-5f0ed703c9b8d3d943ef167daaabb3e630237b4dfe04dd69475c120c3d35998d",
       "inputSha256": "b6310b4bf2ffb3c77108b78d7bece08142b2f002eadb2825148af93210baea75",
-      "revision": 1,
-      "state": "author-draft",
+      "revision": 5,
+      "state": "validate-draft",
       "continuations": 0,
       "maximumContinuations": 3,
       "repairConsumed": 0,
-      "conditions": [],
+      "conditions": [
+        "67600b4cef6623c5289d2b1169dac25a15978410e6a27c7b3dfc7b97630dc37e"
+      ],
       "checkpoints": [
         {
           "kind": "prepared",
           "inputSha256": "b6310b4bf2ffb3c77108b78d7bece08142b2f002eadb2825148af93210baea75",
           "fingerprint": "b6310b4bf2ffb3c77108b78d7bece08142b2f002eadb2825148af93210baea75"
+        },
+        {
+          "kind": "validation",
+          "inputSha256": "b6310b4bf2ffb3c77108b78d7bece08142b2f002eadb2825148af93210baea75",
+          "fingerprint": "67600b4cef6623c5289d2b1169dac25a15978410e6a27c7b3dfc7b97630dc37e"
         }
       ],
       "blockedCode": null,
-      "recordSha256": "83e1d757e41c787e45bc3d88054ee9974b25065855c1be39e9b96abbeae911d4"
+      "recordSha256": "bad9bb7549a85f992a42b093445058c1a7e900d06f1f25cd2a77e80f28084b58"
     }
   },
   "publicationProjections": [
@@ -2841,6 +2862,180 @@
         },
         "createdAt": "2026-11-18T10:40:50.660Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "a7911ecb-7df9-4185-aec0-984499674c06",
+        "type": "evidence-recorded",
+        "subject": {
+          "kind": "story",
+          "id": "new-ash-graph",
+          "branch": "new-ash-graph"
+        },
+        "phaseId": "specification",
+        "generation": 0,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "product-owner",
+        "authorityGroup": null,
+        "payload": {
+          "action": "asked-for",
+          "instructions": [
+            1,
+            2
+          ],
+          "decision": null,
+          "reviewPacketSha256": null
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-18T10:51:13.790Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "a7911ecb-7df9-4185-aec0-984499674c06",
+        "eventType": "evidence-recorded",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "new-ash-graph"
+          ],
+          "branch": "new-ash-graph",
+          "canonicalBranch": "new-ash-graph",
+          "createdAt": "2026-11-18T10:40:50.061Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "specification",
+          "generation": 0,
+          "phase": "specification",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 0,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 5,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 0,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "specification",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph new (copy)",
+          "updatedAt": "2026-11-18T10:51:13.721Z",
+          "workId": "new-ash-graph",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "product-owner",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "b8be8eefc29f357791638bbb726ea7c65cf83db480b10f325b73db73e444c8f1",
+          "lifecycleEventId": "a7911ecb-7df9-4185-aec0-984499674c06",
+          "lifecyclePayload": {
+            "action": "asked-for",
+            "decision": null,
+            "instructions": [
+              1,
+              2
+            ],
+            "reviewPacketSha256": null
+          },
+          "templateSha256": "c3b2d1434d1d37fefc2ae168f849e9f801992433a7b81c7eb9f27b78c7f66d4e",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "a7911ecb-7df9-4185-aec0-984499674c06",
+            "type": "evidence-recorded",
+            "subject": {
+              "kind": "story",
+              "id": "new-ash-graph",
+              "branch": "new-ash-graph"
+            },
+            "phaseId": "specification",
+            "generation": 0,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "product-owner",
+            "authorityGroup": null,
+            "payload": {
+              "action": "asked-for",
+              "instructions": [
+                1,
+                2
+              ],
+              "decision": null,
+              "reviewPacketSha256": null
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-18T10:51:13.790Z"
+          }
+        },
+        "createdAt": "2026-11-18T10:51:13.798Z"
+      }
+    }
+  ],
+  "repairBudgets": {},
+  "workIntervals": {
+    "schemaVersion": 1,
+    "current": null,
+    "history": [],
+    "escalations": []
+  },
+  "askedFor": [
+    {
+      "phase": "specification",
+      "generation": 1,
+      "instruction": 1,
+      "text": "in downloads graphsc is the file",
+      "plainChat": true,
+      "skill": null,
+      "turn": "5b638fc7-26e3-40c5-a15e-e364d2d0a458",
+      "typedAt": "2026-11-18T10:47:57.868Z",
+      "recordedAt": "2026-11-18T10:51:13.721Z"
+    },
+    {
+      "phase": "specification",
+      "generation": 1,
+      "instruction": 2,
+      "text": "in downloads graphsc is the file",
+      "plainChat": true,
+      "skill": null,
+      "turn": "c7740e75-de71-4b44-b019-ef15b581e003",
+      "typedAt": "2026-11-18T10:47:58.629Z",
+      "recordedAt": "2026-11-18T10:51:13.721Z"
     }
   ]
 }

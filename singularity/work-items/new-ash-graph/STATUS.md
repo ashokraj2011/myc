@@ -18,4 +18,5 @@
 
 ## Recent history
 
+- 2026-11-18T10:51:13.721Z — **asked_for_recorded** (specification) by ashokraj2011 · agent product-owner: What the person asked for in specification generation 1: instructions 1, 2.
 - 2026-11-18T10:40:50.061Z — **work_started** (specification) by ashokraj2011 · agent product-owner: Created spec-driven-standard branch new-ash-graph
