@@ -20,6 +20,7 @@
 
 ## Recent history
 
+- 2026-11-18T13:23:25.681Z — **witness_recorded** (implementation) by ashokraj2011 · agent developer: WIT-001: inspection of src/components/FunctionGrapher.jsx for NEW-ASH-GRAPH:AC-002 slot layout-structure satisfies it. i am ok go ahead with this
 - 2026-11-18T13:17:34.420Z — **source_review_submitted** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 14f5b9acbe9e65e5c285b54cc8defa8a2c2f367acb554f902545e4bcc7cdc041
 - 2026-11-18T13:13:08.739Z — **phase_generated** (implementation) by ashokraj2011 · agent developer: generation 1
 - 2026-11-18T12:56:31.471Z — **plan_amended** (implementation) by ashokraj2011 · agent developer: PAM-001: .nvmrc listed as build-configuration. good i like this version
@@ -34,4 +35,3 @@
 - 2026-11-18T10:53:46.075Z — **source_review_submitted** (specification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: fc98a4bd67722cdd2dd817fe1ed3c0bbd84f8de0cd7b1654c59da8b5793ca58f
 - 2026-11-18T10:51:22.166Z — **phase_generated** (specification) by ashokraj2011 · agent product-owner: generation 1
 - 2026-11-18T10:51:13.721Z — **asked_for_recorded** (specification) by ashokraj2011 · agent product-owner: What the person asked for in specification generation 1: instructions 1, 2.
-- 2026-11-18T10:40:50.061Z — **work_started** (specification) by ashokraj2011 · agent product-owner: Created spec-driven-standard branch new-ash-graph

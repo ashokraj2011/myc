@@ -6264,6 +6264,14 @@
       "event": "source_review_submitted",
       "phase": "implementation",
       "detail": "14f5b9acbe9e65e5c285b54cc8defa8a2c2f367acb554f902545e4bcc7cdc041"
+    },
+    {
+      "at": "2026-11-18T13:23:25.681Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "witness_recorded",
+      "phase": "implementation",
+      "detail": "WIT-001: inspection of src/components/FunctionGrapher.jsx for NEW-ASH-GRAPH:AC-002 slot layout-structure satisfies it. i am ok go ahead with this"
     }
   ],
   "measurement": {
@@ -6507,7 +6515,7 @@
       "storyIdentity": "edb0ff2d33afb6c60e3d3deb7ee0c99d4744ede71f99fbee915acbb3bcc4a875",
       "id": "WT-5f1d7319afa2aa6944379e36ec3926e4eba181b745104763d0db4bc8763f1a95",
       "inputSha256": "a4c2060e19356d253f16cd555fd07aab52529d61bbd7724b13da0ddf553cb275",
-      "revision": 5,
+      "revision": 6,
       "state": "complete",
       "continuations": 0,
       "maximumContinuations": 2,
@@ -6529,11 +6537,11 @@
         {
           "kind": "retained-review",
           "inputSha256": "a4c2060e19356d253f16cd555fd07aab52529d61bbd7724b13da0ddf553cb275",
-          "fingerprint": "fc002cda9ea90fac38e49d2c7b4a4c293784800e2fe6e849be74a48bca8daa15"
+          "fingerprint": "14f5b9acbe9e65e5c285b54cc8defa8a2c2f367acb554f902545e4bcc7cdc041"
         }
       ],
       "blockedCode": null,
-      "recordSha256": "434b9186a077de7651548a268b1d938856f158106bcb9be2e1ffad918244a54a"
+      "recordSha256": "52b1a6e5db5a2286d402e30e90a5b61adbd5dd11fdb41e4b258b87f3f104acb4"
     }
   },
   "publicationProjections": [
@@ -8430,6 +8438,137 @@
         },
         "createdAt": "2026-11-18T13:17:33.275Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "3ad4bec9-04fb-4553-8236-4948751933e5",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "new-ash-graph",
+          "branch": "new-ash-graph"
+        },
+        "phaseId": "implementation",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "decision": "witness",
+          "reviewPacketSha256": null,
+          "record": "WIT-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-18T13:23:24.696Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "3ad4bec9-04fb-4553-8236-4948751933e5",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "new-ash-graph"
+          ],
+          "branch": "new-ash-graph",
+          "canonicalBranch": "new-ash-graph",
+          "createdAt": "2026-11-18T10:40:50.061Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 1,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph new (copy)",
+          "updatedAt": "2026-11-18T13:23:25.681Z",
+          "workId": "new-ash-graph",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "b8be8eefc29f357791638bbb726ea7c65cf83db480b10f325b73db73e444c8f1",
+          "lifecycleEventId": "3ad4bec9-04fb-4553-8236-4948751933e5",
+          "lifecyclePayload": {
+            "decision": "witness",
+            "reviewPacketSha256": null,
+            "record": "WIT-001"
+          },
+          "templateSha256": "ba0749ab3997579949fc836a839af6606f995c2012a90b410597ebadf211298d",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "3ad4bec9-04fb-4553-8236-4948751933e5",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "new-ash-graph",
+              "branch": "new-ash-graph"
+            },
+            "phaseId": "implementation",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "engineering-reviewers",
+            "payload": {
+              "decision": "witness",
+              "reviewPacketSha256": null,
+              "record": "WIT-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-18T13:23:24.696Z"
+          }
+        },
+        "createdAt": "2026-11-18T13:23:24.705Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -8652,6 +8791,28 @@
         "attemptId": "TA-1e29569776f734c5e79e"
       },
       "at": "2026-11-18T13:13:07.866Z"
+    }
+  ],
+  "witnessRecords": [
+    {
+      "id": "WIT-001",
+      "clauseId": "NEW-ASH-GRAPH:AC-002",
+      "slot": "layout-structure",
+      "method": "inspection",
+      "file": "src/components/FunctionGrapher.jsx",
+      "sha256": "sha256:1b875d79bf650848c7d0af53088f212cca18a5c98b1abcfd82e2516b85af9940",
+      "contextBinding": "sha256:4d029025ce3e0bae7e8ccaaf4e1827ba8c3f1b01269db590940001b650a6e55d",
+      "checklist": {
+        "states-the-outcome": "yes",
+        "matches-the-criterion": "yes",
+        "current-for-this-change": "yes"
+      },
+      "outcome": "met",
+      "reason": "i am ok go ahead with this",
+      "actor": "ashokraj2011",
+      "authorityGroup": "engineering-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-18T13:23:25.681Z"
     }
   ]
 }
