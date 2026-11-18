@@ -224,9 +224,19 @@ export default function App() {
     handlePercent,
   ]);
 
+  // @clause:NEW-GRAPJ:AC-002 Give the graph workspace room for its approved visual layout.
+  // @clause:NEW-GRAPJ:REQ-003 Widen the shell only when Grapher mode is active.
   return (
-    <div className="w-full max-w-xl mx-auto p-4 sm:p-6 min-h-screen flex items-center justify-center">
-      <main className="glass-card w-full p-5 sm:p-7 flex flex-col items-center">
+    <div
+      className={`w-full max-w-xl mx-auto p-4 sm:p-6 min-h-screen flex items-center justify-center ${
+        activeMode === 'grapher' ? 'graph-app-shell' : ''
+      }`}
+    >
+      <main
+        className={`glass-card w-full p-5 sm:p-7 flex flex-col items-center ${
+          activeMode === 'grapher' ? 'graph-main-card' : ''
+        }`}
+      >
         {/* Top Header */}
         <Header
           activeMode={activeMode}

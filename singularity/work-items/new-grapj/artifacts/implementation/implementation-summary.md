@@ -4,27 +4,51 @@
   "workId": "new-grapj",
   "workType": "spec-driven-standard",
   "phase": "implementation",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "developer",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "developer"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "implementation-summary.md",
+      "mediaType": "text/markdown",
+      "sha256": "e3d4f81fca6df335da48600cfcc758e6c4ab3f2e2a75b9a86b77141a4bf9d55b",
+      "bytes": 4366
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-18T01:54:59.502Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "ac3b161bc4c4af0df81d989dfbc54d851fa1041e",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "b8be8eefc29f357791638bbb726ea7c65cf83db480b10f325b73db73e444c8f1",
@@ -38,7 +62,7 @@
   "inputs": {
     "generation": 1,
     "path": "singularity/work-items/new-grapj/context/inputs-implementation-gen1.json",
-    "sha256": "7b69ce7bbc6dce6398440cc014fd23e7f33813b0d86503e714f40fd16811051b",
+    "sha256": "93018cb3d95f1f873f79a408a025eef595668fbbd0446dab10803b2450dde03f",
     "renderedSha256": "3f6420a91770b317377de9cce19de06ca1870d46e797c53ec310dccfe8e66fba",
     "mode": "enforce"
   },
@@ -48,9 +72,52 @@
   },
   "remoteAgent": null,
   "clarification": null,
-  "telemetry": [],
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/new-grapj/telemetry/implementation-gen1.json",
+      "sha256": "aafd7ab198d0f1fa26acde57a7d04ed220b8ffc5c85943f985925ea35ef27ade",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 31593,
+        "estimatedTokens": 7899,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 31593,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-18T01:54:59.502Z",
+      "completedAt": "2026-11-18T01:54:59.502Z",
+      "agent": "developer",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -62,9 +129,7 @@
 
 ## Agent brief
 
-<!-- sflow:guidance Summarize the implemented outcome, consequential decisions, changed surfaces, validation result, remaining limitations, and rollout considerations for downstream agents. Keep it evidence-based; the detailed changed-components and test sections are preserved separately. -->
-
-Implemented the graphing workspace while preserving the existing calculator modes. The workspace plots editable `y=f(x)` expressions and a parametrically rendered radius-6 circle on a labeled Cartesian grid, with the approved expression panel and controls. The Playwright acceptance test measures the rendered circle against grid-derived unit spacing. Vitest, Playwright, build, and targeted lint checks pass on Node 22.14.0. The required human visual review for `NEW-GRAPJ:AC-002` is still outstanding; no visual acceptance is claimed. The build retains its large-chunk warning, and Node 26.12.0 is known to break existing `localStorage` tests; pinning Node 22 requires the person's `/sf-decide` choice.
+Implemented the graphing workspace while preserving the existing calculator modes. The workspace plots editable `y=f(x)` expressions and a parametrically rendered radius-6 circle on a labeled Cartesian grid, with the approved expression panel and controls. The Playwright acceptance test measures the rendered circle against grid-derived unit spacing. Local Vitest, Playwright, build, and targeted lint checks passed on Node 22.14.0. A required SFlow test attempt on Node 26.12.0 failed because its `localStorage` was unavailable; the person's PAM-001 decision now pins Node 22 with `.nvmrc` and amends the plan. Fresh required gate results remain pending. The required human visual review for `NEW-GRAPJ:AC-002` is still outstanding; no visual acceptance is claimed. The build retains its large-chunk warning.
 
 ## Implemented outcome
 
@@ -76,7 +141,7 @@ Grapher mode now includes an editable expression list, a default `sin(x)` plot, 
 - [src/App.jsx](../../../../../src/App.jsx) widens the shell only in Grapher mode and carries the `NEW-GRAPJ:REQ-003` and `NEW-GRAPJ:AC-002` bindings.
 - [src/index.css](../../../../../src/index.css) styles the expression list, graph, controls, and responsive layout, with `NEW-GRAPJ:REQ-003` and `NEW-GRAPJ:AC-002` bindings.
 - [e2e/graphing.spec.js](../../../../../e2e/graphing.spec.js) contains the `@ac:NEW-GRAPJ:AC-001` real-browser test for plotted function pixels, visible controls, and circle geometry relative to the rendered grid.
-- [package.json](../../../../../package.json), [package-lock.json](../../../../../package-lock.json), and [playwright.config.js](../../../../../playwright.config.js) provide the isolated Playwright command, browser dependency, and generated-output location. `npm test` remains scoped to `src` so Vitest does not collect the browser test. Not applicable: these are supporting test-tooling changes; no approved clause claims configuration.
+- [package.json](../../../../../package.json), [package-lock.json](../../../../../package-lock.json), [playwright.config.js](../../../../../playwright.config.js), and [.nvmrc](../../../../../.nvmrc) provide the isolated Playwright command, browser dependency, generated-output location, and the Node 22 runtime pin. PAM-001 records the person's decision to add `.nvmrc` as supporting build configuration and amend the plan. `npm test` remains scoped to `src` so Vitest does not collect the browser test. Not applicable: these are supporting test/runtime configuration changes; no product clause claims configuration.
 
 ## Tests and operational notes
 
@@ -84,7 +149,8 @@ Grapher mode now includes an editable expression list, a default `sin(x)` plot, 
 - `PATH="/opt/homebrew/opt/node@22/bin:$PATH" npm run test:e2e` — passed; 1 Playwright test, tagged `@ac:NEW-GRAPJ:AC-001`.
 - `PATH="/opt/homebrew/opt/node@22/bin:$PATH" npm run build` — passed; Vite reports a 890.15 kB minified JavaScript chunk, above its 500 kB warning threshold.
 - `PATH="/opt/homebrew/opt/node@22/bin:$PATH" npx eslint src/components/FunctionGrapher.jsx e2e/graphing.spec.js playwright.config.js` — passed. Linting `src/App.jsx` separately still reports the pre-existing unused default `React` import and unused caught variable `e`; neither was changed for this task.
-- Visual acceptance (`NEW-GRAPJ:AC-002`) remains for human review; the Playwright test does not substitute for it. Existing tests require Node 22.14.0 in this environment; no `.nvmrc` was added. The step's runner must use Node 22 or the person must decide whether to pin it via `/sf-decide`.
+- The prior SFlow required test attempt ran `npm test -- --reporter=json --outputFile=.sflow/results/node-tests.json` on Node 26.12.0 and failed 17 of 31 tests with missing `localStorage`; 14 passed. The local Node 22.14.0 run passed all 31 tests. PAM-001 has now added `.nvmrc`; the required SFlow gate must be rerun to establish current evidence.
+- Visual acceptance (`NEW-GRAPJ:AC-002`) remains for human review; the Playwright test does not substitute for it.
 - `npm ci` reported 15 audit findings (4 moderate, 11 high); they were not investigated or remediated in this graph-plotter change.
 
 <!-- singularity-flow:inputs:start -->

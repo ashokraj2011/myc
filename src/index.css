@@ -639,3 +639,307 @@ body {
 .u-text-text-accent { color: var(--text-accent); }
 .u-text-text-main { color: var(--text-main); }
 .u-text-text-muted { color: var(--text-muted); }
+
+#root:has(.graph-app-shell) {
+  width: 100%;
+}
+
+.graph-app-shell {
+  width: 100%;
+  max-width: 90rem;
+  min-height: 100vh;
+  margin-inline: auto;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.graph-main-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 1.5rem;
+}
+
+/* @clause:NEW-GRAPJ:REQ-003 Style the expression list, labeled graph, and required controls. */
+/* @clause:NEW-GRAPJ:AC-002 Bind the graph workspace styling to visual acceptance. */
+.graph-workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.graph-toolbar,
+.graph-toolbar-actions,
+.graph-panel-heading {
+  display: flex;
+  align-items: center;
+}
+
+.graph-toolbar {
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.graph-toolbar-title h2 {
+  color: var(--text-main);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.graph-toolbar-actions {
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.graph-toolbar-divider {
+  width: 1px;
+  height: 1.75rem;
+  margin-inline: 0.2rem;
+  background: var(--card-border);
+}
+
+.graph-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--card-border);
+  border-radius: 0.65rem;
+  color: var(--text-main);
+  background: var(--btn-func-bg);
+  cursor: pointer;
+}
+
+.graph-icon-button svg,
+.graph-remove-button svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.graph-icon-button:hover:not(:disabled),
+.graph-remove-button:hover {
+  background: var(--btn-func-hover);
+}
+
+.graph-icon-button:focus-visible,
+.graph-remove-button:focus-visible,
+.graph-function-input input:focus-visible {
+  outline: 2px solid var(--text-accent);
+  outline-offset: 2px;
+}
+
+.graph-icon-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.graph-layout {
+  display: grid;
+  grid-template-columns: minmax(15rem, 19rem) minmax(0, 1fr);
+  align-items: stretch;
+  gap: 1rem;
+  width: 100%;
+}
+
+.graph-layout--collapsed {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.graph-expression-panel,
+.graph-canvas-panel {
+  min-width: 0;
+  border: 1px solid var(--card-border);
+  border-radius: 0.8rem;
+  background: var(--display-bg);
+}
+
+.graph-expression-panel {
+  padding: 1rem;
+}
+
+.graph-panel-heading {
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.graph-panel-heading h3 {
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+.graph-panel-heading p {
+  margin-top: 0.25rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.graph-add-button {
+  flex: 0 0 auto;
+}
+
+.graph-expression-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.graph-expression-row {
+  display: grid;
+  grid-template-columns: 0.55rem minmax(0, 1fr) 2rem;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 0;
+  padding: 0.7rem;
+  border: 1px solid var(--card-border);
+  border-radius: 0.65rem;
+  background: var(--card-bg);
+}
+
+.graph-expression-swatch {
+  width: 0.5rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+}
+
+.graph-function-input {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+  color: var(--text-accent);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.graph-function-input input {
+  width: 100%;
+  min-width: 0;
+  padding: 0.35rem 0.4rem;
+  border: 1px solid transparent;
+  border-radius: 0.35rem;
+  color: var(--text-main);
+  background: transparent;
+  font: inherit;
+}
+
+.graph-circle-expression {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+  color: var(--text-main);
+  font-size: 0.8rem;
+}
+
+.graph-circle-expression span {
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+}
+
+.graph-remove-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 0.4rem;
+  color: var(--text-muted);
+  background: transparent;
+  cursor: pointer;
+}
+
+.graph-expression-error {
+  color: #e11d48;
+  font-size: 0.75rem;
+}
+
+.graph-canvas-panel {
+  height: min(62vh, 38rem);
+  min-height: 28rem;
+  overflow: hidden;
+  background: #050a14;
+}
+
+.graph-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+}
+
+@media (max-width: 760px) {
+  .graph-app-shell {
+    padding: 0.75rem;
+  }
+
+  .graph-main-card {
+    padding: 1rem;
+  }
+
+  .graph-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .graph-canvas-panel {
+    height: 22rem;
+    min-height: 22rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .graph-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .graph-toolbar-actions {
+    gap: 0.3rem;
+  }
+
+  .graph-icon-button {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+.graph-presets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.graph-presets > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.graph-preset-button {
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--card-border);
+  border-radius: 0.45rem;
+  color: var(--text-muted);
+  background: var(--card-bg);
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.graph-preset-button:hover {
+  color: var(--text-accent);
+  background: var(--btn-func-hover);
+}
