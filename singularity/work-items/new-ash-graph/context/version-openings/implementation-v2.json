@@ -1,0 +1,82 @@
+{
+  "schema": "version-opening/v1",
+  "operationId": "vo-11af1d90dbe2a98b3acf74a56879bc94",
+  "payloadDigest": "sha256:2d7730c08b54a64f48d122492bbf4f4721df9c8bbc8ce5987fc2c5f732e4ae47",
+  "proposal": {
+    "schema": "version-opening-proposal/v1",
+    "operation": "version-opening/v1",
+    "workId": "new-ash-graph",
+    "phase": "implementation",
+    "step": "Implementation",
+    "kind": "code",
+    "version": 2,
+    "highWatermark": 1,
+    "from": {
+      "published": 1,
+      "publicationDigest": "sha256:b7095ddfaa1c092962fb295c17a768ec1ab03704103ac62dfb15d3b18ab2d140"
+    },
+    "abandoned": null,
+    "reason": "review-corrections",
+    "consent": "required",
+    "evidence": {
+      "testsRecorded": true
+    },
+    "confirmation": "sha256:ed394d85679586d6bcd2ba86280171a090ea4ab887013472d96febf7dea8100e",
+    "adoption": null,
+    "configurationRevision": "b8be8eefc29f357791638bbb726ea7c65cf83db480b10f325b73db73e444c8f1",
+    "lifecycleRevision": "ffc691f537cb3178b58166ff848191db7a7cf644"
+  },
+  "proposalDigest": "sha256:f583b163386bcd6d50b9bce20b9a15aa85141a34f1f0c9cad8fd36ad03af876b",
+  "consent": {
+    "schema": "version-opening-consent/v1",
+    "receiptId": "9437bf08-4d30-4d3a-af43-ee61d6dce655",
+    "proposalDigest": "sha256:f583b163386bcd6d50b9bce20b9a15aa85141a34f1f0c9cad8fd36ad03af876b",
+    "binding": {
+      "workId": "new-ash-graph",
+      "phase": "implementation",
+      "version": 2,
+      "from": 1,
+      "confirmation": "sha256:ed394d85679586d6bcd2ba86280171a090ea4ab887013472d96febf7dea8100e"
+    },
+    "principal": {
+      "kind": "human",
+      "identity": {
+        "name": "Ashok Raj",
+        "email": "88361104+ashokraj2011@users.noreply.github.com",
+        "login": "ashokraj2011"
+      },
+      "assurance": "host-answer",
+      "session": "d9d3dd7a3528150332abec18c3c05dd26ffadb01d00c643916ee1a314bd79c59",
+      "host": "copilot-cli"
+    },
+    "response": {
+      "surface": "question-tool",
+      "question": "the source review still has one blocker: the planned vitest regression suite has no passing post-repair run. the direct run on node 26.12 failed during setup because `localstorage` was unavailable (17 failures, 14 passed). a passing suite under supported node 22 or a resolved setup is needed. start version 2 of implementation? published version 1 and its recorded tests will stay unchanged",
+      "answer": "yes",
+      "turnId": "7a46ecd6-55e0-41d7-9d14-0f1c293c7c58"
+    },
+    "confirmedAt": "2026-11-18T13:27:55.596Z",
+    "expiresAt": "2026-11-18T13:57:55.596Z",
+    "machineLocalIntegrity": {
+      "scheme": "machine-local-hmac-sha256-v1",
+      "purpose": "version-opening-consent",
+      "keyId": "b69d3bc9ae86a9ad",
+      "mac": "sha256:95f00cd50a6312abd7eb5db0fdde783d3b0f66c1fa2bdebb1919cddeed7703d8"
+    }
+  },
+  "writer": {
+    "fence": 2,
+    "writerId": "vw-601a0fc0046c0a90d41392b85180425f",
+    "operationId": "vo-11af1d90dbe2a98b3acf74a56879bc94",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011"
+    }
+  },
+  "intent": {
+    "id": "c4ad5793-ee28-4912-9f9c-c3452bfd255f",
+    "receiptSha256": "sha256:07919c7b885e8aca40527ef2e392c1000fad8402a02a74fc707d76205347379e"
+  },
+  "openedAt": "2026-11-18T13:27:57.188Z"
+}
