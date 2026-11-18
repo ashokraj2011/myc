@@ -1,5 +1,24 @@
 import '@testing-library/jest-dom/vitest';
 
+// Newer Node releases expose their own global localStorage that is unusable
+// without a backing file; replace it with an in-memory Storage stand-in.
+if (typeof globalThis.localStorage?.getItem !== 'function') {
+  const store = new Map();
+  Object.defineProperty(globalThis, 'localStorage', {
+    configurable: true,
+    value: {
+      getItem: (key) => (store.has(String(key)) ? store.get(String(key)) : null),
+      setItem: (key, value) => void store.set(String(key), String(value)),
+      removeItem: (key) => void store.delete(String(key)),
+      clear: () => store.clear(),
+      key: (index) => [...store.keys()][index] ?? null,
+      get length() {
+        return store.size;
+      },
+    },
+  });
+}
+
 // jsdom does not implement matchMedia; components/tests that read
 // responsive breakpoints via CSS need a stub so render() doesn't throw.
 if (!window.matchMedia) {

@@ -11,6 +11,24 @@ import { KeyboardShortcutsModal } from './components/KeyboardShortcutsModal';
 import { evaluateExpression } from './utils/evaluator';
 import { playSound } from './utils/audio';
 
+// Storage can be unavailable (blocked or unsupported); the app, including the
+// Grapher workspace, must still render with defaults.
+function readStored(key) {
+  try {
+    return localStorage.getItem(key);
+  } catch (e) {
+    return null;
+  }
+}
+
+function writeStored(key, value) {
+  try {
+    localStorage.setItem(key, value);
+  } catch (e) {
+    // Persistence is best-effort.
+  }
+}
+
 export default function App() {
   const [activeMode, setActiveMode] = useState('standard');
   const [expression, setExpression] = useState('');
@@ -20,14 +38,18 @@ export default function App() {
   const [memoryValue, setMemoryValue] = useState(0);
 
   // Customization & UI state
-  const [theme, setTheme] = useState(() => localStorage.getItem('apex_theme') || 'classic');
+  const [theme, setTheme] = useState(() => readStored('apex_theme') || 'classic');
   const [soundEnabled, setSoundEnabled] = useState(() => {
-    const saved = localStorage.getItem('apex_sound');
-    return saved !== null ? JSON.parse(saved) : true;
+    try {
+      const saved = readStored('apex_sound');
+      return saved !== null ? JSON.parse(saved) : true;
+    } catch (e) {
+      return true;
+    }
   });
   const [history, setHistory] = useState(() => {
     try {
-      return JSON.parse(localStorage.getItem('apex_history')) || [];
+      return JSON.parse(readStored('apex_history')) || [];
     } catch (e) {
       return [];
     }
@@ -39,17 +61,17 @@ export default function App() {
   // Sync theme to document body data-theme attribute
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('apex_theme', theme);
+    writeStored('apex_theme', theme);
   }, [theme]);
 
   // Sync sound settings
   useEffect(() => {
-    localStorage.setItem('apex_sound', JSON.stringify(soundEnabled));
+    writeStored('apex_sound', JSON.stringify(soundEnabled));
   }, [soundEnabled]);
 
   // Sync history to localStorage
   useEffect(() => {
-    localStorage.setItem('apex_history', JSON.stringify(history));
+    writeStored('apex_history', JSON.stringify(history));
   }, [history]);
 
   // Handlers for digit, operator, clear, backspace, equals

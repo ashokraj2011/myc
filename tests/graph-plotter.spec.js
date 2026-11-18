@@ -1,13 +1,16 @@
 import { expect, test } from '@playwright/test';
 
-// @ac:NEW-ASH-GRAPH:AC-001
+// @ac:NEW-ASH-GRAPH:AC-001 The browser test checks the radius-6 circle's cardinal points and verifies that the origin remains unplotted.
+// @ac:NEW-ASH-GRAPH:AC-002 The browser assertions check the expression panel, Cartesian canvas, and mathematical keypad are visible.
 test('plots a circle centered at the origin with radius six', async ({ page }) => {
   await page.goto('/');
   await page.locator('.nav-mobile select').selectOption('grapher');
 
+  await expect(page.getByRole('heading', { name: 'Expressions' })).toBeVisible();
   const expression = page.getByRole('textbox', { name: 'Graph expression' });
   await expression.fill('x^2 + y^2 = 36');
 
+  await expect(page.getByRole('region', { name: 'Cartesian graph' })).toBeVisible();
   const canvas = page.getByTestId('graph-canvas');
   await expect(canvas).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Math keypad' })).toBeVisible();

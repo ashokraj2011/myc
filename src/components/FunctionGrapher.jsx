@@ -131,8 +131,8 @@ const drawRelation = (ctx, left, right, width, height, centerX, centerY, scale) 
     };
   };
   const crossesZero = (a, b) =>
-    a.value !== null &&
-    b.value !== null &&
+    Number.isFinite(a.value) &&
+    Number.isFinite(b.value) &&
     (a.value === 0 || b.value === 0 || (a.value < 0) !== (b.value < 0));
   const intersection = (a, b) => {
     const denominator = a.value - b.value;

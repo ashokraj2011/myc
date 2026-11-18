@@ -1,0 +1,531 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "new-ash-graph",
+  "phase": "implementation",
+  "generation": 2,
+  "generationIntentId": "c4ad5793-ee28-4912-9f9c-c3452bfd255f",
+  "changeSet": {
+    "path": "singularity/work-items/new-ash-graph/context/code-delivery/implementation-gen2-changes.json",
+    "digest": "sha256:1fad25c3a4477dd4edca4a4c106ec5ea09ef70a7b137d0a640ad88443d0eaa78",
+    "sourcePaths": [
+      "src/App.jsx",
+      "src/components/FunctionGrapher.jsx",
+      "src/index.css"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [],
+    "executableTestPaths": [
+      "tests/graph-plotter.spec.js"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "product-source": 3,
+      "test-source": 2
+    },
+    "entries": [
+      {
+        "changeId": "sha256:226ab69119c4e3e5e8b8486c41a6195fe5b20fe1c5c70b953a5851ba16d37bf0",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:c10e900a085f7777ec6645393fd6fc0016417671c53e7ef5e312f9451bfee425",
+        "status": "modified",
+        "oldPath": "src/components/FunctionGrapher.jsx",
+        "newPath": "src/components/FunctionGrapher.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:0472194e240eeff0ca16104ab786702fbe20ff6fcad38d1a6ba2745658284e3a",
+        "status": "modified",
+        "oldPath": "src/index.css",
+        "newPath": "src/index.css",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:0e6a1f79a95ae4ebcd16ffce644993f05eec36c035d2d16d55b2d1d6ecdf3e30",
+        "status": "modified",
+        "oldPath": "src/test/setup.js",
+        "newPath": "src/test/setup.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:3e7915f29d15ad1f044eaf2119a47af9ab398364ca54c46d5c912f47fb7d7d88",
+        "status": "modified",
+        "oldPath": "tests/graph-plotter.spec.js",
+        "newPath": "tests/graph-plotter.spec.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "NEW-ASH-GRAPH:AC-001"
+    ],
+    "bound": [
+      "NEW-ASH-GRAPH:AC-001",
+      "NEW-ASH-GRAPH:AC-002"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-001",
+        "testSource": "tests/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-002",
+        "testSource": "tests/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-001",
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "identity": {
+          "framework": "playwright",
+          "suitePath": [],
+          "name": "plots a circle centered at the origin with radius six"
+        },
+        "logicalTestId": "sha256:972c5b973b803431bf0a74dbb1ea7acb7a84904d818c9fee749a964aa19f91ee",
+        "declarationSha256": "sha256:9b7899ec3cc25439c611d1ff181fe5bf39495b116ce760e7088dfcc4e96b0bcc",
+        "supportSha256": null,
+        "assertions": {
+          "count": 0,
+          "tautological": 0,
+          "negative": false,
+          "boundary": true,
+          "nullability": false,
+          "adequacy": "missing",
+          "subjects": [
+            "Number",
+            "async",
+            "evaluate",
+            "every",
+            "fill",
+            "for",
+            "getByRole",
+            "getByTestId",
+            "getContext",
+            "getImageData",
+            "goto",
+            "hasPinkAt",
+            "if",
+            "locator",
+            "poll",
+            "round",
+            "selectOption",
+            "toBeVisible",
+            "toHaveCount"
+          ]
+        },
+        "line": 5,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-002",
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "identity": {
+          "framework": "playwright",
+          "suitePath": [],
+          "name": "plots a circle centered at the origin with radius six"
+        },
+        "logicalTestId": "sha256:972c5b973b803431bf0a74dbb1ea7acb7a84904d818c9fee749a964aa19f91ee",
+        "declarationSha256": "sha256:9b7899ec3cc25439c611d1ff181fe5bf39495b116ce760e7088dfcc4e96b0bcc",
+        "supportSha256": null,
+        "assertions": {
+          "count": 0,
+          "tautological": 0,
+          "negative": false,
+          "boundary": true,
+          "nullability": false,
+          "adequacy": "missing",
+          "subjects": [
+            "Number",
+            "async",
+            "evaluate",
+            "every",
+            "fill",
+            "for",
+            "getByRole",
+            "getByTestId",
+            "getContext",
+            "getImageData",
+            "goto",
+            "hasPinkAt",
+            "if",
+            "locator",
+            "poll",
+            "round",
+            "selectOption",
+            "toBeVisible",
+            "toHaveCount"
+          ]
+        },
+        "line": 5,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/FunctionGrapher.jsx",
+          "src/index.css"
+        ]
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/FunctionGrapher.jsx",
+          "src/index.css"
+        ]
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-002",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-002",
+        "sourcePath": "src/App.jsx",
+        "line": 249,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-002",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 186,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-002",
+        "sourcePath": "src/index.css",
+        "line": 911,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-001",
+        "sourcePath": "src/App.jsx",
+        "line": 250,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-001",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 185,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-001",
+        "sourcePath": "src/index.css",
+        "line": 910,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-002",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 120,
+        "tag": "clause"
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "NEW-ASH-GRAPH:AC-002",
+        "explanation": {
+          "text": "Expand the app shell only for the Grapher workspace.",
+          "path": "src/App.jsx",
+          "line": 249
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 18
+              },
+              {
+                "beforeStart": 23,
+                "beforeLines": 1,
+                "afterStart": 41,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 25,
+                "beforeLines": 2,
+                "afterStart": 43,
+                "afterLines": 6
+              },
+              {
+                "beforeStart": 30,
+                "beforeLines": 1,
+                "afterStart": 52,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 42,
+                "beforeLines": 1,
+                "afterStart": 64,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 47,
+                "beforeLines": 1,
+                "afterStart": 69,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 52,
+                "beforeLines": 1,
+                "afterStart": 74,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 32
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 134,
+                "beforeLines": 2,
+                "afterStart": 134,
+                "afterLines": 2
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/index.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 899,
+                "beforeLines": 0,
+                "afterStart": 900,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          }
+        ]
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-001",
+        "explanation": {
+          "text": "Keep the graph workspace full-width without changing other calculator modes.",
+          "path": "src/App.jsx",
+          "line": 250
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 18
+              },
+              {
+                "beforeStart": 23,
+                "beforeLines": 1,
+                "afterStart": 41,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 25,
+                "beforeLines": 2,
+                "afterStart": 43,
+                "afterLines": 6
+              },
+              {
+                "beforeStart": 30,
+                "beforeLines": 1,
+                "afterStart": 52,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 42,
+                "beforeLines": 1,
+                "afterStart": 64,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 47,
+                "beforeLines": 1,
+                "afterStart": 69,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 52,
+                "beforeLines": 1,
+                "afterStart": 74,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 32
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 134,
+                "beforeLines": 2,
+                "afterStart": 134,
+                "afterLines": 2
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/index.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 899,
+                "beforeLines": 0,
+                "afterStart": 900,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          }
+        ]
+      },
+      {
+        "clauseId": "NEW-ASH-GRAPH:REQ-002",
+        "explanation": {
+          "text": "Render equality expressions as implicit zero contours.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 120
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 134,
+                "beforeLines": 2,
+                "afterStart": 134,
+                "afterLines": 2
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:b409935971a1ce6301a459372a9fa6b38970435e2271377109ae2a7b2fcf2889"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:18e6d9c4e43f3d7d76625ab6aeca5fd7ccc87495925bcb31a5f17cfb0c1b40fe",
+    "codeTreeSha256": "sha256:2a1ef6c984aea890f3bf11d3f88efbc0c3ce8aece0b9d2df967aaf8c1dbaa24b",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-11-18T14:45:59.632Z"
+}

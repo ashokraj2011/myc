@@ -4,7 +4,7 @@
   "workId": "new-ash-graph",
   "workType": "spec-driven-standard",
   "phase": "implementation",
-  "generation": 1,
+  "generation": 2,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "implementation-summary.md",
       "mediaType": "text/markdown",
-      "sha256": "d97aa6a28cc1ec7792dc893d7ed53ad111df3de888e4bdf054914b6364ea23d5",
-      "bytes": 4801
+      "sha256": "a5659bb22446815da12e81b3b80088932c0a16b283339a8ef0bc76436038a536",
+      "bytes": 4682
     },
-    "generation": 1,
-    "publishedAt": "2026-11-18T13:13:08.356Z"
+    "generation": 2,
+    "publishedAt": "2026-11-18T14:45:59.632Z"
   },
-  "sourceCommit": "e5e787d0ad790ebef46845c7bcbc47b8fa9f9dbc",
+  "sourceCommit": "ce716f79944d7907a3e4515733d23dbfd2e51e3e",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "b8be8eefc29f357791638bbb726ea7c65cf83db480b10f325b73db73e444c8f1",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/common/implementation.md"
   },
   "inputs": {
-    "generation": 1,
-    "path": "singularity/work-items/new-ash-graph/context/inputs-implementation-gen1.json",
-    "sha256": "ddce712334436e5de7da861203c2d23e5f00f607ce8996b5c3bda08d0b5b5312",
+    "generation": 2,
+    "path": "singularity/work-items/new-ash-graph/context/inputs-implementation-gen2.json",
+    "sha256": "c0a9d3c9622131f9746f9031d384f11a1d82ec7622977e4526498d59017b8458",
     "renderedSha256": "15e2495d397a271c0a701ab8eba0f6b400d5d29091f6f645636c1407b3fd7000",
     "mode": "enforce"
   },
@@ -71,21 +71,7 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": {
-    "generation": 1,
-    "path": "singularity/work-items/new-ash-graph/context/clarifications-implementation-gen1.json",
-    "sha256": "e3bdd027c9e8f88323d8df9705611cbb4665a2de35fced5264dd5286229e8d8b",
-    "promptSha256": "ae5fae1e6ce0326c358c1b806b308fc017d91686134891ee37218ac7b41f7e3a",
-    "responses": 1,
-    "markers": [],
-    "recordedAt": "2026-11-18T13:08:51.395Z",
-    "recordedBy": {
-      "name": "Ashok Raj",
-      "email": "88361104+ashokraj2011@users.noreply.github.com",
-      "login": "ashokraj2011",
-      "githubLookup": "resolved"
-    }
-  },
+  "clarification": null,
   "telemetry": [
     {
       "generation": 1,
@@ -103,6 +89,26 @@
         "maximumEstimatedTokens": 18000,
         "budgetMode": "observe",
         "originalBytes": 30820,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 2,
+      "path": "singularity/work-items/new-ash-graph/telemetry/implementation-gen2.json",
+      "sha256": "e124440e8e0afd44cedb16bbfc3db53a2154afa1e413bc433fdede67fc181bac",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 31913,
+        "estimatedTokens": 7979,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 31913,
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
@@ -130,6 +136,27 @@
       "completedAt": "2026-11-18T13:13:08.356Z",
       "agent": "developer",
       "generation": 1
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-18T14:45:59.632Z",
+      "completedAt": "2026-11-18T14:45:59.632Z",
+      "agent": "developer",
+      "generation": 2
     }
   ],
   "sequenceOverrides": [],
@@ -143,7 +170,7 @@
 
 ## Agent brief
 
-Grapher mode now uses a responsive graphing-calculator layout with an expression panel, Cartesian canvas, graph controls, and a math keypad. It preserves single-variable function plots and renders equality relations as implicit contours; the Playwright scenario confirms the radius-6 circle at all four cardinal points and checks that the origin remains unplotted. The browser test and production build passed before the latest button-style repair. A prepublish test run found one shared-design-token assertion failure that also occurred on the Story base; following the user's choice to repair it in this Story, every Grapher button now uses the shared `.calc-btn` primitive. The post-repair browser test passed, while the direct unit-test run under Node 26 failed during setup because `localStorage` was unavailable. The required prepublish rerun remains pending.
+Grapher mode now uses a responsive graphing-calculator layout with an expression panel, Cartesian canvas, graph controls, and a math keypad. It preserves single-variable function plots and renders equality relations as implicit contours; the Playwright scenario confirms the radius-6 circle at all four cardinal points and checks that the origin remains unplotted. Version 2 corrects the version 1 review finding: the Vitest regression suite now runs fully (31/31) under Node 26.12 because the test setup supplies an in-memory `localStorage`, and `App.jsx` reads and writes storage defensively so the app renders when storage is unavailable. Every Grapher button uses the shared `.calc-btn` primitive.
 
 ## Implemented outcome
 
@@ -151,11 +178,12 @@ Grapher mode expands the app shell only for that mode and places the expression 
 
 ## Changed components and decisions
 
-- `src/App.jsx`: applies the wider shell only in Grapher mode; source comments bind `NEW-ASH-GRAPH:REQ-001` and `NEW-ASH-GRAPH:AC-002`.
-- `src/components/FunctionGrapher.jsx`: retains function plotting and adds equality-contour plotting, expression controls, zoom/reset, and the keypad. All graph buttons use the shared `.calc-btn` primitive for theme consistency; source comments bind `NEW-ASH-GRAPH:REQ-001`, `NEW-ASH-GRAPH:REQ-002`, and `NEW-ASH-GRAPH:AC-002`.
-- `src/index.css`: defines the graph-mode layout and narrow-screen arrangement; source comments bind `NEW-ASH-GRAPH:REQ-001` and `NEW-ASH-GRAPH:AC-002`.
+- `src/App.jsx`: applies the wider shell only in Grapher mode and now wraps `localStorage` access in `readStored`/`writeStored` so a missing or blocked storage no longer crashes rendering; source comments bind `NEW-ASH-GRAPH:REQ-001` and `NEW-ASH-GRAPH:AC-002`.
+- `src/components/FunctionGrapher.jsx`: retains function plotting and adds equality-contour plotting, expression controls, zoom/reset, and the keypad; version 2 also makes the contour zero-crossing test ignore non-finite samples (`Number.isFinite`) so infinities cannot produce stray segments. All graph buttons use the shared `.calc-btn` primitive for theme consistency; source comments bind `NEW-ASH-GRAPH:REQ-001`, `NEW-ASH-GRAPH:REQ-002`, and `NEW-ASH-GRAPH:AC-002`.
+- `src/index.css`: defines the graph-mode layout and narrow-screen arrangement, and version 2 sets `touch-action: manipulation` on graph keypad buttons to avoid double-tap zoom delays; source comments bind `NEW-ASH-GRAPH:REQ-001` and `NEW-ASH-GRAPH:AC-002`.
 - `tests/graph-plotter.spec.js`: `@ac:NEW-ASH-GRAPH:AC-001` checks the four radius-6 cardinal pixels, an unplotted origin, and keypad visibility.
 - `playwright.config.js`, `package.json`, and `package-lock.json`: configure the isolated Playwright runner and dependency. The `test` script scopes Vitest to `src` so it does not collect the Playwright spec from `tests/`; the Playwright spec remains available through `test:e2e`. These configuration files require no traceability tags.
+- `src/test/setup.js`: supplies an in-memory `localStorage` when the runtime's global one is unusable (Node 26 without `--localstorage-file`); test infrastructure, no traceability tags.
 - `.nvmrc` sets Node 22 as directed by recorded decision PAM-001 and is listed as a supporting build-configuration change. No migration or product-scope departure was made.
 
 ## Constitution articles
@@ -166,9 +194,9 @@ None: this Story pinned no constitution.
 
 - `npm run test:e2e` — exit 0; 1 Playwright test passed. The tagged test ran at 390×844, found the radius-6 contour at x/y = ±6, verified the origin is unplotted, and confirmed the keypad is visible.
 - `npm run build` — exit 0; Vite 8.2 built successfully. It reported the generated JavaScript chunk at 888.81 kB, above Vite's 500 kB advisory threshold.
-- `npm test -- --reporter=json --outputFile=.sflow/results/node-tests.json` — post-repair direct run exited 1 under Node 26.12.0: 14/31 tests passed and 17 failed during setup because `localStorage` was undefined. This did not verify the repaired Grapher assertion. A prior SFlow prepublish run passed 30/31 and failed only `renders grapher mode using the shared design-token classes under win11-light`; the base comparison found that same assertion failing before this Story's changes. That failure has been repaired in `FunctionGrapher.jsx`, and a fresh required prepublish run is pending.
-- `npm run test:e2e -- --reporter=json` — exit 0; the tagged Playwright test passed after the shared-button repair.
-- `.nvmrc` contains `22` per recorded decision PAM-001, but both the SFlow test run and direct test command reported Node 26.12.0; Node 22 execution is not established by these results.
+- `npm test` — exit 0 under Node 26.12.0: 3 files, 31/31 tests passed, covering the existing calculator modes including the shared design-token Grapher assertion (regression check for REQ-001's shared-shell change). Node only emits an ExperimentalWarning about `localStorage`.
+- `npm run test:e2e` — exit 0 in version 2; the tagged `@ac:NEW-ASH-GRAPH:AC-001` test passed again, and its `@ac:NEW-ASH-GRAPH:AC-002` tag covers the visible panel, canvas and keypad assertions.
+- `.nvmrc` contains `22` per recorded decision PAM-001, but the local runs reported Node 26.12.0; Node 22 execution is not established by these results, and the setup fix makes the suite pass on both.
 - Visual inspection at a narrow viewport showed the expression panel, graph canvas, and keypad in the responsive single-column layout; the wider viewport computed a two-column expression/canvas grid. `singularity-flow app plan --json` returned no governed app launcher, so the app was started with the configured Vite dev command and stopped after inspection.
 - `npm ci` — exit 0. npm reported 15 audit advisories (4 moderate, 11 high); dependency remediation was not part of this Story.
 
