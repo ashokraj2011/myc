@@ -9,10 +9,11 @@
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
-| 1 | Scope and plan (`intake`) | product-owner | **in_progress** | 0 | 0 | unavailable |
+| 1 | Scope and plan (`intake`) | product-owner | **in_progress** | 1 | 0 | unavailable |
 | 2 | Implement (`implement`) | developer | **not_started** | 0 | 0 | unavailable |
 | 3 | Verify (`verify`) | qa | **not_started** | 0 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-11-20T14:36:24.212Z — **phase_generated** (intake) by ashokraj2011 · agent product-owner: generation 1
 - 2026-11-20T14:25:36.220Z — **work_started** (intake) by ashokraj2011 · agent product-owner: Created quick-fix branch fix-issues

@@ -4,27 +4,51 @@
   "workId": "fix-issues",
   "workType": "quick-fix",
   "phase": "intake",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "intake.md",
+      "mediaType": "text/markdown",
+      "sha256": "5d37817c2226a623859ceb2123f0308a6198e47c01016c5272a574143115db9d",
+      "bytes": 3391
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-20T14:36:23.977Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "5a98e5f353dcee318603555caaf7196853c5267f",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "cc57a16d7959c8cca63ecb452a5d714891daa623ce4c0a607f1854bfc3883b55",
@@ -42,9 +66,52 @@
   },
   "remoteAgent": null,
   "clarification": null,
-  "telemetry": [],
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/fix-issues/telemetry/intake-gen1.json",
+      "sha256": "ce760087e8551d4b729e45699ba2b21b6010a3692c56f44346f8a96928197b2b",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 24865,
+        "estimatedTokens": 6217,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 24865,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-20T14:36:23.977Z",
+      "completedAt": "2026-11-20T14:36:23.977Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -54,30 +121,33 @@
 
 # fix-issues — Quick fix scope and plan
 
-<!-- sflow:guidance This short checkpoint states what the fix must do and where it lands before any code changes. One reviewer signs it off; Implement then has to meet exactly these claims. -->
-
 ## Problem and fix
 
-TODO: Describe the defect or small change and the intended fix in one or two sentences.
+The graph is not visible for valid input, and interactions with the grapher can change the page dimensions. Keep valid graphs visible and make the page layout stable while typing in the graph input or clicking its controls.
+
+- [FIX-ISSUES:REQ-001] For a valid graph input, the grapher displays the graph visibly in its canvas. [scope:SRI-0fc90e438f5c]
+- [FIX-ISSUES:REQ-002] With the grapher open, typing in its input or clicking its controls does not change the page dimensions. [scope:SRI-0fc90e438f5c]
 
 ## Acceptance criteria
 
-<!-- sflow:guidance Give every outcome a stable, fully qualified ID. Replace the example; do not approve this draft while placeholders remain. -->
-
 | Clause | Observable outcome |
 |---|---|
-| [FIX-ISSUES:AC-001] | TODO: State one observable, testable outcome of the fix. |
+| [FIX-ISSUES:AC-001] | When a valid graph input is entered in Grapher, a plotted graph is visible in the canvas, satisfying `FIX-ISSUES:REQ-001`. |
+| [FIX-ISSUES:AC-002] | With Grapher open at a fixed viewport, typing a valid equation and clicking its controls leaves the page's rendered width and height unchanged from their initial values, satisfying `FIX-ISSUES:REQ-002`. |
 
 ## Planned implementation evidence
 
-<!-- sflow:guidance One row for each clause above, with exact repository-relative source and executable-test paths in backticks. If a clause truly cannot be tested, write `not-applicable:` and a specific reason. -->
-
 | Clause | Expected paths | Planned tests | Fulfillment | Observable result |
 |---|---|---|---|---|
-| `FIX-ISSUES:AC-001` | TODO: replace with exact backticked repository-relative source paths | TODO: replace with exact backticked repository-relative test paths | new | TODO: what a person can observe when it works |
-
-<!-- sflow:guidance Fulfillment: new, modified, existing (behaviour already at the listed paths), removed, test-only (tests are the whole delivery; Expected paths is -), document, configuration, or evidence (retained files under this Story's evidence/ directory). Do not put screenshots in Planned tests or product-source rows. An evidence AC needs a primary visual/inspection Verification contract; file presence is not a visual pass. Observable result states what is observed. Multi-code-step plans add Steps to allocate each row. -->
+| `FIX-ISSUES:REQ-001` | `src/components/FunctionGrapher.jsx` | `tests/graph-plotter.spec.js` | modified | A valid equation produces visible plotted pixels in the grapher canvas. |
+| `FIX-ISSUES:AC-001` | `src/components/FunctionGrapher.jsx` | `tests/graph-plotter.spec.js` | modified | Browser verification finds the plotted graph visible after valid input is entered. |
+| `FIX-ISSUES:REQ-002` | `src/components/FunctionGrapher.jsx`, `src/App.jsx`, `src/index.css` | `tests/graph-plotter.spec.js` | modified | Page dimensions remain stable during grapher input and control interactions. |
+| `FIX-ISSUES:AC-002` | `src/components/FunctionGrapher.jsx`, `src/App.jsx`, `src/index.css` | `tests/graph-plotter.spec.js` | modified | Browser verification measures the page's rendered width and height before and after typing and clicking grapher controls and observes no change. |
 
 ## Out of scope
 
-TODO: State what this fix deliberately leaves unchanged.
+Do not add graph syntax, graph controls, or behavior beyond rendering valid input and keeping the page dimensions stable; do not change other calculator modes or their calculations.
+
+## Constitution articles
+
+None: this Story pinned no constitution.
