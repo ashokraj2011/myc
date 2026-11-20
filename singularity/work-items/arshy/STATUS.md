@@ -19,6 +19,8 @@
 
 ## Recent history
 
+- 2026-11-20T12:02:23.195Z — **version_opened** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent developer: version 4 opened (review-corrections) on the person's yes (question-tool)
+- 2026-11-20T12:02:24.782Z — **work_interval_started** (implementation) by system: baseline 3f88aca997d8 at fa327f3060f2
 - 2026-11-20T11:09:44.085Z — **source_review_submitted** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: d814770e00195be8ff073fa20ff02f678a909d458651272e4c2a96e559b1ac9e
 - 2026-11-20T11:08:36.333Z — **phase_generated** (implementation) by ashokraj2011 · agent developer: generation 3
 - 2026-11-20T11:07:43.376Z — **departure_recorded** (implementation) by ashokraj2011 · agent developer: DEP-002 (test): a planned test changes: src/components/FunctionGrapher.test.jsx is added to ARSHY:REQ-001's tests. Add focused Vitest helper coverage for ARSHY:REQ-001 alongside the planned Playwright browser suite in tests/graph-plotter.spec.js.
@@ -32,5 +34,3 @@
 - 2026-11-20T10:42:25.030Z — **work_interval_started** (implementation) by system: baseline a2d236577d84 at 87f279e6b9da
 - 2026-11-20T10:41:19.864Z — **source_review_submitted** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 8b5f80989db586081dfd66b30b548e361a269e70dc35517b32964b6ade63a0a0
 - 2026-11-20T07:06:40.948Z — **phase_generated** (implementation) by ashokraj2011 · agent developer: generation 2
-- 2026-11-20T07:01:08.407Z — **version_opened** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent developer: version 2 opened (review-corrections) settled for the person (STL-004; only the reviewer had seen version 1)
-- 2026-11-20T07:01:08.407Z — **decision_settled** (implementation) by ashokraj2011 · agent developer: STL-004 (review-corrections) settled by SFlow: Started version 2 of implementation to fix the review's findings on version 1
