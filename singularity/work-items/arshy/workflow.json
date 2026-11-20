@@ -5717,6 +5717,14 @@
       "event": "decision_settled",
       "phase": "implementation",
       "detail": "STL-006 (plan-accounting) settled by SFlow: Listed .gitignore in the plan as a supporting change (an ignore file): it serves the change, not one requirement. Evidence: .gitignore only lists files a tool leaves out (.gitignore)"
+    },
+    {
+      "at": "2026-11-20T10:49:29.652Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "departure_recorded",
+      "phase": "implementation",
+      "detail": "DEP-001 (supporting): vite.config.js changed as a supporting change (build-configuration). vite.config.js changed in this generation, and no row of the approved plan names it."
     }
   ],
   "measurement": {
@@ -10044,6 +10052,143 @@
         },
         "createdAt": "2026-11-20T10:49:22.668Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "2400dfda-3990-4f24-8022-2922093793fe",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "arshy",
+          "branch": "arshy"
+        },
+        "phaseId": "implementation",
+        "generation": 2,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": null,
+        "payload": {
+          "decision": "departure",
+          "reviewPacketSha256": null,
+          "departures": [
+            "DEP-001"
+          ]
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-20T10:49:29.711Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "2400dfda-3990-4f24-8022-2922093793fe",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "arshy"
+          ],
+          "branch": "arshy",
+          "canonicalBranch": "arshy",
+          "createdAt": "2026-11-20T05:04:22.679Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 2,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 2
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph",
+          "updatedAt": "2026-11-20T10:49:29.652Z",
+          "workId": "arshy",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "106d3c3a8dbea5992306f47e45f781900b06ed64faafb501f8945ee96a55a9a6",
+          "lifecycleEventId": "2400dfda-3990-4f24-8022-2922093793fe",
+          "lifecyclePayload": {
+            "decision": "departure",
+            "reviewPacketSha256": null,
+            "departures": [
+              "DEP-001"
+            ]
+          },
+          "templateSha256": "ba0749ab3997579949fc836a839af6606f995c2012a90b410597ebadf211298d",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "2400dfda-3990-4f24-8022-2922093793fe",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "arshy",
+              "branch": "arshy"
+            },
+            "phaseId": "implementation",
+            "generation": 2,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": null,
+            "payload": {
+              "decision": "departure",
+              "reviewPacketSha256": null,
+              "departures": [
+                "DEP-001"
+              ]
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-20T10:49:29.711Z"
+          }
+        },
+        "createdAt": "2026-11-20T10:49:29.719Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -10374,6 +10519,42 @@
         "attemptId": "TA-b56059b1b863ea09edf5"
       },
       "at": "2026-11-20T06:57:11.154Z"
+    }
+  ],
+  "departures": [
+    {
+      "id": "DEP-001",
+      "kind": "supporting",
+      "phase": "implementation",
+      "generation": 3,
+      "paths": [
+        "vite.config.js"
+      ],
+      "contentHashes": {
+        "vite.config.js": "7453a9bc4714742d0d066c18d5707e540e14fb49b9f586b6d29e7fd7bdc2f775"
+      },
+      "baseHashes": {
+        "vite.config.js": "22585fc2be374450c9a7342fe4b5a22b30fce9d9db77def4b2d45302997b2eee"
+      },
+      "target": {
+        "phase": "planning",
+        "generation": 1,
+        "sha256": "d3945ac64dbefd796c37a90be7480830c318d7ba7625c06e9dc2bfef43eb9d89",
+        "path": "singularity/work-items/arshy/artifacts/planning/plan.md"
+      },
+      "diff": null,
+      "clauses": [],
+      "class": "build-configuration",
+      "reason": "vite.config.js changed in this generation, and no row of the approved plan names it.",
+      "findings": [],
+      "recordedBy": "sflow",
+      "author": {
+        "producer": "governed-agent",
+        "actor": "ashokraj2011",
+        "agent": "developer"
+      },
+      "supersedes": null,
+      "at": "2026-11-20T10:49:29.652Z"
     }
   ]
 }
