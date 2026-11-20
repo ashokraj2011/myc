@@ -4,7 +4,7 @@
   "workId": "arshy",
   "workType": "spec-driven-standard",
   "phase": "implementation",
-  "generation": 4,
+  "generation": 5,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,15 +42,15 @@
       "kind": "in-place",
       "filename": "implementation-summary.md",
       "mediaType": "text/markdown",
-      "sha256": "0e63c50c05a1740098eee7d6e6aa34c91b114e4b4cf3478639cd33205df36f8a",
-      "bytes": 3190
+      "sha256": "9e428dc65573036be9b67defdf2465efa885d3ca142cbf2142b65c200a99892f",
+      "bytes": 3764
     },
-    "generation": 4,
-    "publishedAt": "2026-11-20T12:11:41.475Z"
+    "generation": 5,
+    "publishedAt": "2026-11-20T12:43:48.936Z"
   },
-  "sourceCommit": "f55b3897429df7d09eef56f09b72130bb6f36e9c",
-  "generationCommit": "fcf5dde12f2a288a69013f5aa2636bda0c18abc3",
-  "publicationCommit": "fcf5dde12f2a288a69013f5aa2636bda0c18abc3",
+  "sourceCommit": "e64b74f43b06707f9ca9dabe55b054bb97c9e83f",
+  "generationCommit": null,
+  "publicationCommit": null,
   "configSha256": "106d3c3a8dbea5992306f47e45f781900b06ed64faafb501f8945ee96a55a9a6",
   "sourceSha256": "d7180144abe937580cb41e978585f7916fc3f4f16790c2cbd45f2afc03f8dcf8",
   "template": {
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/common/implementation.md"
   },
   "inputs": {
-    "generation": 4,
-    "path": "singularity/work-items/arshy/context/inputs-implementation-gen4.json",
-    "sha256": "2962accd84d7ac34106dcda03858c71fe5b3509db099d4b6c8727a146b80ca1e",
+    "generation": 5,
+    "path": "singularity/work-items/arshy/context/inputs-implementation-gen5.json",
+    "sha256": "f58531e270dd420e59ccd64782528e3b0c9f14195ec034bf9a6a505bee401eae",
     "renderedSha256": "78d39a15d7a77357651084854a5028837bec86b03c91b2b1b058101879fc40c6",
     "mode": "enforce"
   },
@@ -149,6 +149,26 @@
         "maximumEstimatedTokens": 18000,
         "budgetMode": "observe",
         "originalBytes": 31360,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 5,
+      "path": "singularity/work-items/arshy/telemetry/implementation-gen5.json",
+      "sha256": "fb6af8649efdb721efe0cda233de161629ec9cbc728e6cd14133e0d2b1e3f6fc",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 37226,
+        "estimatedTokens": 9307,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 37226,
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
@@ -239,10 +259,95 @@
       "completedAt": "2026-11-20T12:11:41.474Z",
       "agent": "developer",
       "generation": 4
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-20T12:43:48.936Z",
+      "completedAt": "2026-11-20T12:43:48.936Z",
+      "agent": "developer",
+      "generation": 5
     }
   ],
   "sequenceOverrides": [],
-  "approvals": [],
+  "approvals": [
+    {
+      "decision": "rejected",
+      "phase": "implementation",
+      "target": "implementation",
+      "reason": "Add @clause tags to the test files for the requirements they test; no app code changes",
+      "changeRequestId": "CR-001",
+      "clauseIds": [],
+      "at": "2026-11-20T12:37:43.868Z",
+      "actor": {
+        "name": "Ashok Raj",
+        "email": "88361104+ashokraj2011@users.noreply.github.com",
+        "login": "ashokraj2011",
+        "githubLookup": "resolved"
+      },
+      "agent": "developer",
+      "authorityGroup": "engineering-reviewers",
+      "identityAssurance": "configured-local",
+      "channel": "terminal",
+      "generation": 4,
+      "artifactSha256": [
+        {
+          "path": ".gitignore",
+          "sha256": "8d07a289b56257a1339413956b5af425e0d52217737fe8b076dcbd30aecb8a35"
+        },
+        {
+          "path": ".nvmrc",
+          "sha256": "f14b4987904bcb5814e4459a057ed4d20f58a633152288a761214dcd28780b56"
+        },
+        {
+          "path": "package-lock.json",
+          "sha256": "89f271a59e1be831ed464e77506638e20755520a8509c825941be4cfc961d4f6"
+        },
+        {
+          "path": "package.json",
+          "sha256": "b56bad091f17168f950a71dee2ef55745f3249f56bc69f1e355565d6edda9cfe"
+        },
+        {
+          "path": "playwright.config.js",
+          "sha256": "c751d0fbb713eb3e86329d04e28fc693cee323c0d7c66930941d7db474769f9a"
+        },
+        {
+          "path": "singularity/work-items/arshy/artifacts/implementation/implementation-summary.md",
+          "sha256": "f542fbfdcef66aaae7d042507872960c9e8835c53830807711d6e50ec56b3631"
+        },
+        {
+          "path": "src/components/FunctionGrapher.jsx",
+          "sha256": "ff8c250f0d7582f50354520bc5034100fde553792f032a5467553a4a3da7a366"
+        },
+        {
+          "path": "src/components/FunctionGrapher.test.jsx",
+          "sha256": "700a6e671afa6061d70e795de760caa170e1bae0f23ac95a839f89d74697ae44"
+        },
+        {
+          "path": "tests/graph-plotter.spec.js",
+          "sha256": "a6bb89d991b56b3d671dff98b0d46c7083f591297bcecfb51195fdf795752c7f"
+        },
+        {
+          "path": "vite.config.js",
+          "sha256": "7453a9bc4714742d0d066c18d5707e540e14fb49b9f586b6d29e7fd7bdc2f775"
+        }
+      ],
+      "reviewPacketSha256": "0d1e937616b7d586871e5dd0d968229f821c3ad627f96e88ec18d60ed4ab864b"
+    }
+  ],
   "selfApproval": false,
   "conformanceTree": null
 }
@@ -252,11 +357,11 @@
 
 ## Agent brief
 
-The existing React grapher mode accepts the approved explicit and implicit Cartesian equations and retains the existing presets. Implicit contours are drawn as interpolated segments between cell-edge crossings; the origin-centered radius-fit renders `x^2 + y^2 = 36` as the required radius-6 circle. Playwright now verifies pink plot pixels near selected graph-coordinate points for each required line, in addition to the circle center and radius.
+The existing React grapher mode accepts the approved explicit and implicit Cartesian equations and retains the existing presets. Implicit contours are drawn as interpolated segments between cell-edge crossings; the origin-centered radius-fit renders `x^2 + y^2 = 36` as the required radius-6 circle. Generation 5 addresses CR-001 with requirement-clause annotations on the existing unit and browser tests only; it makes no application-source changes.
 
 ## Implemented outcome
 
-Users can enter the supported numeric, `x`, `y`, arithmetic, parenthesis, and exponent grammar in the grapher input. The implementation normalizes explicit equations on the right side of `y =`, compiles approved expressions with `mathjs`, and renders explicit curves or implicit contour transitions on the existing 2D canvas. Unsupported characters and malformed equals expressions show the existing invalid-function state.
+Users can enter the supported numeric, `x`, `y`, arithmetic, parenthesis, and exponent grammar in the grapher input. The implementation normalizes explicit equations on the right side of `y =`, compiles approved expressions with `mathjs`, and renders explicit curves or implicit contour transitions on the existing 2D canvas. Unsupported characters and malformed equals expressions show the existing invalid-function state. This generation changes only test annotations and this summary; the application behavior is unchanged.
 
 ## Changed components and decisions
 
@@ -267,8 +372,9 @@ None: this Story pinned no constitution.
 ### Product source
 
 - `src/components/FunctionGrapher.jsx`: `@clause:ARSHY:REQ-001` binds the equation normalization and explicit/implicit rendering paths to the accepted Cartesian grammar. `@clause:ARSHY:REQ-002` binds the origin-centered radius-6 circle fit and implicit contour rendering.
-- `tests/graph-plotter.spec.js`: browser tests tagged `@ac:ARSHY:AC-001` and `@ac:ARSHY:AC-002` enter the approved equations and verify graph-coordinate samples on each explicit and implicit line, plus the circle center and radius. This replaces the earlier AC-002 check that only counted canvas pixels.
-- `src/components/FunctionGrapher.test.jsx` retains focused Vitest coverage for equation normalization and sampling helpers.
+- `tests/graph-plotter.spec.js`: browser tests retain `@ac:ARSHY:AC-001` and `@ac:ARSHY:AC-002`, and now carry `@clause:ARSHY:REQ-001` and `@clause:ARSHY:REQ-002` annotations for the requirements they verify. AC-002 checks graph-coordinate samples on each explicit and implicit line; AC-001 checks the circle center and radius.
+- `src/components/FunctionGrapher.test.jsx`: focused Vitest tests now carry matching `@clause:ARSHY:REQ-001` and `@clause:ARSHY:REQ-002` annotations. PRC-001 accepted DEP-002 to add this supplemental test file to the plan's REQ-001 test coverage.
+- Generation 5 changes no product source, as requested by CR-001. The qualified source tags remain in the unchanged `src/components/FunctionGrapher.jsx`; publication readiness must still confirm whether the test-only return satisfies code-delivery policy.
 - `playwright.config.js`, `package.json`, and `package-lock.json` configure and provide Playwright. Following PAM-001, `vite.config.js` is accounted as a supporting build-configuration change: its Vitest include scopes unit-test discovery to `src/`, keeping the planned Playwright spec out of Vitest.
 - DEP-002 records `src/components/FunctionGrapher.test.jsx` as an added test for `ARSHY:REQ-001`; it supplements rather than replaces the planned browser suite and awaits a person's decision before phase approval.
 
@@ -276,9 +382,8 @@ The implementation deliberately does not add graph ranges or other Desmos-specif
 
 ## Tests and operational notes
 
-- `npm run test:e2e`: 2 Playwright tests passed. AC-002 checks two expected graph points for each of the three approved lines; AC-001 verifies the centered radius-6 circle in the browser.
-- `npm test -- --run src/components/FunctionGrapher.test.jsx`: 1 Vitest file passed, 4 tests passed.
-- `npx eslint tests/graph-plotter.spec.js`: passed.
+- Generation 4 retained evidence: `npm test -- --run` passed 35 tests; `npm run test:e2e` passed 2 Playwright tests, including the tagged AC-001 circle and AC-002 graph-point tests. These runs precede generation-5 test annotations and are not represented as fresh generation-5 execution.
+- Generation 5 publication checks and test execution are pending; no fresh run is claimed for the changed test inputs.
 - Earlier generation 3 diagnostics: `npm run build` passed with Vite's large-bundle advisory. Full `npm test` on Node 26.12.0 had 18 passes and 17 existing `src/App.test.jsx` failures because `localStorage` was undefined; `npm run lint` reported pre-existing repository errors, including findings in `FunctionGrapher.jsx`. The recorded Node 22.14.0 run from generation 2 is not evidence for this generation.
 
 <!-- singularity-flow:inputs:start -->

@@ -6,6 +6,7 @@ import {
 } from './FunctionGrapher';
 
 describe('implicit circle graphing helpers', () => {
+  // @clause:ARSHY:REQ-002 verifies the radius-6 circle contour.
   it('samples a centered radius-6 contour for x^2 + y^2 = 36', () => {
     const parsed = normalizeEquation('x^2 + y^2 = 36');
     expect(parsed?.kind).toBe('implicit');
@@ -38,6 +39,7 @@ describe('implicit circle graphing helpers', () => {
 });
 
 describe('Cartesian equation grammar helpers', () => {
+  // @clause:ARSHY:REQ-001 verifies explicit and implicit equation samples.
   it('samples the approved explicit and implicit equations', () => {
     const linePoints = sampleExplicitPlot('2*x + 1', 400, 280, 40, 200, 140, 2);
     expect(linePoints.length).toBeGreaterThan(100);

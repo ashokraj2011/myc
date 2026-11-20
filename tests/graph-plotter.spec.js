@@ -76,6 +76,7 @@ async function hasPinkPixelNear(canvas, { x, y }) {
 }
 
 test.describe('grapher equation entry', () => {
+  // @clause:ARSHY:REQ-001 verifies explicit and implicit equation plotting.
   // @ac:ARSHY:AC-002
   test('renders the supported explicit and implicit equations', async ({ page }) => {
     const input = await openGrapher(page);
@@ -92,6 +93,7 @@ test.describe('grapher equation entry', () => {
   });
 });
 
+// @clause:ARSHY:REQ-002 verifies the required radius-6 circle.
 // @ac:ARSHY:AC-001
 test('plots x^2 + y^2 = 36 as a centered radius-6 circle', async ({ page }) => {
   const input = await openGrapher(page);
