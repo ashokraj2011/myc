@@ -5,7 +5,7 @@
   "workType": "quick-fix",
   "phase": "intake",
   "generation": 1,
-  "status": "awaiting_approval",
+  "status": "approved",
   "generatedBy": {
     "name": "Ashok Raj",
     "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -113,8 +113,69 @@
     }
   ],
   "sequenceOverrides": [],
-  "approvals": [],
-  "selfApproval": false,
+  "approvals": [
+    {
+      "decision": "approved",
+      "phase": "intake",
+      "at": "2026-11-20T14:48:58.386Z",
+      "actor": {
+        "name": "Ashok Raj",
+        "email": "88361104+ashokraj2011@users.noreply.github.com",
+        "login": "ashokraj2011",
+        "githubLookup": "resolved"
+      },
+      "agent": "product-owner",
+      "authorityGroup": "engineering-reviewers",
+      "identityAssurance": "configured-local",
+      "channel": "copilot-selection-receipt",
+      "confirmedBy": "approval-page",
+      "generation": 1,
+      "artifactSha256": [
+        {
+          "path": "singularity/work-items/fix-issues/artifacts/intake/intake.md",
+          "sha256": "44fa4d1276336d6ee489de6b1d8403afb4cf9d33f59b54438a3b9a28cb965bbe"
+        }
+      ],
+      "reviewPacketSha256": "753f648c5bbd7a2bf756ba3b4bfc8a7cd095fae625757bc709dd40f92e1425db",
+      "evidenceCommit": "315b551cdeb3072af89b09e86e03caa0c76ba62c",
+      "artifactSetSha256": "2b66f2909fc0c974d77ead2fa03fb55deec5a64a92482147888f7bb996c08188",
+      "architectureIntent": null,
+      "architectureDecision": null,
+      "actionContext": {
+        "phase": "intake",
+        "label": "Scope and plan",
+        "generation": 1,
+        "submittedAt": "2026-11-20T14:37:53.035Z",
+        "artifacts": [
+          {
+            "path": "singularity/work-items/fix-issues/artifacts/intake/intake.md",
+            "sha256": "44fa4d1276336d6ee489de6b1d8403afb4cf9d33f59b54438a3b9a28cb965bbe"
+          }
+        ],
+        "agentBriefs": [],
+        "reviewPacketSha256": "753f648c5bbd7a2bf756ba3b4bfc8a7cd095fae625757bc709dd40f92e1425db",
+        "submittedSourceCommit": "e3e6b833af9c8ff9cff5fd96168a2beb55599433",
+        "planId": "822d75829646222b19cf8297"
+      },
+      "upstream": {
+        "sha256": "sha256:ee48d66aea4f64f7990c9b247ac321b78f739eba554ee157fce348d4bc787df6",
+        "refs": [
+          {
+            "kind": "documents",
+            "ref": "intake",
+            "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+          },
+          {
+            "kind": "decisions",
+            "ref": "story",
+            "sha256": "sha256:ebade4dba52a070bc4615535bc642737abe7d357fbe4a032fce8056876cf63f6"
+          }
+        ]
+      },
+      "selfApproval": true
+    }
+  ],
+  "selfApproval": true,
   "conformanceTree": null
 }
 -->
