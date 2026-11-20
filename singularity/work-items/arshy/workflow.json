@@ -4044,8 +4044,8 @@
     },
     "policySha256": "sha256:95cbbd177881961bb16dff1aab493fc482e5c5dbcb19bf1257aa95629f2854e8"
   },
-  "status": "in_progress",
-  "currentPhase": "release",
+  "status": "closed",
+  "currentPhase": null,
   "phaseOrder": [
     "specification",
     "planning",
@@ -8756,7 +8756,7 @@
       "label": "Release",
       "order": 5,
       "defaultAgent": "qa",
-      "status": "awaiting_approval",
+      "status": "approved",
       "requiredArtifact": {
         "path": "artifacts/release/conformance.md",
         "kind": "conformance-report",
@@ -8834,7 +8834,7 @@
       "qualityCommands": [],
       "startedAt": "2026-11-20T13:40:20.362Z",
       "submittedAt": "2026-11-20T13:46:59.106Z",
-      "approvedAt": null,
+      "approvedAt": "2026-11-20T13:47:12.899Z",
       "approvedBy": null,
       "rejectedAt": null,
       "rejectedBy": null,
@@ -8952,12 +8952,14 @@
         {
           "path": "singularity/work-items/arshy/artifacts/release/conformance.md",
           "kind": "document",
-          "status": "pending",
+          "status": "approved",
           "exists": true,
-          "size": 13236,
-          "sha256": "56dfff84d3be720fb097855236aa46c4d66f3a0f5c7ce7bb67f468a78935633e",
+          "size": 13227,
+          "sha256": "acbf3c260f17687b6cecba6209a46471015349ed648562aa87fb88a1b3fcb944",
           "registeredAt": "2026-11-20T13:44:43.259Z",
-          "updatedAt": "2026-11-20T13:46:59.111Z"
+          "updatedAt": "2026-11-20T13:47:12.902Z",
+          "approvedAt": "2026-11-20T13:47:12.899Z",
+          "approvedBy": null
         },
         {
           "path": "singularity/work-items/arshy/artifacts/release/verification/evidence-index.md",
@@ -9049,7 +9051,37 @@
       ],
       "generationCommit": "41d96da24745c2b9c0c3c50865bfa127565b2358",
       "publicationCommit": "41d96da24745c2b9c0c3c50865bfa127565b2358",
-      "validationVerdict": "not-required"
+      "validationVerdict": "not-required",
+      "approvalDisposition": "approved_automatically",
+      "automaticApproval": {
+        "rule": "when-ready-v1",
+        "predicates": {
+          "reviewReady": true,
+          "checksPassed": true,
+          "nothingOpen": true,
+          "selfApprovalAllowed": true,
+          "outcomeNext": true,
+          "noSourceChange": true,
+          "noSignatureRequired": true
+        },
+        "checked": [
+          "the reviewer said ready",
+          "its checks passed",
+          "nothing was open for it"
+        ],
+        "review": {
+          "status": "ready",
+          "reportSha256": "e8da50665b7ec7b559d186d530dbd1071766352afc9cfdac28f938bbb5fee70d",
+          "reportPath": "singularity/work-items/arshy/context/reviews/release/gen-1/e8da50665b7ec7b559d186d530dbd1071766352afc9cfdac28f938bbb5fee70d.json"
+        },
+        "checksSha256": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "decisionListSha256": "sha256:7a422a745e22e6045c812b59ce8118179a4ae3f343c138803526c5f1f4053807",
+        "ranBy": "ashokraj2011",
+        "generation": 1,
+        "at": "2026-11-20T13:47:12.899Z",
+        "reviewPacketSha256": "3505e162d76c4fc091d40d89ebfe4260d1ae8d356a793640c9335074f6dccf77",
+        "evidenceCommit": "04eda3b49ecb39db93e1cb21b7327d6eb92339f2"
+      }
     }
   },
   "usage": {
@@ -13079,6 +13111,26 @@
       "event": "phase_submitted",
       "phase": "release",
       "detail": "2 artifacts"
+    },
+    {
+      "at": "2026-11-20T13:47:12.899Z",
+      "actor": "sflow-approved-automatically",
+      "agent": null,
+      "event": "phase-approved-automatically",
+      "phase": "release",
+      "generation": 1,
+      "rule": "when-ready-v1",
+      "reviewPacketSha256": "3505e162d76c4fc091d40d89ebfe4260d1ae8d356a793640c9335074f6dccf77",
+      "predicates": {
+        "reviewReady": true,
+        "checksPassed": true,
+        "nothingOpen": true,
+        "selfApprovalAllowed": true,
+        "outcomeNext": true,
+        "noSourceChange": true,
+        "noSignatureRequired": true
+      },
+      "detail": "approved automatically: the reviewer said ready; its checks passed; nothing was open for it; closed"
     }
   ],
   "measurement": {
@@ -22116,6 +22168,140 @@
         },
         "createdAt": "2026-11-20T13:46:51.267Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "9c420e85-2a96-44be-8794-adff2c4b739c",
+        "type": "phase-approved",
+        "subject": {
+          "kind": "story",
+          "id": "arshy",
+          "branch": "arshy"
+        },
+        "phaseId": "release",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": null,
+        "authorityGroup": null,
+        "payload": {
+          "decision": "approved",
+          "reviewPacketSha256": "3505e162d76c4fc091d40d89ebfe4260d1ae8d356a793640c9335074f6dccf77",
+          "automatic": true,
+          "rule": "when-ready-v1"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-20T13:47:10.909Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "9c420e85-2a96-44be-8794-adff2c4b739c",
+        "eventType": "phase-approved",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "arshy"
+          ],
+          "branch": "arshy",
+          "canonicalBranch": "arshy",
+          "createdAt": "2026-11-20T05:04:22.679Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": null,
+          "generation": 1,
+          "phase": "release",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 6,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 0,
+              "awaiting_approval": 0,
+              "approved": 6,
+              "cancelled": 0
+            },
+            "current": {
+              "id": null,
+              "status": null,
+              "generation": null
+            },
+            "reason": null
+          },
+          "status": "closed",
+          "title": "graph",
+          "updatedAt": "2026-11-20T13:47:12.899Z",
+          "workId": "arshy",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "automatic"
+        },
+        "agent": null,
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "106d3c3a8dbea5992306f47e45f781900b06ed64faafb501f8945ee96a55a9a6",
+          "lifecycleEventId": "9c420e85-2a96-44be-8794-adff2c4b739c",
+          "lifecyclePayload": {
+            "decision": "approved",
+            "reviewPacketSha256": "3505e162d76c4fc091d40d89ebfe4260d1ae8d356a793640c9335074f6dccf77",
+            "automatic": true,
+            "rule": "when-ready-v1"
+          },
+          "templateSha256": "8f7c0be1d576e781de1724a50bc906ad8f511807e665328e753bf40fd4e881a6",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "9c420e85-2a96-44be-8794-adff2c4b739c",
+            "type": "phase-approved",
+            "subject": {
+              "kind": "story",
+              "id": "arshy",
+              "branch": "arshy"
+            },
+            "phaseId": "release",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": null,
+            "authorityGroup": null,
+            "payload": {
+              "decision": "approved",
+              "reviewPacketSha256": "3505e162d76c4fc091d40d89ebfe4260d1ae8d356a793640c9335074f6dccf77",
+              "automatic": true,
+              "rule": "when-ready-v1"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-20T13:47:10.909Z"
+          }
+        },
+        "createdAt": "2026-11-20T13:47:10.911Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -22872,5 +23058,17 @@
       "at": "2026-11-20T12:16:34.907Z",
       "upstreamIssue": null
     }
-  ]
+  ],
+  "completion": {
+    "label": "Complete",
+    "kind": "complete",
+    "mode": "decision",
+    "boundary": "terminal",
+    "decision": {
+      "gate": "allow"
+    },
+    "inputSha256": "sha256:5af7e34e4b6a9e873f59b641ca2b6ecc8786d4a88294d7b8f0a7f6e3a1551be2",
+    "assuranceFloor": "exact-local-observed",
+    "evaluatedAt": "2026-11-20T13:47:15.428Z"
+  }
 }

@@ -4,8 +4,8 @@
 - Work type: **spec-driven-standard**
 - Capability: **calc** (`raj-calc`)
 - Capability map: `a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d`
-- Overall status: **in_progress**
-- Current phase: **release**
+- Overall status: **closed**
+- Current phase: **none — every step is decided**
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
@@ -18,10 +18,11 @@
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
 | 5 | Verification (`verification`) | qa | **approved** | 2 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
-| 6 | Release (`release`) | qa | **awaiting_approval** | 1 | 0 | unavailable |
+| 6 | Release (`release`) | qa | **approved** | 1 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-11-20T13:47:12.899Z — **phase-approved-automatically** (release) by sflow-approved-automatically: approved automatically: the reviewer said ready; its checks passed; nothing was open for it; closed
 - 2026-11-20T13:46:59.106Z — **phase_submitted** (release) by ashokraj2011 · agent qa: 2 artifacts
 - 2026-11-20T13:46:27.434Z — **source_review_submitted** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: e8da50665b7ec7b559d186d530dbd1071766352afc9cfdac28f938bbb5fee70d
 - 2026-11-20T13:44:44.910Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 1
@@ -36,4 +37,3 @@
 - 2026-11-20T13:27:56.459Z — **decision_settled** (verification) by ashokraj2011 · agent qa: STL-007 (review-corrections) settled by SFlow: Started version 2 of verification to fix the review's findings on version 1
 - 2026-11-20T13:27:18.426Z — **source_review_submitted** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: b66c42e088c7b7b8b519e3eee9b7910c13a6129db7afaf09884ee207ba3d8296
 - 2026-11-20T13:24:28.071Z — **phase_generated** (verification) by ashokraj2011 · agent qa: generation 1
-- 2026-11-20T13:21:54.197Z — **work_interval_started** (verification) by system: baseline 45c02a967ddf at ea4832b23531
