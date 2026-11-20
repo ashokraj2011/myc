@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "phase": "verification",
+  "generation": 2,
+  "reportSha256": "4fded4e5dfa5e14042fde8305bdece5aa0955bd843ad8099bc6da994d8e8dfae",
+  "lifecycleEventId": "fef9a31c-01ca-48b4-8d38-33418e45e8a9",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "arshy",
+      "phase": "verification",
+      "generation": 2,
+      "sources": [
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/arshy/artifacts/implementation/implementation-summary.md",
+          "textSha256": "9e428dc65573036be9b67defdf2465efa885d3ca142cbf2142b65c200a99892f"
+        },
+        {
+          "id": "input:planning",
+          "path": "singularity/work-items/arshy/artifacts/planning/plan.md",
+          "textSha256": "0414312fa3175dfcd733ce5fd0691acdbafaea7d40c09c0bb4fa76cb4b4bf5f1"
+        },
+        {
+          "id": "input:specification",
+          "path": "singularity/work-items/arshy/artifacts/specification/spec.md",
+          "textSha256": "844a78265eb21202f048b36dc54501c17555031fd8e90573e1d3accf718ea839"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/arshy/USER-STORY.md",
+          "textSha256": "bb5fed527b7b686da9959c1074dac0ec9b0c2e60e4516a522b211ab50d1bee84",
+          "originalSha256": "d7180144abe937580cb41e978585f7916fc3f4f16790c2cbd45f2afc03f8dcf8"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/arshy/artifacts/verification/test-evidence.md",
+        "sha256": "5cf672f6871f46d35b8f529fd71067957450f54f489b4ad8662a047e0f8d70ec"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:specification",
+      "input:planning",
+      "input:implementation"
+    ],
+    "rows": [
+      {
+        "id": "story-circle-request",
+        "sourceId": "story",
+        "line": 17,
+        "quote": "Palyright tests on cirlce of 6 unit radius in origin",
+        "outcome": "consistent",
+        "note": "The evidence reports the required origin-centered radius-6 circle check as passed in the fresh Playwright run."
+      },
+      {
+        "id": "specification-equation-grammar",
+        "sourceId": "input:specification",
+        "line": 5,
+        "quote": "Supported forms are explicit `y = f(x)` and implicit `F(x,y) = 0`, using numeric constants, `x` and `y`, parentheses, `+`, `-`, `*`, `/`, and `^`.",
+        "outcome": "consistent",
+        "note": "The evidence records the two explicit examples and the implicit line as covered by the fresh passing Playwright acceptance test; it makes no broader syntax or interface claim."
+      },
+      {
+        "id": "planning-circle-test",
+        "sourceId": "input:planning",
+        "line": 31,
+        "quote": "The browser enters `x^2 + y^2 = 36` and the grapher renders a centered circle with radius 6.",
+        "outcome": "consistent",
+        "note": "The evidence identifies the planned browser test and reports its fresh pass, including the center and radius assertion."
+      },
+      {
+        "id": "implementation-prior-run-boundary",
+        "sourceId": "input:implementation",
+        "line": 31,
+        "quote": "Generation 5 publication checks and test execution are pending; no fresh run is claimed for the changed test inputs.",
+        "outcome": "consistent",
+        "note": "That statement concerns implementation generation 5 receipts. The verification evidence separately claims fresh verification-generation runs against the post-annotation tests, so it does not treat the older receipts as fresh evidence."
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "717dabbe1d71dc4ece8ae0d2b9d20e66e4a59ab36c63301e5f1d6bed0dc3111a",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-20T13:32:29.926Z",
+  "recordSha256": "9c0388ab7c0e8c5c6c868fcae794d3a8ee074acf7322b4a480e26799596d2c76"
+}
