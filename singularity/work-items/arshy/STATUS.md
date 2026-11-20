@@ -24,6 +24,7 @@
 
 ## Recent history
 
+- 2026-11-20T12:40:31.386Z — **version_opened** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent developer: version 5 opened (rework) on the person's yes (question-tool)
 - 2026-11-20T12:37:43.868Z — **phase_rejected** (implementation) by ashokraj2011 · agent developer: CR-001 returned to implementation: Add @clause tags to the test files for the requirements they test; no app code changes
 - 2026-11-20T12:37:44.012Z — **work_interval_started** (implementation) by system: baseline 1f4964fa7718 at 2920ebc41c59
 - 2026-11-20T12:16:34.907Z — **plan_amended** (implementation) by ashokraj2011 · agent developer: PRC-001 corrects planning: add-test ARSHY:REQ-001. we are good with this ok
@@ -38,4 +39,3 @@
 - 2026-11-20T11:07:43.376Z — **departure_recorded** (implementation) by ashokraj2011 · agent developer: DEP-002 (test): a planned test changes: src/components/FunctionGrapher.test.jsx is added to ARSHY:REQ-001's tests. Add focused Vitest helper coverage for ARSHY:REQ-001 alongside the planned Playwright browser suite in tests/graph-plotter.spec.js.
 - 2026-11-20T11:04:20.187Z — **plan_amended** (implementation) by ashokraj2011 · agent developer: PAM-001: vite.config.js listed as build-configuration, accepting DEP-001. no need to change anything go ahead
 - 2026-11-20T11:04:05.319Z — **test_command_decided** (implementation) by ashokraj2011 · agent developer: TCD-001 accepted through engineering-reviewers. .-node-tests runs Implementation's tests for this Story.
-- 2026-11-20T10:50:26.562Z — **test_command_decided** (implementation) by ashokraj2011 · agent developer: TCD-001 requests that implementation re-pin test command .-node-tests (vite.config.js changed) for this Story. Vitest discovery is scoped to src test files so the planned tests/graph-plotter.spec.js Playwright suite is run only by Playwright, while preserving existing Vitest coverage.

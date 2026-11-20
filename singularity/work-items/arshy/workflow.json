@@ -4958,19 +4958,19 @@
       ],
       "remoteOutputs": [],
       "generationIntent": {
-        "id": "806e9ae1-0102-46ca-b833-71889e71d018",
-        "generation": 4,
-        "status": "consumed",
-        "path": "singularity/work-items/arshy/context/generation-start/implementation-gen4.json",
-        "receiptSha256": "sha256:03d42c275d8e283a4b9cb93d3931d1bf1ecdda4c0cc759a3cec1aa8baad48001",
+        "id": "423d9ecd-76f0-486b-a973-58450afe00f3",
+        "generation": 5,
+        "status": "open",
+        "path": "singularity/work-items/arshy/context/generation-start/implementation-gen5.json",
+        "receiptSha256": "sha256:c76b56510354b856a74bf851f09e519ab42b7841caf6a4f78f7bcb22e8803249",
         "baseline": {
-          "commit": "a4a962a2642875af26b8a40dd81ca0ff7ffb2a33",
-          "tree": "51e53596d9b56e418f354e60d20b288740197ded",
-          "initialChangeSetDigest": "sha256:c74d738ec931b5d05b593aea77ab59be57777cff9dec3d8182d63949f54f6159",
+          "commit": "fcf5dde12f2a288a69013f5aa2636bda0c18abc3",
+          "tree": "98f648fe3ac74d4afb3ba62f87b1518af5b246c4",
+          "initialChangeSetDigest": "sha256:9f9807f67215f3ca2ee03cef03e44b5b94751e45fa16879a9d9a3be378def9a7",
           "mode": "clean",
-          "previousGenerationCommit": "a4a962a2642875af26b8a40dd81ca0ff7ffb2a33"
+          "previousGenerationCommit": "fcf5dde12f2a288a69013f5aa2636bda0c18abc3"
         },
-        "startedAt": "2026-11-20T12:02:25.069Z",
+        "startedAt": "2026-11-20T12:40:32.688Z",
         "startedBy": {
           "actor": {
             "name": "Ashok Raj",
@@ -4985,37 +4985,26 @@
           "revisionSha256": "sha256:a508b7d65183b227adc8253a288fff59ad99fe14082e422c963ef2195caee12e",
           "amendment": null
         },
-        "publication": {
-          "generation": 4,
-          "changeSetDigest": "sha256:1aca081abaf6ffeb503da7edfbf38331843062677d719327ca5fcddd3beccea8",
-          "resultDigest": "sha256:72cc9c8ba8477446821701ef5ad5e808748964a377dff55a2704c7ff9a5d14a7",
-          "resultDigestVersion": 3,
-          "generationStartSha256": "sha256:03d42c275d8e283a4b9cb93d3931d1bf1ecdda4c0cc759a3cec1aa8baad48001",
-          "record": {
-            "path": "singularity/work-items/arshy/context/generation-publications/implementation-gen4.json",
-            "sha256": "sha256:d4360c515da9096243abd864528df8353347c5759f0e225c85f57228d60779e4"
-          }
-        },
-        "consumedAt": "2026-11-20T12:11:41.475Z"
+        "publication": null
       },
       "versionOpening": {
-        "operationId": "vo-6cc57687e3b62209edceb6cbe40bf52a",
-        "version": 4,
-        "highWatermark": 4,
-        "reason": "review-corrections",
-        "path": "singularity/work-items/arshy/context/version-openings/implementation-v4.json",
-        "sha256": "sha256:c5cd9f58fb26196c01b678ddd7ea4b8cda053c4932c6eda5e9e825493314830b",
+        "operationId": "vo-bbfd22d4b3bdcb11c0b5f1dbd332efc7",
+        "version": 5,
+        "highWatermark": 5,
+        "reason": "rework",
+        "path": "singularity/work-items/arshy/context/version-openings/implementation-v5.json",
+        "sha256": "sha256:c815acee5942cb78f422cac08b00afdbfba7adcf0abdca5f4209453114323eb8",
         "consent": {
-          "receiptId": "2f3a6cae-8bd1-4baf-a74e-b22949847614",
+          "receiptId": "442ec3d8-1820-4159-9f93-7faa69ff4a06",
           "surface": "question-tool",
           "assurance": "host-answer"
         },
         "writer": {
-          "fence": 4,
+          "fence": 5,
           "writerId": "vw-59a9d55a93571524d018364ed72c5e13",
-          "operationId": "vo-6cc57687e3b62209edceb6cbe40bf52a"
+          "operationId": "vo-bbfd22d4b3bdcb11c0b5f1dbd332efc7"
         },
-        "openedAt": "2026-11-20T12:02:23.195Z"
+        "openedAt": "2026-11-20T12:40:31.386Z"
       },
       "authoringBaseline": {
         "generation": 1,
@@ -10217,6 +10206,14 @@
       "event": "phase_rejected",
       "phase": "implementation",
       "detail": "CR-001 returned to implementation: Add @clause tags to the test files for the requirements they test; no app code changes"
+    },
+    {
+      "at": "2026-11-20T12:40:31.386Z",
+      "actor": "88361104+ashokraj2011@users.noreply.github.com",
+      "agent": "developer",
+      "event": "version_opened",
+      "phase": "implementation",
+      "detail": "version 5 opened (rework) on the person's yes (question-tool)"
     }
   ],
   "measurement": {
@@ -16466,6 +16463,155 @@
           }
         },
         "createdAt": "2026-11-20T12:37:43.508Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "8027b592-31b3-4766-846a-8e08a5cbdb1a",
+        "type": "version-opened",
+        "subject": {
+          "kind": "story",
+          "id": "arshy",
+          "branch": "arshy"
+        },
+        "phaseId": "implementation",
+        "generation": 5,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "operationId": "vo-bbfd22d4b3bdcb11c0b5f1dbd332efc7",
+          "version": 5,
+          "from": 4,
+          "reason": "rework",
+          "proposalDigest": "sha256:33e02f701cb9db506f1276b266cc7088cbba535f94e21961141d83a404be77d5",
+          "consentReceiptId": "442ec3d8-1820-4159-9f93-7faa69ff4a06",
+          "writerFence": 5,
+          "decision": "rejected",
+          "reviewPacketSha256": "0d1e937616b7d586871e5dd0d968229f821c3ad627f96e88ec18d60ed4ab864b"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-20T12:40:31.479Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "8027b592-31b3-4766-846a-8e08a5cbdb1a",
+        "eventType": "version-opened",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "arshy"
+          ],
+          "branch": "arshy",
+          "canonicalBranch": "arshy",
+          "createdAt": "2026-11-20T05:04:22.679Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 5,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 4
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph",
+          "updatedAt": "2026-11-20T12:40:31.386Z",
+          "workId": "arshy",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "106d3c3a8dbea5992306f47e45f781900b06ed64faafb501f8945ee96a55a9a6",
+          "lifecycleEventId": "8027b592-31b3-4766-846a-8e08a5cbdb1a",
+          "lifecyclePayload": {
+            "consentReceiptId": "442ec3d8-1820-4159-9f93-7faa69ff4a06",
+            "decision": "rejected",
+            "from": 4,
+            "operationId": "vo-bbfd22d4b3bdcb11c0b5f1dbd332efc7",
+            "proposalDigest": "sha256:33e02f701cb9db506f1276b266cc7088cbba535f94e21961141d83a404be77d5",
+            "reason": "rework",
+            "reviewPacketSha256": "0d1e937616b7d586871e5dd0d968229f821c3ad627f96e88ec18d60ed4ab864b",
+            "version": 5,
+            "writerFence": 5
+          },
+          "templateSha256": "ba0749ab3997579949fc836a839af6606f995c2012a90b410597ebadf211298d",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "8027b592-31b3-4766-846a-8e08a5cbdb1a",
+            "type": "version-opened",
+            "subject": {
+              "kind": "story",
+              "id": "arshy",
+              "branch": "arshy"
+            },
+            "phaseId": "implementation",
+            "generation": 5,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "engineering-reviewers",
+            "payload": {
+              "operationId": "vo-bbfd22d4b3bdcb11c0b5f1dbd332efc7",
+              "version": 5,
+              "from": 4,
+              "reason": "rework",
+              "proposalDigest": "sha256:33e02f701cb9db506f1276b266cc7088cbba535f94e21961141d83a404be77d5",
+              "consentReceiptId": "442ec3d8-1820-4159-9f93-7faa69ff4a06",
+              "writerFence": 5,
+              "decision": "rejected",
+              "reviewPacketSha256": "0d1e937616b7d586871e5dd0d968229f821c3ad627f96e88ec18d60ed4ab864b"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-20T12:40:31.479Z"
+          }
+        },
+        "createdAt": "2026-11-20T12:40:31.492Z"
       }
     }
   ],
