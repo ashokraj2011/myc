@@ -4,7 +4,7 @@
   "workId": "arshy",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 2,
+  "generation": 3,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "spec.md",
       "mediaType": "text/markdown",
-      "sha256": "45c47bb549e3f24fa7ca18659287d95e4a015a65d06c3a25248360d398473c88",
-      "bytes": 4850
+      "sha256": "be6f77cc4e4eed9af08ae5ddb965ec8728ddcf4b77d6b9f84067cfcd90c20932",
+      "bytes": 5058
     },
-    "generation": 2,
-    "publishedAt": "2026-11-20T05:16:04.203Z"
+    "generation": 3,
+    "publishedAt": "2026-11-20T05:26:34.612Z"
   },
-  "sourceCommit": "fde3bed9934aa0d546d0d1e3d0335abcaef55294",
+  "sourceCommit": "76a1ee5127ba17ccb5192244cc9df5cbd29f135d",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "106d3c3a8dbea5992306f47e45f781900b06ed64faafb501f8945ee96a55a9a6",
@@ -66,18 +66,18 @@
   },
   "remoteAgent": null,
   "clarification": {
-    "generation": 2,
-    "path": "singularity/work-items/arshy/context/clarifications-specification-gen2.json",
-    "sha256": "ae8b4d543f96ae991569343726b0de5c0b191e23572883dfa8b7eb25dffb6fa3",
-    "promptSha256": "47f4ca609c78c2448d90bf4f77510238c9235756516372eead79ab4a876b2f01",
-    "responses": 2,
+    "generation": 3,
+    "path": "singularity/work-items/arshy/context/clarifications-specification-gen3.json",
+    "sha256": "c59bb9f649736332c399c51f88b5bfca8bcb2b41845e38f1e34328f854f21d41",
+    "promptSha256": "4a90593aa2c7c192b10abf1817f1d917342922c5c0f3b659b12e831583c58ca7",
+    "responses": 1,
     "markers": [],
-    "recordedAt": "2026-11-20T05:14:38.971Z",
+    "recordedAt": "2026-11-20T05:25:51.581Z",
     "recordedBy": {
       "name": "Ashok Raj",
       "email": "88361104+ashokraj2011@users.noreply.github.com",
-      "login": "ashokraj2011",
-      "githubLookup": "resolved"
+      "login": null,
+      "githubLookup": "not-checked"
     }
   },
   "telemetry": [
@@ -105,6 +105,26 @@
       "generation": 2,
       "path": "singularity/work-items/arshy/telemetry/specification-gen2.json",
       "sha256": "2d99cdda398dd5c5e09a00f81443a9e2d4fff37f19d665e588c6e556263f53d1",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 29875,
+        "estimatedTokens": 7469,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 29875,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 3,
+      "path": "singularity/work-items/arshy/telemetry/specification-gen3.json",
+      "sha256": "aed3efc0a9c0d022ac882dd9a420484148b1e33cda25170fe9472dd9725c1a63",
       "status": "pending",
       "models": [],
       "providerCost": null,
@@ -165,6 +185,27 @@
       "completedAt": "2026-11-20T05:16:04.203Z",
       "agent": "product-owner",
       "generation": 2
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-20T05:26:34.612Z",
+      "completedAt": "2026-11-20T05:26:34.612Z",
+      "agent": "product-owner",
+      "generation": 3
     }
   ],
   "sequenceOverrides": [],
@@ -178,7 +219,7 @@
 
 ## Agent brief
 
-An app user can use a Desmos-inspired plotter to enter and view 2D Cartesian equations. Supported forms are explicit `y = f(x)` and implicit `F(x,y) = 0`, using numeric constants, `x` and `y`, parentheses, `+`, `-`, `*`, `/`, and `^`. The required example is a circle of radius 6 centered at the origin, verified with Playwright. No attachment was available, so the Desmos link is a reference direction rather than a pixel-level design specification. No additional graph-range, interaction, accessibility, or performance constraints apply.
+An app user can use a plotter for 2D Cartesian equations. Supported forms are explicit `y = f(x)` and implicit `F(x,y) = 0`, using numeric constants, `x` and `y`, parentheses, `+`, `-`, `*`, `/`, and `^`. Playwright coverage must verify the required radius-6 circle centered at the origin. The supplied Desmos URL is functional inspiration for equation entry and graph display only; no pixel-level match or additional Desmos-specific UI/interaction is required.
 
 ## Actors
 
@@ -264,16 +305,17 @@ None: this Story pinned no constitution.
 
 ## Assumptions
 
-- The supplied Desmos URL is a conceptual reference; no attached image or exact visual specification is available.
+- The supplied Desmos URL is the sole reference; “like” means functional inspiration for equation entry and graph display, not pixel-level resemblance or additional Desmos-specific UI/interaction.
 - The supported equation forms and operators are limited to those confirmed in clarification; no broader Desmos grammar is implied.
 
 ## Out of scope
 
-No additional plotting features beyond the confirmed equation forms and required circle case are committed. Exact visual reproduction of Desmos, additional equation syntax, and constraints not stated in the Story or clarification are out of scope.
+No additional plotting features beyond the confirmed equation forms and required circle case are committed. Exact visual reproduction of Desmos, additional Desmos-specific UI/interaction, additional equation syntax, and constraints not stated in the Story or clarification are out of scope.
 
 ## Sources
 
 - Pinned Story source: `singularity/work-items/arshy/source.json`.
 - Clarification (generation 1): the user supplied the Desmos URL as the reference direction and accepted general 2D Cartesian plotting with the circle as a required case.
 - Clarification (generation 2): the user confirmed explicit `y=f(x)` and implicit `F(x,y)=0` forms using basic arithmetic and powers, with no additional graph-range, interaction, accessibility, or performance constraints. This resolves the differing generation 1 constraints replies.
+- Clarification (generation 3): the user confirmed “functional inspiration only” for the supplied Desmos URL; no image or other attachment is available.
 - Supporting attachments/documents: none were copied or attached. Reference: https://www.desmos.com/calculator.

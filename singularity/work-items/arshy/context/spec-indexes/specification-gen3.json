@@ -1,0 +1,94 @@
+{
+  "clauses": [
+    {
+      "anchor": "[ARSHY:REQ-001]",
+      "body": "The plotter shall accept and display 2D Cartesian equations in explicit `y = f(x)` or implicit `F(x,y) = 0` form, using numeric constants, `x` and `y`, parentheses, addition (`+`), subtraction (`-`), multiplication (`*`), division (`/`), and exponentiation (`^`). *(S1)*",
+      "bodySha256": "57f77357ec8392273ab001959d99cafe252a0b11adb6f8cd31956631ccf9d6d6",
+      "dependsOn": [],
+      "id": "ARSHY:REQ-001",
+      "namespace": "ARSHY",
+      "number": 1,
+      "source": {
+        "line": 283,
+        "path": "singularity/work-items/arshy/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "ARSHY:AC-002",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[ARSHY:REQ-002]",
+      "body": "The plotter shall display a circle of radius `6` centered at `(0, 0)`, represented by `x^2 + y^2 = 36`. [scope:SRI-15d4e5bd263a] *(S2)*",
+      "bodySha256": "a603a496b4cf43cd9739822ba9d8a300df5c5f8bf0c0a5f9d5b44cce0514d4e2",
+      "dependsOn": [],
+      "id": "ARSHY:REQ-002",
+      "namespace": "ARSHY",
+      "number": 2,
+      "source": {
+        "line": 284,
+        "path": "singularity/work-items/arshy/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "ARSHY:AC-001",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[ARSHY:AC-001]",
+      "body": "A Playwright test shall verify that `x^2 + y^2 = 36` is plotted as a circle centered at `(0, 0)` with radius `6`. *(S2)*",
+      "bodySha256": "e0c286e3125a27ddaff3df1f306ac5df2042c07d2145f944b42dcadcd29f54d0",
+      "dependsOn": [],
+      "id": "ARSHY:AC-001",
+      "namespace": "ARSHY",
+      "number": 1,
+      "source": {
+        "line": 286,
+        "path": "singularity/work-items/arshy/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "ARSHY:AC-001",
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[ARSHY:AC-002]",
+      "body": "Playwright tests shall verify that the supported equation grammar plots the explicit equations `y = 2*x + 1` and `y = (x - 2) / 2`, and the implicit equation `x - y = 0`. *(S1)*",
+      "bodySha256": "0c926b15edfdfca5d17b7c2dff346e556a7abe6af3f2961e09544c318df3562a",
+      "dependsOn": [],
+      "id": "ARSHY:AC-002",
+      "namespace": "ARSHY",
+      "number": 2,
+      "source": {
+        "line": 287,
+        "path": "singularity/work-items/arshy/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "ARSHY:AC-002",
+        "methods": [
+          "test"
+        ]
+      }
+    }
+  ],
+  "generation": 3,
+  "indexSha256": "37e9feefc64d17b1190d61aa34f3ac837968b6a368426f93f05a9c4cf42c4410",
+  "phase": "specification",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 11681,
+    "path": "singularity/work-items/arshy/artifacts/specification/spec.md",
+    "sha256": "b52f27bcd8c7301df840890d538e858c80e5bf33db686ef051bf02dda9f26230"
+  },
+  "workId": "arshy"
+}
