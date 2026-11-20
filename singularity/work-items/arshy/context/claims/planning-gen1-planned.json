@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-11-20T05:50:37.576Z",
+  "claims": {
+    "ARSHY:AC-001": {
+      "expectedPaths": [],
+      "tests": [
+        "tests/graph-plotter.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "test-only",
+      "observableResult": "The browser enters `x^2 + y^2 = 36` and the grapher renders a centered circle with radius 6."
+    },
+    "ARSHY:AC-002": {
+      "expectedPaths": [],
+      "tests": [
+        "tests/graph-plotter.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "test-only",
+      "observableResult": "The browser verifies that `y = 2*x + 1`, `y = (x - 2) / 2`, and `x - y = 0` produce canvas plots."
+    },
+    "ARSHY:REQ-001": {
+      "expectedPaths": [
+        "src/components/FunctionGrapher.jsx"
+      ],
+      "tests": [
+        "tests/graph-plotter.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "A user can enter explicit or implicit Cartesian equations using numeric constants, `x`, `y`, parentheses, `+`, `-`, `*`, `/`, and `^`, and see a corresponding plot."
+    },
+    "ARSHY:REQ-002": {
+      "expectedPaths": [
+        "src/components/FunctionGrapher.jsx"
+      ],
+      "tests": [
+        "tests/graph-plotter.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "A user entering `x^2 + y^2 = 36` sees the circle centered at `(0, 0)` with radius 6."
+    }
+  },
+  "supportingFiles": [
+    "package-lock.json",
+    "package.json",
+    "playwright.config.js"
+  ],
+  "supportingFileDetails": [
+    {
+      "path": "package-lock.json",
+      "class": "dependency-lock",
+      "reason": "records the Playwright dependency and resolved versions."
+    },
+    {
+      "path": "package.json",
+      "class": "build-configuration",
+      "reason": "adds or declares the Playwright test dependency and end-to-end script."
+    },
+    {
+      "path": "playwright.config.js",
+      "class": "build-configuration",
+      "reason": "defines local browser and Vite test-server configuration."
+    }
+  ],
+  "verificationContracts": [
+    {
+      "clauseId": "ARSHY:AC-001",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "circle",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "tests/graph-plotter.spec.js"
+          },
+          "requiredAssurance": "exact-local-observed"
+        }
+      ]
+    },
+    {
+      "clauseId": "ARSHY:AC-002",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "equation-grammar",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "tests/graph-plotter.spec.js"
+          },
+          "requiredAssurance": "exact-local-observed"
+        }
+      ]
+    }
+  ],
+  "workId": "arshy",
+  "phase": "planning",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/arshy/artifacts/planning/plan.md",
+    "sha256": "cdee3e7de79e24072712e14b2a60fb8992abe3a3db462a092e2a1f236149bac5",
+    "bytes": 13827
+  }
+}
