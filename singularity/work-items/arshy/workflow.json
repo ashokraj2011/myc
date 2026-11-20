@@ -5749,6 +5749,14 @@
       "event": "plan_amended",
       "phase": "implementation",
       "detail": "PAM-001: vite.config.js listed as build-configuration, accepting DEP-001. no need to change anything go ahead"
+    },
+    {
+      "at": "2026-11-20T11:07:43.376Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "departure_recorded",
+      "phase": "implementation",
+      "detail": "DEP-002 (test): a planned test changes: src/components/FunctionGrapher.test.jsx is added to ARSHY:REQ-001's tests. Add focused Vitest helper coverage for ARSHY:REQ-001 alongside the planned Playwright browser suite in tests/graph-plotter.spec.js."
     }
   ],
   "measurement": {
@@ -6366,12 +6374,14 @@
       "storyIdentity": "611fa0832811b24a861a47b0e64d9f328a4295ebb11a4cbd251875bfabbf3d8b",
       "id": "WT-0047e5a87aae0fc8f279f1c242636d717b591f36400d07402d85a6ed374b31e1",
       "inputSha256": "303c7b47fae811c0c41b8a16fc70a63b529fa717880e823a04ffb0d03b8a8a3c",
-      "revision": 6,
-      "state": "publication-requested",
+      "revision": 7,
+      "state": "repair-draft",
       "continuations": 0,
       "maximumContinuations": 3,
       "repairConsumed": 0,
-      "conditions": [],
+      "conditions": [
+        "6e513fdbff5f9c5bb606d4035e18fd1d952849c3141045430a1e794e5fe4d0bb"
+      ],
       "checkpoints": [
         {
           "kind": "publication-requested",
@@ -6381,11 +6391,11 @@
         {
           "kind": "validation",
           "inputSha256": "303c7b47fae811c0c41b8a16fc70a63b529fa717880e823a04ffb0d03b8a8a3c",
-          "fingerprint": "f6e9b21e0724ad2f5bdb65f34b5aac49c43b7c45a17634590cdd551c40f0c083"
+          "fingerprint": "6e513fdbff5f9c5bb606d4035e18fd1d952849c3141045430a1e794e5fe4d0bb"
         }
       ],
       "blockedCode": null,
-      "recordSha256": "2d6c16ba9d959211064eabe76093999c7ee380aaceeafe5178aa77cb5c5f2089"
+      "recordSha256": "cfc128e757bfcdafce85b87fa8e1cdc4d2802a4e4a1158e65f2a4ce50311a1ba"
     }
   },
   "publicationProjections": [
@@ -10623,6 +10633,143 @@
         },
         "createdAt": "2026-11-20T11:04:18.370Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "3c9ca365-57f5-4912-94a9-1c30f5559f94",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "arshy",
+          "branch": "arshy"
+        },
+        "phaseId": "implementation",
+        "generation": 2,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": null,
+        "payload": {
+          "decision": "departure",
+          "reviewPacketSha256": null,
+          "departures": [
+            "DEP-002"
+          ]
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-20T11:07:43.497Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "3c9ca365-57f5-4912-94a9-1c30f5559f94",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "arshy"
+          ],
+          "branch": "arshy",
+          "canonicalBranch": "arshy",
+          "createdAt": "2026-11-20T05:04:22.679Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 2,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 2
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph",
+          "updatedAt": "2026-11-20T11:07:43.376Z",
+          "workId": "arshy",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "106d3c3a8dbea5992306f47e45f781900b06ed64faafb501f8945ee96a55a9a6",
+          "lifecycleEventId": "3c9ca365-57f5-4912-94a9-1c30f5559f94",
+          "lifecyclePayload": {
+            "decision": "departure",
+            "reviewPacketSha256": null,
+            "departures": [
+              "DEP-002"
+            ]
+          },
+          "templateSha256": "ba0749ab3997579949fc836a839af6606f995c2012a90b410597ebadf211298d",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "3c9ca365-57f5-4912-94a9-1c30f5559f94",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "arshy",
+              "branch": "arshy"
+            },
+            "phaseId": "implementation",
+            "generation": 2,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": null,
+            "payload": {
+              "decision": "departure",
+              "reviewPacketSha256": null,
+              "departures": [
+                "DEP-002"
+              ]
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-20T11:07:43.497Z"
+          }
+        },
+        "createdAt": "2026-11-20T11:07:43.516Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -10989,6 +11136,40 @@
       },
       "supersedes": null,
       "at": "2026-11-20T10:49:29.652Z"
+    },
+    {
+      "id": "DEP-002",
+      "kind": "test",
+      "phase": "implementation",
+      "generation": 3,
+      "paths": [],
+      "contentHashes": {},
+      "baseHashes": {},
+      "target": {
+        "phase": "planning",
+        "generation": 1,
+        "sha256": "d3945ac64dbefd796c37a90be7480830c318d7ba7625c06e9dc2bfef43eb9d89",
+        "path": "singularity/work-items/arshy/artifacts/planning/plan.md"
+      },
+      "diff": null,
+      "clauses": [
+        "ARSHY:REQ-001"
+      ],
+      "change": {
+        "op": "add-test",
+        "clauseId": "ARSHY:REQ-001",
+        "test": "src/components/FunctionGrapher.test.jsx"
+      },
+      "reason": "Add focused Vitest helper coverage for ARSHY:REQ-001 alongside the planned Playwright browser suite in tests/graph-plotter.spec.js.",
+      "findings": [],
+      "recordedBy": "agent",
+      "author": {
+        "producer": "governed-agent",
+        "actor": "ashokraj2011",
+        "agent": "developer"
+      },
+      "supersedes": null,
+      "at": "2026-11-20T11:07:43.376Z"
     }
   ],
   "testCommandDecisions": [

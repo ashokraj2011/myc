@@ -19,6 +19,7 @@
 
 ## Recent history
 
+- 2026-11-20T11:07:43.376Z — **departure_recorded** (implementation) by ashokraj2011 · agent developer: DEP-002 (test): a planned test changes: src/components/FunctionGrapher.test.jsx is added to ARSHY:REQ-001's tests. Add focused Vitest helper coverage for ARSHY:REQ-001 alongside the planned Playwright browser suite in tests/graph-plotter.spec.js.
 - 2026-11-20T11:04:20.187Z — **plan_amended** (implementation) by ashokraj2011 · agent developer: PAM-001: vite.config.js listed as build-configuration, accepting DEP-001. no need to change anything go ahead
 - 2026-11-20T11:04:05.319Z — **test_command_decided** (implementation) by ashokraj2011 · agent developer: TCD-001 accepted through engineering-reviewers. .-node-tests runs Implementation's tests for this Story.
 - 2026-11-20T10:50:26.562Z — **test_command_decided** (implementation) by ashokraj2011 · agent developer: TCD-001 requests that implementation re-pin test command .-node-tests (vite.config.js changed) for this Story. Vitest discovery is scoped to src test files so the planned tests/graph-plotter.spec.js Playwright suite is run only by Playwright, while preserving existing Vitest coverage.
@@ -33,4 +34,3 @@
 - 2026-11-20T07:01:08.407Z — **decision_settled** (implementation) by ashokraj2011 · agent developer: STL-004 (review-corrections) settled by SFlow: Started version 2 of implementation to fix the review's findings on version 1
 - 2026-11-20T07:01:10.122Z — **work_interval_started** (implementation) by system: baseline 14f38bfc6f01 at a0b21038572e
 - 2026-11-20T07:00:31.703Z — **source_review_submitted** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 647ceb9eb1acc5e2351a89c7323fe4f58c91c232c0a4be56497aa78a2d8d7098
-- 2026-11-20T06:57:11.653Z — **phase_generated** (implementation) by ashokraj2011 · agent developer: generation 1
