@@ -18,6 +18,8 @@
 
 ## Recent history
 
+- 2026-11-20T05:12:51.562Z — **version_opened** (specification) by 88361104+ashokraj2011@users.noreply.github.com · agent product-owner: version 2 opened (review-corrections) settled for the person (STL-001; only the reviewer had seen version 1)
+- 2026-11-20T05:12:51.562Z — **decision_settled** (specification) by ashokraj2011 · agent product-owner: STL-001 (review-corrections) settled by SFlow: Started version 2 of specification to fix the review's findings on version 1
 - 2026-11-20T05:12:29.257Z — **source_review_submitted** (specification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 6bc23a5c1a379dc0185d9afe0574cfdaed3064257cf2ebbe0f3e22ded99a6bcb
 - 2026-11-20T05:10:26.655Z — **phase_generated** (specification) by ashokraj2011 · agent product-owner: generation 1
 - 2026-11-20T05:04:22.679Z — **work_started** (specification) by ashokraj2011 · agent product-owner: Created spec-driven-standard branch arshy
