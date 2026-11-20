@@ -1,0 +1,353 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "arshy",
+  "phase": "implementation",
+  "generation": 2,
+  "generationIntentId": "67c51aca-a385-4cd6-ba4f-f88a910f2b8b",
+  "changeSet": {
+    "path": "singularity/work-items/arshy/context/code-delivery/implementation-gen2-changes.json",
+    "digest": "sha256:8d7c7ceb60ceb499b0616daddadf029e168b5791f1441bbc699d9949961c416d",
+    "sourcePaths": [
+      "src/components/FunctionGrapher.jsx"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [],
+    "executableTestPaths": [
+      "tests/graph-plotter.spec.js"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "product-source": 1,
+      "test-source": 1
+    },
+    "entries": [
+      {
+        "changeId": "sha256:1c6274ad3f1eea94a359b31ff25b6183d1364bdb401d3273b010767bdcc7e71c",
+        "status": "modified",
+        "oldPath": "src/components/FunctionGrapher.jsx",
+        "newPath": "src/components/FunctionGrapher.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:90cd6f34a32fcce6262ef9bcd5ba59693ae9109a2e34598b47c74fd68aa7e120",
+        "status": "modified",
+        "oldPath": "tests/graph-plotter.spec.js",
+        "newPath": "tests/graph-plotter.spec.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "ARSHY:AC-001",
+      "ARSHY:AC-002"
+    ],
+    "bound": [
+      "ARSHY:AC-001",
+      "ARSHY:AC-002"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "ARSHY:AC-001",
+        "testSource": "tests/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "ARSHY:AC-002",
+        "testSource": "tests/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "ARSHY:AC-001",
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "implicit circle graphing"
+          ],
+          "name": "samples a centered radius-6 contour for x^2 + y^2 = 36"
+        },
+        "logicalTestId": "sha256:d12868f96ba9810d3d437b5428ec38b9f35c10cc91017aa83eda66803d42b1d2",
+        "declarationSha256": "sha256:ded551e3789a7f76801cec0d4711683b9d6e038b8501e8c115fef0d640a6c7e3",
+        "supportSha256": null,
+        "assertions": {
+          "count": 5,
+          "tautological": 0,
+          "negative": false,
+          "boundary": true,
+          "nullability": false,
+          "adequacy": "adequate",
+          "subjects": [
+            "abs",
+            "hypot",
+            "map",
+            "min",
+            "normalizeEquation",
+            "reduce",
+            "sampleImplicitPlot"
+          ]
+        },
+        "line": 10,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "ARSHY:AC-002",
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "supported Cartesian equation grammar"
+          ],
+          "name": "plots the approved explicit and implicit equations"
+        },
+        "logicalTestId": "sha256:0b1617fdb1d08b516282fed31fe8c8e0894713f37e2a20a0a52b66528f08a40c",
+        "declarationSha256": "sha256:419f6cd2d40a68b590b8307b7e48d3d97d175b7c347a752bb4fa741bdbd549f1",
+        "supportSha256": null,
+        "assertions": {
+          "count": 5,
+          "tautological": 0,
+          "negative": false,
+          "boundary": true,
+          "nullability": false,
+          "adequacy": "adequate",
+          "subjects": [
+            "abs",
+            "find",
+            "sampleExplicitPlot",
+            "sampleImplicitPlot"
+          ]
+        },
+        "line": 51,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "ARSHY:REQ-001",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      },
+      {
+        "clauseId": "ARSHY:REQ-002",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "ARSHY:REQ-001",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 14,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "ARSHY:REQ-002",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 40,
+        "tag": "clause"
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "ARSHY:REQ-001",
+        "explanation": {
+          "text": "Normalizes explicit and implicit Cartesian equations for canvas plotting.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 14
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 45,
+                "beforeLines": 0,
+                "afterStart": 46,
+                "afterLines": 67
+              },
+              {
+                "beforeStart": 144,
+                "beforeLines": 17,
+                "afterStart": 211,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 162,
+                "beforeLines": 4,
+                "afterStart": 217,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 166,
+                "beforeLines": 0,
+                "afterStart": 219,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 172,
+                "beforeLines": 38,
+                "afterStart": 225,
+                "afterLines": 3
+              }
+            ],
+            "symbols": [
+              {
+                "name": "sampleExplicitPlot",
+                "kind": "function",
+                "line": 46
+              },
+              {
+                "name": "sampleImplicitPlot",
+                "kind": "function",
+                "line": 64
+              },
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 113
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "ARSHY:REQ-002",
+        "explanation": {
+          "text": "Fits the approved radius-6 circle around the origin on the canvas.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 40
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 45,
+                "beforeLines": 0,
+                "afterStart": 46,
+                "afterLines": 67
+              },
+              {
+                "beforeStart": 144,
+                "beforeLines": 17,
+                "afterStart": 211,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 162,
+                "beforeLines": 4,
+                "afterStart": 217,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 166,
+                "beforeLines": 0,
+                "afterStart": 219,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 172,
+                "beforeLines": 38,
+                "afterStart": 225,
+                "afterLines": 3
+              }
+            ],
+            "symbols": [
+              {
+                "name": "sampleExplicitPlot",
+                "kind": "function",
+                "line": 46
+              },
+              {
+                "name": "sampleImplicitPlot",
+                "kind": "function",
+                "line": 64
+              },
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 113
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:3d0df2a81889241028984aec6a74200a90150b46af1db03853b58696ed59b878"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:4fe7ea385aa14d7198d0aa09c133e55d4453b59fbcbc970dd7fe70ee8eea0008",
+    "codeTreeSha256": "sha256:e2c504e74abbb6469817d38c315891da64a44e6381e7583ff838c38501944242",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-11-20T07:06:40.703Z"
+}

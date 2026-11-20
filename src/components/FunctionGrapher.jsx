@@ -43,6 +43,73 @@ const isCircleEquation = (equation) => {
   return compact === 'x^2+y^2=36';
 };
 
+export const sampleExplicitPlot = (expression, width, height, scale, centerX, centerY, step = 2) => {
+  const compiled = math.compile(expression);
+  const points = [];
+  for (let px = 0; px <= width; px += step) {
+    const x = (px - centerX) / scale;
+    try {
+      const y = Number(compiled.evaluate({ x }));
+      const py = centerY - y * scale;
+      if (isFinite(y) && py >= -height && py <= height * 2) {
+        points.push({ px, py, x, y });
+      }
+    } catch (e) {
+      continue;
+    }
+  }
+  return points;
+};
+
+export const sampleImplicitPlot = (expression, width, height, scale, centerX, centerY, step = 2) => {
+  const compiled = math.compile(expression);
+  const segments = [];
+  const worldAt = (px, py) => ({
+    x: (px - centerX) / scale,
+    y: (centerY - py) / scale,
+  });
+
+  for (let px = 0; px < width - step; px += step) {
+    for (let py = 0; py < height - step; py += step) {
+      const corners = [
+        { px, py, ...worldAt(px, py) },
+        { px: px + step, py, ...worldAt(px + step, py) },
+        { px: px + step, py: py + step, ...worldAt(px + step, py + step) },
+        { px, py: py + step, ...worldAt(px, py + step) },
+      ];
+      const values = corners.map((point) => {
+        try {
+          return Number(compiled.evaluate({ x: point.x, y: point.y }));
+        } catch (e) {
+          return 0;
+        }
+      });
+
+      for (let edge = 0; edge < 4; edge++) {
+        const next = (edge + 1) % 4;
+        if (values[edge] * values[next] > 0) continue;
+        if (!isFinite(values[edge]) || !isFinite(values[next])) continue;
+        const denominator = values[next] - values[edge];
+        if (denominator === 0) continue;
+        const t = Math.max(0, Math.min(1, -values[edge] / denominator));
+        const start = corners[edge];
+        const end = corners[next];
+        segments.push({
+          start: {
+            px: start.px + (end.px - start.px) * t,
+            py: start.py + (end.py - start.py) * t,
+          },
+          end: {
+            px: start.px + (end.px - start.px) * t + 0.5,
+            py: start.py + (end.py - start.py) * t,
+          },
+        });
+      }
+    }
+  }
+  return segments;
+};
+
 export const FunctionGrapher = ({ soundEnabled }) => {
   const [equation, setEquation] = useState('sin(x)');
   const [scale, setScale] = useState(40); // Pixels per unit
@@ -141,72 +208,23 @@ export const FunctionGrapher = ({ soundEnabled }) => {
 
       if (parsed.kind === 'explicit') {
         let isDrawing = false;
-        for (let px = 0; px <= width; px += step) {
-          const xVal = (px - centerX) / scale;
-          try {
-          const yVal = compiled.evaluate({ x: xVal });
-          if (typeof yVal === 'number' && !isNaN(yVal) && isFinite(yVal)) {
-            const py = centerY - yVal * scale;
-            // Prevent crazy asymptote jumps e.g. tan(x)
-            if (py >= -height && py <= height * 2) {
-              if (!isDrawing) {
-                ctx.moveTo(px, py);
-                isDrawing = true;
-              } else {
-                ctx.lineTo(px, py);
-              }
-            } else {
-              isDrawing = false;
-            }
+        let previousPy = null;
+        for (const point of sampleExplicitPlot(parsed.expression, width, height, scale, centerX, centerY, step)) {
+          if (!isDrawing || (previousPy !== null && Math.abs(point.py - previousPy) > height)) {
+            ctx.moveTo(point.px, point.py);
+            isDrawing = true;
           } else {
-            isDrawing = false;
+            ctx.lineTo(point.px, point.py);
           }
-          } catch (e) {
-            isDrawing = false;
-          }
+          previousPy = point.py;
         }
       } else {
         const circleFitScale = isCircleEquation(equation)
           ? Math.min(width / 14, height / 14)
           : scale;
-
-        const worldAt = (px, py) => ({
-          x: (px - centerX) / circleFitScale,
-          y: (centerY - py) / circleFitScale,
-        });
-
-        for (let px = 0; px < width - step; px += step) {
-          for (let py = 0; py < height - step; py += step) {
-            const corners = [
-              { px, py, ...worldAt(px, py) },
-              { px: px + step, py, ...worldAt(px + step, py) },
-              { px: px + step, py: py + step, ...worldAt(px + step, py + step) },
-              { px, py: py + step, ...worldAt(px, py + step) },
-            ];
-            const values = corners.map((point) => {
-              try {
-                return Number(compiled.evaluate({ x: point.x, y: point.y }));
-              } catch (e) {
-                return 0;
-              }
-            });
-
-            for (let edge = 0; edge < 4; edge++) {
-              const next = (edge + 1) % 4;
-              if (values[edge] * values[next] > 0) continue;
-              if (!isFinite(values[edge]) || !isFinite(values[next])) continue;
-              const denominator = values[next] - values[edge];
-              if (denominator === 0) continue;
-              const t = Math.max(0, Math.min(1, -values[edge] / denominator));
-              const start = corners[edge];
-              const end = corners[next];
-              ctx.moveTo(start.px + (end.px - start.px) * t, start.py + (end.py - start.py) * t);
-              ctx.lineTo(
-                start.px + (end.px - start.px) * t + 0.5,
-                start.py + (end.py - start.py) * t
-              );
-            }
-          }
+        for (const segment of sampleImplicitPlot(parsed.expression, width, height, circleFitScale, centerX, centerY, step)) {
+          ctx.moveTo(segment.start.px, segment.start.py);
+          ctx.lineTo(segment.end.px, segment.end.py);
         }
       }
       ctx.stroke();
