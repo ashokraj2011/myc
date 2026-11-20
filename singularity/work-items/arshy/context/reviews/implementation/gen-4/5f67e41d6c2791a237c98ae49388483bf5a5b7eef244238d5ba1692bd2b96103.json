@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "phase": "implementation",
+  "generation": 4,
+  "reportSha256": "5f67e41d6c2791a237c98ae49388483bf5a5b7eef244238d5ba1692bd2b96103",
+  "lifecycleEventId": "3646aa04-fb72-4b0b-9282-9f11b25d71e0",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "code",
+    "binding": {
+      "workId": "arshy",
+      "phase": "implementation",
+      "generation": 4,
+      "sources": [
+        {
+          "id": "code:src:components:FunctionGrapher.jsx",
+          "path": "src/components/FunctionGrapher.jsx",
+          "textSha256": "ff8c250f0d7582f50354520bc5034100fde553792f032a5467553a4a3da7a366"
+        },
+        {
+          "id": "code:src:components:FunctionGrapher.test.jsx",
+          "path": "src/components/FunctionGrapher.test.jsx",
+          "textSha256": "700a6e671afa6061d70e795de760caa170e1bae0f23ac95a839f89d74697ae44"
+        },
+        {
+          "id": "code:tests:graph-plotter.spec.js",
+          "path": "tests/graph-plotter.spec.js",
+          "textSha256": "a6bb89d991b56b3d671dff98b0d46c7083f591297bcecfb51195fdf795752c7f"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/arshy/artifacts/implementation/implementation-summary.md",
+        "sha256": "0e63c50c05a1740098eee7d6e6aa34c91b114e4b4cf3478639cd33205df36f8a"
+      },
+      "plan": {
+        "path": "singularity/work-items/arshy/artifacts/planning/plan.md",
+        "sha256": "0414312fa3175dfcd733ce5fd0691acdbafaea7d40c09c0bb4fa76cb4b4bf5f1"
+      },
+      "evidenceSha256": "b8b5384e88aafb9b5bcc6c62ed86d807976fb07ec5d8c12e4492d43adb528318"
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "code:src:components:FunctionGrapher.jsx",
+      "code:src:components:FunctionGrapher.test.jsx",
+      "code:tests:graph-plotter.spec.js"
+    ],
+    "rows": [
+      {
+        "clauseId": "ARSHY:AC-001",
+        "implementation": [],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 96,
+            "quote": "test('plots x^2 + y^2 = 36 as a centered radius-6 circle'"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "ARSHY:AC-002",
+        "implementation": [],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 80,
+            "quote": "test('renders the supported explicit and implicit equations'"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "ARSHY:REQ-001",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 15,
+            "quote": "export const normalizeEquation = (input) => {"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 75,
+            "quote": "export const sampleImplicitPlot = (expression, width, height, scale, centerX, centerY, step = 2) => {"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 80,
+            "quote": "test('renders the supported explicit and implicit equations'"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "ARSHY:REQ-002",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 41,
+            "quote": "const isCircleEquation = (equation) => {"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 234,
+            "quote": "const circleFitScale = isCircleEquation(equation)"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 96,
+            "quote": "test('plots x^2 + y^2 = 36 as a centered radius-6 circle'"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      }
+    ],
+    "unplannedPaths": [
+      {
+        "sourceId": "code:src:components:FunctionGrapher.test.jsx",
+        "assessment": "supporting",
+        "note": "Focused unit tests supplement the plan's required browser test suite and do not replace it."
+      }
+    ],
+    "qualityReviewed": [],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "717dabbe1d71dc4ece8ae0d2b9d20e66e4a59ab36c63301e5f1d6bed0dc3111a",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "developer",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-20T12:12:51.668Z",
+  "recordSha256": "102136bdc669f70801f4794c61466a6a32a9b6139fac414f1ab837b598c54463"
+}
