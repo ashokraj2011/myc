@@ -24,6 +24,7 @@
 
 ## Recent history
 
+- 2026-11-20T12:45:51.161Z — **source_review_submitted** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 69b813555122035b05a94072caa34b73160efa7775974876bc2d988ffcf38aec
 - 2026-11-20T12:43:49.239Z — **phase_generated** (implementation) by ashokraj2011 · agent developer: generation 5
 - 2026-11-20T12:40:31.386Z — **version_opened** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent developer: version 5 opened (rework) on the person's yes (question-tool)
 - 2026-11-20T12:37:43.868Z — **phase_rejected** (implementation) by ashokraj2011 · agent developer: CR-001 returned to implementation: Add @clause tags to the test files for the requirements they test; no app code changes
@@ -38,4 +39,3 @@
 - 2026-11-20T11:09:44.085Z — **source_review_submitted** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: d814770e00195be8ff073fa20ff02f678a909d458651272e4c2a96e559b1ac9e
 - 2026-11-20T11:08:36.333Z — **phase_generated** (implementation) by ashokraj2011 · agent developer: generation 3
 - 2026-11-20T11:07:43.376Z — **departure_recorded** (implementation) by ashokraj2011 · agent developer: DEP-002 (test): a planned test changes: src/components/FunctionGrapher.test.jsx is added to ARSHY:REQ-001's tests. Add focused Vitest helper coverage for ARSHY:REQ-001 alongside the planned Playwright browser suite in tests/graph-plotter.spec.js.
-- 2026-11-20T11:04:20.187Z — **plan_amended** (implementation) by ashokraj2011 · agent developer: PAM-001: vite.config.js listed as build-configuration, accepting DEP-001. no need to change anything go ahead
