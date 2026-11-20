@@ -61,6 +61,17 @@ export const sampleExplicitPlot = (expression, width, height, scale, centerX, ce
   return points;
 };
 
+/**
+ * Samples zero-contour segments for an implicit expression over a canvas grid.
+ * @param {string} expression A mathjs expression that evaluates to zero on the contour.
+ * @param {number} width Canvas width in pixels.
+ * @param {number} height Canvas height in pixels.
+ * @param {number} scale Pixels per graph unit.
+ * @param {number} centerX Canvas x-coordinate of the graph origin.
+ * @param {number} centerY Canvas y-coordinate of the graph origin.
+ * @param {number} step Grid spacing in pixels.
+ * @returns {{start: {px: number, py: number}, end: {px: number, py: number}}[]} Contour segments.
+ */
 export const sampleImplicitPlot = (expression, width, height, scale, centerX, centerY, step = 2) => {
   const compiled = math.compile(expression);
   const segments = [];
@@ -85,6 +96,7 @@ export const sampleImplicitPlot = (expression, width, height, scale, centerX, ce
         }
       });
 
+      const intersections = [];
       for (let edge = 0; edge < 4; edge++) {
         const next = (edge + 1) % 4;
         if (values[edge] * values[next] > 0) continue;
@@ -94,15 +106,15 @@ export const sampleImplicitPlot = (expression, width, height, scale, centerX, ce
         const t = Math.max(0, Math.min(1, -values[edge] / denominator));
         const start = corners[edge];
         const end = corners[next];
+        intersections.push({
+          px: start.px + (end.px - start.px) * t,
+          py: start.py + (end.py - start.py) * t,
+        });
+      }
+      for (let index = 0; index + 1 < intersections.length; index += 2) {
         segments.push({
-          start: {
-            px: start.px + (end.px - start.px) * t,
-            py: start.py + (end.py - start.py) * t,
-          },
-          end: {
-            px: start.px + (end.px - start.px) * t + 0.5,
-            py: start.py + (end.py - start.py) * t,
-          },
+          start: intersections[index],
+          end: intersections[index + 1],
         });
       }
     }

@@ -4,7 +4,7 @@
   "workId": "arshy",
   "workType": "spec-driven-standard",
   "phase": "implementation",
-  "generation": 2,
+  "generation": 3,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "implementation-summary.md",
       "mediaType": "text/markdown",
-      "sha256": "51ce5a1f0467119bb0646fac2ad25429ec6404b083f73cd3825b923607a41e68",
-      "bytes": 2070
+      "sha256": "fdd031e3a4913be234f9f596f3f01ca97e4ade9d7cc8d36ae3eeed39091725e8",
+      "bytes": 3083
     },
-    "generation": 2,
-    "publishedAt": "2026-11-20T07:06:40.703Z"
+    "generation": 3,
+    "publishedAt": "2026-11-20T11:08:36.030Z"
   },
-  "sourceCommit": "8b5910a76b44aa2ea8d462bc776a89d0d86c5ad1",
+  "sourceCommit": "9788bf29892c9d9029e3354b460cb36268442bf2",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "106d3c3a8dbea5992306f47e45f781900b06ed64faafb501f8945ee96a55a9a6",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/common/implementation.md"
   },
   "inputs": {
-    "generation": 2,
-    "path": "singularity/work-items/arshy/context/inputs-implementation-gen2.json",
-    "sha256": "60304af30e71dff2c0ce6c3befe878c2db719453e7cf946fbe97e14d3fda1478",
+    "generation": 3,
+    "path": "singularity/work-items/arshy/context/inputs-implementation-gen3.json",
+    "sha256": "038f9c4833c2cf53e419e9eb654722c983ca08e8efc22117c7fe01727a362812",
     "renderedSha256": "78d39a15d7a77357651084854a5028837bec86b03c91b2b1b058101879fc40c6",
     "mode": "enforce"
   },
@@ -112,6 +112,26 @@
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 3,
+      "path": "singularity/work-items/arshy/telemetry/implementation-gen3.json",
+      "sha256": "6d5d0eb053054207aeb19adb8981b8b97b5bc26a15b2cfeeede492d8bbb23ecf",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 31333,
+        "estimatedTokens": 7834,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 31333,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
     }
   ],
   "remoteOutputs": [],
@@ -157,6 +177,27 @@
       "completedAt": "2026-11-20T07:06:40.703Z",
       "agent": "developer",
       "generation": 2
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-20T11:08:36.030Z",
+      "completedAt": "2026-11-20T11:08:36.030Z",
+      "agent": "developer",
+      "generation": 3
     }
   ],
   "sequenceOverrides": [],
@@ -187,7 +228,8 @@ None: this Story pinned no constitution.
 - `src/components/FunctionGrapher.jsx`: `@clause:ARSHY:REQ-001` binds the equation normalization and explicit/implicit rendering paths to the accepted Cartesian grammar. `@clause:ARSHY:REQ-002` binds the origin-centered radius-6 circle fit and implicit contour rendering.
 - `tests/graph-plotter.spec.js`: browser tests tagged `@ac:ARSHY:AC-001` and `@ac:ARSHY:AC-002` enter the approved equations and verify rendered canvas output, including circle center and radius.
 - `src/components/FunctionGrapher.test.jsx` retains focused Vitest coverage for equation normalization and sampling helpers.
-- `playwright.config.js`, `package.json`, and `package-lock.json` configure and provide Playwright; `vite.config.js` keeps the Playwright spec out of Vitest discovery.
+- `playwright.config.js`, `package.json`, and `package-lock.json` configure and provide Playwright. Following PAM-001, `vite.config.js` is accounted as a supporting build-configuration change: its Vitest include scopes unit-test discovery to `src/`, keeping the planned Playwright spec out of Vitest.
+- DEP-002 records `src/components/FunctionGrapher.test.jsx` as an added test for `ARSHY:REQ-001`; it supplements rather than replaces the planned browser suite and awaits a person's decision before phase approval.
 
 The implementation deliberately does not add graph ranges or other Desmos-specific behavior outside the approved clauses.
 
