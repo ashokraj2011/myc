@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "phase": "release",
+  "generation": 1,
+  "reportSha256": "e8da50665b7ec7b559d186d530dbd1071766352afc9cfdac28f938bbb5fee70d",
+  "lifecycleEventId": "84d738b2-a4e1-45ca-bd3c-dfd68e35d46a",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "arshy",
+      "phase": "release",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "input:convergence",
+          "path": "singularity/work-items/arshy/artifacts/convergence/convergence.md",
+          "textSha256": "10c2231d242f072ab289c2335076bd2025105827f7acf1efceb5326b5e2fe824"
+        },
+        {
+          "id": "input:verification",
+          "path": "singularity/work-items/arshy/artifacts/verification/test-evidence.md",
+          "textSha256": "5cf672f6871f46d35b8f529fd71067957450f54f489b4ad8662a047e0f8d70ec"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/arshy/USER-STORY.md",
+          "textSha256": "bb5fed527b7b686da9959c1074dac0ec9b0c2e60e4516a522b211ab50d1bee84",
+          "originalSha256": "d7180144abe937580cb41e978585f7916fc3f4f16790c2cbd45f2afc03f8dcf8"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/arshy/artifacts/release/conformance.md",
+        "sha256": "1143932cd198b5b9ead45512540ce9f5e5bdcf2362f82cad9224badcbaf339bf"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:convergence",
+      "input:verification"
+    ],
+    "rows": [
+      {
+        "id": "story-origin-circle",
+        "sourceId": "story",
+        "line": 17,
+        "quote": "Palyright tests on cirlce of 6 unit radius in origin",
+        "outcome": "consistent"
+      },
+      {
+        "id": "convergence-trace-status",
+        "sourceId": "input:convergence",
+        "line": 14,
+        "quote": "No deterministic trace-evidence gaps were found.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "verification-circle-acceptance",
+        "sourceId": "input:verification",
+        "line": 19,
+        "quote": "plots x^2 + y^2 = 36 as a centered radius-6 circle",
+        "outcome": "consistent"
+      },
+      {
+        "id": "verification-suite-failure-disclosure",
+        "sourceId": "input:verification",
+        "line": 26,
+        "quote": "The fresh full Vitest run reproduces 17 environment-related",
+        "outcome": "consistent"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "717dabbe1d71dc4ece8ae0d2b9d20e66e4a59ab36c63301e5f1d6bed0dc3111a",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-20T13:46:27.434Z",
+  "recordSha256": "2152d63b19539fa1ab3b41f67a1f482635d8b436a0364c9d654fa5fdea77ab75"
+}
