@@ -1,7 +1,11 @@
 import assert from 'node:assert/strict';
 import { expect, test } from '@playwright/test';
 
-const equations = ['y = 2*x + 1', 'y = (x - 2) / 2', 'x - y = 0'];
+const equationCases = [
+  { equation: 'y = 2*x + 1', points: [{ x: -0.5, y: 0 }, { x: 0, y: 1 }] },
+  { equation: 'y = (x - 2) / 2', points: [{ x: 1, y: -0.5 }, { x: 3, y: 0.5 }] },
+  { equation: 'x - y = 0', points: [{ x: -1, y: -1 }, { x: 1, y: 1 }] },
+];
 
 const readCircleGeometry = (element) => {
   const context = element.getContext('2d');
@@ -45,16 +49,30 @@ async function openGrapher(page) {
   return equationInput;
 }
 
-async function renderedPinkPixels(canvas) {
-  return canvas.evaluate((element) => {
+async function hasPinkPixelNear(canvas, { x, y }) {
+  return canvas.evaluate((element, point) => {
+    const ratioX = element.width / element.clientWidth;
+    const ratioY = element.height / element.clientHeight;
+    const centerX = element.width / 2 + point.x * 40 * ratioX;
+    const centerY = element.height / 2 - point.y * 40 * ratioY;
+    const radiusX = Math.ceil(4 * ratioX);
+    const radiusY = Math.ceil(4 * ratioY);
+    const left = Math.max(0, Math.floor(centerX - radiusX));
+    const right = Math.min(element.width - 1, Math.ceil(centerX + radiusX));
+    const top = Math.max(0, Math.floor(centerY - radiusY));
+    const bottom = Math.min(element.height - 1, Math.ceil(centerY + radiusY));
     const context = element.getContext('2d');
     const { data } = context.getImageData(0, 0, element.width, element.height);
-    let count = 0;
-    for (let index = 0; index < data.length; index += 4) {
-      if (data[index] > 150 && data[index + 1] < 130 && data[index + 2] > 90) count += 1;
+    for (let row = 0; row <= bottom - top; row += 1) {
+      for (let column = 0; column <= right - left; column += 1) {
+        const index = ((top + row) * element.width + left + column) * 4;
+        if (data[index] > 150 && data[index + 1] < 130 && data[index + 2] > 90) {
+          return true;
+        }
+      }
     }
-    return count;
-  });
+    return false;
+  }, { x, y });
 }
 
 test.describe('grapher equation entry', () => {
@@ -62,10 +80,13 @@ test.describe('grapher equation entry', () => {
   test('renders the supported explicit and implicit equations', async ({ page }) => {
     const input = await openGrapher(page);
     const canvas = page.locator('canvas');
-    for (const equation of equations) {
+    for (const { equation, points } of equationCases) {
       await input.fill(equation);
-      await expect.poll(() => renderedPinkPixels(canvas)).toBeGreaterThan(100);
-      assert.equal(await renderedPinkPixels(canvas) > 100, true, `Expected a plotted curve for ${equation}`);
+      for (const point of points) {
+        const expectedPoint = `(${point.x}, ${point.y}) for ${equation}`;
+        await expect.poll(() => hasPinkPixelNear(canvas, point)).toBe(true);
+        assert.equal(await hasPinkPixelNear(canvas, point), true, `Expected the plotted curve near ${expectedPoint}`);
+      }
       await expect(page.getByText('Invalid function syntax')).toHaveCount(0);
     }
   });

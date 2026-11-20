@@ -4,7 +4,7 @@
   "workId": "arshy",
   "workType": "spec-driven-standard",
   "phase": "implementation",
-  "generation": 3,
+  "generation": 4,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "implementation-summary.md",
       "mediaType": "text/markdown",
-      "sha256": "fdd031e3a4913be234f9f596f3f01ca97e4ade9d7cc8d36ae3eeed39091725e8",
-      "bytes": 3083
+      "sha256": "0e63c50c05a1740098eee7d6e6aa34c91b114e4b4cf3478639cd33205df36f8a",
+      "bytes": 3190
     },
-    "generation": 3,
-    "publishedAt": "2026-11-20T11:08:36.030Z"
+    "generation": 4,
+    "publishedAt": "2026-11-20T12:11:41.475Z"
   },
-  "sourceCommit": "9788bf29892c9d9029e3354b460cb36268442bf2",
+  "sourceCommit": "f55b3897429df7d09eef56f09b72130bb6f36e9c",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "106d3c3a8dbea5992306f47e45f781900b06ed64faafb501f8945ee96a55a9a6",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/common/implementation.md"
   },
   "inputs": {
-    "generation": 3,
-    "path": "singularity/work-items/arshy/context/inputs-implementation-gen3.json",
-    "sha256": "038f9c4833c2cf53e419e9eb654722c983ca08e8efc22117c7fe01727a362812",
+    "generation": 4,
+    "path": "singularity/work-items/arshy/context/inputs-implementation-gen4.json",
+    "sha256": "2962accd84d7ac34106dcda03858c71fe5b3509db099d4b6c8727a146b80ca1e",
     "renderedSha256": "78d39a15d7a77357651084854a5028837bec86b03c91b2b1b058101879fc40c6",
     "mode": "enforce"
   },
@@ -132,6 +132,26 @@
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 4,
+      "path": "singularity/work-items/arshy/telemetry/implementation-gen4.json",
+      "sha256": "366abd85020a6733616b648a61b56fd4ff49f7b6b5e9fd875d844615f4061c99",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 31360,
+        "estimatedTokens": 7840,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 31360,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
     }
   ],
   "remoteOutputs": [],
@@ -198,6 +218,27 @@
       "completedAt": "2026-11-20T11:08:36.030Z",
       "agent": "developer",
       "generation": 3
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-20T12:11:41.474Z",
+      "completedAt": "2026-11-20T12:11:41.474Z",
+      "agent": "developer",
+      "generation": 4
     }
   ],
   "sequenceOverrides": [],
@@ -211,7 +252,7 @@
 
 ## Agent brief
 
-The existing React grapher mode accepts the approved explicit and implicit Cartesian equations and retains the existing presets. Implicit contours are drawn as interpolated segments between cell-edge crossings; the origin-centered radius-fit renders `x^2 + y^2 = 36` as the required radius-6 circle. Playwright exercises equation entry and inspects rendered canvas pixels.
+The existing React grapher mode accepts the approved explicit and implicit Cartesian equations and retains the existing presets. Implicit contours are drawn as interpolated segments between cell-edge crossings; the origin-centered radius-fit renders `x^2 + y^2 = 36` as the required radius-6 circle. Playwright now verifies pink plot pixels near selected graph-coordinate points for each required line, in addition to the circle center and radius.
 
 ## Implemented outcome
 
@@ -226,7 +267,7 @@ None: this Story pinned no constitution.
 ### Product source
 
 - `src/components/FunctionGrapher.jsx`: `@clause:ARSHY:REQ-001` binds the equation normalization and explicit/implicit rendering paths to the accepted Cartesian grammar. `@clause:ARSHY:REQ-002` binds the origin-centered radius-6 circle fit and implicit contour rendering.
-- `tests/graph-plotter.spec.js`: browser tests tagged `@ac:ARSHY:AC-001` and `@ac:ARSHY:AC-002` enter the approved equations and verify rendered canvas output, including circle center and radius.
+- `tests/graph-plotter.spec.js`: browser tests tagged `@ac:ARSHY:AC-001` and `@ac:ARSHY:AC-002` enter the approved equations and verify graph-coordinate samples on each explicit and implicit line, plus the circle center and radius. This replaces the earlier AC-002 check that only counted canvas pixels.
 - `src/components/FunctionGrapher.test.jsx` retains focused Vitest coverage for equation normalization and sampling helpers.
 - `playwright.config.js`, `package.json`, and `package-lock.json` configure and provide Playwright. Following PAM-001, `vite.config.js` is accounted as a supporting build-configuration change: its Vitest include scopes unit-test discovery to `src/`, keeping the planned Playwright spec out of Vitest.
 - DEP-002 records `src/components/FunctionGrapher.test.jsx` as an added test for `ARSHY:REQ-001`; it supplements rather than replaces the planned browser suite and awaits a person's decision before phase approval.
@@ -235,11 +276,10 @@ The implementation deliberately does not add graph ranges or other Desmos-specif
 
 ## Tests and operational notes
 
-- `npm run test:e2e`: 2 Playwright tests passed, exercising the three approved explicit/implicit equations and verifying the rendered centered radius-6 circle in a browser.
+- `npm run test:e2e`: 2 Playwright tests passed. AC-002 checks two expected graph points for each of the three approved lines; AC-001 verifies the centered radius-6 circle in the browser.
 - `npm test -- --run src/components/FunctionGrapher.test.jsx`: 1 Vitest file passed, 4 tests passed.
-- `npm run build`: passed; Vite reported its existing large-bundle advisory.
-- Full `npm test` was attempted on Node 26.12.0; 18 tests passed and 17 existing `src/App.test.jsx` cases failed because `localStorage` was undefined in that runtime. The recorded Node 22.14.0 run from generation 2 is not evidence for this generation.
-- `npm run lint` was attempted and reports existing repository errors, including React import/unused-variable issues and React hook lint findings in `FunctionGrapher.jsx`; the new test/config files are checked separately.
+- `npx eslint tests/graph-plotter.spec.js`: passed.
+- Earlier generation 3 diagnostics: `npm run build` passed with Vite's large-bundle advisory. Full `npm test` on Node 26.12.0 had 18 passes and 17 existing `src/App.test.jsx` failures because `localStorage` was undefined; `npm run lint` reported pre-existing repository errors, including findings in `FunctionGrapher.jsx`. The recorded Node 22.14.0 run from generation 2 is not evidence for this generation.
 
 <!-- singularity-flow:inputs:start -->
 

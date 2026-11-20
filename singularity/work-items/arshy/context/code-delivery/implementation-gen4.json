@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "arshy",
+  "phase": "implementation",
+  "generation": 4,
+  "generationIntentId": "806e9ae1-0102-46ca-b833-71889e71d018",
+  "changeSet": {
+    "path": "singularity/work-items/arshy/context/code-delivery/implementation-gen4-changes.json",
+    "digest": "sha256:1aca081abaf6ffeb503da7edfbf38331843062677d719327ca5fcddd3beccea8",
+    "sourcePaths": [
+      "src/components/FunctionGrapher.jsx"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [],
+    "executableTestPaths": [
+      "src/components/FunctionGrapher.test.jsx",
+      "tests/graph-plotter.spec.js"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "test-source": 1
+    },
+    "entries": [
+      {
+        "changeId": "sha256:dee412cbcedd658c771b290c8cf314286ad0524a11d71c54beff5234fccb240a",
+        "status": "modified",
+        "oldPath": "tests/graph-plotter.spec.js",
+        "newPath": "tests/graph-plotter.spec.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "reviewCorrection": {
+    "priorGeneration": 3,
+    "priorReceiptSha256": null,
+    "findingIds": [
+      "AC002-test-oracle"
+    ],
+    "reusedSourcePaths": [
+      "src/components/FunctionGrapher.jsx"
+    ]
+  },
+  "traceability": {
+    "required": [
+      "ARSHY:AC-001",
+      "ARSHY:AC-002"
+    ],
+    "bound": [
+      "ARSHY:AC-001",
+      "ARSHY:AC-002"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "ARSHY:AC-001",
+        "testSource": "tests/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "ARSHY:AC-002",
+        "testSource": "tests/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "ARSHY:AC-001",
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "identity": {
+          "framework": "playwright",
+          "suitePath": [],
+          "name": "plots x^2 + y^2 = 36 as a centered radius-6 circle"
+        },
+        "logicalTestId": "sha256:12d34fe060fd24ccd44990c12ef6a0b435b884b70947735446ab8e9273b6b8ba",
+        "declarationSha256": "sha256:c7f9a090042781f3d2c6c4130468478712ebf614a492e20adafa4824a1e2b078",
+        "supportSha256": null,
+        "assertions": {
+          "count": 9,
+          "tautological": 0,
+          "negative": false,
+          "boundary": true,
+          "nullability": true,
+          "adequacy": "adequate",
+          "subjects": [
+            "abs",
+            "async",
+            "evaluate",
+            "fill",
+            "locator",
+            "openGrapher",
+            "poll"
+          ]
+        },
+        "line": 96,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "ARSHY:AC-002",
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "identity": {
+          "framework": "playwright",
+          "suitePath": [
+            "grapher equation entry"
+          ],
+          "name": "renders the supported explicit and implicit equations"
+        },
+        "logicalTestId": "sha256:b4ada1a5a281726a46f646c822f63ad3aaa706cded4bde844a39fc16e6ebfa75",
+        "declarationSha256": "sha256:c281f11ba3dd997f444380e2bd9316853b20d8352dfe2dabb53d693f6b767395",
+        "supportSha256": null,
+        "assertions": {
+          "count": 1,
+          "tautological": 0,
+          "negative": false,
+          "boundary": true,
+          "nullability": false,
+          "adequacy": "adequate",
+          "subjects": [
+            "async",
+            "fill",
+            "for",
+            "getByText",
+            "hasPinkPixelNear",
+            "locator",
+            "openGrapher",
+            "poll",
+            "toHaveCount"
+          ]
+        },
+        "line": 80,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "ARSHY:REQ-001",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      },
+      {
+        "clauseId": "ARSHY:REQ-002",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "ARSHY:REQ-001",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 14,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "ARSHY:REQ-002",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 40,
+        "tag": "clause"
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "ARSHY:REQ-001",
+        "explanation": {
+          "text": "Normalizes explicit and implicit Cartesian equations for canvas plotting.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 14
+        },
+        "regions": []
+      },
+      {
+        "clauseId": "ARSHY:REQ-002",
+        "explanation": {
+          "text": "Fits the approved radius-6 circle around the origin on the canvas.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 40
+        },
+        "regions": []
+      }
+    ],
+    "bindingsSha256": "sha256:5f81b1451d34ce84cc689ea740609fa2a20335c8ea81235f8321c5e5424aed2b"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:c7d59be5e4a8251494b26813b2adc7a0125b617661f357be6337063b6de1ad96",
+    "codeTreeSha256": "sha256:207174f91cae2f7be7fa9aeb256c32533979363a99432a71e928bd5194ad144b",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-11-20T12:11:41.475Z"
+}
