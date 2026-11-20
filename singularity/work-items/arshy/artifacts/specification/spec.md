@@ -4,7 +4,7 @@
   "workId": "arshy",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 1,
+  "generation": 2,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "spec.md",
       "mediaType": "text/markdown",
-      "sha256": "62329eeb7517a12804833027e12fdf0908500174b5b1df0fd19f44da964870d2",
-      "bytes": 9195
+      "sha256": "45c47bb549e3f24fa7ca18659287d95e4a015a65d06c3a25248360d398473c88",
+      "bytes": 4850
     },
-    "generation": 1,
-    "publishedAt": "2026-11-20T05:10:26.495Z"
+    "generation": 2,
+    "publishedAt": "2026-11-20T05:16:04.203Z"
   },
-  "sourceCommit": "61bdf5ec6f566bb1a1618da8365e18f1fffd9f44",
+  "sourceCommit": "fde3bed9934aa0d546d0d1e3d0335abcaef55294",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "106d3c3a8dbea5992306f47e45f781900b06ed64faafb501f8945ee96a55a9a6",
@@ -66,18 +66,18 @@
   },
   "remoteAgent": null,
   "clarification": {
-    "generation": 1,
-    "path": "singularity/work-items/arshy/context/clarifications-specification-gen1.json",
-    "sha256": "07776cd877d1f34b05b3d7008d9e7b6ab9ec71a49f68ca010e0eddf81f2f1069",
-    "promptSha256": "21ff847867a72ad2e8179465350cf7477c8bcd5645c7afcd7a090bf798508502",
-    "responses": 5,
+    "generation": 2,
+    "path": "singularity/work-items/arshy/context/clarifications-specification-gen2.json",
+    "sha256": "ae8b4d543f96ae991569343726b0de5c0b191e23572883dfa8b7eb25dffb6fa3",
+    "promptSha256": "47f4ca609c78c2448d90bf4f77510238c9235756516372eead79ab4a876b2f01",
+    "responses": 2,
     "markers": [],
-    "recordedAt": "2026-11-20T05:08:55.561Z",
+    "recordedAt": "2026-11-20T05:14:38.971Z",
     "recordedBy": {
       "name": "Ashok Raj",
       "email": "88361104+ashokraj2011@users.noreply.github.com",
-      "login": null,
-      "githubLookup": "not-checked"
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
     }
   },
   "telemetry": [
@@ -97,6 +97,26 @@
         "maximumEstimatedTokens": 18000,
         "budgetMode": "observe",
         "originalBytes": 30086,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 2,
+      "path": "singularity/work-items/arshy/telemetry/specification-gen2.json",
+      "sha256": "2d99cdda398dd5c5e09a00f81443a9e2d4fff37f19d665e588c6e556263f53d1",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 29875,
+        "estimatedTokens": 7469,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 29875,
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
@@ -124,6 +144,27 @@
       "completedAt": "2026-11-20T05:10:26.495Z",
       "agent": "product-owner",
       "generation": 1
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-20T05:16:04.203Z",
+      "completedAt": "2026-11-20T05:16:04.203Z",
+      "agent": "product-owner",
+      "generation": 2
     }
   ],
   "sequenceOverrides": [],
@@ -137,7 +178,7 @@
 
 ## Agent brief
 
-An app user can use a Desmos-inspired plotter to enter and view general 2D Cartesian equations. The required example is a circle of radius 6 centered at the origin, and Playwright coverage must verify that case. No attachment was available, so the Desmos link is a reference direction rather than a pixel-level design specification. No additional graph limits or non-functional constraints were supplied.
+An app user can use a Desmos-inspired plotter to enter and view 2D Cartesian equations. Supported forms are explicit `y = f(x)` and implicit `F(x,y) = 0`, using numeric constants, `x` and `y`, parentheses, `+`, `-`, `*`, `/`, and `^`. The required example is a circle of radius 6 centered at the origin, verified with Playwright. No attachment was available, so the Desmos link is a reference direction rather than a pixel-level design specification. No additional graph-range, interaction, accessibility, or performance constraints apply.
 
 ## Actors
 
@@ -145,14 +186,22 @@ The app user enters a Cartesian equation and views its graph. No distinct roles 
 
 ## User scenarios
 
-### S1 — Plot a Cartesian equation
+### S1 — Plot supported Cartesian equations
 
 **Priority:** P1
 **Actor:** App user
 **Context:** The graph plotter is available in the existing application.
 
 - **Given** the graph plotter is available
-  **When** the user enters the Cartesian equation `y = x`
+  **When** the user enters the explicit equation `y = 2*x + 1`
+  **Then** the plotter displays its corresponding 2D graph.
+
+- **Given** the graph plotter is available
+  **When** the user enters the explicit equation `y = (x - 2) / 2`
+  **Then** the plotter displays its corresponding 2D graph.
+
+- **Given** the graph plotter is available
+  **When** the user enters the implicit equation `x - y = 0`
   **Then** the plotter displays its corresponding 2D graph.
 
 ### S2 — Verify the required circle
@@ -186,15 +235,15 @@ Not applicable: the Story specifies a single app-user role and no permission tie
 
 ## Boundary conditions
 
-The required circle has radius `6` and center `(0, 0)`. No other input, viewport, size, count, or timeout limits are specified.
+The required circle has radius `6` and center `(0, 0)`. The accepted equation forms and operators are defined in `ARSHY:REQ-001`. No additional graph-range, size, count, timeout, interaction, accessibility, or performance constraints are specified.
 
 ## Requirements
 
-- The plotter shall accept user-supplied 2D Cartesian equations and display their corresponding graphs. *(S1)* [ARSHY:REQ-001]
+- The plotter shall accept and display 2D Cartesian equations in explicit `y = f(x)` or implicit `F(x,y) = 0` form, using numeric constants, `x` and `y`, parentheses, addition (`+`), subtraction (`-`), multiplication (`*`), division (`/`), and exponentiation (`^`). *(S1)* [ARSHY:REQ-001]
 - The plotter shall display a circle of radius `6` centered at `(0, 0)`, represented by `x^2 + y^2 = 36`. [scope:SRI-15d4e5bd263a] *(S2)* [ARSHY:REQ-002]
 
 - A Playwright test shall verify that `x^2 + y^2 = 36` is plotted as a circle centered at `(0, 0)` with radius `6`. *(S2)* [ARSHY:AC-001]
-- A Playwright test shall verify that entering `y = x` displays its corresponding 2D Cartesian graph. *(S1)* [ARSHY:AC-002]
+- Playwright tests shall verify that the supported equation grammar plots the explicit equations `y = 2*x + 1` and `y = (x - 2) / 2`, and the implicit equation `x - y = 0`. *(S1)* [ARSHY:AC-002]
 
 ## Verification intent
 
@@ -216,14 +265,15 @@ None: this Story pinned no constitution.
 ## Assumptions
 
 - The supplied Desmos URL is a conceptual reference; no attached image or exact visual specification is available.
-- “General 2D Cartesian equations” does not define a broader expression grammar or additional Desmos features.
+- The supported equation forms and operators are limited to those confirmed in clarification; no broader Desmos grammar is implied.
 
 ## Out of scope
 
-No additional plotting features beyond general 2D Cartesian equation plotting and the required circle case are committed. Exact visual reproduction of Desmos and constraints not stated in the Story or clarification are out of scope.
+No additional plotting features beyond the confirmed equation forms and required circle case are committed. Exact visual reproduction of Desmos, additional equation syntax, and constraints not stated in the Story or clarification are out of scope.
 
 ## Sources
 
 - Pinned Story source: `singularity/work-items/arshy/source.json`.
-- Clarification: the user supplied the Desmos URL as the reference direction, accepted general 2D Cartesian plotting with the circle as a required case, and specified no additional constraints.
+- Clarification (generation 1): the user supplied the Desmos URL as the reference direction and accepted general 2D Cartesian plotting with the circle as a required case.
+- Clarification (generation 2): the user confirmed explicit `y=f(x)` and implicit `F(x,y)=0` forms using basic arithmetic and powers, with no additional graph-range, interaction, accessibility, or performance constraints. This resolves the differing generation 1 constraints replies.
 - Supporting attachments/documents: none were copied or attached. Reference: https://www.desmos.com/calculator.
