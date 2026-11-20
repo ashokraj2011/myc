@@ -19,6 +19,9 @@
 
 ## Recent history
 
+- 2026-11-20T07:01:08.407Z — **version_opened** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent developer: version 2 opened (review-corrections) settled for the person (STL-004; only the reviewer had seen version 1)
+- 2026-11-20T07:01:08.407Z — **decision_settled** (implementation) by ashokraj2011 · agent developer: STL-004 (review-corrections) settled by SFlow: Started version 2 of implementation to fix the review's findings on version 1
+- 2026-11-20T07:01:10.122Z — **work_interval_started** (implementation) by system: baseline 14f38bfc6f01 at a0b21038572e
 - 2026-11-20T07:00:31.703Z — **source_review_submitted** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 647ceb9eb1acc5e2351a89c7323fe4f58c91c232c0a4be56497aa78a2d8d7098
 - 2026-11-20T06:57:11.653Z — **phase_generated** (implementation) by ashokraj2011 · agent developer: generation 1
 - 2026-11-20T06:50:42.109Z — **decision_settled** (implementation) by ashokraj2011 · agent developer: STL-003 (node-version) settled by SFlow: Pinned Node 22 in .nvmrc for Implementation's tests: Node 26.12.0 here breaks tests that use localStorage under Vitest, and Node 22.14.0 is installed. Evidence: Node 26.12.0 puts its own localStorage in front of the DOM environment's under Vitest (the repository's Vitest setup and its tests that use localStorage); Node 22.14.0 is installed (the Nodes installed on this machine); tests would otherwise run on Node 26.12.0 (the Node on PATH)
@@ -31,6 +34,3 @@
 - 2026-11-20T05:38:41.142Z — **phase-approved-automatically** (specification) by sflow-approved-automatically: approved automatically: the reviewer said ready; its checks passed; nothing was open for it; advanced to planning
 - 2026-11-20T05:38:32.540Z — **phase_submitted** (specification) by ashokraj2011 · agent product-owner: 1 artifacts
 - 2026-11-20T05:38:12.598Z — **source_review_submitted** (specification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 327b16af8c8392d6aa2c35f5a0d7db88644ddd8f0e16e71aad288ae5acb61313
-- 2026-11-20T05:36:48.987Z — **phase_generated** (specification) by ashokraj2011 · agent product-owner: generation 4
-- 2026-11-20T05:31:53.983Z — **version_opened** (specification) by 88361104+ashokraj2011@users.noreply.github.com · agent product-owner: version 4 opened (review-corrections) on the person's yes (question-tool)
-- 2026-11-20T05:31:10.270Z — **source_review_submitted** (specification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 99d09955a3d758f653a31f8d38bdcae244b62f35ce0c3f1f817c411cac6e688b

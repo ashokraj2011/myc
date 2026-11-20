@@ -4002,19 +4002,19 @@
       "checks": [],
       "remoteOutputs": [],
       "generationIntent": {
-        "id": "c86751f0-0f8f-40b4-9e8d-53307740c989",
-        "generation": 1,
-        "status": "consumed",
-        "path": "singularity/work-items/arshy/context/generation-start/implementation-gen1.json",
-        "receiptSha256": "sha256:7ffe7d634a630b1c495f37d79963f252377e0d2a39e27936c6e87e1a1fc8d0e7",
+        "id": "67c51aca-a385-4cd6-ba4f-f88a910f2b8b",
+        "generation": 2,
+        "status": "open",
+        "path": "singularity/work-items/arshy/context/generation-start/implementation-gen2.json",
+        "receiptSha256": "sha256:021916522762d008244c5924ded41b44f9e48e2dca8941fe5fa31fe6e12ca418",
         "baseline": {
-          "commit": "f4e8ccafe4fb1b396da5d6036c4240fe1379a55b",
-          "tree": "21ee36fc9058d0ec0f8e7def3e1920e30af969eb",
-          "initialChangeSetDigest": "sha256:11bde0b17f7264df60344b54cfdbc8b34a27c64df681735ad9d5c0cbb16ad87c",
+          "commit": "a33c64164937a78809b9482133ed51c989423a70",
+          "tree": "796ca9fca065d21590cc627aab2ec56f8fe5fb0d",
+          "initialChangeSetDigest": "sha256:2734b9136b5bbbdd77be51988779bf17fead988f026db698f95a985a47be100b",
           "mode": "clean",
-          "previousGenerationCommit": null
+          "previousGenerationCommit": "a33c64164937a78809b9482133ed51c989423a70"
         },
-        "startedAt": "2026-11-20T06:50:35.834Z",
+        "startedAt": "2026-11-20T07:01:10.278Z",
         "startedBy": {
           "actor": {
             "name": "Ashok Raj",
@@ -4029,33 +4029,25 @@
           "revisionSha256": "sha256:a508b7d65183b227adc8253a288fff59ad99fe14082e422c963ef2195caee12e",
           "amendment": null
         },
-        "publication": {
-          "generation": 1,
-          "changeSetDigest": "sha256:3e65c299a5f8d6db683dc1635c4a3dc599b3c70c4a62edc2d2c428fa01b78b27",
-          "resultDigest": "sha256:53f1eb412aa58c4801c68ca8f15f4c63112539c5efeb43b9407e089e14a06537",
-          "resultDigestVersion": 3,
-          "generationStartSha256": "sha256:7ffe7d634a630b1c495f37d79963f252377e0d2a39e27936c6e87e1a1fc8d0e7",
-          "record": {
-            "path": "singularity/work-items/arshy/context/generation-publications/implementation-gen1.json",
-            "sha256": "sha256:0e53d81a84dc5c25a104982a9f82f56579e0f0de7443dce4090dbcc55cfeac32"
-          }
-        },
-        "consumedAt": "2026-11-20T06:57:11.464Z"
+        "publication": null
       },
       "versionOpening": {
-        "operationId": "vo-9b792d0298fd704c4b4a8f873fa4477a",
-        "version": 1,
-        "highWatermark": 1,
-        "reason": "initial",
-        "path": "singularity/work-items/arshy/context/version-openings/implementation-v1.json",
-        "sha256": "sha256:88ac97b484f5dc3a4dd01069e7f892782d380893a01624c5e361623b87b9ce25",
-        "consent": null,
-        "writer": {
-          "fence": 1,
-          "writerId": "vw-59a9d55a93571524d018364ed72c5e13",
-          "operationId": "vo-9b792d0298fd704c4b4a8f873fa4477a"
+        "operationId": "vo-daf90e57d9bf82be59e8aee546ec5406",
+        "version": 2,
+        "highWatermark": 2,
+        "reason": "review-corrections",
+        "path": "singularity/work-items/arshy/context/version-openings/implementation-v2.json",
+        "sha256": "sha256:4825832b70534230ac2ddfb23cd92f2a092bc46583e837fc607e9619475749df",
+        "consent": {
+          "settled": "STL-004",
+          "surface": "settled"
         },
-        "openedAt": "2026-11-20T06:50:34.236Z"
+        "writer": {
+          "fence": 2,
+          "writerId": "vw-59a9d55a93571524d018364ed72c5e13",
+          "operationId": "vo-daf90e57d9bf82be59e8aee546ec5406"
+        },
+        "openedAt": "2026-11-20T07:01:08.407Z"
       },
       "authoringBaseline": {
         "generation": 1,
@@ -5649,6 +5641,30 @@
       "event": "source_review_submitted",
       "phase": "implementation",
       "detail": "647ceb9eb1acc5e2351a89c7323fe4f58c91c232c0a4be56497aa78a2d8d7098"
+    },
+    {
+      "at": "2026-11-20T07:01:10.122Z",
+      "actor": "system",
+      "agent": null,
+      "event": "work_interval_started",
+      "phase": "implementation",
+      "detail": "baseline 14f38bfc6f01 at a0b21038572e"
+    },
+    {
+      "at": "2026-11-20T07:01:08.407Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "decision_settled",
+      "phase": "implementation",
+      "detail": "STL-004 (review-corrections) settled by SFlow: Started version 2 of implementation to fix the review's findings on version 1"
+    },
+    {
+      "at": "2026-11-20T07:01:08.407Z",
+      "actor": "88361104+ashokraj2011@users.noreply.github.com",
+      "agent": "developer",
+      "event": "version_opened",
+      "phase": "implementation",
+      "detail": "version 2 opened (review-corrections) settled for the person (STL-004; only the reviewer had seen version 1)"
     }
   ],
   "measurement": {
@@ -6137,7 +6153,7 @@
       "storyIdentity": "611fa0832811b24a861a47b0e64d9f328a4295ebb11a4cbd251875bfabbf3d8b",
       "id": "WT-31c7dce0cb08efdcd2a16363fbc9580ee6457a5c4f65cd38a849ca34a4c79eb8",
       "inputSha256": "84b8cf17b6b62241678185d26be0f1848fc776c955b64d514f55ef738d99fc24",
-      "revision": 6,
+      "revision": 7,
       "state": "complete",
       "continuations": 0,
       "maximumContinuations": 2,
@@ -6161,11 +6177,11 @@
         {
           "kind": "retained-review",
           "inputSha256": "84b8cf17b6b62241678185d26be0f1848fc776c955b64d514f55ef738d99fc24",
-          "fingerprint": "4e8084ca98b14bb9e334683e0fd6efb232692e25a87c70ca6b300bc08063c7cc"
+          "fingerprint": "647ceb9eb1acc5e2351a89c7323fe4f58c91c232c0a4be56497aa78a2d8d7098"
         }
       ],
       "blockedCode": null,
-      "recordSha256": "a3b6eac743ca1c166e9434a691d6d58f1b6188dec36033960867c0ed08c4ef71"
+      "recordSha256": "680cda0f853ecc7cead8a013366d3781664129accdb762bfa0f7fd904567b939"
     }
   },
   "publicationProjections": [
@@ -9152,19 +9168,168 @@
         },
         "createdAt": "2026-11-20T07:00:29.762Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "2061cf0a-46ad-4abf-a63f-e466de70414d",
+        "type": "version-opened",
+        "subject": {
+          "kind": "story",
+          "id": "arshy",
+          "branch": "arshy"
+        },
+        "phaseId": "implementation",
+        "generation": 2,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": null,
+        "payload": {
+          "operationId": "vo-daf90e57d9bf82be59e8aee546ec5406",
+          "version": 2,
+          "from": 1,
+          "reason": "review-corrections",
+          "proposalDigest": "sha256:261119de2a7c223e5178d3e443e6279eacf5e0cf004e04dc561b5788da29b7e0",
+          "consentReceiptId": null,
+          "writerFence": 2,
+          "decision": null,
+          "reviewPacketSha256": null
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-20T07:01:08.470Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "2061cf0a-46ad-4abf-a63f-e466de70414d",
+        "eventType": "version-opened",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "arshy"
+          ],
+          "branch": "arshy",
+          "canonicalBranch": "arshy",
+          "createdAt": "2026-11-20T05:04:22.679Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 2,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph",
+          "updatedAt": "2026-11-20T07:01:08.407Z",
+          "workId": "arshy",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "106d3c3a8dbea5992306f47e45f781900b06ed64faafb501f8945ee96a55a9a6",
+          "lifecycleEventId": "2061cf0a-46ad-4abf-a63f-e466de70414d",
+          "lifecyclePayload": {
+            "consentReceiptId": null,
+            "decision": null,
+            "from": 1,
+            "operationId": "vo-daf90e57d9bf82be59e8aee546ec5406",
+            "proposalDigest": "sha256:261119de2a7c223e5178d3e443e6279eacf5e0cf004e04dc561b5788da29b7e0",
+            "reason": "review-corrections",
+            "reviewPacketSha256": null,
+            "version": 2,
+            "writerFence": 2
+          },
+          "templateSha256": "ba0749ab3997579949fc836a839af6606f995c2012a90b410597ebadf211298d",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "2061cf0a-46ad-4abf-a63f-e466de70414d",
+            "type": "version-opened",
+            "subject": {
+              "kind": "story",
+              "id": "arshy",
+              "branch": "arshy"
+            },
+            "phaseId": "implementation",
+            "generation": 2,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": null,
+            "payload": {
+              "operationId": "vo-daf90e57d9bf82be59e8aee546ec5406",
+              "version": 2,
+              "from": 1,
+              "reason": "review-corrections",
+              "proposalDigest": "sha256:261119de2a7c223e5178d3e443e6279eacf5e0cf004e04dc561b5788da29b7e0",
+              "consentReceiptId": null,
+              "writerFence": 2,
+              "decision": null,
+              "reviewPacketSha256": null
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-20T07:01:08.470Z"
+          }
+        },
+        "createdAt": "2026-11-20T07:01:08.478Z"
+      }
     }
   ],
   "repairBudgets": {},
   "workIntervals": {
     "schemaVersion": 1,
     "current": {
-      "intervalId": "INT-implementation-G1-001",
+      "intervalId": "INT-implementation-G2-002",
       "phaseId": "implementation",
-      "generation": 1,
-      "baselineSha256": "a787d22b0f0580ee996fac54e49072ec15d046d23554e50360d79df793799db4",
-      "sourceBaseCommit": "f4e8ccafe4fb1b396da5d6036c4240fe1379a55b",
+      "generation": 2,
+      "baselineSha256": "14f38bfc6f01e77f769b03f0e078fb3c8c0b74e133d3a0763d4b07257b0d98fd",
+      "sourceBaseCommit": "a0b21038572e8c7cd341078dc5c3dcbd536814f8",
       "escalationTarget": null,
-      "path": "singularity/work-items/arshy/context/work-intervals/implementation-gen1-baseline.json",
+      "path": "singularity/work-items/arshy/context/work-intervals/implementation-gen2-baseline.json",
       "status": "open"
     },
     "history": [
@@ -9176,6 +9341,16 @@
         "sourceBaseCommit": "f4e8ccafe4fb1b396da5d6036c4240fe1379a55b",
         "escalationTarget": null,
         "path": "singularity/work-items/arshy/context/work-intervals/implementation-gen1-baseline.json",
+        "status": "open"
+      },
+      {
+        "intervalId": "INT-implementation-G2-002",
+        "phaseId": "implementation",
+        "generation": 2,
+        "baselineSha256": "14f38bfc6f01e77f769b03f0e078fb3c8c0b74e133d3a0763d4b07257b0d98fd",
+        "sourceBaseCommit": "a0b21038572e8c7cd341078dc5c3dcbd536814f8",
+        "escalationTarget": null,
+        "path": "singularity/work-items/arshy/context/work-intervals/implementation-gen2-baseline.json",
         "status": "open"
       }
     ],
@@ -9269,6 +9444,37 @@
       "actor": "ashokraj2011",
       "agent": "developer",
       "at": "2026-11-20T06:50:42.109Z"
+    },
+    {
+      "id": "STL-004",
+      "kind": "review-corrections",
+      "subject": "implementation version 1: the review's findings",
+      "phase": "implementation",
+      "answer": "Started version 2 of implementation to fix the review's findings on version 1",
+      "evidence": [
+        {
+          "what": "the review of version 1 asks for 8 corrections",
+          "where": "implementation review of version 1"
+        },
+        {
+          "what": "nobody answered that review, approved, returned or asked to change version 1",
+          "where": "implementation review, approval and request records"
+        }
+      ],
+      "by": "sflow",
+      "effect": {
+        "generation": 1,
+        "toGeneration": 2,
+        "findings": [
+          "AC-001-CANVAS-PROOF",
+          "AC-002-CANVAS-PROOF",
+          "REQ-001-PLOT-PROOF",
+          "REQ-002-CIRCLE-PROOF"
+        ]
+      },
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "at": "2026-11-20T07:01:08.407Z"
     }
   ],
   "scopeRevisions": [
