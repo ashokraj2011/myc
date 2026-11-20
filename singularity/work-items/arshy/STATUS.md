@@ -18,10 +18,11 @@
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
 | 5 | Verification (`verification`) | qa | **approved** | 2 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
-| 6 | Release (`release`) | qa | **in_progress** | 0 | 0 | unavailable |
+| 6 | Release (`release`) | qa | **in_progress** | 1 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-11-20T13:44:44.910Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 1
 - 2026-11-20T13:40:20.362Z — **phase_self_approved** (verification) by ashokraj2011 · agent qa: threshold reached; advanced to release
 - 2026-11-20T13:40:20.362Z — **work_interval_closed** (verification) by ashokraj2011 · agent qa: interval INT-verification-G2-007 closed after phase approval
 - 2026-11-20T13:32:54.722Z — **phase_submitted** (verification) by ashokraj2011 · agent qa: 1 artifacts
@@ -36,4 +37,3 @@
 - 2026-11-20T13:21:54.197Z — **work_interval_started** (verification) by system: baseline 45c02a967ddf at ea4832b23531
 - 2026-11-20T13:21:54.179Z — **phase_self_approved** (convergence) by ashokraj2011: threshold reached; advanced to verification
 - 2026-11-20T13:14:26.305Z — **phase_submitted** (convergence) by ashokraj2011: 1 artifacts
-- 2026-11-20T13:13:00.005Z — **phase_generated** (convergence) by ashokraj2011: generation 1
