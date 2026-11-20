@@ -4,27 +4,51 @@
   "workId": "arshy",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "62329eeb7517a12804833027e12fdf0908500174b5b1df0fd19f44da964870d2",
+      "bytes": 9195
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-20T05:10:26.495Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "61bdf5ec6f566bb1a1618da8365e18f1fffd9f44",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "106d3c3a8dbea5992306f47e45f781900b06ed64faafb501f8945ee96a55a9a6",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/arshy/context/clarifications-specification-gen1.json",
+    "sha256": "07776cd877d1f34b05b3d7008d9e7b6ab9ec71a49f68ca010e0eddf81f2f1069",
+    "promptSha256": "21ff847867a72ad2e8179465350cf7477c8bcd5645c7afcd7a090bf798508502",
+    "responses": 5,
+    "markers": [],
+    "recordedAt": "2026-11-20T05:08:55.561Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": null,
+      "githubLookup": "not-checked"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/arshy/telemetry/specification-gen1.json",
+      "sha256": "873d4c6d1cb1dc2b4b10e7f0b8b76b8ac20f86704f16bab622ec8e0149b9f309",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 30086,
+        "estimatedTokens": 7522,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 30086,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-20T05:10:26.495Z",
+      "completedAt": "2026-11-20T05:10:26.495Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -54,133 +135,95 @@
 
 # Specification — arshy
 
-<!-- sflow:guidance
-Scenarios come first, and general requirements come after them `[SPK:REQ-068]`. That ordering is the template's opinion: a requirement written before anyone has described the situation it serves tends to describe the system instead of the need, and nobody notices until verification.
-
-Where the current Story evidence leaves something material unknown, say so with a marker rather than guessing. Use this syntax:
-
-    [NEEDS CLARIFICATION: <one question grounded in the current Story evidence>]
-
-Replace the angle-bracketed placeholder; never copy or ask it as written. The question must be one non-empty line and must arise from the pinned sources, approved upstream artifacts, repository world model, or a contradiction among them. Markers are extracted the same way clauses are, so a marker inside fenced or inline code is ignored `[SPK:REQ-063]`. This phase blocks publication while any marker is unresolved, and a marker is only resolved when a later generation removes it *and* records the answer `[SPK:REQ-067]` — deleting the text alone is an integrity failure, not an answer.
--->
-
-<!-- sflow:guidance Keep every section of this template. When one does not fit this change (for example Permissions for a library or command-line tool with no roles), write `Not applicable: <reason>` under it rather than deleting it: later steps carry Actors, Failure and empty states, Permissions, Boundary conditions and the other sections forward, and stop when one is missing. -->
-
 ## Agent brief
 
-<!-- sflow:guidance Summarize the approved intent for downstream agents in a compact, standalone form. Include the problem, intended outcome, principal actors, most important scenarios, hard constraints, and major exclusions. Do not introduce claims that are absent from the sections below. Exact requirements and boundary conditions are preserved separately by the governed projection. -->
-
-TODO: Write the Agent brief here as visible text; text inside the comment above is not read.
+An app user can use a Desmos-inspired plotter to enter and view general 2D Cartesian equations. The required example is a circle of radius 6 centered at the origin, and Playwright coverage must verify that case. No attachment was available, so the Desmos link is a reference direction rather than a pixel-level design specification. No additional graph limits or non-functional constraints were supplied.
 
 ## Actors
 
-<!-- sflow:guidance Who uses this, and what authority does each hold? -->
-
-TODO: Name each actor and the authority each one holds.
+The app user enters a Cartesian equation and views its graph. No distinct roles or permission levels are specified.
 
 ## User scenarios
 
-<!-- sflow:guidance Prioritized. Each scenario leads with the situation, then its acceptance cases. -->
-
-<!-- sflow:guidance Before drafting, split the pinned request and recorded answers into observable obligations for the actual interfaces (UI, API, event/message, batch/job, CLI, library or mixed). Keep the source -> REQ/AC -> assertion -> verification mapping in the existing sections. Existing ACs count; do not duplicate clauses or invent controls, endpoints, limits, errors or screenshot requirements. Self-check whether an implementation could meet this draft yet omit an explicit request. Repair clear omissions in this editable draft and recheck within the returned repair policy; preserve published inputs and settled answers. These are authoring instructions, not execution evidence. -->
-
-### S1 — <the most important situation, in the user's words>
+### S1 — Plot a Cartesian equation
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** App user
+**Context:** The graph plotter is available in the existing application.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+- **Given** the graph plotter is available
+  **When** the user enters the Cartesian equation `y = x`
+  **Then** the plotter displays its corresponding 2D graph.
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
+### S2 — Verify the required circle
 
-### S2 — <the next situation>
+**Priority:** P1
+**Actor:** App user
+**Context:** The graph plotter is available.
 
-**Priority:** P2
-
-- **Given** … **When** … **Then** …
+- **Given** the graph plotter is available
+  **When** the user enters `x^2 + y^2 = 36`
+  **Then** the plotter displays a circle centered at `(0, 0)` with radius `6`.
 
 ## Failure and empty states
 
-<!-- sflow:guidance What happens the first time, with nothing there yet, and when each step fails. These are where specifications are usually silent and implementations usually improvise. -->
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** No Story-specific empty-state behavior is specified.
+- **Failure:** No invalid-expression or rendering-failure behavior is specified.
+- **Partial:** No partial-completion behavior is specified.
 
 ## Scenario coverage
 
-<!-- sflow:guidance One row per behavior/acceptance clause; repeat rows for multiple outcomes. Every referenced S-number must have complete Given/When/Then acceptance cases above. Outcome is success, failure, boundary, or empty. Rejection/error requirements need distinct failure cases, not only happy-path prose. Use the pinned request and clarification answers; do not invent error text or new scope. -->
-
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `ARSHY:REQ-001` | S1 | TODO |
-| `ARSHY:REQ-002` | S2 | TODO |
-| `ARSHY:AC-001` | S1 | TODO |
+| `ARSHY:REQ-001` | S1 | success |
+| `ARSHY:REQ-002` | S2 | success |
+| `ARSHY:AC-001` | S2 | success |
+| `ARSHY:AC-002` | S1 | success |
 
 ## Permissions
 
-<!-- sflow:guidance Who may do each thing, and what a reader without that authority sees instead. -->
-
-TODO: Say who may do each thing, and what someone without that authority sees instead.
+Not applicable: the Story specifies a single app-user role and no permission tiers.
 
 ## Boundary conditions
 
-<!-- sflow:guidance Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one. -->
-
-TODO: State each limit, size, count or timeout, and what happens at and beyond it.
+The required circle has radius `6` and center `(0, 0)`. No other input, viewport, size, count, or timeout limits are specified.
 
 ## Requirements
 
-<!-- sflow:guidance Numbered, testable, one obligation each. Cite the scenario each serves. -->
+- The plotter shall accept user-supplied 2D Cartesian equations and display their corresponding graphs. *(S1)* [ARSHY:REQ-001]
+- The plotter shall display a circle of radius `6` centered at `(0, 0)`, represented by `x^2 + y^2 = 36`. [scope:SRI-15d4e5bd263a] *(S2)* [ARSHY:REQ-002]
 
-- <requirement>. *(S1)* [ARSHY:REQ-001]
-- <requirement>. *(S1, S2)* [ARSHY:REQ-002]
-
-<!-- sflow:guidance Acceptance criteria use the same stable, namespaced form: -->
-
-- <observable acceptance outcome>. *(S1)* [ARSHY:AC-001]
+- A Playwright test shall verify that `x^2 + y^2 = 36` is plotted as a circle centered at `(0, 0)` with radius `6`. *(S2)* [ARSHY:AC-001]
+- A Playwright test shall verify that entering `y = x` displays its corresponding 2D Cartesian graph. *(S1)* [ARSHY:AC-002]
 
 ## Verification intent
 
-<!-- sflow:guidance One row per declared clause, including non-functional requirements. Methods: test, visual, inspection, or a comma-separated combination (all required). AC Criterion is its own ID. A visual/inspection requirement names the AC proving it; a test-only requirement may use -. An AC a requirement names lists every method that requirement lists: a `test, visual` requirement needs a `test, visual` AC. Choose from the pinned source, not from available tools. A screenshot is visual proof, not a test exemption. Planning must inherit these methods and cannot change them without an approved scope amendment. -->
-
 | Clause | Methods | Criterion |
 |---|---|---|
-| `ARSHY:REQ-001` | TODO | - |
-| `ARSHY:REQ-002` | TODO | - |
-| `ARSHY:AC-001` | TODO | `ARSHY:AC-001` |
+| `ARSHY:REQ-001` | test | `ARSHY:AC-002` |
+| `ARSHY:REQ-002` | test | `ARSHY:AC-001` |
+| `ARSHY:AC-001` | test | `ARSHY:AC-001` |
+| `ARSHY:AC-002` | test | `ARSHY:AC-002` |
 
 ## Non-functional requirements
 
-<!-- sflow:guidance Latency, throughput, availability, accessibility, privacy, retention. State the number and how it will be measured; "fast" is not a requirement. -->
-
-<!-- sflow:guidance Use governed requirement anchors here too (for example `[ARSHY:REQ-003]`); `NFR-001` by itself is only a display label and is not a stable clause identity. -->
-
-TODO: State each non-functional requirement with its number and how it is measured, or write None for this change.
+None specified for this change.
 
 ## Constitution articles
 
-<!-- sflow:guidance Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each cited ID exists at the pinned revision before publication `[SPK:REQ-101]`. -->
-
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-<!-- sflow:guidance What this specification takes as true without proving. An assumption that turns out false is a change request, not a defect — which is only true if it was written down. -->
-
-TODO: List what this specification takes as true without proving, or write None.
+- The supplied Desmos URL is a conceptual reference; no attached image or exact visual specification is available.
+- “General 2D Cartesian equations” does not define a broader expression grammar or additional Desmos features.
 
 ## Out of scope
 
-<!-- sflow:guidance Named explicitly, so the boundary is reviewable rather than inferred. -->
-
-TODO: Name what this change does not do.
+No additional plotting features beyond general 2D Cartesian equation plotting and the required circle case are committed. Exact visual reproduction of Desmos and constraints not stated in the Story or clarification are out of scope.
 
 ## Sources
 
-<!-- sflow:guidance Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one offered to this phase that could not be read or was not available here, named as a gap. Without supporting documents, say so. -->
+- Pinned Story source: `singularity/work-items/arshy/source.json`.
+- Clarification: the user supplied the Desmos URL as the reference direction, accepted general 2D Cartesian plotting with the circle as a required case, and specified no additional constraints.
+- Supporting attachments/documents: none were copied or attached. Reference: https://www.desmos.com/calculator.
