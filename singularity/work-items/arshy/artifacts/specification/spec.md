@@ -4,7 +4,7 @@
   "workId": "arshy",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 3,
+  "generation": 4,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "spec.md",
       "mediaType": "text/markdown",
-      "sha256": "be6f77cc4e4eed9af08ae5ddb965ec8728ddcf4b77d6b9f84067cfcd90c20932",
-      "bytes": 5058
+      "sha256": "844a78265eb21202f048b36dc54501c17555031fd8e90573e1d3accf718ea839",
+      "bytes": 5217
     },
-    "generation": 3,
-    "publishedAt": "2026-11-20T05:26:34.612Z"
+    "generation": 4,
+    "publishedAt": "2026-11-20T05:36:48.829Z"
   },
-  "sourceCommit": "76a1ee5127ba17ccb5192244cc9df5cbd29f135d",
+  "sourceCommit": "0e82c6479250d638cb910ff54750159727879bf6",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "106d3c3a8dbea5992306f47e45f781900b06ed64faafb501f8945ee96a55a9a6",
@@ -66,18 +66,18 @@
   },
   "remoteAgent": null,
   "clarification": {
-    "generation": 3,
-    "path": "singularity/work-items/arshy/context/clarifications-specification-gen3.json",
-    "sha256": "c59bb9f649736332c399c51f88b5bfca8bcb2b41845e38f1e34328f854f21d41",
-    "promptSha256": "4a90593aa2c7c192b10abf1817f1d917342922c5c0f3b659b12e831583c58ca7",
+    "generation": 4,
+    "path": "singularity/work-items/arshy/context/clarifications-specification-gen4.json",
+    "sha256": "93c8a83729a70b84eba64da2f733cca8889b57b2a15ef6eae32cb5e3879679b5",
+    "promptSha256": "c12c5ac48c1bc7daaec21a0d88b10bfecd49c8f2315b330154a32f63590e721d",
     "responses": 1,
     "markers": [],
-    "recordedAt": "2026-11-20T05:25:51.581Z",
+    "recordedAt": "2026-11-20T05:36:10.678Z",
     "recordedBy": {
       "name": "Ashok Raj",
       "email": "88361104+ashokraj2011@users.noreply.github.com",
-      "login": null,
-      "githubLookup": "not-checked"
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
     }
   },
   "telemetry": [
@@ -125,6 +125,26 @@
       "generation": 3,
       "path": "singularity/work-items/arshy/telemetry/specification-gen3.json",
       "sha256": "aed3efc0a9c0d022ac882dd9a420484148b1e33cda25170fe9472dd9725c1a63",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 29875,
+        "estimatedTokens": 7469,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 29875,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 4,
+      "path": "singularity/work-items/arshy/telemetry/specification-gen4.json",
+      "sha256": "06e34c5e93dce6df74f74c09309551e9db08a54b2a316531508ff5c73766538c",
       "status": "pending",
       "models": [],
       "providerCost": null,
@@ -206,6 +226,27 @@
       "completedAt": "2026-11-20T05:26:34.612Z",
       "agent": "product-owner",
       "generation": 3
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-20T05:36:48.829Z",
+      "completedAt": "2026-11-20T05:36:48.829Z",
+      "agent": "product-owner",
+      "generation": 4
     }
   ],
   "sequenceOverrides": [],
@@ -318,4 +359,5 @@ No additional plotting features beyond the confirmed equation forms and required
 - Clarification (generation 1): the user supplied the Desmos URL as the reference direction and accepted general 2D Cartesian plotting with the circle as a required case.
 - Clarification (generation 2): the user confirmed explicit `y=f(x)` and implicit `F(x,y)=0` forms using basic arithmetic and powers, with no additional graph-range, interaction, accessibility, or performance constraints. This resolves the differing generation 1 constraints replies.
 - Clarification (generation 3): the user confirmed “functional inspiration only” for the supplied Desmos URL; no image or other attachment is available.
-- Supporting attachments/documents: none were copied or attached. Reference: https://www.desmos.com/calculator.
+- Clarification (generation 4): the user confirmed the Desmos URL is the sole supporting reference; no other supporting documents or images are intended. This resolves the Story note that earlier materials were not copied.
+- Reference: https://www.desmos.com/calculator.
