@@ -5,7 +5,7 @@
 - Capability: **calc** (`raj-calc`)
 - Capability map: `a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d`
 - Overall status: **in_progress**
-- Current phase: **verification**
+- Current phase: **release**
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
@@ -16,11 +16,14 @@
 |  | ⚠ self-approval | Ashok Raj via engineering-reviewers; agent developer | **warning** |  |  |  |
 | 4 | Convergence (`convergence`) | architect | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
-| 5 | Verification (`verification`) | qa | **awaiting_approval** | 2 | 0 | unavailable |
-| 6 | Release (`release`) | qa | **not_started** | 0 | 0 | unavailable |
+| 5 | Verification (`verification`) | qa | **approved** | 2 | 1 | unavailable |
+|  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
+| 6 | Release (`release`) | qa | **in_progress** | 0 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-11-20T13:40:20.362Z — **phase_self_approved** (verification) by ashokraj2011 · agent qa: threshold reached; advanced to release
+- 2026-11-20T13:40:20.362Z — **work_interval_closed** (verification) by ashokraj2011 · agent qa: interval INT-verification-G2-007 closed after phase approval
 - 2026-11-20T13:32:54.722Z — **phase_submitted** (verification) by ashokraj2011 · agent qa: 1 artifacts
 - 2026-11-20T13:32:54.720Z — **work_interval_reconciled** (verification) by system: aligned; 0 changed path(s)
 - 2026-11-20T13:32:29.926Z — **source_review_submitted** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 4fded4e5dfa5e14042fde8305bdece5aa0955bd843ad8099bc6da994d8e8dfae
@@ -34,5 +37,3 @@
 - 2026-11-20T13:21:54.179Z — **phase_self_approved** (convergence) by ashokraj2011: threshold reached; advanced to verification
 - 2026-11-20T13:14:26.305Z — **phase_submitted** (convergence) by ashokraj2011: 1 artifacts
 - 2026-11-20T13:13:00.005Z — **phase_generated** (convergence) by ashokraj2011: generation 1
-- 2026-11-20T13:12:06.028Z — **phase_self_approved** (implementation) by ashokraj2011 · agent developer: threshold reached; advanced to convergence
-- 2026-11-20T13:12:06.028Z — **work_interval_closed** (implementation) by ashokraj2011 · agent developer: interval INT-implementation-G5-005 closed after phase approval
