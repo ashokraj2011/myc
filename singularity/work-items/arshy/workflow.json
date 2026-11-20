@@ -5709,6 +5709,14 @@
       "event": "version_opened",
       "phase": "implementation",
       "detail": "version 3 opened (review-corrections) settled for the person (STL-005; only the reviewer had seen version 2)"
+    },
+    {
+      "at": "2026-11-20T10:49:22.602Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "decision_settled",
+      "phase": "implementation",
+      "detail": "STL-006 (plan-accounting) settled by SFlow: Listed .gitignore in the plan as a supporting change (an ignore file): it serves the change, not one requirement. Evidence: .gitignore only lists files a tool leaves out (.gitignore)"
     }
   ],
   "measurement": {
@@ -6313,6 +6321,28 @@
       ],
       "blockedCode": null,
       "recordSha256": "b016ebaf2a9819cd10247ce1be8553805ef5453b028c3eceb55e25384b56d6c6"
+    },
+    "WT-0047e5a87aae0fc8f279f1c242636d717b591f36400d07402d85a6ed374b31e1": {
+      "schemaVersion": 1,
+      "kind": "workflow-task-record",
+      "authority": "progress-only",
+      "workId": "arshy",
+      "phaseId": "implementation",
+      "generation": 3,
+      "role": "author",
+      "repositoryIdentity": "4dc77d5a23f27a2786b99b5cefbd15198ad2df58d473326391512e1516c5491f",
+      "storyIdentity": "611fa0832811b24a861a47b0e64d9f328a4295ebb11a4cbd251875bfabbf3d8b",
+      "id": "WT-0047e5a87aae0fc8f279f1c242636d717b591f36400d07402d85a6ed374b31e1",
+      "inputSha256": "303c7b47fae811c0c41b8a16fc70a63b529fa717880e823a04ffb0d03b8a8a3c",
+      "revision": 1,
+      "state": "validate-draft",
+      "continuations": 0,
+      "maximumContinuations": 3,
+      "repairConsumed": 0,
+      "conditions": [],
+      "checkpoints": [],
+      "blockedCode": null,
+      "recordSha256": "4f95f6e3e0db52396f25741d29add9c20ede7d5c8ee23fbf413218209c17668a"
     }
   },
   "publicationProjections": [
@@ -9880,6 +9910,140 @@
         },
         "createdAt": "2026-11-20T10:42:24.036Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "e7d7284e-fafe-4974-90f9-dbd71b7fd92e",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "arshy",
+          "branch": "arshy"
+        },
+        "phaseId": "implementation",
+        "generation": 2,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": null,
+        "payload": {
+          "decision": "settled",
+          "reviewPacketSha256": null,
+          "settled": "STL-006",
+          "kind": "plan-accounting"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-20T10:49:22.662Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "e7d7284e-fafe-4974-90f9-dbd71b7fd92e",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "arshy"
+          ],
+          "branch": "arshy",
+          "canonicalBranch": "arshy",
+          "createdAt": "2026-11-20T05:04:22.679Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 2,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 2
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph",
+          "updatedAt": "2026-11-20T10:49:22.602Z",
+          "workId": "arshy",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "106d3c3a8dbea5992306f47e45f781900b06ed64faafb501f8945ee96a55a9a6",
+          "lifecycleEventId": "e7d7284e-fafe-4974-90f9-dbd71b7fd92e",
+          "lifecyclePayload": {
+            "decision": "settled",
+            "reviewPacketSha256": null,
+            "settled": "STL-006",
+            "kind": "plan-accounting"
+          },
+          "templateSha256": "ba0749ab3997579949fc836a839af6606f995c2012a90b410597ebadf211298d",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "e7d7284e-fafe-4974-90f9-dbd71b7fd92e",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "arshy",
+              "branch": "arshy"
+            },
+            "phaseId": "implementation",
+            "generation": 2,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": null,
+            "payload": {
+              "decision": "settled",
+              "reviewPacketSha256": null,
+              "settled": "STL-006",
+              "kind": "plan-accounting"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-20T10:49:22.662Z"
+          }
+        },
+        "createdAt": "2026-11-20T10:49:22.668Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -10079,6 +10243,27 @@
       "actor": "ashokraj2011",
       "agent": "developer",
       "at": "2026-11-20T10:42:23.976Z"
+    },
+    {
+      "id": "STL-006",
+      "kind": "plan-accounting",
+      "subject": "file:.gitignore",
+      "phase": "implementation",
+      "answer": "Listed .gitignore in the plan as a supporting change (an ignore file): it serves the change, not one requirement.",
+      "evidence": [
+        {
+          "what": ".gitignore only lists files a tool leaves out",
+          "where": ".gitignore"
+        }
+      ],
+      "by": "sflow",
+      "effect": {
+        "file": ".gitignore",
+        "class": "repository-metadata"
+      },
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "at": "2026-11-20T10:49:22.602Z"
     }
   ],
   "scopeRevisions": [

@@ -170,7 +170,7 @@
 
 ## Agent brief
 
-The existing React grapher mode now accepts explicit `y = f(x)` input and implicit `F(x,y) = 0` input. It preserves the existing explicit plotting and preset behavior while sampling implicit contours on the canvas, with an origin-centered radius-fit for `x^2 + y^2 = 36`.
+The existing React grapher mode accepts the approved explicit and implicit Cartesian equations and retains the existing presets. Implicit contours are drawn as interpolated segments between cell-edge crossings; the origin-centered radius-fit renders `x^2 + y^2 = 36` as the required radius-6 circle. Playwright exercises equation entry and inspects rendered canvas pixels.
 
 ## Implemented outcome
 
@@ -185,16 +185,19 @@ None: this Story pinned no constitution.
 ### Product source
 
 - `src/components/FunctionGrapher.jsx`: `@clause:ARSHY:REQ-001` binds the equation normalization and explicit/implicit rendering paths to the accepted Cartesian grammar. `@clause:ARSHY:REQ-002` binds the origin-centered radius-6 circle fit and implicit contour rendering.
-- No configuration, migration, or dependency changes were required.
+- `tests/graph-plotter.spec.js`: browser tests tagged `@ac:ARSHY:AC-001` and `@ac:ARSHY:AC-002` enter the approved equations and verify rendered canvas output, including circle center and radius.
+- `src/components/FunctionGrapher.test.jsx` retains focused Vitest coverage for equation normalization and sampling helpers.
+- `playwright.config.js`, `package.json`, and `package-lock.json` configure and provide Playwright; `vite.config.js` keeps the Playwright spec out of Vitest discovery.
 
 The implementation deliberately does not add graph ranges or other Desmos-specific behavior outside the approved clauses.
 
 ## Tests and operational notes
 
-- `tests/graph-plotter.spec.js`: `@ac:ARSHY:AC-001` verifies sampled contour geometry for `x^2 + y^2 = 36`, including origin centering and radius 6; `@ac:ARSHY:AC-002` verifies sampled explicit and implicit plots for the approved equations.
-- Focused command: `npm test -- tests/graph-plotter.spec.js`
-- Observed result: 1 test file passed, 4 tests passed.
-- Remaining limitation: this repository's configured local test environment has no Playwright runner or browser evidence; the acceptance mappings are represented in Vitest coverage. Browser/canvas behavior should be replayed by an approved step runner before release if pixel-level or live interaction evidence is required.
+- `npm run test:e2e`: 2 Playwright tests passed, exercising the three approved explicit/implicit equations and verifying the rendered centered radius-6 circle in a browser.
+- `npm test -- --run src/components/FunctionGrapher.test.jsx`: 1 Vitest file passed, 4 tests passed.
+- `npm run build`: passed; Vite reported its existing large-bundle advisory.
+- Full `npm test` was attempted on Node 26.12.0; 18 tests passed and 17 existing `src/App.test.jsx` cases failed because `localStorage` was undefined in that runtime. The recorded Node 22.14.0 run from generation 2 is not evidence for this generation.
+- `npm run lint` was attempted and reports existing repository errors, including React import/unused-variable issues and React hook lint findings in `FunctionGrapher.jsx`; the new test/config files are checked separately.
 
 <!-- singularity-flow:inputs:start -->
 
