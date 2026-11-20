@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "phase": "implement",
+  "generation": 1,
+  "reportSha256": "0643b6e8f7d2e00130303ab63701e101a9722d4172edafadaf82e9cb51b2da73",
+  "lifecycleEventId": "8592179e-037a-4e3a-9b8b-7559296e591f",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "code",
+    "binding": {
+      "workId": "fix-issues",
+      "phase": "implement",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "code:src:App.jsx",
+          "path": "src/App.jsx",
+          "textSha256": "f0cebbd56fb2b16393f0e75c4dbd19938f775204a5bcb2ef4319acfc8ee5a435"
+        },
+        {
+          "id": "code:src:components:FunctionGrapher.jsx",
+          "path": "src/components/FunctionGrapher.jsx",
+          "textSha256": "c2f086138d44640cd463c6bda4dd0db6776d52855fd7030a7e028ee619aebef0"
+        },
+        {
+          "id": "code:src:index.css",
+          "path": "src/index.css",
+          "textSha256": "f7b3e998eee9f604f5f4701e953351934ed86925317e6f07ea241bca7c3790a0"
+        },
+        {
+          "id": "code:tests:graph-plotter.spec.js",
+          "path": "tests/graph-plotter.spec.js",
+          "textSha256": "d2586fd58db153a4043ae3187579409f2e5648433eca4467284a61c2edf06cb0"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/fix-issues/artifacts/implement/implementation-summary.md",
+        "sha256": "0274f5987df308dd18dfb9b3f876f484dae903d36f70adb4b8e29bd61dd116d9"
+      },
+      "plan": {
+        "path": "singularity/work-items/fix-issues/artifacts/intake/intake.md",
+        "sha256": "0d6c6c6b22682afa12add64895dafb4fcdd636c0580d1c0396e1891e1dabe667"
+      },
+      "evidenceSha256": "c360ef6c4401b47edf784a965baf05edab26381aaaa20281330e49b52634083e"
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "code:src:App.jsx",
+      "code:src:components:FunctionGrapher.jsx",
+      "code:src:index.css",
+      "code:tests:graph-plotter.spec.js"
+    ],
+    "rows": [
+      {
+        "clauseId": "FIX-ISSUES:AC-001",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 242,
+            "quote": "ctx.lineTo(point.px, point.py);"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 252,
+            "quote": "ctx.lineTo(segment.end.px, segment.end.py);"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 103,
+            "quote": "await expect.poll(() => hasPinkPixelNear(canvas, point)).toBe(true);"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "FIX-ISSUES:AC-002",
+        "implementation": [
+          {
+            "sourceId": "code:src:App.jsx",
+            "line": 305,
+            "quote": "{activeMode === 'grapher' && <FunctionGrapher soundEnabled={soundEnabled} />}"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 271,
+            "quote": "onChange={(e) => setEquation(e.target.value)}"
+          },
+          {
+            "sourceId": "code:src:index.css",
+            "line": 395,
+            "quote": "overflow-x: auto;"
+          },
+          {
+            "sourceId": "code:src:index.css",
+            "line": 368,
+            "quote": "min-width: 0;"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 147,
+            "quote": "expect(await readPageDimensions(page)).toEqual(initialDimensions);"
+          },
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 150,
+            "quote": "expect(await readPageDimensions(page)).toEqual(initialDimensions);"
+          },
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 153,
+            "quote": "expect(await readPageDimensions(page)).toEqual(initialDimensions);"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "FIX-ISSUES:REQ-001",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 242,
+            "quote": "ctx.lineTo(point.px, point.py);"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 252,
+            "quote": "ctx.lineTo(segment.end.px, segment.end.py);"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 103,
+            "quote": "await expect.poll(() => hasPinkPixelNear(canvas, point)).toBe(true);"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "FIX-ISSUES:REQ-002",
+        "implementation": [
+          {
+            "sourceId": "code:src:App.jsx",
+            "line": 305,
+            "quote": "{activeMode === 'grapher' && <FunctionGrapher soundEnabled={soundEnabled} />}"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 271,
+            "quote": "onChange={(e) => setEquation(e.target.value)}"
+          },
+          {
+            "sourceId": "code:src:index.css",
+            "line": 395,
+            "quote": "overflow-x: auto;"
+          },
+          {
+            "sourceId": "code:src:index.css",
+            "line": 368,
+            "quote": "min-width: 0;"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 147,
+            "quote": "expect(await readPageDimensions(page)).toEqual(initialDimensions);"
+          },
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 150,
+            "quote": "expect(await readPageDimensions(page)).toEqual(initialDimensions);"
+          },
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 153,
+            "quote": "expect(await readPageDimensions(page)).toEqual(initialDimensions);"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      }
+    ],
+    "unplannedPaths": [],
+    "qualityReviewed": [],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "38dca223af250ef02573f98cce3e0f7e3f9991f6999ce8ddcb4db540904a8d13",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": null,
+      "githubLookup": "not-checked"
+    },
+    "authorAgentId": "human-author",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-20T15:00:24.523Z",
+  "recordSha256": "32679b03a98833c969260b02943c5c91d11665d2c9ea5b396f936ba6f3922431"
+}
