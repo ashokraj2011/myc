@@ -10,7 +10,7 @@
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
 | 1 | Specification (`specification`) | product-owner | **approved** | 4 | 0 | unavailable |
-| 2 | Planning (`planning`) | architect | **in_progress** | 1 | 0 | unavailable |
+| 2 | Planning (`planning`) | architect | **awaiting_approval** | 1 | 0 | unavailable |
 | 3 | Implementation (`implementation`) | developer | **not_started** | 0 | 0 | unavailable |
 | 4 | Convergence (`convergence`) | architect | **not_started** | 0 | 0 | unavailable |
 | 5 | Verification (`verification`) | qa | **not_started** | 0 | 0 | unavailable |
@@ -18,6 +18,7 @@
 
 ## Recent history
 
+- 2026-11-20T05:52:38.722Z — **phase_submitted** (planning) by ashokraj2011 · agent architect: 1 artifacts
 - 2026-11-20T05:51:59.809Z — **source_review_submitted** (planning) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 266213c536166328dc0080b134f076219aaa69510b83e8f66ef521abb34422dd
 - 2026-11-20T05:50:37.662Z — **phase_generated** (planning) by ashokraj2011 · agent architect: generation 1
 - 2026-11-20T05:38:41.142Z — **phase-approved-automatically** (specification) by sflow-approved-automatically: approved automatically: the reviewer said ready; its checks passed; nothing was open for it; advanced to planning
@@ -32,4 +33,3 @@
 - 2026-11-20T05:18:10.433Z — **source_review_submitted** (specification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 5c4c45a277bbf4320d23261aa5e7376d3beacc7d81d7ca45eb96ef0778991956
 - 2026-11-20T05:16:04.334Z — **phase_generated** (specification) by ashokraj2011 · agent product-owner: generation 2
 - 2026-11-20T05:12:51.562Z — **version_opened** (specification) by 88361104+ashokraj2011@users.noreply.github.com · agent product-owner: version 2 opened (review-corrections) settled for the person (STL-001; only the reviewer had seen version 1)
-- 2026-11-20T05:12:51.562Z — **decision_settled** (specification) by ashokraj2011 · agent product-owner: STL-001 (review-corrections) settled by SFlow: Started version 2 of specification to fix the review's findings on version 1
