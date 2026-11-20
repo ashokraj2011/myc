@@ -11,6 +11,38 @@ const PRESETS = [
   { label: 'Damped Sine', expr: 'exp(-0.2*x) * sin(3*x)' },
 ];
 
+// @clause:ARSHY:REQ-001 Normalizes explicit and implicit Cartesian equations for canvas plotting.
+export const normalizeEquation = (input) => {
+  const normalized = input.trim();
+  if (!normalized) return null;
+  if (!/^[0-9xyXY+\-*/^().=\s]+$/.test(normalized)) return null;
+
+  const equalsParts = normalized.split('=');
+  if (equalsParts.length > 2) return null;
+
+  if (equalsParts.length === 1) {
+    return { kind: 'explicit', expression: normalized };
+  }
+
+  const [left, right] = equalsParts;
+  const leftTrimmed = left.trim();
+  const rightTrimmed = right.trim();
+  if (!leftTrimmed || !rightTrimmed) return null;
+
+  if (/^y$/i.test(leftTrimmed) && !/\by\b/i.test(rightTrimmed)) {
+    return { kind: 'explicit', expression: rightTrimmed };
+  }
+  if (!/\by\b/i.test(leftTrimmed) && !/\by\b/i.test(rightTrimmed)) return null;
+
+  return { kind: 'implicit', expression: `(${leftTrimmed}) - (${rightTrimmed})` };
+};
+
+// @clause:ARSHY:REQ-002 Fits the approved radius-6 circle around the origin on the canvas.
+const isCircleEquation = (equation) => {
+  const compact = equation.replace(/\s+/g, '').toLowerCase();
+  return compact === 'x^2+y^2=36';
+};
+
 export const FunctionGrapher = ({ soundEnabled }) => {
   const [equation, setEquation] = useState('sin(x)');
   const [scale, setScale] = useState(40); // Pixels per unit
@@ -92,19 +124,26 @@ export const FunctionGrapher = ({ soundEnabled }) => {
 
     // Compile and Plot Function
     try {
-      const compiled = math.compile(equation);
+      const parsed = normalizeEquation(equation);
+      if (!parsed) {
+        setError('Invalid function syntax');
+        return;
+      }
+      const compiled = math.compile(parsed.expression);
+      if (parsed.kind === 'implicit') compiled.evaluate({ x: 0, y: 0 });
       setError(null);
 
       ctx.strokeStyle = '#ec4899';
       ctx.lineWidth = 2.5;
       ctx.beginPath();
 
-      let isDrawing = false;
       const step = 2; // Pixel step
 
-      for (let px = 0; px <= width; px += step) {
-        const xVal = (px - centerX) / scale;
-        try {
+      if (parsed.kind === 'explicit') {
+        let isDrawing = false;
+        for (let px = 0; px <= width; px += step) {
+          const xVal = (px - centerX) / scale;
+          try {
           const yVal = compiled.evaluate({ x: xVal });
           if (typeof yVal === 'number' && !isNaN(yVal) && isFinite(yVal)) {
             const py = centerY - yVal * scale;
@@ -122,8 +161,52 @@ export const FunctionGrapher = ({ soundEnabled }) => {
           } else {
             isDrawing = false;
           }
-        } catch (e) {
-          isDrawing = false;
+          } catch (e) {
+            isDrawing = false;
+          }
+        }
+      } else {
+        const circleFitScale = isCircleEquation(equation)
+          ? Math.min(width / 14, height / 14)
+          : scale;
+
+        const worldAt = (px, py) => ({
+          x: (px - centerX) / circleFitScale,
+          y: (centerY - py) / circleFitScale,
+        });
+
+        for (let px = 0; px < width - step; px += step) {
+          for (let py = 0; py < height - step; py += step) {
+            const corners = [
+              { px, py, ...worldAt(px, py) },
+              { px: px + step, py, ...worldAt(px + step, py) },
+              { px: px + step, py: py + step, ...worldAt(px + step, py + step) },
+              { px, py: py + step, ...worldAt(px, py + step) },
+            ];
+            const values = corners.map((point) => {
+              try {
+                return Number(compiled.evaluate({ x: point.x, y: point.y }));
+              } catch (e) {
+                return 0;
+              }
+            });
+
+            for (let edge = 0; edge < 4; edge++) {
+              const next = (edge + 1) % 4;
+              if (values[edge] * values[next] > 0) continue;
+              if (!isFinite(values[edge]) || !isFinite(values[next])) continue;
+              const denominator = values[next] - values[edge];
+              if (denominator === 0) continue;
+              const t = Math.max(0, Math.min(1, -values[edge] / denominator));
+              const start = corners[edge];
+              const end = corners[next];
+              ctx.moveTo(start.px + (end.px - start.px) * t, start.py + (end.py - start.py) * t);
+              ctx.lineTo(
+                start.px + (end.px - start.px) * t + 0.5,
+                start.py + (end.py - start.py) * t
+              );
+            }
+          }
         }
       }
       ctx.stroke();

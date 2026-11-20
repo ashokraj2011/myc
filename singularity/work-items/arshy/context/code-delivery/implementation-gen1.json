@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "arshy",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "c86751f0-0f8f-40b4-9e8d-53307740c989",
+  "changeSet": {
+    "path": "singularity/work-items/arshy/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:3e65c299a5f8d6db683dc1635c4a3dc599b3c70c4a62edc2d2c428fa01b78b27",
+    "sourcePaths": [
+      "src/components/FunctionGrapher.jsx"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [
+      ".nvmrc"
+    ],
+    "executableTestPaths": [
+      "tests/graph-plotter.spec.js"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "build-configuration": 1,
+      "product-source": 1,
+      "test-source": 1
+    },
+    "entries": [
+      {
+        "changeId": "sha256:fde8b995e5502a55312a5f0ea2312cb352075fff9e36be04293f33e2daf774ba",
+        "status": "added",
+        "oldPath": null,
+        "newPath": ".nvmrc",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:1a1895a719fd686616f60b8372e859db8d6854458ef6944c65338addf796ca2e",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "tests/graph-plotter.spec.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:d0dc0734a235dfaf9502633cb3527fbe638da152ca6451078fc4a9df4da170bc",
+        "status": "modified",
+        "oldPath": "src/components/FunctionGrapher.jsx",
+        "newPath": "src/components/FunctionGrapher.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "ARSHY:AC-001",
+      "ARSHY:AC-002"
+    ],
+    "bound": [
+      "ARSHY:AC-001",
+      "ARSHY:AC-002"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "ARSHY:AC-001",
+        "testSource": "tests/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "ARSHY:AC-002",
+        "testSource": "tests/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "ARSHY:AC-001",
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "implicit circle graphing"
+          ],
+          "name": "normalizes x^2 + y^2 = 36 and renders an implicit radius-6 contour"
+        },
+        "logicalTestId": "sha256:922c6a3674f603409c0029755bd3adee2f7cc06c3a011693db14998a701e5bbf",
+        "declarationSha256": "sha256:7a9dbc2ad47d3c679f0ca81192d846faea2bab6d30692eaaec6cf4544aa07f15",
+        "supportSha256": null,
+        "assertions": {
+          "count": 1,
+          "tautological": 0,
+          "negative": false,
+          "boundary": false,
+          "nullability": false,
+          "adequacy": "adequate",
+          "subjects": [
+            "normalizeEquation"
+          ]
+        },
+        "line": 6,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "ARSHY:AC-002",
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "supported Cartesian equation grammar"
+          ],
+          "name": "normalizes %s"
+        },
+        "logicalTestId": "sha256:54b18caafdd9d8101c8fd2dcb1d2246844a95cd6543d2f063ab5bfc2dd418bcc",
+        "declarationSha256": "sha256:e524acf3e9affa09b2235d2123dd609e0154a069adfbd5ec72fad16354a1acb8",
+        "supportSha256": null,
+        "assertions": {
+          "count": 1,
+          "tautological": 0,
+          "negative": false,
+          "boundary": false,
+          "nullability": false,
+          "adequacy": "adequate",
+          "subjects": [
+            "normalizeEquation"
+          ]
+        },
+        "line": 18,
+        "parameters": {
+          "kind": "static",
+          "count": 3,
+          "titlePattern": "^normalizes .*?$"
+        },
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "ARSHY:REQ-001",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      },
+      {
+        "clauseId": "ARSHY:REQ-002",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "ARSHY:REQ-001",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 14,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "ARSHY:REQ-002",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 40,
+        "tag": "clause"
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "ARSHY:REQ-001",
+        "explanation": {
+          "text": "Normalizes explicit and implicit Cartesian equations for canvas plotting.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 14
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 32
+              },
+              {
+                "beforeStart": 95,
+                "beforeLines": 1,
+                "afterStart": 127,
+                "afterLines": 7
+              },
+              {
+                "beforeStart": 102,
+                "beforeLines": 1,
+                "afterStart": 139,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 105,
+                "beforeLines": 3,
+                "afterStart": 142,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 125,
+                "beforeLines": 2,
+                "afterStart": 164,
+                "afterLines": 46
+              }
+            ],
+            "symbols": [
+              {
+                "name": "normalizeEquation",
+                "kind": "function",
+                "line": 15
+              },
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 46
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "ARSHY:REQ-002",
+        "explanation": {
+          "text": "Fits the approved radius-6 circle around the origin on the canvas.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 40
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 32
+              },
+              {
+                "beforeStart": 95,
+                "beforeLines": 1,
+                "afterStart": 127,
+                "afterLines": 7
+              },
+              {
+                "beforeStart": 102,
+                "beforeLines": 1,
+                "afterStart": 139,
+                "afterLines": 0
+              },
+              {
+                "beforeStart": 105,
+                "beforeLines": 3,
+                "afterStart": 142,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 125,
+                "beforeLines": 2,
+                "afterStart": 164,
+                "afterLines": 46
+              }
+            ],
+            "symbols": [
+              {
+                "name": "normalizeEquation",
+                "kind": "function",
+                "line": 15
+              },
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 46
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:a10e81b8b145ded90a1568a709bc000b0b600f4bc11fda668a8a68f8176ab615"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:2a10fb70505b790774cb6b34e211af7cb6fae921f228320bbf665c8a2684d731",
+    "codeTreeSha256": "sha256:da2fd631861ae923129e6390c73dfb38780e729e6a1fa3a40cb317c99f0564dc",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-11-20T06:57:11.464Z"
+}
