@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 5,
+  "kind": "test-execution",
+  "attemptId": "TA-7b96819869817fe4f832",
+  "nonce": "4163162f9b641d7339798de7d615b40c",
+  "parentAttemptId": null,
+  "purpose": "preflight",
+  "workId": "fix-issues",
+  "phase": "implement",
+  "generation": 1,
+  "commandId": "playwright-tests",
+  "commandSha256": "sha256:6d98c29c94909555b78d1c3d1304755b2c9b8d8346941b0e792eb7340854441c",
+  "argvSha256": "e9c3f81587b101b6b2e6a7ea683e36eedcd03c26a244cfed81fb433fd5b4598c",
+  "selection": {
+    "selection": "complete",
+    "gaps": [],
+    "selectionSha256": "sha256:039da759343cefbe790fa07d5890dfc79e172fc47cc0799b373bd49048c130bb"
+  },
+  "environment": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "ci": "1",
+    "removed": [],
+    "declaredSha256": null,
+    "toolchain": {
+      "node": "22.14.0",
+      "npm": "10.9.2",
+      "playwright": "1.65.1"
+    },
+    "nodeVersion": {
+      "file": ".nvmrc",
+      "wanted": "22",
+      "status": "selected",
+      "node": "22.14.0",
+      "manager": "Homebrew"
+    },
+    "host": "node 26.12.0"
+  },
+  "environmentSha256": "sha256:63e2c6a44b9b299f6948c7833052b00ec5dd1e5f09f957328d668671d29f728c",
+  "platform": "darwin",
+  "workingDirectory": ".",
+  "affectedRoots": [
+    "."
+  ],
+  "adapter": "playwright-json",
+  "profile": "playwright-json-v1",
+  "candidate": {
+    "commit": "64f900aa74ae334b9b3da477337b44ba18d8d584",
+    "treeSha256": "sha256:06e13149755c8f76956d8a3601562fe1d9ef8501a5959fc4e91b11747c397a76",
+    "codeTreeSha256": "sha256:69bf1266ac3c3b3a393e956aaa25bfb755460a63d29876f51581a91f578c217c"
+  },
+  "process": {
+    "status": "passed",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "infrastructureUnavailable": false,
+    "startedAt": "2026-11-20T14:56:27.295Z",
+    "completedAt": "2026-11-20T14:56:32.941Z"
+  },
+  "status": "passed",
+  "terminal": true,
+  "exitCode": 0,
+  "timedOut": false,
+  "skipped": false,
+  "suppressed": false,
+  "tests": {
+    "discovered": 3,
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0
+  },
+  "result": {
+    "path": ".sflow/results/playwright-tests.json",
+    "sha256": "59d40c7931b329c032b22e90a81bb9c9121db8c4923cadb22188e8f83f2749ce",
+    "bytes": 7097,
+    "files": [
+      {
+        "sourcePath": ".sflow/results/playwright-tests.json",
+        "sha256": "59d40c7931b329c032b22e90a81bb9c9121db8c4923cadb22188e8f83f2749ce",
+        "bytes": 7097
+      }
+    ]
+  },
+  "rawReports": [
+    {
+      "path": "singularity/work-items/fix-issues/context/code-delivery/tests/raw/59d40c7931b329c032b22e90a81bb9c9121db8c4923cadb22188e8f83f2749ce.bin",
+      "sha256": "59d40c7931b329c032b22e90a81bb9c9121db8c4923cadb22188e8f83f2749ce",
+      "bytes": 7097
+    }
+  ],
+  "occurrences": [
+    {
+      "suitePath": [],
+      "name": "plots x^2 + y^2 = 36 as a centered radius-6 circle",
+      "file": "graph-plotter.spec.js",
+      "line": 112,
+      "outcome": "passed",
+      "durationMs": 647
+    },
+    {
+      "suitePath": [],
+      "name": "keeps page dimensions fixed while typing and clicking grapher controls",
+      "file": "graph-plotter.spec.js",
+      "line": 133,
+      "outcome": "passed",
+      "durationMs": 668
+    },
+    {
+      "suitePath": [
+        "grapher equation entry"
+      ],
+      "name": "renders the supported explicit and implicit equations",
+      "file": "graph-plotter.spec.js",
+      "line": 93,
+      "outcome": "passed",
+      "durationMs": 1608
+    }
+  ],
+  "reportError": null,
+  "assurance": "module-executed",
+  "dependencies": {
+    "lockfiles": [
+      {
+        "path": "package-lock.json",
+        "sha256": "89f271a59e1be831ed464e77506638e20755520a8509c825941be4cfc961d4f6"
+      }
+    ],
+    "runtime": {
+      "node": "22.14.0",
+      "npm": "10.9.2",
+      "playwright": "1.65.1"
+    },
+    "sha256": "sha256:a2accd80df91bfea72c95c93c1673383de2edad298ce175553d51c6438b21608"
+  },
+  "testPolicySha256": "sha256:faf518057d95cdf1750d9a6402d2054619ccbccfac8a0f082ab2d07c59639c9b",
+  "pin": {
+    "commandId": "playwright-tests",
+    "source": {
+      "kind": "inferred"
+    },
+    "argv": [
+      "npm",
+      "run",
+      "test:e2e",
+      "--",
+      "--reporter=json"
+    ],
+    "workingDirectory": ".",
+    "affectedRoots": [
+      "."
+    ],
+    "adapter": "playwright-json",
+    "definition": [
+      {
+        "path": "package.json",
+        "selector": "scripts.test:e2e",
+        "sha256": "cfd10b01d174664b54cfcac2326926df03a15051afb6e7af180bbcf265789612"
+      },
+      {
+        "path": "playwright.config.js",
+        "selector": null,
+        "sha256": "c751d0fbb713eb3e86329d04e28fc693cee323c0d7c66930941d7db474769f9a"
+      }
+    ],
+    "definitionVersion": 3,
+    "sha256": "sha256:f5fc0391aa52e6cacf443fd78f023b3b4b5edfba03b99ae37d5324722c08ce06"
+  },
+  "narrowing": {
+    "reasons": [],
+    "filters": [],
+    "focused": [],
+    "skipped": 0,
+    "discovered": 3,
+    "baseline": null,
+    "shortfall": 0
+  }
+}

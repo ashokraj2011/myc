@@ -1,0 +1,795 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "fix-issues",
+  "phase": "implement",
+  "generation": 1,
+  "generationIntentId": "15cac402-6d96-4295-ad4d-00e31ed670d6",
+  "changeSet": {
+    "path": "singularity/work-items/fix-issues/context/code-delivery/implement-gen1-changes.json",
+    "digest": "sha256:a5a6a83ebd9be0c16e6d51aa51df29da1dbae59d224a24661e579e4d97cbd8ee",
+    "sourcePaths": [
+      "src/App.jsx",
+      "src/components/FunctionGrapher.jsx",
+      "src/index.css"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [],
+    "executableTestPaths": [
+      "tests/graph-plotter.spec.js"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "code-generator"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "product-source": 3,
+      "test-source": 1
+    },
+    "entries": [
+      {
+        "changeId": "sha256:c8e935df2c4570415e191197fe3954eaac7aa473e64e89cc23da321783a13388",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:be4efb45b9894328ee3264ab6bc6e175a530cd78e08741013b2eac3403d22e7b",
+        "status": "modified",
+        "oldPath": "src/components/FunctionGrapher.jsx",
+        "newPath": "src/components/FunctionGrapher.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:54e70c8914ddcfdf0ea5263451e7da7f05af08b429a43242fb15eb11a4835c61",
+        "status": "modified",
+        "oldPath": "src/index.css",
+        "newPath": "src/index.css",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:e9c92286b6539ecac607f170a5bcb44b52bb2e5e912415db8956eb40a3dd10da",
+        "status": "modified",
+        "oldPath": "tests/graph-plotter.spec.js",
+        "newPath": "tests/graph-plotter.spec.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "FIX-ISSUES:AC-001",
+      "FIX-ISSUES:AC-002"
+    ],
+    "bound": [
+      "FIX-ISSUES:AC-001",
+      "FIX-ISSUES:AC-002"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "FIX-ISSUES:AC-001",
+        "testSource": "tests/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "FIX-ISSUES:AC-002",
+        "testSource": "tests/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "FIX-ISSUES:AC-001",
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "identity": {
+          "framework": "playwright",
+          "suitePath": [
+            "grapher equation entry"
+          ],
+          "name": "renders the supported explicit and implicit equations"
+        },
+        "logicalTestId": "sha256:b4ada1a5a281726a46f646c822f63ad3aaa706cded4bde844a39fc16e6ebfa75",
+        "declarationSha256": "sha256:5a05cfc0345929186b31083b1366b8ef2f751c2d27c590811bb08b7bbaa72f1d",
+        "supportSha256": null,
+        "assertions": {
+          "count": 1,
+          "tautological": 0,
+          "negative": false,
+          "boundary": true,
+          "nullability": false,
+          "adequacy": "adequate",
+          "subjects": [
+            "async",
+            "fill",
+            "for",
+            "getByText",
+            "hasPinkPixelNear",
+            "locator",
+            "openGrapher",
+            "poll",
+            "toHaveCount"
+          ]
+        },
+        "line": 93,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "FIX-ISSUES:AC-002",
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "identity": {
+          "framework": "playwright",
+          "suitePath": [],
+          "name": "keeps page dimensions fixed while typing and clicking grapher controls"
+        },
+        "logicalTestId": "sha256:b4441f90d9839b9b6d9a5ba033c6f21a592b7a3a40f6501c5f5b04d677f257cb",
+        "declarationSha256": "sha256:061cfc81ffaee05d11f7fc13367f2bee428c14673fbda736805b5e7ca7c7a50c",
+        "supportSha256": null,
+        "assertions": {
+          "count": 3,
+          "tautological": 0,
+          "negative": false,
+          "boundary": false,
+          "nullability": false,
+          "adequacy": "adequate",
+          "subjects": [
+            "Promise",
+            "async",
+            "click",
+            "evaluate",
+            "fill",
+            "finish",
+            "forEach",
+            "getAnimations",
+            "getByRole",
+            "getByTitle",
+            "locator",
+            "openGrapher",
+            "readPageDimensions",
+            "repeat",
+            "requestAnimationFrame",
+            "setViewportSize"
+          ]
+        },
+        "line": 133,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "FIX-ISSUES:AC-001",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      },
+      {
+        "clauseId": "FIX-ISSUES:AC-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/FunctionGrapher.jsx",
+          "src/index.css"
+        ]
+      },
+      {
+        "clauseId": "FIX-ISSUES:REQ-001",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      },
+      {
+        "clauseId": "FIX-ISSUES:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx",
+          "src/components/FunctionGrapher.jsx",
+          "src/index.css"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "FIX-ISSUES:AC-001",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 137,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "FIX-ISSUES:AC-002",
+        "sourcePath": "src/App.jsx",
+        "line": 19,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "FIX-ISSUES:REQ-001",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 136,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "FIX-ISSUES:REQ-002",
+        "sourcePath": "src/App.jsx",
+        "line": 18,
+        "tag": "clause"
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "FIX-ISSUES:AC-001",
+        "explanation": {
+          "text": "Show a plotted graph after a valid equation is entered.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 137
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 14,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 18,
+                "beforeLines": 1,
+                "afterStart": 23,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 124,
+                "beforeLines": 0,
+                "afterStart": 131,
+                "afterLines": 7
+              },
+              {
+                "beforeStart": 249,
+                "beforeLines": 1,
+                "afterStart": 262,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 251,
+                "beforeLines": 3,
+                "afterStart": 264,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 260,
+                "beforeLines": 1,
+                "afterStart": 273,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 264,
+                "beforeLines": 1,
+                "afterStart": 277,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 271,
+                "beforeLines": 1,
+                "afterStart": 284,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 281,
+                "beforeLines": 1,
+                "afterStart": 294,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 292,
+                "beforeLines": 1,
+                "afterStart": 305,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 300,
+                "beforeLines": 1,
+                "afterStart": 313,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 309,
+                "beforeLines": 1,
+                "afterStart": 322,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 320,
+                "beforeLines": 2,
+                "afterStart": 333,
+                "afterLines": 2
+              }
+            ],
+            "symbols": [
+              {
+                "name": "normalizeEquation",
+                "kind": "function",
+                "line": 20
+              },
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 138
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "FIX-ISSUES:AC-002",
+        "explanation": {
+          "text": "Preserve the page dimensions during grapher input and control interactions.",
+          "path": "src/App.jsx",
+          "line": 19
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 6
+              },
+              {
+                "beforeStart": 228,
+                "beforeLines": 2,
+                "afterStart": 234,
+                "afterLines": 2
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 20
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 14,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 18,
+                "beforeLines": 1,
+                "afterStart": 23,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 124,
+                "beforeLines": 0,
+                "afterStart": 131,
+                "afterLines": 7
+              },
+              {
+                "beforeStart": 249,
+                "beforeLines": 1,
+                "afterStart": 262,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 251,
+                "beforeLines": 3,
+                "afterStart": 264,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 260,
+                "beforeLines": 1,
+                "afterStart": 273,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 264,
+                "beforeLines": 1,
+                "afterStart": 277,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 271,
+                "beforeLines": 1,
+                "afterStart": 284,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 281,
+                "beforeLines": 1,
+                "afterStart": 294,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 292,
+                "beforeLines": 1,
+                "afterStart": 305,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 300,
+                "beforeLines": 1,
+                "afterStart": 313,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 309,
+                "beforeLines": 1,
+                "afterStart": 322,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 320,
+                "beforeLines": 2,
+                "afterStart": 333,
+                "afterLines": 2
+              }
+            ],
+            "symbols": [
+              {
+                "name": "normalizeEquation",
+                "kind": "function",
+                "line": 20
+              },
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 138
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/index.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 307,
+                "beforeLines": 0,
+                "afterStart": 308,
+                "afterLines": 136
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          }
+        ]
+      },
+      {
+        "clauseId": "FIX-ISSUES:REQ-001",
+        "explanation": {
+          "text": "Render valid graph inputs visibly in the canvas.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 136
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 14,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 18,
+                "beforeLines": 1,
+                "afterStart": 23,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 124,
+                "beforeLines": 0,
+                "afterStart": 131,
+                "afterLines": 7
+              },
+              {
+                "beforeStart": 249,
+                "beforeLines": 1,
+                "afterStart": 262,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 251,
+                "beforeLines": 3,
+                "afterStart": 264,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 260,
+                "beforeLines": 1,
+                "afterStart": 273,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 264,
+                "beforeLines": 1,
+                "afterStart": 277,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 271,
+                "beforeLines": 1,
+                "afterStart": 284,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 281,
+                "beforeLines": 1,
+                "afterStart": 294,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 292,
+                "beforeLines": 1,
+                "afterStart": 305,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 300,
+                "beforeLines": 1,
+                "afterStart": 313,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 309,
+                "beforeLines": 1,
+                "afterStart": 322,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 320,
+                "beforeLines": 2,
+                "afterStart": 333,
+                "afterLines": 2
+              }
+            ],
+            "symbols": [
+              {
+                "name": "normalizeEquation",
+                "kind": "function",
+                "line": 20
+              },
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 138
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "FIX-ISSUES:REQ-002",
+        "explanation": {
+          "text": "Keep the page width stable while the grapher is used.",
+          "path": "src/App.jsx",
+          "line": 18
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 13,
+                "beforeLines": 0,
+                "afterStart": 14,
+                "afterLines": 6
+              },
+              {
+                "beforeStart": 228,
+                "beforeLines": 2,
+                "afterStart": 234,
+                "afterLines": 2
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 20
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 14,
+                "beforeLines": 0,
+                "afterStart": 15,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 18,
+                "beforeLines": 1,
+                "afterStart": 23,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 124,
+                "beforeLines": 0,
+                "afterStart": 131,
+                "afterLines": 7
+              },
+              {
+                "beforeStart": 249,
+                "beforeLines": 1,
+                "afterStart": 262,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 251,
+                "beforeLines": 3,
+                "afterStart": 264,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 260,
+                "beforeLines": 1,
+                "afterStart": 273,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 264,
+                "beforeLines": 1,
+                "afterStart": 277,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 271,
+                "beforeLines": 1,
+                "afterStart": 284,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 281,
+                "beforeLines": 1,
+                "afterStart": 294,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 292,
+                "beforeLines": 1,
+                "afterStart": 305,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 300,
+                "beforeLines": 1,
+                "afterStart": 313,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 309,
+                "beforeLines": 1,
+                "afterStart": 322,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 320,
+                "beforeLines": 2,
+                "afterStart": 333,
+                "afterLines": 2
+              }
+            ],
+            "symbols": [
+              {
+                "name": "normalizeEquation",
+                "kind": "function",
+                "line": 20
+              },
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 138
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/index.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 307,
+                "beforeLines": 0,
+                "afterStart": 308,
+                "afterLines": 136
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:bcd00b06890f2b9f79a3584bf4da8edf2206041b68cf3a5e1999d4d67ea15b60"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:06e13149755c8f76956d8a3601562fe1d9ef8501a5959fc4e91b11747c397a76",
+    "codeTreeSha256": "sha256:69bf1266ac3c3b3a393e956aaa25bfb755460a63d29876f51581a91f578c217c",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": false,
+    "authorshipProducer": "deterministic",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-11-20T14:56:33.536Z"
+}

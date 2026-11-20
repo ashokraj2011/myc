@@ -12,10 +12,16 @@ const PRESETS = [
 ];
 
 // @clause:ARSHY:REQ-001 Normalizes explicit and implicit Cartesian equations for canvas plotting.
+/**
+ * Normalizes an equation for Cartesian plotting using the grapher's supported syntax.
+ * @param {string} input The equation text entered by the user.
+ * @returns {{kind: 'explicit' | 'implicit', expression: string} | null} The normalized equation, or null when the syntax is unsupported.
+ */
 export const normalizeEquation = (input) => {
   const normalized = input.trim();
   if (!normalized) return null;
-  if (!/^[0-9xyXY+\-*/^().=\s]+$/.test(normalized)) return null;
+  const withoutSupportedFunctions = normalized.replace(/\b(?:sin|cos|tan|exp)\b/g, '');
+  if (!/^[0-9xyXY+\-*/^().=\s]+$/.test(withoutSupportedFunctions)) return null;
 
   const equalsParts = normalized.split('=');
   if (equalsParts.length > 2) return null;
@@ -122,6 +128,13 @@ export const sampleImplicitPlot = (expression, width, height, scale, centerX, ce
   return segments;
 };
 
+/**
+ * Renders the grapher input, controls, and plotted graph canvas.
+ * @param {{ soundEnabled: boolean }} props Whether control clicks play a sound.
+ * @returns The graphing interface.
+ */
+// @clause:FIX-ISSUES:REQ-001 Render valid graph inputs visibly in the canvas.
+// @clause:FIX-ISSUES:AC-001 Show a plotted graph after a valid equation is entered.
 export const FunctionGrapher = ({ soundEnabled }) => {
   const [equation, setEquation] = useState('sin(x)');
   const [scale, setScale] = useState(40); // Pixels per unit
@@ -246,29 +259,29 @@ export const FunctionGrapher = ({ soundEnabled }) => {
   }, [equation, scale, offset]);
 
   return (
-    <div className="w-full flex flex-col gap-4 animate-fade-in p-1">
+    <div className="grapher animate-fade-in">
       {/* Controls & Input */}
-      <div className="glass-card p-4 flex flex-col gap-3">
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
-          <div className="flex-1 flex items-center u-bg-btn-num-bg border u-border-card-border rounded-xl px-3 py-2 font-mono">
+      <div className="glass-card grapher-controls">
+        <div className="grapher-control-row">
+          <div className="grapher-equation-field u-bg-btn-num-bg u-border-card-border">
             <span className="u-text-text-accent font-bold mr-2 text-sm">f(x) =</span>
             <input
               type="text"
               value={equation}
               onChange={(e) => setEquation(e.target.value)}
               placeholder="e.g. sin(x)"
-              className="bg-transparent border-none outline-none u-text-text-main w-full text-sm font-semibold"
+              className="grapher-equation-input u-text-text-main"
             />
           </div>
 
-          <div className="flex items-center gap-1.5 justify-end">
+          <div className="grapher-control-buttons">
             <button
               onClick={() => {
                 playSound('click', soundEnabled);
                 setScale((s) => Math.min(s * 1.25, 200));
               }}
               title="Zoom In"
-              className="calc-btn p-2 u-bg-btn-func-bg u-text-text-main u-hbg-btn-func-hover"
+              className="calc-btn u-bg-btn-func-bg u-text-text-main u-hbg-btn-func-hover"
             >
               <ZoomIn className="w-4 h-4" />
             </button>
@@ -278,7 +291,7 @@ export const FunctionGrapher = ({ soundEnabled }) => {
                 setScale((s) => Math.max(s / 1.25, 10));
               }}
               title="Zoom Out"
-              className="calc-btn p-2 u-bg-btn-func-bg u-text-text-main u-hbg-btn-func-hover"
+              className="calc-btn u-bg-btn-func-bg u-text-text-main u-hbg-btn-func-hover"
             >
               <ZoomOut className="w-4 h-4" />
             </button>
@@ -289,7 +302,7 @@ export const FunctionGrapher = ({ soundEnabled }) => {
                 setOffset({ x: 0, y: 0 });
               }}
               title="Reset View"
-              className="calc-btn p-2 u-bg-btn-func-bg u-text-text-main u-hbg-btn-func-hover"
+              className="calc-btn u-bg-btn-func-bg u-text-text-main u-hbg-btn-func-hover"
             >
               <RotateCcw className="w-4 h-4" />
             </button>
@@ -297,7 +310,7 @@ export const FunctionGrapher = ({ soundEnabled }) => {
         </div>
 
         {/* Preset Badges */}
-        <div className="flex items-center gap-2 overflow-x-auto scrollbar-none py-1">
+        <div className="grapher-presets">
           <span className="text-xs u-text-text-muted font-medium shrink-0">Presets:</span>
           {PRESETS.map((p) => (
             <button
@@ -306,7 +319,7 @@ export const FunctionGrapher = ({ soundEnabled }) => {
                 playSound('click', soundEnabled);
                 setEquation(p.expr);
               }}
-              className="calc-btn px-2.5 py-1 u-bg-card-bg text-xs u-text-text-muted u-htext-text-accent shrink-0"
+              className="calc-btn grapher-preset u-bg-card-bg u-text-text-muted u-htext-text-accent"
             >
               {p.label}
             </button>
@@ -317,8 +330,8 @@ export const FunctionGrapher = ({ soundEnabled }) => {
       </div>
 
       {/* Interactive Canvas */}
-      <div className="glass-card w-full h-[280px] overflow-hidden relative">
-        <canvas ref={canvasRef} className="w-full h-full block cursor-crosshair" />
+      <div className="glass-card grapher-canvas-frame">
+        <canvas ref={canvasRef} className="grapher-canvas" />
       </div>
     </div>
   );

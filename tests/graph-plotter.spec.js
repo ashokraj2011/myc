@@ -49,6 +49,18 @@ async function openGrapher(page) {
   return equationInput;
 }
 
+const readPageDimensions = (page) =>
+  page.evaluate(() => {
+    const shell = document.querySelector('.app-shell');
+    const bounds = shell.getBoundingClientRect();
+    return {
+      pageWidth: document.documentElement.scrollWidth,
+      pageHeight: document.documentElement.scrollHeight,
+      shellWidth: bounds.width,
+      shellHeight: bounds.height,
+    };
+  });
+
 async function hasPinkPixelNear(canvas, { x, y }) {
   return canvas.evaluate((element, point) => {
     const ratioX = element.width / element.clientWidth;
@@ -77,10 +89,13 @@ async function hasPinkPixelNear(canvas, { x, y }) {
 
 test.describe('grapher equation entry', () => {
   // @clause:ARSHY:REQ-001 verifies explicit and implicit equation plotting.
-  // @ac:ARSHY:AC-002
+  // @ac:FIX-ISSUES:AC-001
   test('renders the supported explicit and implicit equations', async ({ page }) => {
     const input = await openGrapher(page);
     const canvas = page.locator('canvas');
+    await expect(page.getByText('Invalid function syntax')).toHaveCount(0);
+    await expect.poll(() => hasPinkPixelNear(canvas, { x: Math.PI / 2, y: 1 })).toBe(true);
+
     for (const { equation, points } of equationCases) {
       await input.fill(equation);
       for (const point of points) {
@@ -94,7 +109,6 @@ test.describe('grapher equation entry', () => {
 });
 
 // @clause:ARSHY:REQ-002 verifies the required radius-6 circle.
-// @ac:ARSHY:AC-001
 test('plots x^2 + y^2 = 36 as a centered radius-6 circle', async ({ page }) => {
   const input = await openGrapher(page);
   await input.fill('x^2 + y^2 = 36');
@@ -113,4 +127,28 @@ test('plots x^2 + y^2 = 36 as a centered radius-6 circle', async ({ page }) => {
   expect(Math.abs(geometry.centerY - geometry.height / 2)).toBeLessThan(5);
   expect(Math.abs(geometry.radiusX - geometry.expectedRadius)).toBeLessThan(8);
   expect(Math.abs(geometry.radiusY - geometry.expectedRadius)).toBeLessThan(8);
+});
+
+// @ac:FIX-ISSUES:AC-002
+test('keeps page dimensions fixed while typing and clicking grapher controls', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 720 });
+  const input = await openGrapher(page);
+  await page.locator('.grapher').evaluate((element) => {
+    element.getAnimations().forEach((animation) => animation.finish());
+  });
+  await page.evaluate(async () => {
+    await document.fonts.ready;
+    await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+  });
+
+  const initialDimensions = await readPageDimensions(page);
+
+  await input.fill(`${'x + '.repeat(24)}1`);
+  expect(await readPageDimensions(page)).toEqual(initialDimensions);
+
+  await page.getByTitle('Zoom In').click();
+  expect(await readPageDimensions(page)).toEqual(initialDimensions);
+
+  await page.getByRole('button', { name: 'sin(x)' }).click();
+  expect(await readPageDimensions(page)).toEqual(initialDimensions);
 });

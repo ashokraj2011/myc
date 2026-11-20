@@ -11,6 +11,12 @@ import { KeyboardShortcutsModal } from './components/KeyboardShortcutsModal';
 import { evaluateExpression } from './utils/evaluator';
 import { playSound } from './utils/audio';
 
+/**
+ * Renders the calculator shell and its active calculator mode.
+ * @returns The calculator application.
+ */
+// @clause:FIX-ISSUES:REQ-002 Keep the page width stable while the grapher is used.
+// @clause:FIX-ISSUES:AC-002 Preserve the page dimensions during grapher input and control interactions.
 export default function App() {
   const [activeMode, setActiveMode] = useState('standard');
   const [expression, setExpression] = useState('');
@@ -225,8 +231,8 @@ export default function App() {
   ]);
 
   return (
-    <div className="w-full max-w-xl mx-auto p-4 sm:p-6 min-h-screen flex items-center justify-center">
-      <main className="glass-card w-full p-5 sm:p-7 flex flex-col items-center">
+    <div className="app-shell">
+      <main className="glass-card app-main">
         {/* Top Header */}
         <Header
           activeMode={activeMode}
