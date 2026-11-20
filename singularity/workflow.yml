@@ -330,7 +330,7 @@ faultRepair:
 
 documents:
   storage: { allowed: [local], default: local }
-  allowedPhases: []
+  allowedPhases: [intake]
   maxFileBytes: 26214400
   maxPreviewBytes: 1048576
 
@@ -465,7 +465,28 @@ artifactSets:
       - { path: verification/, role: evidence-collection, required: true }
 
 workTypes:
-  
+  quick-fix:
+    label: Quick fix
+    # Even a short code change states what it must do and where it lands before code changes: its
+    # intake is the scope-and-plan checkpoint one engineer signs off.
+    phases: [intake, implement, verify]
+    plannedClaims:
+      mode: required
+      clausePhases: [intake]
+      owners: { implement: intake }
+    templateOverrides:
+      intake: quick-fix/intake.md
+      implement: quick-fix/implement.md
+      verify: quick-fix/verify.md
+    phaseOverrides:
+      intake:
+        label: Scope and plan
+        artifact: { kind: requirements }
+        clarification: { mode: when-needed, maxQuestions: 3, topics: [acceptance criteria, changed paths, tests] }
+        approval: { authorities: [engineering-reviewers], minimum: 1, rejectTo: [intake] }
+      implement: { inputs: [intake] }
+      verify: { inputs: [intake, implement] }
+
   spec-driven-standard:
     label: Spec-Driven Standard
     # This profile promises clause-level continuity. Display-only labels such as "AC-001" must be
@@ -542,6 +563,16 @@ workTypes:
         approval:
           automatic: when-ready
 phases:
+  intake:
+    label: Intake
+    defaultTemplate: common/intake.md
+    artifact: { path: artifacts/intake/intake.md, kind: intake, minimumBytes: 200 }
+    clarification:
+      mode: required
+      maxQuestions: 5
+      topics: [problem, outcome, users, scope, constraints]
+    writeScope: artifact-only
+    approval: { authorities: [product-approvers], minimum: 1, rejectTo: [intake] }
   implementation:
     label: Implementation
     defaultTemplate: common/implementation.md
@@ -625,6 +656,27 @@ phases:
     # [SPK:REQ-032]. Advancement fails while blocking findings remain [SPK:REQ-183]. Its reviewers
     # may also return the Story to planning or the specification when the defect started there.
     approval: { authorities: [architecture-reviewers], minimum: 1, rejectTo: [specification, planning, implementation, convergence] }
+  implement:
+    label: Implement
+    defaultTemplate: quick-fix/implement.md
+    artifact: { path: artifacts/implement/implementation-summary.md, kind: implementation-summary, minimumBytes: 200 }
+    generation: { requirement: required, producer: deterministic, task: code }
+    writeScope: source-and-artifact
+    approval: none
+    qualityCommands: []
+  verify:
+    label: Verify
+    defaultTemplate: quick-fix/verify.md
+    artifact: { path: artifacts/verify/verification-summary.md, kind: test-evidence, minimumBytes: 200 }
+    generation: { requirement: required, producer: deterministic, task: analyze }
+    writeScope: source-and-artifact
+    approval: { mode: policy, policy: quick-fix-low-risk-v1, maximumChangedPaths: 5, authorities: [quality-reviewers], minimum: 1, rejectTo: [intake, implement, verify] }
+    # A policy waiver is impossible without at least one required check. Repositories
+    # should replace or extend this deterministic baseline with their own test command.
+    qualityCommands:
+      - id: git-diff-check
+        argv: [git, diff, --check]
+        modelPolicy: never
 governance:
   requireAcceptanceCriteriaTags: true
   protectedPaths:

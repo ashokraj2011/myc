@@ -5,8 +5,8 @@ model: [auto]
 tools: [read, search, edit, execute, bash, ask_user]
 metadata:
   sflow-label: "Developer"
-  sflow-phases: "implementation"
-  sflow-default-for: "implementation"
+  sflow-phases: "implement,implementation"
+  sflow-default-for: "implement,implementation"
   sflow-model-task: "code"
 ---
 
