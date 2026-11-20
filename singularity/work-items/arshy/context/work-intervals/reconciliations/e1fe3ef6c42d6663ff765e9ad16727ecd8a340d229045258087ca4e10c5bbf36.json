@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "arshy",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G5-005",
+  "phaseId": "implementation",
+  "generation": 5,
+  "baselineSha256": "1f4964fa771857b3e7a2a8019f2d2fa00d0751cb711eab048ce41c1a2bccd4c1",
+  "baseline": {
+    "path": "singularity/work-items/arshy/context/work-intervals/implementation-gen5-baseline.json",
+    "sha256": "1f4964fa771857b3e7a2a8019f2d2fa00d0751cb711eab048ce41c1a2bccd4c1",
+    "verified": true,
+    "sourceBaseCommit": "2920ebc41c595feb7f1d978f5d135a9d7a6896f2"
+  },
+  "sourceBaseCommit": "2920ebc41c595feb7f1d978f5d135a9d7a6896f2",
+  "target": {
+    "branch": "arshy",
+    "head": "8fce527212bde8c73c647a136ed00bca481a7cbc",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": "src/components/FunctionGrapher.test.jsx",
+      "status": "present",
+      "sha256": "63d9af859d7c4fc77b44d52a9a8bd24572949280a500a11dc82bb4721576445a",
+      "bytes": 2517,
+      "verdict": "planned",
+      "clauseIds": [
+        "ARSHY:REQ-001"
+      ],
+      "protected": false
+    },
+    {
+      "path": "tests/graph-plotter.spec.js",
+      "status": "present",
+      "sha256": "67e1b1f4bfd48c4886c5ddb5b75bf4c86768d8a1c21e62db7fb30d9df6a40e21",
+      "bytes": 4845,
+      "verdict": "planned",
+      "clauseIds": [
+        "ARSHY:AC-001",
+        "ARSHY:AC-002",
+        "ARSHY:REQ-001",
+        "ARSHY:REQ-002"
+      ],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 2,
+    "planned": 2,
+    "unplanned": 0,
+    "protected": 0
+  },
+  "decision": {
+    "status": "aligned",
+    "summaryStatus": "clear",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "e1fe3ef6c42d6663ff765e9ad16727ecd8a340d229045258087ca4e10c5bbf36",
+  "reconciledAt": "2026-11-20T12:46:25.132Z",
+  "final": true,
+  "recordedAt": "2026-11-20T12:46:25.133Z",
+  "path": "singularity/work-items/arshy/context/work-intervals/reconciliations/e1fe3ef6c42d6663ff765e9ad16727ecd8a340d229045258087ca4e10c5bbf36.json"
+}

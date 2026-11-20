@@ -12,7 +12,7 @@
 | 1 | Specification (`specification`) | product-owner | **approved** | 4 | 0 | unavailable |
 | 2 | Planning (`planning`) | architect | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent architect | **warning** |  |  |  |
-| 3 | Implementation (`implementation`) | developer | **in_progress** | 5 | 1 | unavailable |
+| 3 | Implementation (`implementation`) | developer | **awaiting_approval** | 5 | 1 | unavailable |
 | 4 | Convergence (`convergence`) | architect | **not_started** | 0 | 0 | unavailable |
 | 5 | Verification (`verification`) | qa | **not_started** | 0 | 0 | unavailable |
 | 6 | Release (`release`) | qa | **not_started** | 0 | 0 | unavailable |
@@ -24,6 +24,8 @@
 
 ## Recent history
 
+- 2026-11-20T12:46:25.134Z — **phase_submitted** (implementation) by ashokraj2011 · agent developer: 10 artifacts
+- 2026-11-20T12:46:25.133Z — **work_interval_reconciled** (implementation) by system: aligned; 2 changed path(s)
 - 2026-11-20T12:45:51.161Z — **source_review_submitted** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 69b813555122035b05a94072caa34b73160efa7775974876bc2d988ffcf38aec
 - 2026-11-20T12:43:49.239Z — **phase_generated** (implementation) by ashokraj2011 · agent developer: generation 5
 - 2026-11-20T12:40:31.386Z — **version_opened** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent developer: version 5 opened (rework) on the person's yes (question-tool)
@@ -37,5 +39,3 @@
 - 2026-11-20T12:02:23.195Z — **version_opened** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent developer: version 4 opened (review-corrections) on the person's yes (question-tool)
 - 2026-11-20T12:02:24.782Z — **work_interval_started** (implementation) by system: baseline 3f88aca997d8 at fa327f3060f2
 - 2026-11-20T11:09:44.085Z — **source_review_submitted** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: d814770e00195be8ff073fa20ff02f678a909d458651272e4c2a96e559b1ac9e
-- 2026-11-20T11:08:36.333Z — **phase_generated** (implementation) by ashokraj2011 · agent developer: generation 3
-- 2026-11-20T11:07:43.376Z — **departure_recorded** (implementation) by ashokraj2011 · agent developer: DEP-002 (test): a planned test changes: src/components/FunctionGrapher.test.jsx is added to ARSHY:REQ-001's tests. Add focused Vitest helper coverage for ARSHY:REQ-001 alongside the planned Playwright browser suite in tests/graph-plotter.spec.js.
