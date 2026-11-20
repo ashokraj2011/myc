@@ -19,6 +19,7 @@
 
 ## Recent history
 
+- 2026-11-20T11:04:20.187Z — **plan_amended** (implementation) by ashokraj2011 · agent developer: PAM-001: vite.config.js listed as build-configuration, accepting DEP-001. no need to change anything go ahead
 - 2026-11-20T11:04:05.319Z — **test_command_decided** (implementation) by ashokraj2011 · agent developer: TCD-001 accepted through engineering-reviewers. .-node-tests runs Implementation's tests for this Story.
 - 2026-11-20T10:50:26.562Z — **test_command_decided** (implementation) by ashokraj2011 · agent developer: TCD-001 requests that implementation re-pin test command .-node-tests (vite.config.js changed) for this Story. Vitest discovery is scoped to src test files so the planned tests/graph-plotter.spec.js Playwright suite is run only by Playwright, while preserving existing Vitest coverage.
 - 2026-11-20T10:49:29.652Z — **departure_recorded** (implementation) by ashokraj2011 · agent developer: DEP-001 (supporting): vite.config.js changed as a supporting change (build-configuration). vite.config.js changed in this generation, and no row of the approved plan names it.
@@ -33,4 +34,3 @@
 - 2026-11-20T07:01:10.122Z — **work_interval_started** (implementation) by system: baseline 14f38bfc6f01 at a0b21038572e
 - 2026-11-20T07:00:31.703Z — **source_review_submitted** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 647ceb9eb1acc5e2351a89c7323fe4f58c91c232c0a4be56497aa78a2d8d7098
 - 2026-11-20T06:57:11.653Z — **phase_generated** (implementation) by ashokraj2011 · agent developer: generation 1
-- 2026-11-20T06:50:42.109Z — **decision_settled** (implementation) by ashokraj2011 · agent developer: STL-003 (node-version) settled by SFlow: Pinned Node 22 in .nvmrc for Implementation's tests: Node 26.12.0 here breaks tests that use localStorage under Vitest, and Node 22.14.0 is installed. Evidence: Node 26.12.0 puts its own localStorage in front of the DOM environment's under Vitest (the repository's Vitest setup and its tests that use localStorage); Node 22.14.0 is installed (the Nodes installed on this machine); tests would otherwise run on Node 26.12.0 (the Node on PATH)

@@ -5741,6 +5741,14 @@
       "event": "test_command_decided",
       "phase": "implementation",
       "detail": "TCD-001 accepted through engineering-reviewers. .-node-tests runs Implementation's tests for this Story."
+    },
+    {
+      "at": "2026-11-20T11:04:20.187Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "plan_amended",
+      "phase": "implementation",
+      "detail": "PAM-001: vite.config.js listed as build-configuration, accepting DEP-001. no need to change anything go ahead"
     }
   ],
   "measurement": {
@@ -10484,6 +10492,137 @@
         },
         "createdAt": "2026-11-20T11:04:05.387Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "4f615c42-7cb5-42e8-8a34-f1f5e70d07a3",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "arshy",
+          "branch": "arshy"
+        },
+        "phaseId": "implementation",
+        "generation": 2,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "decision": "plan",
+          "reviewPacketSha256": null,
+          "amendment": "PAM-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-20T11:04:18.362Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "4f615c42-7cb5-42e8-8a34-f1f5e70d07a3",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "arshy"
+          ],
+          "branch": "arshy",
+          "canonicalBranch": "arshy",
+          "createdAt": "2026-11-20T05:04:22.679Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 2,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 2
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph",
+          "updatedAt": "2026-11-20T11:04:20.187Z",
+          "workId": "arshy",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "106d3c3a8dbea5992306f47e45f781900b06ed64faafb501f8945ee96a55a9a6",
+          "lifecycleEventId": "4f615c42-7cb5-42e8-8a34-f1f5e70d07a3",
+          "lifecyclePayload": {
+            "decision": "plan",
+            "reviewPacketSha256": null,
+            "amendment": "PAM-001"
+          },
+          "templateSha256": "ba0749ab3997579949fc836a839af6606f995c2012a90b410597ebadf211298d",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "4f615c42-7cb5-42e8-8a34-f1f5e70d07a3",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "arshy",
+              "branch": "arshy"
+            },
+            "phaseId": "implementation",
+            "generation": 2,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "architecture-reviewers",
+            "payload": {
+              "decision": "plan",
+              "reviewPacketSha256": null,
+              "amendment": "PAM-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-20T11:04:18.362Z"
+          }
+        },
+        "createdAt": "2026-11-20T11:04:18.370Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -10963,6 +11102,49 @@
       "reason": "default",
       "surface": "card",
       "at": "2026-11-20T11:04:06.988Z"
+    },
+    {
+      "id": "ADV-002",
+      "kind": "departure",
+      "subject": "DEP-001",
+      "phase": "implementation",
+      "recommended": {
+        "form": "lean",
+        "option": null
+      },
+      "chosen": {
+        "option": "accept",
+        "outcome": "accept"
+      },
+      "matched": null,
+      "reason": "typed",
+      "surface": "card",
+      "record": "PAM-001",
+      "at": "2026-11-20T11:04:20.187Z"
+    }
+  ],
+  "planAmendments": [
+    {
+      "id": "PAM-001",
+      "changes": [
+        {
+          "kind": "add-supporting",
+          "path": "vite.config.js",
+          "class": "build-configuration",
+          "reason": "no need to change anything go ahead"
+        }
+      ],
+      "contentHashes": {
+        "vite.config.js": "7453a9bc4714742d0d066c18d5707e540e14fb49b9f586b6d29e7fd7bdc2f775"
+      },
+      "departures": [
+        "DEP-001"
+      ],
+      "reason": "no need to change anything go ahead",
+      "actor": "ashokraj2011",
+      "authorityGroup": "architecture-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-20T11:04:20.187Z"
     }
   ]
 }
