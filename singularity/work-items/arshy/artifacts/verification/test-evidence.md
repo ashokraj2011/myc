@@ -4,7 +4,7 @@
   "workId": "arshy",
   "workType": "spec-driven-standard",
   "phase": "verification",
-  "generation": 1,
+  "generation": 2,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "test-evidence.md",
       "mediaType": "text/markdown",
-      "sha256": "ca158d180fa0ad66d482773c651697a6ac886f8ed45cda1af8e0d103d604db30",
-      "bytes": 4997
+      "sha256": "5400a240745e1755c14bf3059eff5644f27021ff2156f3aa22ec6bd6278901fc",
+      "bytes": 5890
     },
-    "generation": 1,
-    "publishedAt": "2026-11-20T13:24:27.891Z"
+    "generation": 2,
+    "publishedAt": "2026-11-20T13:30:34.548Z"
   },
-  "sourceCommit": "4eea1fd2df0b8b4c2f9f5b077d8b15f437d348ed",
+  "sourceCommit": "9ff22a21d4f52731eae4d6c507472317ed1a5001",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "106d3c3a8dbea5992306f47e45f781900b06ed64faafb501f8945ee96a55a9a6",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/common/verification.md"
   },
   "inputs": {
-    "generation": 1,
-    "path": "singularity/work-items/arshy/context/inputs-verification-gen1.json",
-    "sha256": "8171695c239aa624f26676fcce1ca449bb0d2309d80c45a8cf26afc8ef51655a",
+    "generation": 2,
+    "path": "singularity/work-items/arshy/context/inputs-verification-gen2.json",
+    "sha256": "ce2c3194c8374a47eb46cb1e7196015e71ebe7d8d63f0fdec8121b52a7b04e19",
     "renderedSha256": "57b3a5a318d99c50dde799b9b8b4d02076dd921184955bdd1966d5a4b7dd7ed0",
     "mode": "enforce"
   },
@@ -92,6 +92,26 @@
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 2,
+      "path": "singularity/work-items/arshy/telemetry/verification-gen2.json",
+      "sha256": "1fb7d0c7e948182d6fe3dca4b720ab9cbd12acef276c06a0d65797a606ab6aea",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 41900,
+        "estimatedTokens": 10475,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 41900,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
     }
   ],
   "remoteOutputs": [],
@@ -116,6 +136,27 @@
       "completedAt": "2026-11-20T13:24:27.891Z",
       "agent": "qa",
       "generation": 1
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-20T13:30:34.548Z",
+      "completedAt": "2026-11-20T13:30:34.548Z",
+      "agent": "qa",
+      "generation": 2
     }
   ],
   "sequenceOverrides": [],
@@ -129,29 +170,31 @@
 
 ## Agent brief
 
-Verification evidence establishes both approved acceptance criteria on the source tree submitted for implementation generation 5. The retained Vitest and Playwright runs passed, and the criterion-specific tagged Playwright tests passed on a source-tree binding matched to this verification checkout. No test failure is retained for that tree. These are reused implementation-generation results, not a new verification-phase run; publication must still execute the configured required checks. No human approval or release authorization is implied.
+Fresh local verification checks for this authoring generation establish both approved acceptance criteria and include the post-annotation test files. Both Playwright acceptance tests passed, and the production build succeeded with a chunk-size advisory. The full Vitest suite has 17 unrelated `App.test.jsx` failures because `localStorage` is unavailable in this Node environment; all four `FunctionGrapher` unit tests passed. Earlier implementation-generation receipts are not relied on for post-annotation test coverage because the approved implementation summary says those annotations postdated the retained runs. Publication must still run its configured required checks; this report is not human approval or release authorization.
 
 ## Commands and environment
 
-- Evidence source: approved implementation submission, generation 5; both runs are recorded as reused and source-tree matched for this verification checkout. Working directory: repository root (`.`). Environment: Node.js v26.12.0, macOS (`darwin`), arm64; no extra `NODE_OPTIONS`.
-- `npm test -- --reporter=json --outputFile=.sflow/results/node-tests.json` — passed, exit 0; 35 discovered, 35 passed, 0 failed, 0 skipped. Reused attempt `TA-89a5c1f048903b4e7e8b`; receipt: `singularity/work-items/arshy/context/code-delivery/tests/attempts/implementation/TA-89a5c1f048903b4e7e8b.json`.
-- `npm run test:e2e -- --reporter=json` — passed, exit 0; 2 discovered, 2 passed, 0 failed, 0 skipped. Reused attempt `TA-6f605efb9b59d24cd21c`; receipt: `singularity/work-items/arshy/context/code-delivery/tests/attempts/implementation/TA-6f605efb9b59d24cd21c.json`.
-- No fresh verification-phase test command was run. The retained evidence is usable because both attempts are explicitly bound to the same source tree; publication still requires its configured checks.
+- Fresh local diagnostic commands were run from the repository root (`.`) on Node.js v26.12.0, macOS (`darwin`), arm64, with no extra `NODE_OPTIONS`.
+- `npm test -- --reporter=json --outputFile=.sflow/results/node-tests.json` — failed, exit 1; 35 discovered, 18 passed, 17 failed, 0 skipped. All four tests in `src/components/FunctionGrapher.test.jsx` passed. The failures are in `src/App.test.jsx`; representative error: `TypeError: Cannot read properties of undefined (reading 'clear')`, consistent with the runner warning that `localStorage` is unavailable. The configured JSON report was written to `.sflow/results/node-tests.json`.
+- `npm run test:e2e -- --reporter=json` — passed, exit 0; 2 discovered, 2 passed, 0 failed, 0 skipped. The tests ran from `tests/graph-plotter.spec.js` against the configured loopback Vite server.
+- `npm run build` — passed, exit 0; Vite transformed 2,836 modules. It emitted the existing advisory that the minified JavaScript chunk is 887.32 kB, above the 500 kB warning threshold.
+- The implementation generation 5 Vitest and Playwright receipts are retained as historical evidence, but are not used here to claim coverage of the later test annotations. The approved implementation summary states those annotations postdated its retained runs. The fresh local commands above exercised the current test files; required publication checks remain separate.
 
 ## Acceptance and specification results
 
-- `ARSHY:REQ-001` — source annotation: `src/components/FunctionGrapher.jsx`; matching focused unit test: `src/components/FunctionGrapher.test.jsx`; the approved implementation record also confirms `@clause:ARSHY:REQ-001` annotations on these and `tests/graph-plotter.spec.js`. Passing acceptance evidence: `ARSHY:AC-002` below, in the Playwright run above. The source annotation is traceability, not a test verdict.
-- `ARSHY:REQ-002` — source annotation: `src/components/FunctionGrapher.jsx`; matching focused unit test: `src/components/FunctionGrapher.test.jsx`; the approved implementation record confirms `@clause:ARSHY:REQ-002` annotations on these and `tests/graph-plotter.spec.js`. Passing acceptance evidence: `ARSHY:AC-001` below. The source annotation is traceability, not a test verdict.
-- `ARSHY:AC-001` — passed in `tests/graph-plotter.spec.js`: “plots x^2 + y^2 = 36 as a centered radius-6 circle.” Its `@ac:ARSHY:AC-001` test passed in Playwright attempt `TA-6f605efb9b59d24cd21c`; retained criterion evidence establishes a circle centered at `(0, 0)` with radius `6`.
-- `ARSHY:AC-002` — passed in `tests/graph-plotter.spec.js`: “grapher equation entry › renders the supported explicit and implicit equations.” Its `@ac:ARSHY:AC-002` test passed in Playwright attempt `TA-6f605efb9b59d24cd21c`, covering `y = 2*x + 1`, `y = (x - 2) / 2`, and `x - y = 0` with graph-coordinate checks.
+- `ARSHY:REQ-001` — source annotation: `src/components/FunctionGrapher.jsx`; matching focused tests: `src/components/FunctionGrapher.test.jsx` and `tests/graph-plotter.spec.js`, with `@clause:ARSHY:REQ-001` annotations confirmed by the approved implementation record. The four focused grapher unit tests passed in the fresh Vitest run; the full suite's unrelated failures do not change those individual results. `ARSHY:AC-002` below supplies the browser acceptance evidence. An annotation is traceability, not a test verdict.
+- `ARSHY:REQ-002` — source annotation: `src/components/FunctionGrapher.jsx`; matching focused tests: `src/components/FunctionGrapher.test.jsx` and `tests/graph-plotter.spec.js`, with `@clause:ARSHY:REQ-002` annotations confirmed by the approved implementation record. The circle unit test passed in the fresh Vitest run. `ARSHY:AC-001` below supplies the browser acceptance evidence. An annotation is traceability, not a test verdict.
+- `ARSHY:AC-001` — passed in the fresh Playwright run: `tests/graph-plotter.spec.js`, “plots x^2 + y^2 = 36 as a centered radius-6 circle.” The test carries `@ac:ARSHY:AC-001`; result: passed, with no retry or failure. It verifies the circle centered at `(0, 0)` with radius `6`.
+- `ARSHY:AC-002` — passed in the fresh Playwright run: `tests/graph-plotter.spec.js`, “grapher equation entry › renders the supported explicit and implicit equations.” The test carries `@ac:ARSHY:AC-002`; result: passed, with no retry or failure. It covers `y = 2*x + 1`, `y = (x - 2) / 2`, and `x - y = 0` with graph-coordinate checks.
 - No configuration or documentation clause is in scope. Tags are not applicable to configuration or documentation outcomes.
 
 ## Negative, regression, security, and non-functional checks
 
 - No Story-specific invalid-expression, empty-state, security, accessibility, resilience, or performance behavior is specified; no dedicated test result for those areas is claimed. The approved planning record identifies risks from implicit-contour sampling and unsupported grammar. The retained acceptance evidence covers the required line plots and circle, not arbitrary curves or malformed-input handling. Preservation of existing presets is reported by the implementation producer, but no separately identified preset-regression result is retained here.
-- Historical diagnostics from implementation generation 3 are not current-generation evidence: `npm run build` passed with a large-bundle advisory; `npm test` had 17 failures in `src/App.test.jsx` due to `localStorage` being undefined under Node 26.12.0; `npm run lint` reported pre-existing findings, including in `FunctionGrapher.jsx`. These were not rerun or attributed to the generation-5 source tree.
+- The fresh full Vitest run reproduces 17 environment-related `src/App.test.jsx` failures (`localStorage` is undefined); these do not occur in the four focused grapher unit tests or either Playwright acceptance test. No application or test-runner configuration was changed in this verification phase.
+- Historical implementation generation 3 diagnostics are separate from this run: `npm run lint` reported pre-existing findings, including in `FunctionGrapher.jsx`; lint was not rerun for this verification generation.
 - Constitution articles: None: this Story pinned no constitution.
-- Overall result: both acceptance criteria have passing, source-matched Playwright evidence. Remaining limitation: fresh required checks run at publication, and no separate evidence is available for the non-specified negative, security, accessibility, or non-functional cases. No upstream discrepancy or failure in the retained generation-5 results was identified.
+- Overall result: `ARSHY:AC-001` and `ARSHY:AC-002` passed in the fresh Playwright run; the planned production build passed with a chunk-size advisory. The full Vitest suite remains failed on 17 `localStorage`-dependent app tests, although all focused grapher unit tests passed. Fresh publication checks remain required. No separate evidence is available for the non-specified security, accessibility, resilience, or performance cases.
 
 <!-- singularity-flow:inputs:start -->
 
