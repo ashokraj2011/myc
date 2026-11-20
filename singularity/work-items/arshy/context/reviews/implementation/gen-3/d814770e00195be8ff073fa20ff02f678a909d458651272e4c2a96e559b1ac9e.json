@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "phase": "implementation",
+  "generation": 3,
+  "reportSha256": "d814770e00195be8ff073fa20ff02f678a909d458651272e4c2a96e559b1ac9e",
+  "lifecycleEventId": "1927021c-f14f-4669-99aa-8b437cbf5114",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "code",
+    "binding": {
+      "workId": "arshy",
+      "phase": "implementation",
+      "generation": 3,
+      "sources": [
+        {
+          "id": "code:src:components:FunctionGrapher.jsx",
+          "path": "src/components/FunctionGrapher.jsx",
+          "textSha256": "ff8c250f0d7582f50354520bc5034100fde553792f032a5467553a4a3da7a366"
+        },
+        {
+          "id": "code:src:components:FunctionGrapher.test.jsx",
+          "path": "src/components/FunctionGrapher.test.jsx",
+          "textSha256": "700a6e671afa6061d70e795de760caa170e1bae0f23ac95a839f89d74697ae44"
+        },
+        {
+          "id": "code:tests:graph-plotter.spec.js",
+          "path": "tests/graph-plotter.spec.js",
+          "textSha256": "7cb13d7d0bf45c790f7f07e3adf2c86b32585f6f027901891e5c89ffe3d1b5c2"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/arshy/artifacts/implementation/implementation-summary.md",
+        "sha256": "fdd031e3a4913be234f9f596f3f01ca97e4ade9d7cc8d36ae3eeed39091725e8"
+      },
+      "plan": {
+        "path": "singularity/work-items/arshy/artifacts/planning/plan.md",
+        "sha256": "0414312fa3175dfcd733ce5fd0691acdbafaea7d40c09c0bb4fa76cb4b4bf5f1"
+      },
+      "evidenceSha256": "b8b5384e88aafb9b5bcc6c62ed86d807976fb07ec5d8c12e4492d43adb528318"
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "code:src:components:FunctionGrapher.jsx",
+      "code:src:components:FunctionGrapher.test.jsx",
+      "code:tests:graph-plotter.spec.js"
+    ],
+    "rows": [
+      {
+        "clauseId": "ARSHY:AC-001",
+        "implementation": [],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 75,
+            "quote": "test('plots x^2 + y^2 = 36 as a centered radius-6 circle', async ({ page }) => {"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "ARSHY:AC-002",
+        "implementation": [],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 62,
+            "quote": "test('renders the supported explicit and implicit equations', async ({ page }) => {"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "does-not-prove"
+      },
+      {
+        "clauseId": "ARSHY:REQ-001",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 15,
+            "quote": "export const normalizeEquation = (input) => {"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 62,
+            "quote": "test('renders the supported explicit and implicit equations', async ({ page }) => {"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "does-not-prove"
+      },
+      {
+        "clauseId": "ARSHY:REQ-002",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 41,
+            "quote": "const isCircleEquation = (equation) => {"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 75,
+            "quote": "test('plots x^2 + y^2 = 36 as a centered radius-6 circle', async ({ page }) => {"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      }
+    ],
+    "unplannedPaths": [
+      {
+        "sourceId": "code:src:components:FunctionGrapher.test.jsx",
+        "assessment": "supporting",
+        "note": "The focused helper tests supplement the planned Playwright suite; the implementation summary identifies this as supplemental coverage."
+      }
+    ],
+    "qualityReviewed": [],
+    "findings": [
+      {
+        "id": "AC002-test-oracle",
+        "severity": "blocking",
+        "check": "tests",
+        "clauseId": "ARSHY:AC-002",
+        "sourceId": "code:tests:graph-plotter.spec.js",
+        "line": 67,
+        "quote": "await expect.poll(() => renderedPinkPixels(canvas)).toBeGreaterThan(100);",
+        "message": "The planned browser test passed, but this assertion proves only that some pink canvas pixels exist, not that each entered equation is rendered at its corresponding graph. An implementation that repeatedly draws the same unrelated curve could satisfy this assertion while violating the approved equation examples; add behavior-specific checks for the two explicit equations and the implicit line. This also leaves the REQ-001 planned test insufficient to prove the corresponding-plot behavior."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "717dabbe1d71dc4ece8ae0d2b9d20e66e4a59ab36c63301e5f1d6bed0dc3111a",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "developer",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-20T11:09:44.085Z",
+  "recordSha256": "8eefc9042a885133fd94e66511db5950cc1624aa4e56cde613c37a1cc42a6e9c"
+}

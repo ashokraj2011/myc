@@ -6232,6 +6232,14 @@
       "event": "phase_generated",
       "phase": "implementation",
       "detail": "generation 3"
+    },
+    {
+      "at": "2026-11-20T11:09:44.085Z",
+      "actor": "88361104+ashokraj2011@users.noreply.github.com",
+      "agent": "sflow-source-reviewer",
+      "event": "source_review_submitted",
+      "phase": "implementation",
+      "detail": "d814770e00195be8ff073fa20ff02f678a909d458651272e4c2a96e559b1ac9e"
     }
   ],
   "measurement": {
@@ -6881,6 +6889,44 @@
       ],
       "blockedCode": null,
       "recordSha256": "06fd78f31a50323d59300bbb13eda7658dc69a934e5f8e2a37bb4fa3ac817b72"
+    },
+    "WT-af588cfa908997e26cbf9d26d6c1bccf165a24c2de0f3a16dc9ab9a1addb1e05": {
+      "schemaVersion": 1,
+      "kind": "workflow-task-record",
+      "authority": "progress-only",
+      "workId": "arshy",
+      "phaseId": "implementation",
+      "generation": 3,
+      "role": "source-reviewer",
+      "repositoryIdentity": "4dc77d5a23f27a2786b99b5cefbd15198ad2df58d473326391512e1516c5491f",
+      "storyIdentity": "611fa0832811b24a861a47b0e64d9f328a4295ebb11a4cbd251875bfabbf3d8b",
+      "id": "WT-af588cfa908997e26cbf9d26d6c1bccf165a24c2de0f3a16dc9ab9a1addb1e05",
+      "inputSha256": "f4090a6e2f05483b672ac20692e9ede2ed2c2795241fc3648e3dc886a6e792fc",
+      "revision": 4,
+      "state": "complete",
+      "continuations": 0,
+      "maximumContinuations": 2,
+      "repairConsumed": 0,
+      "conditions": [],
+      "checkpoints": [
+        {
+          "kind": "review-check",
+          "inputSha256": "f4090a6e2f05483b672ac20692e9ede2ed2c2795241fc3648e3dc886a6e792fc",
+          "fingerprint": "7365721fbd177ca573fc72a587f73c25021844e53316099b5a5529c2f88a691f"
+        },
+        {
+          "kind": "retention-requested",
+          "inputSha256": "f4090a6e2f05483b672ac20692e9ede2ed2c2795241fc3648e3dc886a6e792fc",
+          "fingerprint": "f4090a6e2f05483b672ac20692e9ede2ed2c2795241fc3648e3dc886a6e792fc"
+        },
+        {
+          "kind": "retained-review",
+          "inputSha256": "f4090a6e2f05483b672ac20692e9ede2ed2c2795241fc3648e3dc886a6e792fc",
+          "fingerprint": "61c520b6d596a70d3bc6a87925926dc7d22f30eef6a7818648158cf65f1d7af8"
+        }
+      ],
+      "blockedCode": null,
+      "recordSha256": "eed6199b69b6e78c7e92a57028c374b53c6af996e4582a8351df4496aa5e2500"
     }
   },
   "publicationProjections": [
@@ -11403,6 +11449,140 @@
           }
         },
         "createdAt": "2026-11-20T11:08:25.417Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "1927021c-f14f-4669-99aa-8b437cbf5114",
+        "type": "evidence-recorded",
+        "subject": {
+          "kind": "story",
+          "id": "arshy",
+          "branch": "arshy"
+        },
+        "phaseId": "implementation",
+        "generation": 3,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "sflow-source-reviewer",
+        "authorityGroup": null,
+        "payload": {
+          "kind": "source-grounded-review",
+          "reportSha256": "d814770e00195be8ff073fa20ff02f678a909d458651272e4c2a96e559b1ac9e",
+          "decision": null,
+          "reviewPacketSha256": null
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-20T11:09:43.026Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "1927021c-f14f-4669-99aa-8b437cbf5114",
+        "eventType": "evidence-recorded",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "arshy"
+          ],
+          "branch": "arshy",
+          "canonicalBranch": "arshy",
+          "createdAt": "2026-11-20T05:04:22.679Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 3,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 3
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph",
+          "updatedAt": "2026-11-20T11:09:44.085Z",
+          "workId": "arshy",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "sflow-source-reviewer",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "106d3c3a8dbea5992306f47e45f781900b06ed64faafb501f8945ee96a55a9a6",
+          "lifecycleEventId": "1927021c-f14f-4669-99aa-8b437cbf5114",
+          "lifecyclePayload": {
+            "decision": null,
+            "kind": "source-grounded-review",
+            "reportSha256": "d814770e00195be8ff073fa20ff02f678a909d458651272e4c2a96e559b1ac9e",
+            "reviewPacketSha256": null
+          },
+          "templateSha256": "ba0749ab3997579949fc836a839af6606f995c2012a90b410597ebadf211298d",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "1927021c-f14f-4669-99aa-8b437cbf5114",
+            "type": "evidence-recorded",
+            "subject": {
+              "kind": "story",
+              "id": "arshy",
+              "branch": "arshy"
+            },
+            "phaseId": "implementation",
+            "generation": 3,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "sflow-source-reviewer",
+            "authorityGroup": null,
+            "payload": {
+              "kind": "source-grounded-review",
+              "reportSha256": "d814770e00195be8ff073fa20ff02f678a909d458651272e4c2a96e559b1ac9e",
+              "decision": null,
+              "reviewPacketSha256": null
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-20T11:09:43.026Z"
+          }
+        },
+        "createdAt": "2026-11-20T11:09:43.033Z"
       }
     }
   ],
