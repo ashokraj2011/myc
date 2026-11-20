@@ -4046,20 +4046,115 @@
       "rejectedAt": null,
       "rejectedBy": null,
       "rejectionReason": null,
-      "generation": 0,
-      "generatedBy": null,
+      "generation": 1,
+      "generatedBy": {
+        "name": "Ashok Raj",
+        "email": "88361104+ashokraj2011@users.noreply.github.com",
+        "login": "ashokraj2011",
+        "githubLookup": "resolved"
+      },
       "generatedAgent": null,
-      "authorship": [],
+      "authorship": [
+        {
+          "schemaVersion": 1,
+          "producer": "deterministic",
+          "channel": "kernel-generator",
+          "actor": {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com",
+            "login": "ashokraj2011",
+            "githubLookup": "resolved"
+          },
+          "governedAgentContext": null,
+          "kernelModel": {
+            "invoked": false,
+            "status": "exact",
+            "invocationIds": []
+          },
+          "externalAiUse": {
+            "value": "unknown",
+            "status": "unavailable"
+          },
+          "changeOrigins": [
+            "code-generator"
+          ],
+          "source": {
+            "kind": "in-place",
+            "filename": "verification-summary.md",
+            "mediaType": "text/markdown",
+            "sha256": "13fda0bee347753208dfc1f21ecedea03b65dd703a1a7062fa1ff3bd5957224c",
+            "bytes": 950
+          },
+          "generation": 1,
+          "publishedAt": "2026-11-20T15:10:15.467Z"
+        }
+      ],
       "usage": [],
-      "telemetry": [],
+      "telemetry": [
+        {
+          "generation": 1,
+          "path": "singularity/work-items/fix-issues/telemetry/verify-gen1.json",
+          "sha256": "190fc9742190238081ce1868b9c4932290c65f3db91e1df431f432216edcaebd",
+          "status": "not-invoked",
+          "models": [],
+          "providerCost": null
+        }
+      ],
       "approvals": [],
-      "generationPublications": [],
+      "generationPublications": [
+        {
+          "generation": 1,
+          "publishedAt": "2026-11-20T15:10:15.467Z",
+          "changeSetDigest": null,
+          "resultDigest": "sha256:8722db306f72aea976f1755025a88b6d18be409e54765d139fd5ca346397bbad",
+          "resultDigestVersion": 3,
+          "architectureIntent": null,
+          "architectureDecision": null,
+          "record": {
+            "path": "singularity/work-items/fix-issues/context/generation-publications/verify-gen1.json",
+            "sha256": "sha256:7fdc82698d59993bd44390b6522fd792f9486aa2582b33f1b079203e60c5dad9"
+          }
+        }
+      ],
       "submissionArchitectureDecision": null,
       "designSourceSets": [],
       "artifactRegistrationRepairs": [],
-      "artifacts": [],
+      "artifacts": [
+        {
+          "path": "singularity/work-items/fix-issues/artifacts/verify/verification-summary.md",
+          "kind": "document",
+          "status": "pending",
+          "exists": true,
+          "size": 8768,
+          "sha256": "a1f9a2ab2c0a9aed4bb6dbc8923b9aa3509826622b2ffeaf2e58ce2996713a31",
+          "registeredAt": "2026-11-20T15:10:14.499Z",
+          "updatedAt": "2026-11-20T15:10:15.534Z"
+        }
+      ],
       "checks": [],
-      "remoteOutputs": []
+      "remoteOutputs": [],
+      "inputContext": {
+        "generation": 1,
+        "path": "singularity/work-items/fix-issues/context/inputs-verify-gen1.json",
+        "sha256": "85f9897fed4983b24df59bbdf3b53788f0bc644fbe1adf31173d2751e9f89d95",
+        "renderedSha256": "dcd18cfc9be86c9048ae01309363d77cf7eb38551a3d3ac638ba8731f7e7273f",
+        "mode": "enforce"
+      },
+      "sourceCommit": "71a5859b497915564e46160e7a5cdb2047c170f9",
+      "sidecars": [
+        {
+          "path": "singularity/work-items/fix-issues/context/sidecars/verify-gen1-singularity-work-items-fix-issues-artifacts-verify-verification-summary.md.json",
+          "artifact": "singularity/work-items/fix-issues/artifacts/verify/verification-summary.md",
+          "integritySha256": "7bc8392409b973b00eb64668c834a299267aad14513f3c693b826d52bb4adb85"
+        }
+      ],
+      "dependencyRecords": [
+        {
+          "generation": 1,
+          "path": "singularity/work-items/fix-issues/context/dependencies/verify-gen1.json",
+          "recordSha256": "sha256:6a9e9d960febef7daa56f4c76a5c0a7e7178410f76e0d340a64bafa4c14bb873"
+        }
+      ]
     }
   },
   "usage": {
@@ -4219,6 +4314,14 @@
       "event": "phase_completed_without_approval",
       "phase": "implement",
       "detail": "approval mode none; advanced to verify"
+    },
+    {
+      "at": "2026-11-20T15:10:15.640Z",
+      "actor": "ashokraj2011",
+      "agent": null,
+      "event": "phase_generated",
+      "phase": "verify",
+      "detail": "generation 1"
     }
   ],
   "measurement": {
@@ -4409,6 +4512,49 @@
       ],
       "blockedCode": null,
       "recordSha256": "d96fb1fc68b95258ec957cd5a2fdbacb2cf5b6c644d4ff20d3781c0e1918d821"
+    },
+    "WT-05aff8befa457ec4b0250ec25ac26c2bebad157ffcabebea7e571a4d8d5f1992": {
+      "schemaVersion": 1,
+      "kind": "workflow-task-record",
+      "authority": "progress-only",
+      "workId": "fix-issues",
+      "phaseId": "verify",
+      "generation": 1,
+      "role": "author",
+      "repositoryIdentity": "4dc77d5a23f27a2786b99b5cefbd15198ad2df58d473326391512e1516c5491f",
+      "storyIdentity": "7cf1fa23a027d68862a59c8bb319402a917580dac88e57273339a46987135d47",
+      "id": "WT-05aff8befa457ec4b0250ec25ac26c2bebad157ffcabebea7e571a4d8d5f1992",
+      "inputSha256": "c8feda2bea681075da44fefc0e0ee22e11f67fbbd5b67d80e22f19fadd75cbbc",
+      "revision": 6,
+      "state": "complete",
+      "continuations": 0,
+      "maximumContinuations": 3,
+      "repairConsumed": 0,
+      "conditions": [],
+      "checkpoints": [
+        {
+          "kind": "prepared",
+          "inputSha256": "c8feda2bea681075da44fefc0e0ee22e11f67fbbd5b67d80e22f19fadd75cbbc",
+          "fingerprint": "dcd18cfc9be86c9048ae01309363d77cf7eb38551a3d3ac638ba8731f7e7273f"
+        },
+        {
+          "kind": "validation",
+          "inputSha256": "c8feda2bea681075da44fefc0e0ee22e11f67fbbd5b67d80e22f19fadd75cbbc",
+          "fingerprint": "57203143dba5a5372611452cc2fad605f4af34eb258036d0a2a82b69cf630096"
+        },
+        {
+          "kind": "publication-requested",
+          "inputSha256": "c8feda2bea681075da44fefc0e0ee22e11f67fbbd5b67d80e22f19fadd75cbbc",
+          "fingerprint": "c8feda2bea681075da44fefc0e0ee22e11f67fbbd5b67d80e22f19fadd75cbbc"
+        },
+        {
+          "kind": "publication",
+          "inputSha256": "c8feda2bea681075da44fefc0e0ee22e11f67fbbd5b67d80e22f19fadd75cbbc",
+          "fingerprint": "5486c75daf7f3c78759d4c62d13bc726aeee6aac0e11f04eaa9866531bf313da"
+        }
+      ],
+      "blockedCode": null,
+      "recordSha256": "4bfb4ad53a47c3ee9590c4b16a6eba1f9648f1ba533d257bac891520c0b6f983"
     }
   },
   "publicationProjections": [
@@ -5631,6 +5777,134 @@
           }
         },
         "createdAt": "2026-11-20T15:01:00.657Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "6ea9283a-c964-4d7e-99c2-a621c4511694",
+        "type": "artifact-generated",
+        "subject": {
+          "kind": "story",
+          "id": "fix-issues",
+          "branch": "fix-issues"
+        },
+        "phaseId": "verify",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": null,
+        "authorityGroup": null,
+        "payload": {
+          "decision": null,
+          "reviewPacketSha256": null
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-20T15:10:14.624Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "6ea9283a-c964-4d7e-99c2-a621c4511694",
+        "eventType": "artifact-generated",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "fix-issues"
+          ],
+          "branch": "fix-issues",
+          "canonicalBranch": "fix-issues",
+          "createdAt": "2026-11-20T14:25:36.220Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "verify",
+          "generation": 1,
+          "phase": "verify",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 3,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "verify",
+              "status": "in_progress",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "Fix graph rendering and layout stability",
+          "updatedAt": "2026-11-20T15:10:15.640Z",
+          "workId": "fix-issues",
+          "workType": "quick-fix"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": null,
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "cc57a16d7959c8cca63ecb452a5d714891daa623ce4c0a607f1854bfc3883b55",
+          "lifecycleEventId": "6ea9283a-c964-4d7e-99c2-a621c4511694",
+          "lifecyclePayload": {
+            "decision": null,
+            "reviewPacketSha256": null
+          },
+          "templateSha256": "f54cccabc38f645bcd987cb3096070f7ea18732c689bb8c1ee90d4222b966632",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "6ea9283a-c964-4d7e-99c2-a621c4511694",
+            "type": "artifact-generated",
+            "subject": {
+              "kind": "story",
+              "id": "fix-issues",
+              "branch": "fix-issues"
+            },
+            "phaseId": "verify",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": null,
+            "authorityGroup": null,
+            "payload": {
+              "decision": null,
+              "reviewPacketSha256": null
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-20T15:10:14.624Z"
+          }
+        },
+        "createdAt": "2026-11-20T15:10:14.634Z"
       }
     }
   ],
