@@ -12,13 +12,20 @@
 | 1 | Specification (`specification`) | product-owner | **approved** | 4 | 0 | unavailable |
 | 2 | Planning (`planning`) | architect | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent architect | **warning** |  |  |  |
-| 3 | Implementation (`implementation`) | developer | **awaiting_approval** | 4 | 0 | unavailable |
+| 3 | Implementation (`implementation`) | developer | **in_progress** | 4 | 1 | unavailable |
 | 4 | Convergence (`convergence`) | architect | **not_started** | 0 | 0 | unavailable |
 | 5 | Verification (`verification`) | qa | **not_started** | 0 | 0 | unavailable |
 | 6 | Release (`release`) | qa | **not_started** | 0 | 0 | unavailable |
 
+## Open stakeholder change requests
+
+- **CR-001** — return `implementation` to `implementation`: Add @clause tags to the test files for the requirements they test; no app code changes _(requested by Ashok Raj at 2026-11-20T12:37:43.868Z)_
+  - Reversible checkpoint: `RFW-CR-001` — preview with `singularity-flow story rework roll-forward --work-id arshy --change-request CR-001 --json`.
+
 ## Recent history
 
+- 2026-11-20T12:37:43.868Z — **phase_rejected** (implementation) by ashokraj2011 · agent developer: CR-001 returned to implementation: Add @clause tags to the test files for the requirements they test; no app code changes
+- 2026-11-20T12:37:44.012Z — **work_interval_started** (implementation) by system: baseline 1f4964fa7718 at 2920ebc41c59
 - 2026-11-20T12:16:34.907Z — **plan_amended** (implementation) by ashokraj2011 · agent developer: PRC-001 corrects planning: add-test ARSHY:REQ-001. we are good with this ok
 - 2026-11-20T12:13:25.841Z — **phase_submitted** (implementation) by ashokraj2011 · agent developer: 10 artifacts
 - 2026-11-20T12:13:25.840Z — **work_interval_reconciled** (implementation) by system: aligned; 1 changed path(s)
@@ -32,5 +39,3 @@
 - 2026-11-20T11:04:20.187Z — **plan_amended** (implementation) by ashokraj2011 · agent developer: PAM-001: vite.config.js listed as build-configuration, accepting DEP-001. no need to change anything go ahead
 - 2026-11-20T11:04:05.319Z — **test_command_decided** (implementation) by ashokraj2011 · agent developer: TCD-001 accepted through engineering-reviewers. .-node-tests runs Implementation's tests for this Story.
 - 2026-11-20T10:50:26.562Z — **test_command_decided** (implementation) by ashokraj2011 · agent developer: TCD-001 requests that implementation re-pin test command .-node-tests (vite.config.js changed) for this Story. Vitest discovery is scoped to src test files so the planned tests/graph-plotter.spec.js Playwright suite is run only by Playwright, while preserving existing Vitest coverage.
-- 2026-11-20T10:49:29.652Z — **departure_recorded** (implementation) by ashokraj2011 · agent developer: DEP-001 (supporting): vite.config.js changed as a supporting change (build-configuration). vite.config.js changed in this generation, and no row of the approved plan names it.
-- 2026-11-20T10:49:22.602Z — **decision_settled** (implementation) by ashokraj2011 · agent developer: STL-006 (plan-accounting) settled by SFlow: Listed .gitignore in the plan as a supporting change (an ignore file): it serves the change, not one requirement. Evidence: .gitignore only lists files a tool leaves out (.gitignore)
