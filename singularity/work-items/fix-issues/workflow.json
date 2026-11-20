@@ -235,6 +235,332 @@
           },
           "status": "awaiting_review"
         }
+      },
+      {
+        "packetSha256": "d7e9a07d8d65e719c62ee0d0a8d3a8f286e92f0355e662cfb5fba1ea4bcf3d62",
+        "phase": "implement",
+        "generation": 1,
+        "branch": "fix-issues",
+        "sourceTreeSha256": "sha256:06e13149755c8f76956d8a3601562fe1d9ef8501a5959fc4e91b11747c397a76",
+        "path": "singularity/work-items/fix-issues/submissions/implement/d7e9a07d8d65e719c62ee0d0a8d3a8f286e92f0355e662cfb5fba1ea4bcf3d62.json",
+        "submittedAt": "2026-11-20T15:01:02.490Z",
+        "projection": {
+          "schemaVersion": 3,
+          "workId": "fix-issues",
+          "epicId": null,
+          "planId": null,
+          "jiraIssueId": "fix-issues",
+          "initialJiraKey": null,
+          "currentJiraKey": null,
+          "canonicalBranch": "fix-issues",
+          "submittedBranch": "fix-issues",
+          "submissionCommit": "4b598d335a3d53feeef5f892161d7b5e7382dd78",
+          "sourceCommit": "4b598d335a3d53feeef5f892161d7b5e7382dd78",
+          "sourceTreeSha256": "sha256:06e13149755c8f76956d8a3601562fe1d9ef8501a5959fc4e91b11747c397a76",
+          "codeTreeSha256": "sha256:69bf1266ac3c3b3a393e956aaa25bfb755460a63d29876f51581a91f578c217c",
+          "documentationSha256": "sha256:77cdf82e5b97d084e3884e43def9d07630754df8e53d6e8923d5d0defd16e27d",
+          "phase": "implement",
+          "generation": 1,
+          "authorship": {
+            "schemaVersion": 1,
+            "producer": "deterministic",
+            "channel": "kernel-generator",
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "governedAgentContext": null,
+            "kernelModel": {
+              "invoked": false,
+              "status": "exact",
+              "invocationIds": []
+            },
+            "externalAiUse": {
+              "value": "unknown",
+              "status": "unavailable"
+            },
+            "changeOrigins": [
+              "code-generator"
+            ],
+            "source": {
+              "kind": "in-place",
+              "filename": "implementation-summary.md",
+              "mediaType": "text/markdown",
+              "sha256": "0274f5987df308dd18dfb9b3f876f484dae903d36f70adb4b8e29bd61dd116d9",
+              "bytes": 1252
+            },
+            "generation": 1,
+            "publishedAt": "2026-11-20T14:56:33.536Z"
+          },
+          "artifacts": [
+            {
+              "path": "singularity/work-items/fix-issues/artifacts/implement/implementation-summary.md",
+              "kind": "document",
+              "sha256": "0fec6d68468dac5325e2a366a8571d03fdfe351abbebfbdc7cdb3501b1a4cdd4",
+              "size": 7178,
+              "reference": {
+                "handle": "sfref:v1:story:fix-issues:2c6476076bf27ec9d4dadbe82c7d9d927d6bade0cc3f93d06270b4c492bc6ed0",
+                "recordHash": "2c6476076bf27ec9d4dadbe82c7d9d927d6bade0cc3f93d06270b4c492bc6ed0"
+              }
+            },
+            {
+              "path": "src/App.jsx",
+              "kind": "code",
+              "sha256": "f0cebbd56fb2b16393f0e75c4dbd19938f775204a5bcb2ef4319acfc8ee5a435",
+              "size": 10683
+            },
+            {
+              "path": "src/components/FunctionGrapher.jsx",
+              "kind": "code",
+              "sha256": "c2f086138d44640cd463c6bda4dd0db6776d52855fd7030a7e028ee619aebef0",
+              "size": 11743
+            },
+            {
+              "path": "src/index.css",
+              "kind": "code",
+              "sha256": "f7b3e998eee9f604f5f4701e953351934ed86925317e6f07ea241bca7c3790a0",
+              "size": 18885
+            },
+            {
+              "path": "tests/graph-plotter.spec.js",
+              "kind": "test",
+              "sha256": "d2586fd58db153a4043ae3187579409f2e5648433eca4467284a61c2edf06cb0",
+              "size": 6331
+            }
+          ],
+          "references": [
+            {
+              "handle": "sfref:v1:story:fix-issues:2c6476076bf27ec9d4dadbe82c7d9d927d6bade0cc3f93d06270b4c492bc6ed0",
+              "recordHash": "2c6476076bf27ec9d4dadbe82c7d9d927d6bade0cc3f93d06270b4c492bc6ed0",
+              "purpose": "review-evidence",
+              "required": true
+            }
+          ],
+          "agentBriefs": [],
+          "checks": [
+            {
+              "id": ".-node-tests",
+              "command": "npm test -- --reporter=json --outputFile=.sflow/results/node-tests.json",
+              "kind": "test",
+              "requirement": "required",
+              "workingDirectory": ".",
+              "resultIsolated": true,
+              "externalModelPolicy": "never",
+              "timeoutMs": 1800000,
+              "sourceCommit": "64f900aa74ae334b9b3da477337b44ba18d8d584",
+              "sourceTreeSha256": "sha256:06e13149755c8f76956d8a3601562fe1d9ef8501a5959fc4e91b11747c397a76",
+              "codeTreeSha256": "sha256:69bf1266ac3c3b3a393e956aaa25bfb755460a63d29876f51581a91f578c217c",
+              "testRuntime": {
+                "node": "v26.12.0",
+                "platform": "darwin",
+                "arch": "arm64",
+                "profile": {
+                  "nodeOptions": []
+                },
+                "nodeOptionsSha256": "sha256:12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+                "sha256": "sha256:f15dcad9c80b6efa9c83161aec98ae14475b39f8c90cbe5c3c5f656cc23e1fb0"
+              },
+              "startedAt": "2026-11-20T14:56:20.874Z",
+              "completedAt": "2026-11-20T14:56:27.295Z",
+              "status": "passed",
+              "exitCode": 0,
+              "signal": null,
+              "stdout": "",
+              "stderr": "",
+              "stdoutBytes": 0,
+              "stderrBytes": 0,
+              "stdoutTruncated": false,
+              "stderrTruncated": false,
+              "evidenceUse": "reused",
+              "reusedFrom": {
+                "attemptId": "TA-f85fb7ba40a736ee1c79",
+                "phase": "implement",
+                "generation": 1,
+                "commit": "64f900aa74ae334b9b3da477337b44ba18d8d584",
+                "treeSha256": "sha256:06e13149755c8f76956d8a3601562fe1d9ef8501a5959fc4e91b11747c397a76",
+                "receiptPath": "singularity/work-items/fix-issues/context/code-delivery/tests/attempts/implement/TA-f85fb7ba40a736ee1c79.json",
+                "receiptSha256": "9c2bbbd9822136d415257b7025fa9599f80fd850bcb3a3dd91cf4feabc3d8366",
+                "counts": {
+                  "discovered": 35,
+                  "passed": 35,
+                  "failed": 0,
+                  "skipped": 0
+                }
+              }
+            },
+            {
+              "id": "playwright-tests",
+              "command": "npm run test:e2e -- --reporter=json",
+              "kind": "test",
+              "requirement": "required",
+              "workingDirectory": ".",
+              "resultIsolated": true,
+              "externalModelPolicy": "never",
+              "timeoutMs": 1800000,
+              "sourceCommit": "64f900aa74ae334b9b3da477337b44ba18d8d584",
+              "sourceTreeSha256": "sha256:06e13149755c8f76956d8a3601562fe1d9ef8501a5959fc4e91b11747c397a76",
+              "codeTreeSha256": "sha256:69bf1266ac3c3b3a393e956aaa25bfb755460a63d29876f51581a91f578c217c",
+              "testRuntime": {
+                "node": "v26.12.0",
+                "platform": "darwin",
+                "arch": "arm64",
+                "profile": {
+                  "nodeOptions": []
+                },
+                "nodeOptionsSha256": "sha256:12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+                "sha256": "sha256:f15dcad9c80b6efa9c83161aec98ae14475b39f8c90cbe5c3c5f656cc23e1fb0"
+              },
+              "startedAt": "2026-11-20T14:56:27.295Z",
+              "completedAt": "2026-11-20T14:56:32.941Z",
+              "status": "passed",
+              "exitCode": 0,
+              "signal": null,
+              "stdout": "",
+              "stderr": "",
+              "stdoutBytes": 0,
+              "stderrBytes": 0,
+              "stdoutTruncated": false,
+              "stderrTruncated": false,
+              "evidenceUse": "reused",
+              "reusedFrom": {
+                "attemptId": "TA-7b96819869817fe4f832",
+                "phase": "implement",
+                "generation": 1,
+                "commit": "64f900aa74ae334b9b3da477337b44ba18d8d584",
+                "treeSha256": "sha256:06e13149755c8f76956d8a3601562fe1d9ef8501a5959fc4e91b11747c397a76",
+                "receiptPath": "singularity/work-items/fix-issues/context/code-delivery/tests/attempts/implement/TA-7b96819869817fe4f832.json",
+                "receiptSha256": "6af989719e4d112e63974d3ad756a180b0c6d6c39ae33a33d762cbfc3f43f1ec",
+                "counts": {
+                  "discovered": 3,
+                  "passed": 3,
+                  "failed": 0,
+                  "skipped": 0
+                }
+              }
+            }
+          ],
+          "usage": [],
+          "approvals": [],
+          "visualAssurance": null,
+          "submissionEvidence": {
+            "architectureIntent": null,
+            "architectureDecision": null,
+            "codeDelivery": {
+              "path": "singularity/work-items/fix-issues/context/code-delivery/implement-gen1.json",
+              "sha256": "78599e4b5f86504bd4a828d93cb4dca1be7f7bd73aa23f5646876ea11cdd4256",
+              "changeSetPath": "singularity/work-items/fix-issues/context/code-delivery/implement-gen1-changes.json",
+              "changeSetDigest": "sha256:a5a6a83ebd9be0c16e6d51aa51df29da1dbae59d224a24661e579e4d97cbd8ee",
+              "status": "ready",
+              "autoCandidate": null,
+              "autoCandidateVerification": null
+            },
+            "testExecutions": [
+              {
+                "commandId": ".-node-tests",
+                "path": "singularity/work-items/fix-issues/context/code-delivery/tests/attempts/implement/TA-f85fb7ba40a736ee1c79.json",
+                "sha256": "9c2bbbd9822136d415257b7025fa9599f80fd850bcb3a3dd91cf4feabc3d8366",
+                "status": "passed"
+              },
+              {
+                "commandId": "playwright-tests",
+                "path": "singularity/work-items/fix-issues/context/code-delivery/tests/attempts/implement/TA-7b96819869817fe4f832.json",
+                "sha256": "6af989719e4d112e63974d3ad756a180b0c6d6c39ae33a33d762cbfc3f43f1ec",
+                "status": "passed"
+              }
+            ],
+            "claimMaps": [
+              {
+                "kind": "observed",
+                "generation": 1,
+                "path": "singularity/work-items/fix-issues/context/claims/implement-gen1-observed.json",
+                "sha256": "426042ab6a0056e2c7449ffa36a23c98b3d1a490819bbbe5483733771c3f5102"
+              }
+            ],
+            "checksSha256": "7d621bf9c03728fb13f28d2c20b7ae1398f3c2bd5eb4c3cab54d1dc0f75a2e1a",
+            "artifactSetSha256": "85e7c33af760e77e9ab4963d5eb7f9a7209af3a16aba74548e7b3dfbf1e096ae"
+          },
+          "witnessReview": {
+            "enrollment": {
+              "schemaVersion": 1,
+              "mode": "disabled",
+              "witnessedClauses": {
+                "enabled": false,
+                "profiles": []
+              },
+              "testcaseExact": {
+                "mode": "disabled",
+                "profile": null,
+                "requiredAssurance": "unavailable",
+                "policySha256": "sha256:12b50a34a1f03338377ecd76f44b20cbee83e7b91a0b07392ef08e3d8fd60800"
+              },
+              "claimMapContractVersion": 2,
+              "cab": null,
+              "sgos": null,
+              "rollout": {
+                "id": "wel-v0.2-observe",
+                "version": 1,
+                "enrollment": "new-story-only"
+              },
+              "configurationAuthority": {
+                "repository": "https://github.com/ashokraj2011/myc.git",
+                "branch": "sflow/config",
+                "commit": "9f59d3ef5dc05881b32f71a8316cc8ec35b83865",
+                "projectionSha256": "f89512404bba4ac3b09bdffbb5e63f2245efdcd4a165b9dae4f53d1328000bb5"
+              }
+            },
+            "enrollmentClassification": "enrolled",
+            "enrollmentReason": null,
+            "clauseMappings": [
+              {
+                "mappingSha256": "sha256:774ac1767228ca763f6ac51939365a3e175079530b151280617ee1e48e07018f",
+                "clauseId": "FIX-ISSUES:AC-001",
+                "witnessType": "test",
+                "executionProfile": "playwright-json-v1",
+                "logicalTestId": "sha256:b4ada1a5a281726a46f646c822f63ad3aaa706cded4bde844a39fc16e6ebfa75",
+                "sourcePath": "tests/graph-plotter.spec.js",
+                "sourceDeclarationSha256": "sha256:5a05cfc0345929186b31083b1366b8ef2f751c2d27c590811bb08b7bbaa72f1d",
+                "supportSha256": null,
+                "clauseBodySha256": "sha256:7cb9bf455df1ed9450687bdf4a517bbd1882b28a37733223d1d6316d1d27fbd6",
+                "contractSha256": "sha256:6ac681c4719f05dc48665c37318f4c2bc4b035be30f459bc2d69e314ec398458",
+                "slot": "tests",
+                "test": "'grapher equation entry › renders the supported explicit and implicit equations' in tests/graph-plotter.spec.js",
+                "reviewStatus": "unreviewed",
+                "decision": null,
+                "reason": null,
+                "expiresAt": null
+              },
+              {
+                "mappingSha256": "sha256:978d6606d2e0ad4fb94f10eab7f643d833fa54f486f6e4ba8fc7638d9f0dd972",
+                "clauseId": "FIX-ISSUES:AC-002",
+                "witnessType": "test",
+                "executionProfile": "playwright-json-v1",
+                "logicalTestId": "sha256:b4441f90d9839b9b6d9a5ba033c6f21a592b7a3a40f6501c5f5b04d677f257cb",
+                "sourcePath": "tests/graph-plotter.spec.js",
+                "sourceDeclarationSha256": "sha256:061cfc81ffaee05d11f7fc13367f2bee428c14673fbda736805b5e7ca7c7a50c",
+                "supportSha256": null,
+                "clauseBodySha256": "sha256:90326a0ca6cb38f5b87daecb83830ad49c43580cb5c8d510d49d7a447737ea23",
+                "contractSha256": "sha256:70b80b4d8fcebcf42e65509e672bc9232e13d99c61928d73de2342f19187d02b",
+                "slot": "tests",
+                "test": "'keeps page dimensions fixed while typing and clicking grapher controls' in tests/graph-plotter.spec.js",
+                "reviewStatus": "unreviewed",
+                "decision": null,
+                "reason": null,
+                "expiresAt": null
+              }
+            ],
+            "testcaseObservations": []
+          },
+          "submittedAt": "2026-11-20T15:01:02.490Z",
+          "submittedBy": {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com",
+            "login": "ashokraj2011",
+            "githubLookup": "resolved"
+          },
+          "status": "complete_no_review"
+        }
       }
     ]
   },
@@ -1568,7 +1894,7 @@
     "policySha256": "sha256:3b4096f3635f3a675ffaa1e833c72dcfe48675b4f1b1c6994c599a79f5ee8e2d"
   },
   "status": "in_progress",
-  "currentPhase": "implement",
+  "currentPhase": "verify",
   "phaseOrder": [
     "intake",
     "implement",
@@ -1866,7 +2192,7 @@
       "label": "Implement",
       "order": 1,
       "defaultAgent": "developer",
-      "status": "in_progress",
+      "status": "approved",
       "requiredArtifact": {
         "path": "artifacts/implement/implementation-summary.md",
         "kind": "implementation-summary",
@@ -1918,8 +2244,8 @@
       },
       "qualityCommands": [],
       "startedAt": "2026-11-20T14:48:58.386Z",
-      "submittedAt": null,
-      "approvedAt": null,
+      "submittedAt": "2026-11-20T15:01:02.490Z",
+      "approvedAt": "2026-11-20T15:01:02.490Z",
       "approvedBy": null,
       "rejectedAt": null,
       "rejectedBy": null,
@@ -2001,12 +2327,14 @@
         {
           "path": "singularity/work-items/fix-issues/artifacts/implement/implementation-summary.md",
           "kind": "document",
-          "status": "pending",
+          "status": "approved",
           "exists": true,
-          "size": 7105,
-          "sha256": "c3205c221365a8b4f3036b534118937068976b08055fca7aad0e43676b8c4972",
+          "size": 7178,
+          "sha256": "0fec6d68468dac5325e2a366a8571d03fdfe351abbebfbdc7cdb3501b1a4cdd4",
           "registeredAt": "2026-11-20T14:56:19.698Z",
-          "updatedAt": "2026-11-20T14:56:33.681Z"
+          "updatedAt": "2026-11-20T15:01:02.511Z",
+          "approvedAt": "2026-11-20T15:01:02.490Z",
+          "approvedBy": null
         },
         {
           "path": "src/App.jsx",
@@ -2049,7 +2377,108 @@
           "updatedAt": "2026-11-20T14:56:33.744Z"
         }
       ],
-      "checks": [],
+      "checks": [
+        {
+          "id": ".-node-tests",
+          "command": "npm test -- --reporter=json --outputFile=.sflow/results/node-tests.json",
+          "kind": "test",
+          "requirement": "required",
+          "workingDirectory": ".",
+          "resultIsolated": true,
+          "externalModelPolicy": "never",
+          "timeoutMs": 1800000,
+          "sourceCommit": "64f900aa74ae334b9b3da477337b44ba18d8d584",
+          "sourceTreeSha256": "sha256:06e13149755c8f76956d8a3601562fe1d9ef8501a5959fc4e91b11747c397a76",
+          "codeTreeSha256": "sha256:69bf1266ac3c3b3a393e956aaa25bfb755460a63d29876f51581a91f578c217c",
+          "testRuntime": {
+            "node": "v26.12.0",
+            "platform": "darwin",
+            "arch": "arm64",
+            "profile": {
+              "nodeOptions": []
+            },
+            "nodeOptionsSha256": "sha256:12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "sha256": "sha256:f15dcad9c80b6efa9c83161aec98ae14475b39f8c90cbe5c3c5f656cc23e1fb0"
+          },
+          "startedAt": "2026-11-20T14:56:20.874Z",
+          "completedAt": "2026-11-20T14:56:27.295Z",
+          "status": "passed",
+          "exitCode": 0,
+          "signal": null,
+          "stdout": "",
+          "stderr": "",
+          "stdoutBytes": 0,
+          "stderrBytes": 0,
+          "stdoutTruncated": false,
+          "stderrTruncated": false,
+          "evidenceUse": "reused",
+          "reusedFrom": {
+            "attemptId": "TA-f85fb7ba40a736ee1c79",
+            "phase": "implement",
+            "generation": 1,
+            "commit": "64f900aa74ae334b9b3da477337b44ba18d8d584",
+            "treeSha256": "sha256:06e13149755c8f76956d8a3601562fe1d9ef8501a5959fc4e91b11747c397a76",
+            "receiptPath": "singularity/work-items/fix-issues/context/code-delivery/tests/attempts/implement/TA-f85fb7ba40a736ee1c79.json",
+            "receiptSha256": "9c2bbbd9822136d415257b7025fa9599f80fd850bcb3a3dd91cf4feabc3d8366",
+            "counts": {
+              "discovered": 35,
+              "passed": 35,
+              "failed": 0,
+              "skipped": 0
+            }
+          }
+        },
+        {
+          "id": "playwright-tests",
+          "command": "npm run test:e2e -- --reporter=json",
+          "kind": "test",
+          "requirement": "required",
+          "workingDirectory": ".",
+          "resultIsolated": true,
+          "externalModelPolicy": "never",
+          "timeoutMs": 1800000,
+          "sourceCommit": "64f900aa74ae334b9b3da477337b44ba18d8d584",
+          "sourceTreeSha256": "sha256:06e13149755c8f76956d8a3601562fe1d9ef8501a5959fc4e91b11747c397a76",
+          "codeTreeSha256": "sha256:69bf1266ac3c3b3a393e956aaa25bfb755460a63d29876f51581a91f578c217c",
+          "testRuntime": {
+            "node": "v26.12.0",
+            "platform": "darwin",
+            "arch": "arm64",
+            "profile": {
+              "nodeOptions": []
+            },
+            "nodeOptionsSha256": "sha256:12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "sha256": "sha256:f15dcad9c80b6efa9c83161aec98ae14475b39f8c90cbe5c3c5f656cc23e1fb0"
+          },
+          "startedAt": "2026-11-20T14:56:27.295Z",
+          "completedAt": "2026-11-20T14:56:32.941Z",
+          "status": "passed",
+          "exitCode": 0,
+          "signal": null,
+          "stdout": "",
+          "stderr": "",
+          "stdoutBytes": 0,
+          "stderrBytes": 0,
+          "stdoutTruncated": false,
+          "stderrTruncated": false,
+          "evidenceUse": "reused",
+          "reusedFrom": {
+            "attemptId": "TA-7b96819869817fe4f832",
+            "phase": "implement",
+            "generation": 1,
+            "commit": "64f900aa74ae334b9b3da477337b44ba18d8d584",
+            "treeSha256": "sha256:06e13149755c8f76956d8a3601562fe1d9ef8501a5959fc4e91b11747c397a76",
+            "receiptPath": "singularity/work-items/fix-issues/context/code-delivery/tests/attempts/implement/TA-7b96819869817fe4f832.json",
+            "receiptSha256": "6af989719e4d112e63974d3ad756a180b0c6d6c39ae33a33d762cbfc3f43f1ec",
+            "counts": {
+              "discovered": 3,
+              "passed": 3,
+              "failed": 0,
+              "skipped": 0
+            }
+          }
+        }
+      ],
       "remoteOutputs": [],
       "generationIntent": {
         "id": "15cac402-6d96-4295-ad4d-00e31ed670d6",
@@ -2114,8 +2543,8 @@
         "renderedSha256": "c2e20d081bc81404116f0315c8a241613e54d4703b0cb4a1030b63c42d2cb7ca",
         "mode": "enforce"
       },
-      "generationCommit": null,
-      "publicationCommit": null,
+      "generationCommit": "4b598d335a3d53feeef5f892161d7b5e7382dd78",
+      "publicationCommit": "4b598d335a3d53feeef5f892161d7b5e7382dd78",
       "deliveryEvidence": {
         "requirement": "source-and-tests",
         "baselineCommit": "315b551cdeb3072af89b09e86e03caa0c76ba62c",
@@ -3369,9 +3798,95 @@
         "receiptPath": "singularity/work-items/fix-issues/context/code-delivery/implement-gen1.json",
         "changeSetPath": "singularity/work-items/fix-issues/context/code-delivery/implement-gen1-changes.json",
         "sourceTreeSha256": "sha256:06e13149755c8f76956d8a3601562fe1d9ef8501a5959fc4e91b11747c397a76",
-        "status": "pending-tests",
+        "status": "ready",
         "capturedAt": "2026-11-20T14:56:33.536Z",
-        "validation": null
+        "validation": {
+          "sourceCommit": "4b598d335a3d53feeef5f892161d7b5e7382dd78",
+          "sourceTreeSha256": "sha256:06e13149755c8f76956d8a3601562fe1d9ef8501a5959fc4e91b11747c397a76",
+          "commands": [
+            {
+              "id": ".-node-tests",
+              "command": "npm test -- --reporter=json --outputFile=.sflow/results/node-tests.json"
+            },
+            {
+              "id": "playwright-tests",
+              "command": "npm run test:e2e -- --reporter=json"
+            }
+          ],
+          "checks": [
+            {
+              "id": ".-node-tests",
+              "status": "passed",
+              "testRuntime": {
+                "node": "v26.12.0",
+                "platform": "darwin",
+                "arch": "arm64",
+                "profile": {
+                  "nodeOptions": []
+                },
+                "nodeOptionsSha256": "sha256:12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+                "sha256": "sha256:f15dcad9c80b6efa9c83161aec98ae14475b39f8c90cbe5c3c5f656cc23e1fb0"
+              },
+              "sourceTreeSha256": "sha256:06e13149755c8f76956d8a3601562fe1d9ef8501a5959fc4e91b11747c397a76"
+            },
+            {
+              "id": "playwright-tests",
+              "status": "passed",
+              "testRuntime": {
+                "node": "v26.12.0",
+                "platform": "darwin",
+                "arch": "arm64",
+                "profile": {
+                  "nodeOptions": []
+                },
+                "nodeOptionsSha256": "sha256:12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+                "sha256": "sha256:f15dcad9c80b6efa9c83161aec98ae14475b39f8c90cbe5c3c5f656cc23e1fb0"
+              },
+              "sourceTreeSha256": "sha256:06e13149755c8f76956d8a3601562fe1d9ef8501a5959fc4e91b11747c397a76"
+            }
+          ],
+          "status": "passed",
+          "validatedAt": "2026-11-20T15:01:02.214Z"
+        },
+        "testExecutions": [
+          {
+            "commandId": ".-node-tests",
+            "attemptId": "TA-f85fb7ba40a736ee1c79",
+            "receiptPath": "singularity/work-items/fix-issues/context/code-delivery/tests/attempts/implement/TA-f85fb7ba40a736ee1c79.json",
+            "receiptSha256": "9c2bbbd9822136d415257b7025fa9599f80fd850bcb3a3dd91cf4feabc3d8366",
+            "status": "passed",
+            "affectedRoots": [
+              "."
+            ]
+          },
+          {
+            "commandId": "playwright-tests",
+            "attemptId": "TA-7b96819869817fe4f832",
+            "receiptPath": "singularity/work-items/fix-issues/context/code-delivery/tests/attempts/implement/TA-7b96819869817fe4f832.json",
+            "receiptSha256": "6af989719e4d112e63974d3ad756a180b0c6d6c39ae33a33d762cbfc3f43f1ec",
+            "status": "passed",
+            "affectedRoots": [
+              "."
+            ]
+          }
+        ],
+        "attemptHistory": [
+          {
+            "attemptId": "TA-f85fb7ba40a736ee1c79",
+            "commandId": ".-node-tests",
+            "purpose": "preflight",
+            "generation": 1,
+            "status": "passed"
+          },
+          {
+            "attemptId": "TA-7b96819869817fe4f832",
+            "commandId": "playwright-tests",
+            "purpose": "preflight",
+            "generation": 1,
+            "status": "passed"
+          }
+        ],
+        "receiptSha256": "78599e4b5f86504bd4a828d93cb4dca1be7f7bd73aa23f5646876ea11cdd4256"
       },
       "sourceCommit": "64f900aa74ae334b9b3da477337b44ba18d8d584",
       "sidecars": [
@@ -3407,14 +3922,51 @@
           "path": "singularity/work-items/fix-issues/context/dependencies/implement-gen1.json",
           "recordSha256": "sha256:82b947f5c07f64ba041259434349afede2162fdb6c962f7102712af86eac294e"
         }
-      ]
+      ],
+      "validationVerdict": "passed",
+      "claimMaps": {
+        "observed": {
+          "generation": 1,
+          "path": "singularity/work-items/fix-issues/context/claims/implement-gen1-observed.json",
+          "sha256": "426042ab6a0056e2c7449ffa36a23c98b3d1a490819bbbe5483733771c3f5102"
+        }
+      },
+      "workIntervalReconciliation": {
+        "reconciliationSha256": "25aaa6976548b06a24c84f157b337b9c25f37893cf0976720c67527a29035407",
+        "baselineSha256": "7e6403a3a7c033b24c1053037c2c5643837de649ddc54ab666140da901f8add7",
+        "path": "singularity/work-items/fix-issues/context/work-intervals/reconciliations/25aaa6976548b06a24c84f157b337b9c25f37893cf0976720c67527a29035407.json",
+        "status": "aligned",
+        "summaryStatus": "clear",
+        "targetHead": "c9c4aca9b9105789b5504ae14876b8dfe1e09089",
+        "summary": {
+          "changedPaths": 4,
+          "planned": 4,
+          "unplanned": 0,
+          "protected": 0
+        },
+        "decision": {
+          "status": "aligned",
+          "summaryStatus": "clear",
+          "eligibleForSubmission": true,
+          "reasons": [],
+          "escalationTarget": null
+        },
+        "baseline": {
+          "path": "singularity/work-items/fix-issues/context/work-intervals/implement-gen1-baseline.json",
+          "sha256": "7e6403a3a7c033b24c1053037c2c5643837de649ddc54ab666140da901f8add7",
+          "verified": true,
+          "sourceBaseCommit": "315b551cdeb3072af89b09e86e03caa0c76ba62c"
+        }
+      },
+      "approvalDisposition": "not_required",
+      "approvalWaiver": null
     },
     "verify": {
       "id": "verify",
       "label": "Verify",
       "order": 2,
       "defaultAgent": "qa",
-      "status": "not_started",
+      "status": "in_progress",
       "requiredArtifact": {
         "path": "artifacts/verify/verification-summary.md",
         "kind": "test-evidence",
@@ -3487,7 +4039,7 @@
           "modelPolicy": "never"
         }
       ],
-      "startedAt": null,
+      "startedAt": "2026-11-20T15:01:02.490Z",
       "submittedAt": null,
       "approvedAt": null,
       "approvedBy": null,
@@ -3635,6 +4187,38 @@
       "event": "source_review_submitted",
       "phase": "implement",
       "detail": "0643b6e8f7d2e00130303ab63701e101a9722d4172edafadaf82e9cb51b2da73"
+    },
+    {
+      "at": "2026-11-20T15:01:02.489Z",
+      "actor": "system",
+      "agent": null,
+      "event": "work_interval_reconciled",
+      "phase": "implement",
+      "detail": "aligned; 4 changed path(s)"
+    },
+    {
+      "at": "2026-11-20T15:01:02.490Z",
+      "actor": "ashokraj2011",
+      "agent": null,
+      "event": "work_interval_closed",
+      "phase": "implement",
+      "detail": "interval INT-implement-G1-001 closed after phase approval"
+    },
+    {
+      "at": "2026-11-20T15:01:02.507Z",
+      "actor": "system",
+      "agent": null,
+      "event": "work_interval_started",
+      "phase": "verify",
+      "detail": "baseline 483d6cc5e7e9 at c9c4aca9b910"
+    },
+    {
+      "at": "2026-11-20T15:01:02.490Z",
+      "actor": "ashokraj2011",
+      "agent": null,
+      "event": "phase_completed_without_approval",
+      "phase": "implement",
+      "detail": "approval mode none; advanced to verify"
     }
   ],
   "measurement": {
@@ -3797,7 +4381,7 @@
       "storyIdentity": "7cf1fa23a027d68862a59c8bb319402a917580dac88e57273339a46987135d47",
       "id": "WT-aba6056937a4d00db2b23896713699ec7d401a6459afd91b96f7dfbca5031bbf",
       "inputSha256": "3b6fd5f88e2376629eae3a545a3c7edb1f6bd155fd119251918f48f0a64889ca",
-      "revision": 6,
+      "revision": 7,
       "state": "complete",
       "continuations": 0,
       "maximumContinuations": 2,
@@ -3820,11 +4404,11 @@
         {
           "kind": "retained-review",
           "inputSha256": "3b6fd5f88e2376629eae3a545a3c7edb1f6bd155fd119251918f48f0a64889ca",
-          "fingerprint": "0112bbb68e63c43da3cddbbcd9d31739ec32029e4d82bba5c546cef35e5d449a"
+          "fingerprint": "0643b6e8f7d2e00130303ab63701e101a9722d4172edafadaf82e9cb51b2da73"
         }
       ],
       "blockedCode": null,
-      "recordSha256": "c6776fc13e7728d6f4807f4e9e3dd19dbfda9cd06253cf689eb2fa0d90402d47"
+      "recordSha256": "d96fb1fc68b95258ec957cd5a2fdbacb2cf5b6c644d4ff20d3781c0e1918d821"
     }
   },
   "publicationProjections": [
@@ -4920,19 +5504,147 @@
         },
         "createdAt": "2026-11-20T15:00:23.248Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "09474d5c-1493-4a9c-b521-3a774522b783",
+        "type": "approval-requested",
+        "subject": {
+          "kind": "story",
+          "id": "fix-issues",
+          "branch": "fix-issues"
+        },
+        "phaseId": "implement",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": null,
+        "authorityGroup": null,
+        "payload": {
+          "decision": null,
+          "reviewPacketSha256": null
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-20T15:01:00.649Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "09474d5c-1493-4a9c-b521-3a774522b783",
+        "eventType": "approval-requested",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "fix-issues"
+          ],
+          "branch": "fix-issues",
+          "canonicalBranch": "fix-issues",
+          "createdAt": "2026-11-20T14:25:36.220Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "verify",
+          "generation": 1,
+          "phase": "implement",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 3,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "verify",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "Fix graph rendering and layout stability",
+          "updatedAt": "2026-11-20T15:01:02.490Z",
+          "workId": "fix-issues",
+          "workType": "quick-fix"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": null,
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "cc57a16d7959c8cca63ecb452a5d714891daa623ce4c0a607f1854bfc3883b55",
+          "lifecycleEventId": "09474d5c-1493-4a9c-b521-3a774522b783",
+          "lifecyclePayload": {
+            "decision": null,
+            "reviewPacketSha256": null
+          },
+          "templateSha256": "a252cd732cfb91a944f9c38b01c02710191291fccca5a190d9008ecff4f4459a",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "09474d5c-1493-4a9c-b521-3a774522b783",
+            "type": "approval-requested",
+            "subject": {
+              "kind": "story",
+              "id": "fix-issues",
+              "branch": "fix-issues"
+            },
+            "phaseId": "implement",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": null,
+            "authorityGroup": null,
+            "payload": {
+              "decision": null,
+              "reviewPacketSha256": null
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-20T15:01:00.649Z"
+          }
+        },
+        "createdAt": "2026-11-20T15:01:00.657Z"
+      }
     }
   ],
   "repairBudgets": {},
   "workIntervals": {
     "schemaVersion": 1,
     "current": {
-      "intervalId": "INT-implement-G1-001",
-      "phaseId": "implement",
+      "intervalId": "INT-verify-G1-002",
+      "phaseId": "verify",
       "generation": 1,
-      "baselineSha256": "7e6403a3a7c033b24c1053037c2c5643837de649ddc54ab666140da901f8add7",
-      "sourceBaseCommit": "315b551cdeb3072af89b09e86e03caa0c76ba62c",
+      "baselineSha256": "483d6cc5e7e98d869ed1b03e0a09db8e4410defcbc14787247708a83d82c36e9",
+      "sourceBaseCommit": "c9c4aca9b9105789b5504ae14876b8dfe1e09089",
       "escalationTarget": null,
-      "path": "singularity/work-items/fix-issues/context/work-intervals/implement-gen1-baseline.json",
+      "path": "singularity/work-items/fix-issues/context/work-intervals/verify-gen1-baseline.json",
       "status": "open"
     },
     "history": [
@@ -4944,6 +5656,16 @@
         "sourceBaseCommit": "315b551cdeb3072af89b09e86e03caa0c76ba62c",
         "escalationTarget": null,
         "path": "singularity/work-items/fix-issues/context/work-intervals/implement-gen1-baseline.json",
+        "status": "open"
+      },
+      {
+        "intervalId": "INT-verify-G1-002",
+        "phaseId": "verify",
+        "generation": 1,
+        "baselineSha256": "483d6cc5e7e98d869ed1b03e0a09db8e4410defcbc14787247708a83d82c36e9",
+        "sourceBaseCommit": "c9c4aca9b9105789b5504ae14876b8dfe1e09089",
+        "escalationTarget": null,
+        "path": "singularity/work-items/fix-issues/context/work-intervals/verify-gen1-baseline.json",
         "status": "open"
       }
     ],
