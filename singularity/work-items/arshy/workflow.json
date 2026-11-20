@@ -3441,7 +3441,7 @@
     "policySha256": "sha256:95cbbd177881961bb16dff1aab493fc482e5c5dbcb19bf1257aa95629f2854e8"
   },
   "status": "in_progress",
-  "currentPhase": "implementation",
+  "currentPhase": "convergence",
   "phaseOrder": [
     "specification",
     "planning",
@@ -4767,7 +4767,7 @@
       "label": "Implementation",
       "order": 2,
       "defaultAgent": "developer",
-      "status": "awaiting_approval",
+      "status": "approved",
       "requiredArtifact": {
         "path": "artifacts/implementation/implementation-summary.md",
         "kind": "implementation-summary",
@@ -4856,8 +4856,8 @@
       "qualityCommands": [],
       "startedAt": "2026-11-20T06:49:25.382Z",
       "submittedAt": "2026-11-20T12:46:25.134Z",
-      "approvedAt": null,
-      "approvedBy": null,
+      "approvedAt": "2026-11-20T13:12:06.028Z",
+      "approvedBy": "ashokraj2011",
       "rejectedAt": "2026-11-20T12:37:43.868Z",
       "rejectedBy": "ashokraj2011",
       "rejectionReason": "Add @clause tags to the test files for the requirements they test; no app code changes",
@@ -5318,6 +5318,168 @@
             }
           ],
           "reviewPacketSha256": "0d1e937616b7d586871e5dd0d968229f821c3ad627f96e88ec18d60ed4ab864b"
+        },
+        {
+          "decision": "approved",
+          "phase": "implementation",
+          "at": "2026-11-20T13:12:06.028Z",
+          "actor": {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com",
+            "login": "ashokraj2011",
+            "githubLookup": "resolved"
+          },
+          "agent": "developer",
+          "authorityGroup": "engineering-reviewers",
+          "identityAssurance": "configured-local",
+          "channel": "terminal",
+          "confirmedBy": "terminal",
+          "generation": 5,
+          "artifactSha256": [
+            {
+              "path": ".gitignore",
+              "sha256": "8d07a289b56257a1339413956b5af425e0d52217737fe8b076dcbd30aecb8a35"
+            },
+            {
+              "path": ".nvmrc",
+              "sha256": "f14b4987904bcb5814e4459a057ed4d20f58a633152288a761214dcd28780b56"
+            },
+            {
+              "path": "package-lock.json",
+              "sha256": "89f271a59e1be831ed464e77506638e20755520a8509c825941be4cfc961d4f6"
+            },
+            {
+              "path": "package.json",
+              "sha256": "b56bad091f17168f950a71dee2ef55745f3249f56bc69f1e355565d6edda9cfe"
+            },
+            {
+              "path": "playwright.config.js",
+              "sha256": "c751d0fbb713eb3e86329d04e28fc693cee323c0d7c66930941d7db474769f9a"
+            },
+            {
+              "path": "singularity/work-items/arshy/artifacts/implementation/implementation-summary.md",
+              "sha256": "c54335bbc4c51efa8ba0b133013ed86f4f94da9669bf64922acd9a44934ef85a"
+            },
+            {
+              "path": "src/components/FunctionGrapher.jsx",
+              "sha256": "ff8c250f0d7582f50354520bc5034100fde553792f032a5467553a4a3da7a366"
+            },
+            {
+              "path": "src/components/FunctionGrapher.test.jsx",
+              "sha256": "63d9af859d7c4fc77b44d52a9a8bd24572949280a500a11dc82bb4721576445a"
+            },
+            {
+              "path": "tests/graph-plotter.spec.js",
+              "sha256": "67e1b1f4bfd48c4886c5ddb5b75bf4c86768d8a1c21e62db7fb30d9df6a40e21"
+            },
+            {
+              "path": "vite.config.js",
+              "sha256": "7453a9bc4714742d0d066c18d5707e540e14fb49b9f586b6d29e7fd7bdc2f775"
+            }
+          ],
+          "reviewPacketSha256": "75332fa8700c8241a333d5dd2650b6692802a8c36dff4f424ee9af28019b868a",
+          "evidenceCommit": "bab930e3730d59cc96a24799f79ae1ffdde9d797",
+          "artifactSetSha256": "ce6258210d3583efe8f3f9bc5510eecb625721f6ede09582b5b8848a84769ce6",
+          "architectureIntent": null,
+          "architectureDecision": null,
+          "reviewEvidenceCommit": "bab930e3730d59cc96a24799f79ae1ffdde9d797",
+          "implementationBindings": {
+            "bindingsSha256": "sha256:5f81b1451d34ce84cc689ea740609fa2a20335c8ea81235f8321c5e5424aed2b",
+            "decisions": [
+              {
+                "clauseId": "ARSHY:REQ-001",
+                "decision": "accepted"
+              },
+              {
+                "clauseId": "ARSHY:REQ-002",
+                "decision": "accepted"
+              }
+            ]
+          },
+          "witnessMappings": [
+            {
+              "mappingSha256": "sha256:47b9db46e3717117cbee5ef62e1020bd5a10a8c803b7c85a3acdf7481c6ca41b",
+              "clauseId": "ARSHY:AC-002",
+              "clauseBodySha256": "sha256:0c926b15edfdfca5d17b7c2dff346e556a7abe6af3f2961e09544c318df3562a",
+              "logicalTestId": "sha256:b4ada1a5a281726a46f646c822f63ad3aaa706cded4bde844a39fc16e6ebfa75",
+              "sourcePath": "tests/graph-plotter.spec.js",
+              "sourceDeclarationSha256": "sha256:c281f11ba3dd997f444380e2bd9316853b20d8352dfe2dabb53d693f6b767395",
+              "slot": "equation-grammar",
+              "decision": "satisfied",
+              "reason": null,
+              "expiresAt": null,
+              "adequacy": {
+                "setup": "adequate",
+                "action": "adequate",
+                "assertions": "adequate",
+                "boundaries": "adequate",
+                "implementation": "adequate"
+              },
+              "source": "batch"
+            },
+            {
+              "mappingSha256": "sha256:ea3c85e0b9b5a0b6aa19bcea5b35b28e3a16f225dc6a30dcf0146530be7bf72c",
+              "clauseId": "ARSHY:AC-001",
+              "clauseBodySha256": "sha256:e0c286e3125a27ddaff3df1f306ac5df2042c07d2145f944b42dcadcd29f54d0",
+              "logicalTestId": "sha256:12d34fe060fd24ccd44990c12ef6a0b435b884b70947735446ab8e9273b6b8ba",
+              "sourcePath": "tests/graph-plotter.spec.js",
+              "sourceDeclarationSha256": "sha256:c7f9a090042781f3d2c6c4130468478712ebf614a492e20adafa4824a1e2b078",
+              "slot": "circle",
+              "decision": "satisfied",
+              "reason": null,
+              "expiresAt": null,
+              "adequacy": {
+                "setup": "adequate",
+                "action": "adequate",
+                "assertions": "adequate",
+                "boundaries": "adequate",
+                "implementation": "adequate"
+              },
+              "source": "batch"
+            }
+          ],
+          "witnessMappingsSha256": "sha256:710232f85a6ecd1c625cf89304ab5a3d2405de35dc17664ac1a18f2d1cc5e3c3",
+          "upstream": {
+            "sha256": "sha256:1456df370125fd0ce1d91b02bbf654da00e5a21efad5f86a76cd9dac53d8263c",
+            "refs": [
+              {
+                "kind": "input",
+                "ref": "planning",
+                "sha256": "sha256:84cf3f3eda045c7604d31dfe887e70606b1da534ff3282d3ef4c8ad7f8c5b65d",
+                "authoredSha256": "sha256:a630268defd482f0ed8e26a52550843a299e3fb7e3d23f6a27d592f5b4fb3ba6"
+              },
+              {
+                "kind": "input",
+                "ref": "specification",
+                "sha256": "sha256:e84adaf185c02ce2e60baeaa9c2146c4d91ee10b0d2135ddf26c5566889854fa",
+                "authoredSha256": "sha256:34644a16f128236a03b131a2143bef1a62131edba3cac6ef8d165cdbf774e2b0"
+              },
+              {
+                "kind": "candidate",
+                "ref": "HEAD",
+                "sha256": "sha256:c33bcb4cab4c6a4719cb295c6f02f302b3c627fcff9dc1bfb15c1633104f24b1"
+              },
+              {
+                "kind": "specification",
+                "ref": "records",
+                "sha256": "sha256:cdd6ca69b140dc8d16bb62eaa2f20ccffaf51c08cb5367269792abeed5146c3d"
+              },
+              {
+                "kind": "documents",
+                "ref": "implementation",
+                "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+              },
+              {
+                "kind": "decisions",
+                "ref": "story",
+                "sha256": "sha256:48477ce27cccb8a60b066adee56a9b30e1d0929f715ae1bd69aa534be61d6be3"
+              }
+            ]
+          },
+          "selfApproval": true,
+          "resolvedChangeRequests": [
+            "CR-001"
+          ]
         }
       ],
       "generationPublications": [
@@ -5444,12 +5606,14 @@
         {
           "path": "singularity/work-items/arshy/artifacts/implementation/implementation-summary.md",
           "kind": "document",
-          "status": "pending",
+          "status": "approved",
           "exists": true,
-          "size": 23830,
-          "sha256": "c54335bbc4c51efa8ba0b133013ed86f4f94da9669bf64922acd9a44934ef85a",
+          "size": 30218,
+          "sha256": "5401ae61ec6b5e7646ec1b4ecac935be3b74609c7256005fb3b4f9925e2e7908",
           "registeredAt": "2026-11-20T06:57:04.917Z",
-          "updatedAt": "2026-11-20T12:46:25.137Z"
+          "updatedAt": "2026-11-20T13:12:06.034Z",
+          "approvedAt": "2026-11-20T13:12:06.028Z",
+          "approvedBy": "ashokraj2011"
         },
         {
           "path": "src/components/FunctionGrapher.jsx",
@@ -6949,7 +7113,7 @@
       "label": "Convergence",
       "order": 3,
       "defaultAgent": "architect",
-      "status": "not_started",
+      "status": "in_progress",
       "requiredArtifact": {
         "path": "artifacts/convergence/convergence.md",
         "kind": "convergence-report",
@@ -7050,7 +7214,7 @@
         }
       },
       "qualityCommands": [],
-      "startedAt": null,
+      "startedAt": "2026-11-20T13:12:06.028Z",
       "submittedAt": null,
       "approvedAt": null,
       "approvedBy": null,
@@ -7398,7 +7562,7 @@
     {
       "schemaVersion": 1,
       "id": "CR-001",
-      "status": "open",
+      "status": "resolved",
       "sourcePhase": "implementation",
       "sourceGeneration": 4,
       "targetPhase": "implementation",
@@ -7458,7 +7622,53 @@
         }
       ],
       "reviewPacketSha256": "0d1e937616b7d586871e5dd0d968229f821c3ad627f96e88ec18d60ed4ab864b",
-      "resolution": null,
+      "resolution": {
+        "phase": "implementation",
+        "generation": 5,
+        "artifactSha256": [
+          {
+            "path": ".gitignore",
+            "sha256": "8d07a289b56257a1339413956b5af425e0d52217737fe8b076dcbd30aecb8a35"
+          },
+          {
+            "path": ".nvmrc",
+            "sha256": "f14b4987904bcb5814e4459a057ed4d20f58a633152288a761214dcd28780b56"
+          },
+          {
+            "path": "package-lock.json",
+            "sha256": "89f271a59e1be831ed464e77506638e20755520a8509c825941be4cfc961d4f6"
+          },
+          {
+            "path": "package.json",
+            "sha256": "b56bad091f17168f950a71dee2ef55745f3249f56bc69f1e355565d6edda9cfe"
+          },
+          {
+            "path": "playwright.config.js",
+            "sha256": "c751d0fbb713eb3e86329d04e28fc693cee323c0d7c66930941d7db474769f9a"
+          },
+          {
+            "path": "singularity/work-items/arshy/artifacts/implementation/implementation-summary.md",
+            "sha256": "c54335bbc4c51efa8ba0b133013ed86f4f94da9669bf64922acd9a44934ef85a"
+          },
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "sha256": "ff8c250f0d7582f50354520bc5034100fde553792f032a5467553a4a3da7a366"
+          },
+          {
+            "path": "src/components/FunctionGrapher.test.jsx",
+            "sha256": "63d9af859d7c4fc77b44d52a9a8bd24572949280a500a11dc82bb4721576445a"
+          },
+          {
+            "path": "tests/graph-plotter.spec.js",
+            "sha256": "67e1b1f4bfd48c4886c5ddb5b75bf4c86768d8a1c21e62db7fb30d9df6a40e21"
+          },
+          {
+            "path": "vite.config.js",
+            "sha256": "7453a9bc4714742d0d066c18d5707e540e14fb49b9f586b6d29e7fd7bdc2f775"
+          }
+        ],
+        "approvalDecisionAt": "2026-11-20T13:12:06.028Z"
+      },
       "forwardCheckpoint": {
         "schemaVersion": 2,
         "id": "RFW-CR-001",
@@ -10664,7 +10874,9 @@
         "integrity": {
           "sha256": "sha256:2565adaf41a7882c7dc9cec9f99e19764c010f5095c3a6a90251f0e498acc8cc"
         }
-      }
+      },
+      "resolvedAt": "2026-11-20T13:12:06.028Z",
+      "resolvedBy": "ashokraj2011"
     }
   ],
   "history": [
@@ -11119,6 +11331,22 @@
       "event": "phase_submitted",
       "phase": "implementation",
       "detail": "10 artifacts"
+    },
+    {
+      "at": "2026-11-20T13:12:06.028Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "work_interval_closed",
+      "phase": "implementation",
+      "detail": "interval INT-implementation-G5-005 closed after phase approval"
+    },
+    {
+      "at": "2026-11-20T13:12:06.028Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "phase_self_approved",
+      "phase": "implementation",
+      "detail": "threshold reached; advanced to convergence"
     }
   ],
   "measurement": {
@@ -18010,6 +18238,143 @@
         },
         "createdAt": "2026-11-20T12:46:22.597Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "80074648-c89e-44dc-a01a-349f68362e28",
+        "type": "phase-approved",
+        "subject": {
+          "kind": "story",
+          "id": "arshy",
+          "branch": "arshy"
+        },
+        "phaseId": "implementation",
+        "generation": 5,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "decision": "approved",
+          "reviewPacketSha256": "75332fa8700c8241a333d5dd2650b6692802a8c36dff4f424ee9af28019b868a",
+          "evidenceCommit": "bab930e3730d59cc96a24799f79ae1ffdde9d797",
+          "artifactSetSha256": "ce6258210d3583efe8f3f9bc5510eecb625721f6ede09582b5b8848a84769ce6",
+          "witnessMappingsSha256": "sha256:710232f85a6ecd1c625cf89304ab5a3d2405de35dc17664ac1a18f2d1cc5e3c3"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-20T13:12:04.557Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "80074648-c89e-44dc-a01a-349f68362e28",
+        "eventType": "phase-approved",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "arshy"
+          ],
+          "branch": "arshy",
+          "canonicalBranch": "arshy",
+          "createdAt": "2026-11-20T05:04:22.679Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "convergence",
+          "generation": 5,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 3,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 2,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 3,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "convergence",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph",
+          "updatedAt": "2026-11-20T13:12:06.028Z",
+          "workId": "arshy",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "106d3c3a8dbea5992306f47e45f781900b06ed64faafb501f8945ee96a55a9a6",
+          "lifecycleEventId": "80074648-c89e-44dc-a01a-349f68362e28",
+          "lifecyclePayload": {
+            "decision": "approved",
+            "reviewPacketSha256": "75332fa8700c8241a333d5dd2650b6692802a8c36dff4f424ee9af28019b868a",
+            "evidenceCommit": "bab930e3730d59cc96a24799f79ae1ffdde9d797",
+            "artifactSetSha256": "ce6258210d3583efe8f3f9bc5510eecb625721f6ede09582b5b8848a84769ce6",
+            "witnessMappingsSha256": "sha256:710232f85a6ecd1c625cf89304ab5a3d2405de35dc17664ac1a18f2d1cc5e3c3"
+          },
+          "templateSha256": "ba0749ab3997579949fc836a839af6606f995c2012a90b410597ebadf211298d",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "80074648-c89e-44dc-a01a-349f68362e28",
+            "type": "phase-approved",
+            "subject": {
+              "kind": "story",
+              "id": "arshy",
+              "branch": "arshy"
+            },
+            "phaseId": "implementation",
+            "generation": 5,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "engineering-reviewers",
+            "payload": {
+              "decision": "approved",
+              "reviewPacketSha256": "75332fa8700c8241a333d5dd2650b6692802a8c36dff4f424ee9af28019b868a",
+              "evidenceCommit": "bab930e3730d59cc96a24799f79ae1ffdde9d797",
+              "artifactSetSha256": "ce6258210d3583efe8f3f9bc5510eecb625721f6ede09582b5b8848a84769ce6",
+              "witnessMappingsSha256": "sha256:710232f85a6ecd1c625cf89304ab5a3d2405de35dc17664ac1a18f2d1cc5e3c3"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-20T13:12:04.557Z"
+          }
+        },
+        "createdAt": "2026-11-20T13:12:04.558Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -18023,13 +18388,14 @@
       "sourceBaseCommit": "2920ebc41c595feb7f1d978f5d135a9d7a6896f2",
       "escalationTarget": null,
       "path": "singularity/work-items/arshy/context/work-intervals/implementation-gen5-baseline.json",
-      "status": "reconciled",
+      "status": "closed",
       "finalReconciliation": {
         "reconciliationSha256": "e1fe3ef6c42d6663ff765e9ad16727ecd8a340d229045258087ca4e10c5bbf36",
         "path": "singularity/work-items/arshy/context/work-intervals/reconciliations/e1fe3ef6c42d6663ff765e9ad16727ecd8a340d229045258087ca4e10c5bbf36.json",
         "targetHead": "8fce527212bde8c73c647a136ed00bca481a7cbc",
         "recordedAt": "2026-11-20T12:46:25.133Z"
-      }
+      },
+      "closedAt": "2026-11-20T13:12:06.028Z"
     },
     "history": [
       {
