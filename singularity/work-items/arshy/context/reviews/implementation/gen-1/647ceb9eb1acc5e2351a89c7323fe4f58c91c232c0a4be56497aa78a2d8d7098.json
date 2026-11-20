@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "phase": "implementation",
+  "generation": 1,
+  "reportSha256": "647ceb9eb1acc5e2351a89c7323fe4f58c91c232c0a4be56497aa78a2d8d7098",
+  "lifecycleEventId": "5105babe-c825-4413-9e14-1c5c60c7b614",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "code",
+    "binding": {
+      "workId": "arshy",
+      "phase": "implementation",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "code:src:components:FunctionGrapher.jsx",
+          "path": "src/components/FunctionGrapher.jsx",
+          "textSha256": "dd0dbfee17d92259de2d774b96f55eb77ce4bc82f775bc50593c6cba2455554a"
+        },
+        {
+          "id": "code:tests:graph-plotter.spec.js",
+          "path": "tests/graph-plotter.spec.js",
+          "textSha256": "048aa34142d14e75283817eac6d65a1c9fa12db445396e61a278f7ec5da18578"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/arshy/artifacts/implementation/implementation-summary.md",
+        "sha256": "9224c48213afb0696eee26a16012bdb6c248d031ea49c60c169383758c3f32da"
+      },
+      "plan": {
+        "path": "singularity/work-items/arshy/artifacts/planning/plan.md",
+        "sha256": "0414312fa3175dfcd733ce5fd0691acdbafaea7d40c09c0bb4fa76cb4b4bf5f1"
+      },
+      "evidenceSha256": "31f63d19b99e4cb1fd4f6714594b87230dcd7de97ecd4897173e8a0eb7476e49"
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "code:src:components:FunctionGrapher.jsx",
+      "code:tests:graph-plotter.spec.js"
+    ],
+    "rows": [
+      {
+        "clauseId": "ARSHY:AC-001",
+        "implementation": [],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 6,
+            "quote": "it('normalizes x^2 + y^2 = 36 and renders an implicit radius-6 contour', () => {"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "does-not-prove"
+      },
+      {
+        "clauseId": "ARSHY:AC-002",
+        "implementation": [],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 18,
+            "quote": "it.each(["
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "does-not-prove"
+      },
+      {
+        "clauseId": "ARSHY:REQ-001",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 15,
+            "quote": "export const normalizeEquation = (input) => {"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 142,
+            "quote": "if (parsed.kind === 'explicit') {"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 18,
+            "quote": "it.each(["
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "does-not-prove"
+      },
+      {
+        "clauseId": "ARSHY:REQ-002",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 41,
+            "quote": "const isCircleEquation = (equation) => {"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 169,
+            "quote": "const circleFitScale = isCircleEquation(equation)"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 6,
+            "quote": "it('normalizes x^2 + y^2 = 36 and renders an implicit radius-6 contour', () => {"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "does-not-prove"
+      }
+    ],
+    "unplannedPaths": [],
+    "qualityReviewed": [],
+    "findings": [
+      {
+        "id": "AC-001-CANVAS-PROOF",
+        "severity": "blocking",
+        "check": "tests",
+        "message": "ARSHY:AC-001 requires a rendered centered radius-6 circle, but the cited test only normalizes the equation and asserts its expression object; it contains no canvas, geometry, pixel, or browser assertion.",
+        "clauseId": "ARSHY:AC-001",
+        "sourceId": "code:tests:graph-plotter.spec.js",
+        "line": 6,
+        "quote": "it('normalizes x^2 + y^2 = 36 and renders an implicit radius-6 contour', () => {"
+      },
+      {
+        "id": "AC-002-CANVAS-PROOF",
+        "severity": "blocking",
+        "check": "tests",
+        "message": "ARSHY:AC-002 requires the approved equations to produce plots, but the cited test only parameterizes normalization results and asserts the parsed object; it has no canvas or browser rendering assertion.",
+        "clauseId": "ARSHY:AC-002",
+        "sourceId": "code:tests:graph-plotter.spec.js",
+        "line": 18,
+        "quote": "it.each(["
+      },
+      {
+        "id": "REQ-001-PLOT-PROOF",
+        "severity": "blocking",
+        "check": "tests",
+        "message": "ARSHY:REQ-001 requires users to see corresponding explicit and implicit plots, but the planned test only verifies parser normalization for sample equations and does not assert canvas plotting or invalid-state behavior.",
+        "clauseId": "ARSHY:REQ-001",
+        "sourceId": "code:tests:graph-plotter.spec.js",
+        "line": 18,
+        "quote": "it.each(["
+      },
+      {
+        "id": "REQ-002-CIRCLE-PROOF",
+        "severity": "blocking",
+        "check": "tests",
+        "message": "ARSHY:REQ-002 requires the circle to be centered at the origin with radius 6, but the cited test only checks that normalization produces an implicit expression; it does not prove origin centering or radius.",
+        "clauseId": "ARSHY:REQ-002",
+        "sourceId": "code:tests:graph-plotter.spec.js",
+        "line": 6,
+        "quote": "it('normalizes x^2 + y^2 = 36 and renders an implicit radius-6 contour', () => {"
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "717dabbe1d71dc4ece8ae0d2b9d20e66e4a59ab36c63301e5f1d6bed0dc3111a",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "developer",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-20T07:00:31.703Z",
+  "recordSha256": "eb07017d06b85878360d00b1f79d02c97391eba17882999ec787182e433c4ce3"
+}
