@@ -19,6 +19,7 @@
 
 ## Recent history
 
+- 2026-11-22T08:36:55.070Z — **witness_recorded** (implementation) by ashokraj2011 · agent developer: WIT-004: visual of singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-004-responsive-screen-e32e79604a69a83a.png for D-STORY:AC-004 slot responsive-screen satisfies it. Confirmed on the decision card: it shows what the criterion asks for.
 - 2026-11-22T08:36:22.774Z — **witness_recorded** (implementation) by ashokraj2011 · agent developer: WIT-003: visual of singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-003-updated-screen-e32e79604a69a83a.png for D-STORY:AC-003 slot updated-screen satisfies it. Confirmed on the decision card: it shows what the criterion asks for.
 - 2026-11-22T08:35:52.551Z — **witness_recorded** (implementation) by ashokraj2011 · agent developer: WIT-002: visual of singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-002-circle-screen-e32e79604a69a83a.png for D-STORY:AC-002 slot circle-screen satisfies it. good to go
 - 2026-11-22T08:32:39.357Z — **witness_recorded** (implementation) by ashokraj2011 · agent developer: WIT-001: visual of singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-001-initial-screen-e32e79604a69a83a.png for D-STORY:AC-001 slot initial-screen satisfies it. Confirmed on the decision card: it shows what the criterion asks for.
@@ -33,4 +34,3 @@
 - 2026-11-22T08:01:25.332Z — **phase_generated** (implementation) by ashokraj2011 · agent developer: generation 1
 - 2026-11-22T07:57:32.251Z — **decision_settled** (implementation) by ashokraj2011 · agent developer: STL-002 (node-version) settled by SFlow: Pinned Node 22 in .nvmrc for Implementation's tests: Node 26.12.0 here breaks tests that use localStorage under Vitest, and Node 22.14.0 is installed. Evidence: Node 26.12.0 puts its own localStorage in front of the DOM environment's under Vitest (the repository's Vitest setup and its tests that use localStorage); Node 22.14.0 is installed (the Nodes installed on this machine); tests would otherwise run on Node 26.12.0 (the Node on PATH)
 - 2026-11-22T07:57:27.234Z — **version_opened** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent developer: version 1 opened (initial)
-- 2026-11-22T07:55:39.765Z — **work_interval_started** (implementation) by system: baseline 6b048063f6a2 at 979d736a34ad
