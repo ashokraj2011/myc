@@ -3717,6 +3717,14 @@
       "event": "phase_submitted",
       "phase": "planning",
       "detail": "1 artifacts"
+    },
+    {
+      "at": "2026-11-22T07:51:49.311Z",
+      "actor": "ashokraj2011",
+      "agent": null,
+      "event": "decision_settled",
+      "phase": "planning",
+      "detail": "STL-001 (story-selection) settled by SFlow: Opened d-story: the only Story whose branch, d-story, is checked out where this session runs. Evidence: d-story is d-story's own branch, recorded in its Story record (singularity/work-items/d-story/workflow.json on d-story); no other Story records a branch checked out where this session runs (the session's checkout)"
     }
   ],
   "measurement": {
@@ -4972,6 +4980,140 @@
         },
         "createdAt": "2026-11-22T07:00:55.411Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "2b5bdd5d-47f5-46b4-b4c8-57dfd4f4c459",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "d-story",
+          "branch": "d-story"
+        },
+        "phaseId": "planning",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": null,
+        "authorityGroup": null,
+        "payload": {
+          "decision": "settled",
+          "reviewPacketSha256": null,
+          "settled": "STL-001",
+          "kind": "story-selection"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-22T07:51:49.346Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "2b5bdd5d-47f5-46b4-b4c8-57dfd4f4c459",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "d-story"
+          ],
+          "branch": "d-story",
+          "canonicalBranch": "d-story",
+          "createdAt": "2026-11-22T06:44:06.662Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "planning",
+          "generation": 1,
+          "phase": "planning",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 1,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 4,
+              "in_progress": 0,
+              "awaiting_approval": 1,
+              "approved": 1,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "planning",
+              "status": "awaiting_approval",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph (copy)",
+          "updatedAt": "2026-11-22T07:51:49.311Z",
+          "workId": "d-story",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": null,
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "77dab191fa78ebdbe6f777cf68da8827f2447b711edc65a73b81e12b1b5fb8d2",
+          "lifecycleEventId": "2b5bdd5d-47f5-46b4-b4c8-57dfd4f4c459",
+          "lifecyclePayload": {
+            "decision": "settled",
+            "reviewPacketSha256": null,
+            "settled": "STL-001",
+            "kind": "story-selection"
+          },
+          "templateSha256": "8ac870c047c0155d5ca4ca7391a11acb7310b52aae746d66f40e1d77ecdb14ec",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "2b5bdd5d-47f5-46b4-b4c8-57dfd4f4c459",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "d-story",
+              "branch": "d-story"
+            },
+            "phaseId": "planning",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": null,
+            "authorityGroup": null,
+            "payload": {
+              "decision": "settled",
+              "reviewPacketSha256": null,
+              "settled": "STL-001",
+              "kind": "story-selection"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-22T07:51:49.346Z"
+          }
+        },
+        "createdAt": "2026-11-22T07:51:49.351Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -5097,6 +5239,31 @@
       ],
       "edges": [],
       "revisionSha256": "sha256:778f7d6f2aa4a8a9727ce6f68aa53f92d2845eaca633221536132e523e03a984"
+    }
+  ],
+  "settledDecisions": [
+    {
+      "id": "STL-001",
+      "kind": "story-selection",
+      "subject": "d-story on d-story",
+      "answer": "Opened d-story: the only Story whose branch, d-story, is checked out where this session runs.",
+      "evidence": [
+        {
+          "what": "d-story is d-story's own branch, recorded in its Story record",
+          "where": "singularity/work-items/d-story/workflow.json on d-story"
+        },
+        {
+          "what": "no other Story records a branch checked out where this session runs",
+          "where": "the session's checkout"
+        }
+      ],
+      "by": "sflow",
+      "effect": {
+        "workId": "d-story",
+        "branch": "d-story"
+      },
+      "actor": "ashokraj2011",
+      "at": "2026-11-22T07:51:49.311Z"
     }
   ]
 }
