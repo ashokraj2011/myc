@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "phase": "verification",
+  "generation": 8,
+  "reportSha256": "f766ad0ef1fea62c7dfd66f5a665f66a658af1505f51b87626a7e1d2e2096b15",
+  "lifecycleEventId": "d8908ef1-9038-4feb-8aed-69f8db2edff1",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "d-story",
+      "phase": "verification",
+      "generation": 8,
+      "sources": [
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/d-story/artifacts/implementation/implementation-summary.md",
+          "textSha256": "72df2c9a0b5c9eb3ceed12b9671e8b6266dc77ba16c71e2eca65a9c0055fb25d"
+        },
+        {
+          "id": "input:planning",
+          "path": "singularity/work-items/d-story/artifacts/planning/plan.md",
+          "textSha256": "ffbf4b00964dbad9fe4ff2127ebd73f0b1b9148fd113589d021e2a5e1054fa76"
+        },
+        {
+          "id": "input:specification",
+          "path": "singularity/work-items/d-story/artifacts/specification/spec.md",
+          "textSha256": "90f952d110a076303ac5ab84dc97d419cc104a90046fa86d2fc1202ea4ebe14a"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/d-story/USER-STORY.md",
+          "textSha256": "cff0beeb0d7b1e2eef41bfbf587a0bd0b222553331c39a52d8facbd53fa059b9",
+          "originalSha256": "2144a9c6d40147352ce812ef0edef66a750fee5ba927b75b0b653da837ea52f6"
+        }
+      ],
+      "visualSources": [
+        {
+          "id": "DOC-001",
+          "path": "local-document:DOC-001",
+          "originalSha256": "1ada26c12db04745df29790dfe06d518025152113392d7fadbfd533a0a9032ab",
+          "mimeType": "image/png"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/d-story/artifacts/verification/test-evidence.md",
+        "sha256": "6b1e2f504fb6a7334070b7bd8ec5b554500a96c0ea7b8501997a4f882a999615"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:specification",
+      "input:planning",
+      "input:implementation",
+      "DOC-001"
+    ],
+    "visualSourcesReviewed": [
+      {
+        "sourceId": "DOC-001",
+        "method": "image-tool",
+        "locator": "Full screenshot, approximately 1440 by 900 pixels",
+        "observations": "The pinned image shows a Cartesian graph with a grid and axes, the red sin(x) curve, and an expression area showing sin(x); it is a reference screenshot of the initial desktop view."
+      }
+    ],
+    "rows": [
+      {
+        "id": "ROW-story",
+        "sourceId": "story",
+        "line": 17,
+        "quote": "Palyright tests on cirlce of 6 unit radius in origin",
+        "outcome": "consistent",
+        "note": "The verification evidence records a passing Playwright-tagged circle check."
+      },
+      {
+        "id": "ROW-specification",
+        "sourceId": "input:specification",
+        "line": 81,
+        "quote": "The graph area remains visible and usable at representative desktop and common tablet widths.",
+        "outcome": "inconsistent",
+        "note": "The specification requires visual assurance for D-STORY:AC-004, but the evidence table marks it verified while providing no tagged test or recorded visual witness."
+      },
+      {
+        "id": "ROW-planning",
+        "sourceId": "input:planning",
+        "line": 37,
+        "quote": "`D-STORY:AC-004` | `src/App.jsx`, `src/App.css`, `src/index.css` | verification: D-STORY:AC-004",
+        "outcome": "inconsistent",
+        "note": "Planning assigns AC-004 to a source-bound responsive visual witness, not to the automated test result, whereas the verification record reports it verified and supplies no visual result."
+      },
+      {
+        "id": "ROW-implementation",
+        "sourceId": "input:implementation",
+        "line": 21,
+        "quote": "Visual screenshot and desktop/tablet acceptance still require inspection and must not be inferred from automated unit checks.",
+        "outcome": "inconsistent",
+        "note": "The implementation summary says desktop/tablet visual acceptance still requires inspection, while the verification artifact marks AC-004 verified without such evidence."
+      },
+      {
+        "id": "ROW-doc",
+        "sourceId": "DOC-001",
+        "outcome": "consistent",
+        "attestation": "Inspected the full pinned screenshot (approximately 1440 by 900 pixels): the image shows Cartesian axes, a grid, and the initial sin(x) curve. This agrees with the artifact's initial-plot verification."
+      }
+    ],
+    "findings": [
+      {
+        "id": "FINDING-ac004-unverified",
+        "severity": "blocking",
+        "message": "The evidence marks D-STORY:AC-004 as verified even though it records `no tagged test` and supplies no desktop/tablet visual witness. The approved specification requires the graph area to remain visible and usable at representative desktop and common tablet widths, planning names a responsive-screen visual slot, and the implementation summary explicitly says visual acceptance must not be inferred from automated checks.",
+        "clauseId": "D-STORY:AC-004",
+        "sourceId": "input:specification",
+        "line": 81,
+        "quote": "The graph area remains visible and usable at representative desktop and common tablet widths."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "d25cdfe714c96433440b83db9b5860333d72fcf82827f952f1ef364d89285e8d",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-22T12:49:56.115Z",
+  "recordSha256": "9ae62bf122a11f95e69cce8d3ddb2c3c35e74a6e08d6a4ed150518f12035bc63"
+}
