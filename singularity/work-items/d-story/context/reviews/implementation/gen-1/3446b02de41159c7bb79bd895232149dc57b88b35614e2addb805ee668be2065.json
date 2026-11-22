@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 1,
+  "phase": "implementation",
+  "generation": 1,
+  "reportSha256": "3446b02de41159c7bb79bd895232149dc57b88b35614e2addb805ee668be2065",
+  "lifecycleEventId": "5a45177e-c059-4f59-bd08-3c593f56848e",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "code",
+    "binding": {
+      "workId": "d-story",
+      "phase": "implementation",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "code:src:App.css",
+          "path": "src/App.css",
+          "textSha256": "8f41b9d0949b38ba86a1e7a592f27458477132b75ad66309fc34a6ad0f810c2e"
+        },
+        {
+          "id": "code:src:App.jsx",
+          "path": "src/App.jsx",
+          "textSha256": "6ec423a6b41649e604395b47b6f62d9de1d2443213cd112baddd5722b7115680"
+        },
+        {
+          "id": "code:src:components:FunctionGrapher.jsx",
+          "path": "src/components/FunctionGrapher.jsx",
+          "textSha256": "8db5564555707fb297243b993ee6f7bb2f9df9926c40c6f91fe2c21b264e7a05"
+        },
+        {
+          "id": "code:src:index.css",
+          "path": "src/index.css",
+          "textSha256": "39f88ba60c32e4eac03cf20b637345b771048df09a5e30b7f1b0a3025a826c42"
+        },
+        {
+          "id": "code:tests:graph-plotter.spec.js",
+          "path": "tests/graph-plotter.spec.js",
+          "textSha256": "b33d18f4d1fc7acd0a51cce6dc8fdd595a291a42ee5fbed560f888a0a8edd663"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/d-story/artifacts/implementation/implementation-summary.md",
+        "sha256": "72df2c9a0b5c9eb3ceed12b9671e8b6266dc77ba16c71e2eca65a9c0055fb25d"
+      },
+      "plan": {
+        "path": "singularity/work-items/d-story/artifacts/planning/plan.md",
+        "sha256": "ffbf4b00964dbad9fe4ff2127ebd73f0b1b9148fd113589d021e2a5e1054fa76"
+      },
+      "evidenceSha256": "0de7bab40801f2caa646bb480610dbb32fc2a8fd0806860194b5e8f6d5ed877f"
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "code:src:App.css",
+      "code:src:App.jsx",
+      "code:src:components:FunctionGrapher.jsx",
+      "code:src:index.css",
+      "code:tests:graph-plotter.spec.js"
+    ],
+    "rows": [
+      {
+        "clauseId": "D-STORY:AC-001",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 18,
+            "quote": "  const [equation, setEquation] = useState('sin(x)');"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 43,
+            "quote": "    // Draw Grid Lines"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 13,
+            "quote": "    expect(document.querySelector('canvas')).toBeInTheDocument();"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "does-not-prove"
+      },
+      {
+        "clauseId": "D-STORY:AC-002",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 102,
+            "quote": "      if (normalizedEquation === 'x^2+y^2=36') {"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 106,
+            "quote": "        ctx.arc(centerX, centerY, 6 * scale, 0, Math.PI * 2);"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 23,
+            "quote": "    await user.type(input, 'x^2 + y^2 = 36');"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "does-not-prove"
+      },
+      {
+        "clauseId": "D-STORY:AC-003",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 161,
+            "quote": "              value={equation}"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 162,
+            "quote": "              onChange={(e) => setEquation(e.target.value)}"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 34,
+            "quote": "    await user.type(input, 'cos(x)');"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "does-not-prove"
+      },
+      {
+        "clauseId": "D-STORY:AC-004",
+        "implementation": [
+          {
+            "sourceId": "code:src:App.css",
+            "line": 186,
+            "quote": ".grapher-shell {"
+          },
+          {
+            "sourceId": "code:src:index.css",
+            "line": 310,
+            "quote": "@media (max-width: 768px) {"
+          }
+        ],
+        "tests": [],
+        "assessment": "implemented",
+        "testAssessment": "not-applicable"
+      },
+      {
+        "clauseId": "D-STORY:REQ-001",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 43,
+            "quote": "    // Draw Grid Lines"
+          },
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 83,
+            "quote": "    // Draw Main Axes (X & Y)"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 13,
+            "quote": "    expect(document.querySelector('canvas')).toBeInTheDocument();"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "does-not-prove"
+      },
+      {
+        "clauseId": "D-STORY:REQ-002",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 162,
+            "quote": "              onChange={(e) => setEquation(e.target.value)}"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 34,
+            "quote": "    await user.type(input, 'cos(x)');"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "D-STORY:REQ-003",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 18,
+            "quote": "  const [equation, setEquation] = useState('sin(x)');"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 12,
+            "quote": "    expect(screen.getByPlaceholderText('e.g. sin(x)')).toHaveValue('sin(x)');"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "proves"
+      },
+      {
+        "clauseId": "D-STORY:REQ-004",
+        "implementation": [
+          {
+            "sourceId": "code:src:App.css",
+            "line": 186,
+            "quote": ".grapher-shell {"
+          },
+          {
+            "sourceId": "code:src:index.css",
+            "line": 310,
+            "quote": "@media (max-width: 768px) {"
+          }
+        ],
+        "tests": [],
+        "assessment": "implemented",
+        "testAssessment": "not-applicable"
+      },
+      {
+        "clauseId": "D-STORY:REQ-005",
+        "implementation": [
+          {
+            "sourceId": "code:src:components:FunctionGrapher.jsx",
+            "line": 106,
+            "quote": "        ctx.arc(centerX, centerY, 6 * scale, 0, Math.PI * 2);"
+          }
+        ],
+        "tests": [
+          {
+            "sourceId": "code:tests:graph-plotter.spec.js",
+            "line": 23,
+            "quote": "    await user.type(input, 'x^2 + y^2 = 36');"
+          }
+        ],
+        "assessment": "implemented",
+        "testAssessment": "does-not-prove"
+      }
+    ],
+    "unplannedPaths": [],
+    "qualityReviewed": [],
+    "findings": [
+      {
+        "id": "d-story-ac001-grid-not-tested",
+        "severity": "blocking",
+        "check": "tests",
+        "message": "The passed test proves only that an input exists and a canvas element is present; it does not assert that Cartesian grid lines or axes are rendered for the fresh sin(x) state.",
+        "clauseId": "D-STORY:AC-001",
+        "sourceId": "code:tests:graph-plotter.spec.js",
+        "line": 13,
+        "quote": "    expect(document.querySelector('canvas')).toBeInTheDocument();"
+      },
+      {
+        "id": "d-story-ac002-circle-geometry-not-tested",
+        "severity": "blocking",
+        "check": "tests",
+        "message": "The passed circle test only enters the equation and asserts the input value; it does not verify origin placement or a six-unit radius, so a wrong canvas arc could pass.",
+        "clauseId": "D-STORY:AC-002",
+        "sourceId": "code:tests:graph-plotter.spec.js",
+        "line": 24,
+        "quote": "    expect(input).toHaveValue('x^2 + y^2 = 36');"
+      },
+      {
+        "id": "d-story-ac003-update-not-proved",
+        "severity": "blocking",
+        "check": "tests",
+        "message": "The replacement test asserts only the input value after typing cos(x); it does not assert that the rendered graph updates to the new supported function.",
+        "clauseId": "D-STORY:AC-003",
+        "sourceId": "code:tests:graph-plotter.spec.js",
+        "line": 35,
+        "quote": "    expect(input).toHaveValue('cos(x)');"
+      },
+      {
+        "id": "d-story-req001-grid-not-tested",
+        "severity": "blocking",
+        "check": "tests",
+        "message": "The test verifies a canvas element but contains no assertion for visible Cartesian axes or grid, leaving REQ-001 without a test that proves the required drawing.",
+        "clauseId": "D-STORY:REQ-001",
+        "sourceId": "code:tests:graph-plotter.spec.js",
+        "line": 13,
+        "quote": "    expect(document.querySelector('canvas')).toBeInTheDocument();"
+      },
+      {
+        "id": "d-story-req005-circle-geometry-not-tested",
+        "severity": "blocking",
+        "check": "tests",
+        "message": "The circle test proves expression entry only, not the required center and radius in canvas coordinates; therefore the implementation could plot an incorrect circle and still pass.",
+        "clauseId": "D-STORY:REQ-005",
+        "sourceId": "code:tests:graph-plotter.spec.js",
+        "line": 24,
+        "quote": "    expect(input).toHaveValue('x^2 + y^2 = 36');"
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "d25cdfe714c96433440b83db9b5860333d72fcf82827f952f1ef364d89285e8d",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "developer",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-22T08:04:16.670Z",
+  "recordSha256": "093ea90ee76af8a8ac654a894e81c263317b99677093772b5ed24afa21dbdbcf"
+}
