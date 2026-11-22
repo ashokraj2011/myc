@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "phase": "verification",
+  "generation": 4,
+  "reportSha256": "e48102e75fead512b27a2959b831ba51b3a5fa55837d4500e7e5c22aa4e2f740",
+  "lifecycleEventId": "51dd37b2-55df-4c5f-aeaa-64b559d3f8c5",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "d-story",
+      "phase": "verification",
+      "generation": 4,
+      "sources": [
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/d-story/artifacts/implementation/implementation-summary.md",
+          "textSha256": "72df2c9a0b5c9eb3ceed12b9671e8b6266dc77ba16c71e2eca65a9c0055fb25d"
+        },
+        {
+          "id": "input:planning",
+          "path": "singularity/work-items/d-story/artifacts/planning/plan.md",
+          "textSha256": "ffbf4b00964dbad9fe4ff2127ebd73f0b1b9148fd113589d021e2a5e1054fa76"
+        },
+        {
+          "id": "input:specification",
+          "path": "singularity/work-items/d-story/artifacts/specification/spec.md",
+          "textSha256": "90f952d110a076303ac5ab84dc97d419cc104a90046fa86d2fc1202ea4ebe14a"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/d-story/USER-STORY.md",
+          "textSha256": "cff0beeb0d7b1e2eef41bfbf587a0bd0b222553331c39a52d8facbd53fa059b9",
+          "originalSha256": "2144a9c6d40147352ce812ef0edef66a750fee5ba927b75b0b653da837ea52f6"
+        }
+      ],
+      "visualSources": [
+        {
+          "id": "DOC-001",
+          "path": "local-document:DOC-001",
+          "originalSha256": "1ada26c12db04745df29790dfe06d518025152113392d7fadbfd533a0a9032ab",
+          "mimeType": "image/png"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/d-story/artifacts/verification/test-evidence.md",
+        "sha256": "6b1e2f504fb6a7334070b7bd8ec5b554500a96c0ea7b8501997a4f882a999615"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:specification",
+      "input:planning",
+      "input:implementation",
+      "DOC-001"
+    ],
+    "visualSourcesReviewed": [
+      {
+        "sourceId": "DOC-001",
+        "method": "image-tool",
+        "locator": "Full image: graphing canvas and expression panel",
+        "observations": "The expression panel shows sin(x); the canvas shows its sine curve with visible Cartesian x/y axes and a grid."
+      }
+    ],
+    "rows": [
+      {
+        "id": "story-original-request",
+        "sourceId": "story",
+        "line": 17,
+        "quote": "- Palyright tests on cirlce of 6 unit radius in origin",
+        "outcome": "consistent"
+      },
+      {
+        "id": "approved-specification-responsive-criterion",
+        "sourceId": "input:specification",
+        "line": 81,
+        "quote": "- The graph area remains visible and usable at representative desktop and common tablet widths. *(S1)* [D-STORY:AC-004]",
+        "outcome": "inconsistent",
+        "note": "The verification artifact marks AC-004 verified but provides no responsive visual result; it lists no tagged test and does not record inspection at desktop or tablet widths."
+      },
+      {
+        "id": "approved-plan-visual-verification",
+        "sourceId": "input:planning",
+        "line": 30,
+        "quote": "Automated browser checks use Playwright for the required expression and graph outcomes. Visual acceptance remains a separate inspection against the pinned screenshot and at representative desktop/tablet sizes; automated success does not establish visual acceptance. Use the existing Vitest suite, production build, and lint command as regression checks. Do not interpret unspecified malformed-expression behavior or add persistence as requirements.",
+        "outcome": "inconsistent",
+        "note": "The artifact claims all 10 clauses verified and recommends release without documenting the separately required visual inspection or its responsive-screen witness."
+      },
+      {
+        "id": "implementation-summary-visual-status",
+        "sourceId": "input:implementation",
+        "line": 21,
+        "quote": "Visual screenshot and desktop/tablet acceptance still require inspection and must not be inferred from automated unit checks.",
+        "outcome": "inconsistent",
+        "note": "The verification artifact nevertheless marks AC-004 verified and reports all requirements verified, with no visual results or screenshots recorded."
+      },
+      {
+        "id": "DOC-001-reference",
+        "sourceId": "DOC-001",
+        "attestation": "Full image: expression panel and graph canvas; observed sin(x), a sine curve, Cartesian axes, and grid. This is the pinned reference image, not a capture of the implementation under verification.",
+        "outcome": "question",
+        "note": "The artifact labels DOC-001 not applicable and supplies no implementation screenshot. It is unclear whether the required source-bound visual checks were performed; the reference image alone cannot establish that the implementation matches it."
+      }
+    ],
+    "findings": [
+      {
+        "id": "VFY-001",
+        "severity": "blocking",
+        "message": "The artifact marks all 10 clauses verified and recommends release, but it does not record any visual results or screenshots. In particular, AC-004 is marked verified despite having no tagged test or responsive visual witness. The approved plan requires visual acceptance separately from automated tests, and the implementation summary says that desktop/tablet inspection is still outstanding. The claimed verification is therefore not substantiated; record the required visual inspection results before claiming completion.",
+        "sourceId": "input:implementation",
+        "line": 21,
+        "quote": "Visual screenshot and desktop/tablet acceptance still require inspection and must not be inferred from automated unit checks."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "d25cdfe714c96433440b83db9b5860333d72fcf82827f952f1ef364d89285e8d",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-22T09:13:59.511Z",
+  "recordSha256": "a46b04a49cd0dea0d09246b73748fc78fec0295e382aff614f66a81f349452a7"
+}
