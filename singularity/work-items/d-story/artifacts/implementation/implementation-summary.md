@@ -4,7 +4,7 @@
   "workId": "d-story",
   "workType": "spec-driven-standard",
   "phase": "implementation",
-  "generation": 1,
+  "generation": 2,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "implementation-summary.md",
       "mediaType": "text/markdown",
-      "sha256": "2086f00f97c69709a4a75ce3654e3954f6191814f9098a5feb70f20ae77b4039",
-      "bytes": 2660
+      "sha256": "72df2c9a0b5c9eb3ceed12b9671e8b6266dc77ba16c71e2eca65a9c0055fb25d",
+      "bytes": 1838
     },
-    "generation": 1,
-    "publishedAt": "2026-11-22T08:01:25.178Z"
+    "generation": 2,
+    "publishedAt": "2026-11-22T08:05:46.977Z"
   },
-  "sourceCommit": "bc6f2c87757590aa63714a654f627c3fa360b84c",
+  "sourceCommit": "f29b3ed759a30b18b3440b1d11d3a091306246dd",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "77dab191fa78ebdbe6f777cf68da8827f2447b711edc65a73b81e12b1b5fb8d2",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/common/implementation.md"
   },
   "inputs": {
-    "generation": 1,
-    "path": "singularity/work-items/d-story/context/inputs-implementation-gen1.json",
-    "sha256": "f327fe16e3c8d1c6b95e6028e275386088cc10bb5c1f922683725ab6b3a68f8c",
+    "generation": 2,
+    "path": "singularity/work-items/d-story/context/inputs-implementation-gen2.json",
+    "sha256": "6e8aa1873f9be8d9506e1f4783c10cad697215a0d89c2be8057167a1130d9001",
     "renderedSha256": "adaa61bdc0ae246cf21b2f9b28de900eb38548e844e20abbe78215ad7beb228b",
     "mode": "enforce"
   },
@@ -92,6 +92,26 @@
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 2,
+      "path": "singularity/work-items/d-story/telemetry/implementation-gen2.json",
+      "sha256": "a552130f06e7a6a7eefd014f249248b3f6eeb28ed836343dcdd27edc16e4f323",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 35269,
+        "estimatedTokens": 8818,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 35269,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
     }
   ],
   "remoteOutputs": [],
@@ -116,6 +136,27 @@
       "completedAt": "2026-11-22T08:01:25.178Z",
       "agent": "developer",
       "generation": 1
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-22T08:05:46.977Z",
+      "completedAt": "2026-11-22T08:05:46.977Z",
+      "agent": "developer",
+      "generation": 2
     }
   ],
   "sequenceOverrides": [],

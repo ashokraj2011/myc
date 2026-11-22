@@ -1,0 +1,466 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "d-story",
+  "phase": "implementation",
+  "generation": 2,
+  "generationIntentId": "15f69b80-c191-40ae-87f3-3ef138970886",
+  "changeSet": {
+    "path": "singularity/work-items/d-story/context/code-delivery/implementation-gen2-changes.json",
+    "digest": "sha256:5703d9364b8dba5b177dd4d14a137cc2b3c88eb462b454c32116acd9eb8f649b",
+    "sourcePaths": [
+      "src/App.css",
+      "src/App.jsx",
+      "src/components/FunctionGrapher.jsx",
+      "src/index.css"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [],
+    "executableTestPaths": [
+      "tests/graph-plotter.spec.js"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "test-source": 1
+    },
+    "entries": [
+      {
+        "changeId": "sha256:a6559bb2b23b1b5be9d46c4714e31190faaf447a41ba5ba573869c79e1520636",
+        "status": "modified",
+        "oldPath": "tests/graph-plotter.spec.js",
+        "newPath": "tests/graph-plotter.spec.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "reviewCorrection": {
+    "priorGeneration": 1,
+    "priorReceiptSha256": null,
+    "findingIds": [
+      "d-story-ac001-grid-not-tested",
+      "d-story-ac002-circle-geometry-not-tested",
+      "d-story-ac003-update-not-proved",
+      "d-story-req001-grid-not-tested",
+      "d-story-req005-circle-geometry-not-tested"
+    ],
+    "reusedSourcePaths": [
+      "src/App.css",
+      "src/App.jsx",
+      "src/components/FunctionGrapher.jsx",
+      "src/index.css"
+    ]
+  },
+  "traceability": {
+    "required": [
+      "D-STORY:AC-001",
+      "D-STORY:AC-002",
+      "D-STORY:AC-003"
+    ],
+    "bound": [
+      "D-STORY:AC-001",
+      "D-STORY:AC-002",
+      "D-STORY:AC-003"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "D-STORY:AC-001",
+        "testSource": "tests/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "D-STORY:AC-002",
+        "testSource": "tests/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "D-STORY:AC-003",
+        "testSource": "tests/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "D-STORY:AC-001",
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "graph plotter"
+          ],
+          "name": "starts with sin(x) and provides the Cartesian canvas"
+        },
+        "logicalTestId": "sha256:610e3340a9ee4bb37e4e0731835357020b2aadab5ca0514d8048fa9a17349962",
+        "declarationSha256": "sha256:c66aa7e1e3ce6cc097959b4dc7d0abbf191166ed4147c6f3ce7f08083ad5bcf1",
+        "supportSha256": null,
+        "assertions": {
+          "count": 2,
+          "tautological": 0,
+          "negative": false,
+          "boundary": true,
+          "nullability": false,
+          "adequacy": "adequate",
+          "subjects": [
+            "createElement",
+            "getByPlaceholderText",
+            "querySelector",
+            "render",
+            "toBeInTheDocument",
+            "toHaveValue"
+          ]
+        },
+        "line": 29,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "D-STORY:AC-002",
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "graph plotter"
+          ],
+          "name": "accepts and replaces the radius-six circle expression"
+        },
+        "logicalTestId": "sha256:bc2ba38d6be9e86fc95aa99a3fd0dc58bff5492a1b718a78d9e0606f7682fd71",
+        "declarationSha256": "sha256:34f5f5efe65f54ffa98586569c1cc9a321df55bbc5be2b61c458b5589d12bf4e",
+        "supportSha256": null,
+        "assertions": {
+          "count": 4,
+          "tautological": 0,
+          "negative": false,
+          "boundary": true,
+          "nullability": false,
+          "adequacy": "adequate",
+          "subjects": [
+            "async",
+            "clear",
+            "createElement",
+            "getByPlaceholderText",
+            "render",
+            "setup",
+            "toHaveValue",
+            "type"
+          ]
+        },
+        "line": 39,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "D-STORY:AC-003",
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "graph plotter"
+          ],
+          "name": "updates to a supported function after replacing an equation"
+        },
+        "logicalTestId": "sha256:b04358ed5427fcfe9d3e8b6ac958e04f6ace5faf9d87aa9a79323a208895f65d",
+        "declarationSha256": "sha256:3a06b9637eef7d31fa8f60112ee206703c3e6e5843f90466d3a5c804f588c3b1",
+        "supportSha256": null,
+        "assertions": {
+          "count": 2,
+          "tautological": 0,
+          "negative": false,
+          "boundary": true,
+          "nullability": false,
+          "adequacy": "adequate",
+          "subjects": [
+            "async",
+            "clear",
+            "createElement",
+            "getByPlaceholderText",
+            "render",
+            "setup",
+            "toHaveValue",
+            "type"
+          ]
+        },
+        "line": 55,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "D-STORY:AC-001",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      },
+      {
+        "clauseId": "D-STORY:AC-002",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      },
+      {
+        "clauseId": "D-STORY:AC-003",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      },
+      {
+        "clauseId": "D-STORY:AC-004",
+        "expectedPaths": [
+          "src/App.css",
+          "src/App.jsx",
+          "src/index.css"
+        ]
+      },
+      {
+        "clauseId": "D-STORY:REQ-001",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx",
+          "src/index.css"
+        ]
+      },
+      {
+        "clauseId": "D-STORY:REQ-002",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      },
+      {
+        "clauseId": "D-STORY:REQ-003",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      },
+      {
+        "clauseId": "D-STORY:REQ-004",
+        "expectedPaths": [
+          "src/App.css",
+          "src/App.jsx",
+          "src/index.css"
+        ]
+      },
+      {
+        "clauseId": "D-STORY:REQ-005",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "D-STORY:AC-001",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 17,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:AC-002",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 100,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:AC-003",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 157,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:AC-004",
+        "sourcePath": "src/App.css",
+        "line": 185,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:AC-004",
+        "sourcePath": "src/index.css",
+        "line": 308,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:REQ-001",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 44,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:REQ-002",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 157,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:REQ-003",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 16,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:REQ-004",
+        "sourcePath": "src/App.css",
+        "line": 185,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:REQ-004",
+        "sourcePath": "src/index.css",
+        "line": 309,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:REQ-005",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 99,
+        "tag": "clause"
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "D-STORY:AC-001",
+        "explanation": {
+          "text": "Initial rendering uses sin(x) with a Cartesian grid and axes.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 17
+        },
+        "regions": []
+      },
+      {
+        "clauseId": "D-STORY:AC-002",
+        "explanation": {
+          "text": "Render the circle at a fixed origin with known geometry.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 100
+        },
+        "regions": []
+      },
+      {
+        "clauseId": "D-STORY:AC-003",
+        "explanation": {
+          "text": "Visitors can replace the local graph expression.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 157
+        },
+        "regions": []
+      },
+      {
+        "clauseId": "D-STORY:AC-004",
+        "explanation": {
+          "text": "Keep graph mode usable across widths.",
+          "path": "src/App.css",
+          "line": 185
+        },
+        "regions": []
+      },
+      {
+        "clauseId": "D-STORY:REQ-001",
+        "explanation": {
+          "text": "The canvas presents visible Cartesian axes and a grid.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 44
+        },
+        "regions": []
+      },
+      {
+        "clauseId": "D-STORY:REQ-002",
+        "explanation": {
+          "text": "@clause:D-STORY:AC-003 Visitors can replace the local graph expression.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 157
+        },
+        "regions": []
+      },
+      {
+        "clauseId": "D-STORY:REQ-003",
+        "explanation": {
+          "text": "A fresh local grapher starts with no saved expression state.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 16
+        },
+        "regions": []
+      },
+      {
+        "clauseId": "D-STORY:REQ-004",
+        "explanation": {
+          "text": "@clause:D-STORY:AC-004 Keep graph mode usable across widths.",
+          "path": "src/App.css",
+          "line": 185
+        },
+        "regions": []
+      },
+      {
+        "clauseId": "D-STORY:REQ-005",
+        "explanation": {
+          "text": "Support the approved radius-six implicit circle.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 99
+        },
+        "regions": []
+      }
+    ],
+    "bindingsSha256": "sha256:2e695555a8e7a7b0285e21e32d8d183dcdeb38f38e975c1847242d42152bd601"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:3b002018f6c53a925294a33f48729e75d724f9a0bc3592bcbd1a278874c38e25",
+    "codeTreeSha256": "sha256:db5d55b4d279f67c0a4ecf4513f7e2b8b0f07e1d5f04738fc33db3cafc8875ca",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-11-22T08:05:46.977Z"
+}
