@@ -4,7 +4,7 @@
   "workId": "d-story",
   "workType": "spec-driven-standard",
   "phase": "verification",
-  "generation": 10,
+  "generation": 11,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -45,10 +45,10 @@
       "sha256": "6b1e2f504fb6a7334070b7bd8ec5b554500a96c0ea7b8501997a4f882a999615",
       "bytes": 2636
     },
-    "generation": 10,
-    "publishedAt": "2026-11-22T12:58:56.360Z"
+    "generation": 11,
+    "publishedAt": "2026-11-22T13:04:33.754Z"
   },
-  "sourceCommit": "bf39c0a48c8ec52943573db466d00cc01781e615",
+  "sourceCommit": "fbbe5ce401c00aa14d4f3ef299090e7ccf1ece9d",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "77dab191fa78ebdbe6f777cf68da8827f2447b711edc65a73b81e12b1b5fb8d2",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/common/verification.md"
   },
   "inputs": {
-    "generation": 10,
-    "path": "singularity/work-items/d-story/context/inputs-verification-gen10.json",
-    "sha256": "e2076092b9304e356e2fd1774ac747c8cc6559c379a8a8ddb73b6a592ab1e28e",
+    "generation": 11,
+    "path": "singularity/work-items/d-story/context/inputs-verification-gen11.json",
+    "sha256": "5ad3a57a25f70c3c7b5e6d9ec2691e1b49a91e0862a9de9b328ac71c75cf6fdd",
     "renderedSha256": "3ca36b6f81bff791a729f16171f3ab39ce1d4a97ed5bfc042a0c2db18e686dca",
     "mode": "enforce"
   },
@@ -269,6 +269,26 @@
         "maximumEstimatedTokens": 18000,
         "budgetMode": "observe",
         "originalBytes": 45511,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 11,
+      "path": "singularity/work-items/d-story/telemetry/verification-gen11.json",
+      "sha256": "69a85bc4a4d6e89774db7c21ef78f80285573fc40ad1effd7a51f967af410cf5",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 45512,
+        "estimatedTokens": 11378,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 45512,
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
@@ -485,6 +505,27 @@
       "completedAt": "2026-11-22T12:58:56.360Z",
       "agent": "qa",
       "generation": 10
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-22T13:04:33.754Z",
+      "completedAt": "2026-11-22T13:04:33.754Z",
+      "agent": "qa",
+      "generation": 11
     }
   ],
   "sequenceOverrides": [],
