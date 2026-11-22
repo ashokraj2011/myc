@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "phase": "verification",
+  "generation": 11,
+  "reportSha256": "a9676a2e8022cafe8468ff3351e38a450561e21564d0fb7fc66a7cda0317ffde",
+  "lifecycleEventId": "cee6fed0-d8ce-4e56-a07c-7df52ad63380",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "d-story",
+      "phase": "verification",
+      "generation": 11,
+      "sources": [
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/d-story/artifacts/implementation/implementation-summary.md",
+          "textSha256": "72df2c9a0b5c9eb3ceed12b9671e8b6266dc77ba16c71e2eca65a9c0055fb25d"
+        },
+        {
+          "id": "input:planning",
+          "path": "singularity/work-items/d-story/artifacts/planning/plan.md",
+          "textSha256": "ffbf4b00964dbad9fe4ff2127ebd73f0b1b9148fd113589d021e2a5e1054fa76"
+        },
+        {
+          "id": "input:specification",
+          "path": "singularity/work-items/d-story/artifacts/specification/spec.md",
+          "textSha256": "90f952d110a076303ac5ab84dc97d419cc104a90046fa86d2fc1202ea4ebe14a"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/d-story/USER-STORY.md",
+          "textSha256": "cff0beeb0d7b1e2eef41bfbf587a0bd0b222553331c39a52d8facbd53fa059b9",
+          "originalSha256": "2144a9c6d40147352ce812ef0edef66a750fee5ba927b75b0b653da837ea52f6"
+        }
+      ],
+      "visualSources": [
+        {
+          "id": "DOC-001",
+          "path": "local-document:DOC-001",
+          "originalSha256": "1ada26c12db04745df29790dfe06d518025152113392d7fadbfd533a0a9032ab",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-001",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-001-initial-screen-e32e79604a69a83a.png",
+          "originalSha256": "9fbfc8f1c0cb19a94b4470d0caa3f50a39277c6fcd3e821bf1b1383cc626576a",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-002",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-002-circle-screen-e32e79604a69a83a.png",
+          "originalSha256": "97b75975669d471d20ebd3ad7893c93a4d9e09f8d0f756ee9c3eb8d8f0228312",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-003",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-003-updated-screen-e32e79604a69a83a.png",
+          "originalSha256": "97b75975669d471d20ebd3ad7893c93a4d9e09f8d0f756ee9c3eb8d8f0228312",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-004",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-004-responsive-screen-e32e79604a69a83a.png",
+          "originalSha256": "0382feb43813082bfbb60c19ed10da4918d3c906747be84c2c04792235c7ee66",
+          "mimeType": "image/png"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/d-story/artifacts/verification/test-evidence.md",
+        "sha256": "6b1e2f504fb6a7334070b7bd8ec5b554500a96c0ea7b8501997a4f882a999615"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:specification",
+      "input:planning",
+      "input:implementation",
+      "DOC-001",
+      "WIT-001",
+      "WIT-002",
+      "WIT-003",
+      "WIT-004"
+    ],
+    "visualSourcesReviewed": [
+      {
+        "sourceId": "DOC-001",
+        "method": "image-tool",
+        "locator": "Full screenshot; expression panel at left and Cartesian plot at center",
+        "observations": "The pinned screenshot shows an initial sin(x) expression, red sine curve, visible Cartesian axes and grid."
+      },
+      {
+        "sourceId": "WIT-001",
+        "method": "image-tool",
+        "locator": "Full screenshot of the graph-mode view",
+        "observations": "The grapher mode is selected, but the expression field shows cos(x) * x rather than the required initial sin(x); the narrow graph is visible below crowded controls."
+      },
+      {
+        "sourceId": "WIT-002",
+        "method": "image-tool",
+        "locator": "Full screenshot",
+        "observations": "The screenshot shows the ordinary calculator keypad and display, not the graph plotter or the required radius-six circle."
+      },
+      {
+        "sourceId": "WIT-003",
+        "method": "image-tool",
+        "locator": "Full screenshot",
+        "observations": "This image is visually identical to WIT-002 and shows the ordinary calculator keypad and display, not an updated graph."
+      },
+      {
+        "sourceId": "WIT-004",
+        "method": "image-tool",
+        "locator": "Full side-by-side desktop and tablet screenshots",
+        "observations": "Both viewport captures show the ordinary calculator keypad, with no graph area or graph controls to assess for responsive graph usability."
+      }
+    ],
+    "rows": [
+      {
+        "id": "story-circle-test",
+        "sourceId": "story",
+        "line": 17,
+        "quote": "Palyright tests on cirlce of 6 unit radius in origin",
+        "outcome": "consistent",
+        "note": "The verification evidence supplies Playwright coverage for the radius-six circle."
+      },
+      {
+        "id": "spec-responsive-verification",
+        "sourceId": "input:specification",
+        "line": 95,
+        "quote": "`D-STORY:AC-004` | visual | `D-STORY:AC-004`",
+        "outcome": "inconsistent",
+        "note": "The specification makes AC-004 visual-only, but the evidence marks it verified while providing no tagged test or visual execution record."
+      },
+      {
+        "id": "planning-visual-contract",
+        "sourceId": "input:planning",
+        "line": 37,
+        "quote": "| `D-STORY:AC-004` | `src/App.jsx`, `src/App.css`, `src/index.css` | verification: D-STORY:AC-004 | modified | The graph remains visible and usable at representative desktop and common tablet widths. |",
+        "outcome": "inconsistent",
+        "note": "The plan requires a source-bound responsive visual inspection, but the verification report records no such visual witness."
+      },
+      {
+        "id": "implementation-explicit-visual-separation",
+        "sourceId": "input:implementation",
+        "line": 21,
+        "quote": "Visual screenshot and desktop/tablet acceptance still require inspection and must not be inferred from automated unit checks.",
+        "outcome": "inconsistent",
+        "note": "The implementation summary explicitly leaves visual acceptance separate; the verification evidence incorrectly presents AC-004 as verified."
+      },
+      {
+        "id": "pinned-doc-visual-reference",
+        "sourceId": "DOC-001",
+        "attestation": "Full screenshot, with the expression panel and central Cartesian plotting area",
+        "outcome": "consistent",
+        "note": "The pinned image matches the source-described visual reference for the initial sin(x) Cartesian graph."
+      },
+      {
+        "id": "wit-001-initial-screen",
+        "sourceId": "WIT-001",
+        "attestation": "Full graph-mode screenshot; expression field and plotted canvas",
+        "outcome": "inconsistent",
+        "note": "The expression field is cos(x) * x rather than initial sin(x), and controls occupy most of the narrow screen; this does not demonstrate the specified initial graph."
+      },
+      {
+        "id": "wit-002-circle-screen",
+        "sourceId": "WIT-002",
+        "attestation": "Full screenshot",
+        "outcome": "inconsistent",
+        "note": "The image shows the calculator keypad rather than a graph or the required centered radius-six circle."
+      },
+      {
+        "id": "wit-003-update-screen",
+        "sourceId": "WIT-003",
+        "attestation": "Full screenshot",
+        "outcome": "inconsistent",
+        "note": "The image duplicates WIT-002 and shows the calculator keypad rather than an updated graph."
+      },
+      {
+        "id": "wit-004-responsive-screen",
+        "sourceId": "WIT-004",
+        "attestation": "Full side-by-side desktop and tablet screenshots",
+        "outcome": "inconsistent",
+        "note": "Both captures show the calculator keypad and omit the graph area, so they do not evidence desktop/tablet graph usability."
+      }
+    ],
+    "findings": [
+      {
+        "id": "ac004-no-visual-evidence",
+        "severity": "blocking",
+        "message": "The verification evidence marks D-STORY:AC-004 as verified with no tagged test, while the approved specification and plan require visual acceptance at representative desktop and tablet widths. It does not contain desktop/tablet screenshots or a source-bound visual witness, so the recorded verification status is unsupported.",
+        "clauseId": "D-STORY:AC-004",
+        "sourceId": "input:specification",
+        "line": 95,
+        "quote": "`D-STORY:AC-004` | visual | `D-STORY:AC-004`"
+      },
+      {
+        "id": "ac001-initial-screen-mismatch",
+        "severity": "blocking",
+        "message": "WIT-001's initial-screen capture shows cos(x) * x rather than the specification's required initial sin(x), so it contradicts the claimed AC-001 visual evidence.",
+        "clauseId": "D-STORY:AC-001",
+        "sourceId": "WIT-001",
+        "attestation": "Full graph-mode screenshot; expression field"
+      },
+      {
+        "id": "ac002-circle-screen-missing",
+        "severity": "blocking",
+        "message": "WIT-002 shows the calculator keypad rather than a plotted circle; it does not visually demonstrate the circle centered at (0, 0) with radius six units.",
+        "clauseId": "D-STORY:AC-002",
+        "sourceId": "WIT-002",
+        "attestation": "Full screenshot"
+      },
+      {
+        "id": "ac003-update-screen-missing",
+        "severity": "blocking",
+        "message": "WIT-003 duplicates the calculator keypad screenshot and contains no updated graph, so the claimed expression-update visual evidence is absent.",
+        "clauseId": "D-STORY:AC-003",
+        "sourceId": "WIT-003",
+        "attestation": "Full screenshot"
+      },
+      {
+        "id": "ac004-responsive-graph-missing",
+        "severity": "blocking",
+        "message": "WIT-004 shows the calculator keypad at desktop/tablet sizes, not the graph area or its controls; it cannot establish graph usability at the required widths.",
+        "clauseId": "D-STORY:AC-004",
+        "sourceId": "WIT-004",
+        "attestation": "Full side-by-side desktop and tablet screenshots"
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "d25cdfe714c96433440b83db9b5860333d72fcf82827f952f1ef364d89285e8d",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-22T23:55:22.330Z",
+  "recordSha256": "8c0dbbb235671608f007bc928d5b3ad6238e26d25e3e2915b4180df4f89ca4de"
+}
