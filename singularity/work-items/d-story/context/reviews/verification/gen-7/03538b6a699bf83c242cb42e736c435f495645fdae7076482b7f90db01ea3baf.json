@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "phase": "verification",
+  "generation": 7,
+  "reportSha256": "03538b6a699bf83c242cb42e736c435f495645fdae7076482b7f90db01ea3baf",
+  "lifecycleEventId": "ed3499df-a3ab-452f-b96e-3d67bea02f2f",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "d-story",
+      "phase": "verification",
+      "generation": 7,
+      "sources": [
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/d-story/artifacts/implementation/implementation-summary.md",
+          "textSha256": "72df2c9a0b5c9eb3ceed12b9671e8b6266dc77ba16c71e2eca65a9c0055fb25d"
+        },
+        {
+          "id": "input:planning",
+          "path": "singularity/work-items/d-story/artifacts/planning/plan.md",
+          "textSha256": "ffbf4b00964dbad9fe4ff2127ebd73f0b1b9148fd113589d021e2a5e1054fa76"
+        },
+        {
+          "id": "input:specification",
+          "path": "singularity/work-items/d-story/artifacts/specification/spec.md",
+          "textSha256": "90f952d110a076303ac5ab84dc97d419cc104a90046fa86d2fc1202ea4ebe14a"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/d-story/USER-STORY.md",
+          "textSha256": "cff0beeb0d7b1e2eef41bfbf587a0bd0b222553331c39a52d8facbd53fa059b9",
+          "originalSha256": "2144a9c6d40147352ce812ef0edef66a750fee5ba927b75b0b653da837ea52f6"
+        }
+      ],
+      "visualSources": [
+        {
+          "id": "DOC-001",
+          "path": "local-document:DOC-001",
+          "originalSha256": "1ada26c12db04745df29790dfe06d518025152113392d7fadbfd533a0a9032ab",
+          "mimeType": "image/png"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/d-story/artifacts/verification/test-evidence.md",
+        "sha256": "6b1e2f504fb6a7334070b7bd8ec5b554500a96c0ea7b8501997a4f882a999615"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:specification",
+      "input:planning",
+      "input:implementation",
+      "DOC-001"
+    ],
+    "visualSourcesReviewed": [
+      {
+        "sourceId": "DOC-001",
+        "method": "image-tool",
+        "locator": "Full screenshot frame",
+        "observations": "The screenshot shows an expression panel containing sin(x) beside a Cartesian grid with visible horizontal and vertical axes; the plotted sine curve is centered on the axes."
+      }
+    ],
+    "rows": [
+      {
+        "id": "story-playwright-evidence",
+        "sourceId": "story",
+        "line": 17,
+        "quote": "- Palyright tests on cirlce of 6 unit radius in origin",
+        "outcome": "inconsistent",
+        "note": "The verification artifact records a passing generic node-tests run for the circle test, but does not identify a Playwright run. The implementation summary identifies the test coverage as Vitest, so the recorded evidence does not establish the requested browser test."
+      },
+      {
+        "id": "specification-visual-verification",
+        "sourceId": "input:specification",
+        "line": 81,
+        "quote": "- The graph area remains visible and usable at representative desktop and common tablet widths. *(S1)* [D-STORY:AC-004]",
+        "outcome": "inconsistent",
+        "note": "The verification artifact marks AC-004 verified although its evidence table says there is no tagged test and it records no visual inspection. The approved criterion requires responsive visual verification."
+      },
+      {
+        "id": "planning-visual-and-browser-contract",
+        "sourceId": "input:planning",
+        "line": 30,
+        "quote": "Visual acceptance remains a separate inspection against the pinned screenshot and at representative desktop/tablet sizes; automated success does not establish visual acceptance.",
+        "outcome": "inconsistent",
+        "note": "The evidence artifact records no visual inspection or screenshots while marking all criteria verified. It also reports a generic node-tests run, whereas the approved plan requires Playwright browser checks."
+      },
+      {
+        "id": "implementation-evidence-status",
+        "sourceId": "input:implementation",
+        "line": 21,
+        "quote": "Visual screenshot and desktop/tablet acceptance still require inspection and must not be inferred from automated unit checks.",
+        "outcome": "inconsistent",
+        "note": "The verification artifact nevertheless marks AC-001 through AC-004 verified without recording any visual inspection. The implementation summary also identifies the graph test coverage as Vitest, not the Playwright browser verification required by the approved plan."
+      },
+      {
+        "id": "doc-001-visual-evidence",
+        "sourceId": "DOC-001",
+        "attestation": "Full screenshot frame: the image shows the initial sin(x) expression, Cartesian grid, axes, and plotted sine curve; it is a visual reference, not a record that this generation performed the required visual comparison.",
+        "outcome": "inconsistent",
+        "note": "The verification artifact marks the visually assessed criteria as verified but contains no documented comparison against this pinned visual reference."
+      }
+    ],
+    "findings": [
+      {
+        "id": "visual-verification-not-evidenced",
+        "severity": "blocking",
+        "sourceId": "input:planning",
+        "line": 30,
+        "quote": "Visual acceptance remains a separate inspection against the pinned screenshot and at representative desktop/tablet sizes; automated success does not establish visual acceptance.",
+        "message": "The artifact marks AC-001 through AC-004 and the corresponding visual verification obligations as verified, but supplies no visual inspection, screenshot, or responsive-width observations. The approved plan expressly requires separate visual inspection, and the implementation summary says it remains outstanding. Passing automated tests could still coexist with a mismatched initial screen, circle rendering, expression-update display, or unusable tablet layout; these claims therefore remain unverified."
+      },
+      {
+        "id": "playwright-verification-not-evidenced",
+        "severity": "blocking",
+        "sourceId": "input:implementation",
+        "line": 19,
+        "quote": "Added `tests/graph-plotter.spec.js` with Vitest coverage for initial `sin(x)`, circle-expression entry, and expression replacement.",
+        "message": "AC-002 is marked verified from a generic `.-node-tests` run, but the implementation identifies the test file as Vitest coverage, while the approved specification and plan require a Playwright browser test for the circle result. The report does not establish that Playwright ran or that the browser-observed circle geometry passed; unit-test success alone can leave a browser-rendering or canvas-scaling failure undetected."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "d25cdfe714c96433440b83db9b5860333d72fcf82827f952f1ef364d89285e8d",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-22T12:46:52.136Z",
+  "recordSha256": "a05babad03a8c55727ba6e5e701b088aea18562b3cf114b1ae83d935ad1d40fc"
+}
