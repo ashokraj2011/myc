@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "phase": "verification",
+  "generation": 9,
+  "reportSha256": "26b9c3d445cd2a004195c0b254dbbfda5f02105e51a25058bb29de6838a36bdf",
+  "lifecycleEventId": "6613cfb6-6794-416a-ac93-5a3585661dea",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "d-story",
+      "phase": "verification",
+      "generation": 9,
+      "sources": [
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/d-story/artifacts/implementation/implementation-summary.md",
+          "textSha256": "72df2c9a0b5c9eb3ceed12b9671e8b6266dc77ba16c71e2eca65a9c0055fb25d"
+        },
+        {
+          "id": "input:planning",
+          "path": "singularity/work-items/d-story/artifacts/planning/plan.md",
+          "textSha256": "ffbf4b00964dbad9fe4ff2127ebd73f0b1b9148fd113589d021e2a5e1054fa76"
+        },
+        {
+          "id": "input:specification",
+          "path": "singularity/work-items/d-story/artifacts/specification/spec.md",
+          "textSha256": "90f952d110a076303ac5ab84dc97d419cc104a90046fa86d2fc1202ea4ebe14a"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/d-story/USER-STORY.md",
+          "textSha256": "cff0beeb0d7b1e2eef41bfbf587a0bd0b222553331c39a52d8facbd53fa059b9",
+          "originalSha256": "2144a9c6d40147352ce812ef0edef66a750fee5ba927b75b0b653da837ea52f6"
+        }
+      ],
+      "visualSources": [
+        {
+          "id": "DOC-001",
+          "path": "local-document:DOC-001",
+          "originalSha256": "1ada26c12db04745df29790dfe06d518025152113392d7fadbfd533a0a9032ab",
+          "mimeType": "image/png"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/d-story/artifacts/verification/test-evidence.md",
+        "sha256": "6b1e2f504fb6a7334070b7bd8ec5b554500a96c0ea7b8501997a4f882a999615"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:specification",
+      "input:planning",
+      "input:implementation",
+      "DOC-001"
+    ],
+    "visualSourcesReviewed": [
+      {
+        "sourceId": "DOC-001",
+        "method": "image-tool",
+        "locator": "Pinned screenshot; full image",
+        "observations": "The screenshot shows a Cartesian grid with labeled axes, an expression area containing sin(x), and the sine graph visible in the plot area."
+      }
+    ],
+    "clarificationsReviewed": [],
+    "rows": [
+      {
+        "id": "ROW-STORY",
+        "sourceId": "story",
+        "line": 17,
+        "quote": "Palyright tests on cirlce of 6 unit radius in origin",
+        "outcome": "consistent",
+        "note": "The verification evidence records circle testing, but the source acceptance text remains misspelled and does not itself specify Playwright or geometry coordinates."
+      },
+      {
+        "id": "ROW-SPECIFICATION",
+        "sourceId": "input:specification",
+        "line": 79,
+        "quote": "and a Playwright test verifies that result.",
+        "outcome": "inconsistent",
+        "note": "The evidence verifies AC-002 through a test file, but the pinned specification requires a Playwright test and the recorded run is not identified as Playwright."
+      },
+      {
+        "id": "ROW-PLANNING",
+        "sourceId": "input:planning",
+        "line": 35,
+        "quote": "`D-STORY:AC-002`",
+        "outcome": "inconsistent",
+        "note": "The plan requires Playwright browser coverage for circle geometry and a source-bound visual check, but the evidence only records a node test run and marks the visual/Playwright obligations without separate Playwright evidence."
+      },
+      {
+        "id": "ROW-IMPLEMENTATION",
+        "sourceId": "input:implementation",
+        "line": 19,
+        "quote": "Added `tests/graph-plotter.spec.js` with Vitest coverage",
+        "outcome": "consistent",
+        "note": "The implementation summary accurately identifies the test file as Vitest coverage, which does not supply the Playwright evidence required by the approved specification."
+      },
+      {
+        "id": "ROW-DOC-001",
+        "sourceId": "DOC-001",
+        "outcome": "consistent",
+        "attestation": "Pinned screenshot, full image: observed the Cartesian grid and axes, the sin(x) expression field, and the plotted sine curve.",
+        "note": "This visual source supports the initial graph appearance but does not show a circle or demonstrate tablet-width behavior."
+      }
+    ],
+    "findings": [
+      {
+        "id": "FINDING-AC002-PLAYWRIGHT",
+        "severity": "blocking",
+        "message": "D-STORY:AC-002 is marked verified with Vitest evidence, but the approved specification requires a Playwright test for the radius-six circle. The implementation summary itself distinguishes this file as Vitest coverage and says a real Playwright geometry run remains separate.",
+        "sourceId": "input:specification",
+        "line": 79,
+        "quote": "and a Playwright test verifies that result."
+      },
+      {
+        "id": "FINDING-AC004-VISUAL",
+        "severity": "blocking",
+        "message": "D-STORY:AC-004 is marked verified with \"no tagged test,\" while the plan requires a source-bound visual inspection at representative desktop and tablet widths. The only recorded visual source is the initial pinned screenshot, and the evidence provides no desktop/tablet capture or observation.",
+        "sourceId": "input:specification",
+        "line": 81,
+        "quote": "The graph area remains visible and usable at representative desktop and common tablet widths."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "d25cdfe714c96433440b83db9b5860333d72fcf82827f952f1ef364d89285e8d",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-22T12:56:56.658Z",
+  "recordSha256": "dbcde3846663be135e00888954ed9a66de700ba527857bc31ecab4419403f935"
+}
