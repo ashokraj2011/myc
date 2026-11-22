@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "phase": "verification",
+  "generation": 2,
+  "reportSha256": "6d1a68e703293d78e0a7e0a0b23548d9283951c1bf11d963607dde01eb997641",
+  "lifecycleEventId": "d119989d-4261-4028-864d-026ae3ebf656",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "d-story",
+      "phase": "verification",
+      "generation": 2,
+      "sources": [
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/d-story/artifacts/implementation/implementation-summary.md",
+          "textSha256": "72df2c9a0b5c9eb3ceed12b9671e8b6266dc77ba16c71e2eca65a9c0055fb25d"
+        },
+        {
+          "id": "input:planning",
+          "path": "singularity/work-items/d-story/artifacts/planning/plan.md",
+          "textSha256": "ffbf4b00964dbad9fe4ff2127ebd73f0b1b9148fd113589d021e2a5e1054fa76"
+        },
+        {
+          "id": "input:specification",
+          "path": "singularity/work-items/d-story/artifacts/specification/spec.md",
+          "textSha256": "90f952d110a076303ac5ab84dc97d419cc104a90046fa86d2fc1202ea4ebe14a"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/d-story/USER-STORY.md",
+          "textSha256": "cff0beeb0d7b1e2eef41bfbf587a0bd0b222553331c39a52d8facbd53fa059b9",
+          "originalSha256": "2144a9c6d40147352ce812ef0edef66a750fee5ba927b75b0b653da837ea52f6"
+        }
+      ],
+      "visualSources": [
+        {
+          "id": "DOC-001",
+          "path": "local-document:DOC-001",
+          "originalSha256": "1ada26c12db04745df29790dfe06d518025152113392d7fadbfd533a0a9032ab",
+          "mimeType": "image/png"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/d-story/artifacts/verification/test-evidence.md",
+        "sha256": "6b1e2f504fb6a7334070b7bd8ec5b554500a96c0ea7b8501997a4f882a999615"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:specification",
+      "input:planning",
+      "input:implementation",
+      "DOC-001"
+    ],
+    "visualSourcesReviewed": [
+      {
+        "sourceId": "DOC-001",
+        "method": "image-tool",
+        "locator": "Full screenshot",
+        "observations": "The image shows a Cartesian graph with axes and a grid, a sin(x) expression entry, and a plotted sine curve. It shows only one initial-screen capture; no desktop/tablet width captures or required circle or replacement captures are present."
+      }
+    ],
+    "rows": [
+      {
+        "id": "story-circle",
+        "sourceId": "story",
+        "line": 17,
+        "quote": "Palyright tests on cirlce of 6 unit radius in origin",
+        "outcome": "consistent",
+        "note": "The verification evidence identifies a radius-six circle test and reports it as passed."
+      },
+      {
+        "id": "specification-evidence",
+        "sourceId": "input:specification",
+        "line": 79,
+        "quote": "When `x^2 + y^2 = 36` is entered or configured, the rendered circle has center `(0, 0)` and radius `6` units, and a Playwright test verifies that result.",
+        "outcome": "inconsistent",
+        "note": "The evidence names the Playwright result requirement, but the recorded run is `.-node-tests` and the implementation source identifies the graph tests as Vitest. It does not provide Playwright or real browser-test evidence for the required circle."
+      },
+      {
+        "id": "planning-evidence",
+        "sourceId": "input:planning",
+        "line": 30,
+        "quote": "Automated browser checks use Playwright for the required expression and graph outcomes.",
+        "outcome": "inconsistent",
+        "note": "The only recorded run is a Node/Vitest-style run, while the plan requires Playwright browser checks and separate visual inspection. The evidence does not show those planned browser and visual runs."
+      },
+      {
+        "id": "implementation-evidence",
+        "sourceId": "input:implementation",
+        "line": 21,
+        "quote": "Visual screenshot and desktop/tablet acceptance still require inspection and must not be inferred from automated unit checks.",
+        "outcome": "inconsistent",
+        "note": "The implementation summary says visual acceptance and real Playwright geometry remain separate and no governed execution is retained. The verification document nevertheless recommends release and records the work as fully verified."
+      },
+      {
+        "id": "visual-source-evidence",
+        "sourceId": "DOC-001",
+        "attestation": "Full 1440x900 screenshot: initial Cartesian grid and axes are visible with a sin(x) entry and sine curve.",
+        "outcome": "inconsistent",
+        "note": "DOC-001 establishes the initial visual reference, but the verification record provides no desktop/tablet inspection, required-circle capture, or replacement capture."
+      }
+    ],
+    "findings": [
+      {
+        "id": "missing-playwright-circle-run",
+        "severity": "blocking",
+        "message": "D-STORY:AC-002 requires a Playwright test for the origin-centered radius-six circle, but the evidence records run `TA-cba6bdac8c1636628205` under command `.-node-tests`; the implementation summary identifies `tests/graph-plotter.spec.js` as Vitest coverage and says a real Playwright geometry run remains separate."
+      },
+      {
+        "id": "missing-responsive-visual-evidence",
+        "severity": "blocking",
+        "message": "D-STORY:AC-004 is marked verified and D-STORY:REQ-004 is marked verified, but the evidence table says `no tagged test` and provides no desktop/tablet visual witness. The only inspected screenshot is a single initial graph; it cannot establish representative desktop and tablet usability."
+      },
+      {
+        "id": "release-recommendation-overstates-evidence",
+        "severity": "blocking",
+        "message": "The agent brief recommends release because every requirement is verified, yet the same document leaves the Playwright circle run and responsive visual inspection unrecorded. This overstates the acceptance and visual assurance for a repeatable verification result."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "d25cdfe714c96433440b83db9b5860333d72fcf82827f952f1ef364d89285e8d",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-22T08:46:05.902Z",
+  "recordSha256": "55f9d98d88c8fc75745bcae4a35501490e608522863ae97e7dfb93ada623e88f"
+}
