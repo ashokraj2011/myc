@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "phase": "verification",
+  "generation": 10,
+  "reportSha256": "70c68d54c266817f7caaefd7881d629ba0f828829ef59d995f7ec6320b488f1d",
+  "lifecycleEventId": "16ea7e5e-5553-42f4-b79c-ca03dd358b49",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "d-story",
+      "phase": "verification",
+      "generation": 10,
+      "sources": [
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/d-story/artifacts/implementation/implementation-summary.md",
+          "textSha256": "72df2c9a0b5c9eb3ceed12b9671e8b6266dc77ba16c71e2eca65a9c0055fb25d"
+        },
+        {
+          "id": "input:planning",
+          "path": "singularity/work-items/d-story/artifacts/planning/plan.md",
+          "textSha256": "ffbf4b00964dbad9fe4ff2127ebd73f0b1b9148fd113589d021e2a5e1054fa76"
+        },
+        {
+          "id": "input:specification",
+          "path": "singularity/work-items/d-story/artifacts/specification/spec.md",
+          "textSha256": "90f952d110a076303ac5ab84dc97d419cc104a90046fa86d2fc1202ea4ebe14a"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/d-story/USER-STORY.md",
+          "textSha256": "cff0beeb0d7b1e2eef41bfbf587a0bd0b222553331c39a52d8facbd53fa059b9",
+          "originalSha256": "2144a9c6d40147352ce812ef0edef66a750fee5ba927b75b0b653da837ea52f6"
+        }
+      ],
+      "visualSources": [
+        {
+          "id": "DOC-001",
+          "path": "local-document:DOC-001",
+          "originalSha256": "1ada26c12db04745df29790dfe06d518025152113392d7fadbfd533a0a9032ab",
+          "mimeType": "image/png"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/d-story/artifacts/verification/test-evidence.md",
+        "sha256": "6b1e2f504fb6a7334070b7bd8ec5b554500a96c0ea7b8501997a4f882a999615"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:specification",
+      "input:planning",
+      "input:implementation",
+      "DOC-001"
+    ],
+    "visualSourcesReviewed": [
+      {
+        "sourceId": "DOC-001",
+        "method": "image-tool",
+        "locator": "Entire screenshot",
+        "observations": "The screenshot shows a Cartesian graph pane with labeled axes and a square grid, an expression panel containing sin(x), and the corresponding sinusoid."
+      }
+    ],
+    "rows": [
+      {
+        "id": "story-intent",
+        "sourceId": "story",
+        "line": 8,
+        "quote": "Create graph plotter like the one attached",
+        "outcome": "consistent"
+      },
+      {
+        "id": "spec-circle-verification",
+        "sourceId": "input:specification",
+        "line": 79,
+        "quote": "- When `x^2 + y^2 = 36` is entered or configured, the rendered circle has center `(0, 0)` and radius `6` units, and a Playwright test verifies that result. *(S2)* [D-STORY:AC-002] [scope:SRI-15d4e5bd263a]",
+        "outcome": "inconsistent",
+        "note": "The evidence lists a single .-node-tests run and marks AC-002 verified, but does not identify a Playwright execution or geometry assertion; the explicit verification criterion is not substantiated."
+      },
+      {
+        "id": "plan-visual-verification",
+        "sourceId": "input:planning",
+        "line": 30,
+        "quote": "Visual acceptance remains a separate inspection against the pinned screenshot and at representative desktop/tablet sizes; automated success does not establish visual acceptance.",
+        "outcome": "inconsistent",
+        "note": "The verification evidence records no visual witness, screenshot, or inspection result, yet recommends release and says every requirement is verified. In particular it provides no AC-004 desktop/tablet inspection evidence."
+      },
+      {
+        "id": "implementation-verification-status",
+        "sourceId": "input:implementation",
+        "line": 21,
+        "quote": "Retained existing Vitest, lint, and production-build regression commands. No governed test execution is retained yet; fresh publication checks may establish them. Visual screenshot and desktop/tablet acceptance still require inspection and must not be inferred from automated unit checks.",
+        "outcome": "inconsistent",
+        "note": "The artifact does not document the later visual inspections this source says are still required, and its sole listed test run is not identified as the required Playwright geometry run."
+      },
+      {
+        "id": "visual-reference-inspection",
+        "sourceId": "DOC-001",
+        "attestation": "Viewed the entire screenshot: the graph pane has labeled Cartesian axes and a square grid; the expression panel shows sin(x), with its sinusoid plotted. The verification evidence does not state whether the published app was inspected against this reference.",
+        "outcome": "question",
+        "note": "The visual target is clear, but the evidence does not establish that the implementation was compared with it; confirm and record the inspection."
+      }
+    ],
+    "findings": [
+      {
+        "id": "verification-visual-evidence-missing",
+        "severity": "blocking",
+        "message": "The evidence recommends release and claims every requirement is verified, but records no visual witness or inspection result. The approved plan requires visual inspection against the pinned screenshot and representative desktop/tablet widths; AC-004 is specifically visual-only. The implementation summary also says these inspections remain necessary. Record the actual source-bound visual outcomes (including desktop and tablet usability) before claiming these clauses verified; otherwise return them as unverified.",
+        "sourceId": "input:planning",
+        "line": 30,
+        "quote": "Visual acceptance remains a separate inspection against the pinned screenshot and at representative desktop/tablet sizes; automated success does not establish visual acceptance."
+      },
+      {
+        "id": "verification-playwright-evidence-missing",
+        "severity": "blocking",
+        "message": "D-STORY:AC-002 explicitly requires a Playwright test to verify the circle, but the only recorded run is .-node-tests and the pinned implementation summary describes the added coverage as Vitest. The evidence does not identify a Playwright run or an end-to-end geometry assertion, so it cannot support the claim that AC-002/REQ-005 is verified. Retain the required Playwright result or correct the verification claim.",
+        "sourceId": "input:specification",
+        "line": 79,
+        "quote": "- When `x^2 + y^2 = 36` is entered or configured, the rendered circle has center `(0, 0)` and radius `6` units, and a Playwright test verifies that result. *(S2)* [D-STORY:AC-002] [scope:SRI-15d4e5bd263a]"
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "d25cdfe714c96433440b83db9b5860333d72fcf82827f952f1ef364d89285e8d",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-22T13:01:20.747Z",
+  "recordSha256": "864a4f7de7d54f2ebd9d72f3e23b926a0c194dc2ce427c7a541c8b6007da519e"
+}
