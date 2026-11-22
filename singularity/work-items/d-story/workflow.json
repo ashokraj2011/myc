@@ -6705,26 +6705,27 @@
         }
       ],
       "reworkRevalidation": {
-        "generation": 4,
-        "invalidatedAt": "2026-11-22T10:27:40.423Z"
+        "generation": 5,
+        "invalidatedAt": "2026-11-22T10:43:36.187Z"
       },
       "versionOpening": {
-        "operationId": "vo-47cb381d9a3a28693fca905d0dccee87",
-        "version": 5,
-        "highWatermark": 5,
+        "operationId": "vo-722c379bc0127e35c652eab50a89b42a",
+        "version": 6,
+        "highWatermark": 6,
         "reason": "review-corrections",
-        "path": "singularity/work-items/d-story/context/version-openings/verification-v5.json",
-        "sha256": "sha256:00b65ef7da54a01d709978f1067cccba5038ab7029a7ea64197b834eb7bb3bc7",
+        "path": "singularity/work-items/d-story/context/version-openings/verification-v6.json",
+        "sha256": "sha256:13b85a543560028f608efc698c91761d6364a91047467618f2c94922ac88b670",
         "consent": {
-          "settled": "STL-006",
-          "surface": "settled"
+          "receiptId": "c51cccab-72c5-416f-9a87-0d77603d0acd",
+          "surface": "question-tool",
+          "assurance": "host-answer"
         },
         "writer": {
-          "fence": 4,
+          "fence": 5,
           "writerId": "vw-0e09b156361c6f8ce6a22622518c00b4",
-          "operationId": "vo-47cb381d9a3a28693fca905d0dccee87"
+          "operationId": "vo-722c379bc0127e35c652eab50a89b42a"
         },
-        "openedAt": "2026-11-22T10:27:39.643Z"
+        "openedAt": "2026-11-22T10:43:35.238Z"
       }
     },
     "release": {
@@ -7343,6 +7344,14 @@
       "event": "source_review_submitted",
       "phase": "verification",
       "detail": "103add177a06067f82431d65d0351aa5e97b071c56b5e640691259a0728b4fd3"
+    },
+    {
+      "at": "2026-11-22T10:43:35.238Z",
+      "actor": "88361104+ashokraj2011@users.noreply.github.com",
+      "agent": "qa",
+      "event": "version_opened",
+      "phase": "verification",
+      "detail": "version 6 opened (review-corrections) on the person's yes (question-tool)"
     }
   ],
   "measurement": {
@@ -8127,7 +8136,7 @@
       "storyIdentity": "9c08f3c1eecbb27e3eb063aa93942555e1d508bc216e7ee428dffd8d212cf0aa",
       "id": "WT-bad677f2635d5710ca3cf354ad145c1091268968844afc74da7f84683c12d364",
       "inputSha256": "36f538431b455547a3db046f8b3a7d7c6a5c20c73e2c7979d067994202a6d94d",
-      "revision": 4,
+      "revision": 5,
       "state": "complete",
       "continuations": 0,
       "maximumContinuations": 2,
@@ -8147,11 +8156,11 @@
         {
           "kind": "retained-review",
           "inputSha256": "36f538431b455547a3db046f8b3a7d7c6a5c20c73e2c7979d067994202a6d94d",
-          "fingerprint": "ac88b001af629112fe9482d4ce5d000eaa4f0204cb311906096b1d488159c084"
+          "fingerprint": "103add177a06067f82431d65d0351aa5e97b071c56b5e640691259a0728b4fd3"
         }
       ],
       "blockedCode": null,
-      "recordSha256": "559f3bd54a582c36dc196f099b3e394aae058b6cd280921049105ce4505fcdf8"
+      "recordSha256": "3090d079b6c337f41f5dd2defb9acb2e6e1c349a6e4e359330fb4eeb859bfb84"
     }
   },
   "publicationProjections": [
@@ -13573,6 +13582,155 @@
           }
         },
         "createdAt": "2026-11-22T10:29:49.512Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "e42c9d29-9fe2-4130-9668-f427e131b0fe",
+        "type": "version-opened",
+        "subject": {
+          "kind": "story",
+          "id": "d-story",
+          "branch": "d-story"
+        },
+        "phaseId": "verification",
+        "generation": 6,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": null,
+        "payload": {
+          "operationId": "vo-722c379bc0127e35c652eab50a89b42a",
+          "version": 6,
+          "from": 5,
+          "reason": "review-corrections",
+          "proposalDigest": "sha256:7e6e6ed48cf0e7bdfd8ee1b112a35fc9798aed2319d645d4c7b2c09f0bcfd605",
+          "consentReceiptId": "c51cccab-72c5-416f-9a87-0d77603d0acd",
+          "writerFence": 5,
+          "decision": null,
+          "reviewPacketSha256": null
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-22T10:43:35.350Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "e42c9d29-9fe2-4130-9668-f427e131b0fe",
+        "eventType": "version-opened",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "d-story"
+          ],
+          "branch": "d-story",
+          "canonicalBranch": "d-story",
+          "createdAt": "2026-11-22T06:44:06.662Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "verification",
+          "generation": 6,
+          "phase": "verification",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 4,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 1,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 4,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "verification",
+              "status": "in_progress",
+              "generation": 5
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph (copy)",
+          "updatedAt": "2026-11-22T10:43:35.238Z",
+          "workId": "d-story",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "77dab191fa78ebdbe6f777cf68da8827f2447b711edc65a73b81e12b1b5fb8d2",
+          "lifecycleEventId": "e42c9d29-9fe2-4130-9668-f427e131b0fe",
+          "lifecyclePayload": {
+            "consentReceiptId": "c51cccab-72c5-416f-9a87-0d77603d0acd",
+            "decision": null,
+            "from": 5,
+            "operationId": "vo-722c379bc0127e35c652eab50a89b42a",
+            "proposalDigest": "sha256:7e6e6ed48cf0e7bdfd8ee1b112a35fc9798aed2319d645d4c7b2c09f0bcfd605",
+            "reason": "review-corrections",
+            "reviewPacketSha256": null,
+            "version": 6,
+            "writerFence": 5
+          },
+          "templateSha256": "4f559684330b34b509cd27e959615ef48fdbda1bf0c44e05456bf70cb7754532",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "e42c9d29-9fe2-4130-9668-f427e131b0fe",
+            "type": "version-opened",
+            "subject": {
+              "kind": "story",
+              "id": "d-story",
+              "branch": "d-story"
+            },
+            "phaseId": "verification",
+            "generation": 6,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": null,
+            "payload": {
+              "operationId": "vo-722c379bc0127e35c652eab50a89b42a",
+              "version": 6,
+              "from": 5,
+              "reason": "review-corrections",
+              "proposalDigest": "sha256:7e6e6ed48cf0e7bdfd8ee1b112a35fc9798aed2319d645d4c7b2c09f0bcfd605",
+              "consentReceiptId": "c51cccab-72c5-416f-9a87-0d77603d0acd",
+              "writerFence": 5,
+              "decision": null,
+              "reviewPacketSha256": null
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-22T10:43:35.350Z"
+          }
+        },
+        "createdAt": "2026-11-22T10:43:35.360Z"
       }
     }
   ],
