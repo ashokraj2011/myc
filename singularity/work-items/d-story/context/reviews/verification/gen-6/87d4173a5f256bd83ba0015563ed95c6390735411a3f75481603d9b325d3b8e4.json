@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "phase": "verification",
+  "generation": 6,
+  "reportSha256": "87d4173a5f256bd83ba0015563ed95c6390735411a3f75481603d9b325d3b8e4",
+  "lifecycleEventId": "410a5bec-2db2-4826-a6d7-21ff3c251cfe",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "d-story",
+      "phase": "verification",
+      "generation": 6,
+      "sources": [
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/d-story/artifacts/implementation/implementation-summary.md",
+          "textSha256": "72df2c9a0b5c9eb3ceed12b9671e8b6266dc77ba16c71e2eca65a9c0055fb25d"
+        },
+        {
+          "id": "input:planning",
+          "path": "singularity/work-items/d-story/artifacts/planning/plan.md",
+          "textSha256": "ffbf4b00964dbad9fe4ff2127ebd73f0b1b9148fd113589d021e2a5e1054fa76"
+        },
+        {
+          "id": "input:specification",
+          "path": "singularity/work-items/d-story/artifacts/specification/spec.md",
+          "textSha256": "90f952d110a076303ac5ab84dc97d419cc104a90046fa86d2fc1202ea4ebe14a"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/d-story/USER-STORY.md",
+          "textSha256": "cff0beeb0d7b1e2eef41bfbf587a0bd0b222553331c39a52d8facbd53fa059b9",
+          "originalSha256": "2144a9c6d40147352ce812ef0edef66a750fee5ba927b75b0b653da837ea52f6"
+        }
+      ],
+      "visualSources": [
+        {
+          "id": "DOC-001",
+          "path": "local-document:DOC-001",
+          "originalSha256": "1ada26c12db04745df29790dfe06d518025152113392d7fadbfd533a0a9032ab",
+          "mimeType": "image/png"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/d-story/artifacts/verification/test-evidence.md",
+        "sha256": "6b1e2f504fb6a7334070b7bd8ec5b554500a96c0ea7b8501997a4f882a999615"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:specification",
+      "input:planning",
+      "input:implementation",
+      "DOC-001"
+    ],
+    "visualSourcesReviewed": [
+      {
+        "sourceId": "DOC-001",
+        "method": "image-tool",
+        "locator": "Full screenshot frame",
+        "observations": "The screenshot shows an expression panel containing sin(x) and a Cartesian graph with visible axes, grid, and the sine curve. This is the visual reference; it does not show or prove the local application's responsive behavior."
+      }
+    ],
+    "rows": [
+      {
+        "id": "story-circle-test",
+        "sourceId": "story",
+        "line": 17,
+        "quote": "- Palyright tests on cirlce of 6 unit radius in origin",
+        "outcome": "inconsistent",
+        "note": "The artifact lists a passing circle-expression test, but does not establish that it was a Playwright test or that it verified center and radius. The pinned implementation summary instead describes Vitest coverage; see finding circle-test-evidence."
+      },
+      {
+        "id": "spec-circle-test",
+        "sourceId": "input:specification",
+        "line": 79,
+        "quote": "- When `x^2 + y^2 = 36` is entered or configured, the rendered circle has center `(0, 0)` and radius `6` units, and a Playwright test verifies that result. *(S2)* [D-STORY:AC-002] [scope:SRI-15d4e5bd263a]",
+        "outcome": "inconsistent",
+        "note": "The verification row names a passing test but its title only says it accepts and replaces the circle expression; the record does not show a Playwright run or an assertion of center and radius. See finding circle-test-evidence."
+      },
+      {
+        "id": "spec-responsive",
+        "sourceId": "input:specification",
+        "line": 81,
+        "quote": "- The graph area remains visible and usable at representative desktop and common tablet widths. *(S1)* [D-STORY:AC-004]",
+        "outcome": "inconsistent",
+        "note": "AC-004 is marked verified, but the verification artifact supplies no responsive visual inspection or screenshot evidence. See finding responsive-visual-evidence."
+      },
+      {
+        "id": "planning-test-and-visual-evidence",
+        "sourceId": "input:planning",
+        "line": 30,
+        "quote": "Automated browser checks use Playwright for the required expression and graph outcomes. Visual acceptance remains a separate inspection against the pinned screenshot and at representative desktop/tablet sizes; automated success does not establish visual acceptance. Use the existing Vitest suite, production build, and lint command as regression checks. Do not interpret unspecified malformed-expression behavior or add persistence as requirements.",
+        "outcome": "inconsistent",
+        "note": "The report's named passing test is not identified as the planned Playwright browser check; it also marks responsive visual acceptance verified without the separate inspection or screenshots the plan requires. See findings circle-test-evidence and responsive-visual-evidence."
+      },
+      {
+        "id": "implementation-test-runner",
+        "sourceId": "input:implementation",
+        "line": 19,
+        "quote": "Added `tests/graph-plotter.spec.js` with Vitest coverage for initial `sin(x)`, circle-expression entry, and expression replacement. The test file carries `@ac:D-STORY:AC-001`, `@ac:D-STORY:AC-002`, and `@ac:D-STORY:AC-003`.",
+        "outcome": "inconsistent",
+        "note": "The artifact marks the tagged outcomes verified from this test file, while the implementation source identifies its tests as Vitest coverage and the approved plan calls for Playwright browser checks. The report does not reconcile or demonstrate the required browser test. See finding circle-test-evidence."
+      },
+      {
+        "id": "implementation-visual-status",
+        "sourceId": "input:implementation",
+        "line": 21,
+        "quote": "Visual screenshot and desktop/tablet acceptance still require inspection and must not be inferred from automated unit checks.",
+        "outcome": "inconsistent",
+        "note": "The artifact nevertheless marks AC-004 verified and recommends release without presenting the required visual inspection evidence. See finding responsive-visual-evidence."
+      },
+      {
+        "id": "visual-reference",
+        "sourceId": "DOC-001",
+        "attestation": "Full screenshot frame: the expression panel displays sin(x), and the graph area shows Cartesian axes, grid, and a sine curve.",
+        "outcome": "consistent"
+      }
+    ],
+    "findings": [
+      {
+        "id": "circle-test-evidence",
+        "severity": "blocking",
+        "message": "The artifact marks AC-001 through AC-003 and REQ-005 verified from a passing run, but does not establish the planned Playwright browser verification. In particular, AC-002 requires a Playwright test that verifies the circle's center and radius; the listed test title only says it accepts/replaces the expression, while the pinned implementation summary describes Vitest coverage. The report therefore does not demonstrate the required test or geometry result and cannot support these verified claims.",
+        "clauseId": "D-STORY:AC-002",
+        "sourceId": "input:specification",
+        "line": 79,
+        "quote": "- When `x^2 + y^2 = 36` is entered or configured, the rendered circle has center `(0, 0)` and radius `6` units, and a Playwright test verifies that result. *(S2)* [D-STORY:AC-002] [scope:SRI-15d4e5bd263a]"
+      },
+      {
+        "id": "responsive-visual-evidence",
+        "severity": "blocking",
+        "message": "AC-004 and REQ-004 are marked verified and the artifact recommends release, but it contains no responsive screenshot or inspection record; AC-004 is explicitly listed as having no tagged test. The approved plan requires a separate inspection against the pinned screenshot at representative desktop and tablet widths, and the implementation summary says that inspection remains outstanding. Automated test results do not establish this visual acceptance.",
+        "clauseId": "D-STORY:AC-004",
+        "sourceId": "input:planning",
+        "line": 30,
+        "quote": "Automated browser checks use Playwright for the required expression and graph outcomes. Visual acceptance remains a separate inspection against the pinned screenshot and at representative desktop/tablet sizes; automated success does not establish visual acceptance. Use the existing Vitest suite, production build, and lint command as regression checks. Do not interpret unspecified malformed-expression behavior or add persistence as requirements."
+      },
+      {
+        "id": "summary-requirement-count",
+        "severity": "advisory",
+        "message": "The agent brief says “9 of 10 requirements verified,” but the results table lists five REQ clauses and four AC clauses (nine total); DOC-001 is a visual source, not a requirement, and is separately marked not applicable. Correct the denominator so the summary accurately describes the requirement set."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "d25cdfe714c96433440b83db9b5860333d72fcf82827f952f1ef364d89285e8d",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-22T10:47:31.099Z",
+  "recordSha256": "d83cccef3fc6a8d3b898e82485681f1fe6c38bd2161c9aa19c6f1a69b4c00ad9"
+}
