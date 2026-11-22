@@ -6915,26 +6915,26 @@
         }
       ],
       "reworkRevalidation": {
-        "generation": 6,
-        "invalidatedAt": "2026-11-22T12:39:00.119Z"
+        "generation": 7,
+        "invalidatedAt": "2026-11-22T12:47:27.315Z"
       },
       "versionOpening": {
-        "operationId": "vo-074d16f570a0f8216cb925193b09f4f6",
-        "version": 7,
-        "highWatermark": 7,
+        "operationId": "vo-013412b81f7d9088c6272491140fa604",
+        "version": 8,
+        "highWatermark": 8,
         "reason": "review-corrections",
-        "path": "singularity/work-items/d-story/context/version-openings/verification-v7.json",
-        "sha256": "sha256:a3f63a7e43ab9cac1b1f79da2135ef79dbf6a4e79c78ba4d44a16da039bc793f",
+        "path": "singularity/work-items/d-story/context/version-openings/verification-v8.json",
+        "sha256": "sha256:1e6fe3545a3bc09703f39832ca8e40d2c2cd1484c6f41ca0d37b4893d3803729",
         "consent": {
-          "settled": "STL-007",
+          "settled": "STL-008",
           "surface": "settled"
         },
         "writer": {
-          "fence": 6,
+          "fence": 7,
           "writerId": "vw-0e09b156361c6f8ce6a22622518c00b4",
-          "operationId": "vo-074d16f570a0f8216cb925193b09f4f6"
+          "operationId": "vo-013412b81f7d9088c6272491140fa604"
         },
-        "openedAt": "2026-11-22T12:38:59.334Z"
+        "openedAt": "2026-11-22T12:47:26.505Z"
       }
     },
     "release": {
@@ -7609,6 +7609,22 @@
       "event": "source_review_submitted",
       "phase": "verification",
       "detail": "03538b6a699bf83c242cb42e736c435f495645fdae7076482b7f90db01ea3baf"
+    },
+    {
+      "at": "2026-11-22T12:47:26.505Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "decision_settled",
+      "phase": "verification",
+      "detail": "STL-008 (review-corrections) settled by SFlow: Started version 8 of verification to fix the review's findings on version 7"
+    },
+    {
+      "at": "2026-11-22T12:47:26.505Z",
+      "actor": "88361104+ashokraj2011@users.noreply.github.com",
+      "agent": "qa",
+      "event": "version_opened",
+      "phase": "verification",
+      "detail": "version 8 opened (review-corrections) settled for the person (STL-008; only the reviewer had seen version 7)"
     }
   ],
   "measurement": {
@@ -8555,7 +8571,7 @@
       "storyIdentity": "9c08f3c1eecbb27e3eb063aa93942555e1d508bc216e7ee428dffd8d212cf0aa",
       "id": "WT-79dd6d216adf55482148bbc69ca506990033d50ce6b384feed202330a0abbca9",
       "inputSha256": "5f845564111835f7c50b58a8abfdf211b1ce8c4e00408fb4bbeb9ac9ade50684",
-      "revision": 4,
+      "revision": 5,
       "state": "complete",
       "continuations": 0,
       "maximumContinuations": 2,
@@ -8575,11 +8591,11 @@
         {
           "kind": "retained-review",
           "inputSha256": "5f845564111835f7c50b58a8abfdf211b1ce8c4e00408fb4bbeb9ac9ade50684",
-          "fingerprint": "994994627a45bb201e68dfcab029e0bcf0ae835c117dd7dcddc933922f561865"
+          "fingerprint": "03538b6a699bf83c242cb42e736c435f495645fdae7076482b7f90db01ea3baf"
         }
       ],
       "blockedCode": null,
-      "recordSha256": "fef33b2aa0a43729d4a3b6018c7c4ebe50102761a24901033e40fb1491eafba9"
+      "recordSha256": "ab1da001104ff1304e50d36a9270815cfae23fcc179ca9bf6f68ee18e47ec6ba"
     }
   },
   "publicationProjections": [
@@ -14824,6 +14840,155 @@
         },
         "createdAt": "2026-11-22T12:46:50.996Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "19e9b16a-8310-416a-9052-8f60ca1250bc",
+        "type": "version-opened",
+        "subject": {
+          "kind": "story",
+          "id": "d-story",
+          "branch": "d-story"
+        },
+        "phaseId": "verification",
+        "generation": 8,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": null,
+        "payload": {
+          "operationId": "vo-013412b81f7d9088c6272491140fa604",
+          "version": 8,
+          "from": 7,
+          "reason": "review-corrections",
+          "proposalDigest": "sha256:0ad7370af44f0767d0e1ce42aab6877344d54138878ad0b0b70b313c77e60878",
+          "consentReceiptId": null,
+          "writerFence": 7,
+          "decision": null,
+          "reviewPacketSha256": null
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-22T12:47:26.563Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "19e9b16a-8310-416a-9052-8f60ca1250bc",
+        "eventType": "version-opened",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "d-story"
+          ],
+          "branch": "d-story",
+          "canonicalBranch": "d-story",
+          "createdAt": "2026-11-22T06:44:06.662Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "verification",
+          "generation": 8,
+          "phase": "verification",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 4,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 1,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 4,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "verification",
+              "status": "in_progress",
+              "generation": 7
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph (copy)",
+          "updatedAt": "2026-11-22T12:47:26.505Z",
+          "workId": "d-story",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "77dab191fa78ebdbe6f777cf68da8827f2447b711edc65a73b81e12b1b5fb8d2",
+          "lifecycleEventId": "19e9b16a-8310-416a-9052-8f60ca1250bc",
+          "lifecyclePayload": {
+            "consentReceiptId": null,
+            "decision": null,
+            "from": 7,
+            "operationId": "vo-013412b81f7d9088c6272491140fa604",
+            "proposalDigest": "sha256:0ad7370af44f0767d0e1ce42aab6877344d54138878ad0b0b70b313c77e60878",
+            "reason": "review-corrections",
+            "reviewPacketSha256": null,
+            "version": 8,
+            "writerFence": 7
+          },
+          "templateSha256": "4f559684330b34b509cd27e959615ef48fdbda1bf0c44e05456bf70cb7754532",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "19e9b16a-8310-416a-9052-8f60ca1250bc",
+            "type": "version-opened",
+            "subject": {
+              "kind": "story",
+              "id": "d-story",
+              "branch": "d-story"
+            },
+            "phaseId": "verification",
+            "generation": 8,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": null,
+            "payload": {
+              "operationId": "vo-013412b81f7d9088c6272491140fa604",
+              "version": 8,
+              "from": 7,
+              "reason": "review-corrections",
+              "proposalDigest": "sha256:0ad7370af44f0767d0e1ce42aab6877344d54138878ad0b0b70b313c77e60878",
+              "consentReceiptId": null,
+              "writerFence": 7,
+              "decision": null,
+              "reviewPacketSha256": null
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-22T12:47:26.563Z"
+          }
+        },
+        "createdAt": "2026-11-22T12:47:26.569Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -15190,6 +15355,35 @@
       "actor": "ashokraj2011",
       "agent": "qa",
       "at": "2026-11-22T12:38:59.334Z"
+    },
+    {
+      "id": "STL-008",
+      "kind": "review-corrections",
+      "subject": "verification version 7: the review's findings",
+      "phase": "verification",
+      "answer": "Started version 8 of verification to fix the review's findings on version 7",
+      "evidence": [
+        {
+          "what": "the review of version 7 asks for 7 corrections",
+          "where": "verification review of version 7"
+        },
+        {
+          "what": "nobody answered that review, approved, returned or asked to change version 7",
+          "where": "verification review, approval and request records"
+        }
+      ],
+      "by": "sflow",
+      "effect": {
+        "generation": 7,
+        "toGeneration": 8,
+        "findings": [
+          "visual-verification-not-evidenced",
+          "playwright-verification-not-evidenced"
+        ]
+      },
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "at": "2026-11-22T12:47:26.505Z"
     }
   ],
   "testCommandPins": [
