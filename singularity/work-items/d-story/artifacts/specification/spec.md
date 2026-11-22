@@ -4,27 +4,51 @@
   "workId": "d-story",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "1411761bb74a2bb564249c67eca6c9a5a56e8306cba0227eaef6f83130e57bea",
+      "bytes": 11906
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-22T06:53:42.384Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "1ea744deae87b3a49df1fcf877962ab9e99be050",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "77dab191fa78ebdbe6f777cf68da8827f2447b711edc65a73b81e12b1b5fb8d2",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/d-story/context/clarifications-specification-gen1.json",
+    "sha256": "beaddaa578ed73c709d1c1c06e97c9aecbb234bb9623eead1c8c26ac4e8054f2",
+    "promptSha256": "e9cda55854c91256ce05ba71d1485e6d8bf3ad0966567a53a8086dd8997ae5be",
+    "responses": 5,
+    "markers": [],
+    "recordedAt": "2026-11-22T06:52:04.065Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": null,
+      "githubLookup": "not-checked"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/d-story/telemetry/specification-gen1.json",
+      "sha256": "cb0be0145b90a2af4699fbaf26a96883e3c0ef27012925495719179200f935cb",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 31029,
+        "estimatedTokens": 7758,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 31029,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-22T06:53:42.384Z",
+      "completedAt": "2026-11-22T06:53:42.384Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -54,133 +135,122 @@
 
 # Specification — d-story
 
-<!-- sflow:guidance
-Scenarios come first, and general requirements come after them `[SPK:REQ-068]`. That ordering is the template's opinion: a requirement written before anyone has described the situation it serves tends to describe the system instead of the need, and nobody notices until verification.
-
-Where the current Story evidence leaves something material unknown, say so with a marker rather than guessing. Use this syntax:
-
-    [NEEDS CLARIFICATION: <one question grounded in the current Story evidence>]
-
-Replace the angle-bracketed placeholder; never copy or ask it as written. The question must be one non-empty line and must arise from the pinned sources, approved upstream artifacts, repository world model, or a contradiction among them. Markers are extracted the same way clauses are, so a marker inside fenced or inline code is ignored `[SPK:REQ-063]`. This phase blocks publication while any marker is unresolved, and a marker is only resolved when a later generation removes it *and* records the answer `[SPK:REQ-067]` — deleting the text alone is an integrity failure, not an answer.
--->
-
-<!-- sflow:guidance Keep every section of this template. When one does not fit this change (for example Permissions for a library or command-line tool with no roles), write `Not applicable: <reason>` under it rather than deleting it: later steps carry Actors, Failure and empty states, Permissions, Boundary conditions and the other sections forward, and stop when one is missing. -->
-
 ## Agent brief
 
-<!-- sflow:guidance Summarize the approved intent for downstream agents in a compact, standalone form. Include the problem, intended outcome, principal actors, most important scenarios, hard constraints, and major exclusions. Do not introduce claims that are absent from the sections below. Exact requirements and boundary conditions are preserved separately by the governed projection. -->
-
-TODO: Write the Agent brief here as visible text; text inside the comment above is not read.
+Build a local browser graph plotter that uses the pinned screenshot as visual evidence: show a Cartesian graph area with axes and a grid, initially render `sin(x)`, and let a visitor enter graph expressions. The basic experience must support both function expressions and the implicit circle equation `x^2 + y^2 = 36`, remain usable on desktop and common tablet widths, and require no login, backend, persistence, or external graph service.
 
 ## Actors
 
-<!-- sflow:guidance Who uses this, and what authority does each hold? -->
-
-TODO: Name each actor and the authority each one holds.
+A visitor is an unauthenticated person using the graph plotter in a supported browser. A visitor may enter expressions and view their plots; no account or elevated authority is required.
 
 ## User scenarios
 
-<!-- sflow:guidance Prioritized. Each scenario leads with the situation, then its acceptance cases. -->
-
-<!-- sflow:guidance Before drafting, split the pinned request and recorded answers into observable obligations for the actual interfaces (UI, API, event/message, batch/job, CLI, library or mixed). Keep the source -> REQ/AC -> assertion -> verification mapping in the existing sections. Existing ACs count; do not duplicate clauses or invent controls, endpoints, limits, errors or screenshot requirements. Self-check whether an implementation could meet this draft yet omit an explicit request. Repair clear omissions in this editable draft and recheck within the returned repair policy; preserve published inputs and settled answers. These are authoring instructions, not execution evidence. -->
-
-### S1 — <the most important situation, in the user's words>
+### S1 — Open the graph plotter
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Visitor
+**Context:** The local browser app is loaded with no saved graph state.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+- **Given** no graph expression has been previously entered
+  **When** the visitor opens the plotter
+  **Then** the app displays a Cartesian graph with axes and grid and plots `sin(x)` initially
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
+- **Given** the plotter is open
+  **When** the viewport is within a common desktop or tablet width
+  **Then** the graph area remains visible and usable
 
-### S2 — <the next situation>
+### S2 — Enter a graph expression
 
 **Priority:** P2
+**Actor:** Visitor
+**Context:** The plotter is open and an expression entry area is available.
 
-- **Given** … **When** … **Then** …
+- **Given** the plotter is showing its current graph
+  **When** the visitor enters a function or implicit-circle expression
+  **Then** the corresponding graph is rendered in the Cartesian graph area
+
+- **Given** the plotter is open
+  **When** the visitor replaces `sin(x)` with `x^2 + y^2 = 36`
+  **Then** the plotted circle has center `(0, 0)` and radius `6` units
 
 ## Failure and empty states
 
-<!-- sflow:guidance What happens the first time, with nothing there yet, and when each step fails. These are where specifications are usually silent and implementations usually improvise. -->
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** With no expression selected, the plotter retains the blank Cartesian graph area and does not invent or restore persisted graph state.
+- **Failure:** The pinned scope defines no external dependency or backend; failure behavior for unavailable browser rendering, unsupported browser capabilities, or malformed expressions is not specified and requires clarification only if implementation planning identifies it as material.
+- **Partial:** Partial rendering is not claimed by the pinned evidence; no partial-success result is specified.
 
 ## Scenario coverage
 
-<!-- sflow:guidance One row per behavior/acceptance clause; repeat rows for multiple outcomes. Every referenced S-number must have complete Given/When/Then acceptance cases above. Outcome is success, failure, boundary, or empty. Rejection/error requirements need distinct failure cases, not only happy-path prose. Use the pinned request and clarification answers; do not invent error text or new scope. -->
-
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `D-STORY:REQ-001` | S1 | TODO |
-| `D-STORY:REQ-002` | S2 | TODO |
-| `D-STORY:AC-001` | S1 | TODO |
+| `D-STORY:REQ-001` | S1 | success |
+| `D-STORY:REQ-002` | S1 | success |
+| `D-STORY:REQ-002` | S2 | success |
+| `D-STORY:REQ-003` | S1 | success |
+| `D-STORY:REQ-004` | S1 | success |
+| `D-STORY:REQ-005` | S2 | success |
+| `D-STORY:AC-001` | S1 | success |
+| `D-STORY:AC-002` | S2 | success |
+| `D-STORY:AC-003` | S2 | success |
+| `D-STORY:AC-004` | S1 | success |
 
 ## Permissions
 
-<!-- sflow:guidance Who may do each thing, and what a reader without that authority sees instead. -->
-
-TODO: Say who may do each thing, and what someone without that authority sees instead.
+Not applicable: the product is an unauthenticated local browser experience, and the pinned evidence grants graph viewing and expression entry to every visitor. There is no reader role or restricted action.
 
 ## Boundary conditions
 
-<!-- sflow:guidance Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one. -->
-
-TODO: State each limit, size, count or timeout, and what happens at and beyond it.
+The initial expression is `sin(x)`. The circle acceptance boundary is the equation `x^2 + y^2 = 36`, whose center is `(0, 0)` and whose radius is `6` units. The pinned evidence does not establish expression-count limits, domain limits, zoom limits, persistence limits, or timeouts; this specification therefore does not state or infer them.
 
 ## Requirements
 
-<!-- sflow:guidance Numbered, testable, one obligation each. Cite the scenario each serves. -->
+- The plotter shall render a Cartesian graph area with visible axes and a grid using the pinned screenshot as visual evidence. *(S1)* [D-STORY:REQ-001]
+- The plotter shall allow a visitor to enter and replace graph expressions in the local browser. *(S1, S2)* [D-STORY:REQ-002]
+- The plotter shall initially render `sin(x)` when no prior graph state exists. *(S1)* [D-STORY:REQ-003]
+- The plotter shall remain usable on desktop and common tablet widths. *(S1)* [D-STORY:REQ-004]
+- The plotter shall render `x^2 + y^2 = 36` as a circle centered at `(0, 0)` with radius `6` units when that expression is entered or configured. *(S2)* [D-STORY:REQ-005] [scope:SRI-15d4e5bd263a]
 
-- <requirement>. *(S1)* [D-STORY:REQ-001]
-- <requirement>. *(S1, S2)* [D-STORY:REQ-002]
-
-<!-- sflow:guidance Acceptance criteria use the same stable, namespaced form: -->
-
-- <observable acceptance outcome>. *(S1)* [D-STORY:AC-001]
+- On initial load with no saved state, `sin(x)` is the visible plotted expression and the Cartesian axes and grid are visible. *(S1)* [D-STORY:AC-001]
+- When `x^2 + y^2 = 36` is entered or configured, the rendered circle has center `(0, 0)` and radius `6` units, and a Playwright test verifies that result. *(S2)* [D-STORY:AC-002] [scope:SRI-15d4e5bd263a]
+- When a visitor replaces the current expression with a supported function or implicit equation, the Cartesian graph visibly updates to that expression. *(S2)* [D-STORY:AC-003]
+- The graph area remains visible and usable at representative desktop and common tablet widths. *(S1)* [D-STORY:AC-004]
 
 ## Verification intent
 
-<!-- sflow:guidance One row per declared clause, including non-functional requirements. Methods: test, visual, inspection, or a comma-separated combination (all required). AC Criterion is its own ID. A visual/inspection requirement names the AC proving it; a test-only requirement may use -. An AC a requirement names lists every method that requirement lists: a `test, visual` requirement needs a `test, visual` AC. Choose from the pinned source, not from available tools. A screenshot is visual proof, not a test exemption. Planning must inherit these methods and cannot change them without an approved scope amendment. -->
-
 | Clause | Methods | Criterion |
 |---|---|---|
-| `D-STORY:REQ-001` | TODO | - |
-| `D-STORY:REQ-002` | TODO | - |
-| `D-STORY:AC-001` | TODO | `D-STORY:AC-001` |
+| `D-STORY:REQ-001` | test, visual | `D-STORY:AC-001` |
+| `D-STORY:REQ-002` | test, visual | `D-STORY:AC-003` |
+| `D-STORY:REQ-003` | test, visual | `D-STORY:AC-001` |
+| `D-STORY:REQ-004` | visual | `D-STORY:AC-004` |
+| `D-STORY:REQ-005` | test, visual | `D-STORY:AC-002` |
+| `D-STORY:AC-001` | test, visual | `D-STORY:AC-001` |
+| `D-STORY:AC-002` | test, visual | `D-STORY:AC-002` |
+| `D-STORY:AC-003` | test, visual | `D-STORY:AC-003` |
+| `D-STORY:AC-004` | visual | `D-STORY:AC-004` |
 
 ## Non-functional requirements
 
-<!-- sflow:guidance Latency, throughput, availability, accessibility, privacy, retention. State the number and how it will be measured; "fast" is not a requirement. -->
-
-<!-- sflow:guidance Use governed requirement anchors here too (for example `[D-STORY:REQ-003]`); `NFR-001` by itself is only a display label and is not a stable clause identity. -->
-
-TODO: State each non-functional requirement with its number and how it is measured, or write None for this change.
+None for this change: the pinned evidence establishes no measurable latency, throughput, availability, accessibility, privacy, or retention target beyond local browser operation.
 
 ## Constitution articles
 
-<!-- sflow:guidance Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each cited ID exists at the pinned revision before publication `[SPK:REQ-101]`. -->
-
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-<!-- sflow:guidance What this specification takes as true without proving. An assumption that turns out false is a change request, not a defect — which is only true if it was written down. -->
-
-TODO: List what this specification takes as true without proving, or write None.
+- The pinned screenshot is a visual reference, not a requirement to reproduce every Desmos control or brand element.
+- A basic plotter will support expression entry and graph display, but the exact expression syntax beyond function and implicit-circle examples is to be determined during implementation.
+- The app is expected to operate locally in a browser without authentication or saved state.
 
 ## Out of scope
 
-<!-- sflow:guidance Named explicitly, so the boundary is reviewable rather than inferred. -->
-
-TODO: Name what this change does not do.
+- Authentication, accounts, and user profiles.
+- Server-side APIs, persistence, and external graph services.
+- Saving or sharing graphs.
+- Reproduction of Desmos-specific branding or every control visible in the screenshot.
+- Advanced graphing features not established by the pinned request or clarification.
 
 ## Sources
 
-<!-- sflow:guidance Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one offered to this phase that could not be read or was not available here, named as a gap. Without supporting documents, say so. -->
+- DOC-001 — Screenshot 2026 11 22 at 12.12.40 PM: inspected as the visual reference for the Cartesian graph, axes, grid, expression area, and initial `sin(x)` display.

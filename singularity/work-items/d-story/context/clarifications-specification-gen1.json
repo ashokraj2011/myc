@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "workId": "d-story",
+  "phase": "specification",
+  "generation": 1,
+  "mode": "required",
+  "promptPath": "singularity/work-items/d-story/context/prompts/specification-gen1.md",
+  "promptSha256": "e9cda55854c91256ce05ba71d1485e6d8bf3ad0966567a53a8086dd8997ae5be",
+  "groundingRecordPath": "singularity/work-items/d-story/context/specification-gen1.json",
+  "groundingRecordSha256": "c4abcfbe76f5016362f6b7f781e20092fedbb53caf513de04fc8261dd2108786",
+  "responses": [
+    {
+      "id": "Q-001",
+      "question": "Graph interactions: Should the implementation match the screenshot with expression entry, add/remove expressions, pan, zoom, and a grid, or only use the screenshot as visual inspiration for a basic plotter?",
+      "answer": "Use the screenshot as visual inspiration, but specify only a basic plotter",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-002",
+      "question": "Initial graph: Should the app start with sin(x), start empty, or let the implementation choose?",
+      "answer": "Start with sin(x), as shown in the screenshot",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-003",
+      "question": "Circle acceptance meaning: Should a Playwright test verify x² + y² = 36 is shown with radius 6 and center at origin, test only a circle without explicitly requiring implicit-circle support, or defer implicit-circle support?",
+      "answer": "Add a Playwright test that verifies x² + y² = 36 is shown with radius 6 and center at origin",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-004",
+      "question": "Supported experience: Desktop first with responsive tablet support, desktop only, or desktop and mobile with an explicitly usable mobile layout?",
+      "answer": "Desktop browser first, responsive enough to remain usable on common tablet widths",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-005",
+      "question": "Operational assumptions: Local browser app with no login, API, persistence, or external graph service, server-side auth/persistence, or deferred operations?",
+      "answer": "Local browser app; no login, API, persistence, or external graph service is required",
+      "status": "answered",
+      "blocking": false
+    }
+  ],
+  "completed": true,
+  "recordedAt": "2026-11-22T06:52:04.065Z",
+  "recordedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": null,
+    "githubLookup": "not-checked"
+  },
+  "agent": "product-owner"
+}
