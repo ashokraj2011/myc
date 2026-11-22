@@ -19,6 +19,7 @@
 
 ## Recent history
 
+- 2026-11-22T08:35:52.551Z — **witness_recorded** (implementation) by ashokraj2011 · agent developer: WIT-002: visual of singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-002-circle-screen-e32e79604a69a83a.png for D-STORY:AC-002 slot circle-screen satisfies it. good to go
 - 2026-11-22T08:32:39.357Z — **witness_recorded** (implementation) by ashokraj2011 · agent developer: WIT-001: visual of singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-001-initial-screen-e32e79604a69a83a.png for D-STORY:AC-001 slot initial-screen satisfies it. Confirmed on the decision card: it shows what the criterion asks for.
 - 2026-11-22T08:08:18.436Z — **phase_submitted** (implementation) by ashokraj2011 · agent developer: 7 artifacts
 - 2026-11-22T08:08:18.436Z — **work_interval_reconciled** (implementation) by system: aligned; 1 changed path(s)
@@ -33,4 +34,3 @@
 - 2026-11-22T07:57:27.234Z — **version_opened** (implementation) by 88361104+ashokraj2011@users.noreply.github.com · agent developer: version 1 opened (initial)
 - 2026-11-22T07:55:39.765Z — **work_interval_started** (implementation) by system: baseline 6b048063f6a2 at 979d736a34ad
 - 2026-11-22T07:55:39.747Z — **phase_self_approved** (planning) by ashokraj2011 · agent architect: threshold reached; advanced to implementation
-- 2026-11-22T07:51:49.311Z — **decision_settled** (planning) by ashokraj2011: STL-001 (story-selection) settled by SFlow: Opened d-story: the only Story whose branch, d-story, is checked out where this session runs. Evidence: d-story is d-story's own branch, recorded in its Story record (singularity/work-items/d-story/workflow.json on d-story); no other Story records a branch checked out where this session runs (the session's checkout)
