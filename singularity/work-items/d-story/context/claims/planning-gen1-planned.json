@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-11-22T07:00:01.526Z",
+  "claims": {
+    "D-STORY:AC-001": {
+      "expectedPaths": [
+        "src/components/FunctionGrapher.jsx"
+      ],
+      "tests": [
+        "tests/graph-plotter.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "On a fresh local load, `sin(x)` is shown with Cartesian axes and grid."
+    },
+    "D-STORY:AC-002": {
+      "expectedPaths": [
+        "src/components/FunctionGrapher.jsx"
+      ],
+      "tests": [
+        "tests/graph-plotter.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Entering `x^2 + y^2 = 36` renders a circle centered at `(0, 0)` with radius six units."
+    },
+    "D-STORY:AC-003": {
+      "expectedPaths": [
+        "src/components/FunctionGrapher.jsx"
+      ],
+      "tests": [
+        "tests/graph-plotter.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Replacing the expression with a supported function or implicit equation visibly updates the graph."
+    },
+    "D-STORY:AC-004": {
+      "expectedPaths": [
+        "src/App.css",
+        "src/App.jsx",
+        "src/index.css"
+      ],
+      "tests": [],
+      "testDisposition": "non-test",
+      "testReason": null,
+      "verificationCriterion": "D-STORY:AC-004",
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "The graph remains visible and usable at representative desktop and common tablet widths."
+    },
+    "D-STORY:REQ-001": {
+      "expectedPaths": [
+        "src/components/FunctionGrapher.jsx",
+        "src/index.css"
+      ],
+      "tests": [
+        "tests/graph-plotter.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "A local Cartesian graph area presents visible axes and grid, informed by DOC-001 — Screenshot 2026 11 22 at 12.12.40 PM."
+    },
+    "D-STORY:REQ-002": {
+      "expectedPaths": [
+        "src/components/FunctionGrapher.jsx"
+      ],
+      "tests": [
+        "tests/graph-plotter.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "A visitor can enter and replace a supported graph expression locally."
+    },
+    "D-STORY:REQ-003": {
+      "expectedPaths": [
+        "src/components/FunctionGrapher.jsx"
+      ],
+      "tests": [
+        "tests/graph-plotter.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "A fresh plotter starts with `sin(x)` and has no saved graph state."
+    },
+    "D-STORY:REQ-004": {
+      "expectedPaths": [
+        "src/App.css",
+        "src/App.jsx",
+        "src/index.css"
+      ],
+      "tests": [],
+      "testDisposition": "non-test",
+      "testReason": null,
+      "verificationCriterion": "D-STORY:AC-004",
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Graph controls and canvas remain usable at the specified representative viewport classes."
+    },
+    "D-STORY:REQ-005": {
+      "expectedPaths": [
+        "src/components/FunctionGrapher.jsx"
+      ],
+      "tests": [
+        "tests/graph-plotter.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "The required circle equation plots center `(0, 0)`, radius six units."
+    }
+  },
+  "supportingFiles": [
+    "package-lock.json",
+    "package.json",
+    "playwright.config.js"
+  ],
+  "supportingFileDetails": [
+    {
+      "path": "package-lock.json",
+      "class": "dependency-lock",
+      "reason": "synchronize the dependency lockfile with the browser-test runner."
+    },
+    {
+      "path": "package.json",
+      "class": "build-configuration",
+      "reason": "add the browser-test runner command and Playwright development dependency needed for the explicitly required Playwright verification."
+    },
+    {
+      "path": "playwright.config.js",
+      "class": "build-configuration",
+      "reason": "configure the local Vite application and browser test discovery for `tests/graph-plotter.spec.js`."
+    }
+  ],
+  "verificationContracts": [
+    {
+      "clauseId": "D-STORY:AC-001",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "initial-plot",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "tests/graph-plotter.spec.js"
+          },
+          "requiredAssurance": "module-observed"
+        },
+        {
+          "slot": "initial-screen",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "Graph plotter initial screen"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    },
+    {
+      "clauseId": "D-STORY:AC-002",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "circle-geometry",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "tests/graph-plotter.spec.js"
+          },
+          "requiredAssurance": "module-observed"
+        },
+        {
+          "slot": "circle-screen",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "Graph plotter with required circle"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    },
+    {
+      "clauseId": "D-STORY:AC-003",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "expression-update",
+          "method": "test",
+          "role": "primary",
+          "witness": {
+            "path": "tests/graph-plotter.spec.js"
+          },
+          "requiredAssurance": "module-observed"
+        },
+        {
+          "slot": "updated-screen",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "Graph plotter after expression replacement"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    },
+    {
+      "clauseId": "D-STORY:AC-004",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "responsive-screen",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "Graph plotter at desktop and tablet widths"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    }
+  ],
+  "workId": "d-story",
+  "phase": "planning",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/d-story/artifacts/planning/plan.md",
+    "sha256": "604d7527bae38fa3bc7cfb7a98267749b0cc3fe3dd67b2d713f36d207c13a5ac",
+    "bytes": 18076
+  }
+}
