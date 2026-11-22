@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "phase": "verification",
+  "generation": 3,
+  "reportSha256": "011f744f243679332c6d153866cc82c5e110b63e8ce5538939ae88da6b4f8d1b",
+  "lifecycleEventId": "cbce2719-012e-48f2-8e75-347c61fe9889",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "d-story",
+      "phase": "verification",
+      "generation": 3,
+      "sources": [
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/d-story/artifacts/implementation/implementation-summary.md",
+          "textSha256": "72df2c9a0b5c9eb3ceed12b9671e8b6266dc77ba16c71e2eca65a9c0055fb25d"
+        },
+        {
+          "id": "input:planning",
+          "path": "singularity/work-items/d-story/artifacts/planning/plan.md",
+          "textSha256": "ffbf4b00964dbad9fe4ff2127ebd73f0b1b9148fd113589d021e2a5e1054fa76"
+        },
+        {
+          "id": "input:specification",
+          "path": "singularity/work-items/d-story/artifacts/specification/spec.md",
+          "textSha256": "90f952d110a076303ac5ab84dc97d419cc104a90046fa86d2fc1202ea4ebe14a"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/d-story/USER-STORY.md",
+          "textSha256": "cff0beeb0d7b1e2eef41bfbf587a0bd0b222553331c39a52d8facbd53fa059b9",
+          "originalSha256": "2144a9c6d40147352ce812ef0edef66a750fee5ba927b75b0b653da837ea52f6"
+        }
+      ],
+      "visualSources": [
+        {
+          "id": "DOC-001",
+          "path": "local-document:DOC-001",
+          "originalSha256": "1ada26c12db04745df29790dfe06d518025152113392d7fadbfd533a0a9032ab",
+          "mimeType": "image/png"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/d-story/artifacts/verification/test-evidence.md",
+        "sha256": "6b1e2f504fb6a7334070b7bd8ec5b554500a96c0ea7b8501997a4f882a999615"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:specification",
+      "input:planning",
+      "input:implementation",
+      "DOC-001"
+    ],
+    "visualSourcesReviewed": [
+      {
+        "sourceId": "DOC-001",
+        "method": "image-tool",
+        "locator": "full 1439x774 image",
+        "observations": "The pinned screenshot shows a wide Cartesian grid and axes, a sin(x) expression entry, and a desktop-width Desmos-style screen; it does not provide pinned evidence of a circle, an expression replacement, or a common-tablet viewport."
+      }
+    ],
+    "rows": [
+      {
+        "id": "story-circle-origin",
+        "sourceId": "story",
+        "line": 17,
+        "quote": "Palyright tests on cirlce of 6 unit radius in origin",
+        "outcome": "consistent",
+        "note": "The verification evidence reports passing Playwright coverage for the radius-six circle."
+      },
+      {
+        "id": "specification-verification",
+        "sourceId": "input:specification",
+        "line": 75,
+        "quote": "The plotter shall remain usable on desktop and common tablet widths.",
+        "outcome": "inconsistent",
+        "note": "The specification requires AC-004 visual usability at representative desktop and tablet widths, but the evidence records AC-004 as verified with no tagged test and provides no browser/capture result for the responsive view."
+      },
+      {
+        "id": "planning-verification",
+        "sourceId": "input:planning",
+        "line": 30,
+        "quote": "Visual acceptance remains a separate inspection against the pinned screenshot and at representative desktop/tablet sizes; automated success does not establish visual acceptance.",
+        "outcome": "inconsistent",
+        "note": "The plan explicitly separates visual acceptance from automated success and requires desktop/tablet inspection against DOC-001. The verification artifact has no matching visual result for AC-004."
+      },
+      {
+        "id": "implementation-verification",
+        "sourceId": "input:implementation",
+        "line": 9,
+        "quote": "Changed `src/components/FunctionGrapher.jsx` to preserve the initial function, recognize `x^2 + y^2 = 36`, and render it with an origin-centered canvas arc whose radius is six times the active scale.",
+        "outcome": "consistent",
+        "note": "The implementation summary identifies the circle, expression-replacement, and responsive work; the evidence also reports passing tests for AC-001 through AC-003."
+      },
+      {
+        "id": "screenshot-visual",
+        "sourceId": "DOC-001",
+        "attestation": "full 1439x774 screenshot: center x-axis/y-axis, Cartesian grid, red sin(x) curve, and expression panel are visible; no circle or tablet state is shown.",
+        "outcome": "inconsistent",
+        "note": "The pinned screenshot supports initial sin(x) and graph presentation context, but it cannot confirm the circle, expression replacement, or tablet-responsive behavior claimed as implemented."
+      }
+    ],
+    "findings": [
+      {
+        "id": "AC004-unverified-responsive-evidence",
+        "severity": "blocking",
+        "message": "The verification artifact marks D-STORY:AC-004 as verified even though its table says there is no tagged test and the review found no browser evidence for representative desktop or common tablet widths. The approved plan explicitly requires visual acceptance at those widths and states that automated success does not establish it.",
+        "sourceId": "input:planning",
+        "line": 30,
+        "quote": "Visual acceptance remains a separate inspection against the pinned screenshot and at representative desktop/tablet sizes; automated success does not establish visual acceptance."
+      },
+      {
+        "id": "DOC001-overextended-visual-claim",
+        "severity": "blocking",
+        "message": "The verification artifact does not record the required visual checks for the circle, expression replacement, or tablet layouts. DOC-001 shows an initial sin(x) Cartesian graph only, so it does not prove AC-002, AC-003, or AC-004 on the delivered app.",
+        "sourceId": "DOC-001",
+        "attestation": "full 1439x774 screenshot; it shows sin(x), axes and grid, but no circle or tablet viewport"
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "d25cdfe714c96433440b83db9b5860333d72fcf82827f952f1ef364d89285e8d",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-22T09:10:37.261Z",
+  "recordSha256": "33fb8422eb69c4d7463c2461f49f00ee1875869224717b41168e5d04c9617331"
+}
