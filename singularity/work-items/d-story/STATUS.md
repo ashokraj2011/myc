@@ -20,6 +20,8 @@
 
 ## Recent history
 
+- 2026-11-22T13:03:39.561Z — **version_opened** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 11 opened (review-corrections) settled for the person (STL-010; only the reviewer had seen version 10)
+- 2026-11-22T13:03:39.561Z — **decision_settled** (verification) by ashokraj2011 · agent qa: STL-010 (review-corrections) settled by SFlow: Started version 11 of verification to fix the review's findings on version 10
 - 2026-11-22T13:01:20.747Z — **source_review_submitted** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 70c68d54c266817f7caaefd7881d629ba0f828829ef59d995f7ec6320b488f1d
 - 2026-11-22T12:58:56.446Z — **phase_generated** (verification) by ashokraj2011 · agent qa: generation 10
 - 2026-11-22T12:57:58.903Z — **version_opened** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 10 opened (review-corrections) settled for the person (STL-009; only the reviewer had seen version 9)
@@ -33,5 +35,3 @@
 - 2026-11-22T12:47:26.505Z — **decision_settled** (verification) by ashokraj2011 · agent qa: STL-008 (review-corrections) settled by SFlow: Started version 8 of verification to fix the review's findings on version 7
 - 2026-11-22T12:46:52.136Z — **source_review_submitted** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 03538b6a699bf83c242cb42e736c435f495645fdae7076482b7f90db01ea3baf
 - 2026-11-22T12:40:49.599Z — **phase_generated** (verification) by ashokraj2011 · agent qa: generation 7
-- 2026-11-22T12:38:59.334Z — **version_opened** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 7 opened (review-corrections) settled for the person (STL-007; only the reviewer had seen version 6)
-- 2026-11-22T12:38:59.334Z — **decision_settled** (verification) by ashokraj2011 · agent qa: STL-007 (review-corrections) settled by SFlow: Started version 7 of verification to fix the review's findings on version 6
