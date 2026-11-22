@@ -3906,6 +3906,14 @@
       "event": "version_opened",
       "phase": "implementation",
       "detail": "version 1 opened (initial)"
+    },
+    {
+      "at": "2026-11-22T07:57:32.251Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "decision_settled",
+      "phase": "implementation",
+      "detail": "STL-002 (node-version) settled by SFlow: Pinned Node 22 in .nvmrc for Implementation's tests: Node 26.12.0 here breaks tests that use localStorage under Vitest, and Node 22.14.0 is installed. Evidence: Node 26.12.0 puts its own localStorage in front of the DOM environment's under Vitest (the repository's Vitest setup and its tests that use localStorage); Node 22.14.0 is installed (the Nodes installed on this machine); tests would otherwise run on Node 26.12.0 (the Node on PATH)"
     }
   ],
   "measurement": {
@@ -5603,6 +5611,140 @@
         },
         "createdAt": "2026-11-22T07:57:27.274Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "0caf0c6f-38d0-4ec9-afc1-ecc90c7caf36",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "d-story",
+          "branch": "d-story"
+        },
+        "phaseId": "implementation",
+        "generation": 0,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": null,
+        "payload": {
+          "decision": "settled",
+          "reviewPacketSha256": null,
+          "settled": "STL-002",
+          "kind": "node-version"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-22T07:57:32.280Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "0caf0c6f-38d0-4ec9-afc1-ecc90c7caf36",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "d-story"
+          ],
+          "branch": "d-story",
+          "canonicalBranch": "d-story",
+          "createdAt": "2026-11-22T06:44:06.662Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 0,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph (copy)",
+          "updatedAt": "2026-11-22T07:57:32.251Z",
+          "workId": "d-story",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "77dab191fa78ebdbe6f777cf68da8827f2447b711edc65a73b81e12b1b5fb8d2",
+          "lifecycleEventId": "0caf0c6f-38d0-4ec9-afc1-ecc90c7caf36",
+          "lifecyclePayload": {
+            "decision": "settled",
+            "reviewPacketSha256": null,
+            "settled": "STL-002",
+            "kind": "node-version"
+          },
+          "templateSha256": "b94713de659f5bff93f4ed0d18fabda754a5708c7bb36ef9096c5786d95d8086",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "0caf0c6f-38d0-4ec9-afc1-ecc90c7caf36",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "d-story",
+              "branch": "d-story"
+            },
+            "phaseId": "implementation",
+            "generation": 0,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": null,
+            "payload": {
+              "decision": "settled",
+              "reviewPacketSha256": null,
+              "settled": "STL-002",
+              "kind": "node-version"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-22T07:57:32.280Z"
+          }
+        },
+        "createdAt": "2026-11-22T07:57:32.284Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -5773,6 +5915,37 @@
       },
       "actor": "ashokraj2011",
       "at": "2026-11-22T07:51:49.311Z"
+    },
+    {
+      "id": "STL-002",
+      "kind": "node-version",
+      "subject": "Node 22 for implementation's tests",
+      "phase": "implementation",
+      "answer": "Pinned Node 22 in .nvmrc for Implementation's tests: Node 26.12.0 here breaks tests that use localStorage under Vitest, and Node 22.14.0 is installed.",
+      "evidence": [
+        {
+          "what": "Node 26.12.0 puts its own localStorage in front of the DOM environment's under Vitest",
+          "where": "the repository's Vitest setup and its tests that use localStorage"
+        },
+        {
+          "what": "Node 22.14.0 is installed",
+          "where": "the Nodes installed on this machine"
+        },
+        {
+          "what": "tests would otherwise run on Node 26.12.0",
+          "where": "the Node on PATH"
+        }
+      ],
+      "by": "sflow",
+      "effect": {
+        "file": ".nvmrc",
+        "version": "22",
+        "node": "22.14.0",
+        "class": "build-configuration"
+      },
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "at": "2026-11-22T07:57:32.251Z"
     }
   ]
 }
