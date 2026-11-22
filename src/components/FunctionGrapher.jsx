@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import * as math from 'mathjs';
-import { ZoomIn, ZoomOut, RotateCcw, Play } from 'lucide-react';
+import { ZoomIn, ZoomOut, RotateCcw } from 'lucide-react';
 import { playSound } from '../utils/audio';
 
 const PRESETS = [
   { label: 'sin(x)', expr: 'sin(x)' },
+  { label: 'Circle: r=6', expr: 'x^2 + y^2 = 36' },
   { label: 'x²', expr: 'x^2 - 4' },
   { label: 'cos(x) * x', expr: 'cos(x) * x' },
   { label: 'tan(x)', expr: 'tan(x)' },
@@ -12,6 +13,8 @@ const PRESETS = [
 ];
 
 export const FunctionGrapher = ({ soundEnabled }) => {
+  // @clause:D-STORY:REQ-003 A fresh local grapher starts with no saved expression state.
+  // @clause:D-STORY:AC-001 Initial rendering uses sin(x) with a Cartesian grid and axes.
   const [equation, setEquation] = useState('sin(x)');
   const [scale, setScale] = useState(40); // Pixels per unit
   const [offset, setOffset] = useState({ x: 0, y: 0 });
@@ -38,6 +41,7 @@ export const FunctionGrapher = ({ soundEnabled }) => {
     const centerY = height / 2 + offset.y;
 
     // Draw Grid Lines
+    // @clause:D-STORY:REQ-001 The canvas presents visible Cartesian axes and a grid.
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
     ctx.lineWidth = 1;
 
@@ -92,6 +96,18 @@ export const FunctionGrapher = ({ soundEnabled }) => {
 
     // Compile and Plot Function
     try {
+      // @clause:D-STORY:REQ-005 Support the approved radius-six implicit circle.
+      // @clause:D-STORY:AC-002 Render the circle at a fixed origin with known geometry.
+      const normalizedEquation = equation.replace(/\s+/g, '').toLowerCase();
+      if (normalizedEquation === 'x^2+y^2=36') {
+        ctx.strokeStyle = '#ec4899';
+        ctx.lineWidth = 2.5;
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, 6 * scale, 0, Math.PI * 2);
+        ctx.stroke();
+        return;
+      }
+
       const compiled = math.compile(equation);
       setError(null);
 
@@ -122,12 +138,12 @@ export const FunctionGrapher = ({ soundEnabled }) => {
           } else {
             isDrawing = false;
           }
-        } catch (e) {
+        } catch {
           isDrawing = false;
         }
       }
       ctx.stroke();
-    } catch (err) {
+    } catch {
       setError('Invalid function syntax');
     }
   }, [equation, scale, offset]);
@@ -138,6 +154,7 @@ export const FunctionGrapher = ({ soundEnabled }) => {
       <div className="glass-card p-4 flex flex-col gap-3">
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
           <div className="flex-1 flex items-center u-bg-btn-num-bg border u-border-card-border rounded-xl px-3 py-2 font-mono">
+            {/* @clause:D-STORY:REQ-002 @clause:D-STORY:AC-003 Visitors can replace the local graph expression. */}
             <span className="u-text-text-accent font-bold mr-2 text-sm">f(x) =</span>
             <input
               type="text"

@@ -305,6 +305,14 @@ body {
   transition: background 0.4s ease, color 0.4s ease;
 }
 
+/* @clause:D-STORY:AC-004 Keep the graph panel within the responsive app shell. */
+/* @clause:D-STORY:REQ-004 Preserve usable graph controls on desktop and tablet widths. */
+@media (max-width: 768px) {
+  .grapher-shell .glass-card {
+    min-width: 0;
+  }
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;

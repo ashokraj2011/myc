@@ -10,6 +10,7 @@ import { HistoryDrawer } from './components/HistoryDrawer';
 import { KeyboardShortcutsModal } from './components/KeyboardShortcutsModal';
 import { evaluateExpression } from './utils/evaluator';
 import { playSound } from './utils/audio';
+import './App.css';
 
 export default function App() {
   const [activeMode, setActiveMode] = useState('standard');
@@ -226,7 +227,7 @@ export default function App() {
 
   return (
     <div className="w-full max-w-xl mx-auto p-4 sm:p-6 min-h-screen flex items-center justify-center">
-      <main className="glass-card w-full p-5 sm:p-7 flex flex-col items-center">
+      <main className={`glass-card w-full p-5 sm:p-7 flex flex-col items-center${activeMode === 'grapher' ? ' grapher-shell' : ''}`}>
         {/* Top Header */}
         <Header
           activeMode={activeMode}

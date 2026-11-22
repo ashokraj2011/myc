@@ -1,0 +1,1110 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "d-story",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "066e5239-a757-4b3f-b1f5-3b2552be3278",
+  "changeSet": {
+    "path": "singularity/work-items/d-story/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:056c4f0bd4a7c584d9f57b8efd7b779ec8256b94d063f5b2fd282b5eebf8767f",
+    "sourcePaths": [
+      "src/App.css",
+      "src/App.jsx",
+      "src/components/FunctionGrapher.jsx",
+      "src/index.css"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [
+      ".nvmrc"
+    ],
+    "executableTestPaths": [
+      "tests/graph-plotter.spec.js"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "build-configuration": 1,
+      "product-source": 4,
+      "test-source": 1
+    },
+    "entries": [
+      {
+        "changeId": "sha256:fde8b995e5502a55312a5f0ea2312cb352075fff9e36be04293f33e2daf774ba",
+        "status": "added",
+        "oldPath": null,
+        "newPath": ".nvmrc",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:1f9ba4c36d5534b654a7b37ab13fd03ec18089ee042555fdeb1740052f143730",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "tests/graph-plotter.spec.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:5df96ed42cc7ba21067da52a18def01d14edf189d817c10c620cdbed1b64059f",
+        "status": "modified",
+        "oldPath": "src/App.css",
+        "newPath": "src/App.css",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:39cd946cb27514679608e52ba931715e94be9b43aeccef745778e88c8e7142dc",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:44a56afcbeff00506fd0417d7e636af6bd34db66b513afa78540366c2c514a8f",
+        "status": "modified",
+        "oldPath": "src/components/FunctionGrapher.jsx",
+        "newPath": "src/components/FunctionGrapher.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:6a40e3e4996a6eb268050a68f369bf1ff87f4cf9eab06c7684208eee8a875f3a",
+        "status": "modified",
+        "oldPath": "src/index.css",
+        "newPath": "src/index.css",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [
+      "D-STORY:AC-001",
+      "D-STORY:AC-002",
+      "D-STORY:AC-003"
+    ],
+    "bound": [
+      "D-STORY:AC-001",
+      "D-STORY:AC-002",
+      "D-STORY:AC-003"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "D-STORY:AC-001",
+        "testSource": "tests/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "D-STORY:AC-002",
+        "testSource": "tests/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      },
+      {
+        "clauseId": "D-STORY:AC-003",
+        "testSource": "tests/graph-plotter.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "D-STORY:AC-001",
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "graph plotter"
+          ],
+          "name": "starts with sin(x) and provides the Cartesian canvas"
+        },
+        "logicalTestId": "sha256:610e3340a9ee4bb37e4e0731835357020b2aadab5ca0514d8048fa9a17349962",
+        "declarationSha256": "sha256:8467c5de49170d7b0b9d21c7ca34f56d6bb9955c0fd8647f3bbc5bf2f44ffa08",
+        "supportSha256": null,
+        "assertions": {
+          "count": 0,
+          "tautological": 0,
+          "negative": false,
+          "boundary": false,
+          "nullability": false,
+          "adequacy": "missing",
+          "subjects": [
+            "createElement",
+            "getByPlaceholderText",
+            "querySelector",
+            "render",
+            "toBeInTheDocument",
+            "toHaveValue"
+          ]
+        },
+        "line": 9,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "D-STORY:AC-002",
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "graph plotter"
+          ],
+          "name": "accepts and replaces the radius-six circle expression"
+        },
+        "logicalTestId": "sha256:bc2ba38d6be9e86fc95aa99a3fd0dc58bff5492a1b718a78d9e0606f7682fd71",
+        "declarationSha256": "sha256:0c05569a38deaccfb3f9254f2c7dda47580d97abad5e0e5b91cf3a62893bcbcb",
+        "supportSha256": null,
+        "assertions": {
+          "count": 0,
+          "tautological": 0,
+          "negative": false,
+          "boundary": false,
+          "nullability": false,
+          "adequacy": "missing",
+          "subjects": [
+            "async",
+            "clear",
+            "createElement",
+            "getByPlaceholderText",
+            "render",
+            "setup",
+            "toHaveValue",
+            "type"
+          ]
+        },
+        "line": 17,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      },
+      {
+        "clauseId": "D-STORY:AC-003",
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "graph plotter"
+          ],
+          "name": "updates to a supported function after replacing an equation"
+        },
+        "logicalTestId": "sha256:b04358ed5427fcfe9d3e8b6ac958e04f6ace5faf9d87aa9a79323a208895f65d",
+        "declarationSha256": "sha256:3278efa01ce2e6e2b7a2d5bcc8f566fba8807ceb3b1f9a1d3009d08cc40f4d6a",
+        "supportSha256": null,
+        "assertions": {
+          "count": 0,
+          "tautological": 0,
+          "negative": false,
+          "boundary": false,
+          "nullability": false,
+          "adequacy": "missing",
+          "subjects": [
+            "async",
+            "clear",
+            "createElement",
+            "getByPlaceholderText",
+            "render",
+            "setup",
+            "toHaveValue",
+            "type"
+          ]
+        },
+        "line": 28,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "tests/graph-plotter.spec.js",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "D-STORY:AC-001",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      },
+      {
+        "clauseId": "D-STORY:AC-002",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      },
+      {
+        "clauseId": "D-STORY:AC-003",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      },
+      {
+        "clauseId": "D-STORY:AC-004",
+        "expectedPaths": [
+          "src/App.css",
+          "src/App.jsx",
+          "src/index.css"
+        ]
+      },
+      {
+        "clauseId": "D-STORY:REQ-001",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx",
+          "src/index.css"
+        ]
+      },
+      {
+        "clauseId": "D-STORY:REQ-002",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      },
+      {
+        "clauseId": "D-STORY:REQ-003",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      },
+      {
+        "clauseId": "D-STORY:REQ-004",
+        "expectedPaths": [
+          "src/App.css",
+          "src/App.jsx",
+          "src/index.css"
+        ]
+      },
+      {
+        "clauseId": "D-STORY:REQ-005",
+        "expectedPaths": [
+          "src/components/FunctionGrapher.jsx"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "D-STORY:AC-001",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 17,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:AC-002",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 100,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:AC-003",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 157,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:AC-004",
+        "sourcePath": "src/App.css",
+        "line": 185,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:AC-004",
+        "sourcePath": "src/index.css",
+        "line": 308,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:REQ-001",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 44,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:REQ-002",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 157,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:REQ-003",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 16,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:REQ-004",
+        "sourcePath": "src/App.css",
+        "line": 185,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:REQ-004",
+        "sourcePath": "src/index.css",
+        "line": 309,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "D-STORY:REQ-005",
+        "sourcePath": "src/components/FunctionGrapher.jsx",
+        "line": 99,
+        "tag": "clause"
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "D-STORY:AC-001",
+        "explanation": {
+          "text": "Initial rendering uses sin(x) with a Cartesian grid and axes.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 17
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 3,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 7,
+                "beforeLines": 0,
+                "afterStart": 8,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 14,
+                "beforeLines": 0,
+                "afterStart": 16,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 40,
+                "beforeLines": 0,
+                "afterStart": 44,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 94,
+                "beforeLines": 0,
+                "afterStart": 99,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 125,
+                "beforeLines": 1,
+                "afterStart": 141,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 130,
+                "beforeLines": 1,
+                "afterStart": 146,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 140,
+                "beforeLines": 0,
+                "afterStart": 157,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 15
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "D-STORY:AC-002",
+        "explanation": {
+          "text": "Render the circle at a fixed origin with known geometry.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 100
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 3,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 7,
+                "beforeLines": 0,
+                "afterStart": 8,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 14,
+                "beforeLines": 0,
+                "afterStart": 16,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 40,
+                "beforeLines": 0,
+                "afterStart": 44,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 94,
+                "beforeLines": 0,
+                "afterStart": 99,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 125,
+                "beforeLines": 1,
+                "afterStart": 141,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 130,
+                "beforeLines": 1,
+                "afterStart": 146,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 140,
+                "beforeLines": 0,
+                "afterStart": 157,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 15
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "D-STORY:AC-003",
+        "explanation": {
+          "text": "Visitors can replace the local graph expression.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 157
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 3,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 7,
+                "beforeLines": 0,
+                "afterStart": 8,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 14,
+                "beforeLines": 0,
+                "afterStart": 16,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 40,
+                "beforeLines": 0,
+                "afterStart": 44,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 94,
+                "beforeLines": 0,
+                "afterStart": 99,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 125,
+                "beforeLines": 1,
+                "afterStart": 141,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 130,
+                "beforeLines": 1,
+                "afterStart": 146,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 140,
+                "beforeLines": 0,
+                "afterStart": 157,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 15
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "D-STORY:AC-004",
+        "explanation": {
+          "text": "Keep graph mode usable across widths.",
+          "path": "src/App.css",
+          "line": 185
+        },
+        "regions": [
+          {
+            "path": "src/App.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 184,
+                "beforeLines": 0,
+                "afterStart": 185,
+                "afterLines": 10
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          },
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 12,
+                "beforeLines": 0,
+                "afterStart": 13,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 229,
+                "beforeLines": 1,
+                "afterStart": 230,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 15
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/index.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 307,
+                "beforeLines": 0,
+                "afterStart": 308,
+                "afterLines": 8
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          }
+        ]
+      },
+      {
+        "clauseId": "D-STORY:REQ-001",
+        "explanation": {
+          "text": "The canvas presents visible Cartesian axes and a grid.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 44
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 3,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 7,
+                "beforeLines": 0,
+                "afterStart": 8,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 14,
+                "beforeLines": 0,
+                "afterStart": 16,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 40,
+                "beforeLines": 0,
+                "afterStart": 44,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 94,
+                "beforeLines": 0,
+                "afterStart": 99,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 125,
+                "beforeLines": 1,
+                "afterStart": 141,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 130,
+                "beforeLines": 1,
+                "afterStart": 146,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 140,
+                "beforeLines": 0,
+                "afterStart": 157,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 15
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/index.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 307,
+                "beforeLines": 0,
+                "afterStart": 308,
+                "afterLines": 8
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          }
+        ]
+      },
+      {
+        "clauseId": "D-STORY:REQ-002",
+        "explanation": {
+          "text": "@clause:D-STORY:AC-003 Visitors can replace the local graph expression.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 157
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 3,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 7,
+                "beforeLines": 0,
+                "afterStart": 8,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 14,
+                "beforeLines": 0,
+                "afterStart": 16,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 40,
+                "beforeLines": 0,
+                "afterStart": 44,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 94,
+                "beforeLines": 0,
+                "afterStart": 99,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 125,
+                "beforeLines": 1,
+                "afterStart": 141,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 130,
+                "beforeLines": 1,
+                "afterStart": 146,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 140,
+                "beforeLines": 0,
+                "afterStart": 157,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 15
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "D-STORY:REQ-003",
+        "explanation": {
+          "text": "A fresh local grapher starts with no saved expression state.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 16
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 3,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 7,
+                "beforeLines": 0,
+                "afterStart": 8,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 14,
+                "beforeLines": 0,
+                "afterStart": 16,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 40,
+                "beforeLines": 0,
+                "afterStart": 44,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 94,
+                "beforeLines": 0,
+                "afterStart": 99,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 125,
+                "beforeLines": 1,
+                "afterStart": 141,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 130,
+                "beforeLines": 1,
+                "afterStart": 146,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 140,
+                "beforeLines": 0,
+                "afterStart": 157,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 15
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "D-STORY:REQ-004",
+        "explanation": {
+          "text": "@clause:D-STORY:AC-004 Keep graph mode usable across widths.",
+          "path": "src/App.css",
+          "line": 185
+        },
+        "regions": [
+          {
+            "path": "src/App.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 184,
+                "beforeLines": 0,
+                "afterStart": 185,
+                "afterLines": 10
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          },
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 12,
+                "beforeLines": 0,
+                "afterStart": 13,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 229,
+                "beforeLines": 1,
+                "afterStart": 230,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "App",
+                "kind": "function",
+                "line": 15
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          },
+          {
+            "path": "src/index.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 307,
+                "beforeLines": 0,
+                "afterStart": 308,
+                "afterLines": 8
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          }
+        ]
+      },
+      {
+        "clauseId": "D-STORY:REQ-005",
+        "explanation": {
+          "text": "Support the approved radius-six implicit circle.",
+          "path": "src/components/FunctionGrapher.jsx",
+          "line": 99
+        },
+        "regions": [
+          {
+            "path": "src/components/FunctionGrapher.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 3,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 7,
+                "beforeLines": 0,
+                "afterStart": 8,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 14,
+                "beforeLines": 0,
+                "afterStart": 16,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 40,
+                "beforeLines": 0,
+                "afterStart": 44,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 94,
+                "beforeLines": 0,
+                "afterStart": 99,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 125,
+                "beforeLines": 1,
+                "afterStart": 141,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 130,
+                "beforeLines": 1,
+                "afterStart": 146,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 140,
+                "beforeLines": 0,
+                "afterStart": 157,
+                "afterLines": 1
+              }
+            ],
+            "symbols": [
+              {
+                "name": "FunctionGrapher",
+                "kind": "function",
+                "line": 15
+              }
+            ],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:e64a9258315429ee8f0145377256855fff69ec2ac766a17c88000bf9fa6ef0d1"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:4bd5ff46d244782206060673ea8eca19f15af975838c0facc1f73985dcc636ce",
+    "codeTreeSha256": "sha256:920b8b727254e4b0ae76afd4f7657b9f005f454eef9fe3906d61441322732885",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-11-22T08:01:25.178Z"
+}

@@ -182,3 +182,13 @@
     border-right-color: var(--border);
   }
 }
+/* @clause:D-STORY:REQ-004 @clause:D-STORY:AC-004 Keep graph mode usable across widths. */
+.grapher-shell {
+  max-width: 960px;
+}
+
+@media (max-width: 640px) {
+  .grapher-shell {
+    max-width: 100%;
+  }
+}
