@@ -15,11 +15,12 @@
 | 3 | Implementation (`implementation`) | developer | **approved** | 2 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via engineering-reviewers; agent developer | **warning** |  |  |  |
 | 4 | Convergence (`convergence`) | architect | **approved** | 1 | 0 | unavailable |
-| 5 | Verification (`verification`) | qa | **in_progress** | 13 | 0 | unavailable |
+| 5 | Verification (`verification`) | qa | **awaiting_approval** | 13 | 0 | unavailable |
 | 6 | Release (`release`) | qa | **not_started** | 0 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-11-23T03:38:36.586Z — **phase_submitted** (verification) by ashokraj2011 · agent qa: 1 artifacts
 - 2026-11-23T03:38:23.021Z — **source_review_submitted** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: cdb962b4c58fe1752aabf9eec0e7fe377b614b85baf67b8bb4cd3d9df8fb3c61
 - 2026-11-23T03:37:19.016Z — **phase_generated** (verification) by ashokraj2011 · agent qa: generation 13
 - 2026-11-23T03:36:14.578Z — **version_opened** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 13 opened (review-corrections) settled for the person (STL-011; only the reviewer had seen version 12)
@@ -34,4 +35,3 @@
 - 2026-11-22T13:03:39.561Z — **version_opened** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 11 opened (review-corrections) settled for the person (STL-010; only the reviewer had seen version 10)
 - 2026-11-22T13:03:39.561Z — **decision_settled** (verification) by ashokraj2011 · agent qa: STL-010 (review-corrections) settled by SFlow: Started version 11 of verification to fix the review's findings on version 10
 - 2026-11-22T13:01:20.747Z — **source_review_submitted** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 70c68d54c266817f7caaefd7881d629ba0f828829ef59d995f7ec6320b488f1d
-- 2026-11-22T12:58:56.446Z — **phase_generated** (verification) by ashokraj2011 · agent qa: generation 10
