@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "phase": "verification",
+  "generation": 12,
+  "reportSha256": "1f1d7032b4f632068222eb21602c77fbd9eddbf748db2df87f70ba8fa3b958c1",
+  "lifecycleEventId": "dba67756-00ae-4d15-ba30-619bf19ffed0",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "d-story",
+      "phase": "verification",
+      "generation": 12,
+      "sources": [
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/d-story/artifacts/implementation/implementation-summary.md",
+          "textSha256": "72df2c9a0b5c9eb3ceed12b9671e8b6266dc77ba16c71e2eca65a9c0055fb25d"
+        },
+        {
+          "id": "input:planning",
+          "path": "singularity/work-items/d-story/artifacts/planning/plan.md",
+          "textSha256": "ffbf4b00964dbad9fe4ff2127ebd73f0b1b9148fd113589d021e2a5e1054fa76"
+        },
+        {
+          "id": "input:specification",
+          "path": "singularity/work-items/d-story/artifacts/specification/spec.md",
+          "textSha256": "90f952d110a076303ac5ab84dc97d419cc104a90046fa86d2fc1202ea4ebe14a"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/d-story/USER-STORY.md",
+          "textSha256": "cff0beeb0d7b1e2eef41bfbf587a0bd0b222553331c39a52d8facbd53fa059b9",
+          "originalSha256": "2144a9c6d40147352ce812ef0edef66a750fee5ba927b75b0b653da837ea52f6"
+        }
+      ],
+      "visualSources": [
+        {
+          "id": "DOC-001",
+          "path": "local-document:DOC-001",
+          "originalSha256": "1ada26c12db04745df29790dfe06d518025152113392d7fadbfd533a0a9032ab",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-001",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-001-initial-screen-e32e79604a69a83a.png",
+          "originalSha256": "9fbfc8f1c0cb19a94b4470d0caa3f50a39277c6fcd3e821bf1b1383cc626576a",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-002",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-002-circle-screen-e32e79604a69a83a.png",
+          "originalSha256": "97b75975669d471d20ebd3ad7893c93a4d9e09f8d0f756ee9c3eb8d8f0228312",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-003",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-003-updated-screen-e32e79604a69a83a.png",
+          "originalSha256": "97b75975669d471d20ebd3ad7893c93a4d9e09f8d0f756ee9c3eb8d8f0228312",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-004",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-004-responsive-screen-e32e79604a69a83a.png",
+          "originalSha256": "0382feb43813082bfbb60c19ed10da4918d3c906747be84c2c04792235c7ee66",
+          "mimeType": "image/png"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/d-story/artifacts/verification/test-evidence.md",
+        "sha256": "a54f011c36c47039a0c05259ae0d69b44f11a93df45ce8056b5e52556b7e25be"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:specification",
+      "input:planning",
+      "input:implementation",
+      "DOC-001",
+      "WIT-001",
+      "WIT-002",
+      "WIT-003",
+      "WIT-004"
+    ],
+    "visualSourcesReviewed": [
+      {
+        "sourceId": "DOC-001",
+        "method": "image-tool",
+        "locator": "whole image",
+        "observations": "Shows a Desmos-style graphing interface with expression panel showing sin(x), Cartesian axes and grid, and a visible sine curve."
+      },
+      {
+        "sourceId": "WIT-001",
+        "method": "image-tool",
+        "locator": "whole image",
+        "observations": "Shows the app in graph mode with axes/grid, but the input is cos(x) * x rather than the specified initial sin(x)."
+      },
+      {
+        "sourceId": "WIT-002",
+        "method": "image-tool",
+        "locator": "whole image",
+        "observations": "Shows calculator mode; no graph or circle is visible."
+      },
+      {
+        "sourceId": "WIT-003",
+        "method": "image-tool",
+        "locator": "whole image",
+        "observations": "Shows calculator mode; no updated graph is visible."
+      },
+      {
+        "sourceId": "WIT-004",
+        "method": "image-tool",
+        "locator": "whole image",
+        "observations": "Shows calculator mode at two layouts; no grapher layout is visible."
+      }
+    ],
+    "rows": [
+      {
+        "id": "story-context",
+        "sourceId": "story",
+        "line": 17,
+        "quote": "- Palyright tests on cirlce of 6 unit radius in origin",
+        "outcome": "consistent"
+      },
+      {
+        "id": "specification-context",
+        "sourceId": "input:specification",
+        "line": 5,
+        "quote": "The basic experience must support both function expressions and the implicit circle equation `x^2 + y^2 = 36`",
+        "outcome": "consistent"
+      },
+      {
+        "id": "planning-evidence-limit",
+        "sourceId": "input:planning",
+        "line": 30,
+        "quote": "Visual acceptance remains a separate inspection against the pinned screenshot and at representative desktop/tablet sizes; automated success does not establish visual acceptance.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "implementation-evidence-limit",
+        "sourceId": "input:implementation",
+        "line": 21,
+        "quote": "Visual screenshot and desktop/tablet acceptance still require inspection and must not be inferred from automated unit checks.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "doc-reference",
+        "sourceId": "DOC-001",
+        "attestation": "Whole image: the reference shows an expression panel containing sin(x), Cartesian axes/grid, and plotted sine curve.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "wit-initial",
+        "sourceId": "WIT-001",
+        "attestation": "Whole image: graph and grid are shown, but the visible expression is cos(x) * x, not the required initial sin(x).",
+        "outcome": "inconsistent",
+        "note": "Does not evidence AC-001's initial sin(x); the image instead shows cos(x) * x."
+      },
+      {
+        "id": "wit-circle",
+        "sourceId": "WIT-002",
+        "attestation": "Whole image: calculator-mode screen; no grapher or circle is visible.",
+        "outcome": "inconsistent",
+        "note": "Does not evidence AC-002's circle plot."
+      },
+      {
+        "id": "wit-update",
+        "sourceId": "WIT-003",
+        "attestation": "Whole image: calculator-mode screen; no updated graph is visible.",
+        "outcome": "inconsistent",
+        "note": "Does not evidence AC-003's graph update."
+      },
+      {
+        "id": "wit-responsive",
+        "sourceId": "WIT-004",
+        "attestation": "Whole image: calculator-mode screens at two layouts; no graph panel is visible.",
+        "outcome": "inconsistent",
+        "note": "Does not evidence AC-004's responsive graph usability."
+      }
+    ],
+    "findings": [
+      {
+        "id": "verification-claims-unsupported-visuals",
+        "severity": "blocking",
+        "message": "The verification artifact marks AC-001 through AC-004 and REQ-004/REQ-005 verified, but the required visual evidence does not establish those outcomes: WIT-001 shows cos(x) * x, WIT-002/WIT-003 show calculator mode rather than a graph, and WIT-004 shows calculator layouts without the graph. The pinned planning and implementation inputs explicitly say visual acceptance remains to be inspected and cannot be inferred from unit checks. Correct the verification claims/evidence or obtain appropriate visual witnesses; the current evidence does not support a release recommendation."
+      },
+      {
+        "id": "verification-run-scope",
+        "severity": "blocking",
+        "message": "The artifact says 34 tests passed in a run recorded as `.-node-tests`, while the specification and plan require a Playwright verification of the circle geometry and separate desktop/tablet visual inspection. The implementation summary says no governed test execution is retained and visual acceptance remains pending. Therefore the recorded run does not establish the specified Playwright circle assertion or responsive visual acceptance; the verified status and release recommendation overstate the pinned evidence."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "d25cdfe714c96433440b83db9b5860333d72fcf82827f952f1ef364d89285e8d",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-23T03:35:59.311Z",
+  "recordSha256": "57f33e49e1617a82b4e0f92eadd1baf3b12cfcea858f2891080c88caeff13838"
+}
