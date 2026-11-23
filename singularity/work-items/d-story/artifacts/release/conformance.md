@@ -4,7 +4,7 @@
   "workId": "d-story",
   "workType": "spec-driven-standard",
   "phase": "release",
-  "generation": 3,
+  "generation": 4,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "conformance.md",
       "mediaType": "text/markdown",
-      "sha256": "0eca73b0d0eabf6feea64a61443f5321fc531d1da05f78364ee5b212ad452f16",
-      "bytes": 5136
+      "sha256": "cd08987c2c5cbbb0d44fb92e4f47ce223f8578649a04ee300f07b755ae336da7",
+      "bytes": 4829
     },
-    "generation": 3,
-    "publishedAt": "2026-11-23T04:36:31.796Z"
+    "generation": 4,
+    "publishedAt": "2026-11-23T04:40:12.916Z"
   },
-  "sourceCommit": "e4bd6d9f442c7eefa99961673184cf86cadef35e",
+  "sourceCommit": "e8a23ffa5c037ee2aae3a8fab386840ce60c59c2",
   "generationCommit": "22b2963153ba23ccb9aad295405c8fdd4eb7c7c0",
   "publicationCommit": "22b2963153ba23ccb9aad295405c8fdd4eb7c7c0",
   "configSha256": "77dab191fa78ebdbe6f777cf68da8827f2447b711edc65a73b81e12b1b5fb8d2",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/spec-driven/release.md"
   },
   "inputs": {
-    "generation": 3,
-    "path": "singularity/work-items/d-story/context/inputs-release-gen3.json",
-    "sha256": "e33d0e5d397a1f3bd653c38a761e1bbf8200407c9548218c114b8d2a22992d30",
+    "generation": 4,
+    "path": "singularity/work-items/d-story/context/inputs-release-gen4.json",
+    "sha256": "81fd042f7e52b05e1f98e83a433612965bcfae5209d7379d12b03974c8144618",
     "renderedSha256": "d0796319da1e8757fb3fb412f08b4823f5070f609b8b47742cdb172e2390b99a",
     "mode": "enforce"
   },
@@ -71,7 +71,21 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
+  "clarification": {
+    "generation": 4,
+    "path": "singularity/work-items/d-story/context/clarifications-release-gen4.json",
+    "sha256": "b0222d3016ba985412e6d691842bf29a01520a7241aa3c7c575a2e4a98ad893f",
+    "promptSha256": "5fb7b4f061497874bc326b2b14eb20dc76285d84d650a3f9249846a4dc7316fd",
+    "responses": 1,
+    "markers": [],
+    "recordedAt": "2026-11-23T04:39:11.438Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
   "telemetry": [
     {
       "generation": 1,
@@ -129,6 +143,26 @@
         "maximumEstimatedTokens": 18000,
         "budgetMode": "observe",
         "originalBytes": 49970,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 4,
+      "path": "singularity/work-items/d-story/telemetry/release-gen4.json",
+      "sha256": "261066a74bf36564b66ff5a50d6e842f8e155f1b02329b57f9aa012d4f3a0437",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 49812,
+        "estimatedTokens": 12453,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 49812,
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
@@ -198,6 +232,27 @@
       "completedAt": "2026-11-23T04:36:31.796Z",
       "agent": "qa",
       "generation": 3
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-23T04:40:12.916Z",
+      "completedAt": "2026-11-23T04:40:12.916Z",
+      "agent": "qa",
+      "generation": 4
     }
   ],
   "sequenceOverrides": [],
@@ -250,19 +305,19 @@
 
 | Clause | Evidence | Verdict |
 |---|---|---|
-| `D-STORY:REQ-001` | Through `D-STORY:AC-001`; the tagged initial-canvas test passed in `TA-cba6bdac8c1636628205` on the matching source tree; visual acceptance remains disputed in approved Verification generation 14 | partial |
-| `D-STORY:REQ-002` | Through `D-STORY:AC-003`; the tagged expression-replacement test passed in `TA-cba6bdac8c1636628205` on the matching source tree; visual acceptance remains disputed in approved Verification generation 14 | partial |
-| `D-STORY:REQ-003` | Through `D-STORY:AC-001`; the tagged initial-state test passed in `TA-cba6bdac8c1636628205` on the matching source tree; visual acceptance remains disputed in approved Verification generation 14 | partial |
-| `D-STORY:REQ-004` | Through `D-STORY:AC-004`; approved Verification generation 14 retains no verified desktop/tablet inspection; the WIT-004 record conflict is unresolved | missing |
+| `D-STORY:REQ-001` | Through `D-STORY:AC-001`; the tagged initial-canvas test passed in `TA-cba6bdac8c1636628205`; DOC-001 was inspected and its reference-only treatment confirmed for this generation, but no current app screenshot establishes visual conformance | partial |
+| `D-STORY:REQ-002` | Through `D-STORY:AC-003`; the tagged expression-replacement test passed in `TA-cba6bdac8c1636628205`; WIT-003 does not show the updated graph | partial |
+| `D-STORY:REQ-003` | Through `D-STORY:AC-001`; the tagged initial-state test passed in `TA-cba6bdac8c1636628205`; WIT-001 shows `cos(x) * x`, not the required initial `sin(x)` | partial |
+| `D-STORY:REQ-004` | Through `D-STORY:AC-004`; WIT-004 shows a calculator layout rather than responsive graph use, and no verified desktop/tablet graph inspection is retained | missing |
 | `D-STORY:REQ-005` | Through `D-STORY:AC-002`; the Vitest test passed, but the required Playwright geometry result for center `(0, 0)` and radius `6` is not established by approved Verification generation 14 | missing |
-| `D-STORY:AC-001` | The tagged initial-canvas test passed in `TA-cba6bdac8c1636628205` on the matching source tree; WIT-001 is recorded as valid, while approved Verification generation 14 says the visual outcome is not established | partial |
-| `D-STORY:AC-002` | The tagged Vitest test passed in `TA-cba6bdac8c1636628205`; it does not replace the required Playwright geometry test, and approved Verification generation 14 does not establish a valid circle screenshot | missing |
-| `D-STORY:AC-003` | The tagged expression-replacement test passed in `TA-cba6bdac8c1636628205` on the matching source tree; WIT-003 is recorded as valid, while approved Verification generation 14 says the visual outcome is not established | partial |
-| `D-STORY:AC-004` | Approved Verification generation 14 retains no verified responsive inspection; the WIT-004 record conflict is unresolved | missing |
+| `D-STORY:AC-001` | The tagged initial-canvas test passed in `TA-cba6bdac8c1636628205`; WIT-001 shows `cos(x) * x`, not the required initial graph | partial |
+| `D-STORY:AC-002` | The tagged Vitest test passed in `TA-cba6bdac8c1636628205`; WIT-002 shows a calculator keypad, and the required Playwright geometry test was not run | missing |
+| `D-STORY:AC-003` | The tagged expression-replacement test passed in `TA-cba6bdac8c1636628205`; WIT-003 shows the same calculator keypad image as WIT-002, not an updated graph | partial |
+| `D-STORY:AC-004` | WIT-004 shows calculator layouts, not the graph area at desktop and tablet widths; no valid responsive graph inspection is retained | missing |
 
 ## Constitution conformance
 
-No constitution article requires evidence in this Story.
+None: this Story pinned no constitution.
 
 ## Exceptions
 
@@ -274,7 +329,7 @@ None accepted at convergence.
 
 ## Upstream discrepancies
 
-- Producer: verification generation 14. Clause/section: WIT-001 through WIT-004. Problem: the retained review records mark each image valid and unchanged, but approved Verification generation 14 reports that the prior images show the wrong graph states or do not establish responsive use; WIT-002 and WIT-003 also share the same recorded image digest. Assumption: preserve the recorded human-review status without claiming it resolves the conflicting Verification findings; treat visual acceptance as unresolved, consistent with CR-001 and the Verification report. Impact/Clause: `D-STORY:REQ-001`, `D-STORY:REQ-002`, `D-STORY:REQ-003`, `D-STORY:REQ-004`, `D-STORY:REQ-005`, `D-STORY:AC-001`, `D-STORY:AC-002`, `D-STORY:AC-003`, and `D-STORY:AC-004`. Owner action: verification approvers should reconcile the WIT records and retain valid graph-state and responsive evidence; UPI-001 already records the return to Verification.
+- Producer: verification generation 14. Clause/section: WIT-001 through WIT-004 and the approved visual evidence. Problem: retained WIT records mark the files valid, but review of the bound images found WIT-001 shows `cos(x) * x`, WIT-002 and WIT-003 show calculator keypads, and WIT-004 shows calculator layouts rather than grapher screens; this agrees with Verification generation 14 and CR-001. Assumption: the recorded review status cannot make these image contents evidence of the required graph states, so visual acceptance is not established. Impact/Clause: `D-STORY:REQ-001`, `D-STORY:REQ-002`, `D-STORY:REQ-003`, `D-STORY:REQ-004`, `D-STORY:AC-001`, `D-STORY:AC-002`, `D-STORY:AC-003`, and `D-STORY:AC-004`. Owner action: Verification must reconcile the WIT records and retain valid graph-state and responsive evidence; UPI-001 already records the return to Verification.
 - Producer: verification generation 14. Clause/section: `D-STORY:AC-002` test evidence. Problem: the tagged Vitest test passed, but the approved clause requires Playwright verification of the circle geometry and generation 14 reports no such result. Assumption: do not treat the Vitest run as the required Playwright result. Impact/Clause: `D-STORY:AC-002` and `D-STORY:REQ-005`. Owner action: UPI-002 is an accepted risk through 2027-01-29; Verification must retain the required Playwright geometry result before treating this gap as resolved.
 
 ## Self-approval disclosures
