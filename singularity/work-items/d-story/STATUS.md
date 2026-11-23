@@ -5,7 +5,7 @@
 - Capability: **calc** (`raj-calc`)
 - Capability map: `a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d`
 - Overall status: **in_progress**
-- Current phase: **release**
+- Current phase: **verification**
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
@@ -15,11 +15,18 @@
 | 3 | Implementation (`implementation`) | developer | **approved** | 2 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via engineering-reviewers; agent developer | **warning** |  |  |  |
 | 4 | Convergence (`convergence`) | architect | **approved** | 1 | 0 | unavailable |
-| 5 | Verification (`verification`) | qa | **approved** | 13 | 0 | unavailable |
-| 6 | Release (`release`) | qa | **awaiting_approval** | 2 | 0 | unavailable |
+| 5 | Verification (`verification`) | qa | **in_progress** | 13 | 0 | unavailable |
+| 6 | Release (`release`) | qa | **not_started** | 2 | 1 | unavailable |
+
+## Open stakeholder change requests
+
+- **CR-001** — return `release` to `verification`: The sign-off screenshots show the wrong screens (keypad, cos(x)·x); retake them and verify again _(requested by Ashok Raj at 2026-11-23T03:56:13.057Z)_
+  - Reversible checkpoint: `RFW-CR-001` — preview with `singularity-flow story rework roll-forward --work-id d-story --change-request CR-001 --json`.
 
 ## Recent history
 
+- 2026-11-23T03:56:13.120Z — **upstream_issue_decided** (verification) by ashokraj2011 · agent qa: UPI-001: return (CR-001). The sign-off screenshots show the wrong screens (keypad, cos(x)·x); retake them and verify again
+- 2026-11-23T03:56:13.057Z — **phase_rejected** (release) by ashokraj2011 · agent qa: CR-001 returned to verification: The sign-off screenshots show the wrong screens (keypad, cos(x)·x); retake them and verify again
 - 2026-11-23T03:50:20.983Z — **phase_submitted** (release) by ashokraj2011 · agent qa: 2 artifacts
 - 2026-11-23T03:50:00.545Z — **source_review_submitted** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 907b198ea5e48f2f728c05cf05f18548a39193b8608f834a74b4cc6ed670d55c
 - 2026-11-23T03:48:59.784Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 2
@@ -33,5 +40,3 @@
 - 2026-11-23T03:38:36.586Z — **phase_submitted** (verification) by ashokraj2011 · agent qa: 1 artifacts
 - 2026-11-23T03:38:23.021Z — **source_review_submitted** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: cdb962b4c58fe1752aabf9eec0e7fe377b614b85baf67b8bb4cd3d9df8fb3c61
 - 2026-11-23T03:37:19.016Z — **phase_generated** (verification) by ashokraj2011 · agent qa: generation 13
-- 2026-11-23T03:36:14.578Z — **version_opened** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 13 opened (review-corrections) settled for the person (STL-011; only the reviewer had seen version 12)
-- 2026-11-23T03:36:14.578Z — **decision_settled** (verification) by ashokraj2011 · agent qa: STL-011 (review-corrections) settled by SFlow: Started version 13 of verification to fix the review's findings on version 12
