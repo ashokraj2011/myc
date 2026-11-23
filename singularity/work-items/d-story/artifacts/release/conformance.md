@@ -5,7 +5,7 @@
   "workType": "spec-driven-standard",
   "phase": "release",
   "generation": 4,
-  "status": "awaiting_approval",
+  "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
     "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -288,7 +288,8 @@
       ],
       "reviewPacketSha256": "be149d5c431caa1b01cd08569581ef805456f6bbe76d5f544fdfcbc875a01518",
       "artifactSet": "spec-driven-verification",
-      "bundleSha256": "3a5594822a5254e34e51e97c6a7acb40b01af1b7b4f0592f3168d5f657616ef6"
+      "bundleSha256": "3a5594822a5254e34e51e97c6a7acb40b01af1b7b4f0592f3168d5f657616ef6",
+      "invalidatedAt": "2026-11-23T08:43:22.801Z"
     }
   ],
   "selfApproval": false,

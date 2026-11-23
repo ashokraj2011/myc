@@ -16,10 +16,16 @@
 |  | ⚠ self-approval | Ashok Raj via engineering-reviewers; agent developer | **warning** |  |  |  |
 | 4 | Convergence (`convergence`) | architect | **approved** | 1 | 0 | unavailable |
 | 5 | Verification (`verification`) | qa | **approved** | 14 | 0 | unavailable |
-| 6 | Release (`release`) | qa | **awaiting_approval** | 4 | 1 | unavailable |
+| 6 | Release (`release`) | qa | **in_progress** | 4 | 1 | unavailable |
+
+## Open stakeholder change requests
+
+- **CR-002** — return `release` to `release`: i dont need this i will go _(requested by Ashok Raj at 2026-11-23T08:43:22.801Z)_
+  - Reversible checkpoint: `RFW-CR-002` — preview with `singularity-flow story rework roll-forward --work-id d-story --change-request CR-002 --json`.
 
 ## Recent history
 
+- 2026-11-23T08:43:22.801Z — **phase_rejected** (release) by ashokraj2011 · agent qa: CR-002 returned to release: i dont need this i will go
 - 2026-11-23T05:01:18.908Z — **upstream_issue_decided** (release) by ashokraj2011 · agent qa: UPI-003: accept-risk. am ok with all these ..lets move fwd
 - 2026-11-23T05:01:14.092Z — **upstream_issue_raised** (release) by ashokraj2011 · agent qa: UPI-003 against implementation (D-STORY:REQ-001, D-STORY:REQ-002, D-STORY:REQ-003, D-STORY:REQ-004, D-STORY:AC-001, D-STORY:AC-003, D-STORY:AC-004): The Release report marks D-STORY:REQ-001, D-STORY:REQ-002, D-STORY:REQ-003, D-STORY:REQ-004, D-STORY:AC-001, D-STORY:AC-003, D-STORY:AC-004 partial and missing, and Implementation's approvers decide the gap. Raised from the decision list.
 - 2026-11-23T04:41:40.466Z — **phase_submitted** (release) by ashokraj2011 · agent qa: 2 artifacts
@@ -34,4 +40,3 @@
 - 2026-11-23T04:13:55.970Z — **phase_submitted** (verification) by ashokraj2011 · agent qa: 1 artifacts
 - 2026-11-23T04:13:39.000Z — **source_review_submitted** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: e370463de12db01e73e9b3c663d7f83062ad647353185c7bc178deb913c14618
 - 2026-11-23T04:12:20.021Z — **phase_generated** (verification) by ashokraj2011 · agent qa: generation 14
-- 2026-11-23T04:03:12.418Z — **version_opened** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 14 opened (rework) on the person's yes (question-tool)
