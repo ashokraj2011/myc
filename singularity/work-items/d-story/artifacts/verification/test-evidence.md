@@ -4,7 +4,7 @@
   "workId": "d-story",
   "workType": "spec-driven-standard",
   "phase": "verification",
-  "generation": 11,
+  "generation": 12,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "test-evidence.md",
       "mediaType": "text/markdown",
-      "sha256": "6b1e2f504fb6a7334070b7bd8ec5b554500a96c0ea7b8501997a4f882a999615",
-      "bytes": 2636
+      "sha256": "a54f011c36c47039a0c05259ae0d69b44f11a93df45ce8056b5e52556b7e25be",
+      "bytes": 2732
     },
-    "generation": 11,
-    "publishedAt": "2026-11-22T13:04:33.754Z"
+    "generation": 12,
+    "publishedAt": "2026-11-23T03:35:05.305Z"
   },
-  "sourceCommit": "fbbe5ce401c00aa14d4f3ef299090e7ccf1ece9d",
+  "sourceCommit": "2895cfeb75dc542dd4e10c189072ad27ef69a7d0",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "77dab191fa78ebdbe6f777cf68da8827f2447b711edc65a73b81e12b1b5fb8d2",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/common/verification.md"
   },
   "inputs": {
-    "generation": 11,
-    "path": "singularity/work-items/d-story/context/inputs-verification-gen11.json",
-    "sha256": "5ad3a57a25f70c3c7b5e6d9ec2691e1b49a91e0862a9de9b328ac71c75cf6fdd",
+    "generation": 12,
+    "path": "singularity/work-items/d-story/context/inputs-verification-gen12.json",
+    "sha256": "b8aa098309d3ab36adddc61d7b9e690652fa9ee0181e7999b91258454c7653db",
     "renderedSha256": "3ca36b6f81bff791a729f16171f3ab39ce1d4a97ed5bfc042a0c2db18e686dca",
     "mode": "enforce"
   },
@@ -277,6 +277,26 @@
       "generation": 11,
       "path": "singularity/work-items/d-story/telemetry/verification-gen11.json",
       "sha256": "69a85bc4a4d6e89774db7c21ef78f80285573fc40ad1effd7a51f967af410cf5",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 45512,
+        "estimatedTokens": 11378,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 45512,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 12,
+      "path": "singularity/work-items/d-story/telemetry/verification-gen12.json",
+      "sha256": "8e6adc64d34ed3dae743212c22092814b174eff3086df7f062635aea3cca5822",
       "status": "pending",
       "models": [],
       "providerCost": null,
@@ -526,6 +546,27 @@
       "completedAt": "2026-11-22T13:04:33.754Z",
       "agent": "qa",
       "generation": 11
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-23T03:35:05.305Z",
+      "completedAt": "2026-11-23T03:35:05.305Z",
+      "agent": "qa",
+      "generation": 12
     }
   ],
   "sequenceOverrides": [],
@@ -561,10 +602,10 @@ Verification ran the repository's tests itself, or reused a run on unchanged cod
 | `D-STORY:REQ-003` | through `D-STORY:AC-001` | `src/components/FunctionGrapher.jsx` | verified |
 | `D-STORY:REQ-004` | through `D-STORY:AC-004` | `src/App.css`, `src/App.jsx`, `src/index.css` | verified |
 | `D-STORY:REQ-005` | through `D-STORY:AC-002` | `src/components/FunctionGrapher.jsx` | verified |
-| `D-STORY:AC-001` | 'graph plotter › starts with sin(x) and provides the Cartesian canvas' in tests/graph-plotter.spec.js, run `TA-cba6bdac8c1636628205`: passed | `src/components/FunctionGrapher.jsx` | verified |
-| `D-STORY:AC-002` | 'graph plotter › accepts and replaces the radius-six circle expression' in tests/graph-plotter.spec.js, run `TA-cba6bdac8c1636628205`: passed | `src/components/FunctionGrapher.jsx` | verified |
-| `D-STORY:AC-003` | 'graph plotter › updates to a supported function after replacing an equation' in tests/graph-plotter.spec.js, run `TA-cba6bdac8c1636628205`: passed | `src/components/FunctionGrapher.jsx` | verified |
-| `D-STORY:AC-004` | no tagged test | `src/App.css`, `src/App.jsx`, `src/index.css` | verified |
+| `D-STORY:AC-001` | 'graph plotter › starts with sin(x) and provides the Cartesian canvas' in tests/graph-plotter.spec.js, run `TA-cba6bdac8c1636628205`: passed; visual witness WIT-001 | `src/components/FunctionGrapher.jsx` | verified |
+| `D-STORY:AC-002` | 'graph plotter › accepts and replaces the radius-six circle expression' in tests/graph-plotter.spec.js, run `TA-cba6bdac8c1636628205`: passed; visual witness WIT-002 | `src/components/FunctionGrapher.jsx` | verified |
+| `D-STORY:AC-003` | 'graph plotter › updates to a supported function after replacing an equation' in tests/graph-plotter.spec.js, run `TA-cba6bdac8c1636628205`: passed; visual witness WIT-003 | `src/components/FunctionGrapher.jsx` | verified |
+| `D-STORY:AC-004` | no tagged test; visual witness WIT-004 | `src/App.css`, `src/App.jsx`, `src/index.css` | verified |
 | `DOC-001` | no criterion to test; checked as implemented in its source | no source path | not applicable |
 
 A source tag binds a requirement to its code; only a test result above verifies it.
