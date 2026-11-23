@@ -16,7 +16,7 @@
 |  | ⚠ self-approval | Ashok Raj via engineering-reviewers; agent developer | **warning** |  |  |  |
 | 4 | Convergence (`convergence`) | architect | **approved** | 1 | 0 | unavailable |
 | 5 | Verification (`verification`) | qa | **approved** | 14 | 0 | unavailable |
-| 6 | Release (`release`) | qa | **in_progress** | 5 | 1 | unavailable |
+| 6 | Release (`release`) | qa | **awaiting_approval** | 5 | 1 | unavailable |
 
 ## Open stakeholder change requests
 
@@ -25,6 +25,7 @@
 
 ## Recent history
 
+- 2026-11-23T08:47:16.186Z — **phase_submitted** (release) by ashokraj2011 · agent qa: 2 artifacts
 - 2026-11-23T08:46:52.793Z — **source_review_submitted** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: ba6488ebe70506edbf2748ec85cfb4cd0d6e0a3c698d3f252acce58b98415cfb
 - 2026-11-23T08:45:42.653Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 5
 - 2026-11-23T08:44:19.740Z — **version_opened** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 5 opened (rework) on the person's yes (question-tool)
@@ -39,4 +40,3 @@
 - 2026-11-23T04:37:50.738Z — **source_review_submitted** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: d6b87d701276389d989669fdd6665c67439b9aa2bf975b7afb6d19494d40075c
 - 2026-11-23T04:36:31.998Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 3
 - 2026-11-23T04:29:04.799Z — **version_opened** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 3 opened (rework) on the person's yes (question-tool)
-- 2026-11-23T04:14:03.768Z — **phase-approved-automatically** (verification) by sflow-approved-automatically: approved automatically: the reviewer said ready; its checks passed; nothing was open for it; advanced to release
