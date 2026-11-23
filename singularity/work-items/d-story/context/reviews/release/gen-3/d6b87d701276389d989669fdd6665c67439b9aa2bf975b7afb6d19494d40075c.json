@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "phase": "release",
+  "generation": 3,
+  "reportSha256": "d6b87d701276389d989669fdd6665c67439b9aa2bf975b7afb6d19494d40075c",
+  "lifecycleEventId": "eab4437f-4bbc-442c-86ae-9ae26f18dfe8",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "d-story",
+      "phase": "release",
+      "generation": 3,
+      "sources": [
+        {
+          "id": "input:convergence",
+          "path": "singularity/work-items/d-story/artifacts/convergence/convergence.md",
+          "textSha256": "884815ab17f3469d7a177a4b4e16b944065e69a2113a6b7f7ede3b31d12c3882"
+        },
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/d-story/artifacts/implementation/implementation-summary.md",
+          "textSha256": "72df2c9a0b5c9eb3ceed12b9671e8b6266dc77ba16c71e2eca65a9c0055fb25d"
+        },
+        {
+          "id": "input:verification",
+          "path": "singularity/work-items/d-story/artifacts/verification/test-evidence.md",
+          "textSha256": "9fba14e9d34cfdd9a86387ab1fced12da3e0b808303e392666c6795d2851843e"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/d-story/USER-STORY.md",
+          "textSha256": "cff0beeb0d7b1e2eef41bfbf587a0bd0b222553331c39a52d8facbd53fa059b9",
+          "originalSha256": "2144a9c6d40147352ce812ef0edef66a750fee5ba927b75b0b653da837ea52f6"
+        }
+      ],
+      "visualSources": [
+        {
+          "id": "DOC-001",
+          "path": "local-document:DOC-001",
+          "originalSha256": "1ada26c12db04745df29790dfe06d518025152113392d7fadbfd533a0a9032ab",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-001",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-001-initial-screen-e32e79604a69a83a.png",
+          "originalSha256": "9fbfc8f1c0cb19a94b4470d0caa3f50a39277c6fcd3e821bf1b1383cc626576a",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-002",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-002-circle-screen-e32e79604a69a83a.png",
+          "originalSha256": "97b75975669d471d20ebd3ad7893c93a4d9e09f8d0f756ee9c3eb8d8f0228312",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-003",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-003-updated-screen-e32e79604a69a83a.png",
+          "originalSha256": "97b75975669d471d20ebd3ad7893c93a4d9e09f8d0f756ee9c3eb8d8f0228312",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-004",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-004-responsive-screen-e32e79604a69a83a.png",
+          "originalSha256": "0382feb43813082bfbb60c19ed10da4918d3c906747be84c2c04792235c7ee66",
+          "mimeType": "image/png"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/d-story/artifacts/release/conformance.md",
+        "sha256": "0eca73b0d0eabf6feea64a61443f5321fc531d1da05f78364ee5b212ad452f16"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:convergence",
+      "input:verification",
+      "input:implementation",
+      "DOC-001",
+      "WIT-001",
+      "WIT-002",
+      "WIT-003",
+      "WIT-004"
+    ],
+    "visualSourcesReviewed": [
+      {
+        "sourceId": "DOC-001",
+        "method": "image-tool",
+        "locator": "Full image",
+        "observations": "Desmos graphing-calculator screenshot with sin(x), Cartesian axes and grid."
+      },
+      {
+        "sourceId": "WIT-001",
+        "method": "image-tool",
+        "locator": "Full image",
+        "observations": "Grapher mode shows cos(x) * x in the expression field, not the initial sin(x) state."
+      },
+      {
+        "sourceId": "WIT-002",
+        "method": "image-tool",
+        "locator": "Full image",
+        "observations": "Shows the standard calculator keypad, not a graph or the radius-six circle."
+      },
+      {
+        "sourceId": "WIT-003",
+        "method": "image-tool",
+        "locator": "Full image",
+        "observations": "Same calculator keypad image as WIT-002; no updated graph is shown."
+      },
+      {
+        "sourceId": "WIT-004",
+        "method": "image-tool",
+        "locator": "Full image",
+        "observations": "Shows calculator layouts side by side, not a responsive graph screen."
+      }
+    ],
+    "rows": [
+      {
+        "id": "story-request",
+        "sourceId": "story",
+        "line": 17,
+        "quote": "- Palyright tests on cirlce of 6 unit radius in origin",
+        "outcome": "consistent"
+      },
+      {
+        "id": "convergence-state",
+        "sourceId": "input:convergence",
+        "line": 28,
+        "quote": "- None.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "verification-release-blocker",
+        "sourceId": "input:verification",
+        "line": 17,
+        "quote": "| Required Playwright test for `x^2 + y^2 = 36` geometry | Not run / not established |",
+        "outcome": "consistent"
+      },
+      {
+        "id": "verification-visual-evidence",
+        "sourceId": "input:verification",
+        "line": 18,
+        "quote": "| Responsive viewport inspection and replacement screenshots | Not established | No governed resize/screenshot evidence or durable screenshot files were available |",
+        "outcome": "consistent"
+      },
+      {
+        "id": "implementation-scope",
+        "sourceId": "input:implementation",
+        "line": 9,
+        "quote": "Changed `src/components/FunctionGrapher.jsx` to preserve the initial function, recognize `x^2 + y^2 = 36`, and render it with an origin-centered canvas arc whose radius is six times the active scale.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "release-claims-valid-wits",
+        "sourceId": "input:verification",
+        "line": 50,
+        "quote": "- Verification generation 13, `D-STORY:AC-001` through `D-STORY:AC-004`: its recorded visual witnesses were found by independent review to show incorrect screens.",
+        "outcome": "inconsistent",
+        "note": "The release's WIT-001 through WIT-004 rows record validity/unchanged status, while approved Verification generation 14 says the prior images show incorrect or unestablished states, CR-001 remains open, and Playwright geometry was not run. The release appropriately calls overall coverage partial/missing and records this upstream discrepancy, but it does not reconcile the conflicting WIT validity records. The contradiction remains unresolved; visual assets were not independently inspected in this review."
+      },
+      {
+        "id": "release-playwright-gap",
+        "sourceId": "input:verification",
+        "line": 17,
+        "quote": "| Required Playwright test for `x^2 + y^2 = 36` geometry | Not run / not established |",
+        "outcome": "consistent"
+      },
+      {
+        "id": "reference-image",
+        "sourceId": "DOC-001",
+        "attestation": "Image source supplied as a reference attachment; no native image inspection was available in this review, so no visual comparison is attested.",
+        "outcome": "question",
+        "note": "The document is a visual reference, but this review could not inspect its pixels. A human must confirm whether the release's treatment of that reference is consistent."
+      },
+      {
+        "id": "wit-001",
+        "sourceId": "WIT-001",
+        "attestation": "WIT-001, full image: expression field reads cos(x) * x; no initial sin(x) state.",
+        "outcome": "inconsistent",
+        "note": "Full image inspection shows cos(x) * x in the expression field rather than the required initial sin(x) state, matching Verification's criticism and contradicting the release's valid witness status."
+      },
+      {
+        "id": "wit-002",
+        "sourceId": "WIT-002",
+        "attestation": "WIT-002, full image: calculator keypad is shown; no graph/circle is visible.",
+        "outcome": "inconsistent",
+        "note": "Full image inspection shows a calculator keypad, not a graph/circle state, contradicting the release's valid witness status."
+      },
+      {
+        "id": "wit-003",
+        "sourceId": "WIT-003",
+        "attestation": "WIT-003, full image: calculator keypad identical to WIT-002; no updated graph is visible.",
+        "outcome": "inconsistent",
+        "note": "Full image inspection shows the same calculator keypad image as WIT-002, not an updated graph, contradicting the release's valid witness status."
+      },
+      {
+        "id": "wit-004",
+        "sourceId": "WIT-004",
+        "attestation": "WIT-004, full image: calculator layouts are shown, not responsive grapher usage.",
+        "outcome": "inconsistent",
+        "note": "Full image inspection shows calculator layouts rather than responsive graph use, contradicting the release's valid witness status."
+      }
+    ],
+    "findings": [
+      {
+        "id": "visual-witness-conflict",
+        "severity": "blocking",
+        "message": "The release records WIT-001 through WIT-004 as valid/unchanged, but direct image inspection shows WIT-001 contains cos(x) * x, WIT-002/WIT-003 show a calculator keypad (with the same image digest), and WIT-004 shows calculator layouts rather than grapher screens. This conflicts with those valid witness statuses and with approved Verification generation 14, which says the witnesses are incorrect or unestablished and the required Playwright geometry test was not run. Reconcile the records and retain the required geometry result before treating these items as conformant."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "d25cdfe714c96433440b83db9b5860333d72fcf82827f952f1ef364d89285e8d",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-23T04:37:50.738Z",
+  "recordSha256": "738c8c517ec5c17d21fbb899dc35a5eba2cafe5d257dce450217c85514246b18"
+}
