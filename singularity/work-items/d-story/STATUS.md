@@ -20,6 +20,8 @@
 
 ## Recent history
 
+- 2026-11-23T03:47:59.410Z — **version_opened** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 2 opened (review-corrections) settled for the person (STL-012; only the reviewer had seen version 1)
+- 2026-11-23T03:47:59.410Z — **decision_settled** (release) by ashokraj2011 · agent qa: STL-012 (review-corrections) settled by SFlow: Started version 2 of release to fix the review's findings on version 1
 - 2026-11-23T03:47:44.729Z — **source_review_submitted** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 1f1fb3c8993d524d4e0b6fb2c6fed95f0de98f8611d27a95f34a5df24375f9db
 - 2026-11-23T03:46:39.854Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 1
 - 2026-11-23T03:38:43.373Z — **phase-approved-automatically** (verification) by sflow-approved-automatically: approved automatically: the reviewer said ready; its checks passed; nothing was open for it; advanced to release
@@ -33,5 +35,3 @@
 - 2026-11-22T23:58:59.655Z — **asked_for_recorded** (verification) by ashokraj2011 · agent qa: What the person asked for in verification generation 12: instruction 1.
 - 2026-11-22T23:58:16.122Z — **version_opened** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 12 opened (review-corrections) on the person's yes (question-tool)
 - 2026-11-22T23:55:22.330Z — **source_review_submitted** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: a9676a2e8022cafe8468ff3351e38a450561e21564d0fb7fc66a7cda0317ffde
-- 2026-11-22T13:06:22.741Z — **source_review_submitted** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 1ff2f91801bf917d6da233bdc80ef2544e0032045187a108f144422db230aa54
-- 2026-11-22T13:04:33.956Z — **phase_generated** (verification) by ashokraj2011 · agent qa: generation 11
