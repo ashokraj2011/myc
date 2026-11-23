@@ -20,6 +20,8 @@
 
 ## Recent history
 
+- 2026-11-23T04:38:07.890Z — **version_opened** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 4 opened (review-corrections) settled for the person (STL-013; only the reviewer had seen version 3)
+- 2026-11-23T04:38:07.890Z — **decision_settled** (release) by ashokraj2011 · agent qa: STL-013 (review-corrections) settled by SFlow: Started version 4 of release to fix the review's findings on version 3
 - 2026-11-23T04:37:50.738Z — **source_review_submitted** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: d6b87d701276389d989669fdd6665c67439b9aa2bf975b7afb6d19494d40075c
 - 2026-11-23T04:36:31.998Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 3
 - 2026-11-23T04:29:04.799Z — **version_opened** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 3 opened (rework) on the person's yes (question-tool)
@@ -33,5 +35,3 @@
 - 2026-11-23T03:56:13.057Z — **phase_rejected** (release) by ashokraj2011 · agent qa: CR-001 returned to verification: The sign-off screenshots show the wrong screens (keypad, cos(x)·x); retake them and verify again
 - 2026-11-23T03:50:20.983Z — **phase_submitted** (release) by ashokraj2011 · agent qa: 2 artifacts
 - 2026-11-23T03:50:00.545Z — **source_review_submitted** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 907b198ea5e48f2f728c05cf05f18548a39193b8608f834a74b4cc6ed670d55c
-- 2026-11-23T03:48:59.784Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 2
-- 2026-11-23T03:48:48.682Z — **upstream_issue_raised** (release) by ashokraj2011 · agent qa: UPI-002 against verification (D-STORY:AC-002, D-STORY:REQ-005): Producer: verification generation 13. Clause/section: `D-STORY:AC-002` test evidence. Problem: the retained tagged test passed under Vitest, but the approved clause requires a Playwright test verifying the circle geometry and Verification generation 13 explicitly says that result is not established. Assumption: do not treat the Vitest result as satisfying the Playwright-specific method. Impact/Clause: the test requirement remains missing for `D-STORY:AC-002` and `D-STORY:REQ-005`. Owner action: verification should run and retain the required Playwright geometry check.
