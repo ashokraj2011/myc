@@ -13461,6 +13461,14 @@
       "event": "upstream_issue_decided",
       "phase": "verification",
       "detail": "UPI-001: return (CR-001). The sign-off screenshots show the wrong screens (keypad, cos(x)·x); retake them and verify again"
+    },
+    {
+      "at": "2026-11-23T03:59:32.683Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "upstream_issue_decided",
+      "phase": "verification",
+      "detail": "UPI-002: accept-risk. i have tested it is ifine"
     }
   ],
   "measurement": {
@@ -25531,6 +25539,137 @@
         },
         "createdAt": "2026-11-23T03:56:12.234Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "0e478cdc-7d5a-401f-b8d6-9f3751f61edd",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "d-story",
+          "branch": "d-story"
+        },
+        "phaseId": "verification",
+        "generation": 13,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": "quality-reviewers",
+        "payload": {
+          "decision": "upstream-issue",
+          "reviewPacketSha256": null,
+          "issue": "UPI-002"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-23T03:59:31.953Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "0e478cdc-7d5a-401f-b8d6-9f3751f61edd",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "d-story"
+          ],
+          "branch": "d-story",
+          "canonicalBranch": "d-story",
+          "createdAt": "2026-11-22T06:44:06.662Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "verification",
+          "generation": 13,
+          "phase": "verification",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 4,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 1,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 4,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "verification",
+              "status": "in_progress",
+              "generation": 13
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph (copy)",
+          "updatedAt": "2026-11-23T03:59:32.683Z",
+          "workId": "d-story",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": "quality-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "77dab191fa78ebdbe6f777cf68da8827f2447b711edc65a73b81e12b1b5fb8d2",
+          "lifecycleEventId": "0e478cdc-7d5a-401f-b8d6-9f3751f61edd",
+          "lifecyclePayload": {
+            "decision": "upstream-issue",
+            "reviewPacketSha256": null,
+            "issue": "UPI-002"
+          },
+          "templateSha256": "4f559684330b34b509cd27e959615ef48fdbda1bf0c44e05456bf70cb7754532",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "0e478cdc-7d5a-401f-b8d6-9f3751f61edd",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "d-story",
+              "branch": "d-story"
+            },
+            "phaseId": "verification",
+            "generation": 13,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": "quality-reviewers",
+            "payload": {
+              "decision": "upstream-issue",
+              "reviewPacketSha256": null,
+              "issue": "UPI-002"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-23T03:59:31.953Z"
+          }
+        },
+        "createdAt": "2026-11-23T03:59:31.957Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -26255,6 +26394,17 @@
       "authorityGroup": "quality-reviewers",
       "identityAssurance": "configured-local",
       "at": "2026-11-23T03:56:13.120Z"
+    },
+    {
+      "issue": "UPI-002",
+      "outcome": "accept-risk",
+      "reason": "i have tested it is ifine",
+      "link": null,
+      "expiresAt": "2027-01-29T00:00:00.000Z",
+      "actor": "ashokraj2011",
+      "authorityGroup": "quality-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-23T03:59:32.683Z"
     }
   ],
   "adviceOutcomes": [
@@ -26275,6 +26425,24 @@
       "reason": "typed",
       "surface": "card",
       "at": "2026-11-23T03:56:13.120Z"
+    },
+    {
+      "id": "ADV-002",
+      "kind": "upstream-issue",
+      "subject": "UPI-002",
+      "phase": "verification",
+      "recommended": {
+        "form": "lean",
+        "option": null
+      },
+      "chosen": {
+        "option": "accept-risk",
+        "outcome": "accept-risk"
+      },
+      "matched": null,
+      "reason": "typed",
+      "surface": "card",
+      "at": "2026-11-23T03:59:32.683Z"
     }
   ]
 }
