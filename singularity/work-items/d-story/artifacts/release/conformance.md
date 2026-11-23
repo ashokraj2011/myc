@@ -4,7 +4,7 @@
   "workId": "d-story",
   "workType": "spec-driven-standard",
   "phase": "release",
-  "generation": 1,
+  "generation": 2,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "conformance.md",
       "mediaType": "text/markdown",
-      "sha256": "9891f7c40d2c0fb9bbfef488f4dd2d9f9a4ee733c23959488c18d01d13bd1c8a",
-      "bytes": 2981
+      "sha256": "5b07d209d8feee8c62fb264046e59787e61cdd39a63b01ceadfc568d7140fc6a",
+      "bytes": 4424
     },
-    "generation": 1,
-    "publishedAt": "2026-11-23T03:46:39.733Z"
+    "generation": 2,
+    "publishedAt": "2026-11-23T03:48:59.642Z"
   },
-  "sourceCommit": "f661ec2cd0ad525e7b85d448faa867553501f829",
+  "sourceCommit": "bcd4532ed724210d2deaa99b541d5f7f3debbe1e",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "77dab191fa78ebdbe6f777cf68da8827f2447b711edc65a73b81e12b1b5fb8d2",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/spec-driven/release.md"
   },
   "inputs": {
-    "generation": 1,
-    "path": "singularity/work-items/d-story/context/inputs-release-gen1.json",
-    "sha256": "a12593a6a3e9558ef2ea98b53082ecac727c737c4dade6e79ecc3af3ee3e08aa",
+    "generation": 2,
+    "path": "singularity/work-items/d-story/context/inputs-release-gen2.json",
+    "sha256": "5bd56d04be9b39725f8ddb1ccd34b636d9299e30bbeb9adebb51cbb78b504428",
     "renderedSha256": "0c05373d8a6df7bb617942f6e8b4430c497ad776329ff0f5912940d91e89a0d5",
     "mode": "enforce"
   },
@@ -92,6 +92,26 @@
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 2,
+      "path": "singularity/work-items/d-story/telemetry/release-gen2.json",
+      "sha256": "6b170f3128e88d8a41f6c8e3a7182cba1aba9a06106231f5b9ab398fefc77484",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 44518,
+        "estimatedTokens": 11130,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 44518,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
     }
   ],
   "remoteOutputs": [],
@@ -116,6 +136,27 @@
       "completedAt": "2026-11-23T03:46:39.733Z",
       "agent": "qa",
       "generation": 1
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-23T03:48:59.642Z",
+      "completedAt": "2026-11-23T03:48:59.642Z",
+      "agent": "qa",
+      "generation": 2
     }
   ],
   "sequenceOverrides": [],
@@ -134,15 +175,15 @@
 
 | Clause | Evidence | Verdict |
 |---|---|---|
-| `D-STORY:REQ-001` | through `D-STORY:AC-001`; source `src/components/FunctionGrapher.jsx`, `src/index.css` | matched |
-| `D-STORY:REQ-002` | through `D-STORY:AC-003`; source `src/components/FunctionGrapher.jsx` | matched |
-| `D-STORY:REQ-003` | through `D-STORY:AC-001`; source `src/components/FunctionGrapher.jsx` | matched |
-| `D-STORY:REQ-004` | through `D-STORY:AC-004`; source `src/App.css`, `src/App.jsx`, `src/index.css` | matched |
-| `D-STORY:REQ-005` | through `D-STORY:AC-002`; source `src/components/FunctionGrapher.jsx` | matched |
-| `D-STORY:AC-001` | 'graph plotter › starts with sin(x) and provides the Cartesian canvas' in tests/graph-plotter.spec.js, run `TA-cba6bdac8c1636628205`: passed; visual sign-off `WIT-001` (`singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-001-initial-screen-e32e79604a69a83a.png`), confirmed by a person; source `src/components/FunctionGrapher.jsx` | matched |
-| `D-STORY:AC-002` | 'graph plotter › accepts and replaces the radius-six circle expression' in tests/graph-plotter.spec.js, run `TA-cba6bdac8c1636628205`: passed; visual sign-off `WIT-002` (`singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-002-circle-screen-e32e79604a69a83a.png`), confirmed by a person; source `src/components/FunctionGrapher.jsx` | matched |
-| `D-STORY:AC-003` | 'graph plotter › updates to a supported function after replacing an equation' in tests/graph-plotter.spec.js, run `TA-cba6bdac8c1636628205`: passed; visual sign-off `WIT-003` (`singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-003-updated-screen-e32e79604a69a83a.png`), confirmed by a person; source `src/components/FunctionGrapher.jsx` | matched |
-| `D-STORY:AC-004` | visual sign-off `WIT-004` (`singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-004-responsive-screen-e32e79604a69a83a.png`), confirmed by a person; source `src/App.css`, `src/App.jsx`, `src/index.css` | matched |
+| `D-STORY:REQ-001` | through `D-STORY:AC-001`; source `src/components/FunctionGrapher.jsx`, `src/index.css`; visual outcome not established in approved Verification generation 13 | partial |
+| `D-STORY:REQ-002` | through `D-STORY:AC-003`; source `src/components/FunctionGrapher.jsx`; visual outcome not established in approved Verification generation 13 | partial |
+| `D-STORY:REQ-003` | through `D-STORY:AC-001`; source `src/components/FunctionGrapher.jsx`; visual outcome not established in approved Verification generation 13 | partial |
+| `D-STORY:REQ-004` | through `D-STORY:AC-004`; source `src/App.css`, `src/App.jsx`, `src/index.css`; responsive visual outcome not established in approved Verification generation 13 | missing |
+| `D-STORY:REQ-005` | through `D-STORY:AC-002`; source `src/components/FunctionGrapher.jsx`; required Playwright geometry result not established in approved Verification generation 13 | missing |
+| `D-STORY:AC-001` | 'graph plotter › starts with sin(x) and provides the Cartesian canvas' in `tests/graph-plotter.spec.js`, run `TA-cba6bdac8c1636628205`: passed; approved Verification generation 13 says WIT-001 does not show the required initial graph | partial |
+| `D-STORY:AC-002` | 'graph plotter › accepts and replaces the radius-six circle expression' in `tests/graph-plotter.spec.js`, run `TA-cba6bdac8c1636628205`: passed, but this Vitest run is not the required Playwright geometry check; approved Verification generation 13 says WIT-002 does not show the circle | missing |
+| `D-STORY:AC-003` | 'graph plotter › updates to a supported function after replacing an equation' in `tests/graph-plotter.spec.js`, run `TA-cba6bdac8c1636628205`: passed; approved Verification generation 13 says WIT-003 does not show the updated graph | partial |
+| `D-STORY:AC-004` | approved Verification generation 13 says WIT-004 does not show responsive graph usability | missing |
 
 ## Constitution conformance
 
@@ -155,6 +196,11 @@ None recorded.
 ## Deviations
 
 None accepted at convergence.
+
+## Upstream discrepancies
+
+- Producer: verification generation 13. Clause/section: WIT-001 through WIT-004 in the approved Verification evidence. Problem: its review rejects all four witness images as not showing their required graph states, while the retained release-generation-1 evidence-consistency projection records WIT-001 through WIT-004 as valid unchanged reviews. Assumption: follow the approved Verification artifact's explicit findings conservatively and do not treat these witness images as establishing visual acceptance. Impact/Clause: visual evidence remains partial for `D-STORY:REQ-001`, `D-STORY:REQ-002`, `D-STORY:REQ-003`, `D-STORY:AC-001`, and `D-STORY:AC-003`, and missing for `D-STORY:REQ-004`, `D-STORY:REQ-005`, `D-STORY:AC-002`, and `D-STORY:AC-004`. Owner action: verification approvers should reconcile the witness-review record and publish valid graph-state visual evidence.
+- Producer: verification generation 13. Clause/section: `D-STORY:AC-002` test evidence. Problem: the retained tagged test passed under Vitest, but the approved clause requires a Playwright test verifying the circle geometry and Verification generation 13 explicitly says that result is not established. Assumption: do not treat the Vitest result as satisfying the Playwright-specific method. Impact/Clause: the test requirement remains missing for `D-STORY:AC-002` and `D-STORY:REQ-005`. Owner action: verification should run and retain the required Playwright geometry check.
 
 ## Self-approval disclosures
 
@@ -286,5 +332,15 @@ Retained existing Vitest, lint, and production-build regression commands. No gov
 <!-- singularity-flow:verdict-summary:start -->
 Engine-written from the clause table; keep it. The table is the only place a verdict is stated.
 
-- No clause in the table is partial, missing, deviated or unplanned.
+- `D-STORY:REQ-001`: partial; UPI-001 raised against verification; not decided yet.
+- `D-STORY:REQ-002`: partial; UPI-001 raised against verification; not decided yet.
+- `D-STORY:REQ-003`: partial; UPI-001 raised against verification; not decided yet.
+- `D-STORY:REQ-004`: missing; UPI-001 raised against verification; not decided yet.
+- `D-STORY:REQ-005`: missing; UPI-001 raised against verification; not decided yet.
+- `D-STORY:REQ-005`: missing; UPI-002 raised against verification; not decided yet.
+- `D-STORY:AC-001`: partial; UPI-001 raised against verification; not decided yet.
+- `D-STORY:AC-002`: missing; UPI-001 raised against verification; not decided yet.
+- `D-STORY:AC-002`: missing; UPI-002 raised against verification; not decided yet.
+- `D-STORY:AC-003`: partial; UPI-001 raised against verification; not decided yet.
+- `D-STORY:AC-004`: missing; UPI-001 raised against verification; not decided yet.
 <!-- singularity-flow:verdict-summary:end -->
