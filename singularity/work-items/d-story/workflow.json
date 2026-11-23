@@ -14713,6 +14713,14 @@
       "event": "upstream_issue_raised",
       "phase": "release",
       "detail": "UPI-003 against implementation (D-STORY:REQ-001, D-STORY:REQ-002, D-STORY:REQ-003, D-STORY:REQ-004, D-STORY:AC-001, D-STORY:AC-003, D-STORY:AC-004): The Release report marks D-STORY:REQ-001, D-STORY:REQ-002, D-STORY:REQ-003, D-STORY:REQ-004, D-STORY:AC-001, D-STORY:AC-003, D-STORY:AC-004 partial and missing, and Implementation's approvers decide the gap. Raised from the decision list."
+    },
+    {
+      "at": "2026-11-23T05:01:18.908Z",
+      "actor": "ashokraj2011",
+      "agent": "qa",
+      "event": "upstream_issue_decided",
+      "phase": "release",
+      "detail": "UPI-003: accept-risk. am ok with all these ..lets move fwd"
     }
   ],
   "measurement": {
@@ -28916,6 +28924,137 @@
         },
         "createdAt": "2026-11-23T05:01:13.366Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "4439034f-d2cd-418c-a1de-06309af53c30",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "d-story",
+          "branch": "d-story"
+        },
+        "phaseId": "release",
+        "generation": 4,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "decision": "upstream-issue",
+          "reviewPacketSha256": null,
+          "issue": "UPI-003"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-23T05:01:18.167Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "4439034f-d2cd-418c-a1de-06309af53c30",
+        "eventType": "decision-made",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "d-story"
+          ],
+          "branch": "d-story",
+          "canonicalBranch": "d-story",
+          "createdAt": "2026-11-22T06:44:06.662Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "release",
+          "generation": 4,
+          "phase": "release",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 5,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 0,
+              "awaiting_approval": 1,
+              "approved": 5,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "release",
+              "status": "awaiting_approval",
+              "generation": 4
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph (copy)",
+          "updatedAt": "2026-11-23T05:01:18.908Z",
+          "workId": "d-story",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "77dab191fa78ebdbe6f777cf68da8827f2447b711edc65a73b81e12b1b5fb8d2",
+          "lifecycleEventId": "4439034f-d2cd-418c-a1de-06309af53c30",
+          "lifecyclePayload": {
+            "decision": "upstream-issue",
+            "reviewPacketSha256": null,
+            "issue": "UPI-003"
+          },
+          "templateSha256": "8f7c0be1d576e781de1724a50bc906ad8f511807e665328e753bf40fd4e881a6",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "4439034f-d2cd-418c-a1de-06309af53c30",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "d-story",
+              "branch": "d-story"
+            },
+            "phaseId": "release",
+            "generation": 4,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": "engineering-reviewers",
+            "payload": {
+              "decision": "upstream-issue",
+              "reviewPacketSha256": null,
+              "issue": "UPI-003"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-23T05:01:18.167Z"
+          }
+        },
+        "createdAt": "2026-11-23T05:01:18.171Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -29729,6 +29868,17 @@
       "authorityGroup": "quality-reviewers",
       "identityAssurance": "configured-local",
       "at": "2026-11-23T03:59:32.683Z"
+    },
+    {
+      "issue": "UPI-003",
+      "outcome": "accept-risk",
+      "reason": "am ok with all these ..lets move fwd",
+      "link": null,
+      "expiresAt": "2027-01-21T00:00:00.000Z",
+      "actor": "ashokraj2011",
+      "authorityGroup": "engineering-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-23T05:01:18.908Z"
     }
   ],
   "adviceOutcomes": [
@@ -29767,6 +29917,24 @@
       "reason": "typed",
       "surface": "card",
       "at": "2026-11-23T03:59:32.683Z"
+    },
+    {
+      "id": "ADV-003",
+      "kind": "conformance-gap",
+      "subject": null,
+      "phase": "release",
+      "recommended": {
+        "form": "option",
+        "option": "correct-report"
+      },
+      "chosen": {
+        "option": "accept-risk",
+        "outcome": "accept-risk"
+      },
+      "matched": false,
+      "reason": "typed",
+      "surface": "card",
+      "at": "2026-11-23T05:01:18.908Z"
     }
   ]
 }

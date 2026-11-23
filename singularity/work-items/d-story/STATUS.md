@@ -20,6 +20,7 @@
 
 ## Recent history
 
+- 2026-11-23T05:01:18.908Z — **upstream_issue_decided** (release) by ashokraj2011 · agent qa: UPI-003: accept-risk. am ok with all these ..lets move fwd
 - 2026-11-23T05:01:14.092Z — **upstream_issue_raised** (release) by ashokraj2011 · agent qa: UPI-003 against implementation (D-STORY:REQ-001, D-STORY:REQ-002, D-STORY:REQ-003, D-STORY:REQ-004, D-STORY:AC-001, D-STORY:AC-003, D-STORY:AC-004): The Release report marks D-STORY:REQ-001, D-STORY:REQ-002, D-STORY:REQ-003, D-STORY:REQ-004, D-STORY:AC-001, D-STORY:AC-003, D-STORY:AC-004 partial and missing, and Implementation's approvers decide the gap. Raised from the decision list.
 - 2026-11-23T04:41:40.466Z — **phase_submitted** (release) by ashokraj2011 · agent qa: 2 artifacts
 - 2026-11-23T04:41:07.424Z — **source_review_submitted** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 434471c4807d7b896e78b013470bb46e307cf64e073f850e0225c5b6d3457c28
@@ -34,4 +35,3 @@
 - 2026-11-23T04:13:39.000Z — **source_review_submitted** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: e370463de12db01e73e9b3c663d7f83062ad647353185c7bc178deb913c14618
 - 2026-11-23T04:12:20.021Z — **phase_generated** (verification) by ashokraj2011 · agent qa: generation 14
 - 2026-11-23T04:03:12.418Z — **version_opened** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 14 opened (rework) on the person's yes (question-tool)
-- 2026-11-23T03:59:32.683Z — **upstream_issue_decided** (verification) by ashokraj2011 · agent qa: UPI-002: accept-risk. i have tested it is ifine
