@@ -16,10 +16,11 @@
 |  | ⚠ self-approval | Ashok Raj via engineering-reviewers; agent developer | **warning** |  |  |  |
 | 4 | Convergence (`convergence`) | architect | **approved** | 1 | 0 | unavailable |
 | 5 | Verification (`verification`) | qa | **approved** | 14 | 0 | unavailable |
-| 6 | Release (`release`) | qa | **in_progress** | 4 | 1 | unavailable |
+| 6 | Release (`release`) | qa | **awaiting_approval** | 4 | 1 | unavailable |
 
 ## Recent history
 
+- 2026-11-23T04:41:40.466Z — **phase_submitted** (release) by ashokraj2011 · agent qa: 2 artifacts
 - 2026-11-23T04:41:07.424Z — **source_review_submitted** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 434471c4807d7b896e78b013470bb46e307cf64e073f850e0225c5b6d3457c28
 - 2026-11-23T04:40:13.090Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 4
 - 2026-11-23T04:38:07.890Z — **version_opened** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 4 opened (review-corrections) settled for the person (STL-013; only the reviewer had seen version 3)
@@ -34,4 +35,3 @@
 - 2026-11-23T04:03:12.418Z — **version_opened** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 14 opened (rework) on the person's yes (question-tool)
 - 2026-11-23T03:59:32.683Z — **upstream_issue_decided** (verification) by ashokraj2011 · agent qa: UPI-002: accept-risk. i have tested it is ifine
 - 2026-11-23T03:56:13.120Z — **upstream_issue_decided** (verification) by ashokraj2011 · agent qa: UPI-001: return (CR-001). The sign-off screenshots show the wrong screens (keypad, cos(x)·x); retake them and verify again
-- 2026-11-23T03:56:13.057Z — **phase_rejected** (release) by ashokraj2011 · agent qa: CR-001 returned to verification: The sign-off screenshots show the wrong screens (keypad, cos(x)·x); retake them and verify again
