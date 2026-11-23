@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "phase": "verification",
+  "generation": 13,
+  "reportSha256": "cdb962b4c58fe1752aabf9eec0e7fe377b614b85baf67b8bb4cd3d9df8fb3c61",
+  "lifecycleEventId": "4e10616f-8a8b-4c7e-9451-cbb7eb93711c",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "d-story",
+      "phase": "verification",
+      "generation": 13,
+      "sources": [
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/d-story/artifacts/implementation/implementation-summary.md",
+          "textSha256": "72df2c9a0b5c9eb3ceed12b9671e8b6266dc77ba16c71e2eca65a9c0055fb25d"
+        },
+        {
+          "id": "input:planning",
+          "path": "singularity/work-items/d-story/artifacts/planning/plan.md",
+          "textSha256": "ffbf4b00964dbad9fe4ff2127ebd73f0b1b9148fd113589d021e2a5e1054fa76"
+        },
+        {
+          "id": "input:specification",
+          "path": "singularity/work-items/d-story/artifacts/specification/spec.md",
+          "textSha256": "90f952d110a076303ac5ab84dc97d419cc104a90046fa86d2fc1202ea4ebe14a"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/d-story/USER-STORY.md",
+          "textSha256": "cff0beeb0d7b1e2eef41bfbf587a0bd0b222553331c39a52d8facbd53fa059b9",
+          "originalSha256": "2144a9c6d40147352ce812ef0edef66a750fee5ba927b75b0b653da837ea52f6"
+        }
+      ],
+      "visualSources": [
+        {
+          "id": "DOC-001",
+          "path": "local-document:DOC-001",
+          "originalSha256": "1ada26c12db04745df29790dfe06d518025152113392d7fadbfd533a0a9032ab",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-001",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-001-initial-screen-e32e79604a69a83a.png",
+          "originalSha256": "9fbfc8f1c0cb19a94b4470d0caa3f50a39277c6fcd3e821bf1b1383cc626576a",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-002",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-002-circle-screen-e32e79604a69a83a.png",
+          "originalSha256": "97b75975669d471d20ebd3ad7893c93a4d9e09f8d0f756ee9c3eb8d8f0228312",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-003",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-003-updated-screen-e32e79604a69a83a.png",
+          "originalSha256": "97b75975669d471d20ebd3ad7893c93a4d9e09f8d0f756ee9c3eb8d8f0228312",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-004",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-004-responsive-screen-e32e79604a69a83a.png",
+          "originalSha256": "0382feb43813082bfbb60c19ed10da4918d3c906747be84c2c04792235c7ee66",
+          "mimeType": "image/png"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/d-story/artifacts/verification/test-evidence.md",
+        "sha256": "0f67eca1cae14bc881a381cbf70774888e92499fbe891c87f7ed80fec438fee1"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:specification",
+      "input:planning",
+      "input:implementation",
+      "DOC-001",
+      "WIT-001",
+      "WIT-002",
+      "WIT-003",
+      "WIT-004"
+    ],
+    "visualSourcesReviewed": [
+      {
+        "sourceId": "DOC-001",
+        "method": "image-tool",
+        "locator": "Full screenshot",
+        "observations": "Desmos-style graph view shows the expression sin(x), Cartesian axes, and a visible grid."
+      },
+      {
+        "sourceId": "WIT-001",
+        "method": "image-tool",
+        "locator": "Full screenshot",
+        "observations": "Shows the calculator shell in graph mode with cos(x) * x in the expression field, not the required initial sin(x) graph."
+      },
+      {
+        "sourceId": "WIT-002",
+        "method": "image-tool",
+        "locator": "Full screenshot",
+        "observations": "Shows calculator controls rather than a graph or the required circle."
+      },
+      {
+        "sourceId": "WIT-003",
+        "method": "image-tool",
+        "locator": "Full screenshot",
+        "observations": "Shows calculator controls rather than an updated graph."
+      },
+      {
+        "sourceId": "WIT-004",
+        "method": "image-tool",
+        "locator": "Full screenshot",
+        "observations": "Shows calculator layouts at two widths, not a responsive graph plotter."
+      }
+    ],
+    "rows": [
+      {
+        "id": "story-row",
+        "sourceId": "story",
+        "line": 6,
+        "quote": "## Description",
+        "outcome": "consistent"
+      },
+      {
+        "id": "spec-row",
+        "sourceId": "input:specification",
+        "line": 78,
+        "quote": "- On initial load with no saved state, `sin(x)` is the visible plotted expression and the Cartesian axes and grid are visible. *(S1)* [D-STORY:AC-001]",
+        "outcome": "consistent"
+      },
+      {
+        "id": "plan-row",
+        "sourceId": "input:planning",
+        "line": 35,
+        "quote": "| `D-STORY:AC-002` | `src/components/FunctionGrapher.jsx` | `tests/graph-plotter.spec.js` | modified | Entering `x^2 + y^2 = 36` renders a circle centered at `(0, 0)` with radius six units. |",
+        "outcome": "consistent"
+      },
+      {
+        "id": "implementation-row",
+        "sourceId": "input:implementation",
+        "line": 21,
+        "quote": "No governed test execution is retained yet; fresh publication checks may establish them. Visual screenshot and desktop/tablet acceptance still require inspection and must not be inferred from automated unit checks.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "artifact-row",
+        "sourceId": "DOC-001",
+        "attestation": "Full screenshot: graph area shows sin(x), Cartesian axes, and grid, matching the verification document's source-referenced initial-state criterion.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "wit1-row",
+        "sourceId": "WIT-001",
+        "attestation": "Full screenshot: expression reads cos(x) * x; verification document accurately says this witness does not show the required initial sin(x) graph.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "wit2-row",
+        "sourceId": "WIT-002",
+        "attestation": "Full screenshot: calculator keypad and display, no graph or circle; verification document accurately rejects it as circle evidence.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "wit3-row",
+        "sourceId": "WIT-003",
+        "attestation": "Full screenshot: calculator keypad and display, no updated graph; verification document accurately rejects it as update evidence.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "wit4-row",
+        "sourceId": "WIT-004",
+        "attestation": "Full screenshot: two calculator layouts at different widths, neither showing the graph plotter; verification document accurately rejects it as responsive graph evidence.",
+        "outcome": "consistent"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "d25cdfe714c96433440b83db9b5860333d72fcf82827f952f1ef364d89285e8d",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-23T03:38:23.021Z",
+  "recordSha256": "1cc9758f1cc1442203b714f6c29b9adc9a3dc0d202dd7ca1b641e73effc34811"
+}
