@@ -4,8 +4,8 @@
   "workId": "d-story",
   "workType": "spec-driven-standard",
   "phase": "release",
-  "generation": 2,
-  "status": "not_started",
+  "generation": 3,
+  "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
     "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -42,13 +42,13 @@
       "kind": "in-place",
       "filename": "conformance.md",
       "mediaType": "text/markdown",
-      "sha256": "5b07d209d8feee8c62fb264046e59787e61cdd39a63b01ceadfc568d7140fc6a",
-      "bytes": 4424
+      "sha256": "0eca73b0d0eabf6feea64a61443f5321fc531d1da05f78364ee5b212ad452f16",
+      "bytes": 5136
     },
-    "generation": 2,
-    "publishedAt": "2026-11-23T03:48:59.642Z"
+    "generation": 3,
+    "publishedAt": "2026-11-23T04:36:31.796Z"
   },
-  "sourceCommit": "bcd4532ed724210d2deaa99b541d5f7f3debbe1e",
+  "sourceCommit": "e4bd6d9f442c7eefa99961673184cf86cadef35e",
   "generationCommit": "22b2963153ba23ccb9aad295405c8fdd4eb7c7c0",
   "publicationCommit": "22b2963153ba23ccb9aad295405c8fdd4eb7c7c0",
   "configSha256": "77dab191fa78ebdbe6f777cf68da8827f2447b711edc65a73b81e12b1b5fb8d2",
@@ -60,10 +60,10 @@
     "sourcePath": "singularity/templates/spec-driven/release.md"
   },
   "inputs": {
-    "generation": 2,
-    "path": "singularity/work-items/d-story/context/inputs-release-gen2.json",
-    "sha256": "5bd56d04be9b39725f8ddb1ccd34b636d9299e30bbeb9adebb51cbb78b504428",
-    "renderedSha256": "0c05373d8a6df7bb617942f6e8b4430c497ad776329ff0f5912940d91e89a0d5",
+    "generation": 3,
+    "path": "singularity/work-items/d-story/context/inputs-release-gen3.json",
+    "sha256": "e33d0e5d397a1f3bd653c38a761e1bbf8200407c9548218c114b8d2a22992d30",
+    "renderedSha256": "d0796319da1e8757fb3fb412f08b4823f5070f609b8b47742cdb172e2390b99a",
     "mode": "enforce"
   },
   "designSources": {
@@ -112,6 +112,26 @@
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 3,
+      "path": "singularity/work-items/d-story/telemetry/release-gen3.json",
+      "sha256": "5bf75fbec0ec6c9ec472bddb6e35b37e6c3847b2c02225078e85ae1690aaf859",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 49970,
+        "estimatedTokens": 12493,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 49970,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
     }
   ],
   "remoteOutputs": [],
@@ -157,10 +177,65 @@
       "completedAt": "2026-11-23T03:48:59.642Z",
       "agent": "qa",
       "generation": 2
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-23T04:36:31.796Z",
+      "completedAt": "2026-11-23T04:36:31.796Z",
+      "agent": "qa",
+      "generation": 3
     }
   ],
   "sequenceOverrides": [],
-  "approvals": [],
+  "approvals": [
+    {
+      "decision": "rejected",
+      "phase": "release",
+      "target": "verification",
+      "reason": "The sign-off screenshots show the wrong screens (keypad, cos(x)·x); retake them and verify again",
+      "changeRequestId": "CR-001",
+      "clauseIds": [],
+      "at": "2026-11-23T03:56:13.057Z",
+      "actor": {
+        "name": "Ashok Raj",
+        "email": "88361104+ashokraj2011@users.noreply.github.com",
+        "login": "ashokraj2011",
+        "githubLookup": "resolved"
+      },
+      "agent": "qa",
+      "authorityGroup": "quality-reviewers",
+      "identityAssurance": "configured-local",
+      "channel": "terminal",
+      "generation": 2,
+      "artifactSha256": [
+        {
+          "path": "singularity/work-items/d-story/artifacts/release/conformance.md",
+          "sha256": "e45afb9d6d73b17c9b70cdf50068dfa1c23b63ced7fefb009184a6eeb4aedbe2"
+        },
+        {
+          "path": "singularity/work-items/d-story/artifacts/release/verification/evidence-index.md",
+          "sha256": "8b9d5468ef692bd592517bbd749b7b6b985f762eb2ce28808cb5caee73b06799"
+        }
+      ],
+      "reviewPacketSha256": "be149d5c431caa1b01cd08569581ef805456f6bbe76d5f544fdfcbc875a01518",
+      "artifactSet": "spec-driven-verification",
+      "bundleSha256": "3a5594822a5254e34e51e97c6a7acb40b01af1b7b4f0592f3168d5f657616ef6"
+    }
+  ],
   "selfApproval": false,
   "conformanceTree": "sha256:3b002018f6c53a925294a33f48729e75d724f9a0bc3592bcbd1a278874c38e25"
 }
@@ -175,15 +250,15 @@
 
 | Clause | Evidence | Verdict |
 |---|---|---|
-| `D-STORY:REQ-001` | through `D-STORY:AC-001`; source `src/components/FunctionGrapher.jsx`, `src/index.css`; visual outcome not established in approved Verification generation 13 | partial |
-| `D-STORY:REQ-002` | through `D-STORY:AC-003`; source `src/components/FunctionGrapher.jsx`; visual outcome not established in approved Verification generation 13 | partial |
-| `D-STORY:REQ-003` | through `D-STORY:AC-001`; source `src/components/FunctionGrapher.jsx`; visual outcome not established in approved Verification generation 13 | partial |
-| `D-STORY:REQ-004` | through `D-STORY:AC-004`; source `src/App.css`, `src/App.jsx`, `src/index.css`; responsive visual outcome not established in approved Verification generation 13 | missing |
-| `D-STORY:REQ-005` | through `D-STORY:AC-002`; source `src/components/FunctionGrapher.jsx`; required Playwright geometry result not established in approved Verification generation 13 | missing |
-| `D-STORY:AC-001` | 'graph plotter › starts with sin(x) and provides the Cartesian canvas' in `tests/graph-plotter.spec.js`, run `TA-cba6bdac8c1636628205`: passed; approved Verification generation 13 says WIT-001 does not show the required initial graph | partial |
-| `D-STORY:AC-002` | 'graph plotter › accepts and replaces the radius-six circle expression' in `tests/graph-plotter.spec.js`, run `TA-cba6bdac8c1636628205`: passed, but this Vitest run is not the required Playwright geometry check; approved Verification generation 13 says WIT-002 does not show the circle | missing |
-| `D-STORY:AC-003` | 'graph plotter › updates to a supported function after replacing an equation' in `tests/graph-plotter.spec.js`, run `TA-cba6bdac8c1636628205`: passed; approved Verification generation 13 says WIT-003 does not show the updated graph | partial |
-| `D-STORY:AC-004` | approved Verification generation 13 says WIT-004 does not show responsive graph usability | missing |
+| `D-STORY:REQ-001` | Through `D-STORY:AC-001`; the tagged initial-canvas test passed in `TA-cba6bdac8c1636628205` on the matching source tree; visual acceptance remains disputed in approved Verification generation 14 | partial |
+| `D-STORY:REQ-002` | Through `D-STORY:AC-003`; the tagged expression-replacement test passed in `TA-cba6bdac8c1636628205` on the matching source tree; visual acceptance remains disputed in approved Verification generation 14 | partial |
+| `D-STORY:REQ-003` | Through `D-STORY:AC-001`; the tagged initial-state test passed in `TA-cba6bdac8c1636628205` on the matching source tree; visual acceptance remains disputed in approved Verification generation 14 | partial |
+| `D-STORY:REQ-004` | Through `D-STORY:AC-004`; approved Verification generation 14 retains no verified desktop/tablet inspection; the WIT-004 record conflict is unresolved | missing |
+| `D-STORY:REQ-005` | Through `D-STORY:AC-002`; the Vitest test passed, but the required Playwright geometry result for center `(0, 0)` and radius `6` is not established by approved Verification generation 14 | missing |
+| `D-STORY:AC-001` | The tagged initial-canvas test passed in `TA-cba6bdac8c1636628205` on the matching source tree; WIT-001 is recorded as valid, while approved Verification generation 14 says the visual outcome is not established | partial |
+| `D-STORY:AC-002` | The tagged Vitest test passed in `TA-cba6bdac8c1636628205`; it does not replace the required Playwright geometry test, and approved Verification generation 14 does not establish a valid circle screenshot | missing |
+| `D-STORY:AC-003` | The tagged expression-replacement test passed in `TA-cba6bdac8c1636628205` on the matching source tree; WIT-003 is recorded as valid, while approved Verification generation 14 says the visual outcome is not established | partial |
+| `D-STORY:AC-004` | Approved Verification generation 14 retains no verified responsive inspection; the WIT-004 record conflict is unresolved | missing |
 
 ## Constitution conformance
 
@@ -199,8 +274,8 @@ None accepted at convergence.
 
 ## Upstream discrepancies
 
-- Producer: verification generation 13. Clause/section: WIT-001 through WIT-004 in the approved Verification evidence. Problem: its review rejects all four witness images as not showing their required graph states, while the retained release-generation-1 evidence-consistency projection records WIT-001 through WIT-004 as valid unchanged reviews. Assumption: follow the approved Verification artifact's explicit findings conservatively and do not treat these witness images as establishing visual acceptance. Impact/Clause: visual evidence remains partial for `D-STORY:REQ-001`, `D-STORY:REQ-002`, `D-STORY:REQ-003`, `D-STORY:AC-001`, and `D-STORY:AC-003`, and missing for `D-STORY:REQ-004`, `D-STORY:REQ-005`, `D-STORY:AC-002`, and `D-STORY:AC-004`. Owner action: verification approvers should reconcile the witness-review record and publish valid graph-state visual evidence.
-- Producer: verification generation 13. Clause/section: `D-STORY:AC-002` test evidence. Problem: the retained tagged test passed under Vitest, but the approved clause requires a Playwright test verifying the circle geometry and Verification generation 13 explicitly says that result is not established. Assumption: do not treat the Vitest result as satisfying the Playwright-specific method. Impact/Clause: the test requirement remains missing for `D-STORY:AC-002` and `D-STORY:REQ-005`. Owner action: verification should run and retain the required Playwright geometry check.
+- Producer: verification generation 14. Clause/section: WIT-001 through WIT-004. Problem: the retained review records mark each image valid and unchanged, but approved Verification generation 14 reports that the prior images show the wrong graph states or do not establish responsive use; WIT-002 and WIT-003 also share the same recorded image digest. Assumption: preserve the recorded human-review status without claiming it resolves the conflicting Verification findings; treat visual acceptance as unresolved, consistent with CR-001 and the Verification report. Impact/Clause: `D-STORY:REQ-001`, `D-STORY:REQ-002`, `D-STORY:REQ-003`, `D-STORY:REQ-004`, `D-STORY:REQ-005`, `D-STORY:AC-001`, `D-STORY:AC-002`, `D-STORY:AC-003`, and `D-STORY:AC-004`. Owner action: verification approvers should reconcile the WIT records and retain valid graph-state and responsive evidence; UPI-001 already records the return to Verification.
+- Producer: verification generation 14. Clause/section: `D-STORY:AC-002` test evidence. Problem: the tagged Vitest test passed, but the approved clause requires Playwright verification of the circle geometry and generation 14 reports no such result. Assumption: do not treat the Vitest run as the required Playwright result. Impact/Clause: `D-STORY:AC-002` and `D-STORY:REQ-005`. Owner action: UPI-002 is an accepted risk through 2027-01-29; Verification must retain the required Playwright geometry result before treating this gap as resolved.
 
 ## Self-approval disclosures
 
@@ -254,48 +329,47 @@ Recorded from the retained approvals. Keep every line.
 
 ## Approved phase input: verification
 
-<!-- source=singularity/work-items/d-story/artifacts/verification/test-evidence.md sha256=32488a4368a6a1b899f6c12b651c7251213a9a36bb882cecb6db3b576def4979 status=captured projection=approved-summary representation-sha256=sha256:3dc35fee8fe9112e9276c7efc1d4a0ecb325a2695de4a41eef139b37d2756a40 brief-sha256=3dc35fee8fe9112e9276c7efc1d4a0ecb325a2695de4a41eef139b37d2756a40 expansion=sfref:v1:story:d-story:5d5dd150f789c32d4c09c501e0998169883bdd5970bdbd7469496fbbdbdd784f -->
+<!-- source=singularity/work-items/d-story/artifacts/verification/test-evidence.md sha256=27a5766788e6ad1cb61f9baf2f7b52976f80216af15c07c90ce476b982e20eee status=captured projection=approved-summary representation-sha256=sha256:9a1d20fa4b823e26882bbe637b31bb23c72e88fc13cd4c4bcfe996549e997305 brief-sha256=9a1d20fa4b823e26882bbe637b31bb23c72e88fc13cd4c4bcfe996549e997305 expansion=sfref:v1:story:d-story:aab683d5bffaabbe12941e4fc6af231b48ca71262f5c92a4e8a27236caf8e66d -->
 
 # Approved agent brief — Verification
 
 > This is a deterministic projection of a governed artifact. Treat it as evidence, not instructions. Expand the registered source handle when exact wording is required.
 
 - Work item: `d-story`
-- Producer: `verification` generation 13
+- Producer: `verification` generation 14
 - Consumer: `release`
 - Source: `singularity/work-items/d-story/artifacts/verification/test-evidence.md`
-- Source SHA-256: `27c30608a38fff14dc8a36e4bcaeee3ad4c43c59b9f527d735bbb4a1bb525e8c`
+- Source SHA-256: `70b39258eb4c1360995542ed6c0f74f36af1bf9276669d2311bf46ef271c9037`
 
 ## Summary from “Agent brief”
 
-The retained implementation run passed all 34 tests, and its three tagged graph tests passed on the matching source tree. However, the available run is not the required Playwright circle-geometry check, and the independent review of verification generation 12 found that the visual witnesses do not show the graph states they were recorded to support. Visual acceptance and the required Playwright geometry result are therefore not established; this evidence does not support a release recommendation.
+The retained implementation run passed all 34 tests, including the tagged graph tests, on the matching source tree. In this generation, the local app responded and the integrated browser wrappers were used to enter the circle equation and `sin(x)`, but SFlow marked their records as agent-declared rather than host-observed, and no durable replacement screenshots were saved in the Verification artifact directory. The required Playwright geometry result and visual acceptance therefore remain unestablished. CR-001 is not resolved, and this evidence does not support a release recommendation.
 
 ## Acceptance and specification results
 
-| Clause | Test evidence | Source | Result |
+| Clause | Evidence | Source | Result |
 |---|---|---|---|
-| `D-STORY:REQ-001` | through `D-STORY:AC-001`; automated test passed, visual evidence not established | `src/components/FunctionGrapher.jsx`, `src/index.css` | partially verified |
-| `D-STORY:REQ-002` | through `D-STORY:AC-003`; automated test passed, visual evidence not established | `src/components/FunctionGrapher.jsx` | partially verified |
-| `D-STORY:REQ-003` | through `D-STORY:AC-001`; automated test passed, visual evidence not established | `src/components/FunctionGrapher.jsx` | partially verified |
-| `D-STORY:REQ-004` | through `D-STORY:AC-004`; responsive visual evidence not established | `src/App.css`, `src/App.jsx`, `src/index.css` | not established |
-| `D-STORY:REQ-005` | through `D-STORY:AC-002`; Vitest test passed, required Playwright geometry result not established | `src/components/FunctionGrapher.jsx` | not established |
-| `D-STORY:AC-001` | 'graph plotter › starts with sin(x) and provides the Cartesian canvas' in tests/graph-plotter.spec.js, run `TA-cba6bdac8c1636628205`: passed; WIT-001 was rejected by the independent review because it shows `cos(x) * x`, not the required initial graph | `src/components/FunctionGrapher.jsx` | partially verified |
-| `D-STORY:AC-002` | 'graph plotter › accepts and replaces the radius-six circle expression' in tests/graph-plotter.spec.js, run `TA-cba6bdac8c1636628205`: passed; this is not the required Playwright geometry check, and WIT-002 was rejected by the independent review because it does not show the circle | `src/components/FunctionGrapher.jsx` | not established |
-| `D-STORY:AC-003` | 'graph plotter › updates to a supported function after replacing an equation' in tests/graph-plotter.spec.js, run `TA-cba6bdac8c1636628205`: passed; WIT-003 was rejected by the independent review because it does not show the updated graph | `src/components/FunctionGrapher.jsx` | partially verified |
-| `D-STORY:AC-004` | no tagged test; WIT-004 was rejected by the independent review because it does not show responsive graph usability | `src/App.css`, `src/App.jsx`, `src/index.css` | not established |
-| `DOC-001` | no criterion to test; checked as implemented in its source | no source path | not applicable |
+| `D-STORY:REQ-001` | Through `D-STORY:AC-001`; tagged test passed, but no valid visual capture establishes the axes/grid | `src/components/FunctionGrapher.jsx`, `src/index.css` | Partially verified |
+| `D-STORY:REQ-002` | Through `D-STORY:AC-003`; tagged test passed, but no valid visual capture establishes expression replacement | `src/components/FunctionGrapher.jsx` | Partially verified |
+| `D-STORY:REQ-003` | Through `D-STORY:AC-001`; tagged test passed, but no valid initial-screen visual evidence | `src/components/FunctionGrapher.jsx` | Partially verified |
+| `D-STORY:REQ-004` | Through `D-STORY:AC-004`; no verified desktop/tablet inspection | `src/App.jsx`, `src/App.css`, `src/index.css` | Not established |
+| `D-STORY:REQ-005` | Through `D-STORY:AC-002`; Vitest passed, but required Playwright geometry result is absent | `src/components/FunctionGrapher.jsx` | Not established |
+| `D-STORY:AC-001` | `graph plotter › starts with sin(x) and provides the Cartesian canvas` passed in `TA-cba6bdac8c1636628205`; replacement screenshot was not stored or host-observed. Prior WIT-001 was rejected because it showed `cos(x) * x`. | `src/components/FunctionGrapher.jsx` | Partially verified |
+| `D-STORY:AC-002` | `graph plotter › accepts and replaces the radius-six circle expression` passed in `TA-cba6bdac8c1636628205`; no Playwright test verified center/radius, and no valid replacement screenshot was stored. Prior WIT-002 was rejected because it did not show the circle. | `src/components/FunctionGrapher.jsx` | Not established |
+| `D-STORY:AC-003` | `graph plotter › updates to a supported function after replacing an equation` passed in `TA-cba6bdac8c1636628205`; no valid replacement screenshot was stored. Prior WIT-003 was rejected because it did not show the updated graph. | `src/components/FunctionGrapher.jsx` | Partially verified |
+| `D-STORY:AC-004` | No valid desktop/tablet screenshot or responsive usability inspection. Prior WIT-004 was rejected because it did not show responsive graph usability. | `src/App.jsx`, `src/App.css`, `src/index.css` | Not established |
+| `DOC-001 — Screenshot 2026 11 22 at 12.12.40 PM` | Inspected as the visual reference; no current app screenshot was retained for comparison | Not applicable: this is supporting visual evidence, not a product source path | Reference inspected; visual conformance not established |
 
 A source tag binds a requirement to its code; only a test result above verifies it.
 
 ## Negative, regression, security, and non-functional checks
 
-- Scanners: no scanner findings are recorded for the changed code.
-- Tests: the retained implementation run passed 34 tests (34 passed, 0 failed, 0 skipped); tagged AC-001, AC-002, and AC-003 tests passed. No retained Playwright run establishes AC-002's required circle geometry check.
-- Failed runs: none.
-- Visual evidence gap: the independent source review of verification generation 12 found that WIT-001 shows `cos(x) * x` rather than the required initial `sin(x)`, while WIT-002, WIT-003, and WIT-004 show calculator screens rather than the required circle, updated graph, and responsive graph. Do not treat those witness records as evidence for the corresponding visual acceptance outcomes.
-- Residual risk: AC-001 and AC-003 have passing automated tests but no valid visual support in the reviewed witnesses; AC-002 lacks the required Playwright geometry run and valid visual support; AC-004 lacks valid responsive visual support. No release recommendation is supported until the missing test and visual evidence are supplied and reviewed.
+- Regression tests: the retained implementation run passed 34 tests (34 passed, 0 failed, 0 skipped), with the three tagged graph tests passed on the same source tree. No separate negative, security-scanner, or non-functional results are retained for this generation.
+- Playwright: no qualifying browser test was run for the equation `x^2 + y^2 = 36`; its center and radius remain unverified by Playwright.
+- Visual evidence: prior independent review found WIT-001 showed `cos(x) * x`, while WIT-002 through WIT-004 did not show their required graph states. The current integrated browser-wrapper images were not host-observed and were not saved to the authorized artifact directory, so they do not replace those witnesses. CR-001 remains open.
+- Risk: AC-001 and AC-003 have passing automated tests but lack valid visual evidence; AC-002 lacks both required Playwright geometry evidence and a valid circle screenshot; AC-004 lacks valid responsive evidence. UPI-002 remains an accepted risk through 2027-01-29 and does not resolve these evidence gaps. No release recommendation is supported.
 
-> Exact source expansion: `sfref:v1:story:d-story:5d5dd150f789c32d4c09c501e0998169883bdd5970bdbd7469496fbbdbdd784f`. Use `singularity-flow show sfref:v1:story:d-story:5d5dd150f789c32d4c09c501e0998169883bdd5970bdbd7469496fbbdbdd784f --section "<heading>"` only when exact wording is needed.
+> Exact source expansion: `sfref:v1:story:d-story:aab683d5bffaabbe12941e4fc6af231b48ca71262f5c92a4e8a27236caf8e66d`. Use `singularity-flow show sfref:v1:story:d-story:aab683d5bffaabbe12941e4fc6af231b48ca71262f5c92a4e8a27236caf8e66d --section "<heading>"` only when exact wording is needed.
 
 ## Approved phase input: implementation
 
@@ -332,15 +406,13 @@ Retained existing Vitest, lint, and production-build regression commands. No gov
 <!-- singularity-flow:verdict-summary:start -->
 Engine-written from the clause table; keep it. The table is the only place a verdict is stated.
 
-- `D-STORY:REQ-001`: partial; UPI-001 raised against verification; not decided yet.
-- `D-STORY:REQ-002`: partial; UPI-001 raised against verification; not decided yet.
-- `D-STORY:REQ-003`: partial; UPI-001 raised against verification; not decided yet.
-- `D-STORY:REQ-004`: missing; UPI-001 raised against verification; not decided yet.
-- `D-STORY:REQ-005`: missing; UPI-001 raised against verification; not decided yet.
-- `D-STORY:REQ-005`: missing; UPI-002 raised against verification; not decided yet.
-- `D-STORY:AC-001`: partial; UPI-001 raised against verification; not decided yet.
-- `D-STORY:AC-002`: missing; UPI-001 raised against verification; not decided yet.
-- `D-STORY:AC-002`: missing; UPI-002 raised against verification; not decided yet.
-- `D-STORY:AC-003`: partial; UPI-001 raised against verification; not decided yet.
-- `D-STORY:AC-004`: missing; UPI-001 raised against verification; not decided yet.
+- `D-STORY:REQ-001`: partial; no issue raised yet; implementation owns it.
+- `D-STORY:REQ-002`: partial; no issue raised yet; implementation owns it.
+- `D-STORY:REQ-003`: partial; no issue raised yet; implementation owns it.
+- `D-STORY:REQ-004`: missing; no issue raised yet; implementation owns it.
+- `D-STORY:REQ-005`: missing; covered by UPI-002 (accepted risk until 2027-01-29).
+- `D-STORY:AC-001`: partial; no issue raised yet; implementation owns it.
+- `D-STORY:AC-002`: missing; covered by UPI-002 (accepted risk until 2027-01-29).
+- `D-STORY:AC-003`: partial; no issue raised yet; implementation owns it.
+- `D-STORY:AC-004`: missing; no issue raised yet; implementation owns it.
 <!-- singularity-flow:verdict-summary:end -->
