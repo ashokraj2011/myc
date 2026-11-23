@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "phase": "release",
+  "generation": 1,
+  "reportSha256": "1f1fb3c8993d524d4e0b6fb2c6fed95f0de98f8611d27a95f34a5df24375f9db",
+  "lifecycleEventId": "cdb0aa61-65e0-4867-bc47-220903ac2cb0",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "d-story",
+      "phase": "release",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "input:convergence",
+          "path": "singularity/work-items/d-story/artifacts/convergence/convergence.md",
+          "textSha256": "884815ab17f3469d7a177a4b4e16b944065e69a2113a6b7f7ede3b31d12c3882"
+        },
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/d-story/artifacts/implementation/implementation-summary.md",
+          "textSha256": "72df2c9a0b5c9eb3ceed12b9671e8b6266dc77ba16c71e2eca65a9c0055fb25d"
+        },
+        {
+          "id": "input:verification",
+          "path": "singularity/work-items/d-story/artifacts/verification/test-evidence.md",
+          "textSha256": "0f67eca1cae14bc881a381cbf70774888e92499fbe891c87f7ed80fec438fee1"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/d-story/USER-STORY.md",
+          "textSha256": "cff0beeb0d7b1e2eef41bfbf587a0bd0b222553331c39a52d8facbd53fa059b9",
+          "originalSha256": "2144a9c6d40147352ce812ef0edef66a750fee5ba927b75b0b653da837ea52f6"
+        }
+      ],
+      "visualSources": [
+        {
+          "id": "DOC-001",
+          "path": "local-document:DOC-001",
+          "originalSha256": "1ada26c12db04745df29790dfe06d518025152113392d7fadbfd533a0a9032ab",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-001",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-001-initial-screen-e32e79604a69a83a.png",
+          "originalSha256": "9fbfc8f1c0cb19a94b4470d0caa3f50a39277c6fcd3e821bf1b1383cc626576a",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-002",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-002-circle-screen-e32e79604a69a83a.png",
+          "originalSha256": "97b75975669d471d20ebd3ad7893c93a4d9e09f8d0f756ee9c3eb8d8f0228312",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-003",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-003-updated-screen-e32e79604a69a83a.png",
+          "originalSha256": "97b75975669d471d20ebd3ad7893c93a4d9e09f8d0f756ee9c3eb8d8f0228312",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-004",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-004-responsive-screen-e32e79604a69a83a.png",
+          "originalSha256": "0382feb43813082bfbb60c19ed10da4918d3c906747be84c2c04792235c7ee66",
+          "mimeType": "image/png"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/d-story/artifacts/release/conformance.md",
+        "sha256": "9891f7c40d2c0fb9bbfef488f4dd2d9f9a4ee733c23959488c18d01d13bd1c8a"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:convergence",
+      "input:verification",
+      "input:implementation",
+      "DOC-001",
+      "WIT-001",
+      "WIT-002",
+      "WIT-003",
+      "WIT-004"
+    ],
+    "visualSourcesReviewed": [
+      {
+        "sourceId": "DOC-001",
+        "method": "image-tool",
+        "locator": "Full image",
+        "observations": "Desmos graphing calculator with sin(x) entered and its Cartesian sine curve visible."
+      },
+      {
+        "sourceId": "WIT-001",
+        "method": "image-tool",
+        "locator": "Full image",
+        "observations": "ApexCalc graph mode shows cos(x) * x in the expression field, not initial sin(x)."
+      },
+      {
+        "sourceId": "WIT-002",
+        "method": "image-tool",
+        "locator": "Full image",
+        "observations": "ApexCalc classic calculator numeric keypad; no circle graph is visible."
+      },
+      {
+        "sourceId": "WIT-003",
+        "method": "image-tool",
+        "locator": "Full image",
+        "observations": "Same classic calculator screen as WIT-002; no updated graph is visible."
+      },
+      {
+        "sourceId": "WIT-004",
+        "method": "image-tool",
+        "locator": "Full image",
+        "observations": "Two responsive-sized classic calculator screens; no graph mode or responsive graph usability is shown."
+      }
+    ],
+    "rows": [
+      {
+        "id": "story-document",
+        "sourceId": "story",
+        "line": 23,
+        "quote": "Supporting documents were not copied. Attach needed documents and images to this new Story.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "convergence-document",
+        "sourceId": "input:convergence",
+        "line": 32,
+        "quote": "- `advance-to-verification`",
+        "outcome": "consistent"
+      },
+      {
+        "id": "verification-document",
+        "sourceId": "input:verification",
+        "line": 41,
+        "quote": "No release recommendation is supported until the missing test and visual evidence are supplied and reviewed.",
+        "outcome": "inconsistent",
+        "note": "The release conformance artifact marks every clause matched and reports no missing/partial clauses, while the pinned verification record explicitly says the required Playwright geometry and visual acceptance are not established and says no release recommendation is supported."
+      },
+      {
+        "id": "implementation-document",
+        "sourceId": "input:implementation",
+        "line": 21,
+        "quote": "Visual screenshot and desktop/tablet acceptance still require inspection and must not be inferred from automated unit checks.",
+        "outcome": "inconsistent",
+        "note": "The release artifact treats the visual sign-offs as matched evidence, while this pinned implementation record cautions that visual acceptance still requires inspection; the pinned verification input specifically rejects these witnesses."
+      },
+      {
+        "id": "doc001-visual",
+        "sourceId": "DOC-001",
+        "attestation": "Full image: Desmos shows sin(x) with the Cartesian sine curve.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "wit001-visual",
+        "sourceId": "WIT-001",
+        "attestation": "Full image: graph-mode expression field reads cos(x) * x, and the plotted curve is not sin(x).",
+        "outcome": "inconsistent",
+        "note": "The visual sign-off is for the initial screen, but the displayed expression/graph does not show the required initial sin(x), matching the verification record's rejection."
+      },
+      {
+        "id": "wit002-visual",
+        "sourceId": "WIT-002",
+        "attestation": "Full image: numeric calculator keypad is displayed; no graph or circle is visible.",
+        "outcome": "inconsistent",
+        "note": "This does not visually establish the circle acceptance outcome."
+      },
+      {
+        "id": "wit003-visual",
+        "sourceId": "WIT-003",
+        "attestation": "Full image: numeric calculator keypad is displayed; no updated graph is visible.",
+        "outcome": "inconsistent",
+        "note": "This does not visually establish the updated-graph acceptance outcome."
+      },
+      {
+        "id": "wit004-visual",
+        "sourceId": "WIT-004",
+        "attestation": "Full image: two responsive-sized numeric calculator screens are displayed, with no graph mode visible.",
+        "outcome": "inconsistent",
+        "note": "This does not establish responsive graph usability."
+      }
+    ],
+    "findings": [
+      {
+        "id": "release-verdict-conflict",
+        "severity": "blocking",
+        "message": "The release conformance document claims all requirements and acceptance criteria are matched, but the pinned verification evidence states that AC-001, AC-002, AC-003, and AC-004 visual support is not established, AC-002 lacks the required Playwright geometry run, and no release recommendation is supported. Reconcile the verdict table and summary with this evidence before release."
+      }
+    ]
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "d25cdfe714c96433440b83db9b5860333d72fcf82827f952f1ef364d89285e8d",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-23T03:47:44.729Z",
+  "recordSha256": "3bf0460c5165edb27790867244841331c07d1b028c554753260bda19a357e77e"
+}
