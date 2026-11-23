@@ -20,6 +20,7 @@
 
 ## Recent history
 
+- 2026-11-23T03:48:43.294Z — **upstream_issue_raised** (release) by ashokraj2011 · agent qa: UPI-001 against verification (WIT-001, WIT-004, D-STORY:REQ-001, D-STORY:REQ-002, D-STORY:REQ-003, D-STORY:AC-001, D-STORY:AC-003, D-STORY:REQ-004, D-STORY:REQ-005, D-STORY:AC-002, D-STORY:AC-004): Producer: verification generation 13. Clause/section: WIT-001 through WIT-004 in the approved Verification evidence. Problem: its review rejects all four witness images as not showing their required graph states, while the retained release-generation-1 evidence-consistency projection records WIT-001 through WIT-004 as valid unchanged reviews. Assumption: follow the approved Verification artifact's explicit findings conservatively and do not treat these witness images as establishing visual acceptance. Impact/Clause: visual evidence remains partial for `D-STORY:REQ-001`, `D-STORY:REQ-002`, `D-STORY:REQ-003`, `D-STORY:AC-001`, and `D-STORY:AC-003`, and missing for `D-STORY:REQ-004`, `D-STORY:REQ-005`, `D-STORY:AC-002`, and `D-STORY:AC-004`. Owner action: verification approvers should reconcile the witness-review record and publish valid graph-state visual evidence.
 - 2026-11-23T03:47:59.410Z — **version_opened** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 2 opened (review-corrections) settled for the person (STL-012; only the reviewer had seen version 1)
 - 2026-11-23T03:47:59.410Z — **decision_settled** (release) by ashokraj2011 · agent qa: STL-012 (review-corrections) settled by SFlow: Started version 2 of release to fix the review's findings on version 1
 - 2026-11-23T03:47:44.729Z — **source_review_submitted** (release) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: 1f1fb3c8993d524d4e0b6fb2c6fed95f0de98f8611d27a95f34a5df24375f9db
@@ -34,4 +35,3 @@
 - 2026-11-23T03:35:05.376Z — **phase_generated** (verification) by ashokraj2011 · agent qa: generation 12
 - 2026-11-22T23:58:59.655Z — **asked_for_recorded** (verification) by ashokraj2011 · agent qa: What the person asked for in verification generation 12: instruction 1.
 - 2026-11-22T23:58:16.122Z — **version_opened** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 12 opened (review-corrections) on the person's yes (question-tool)
-- 2026-11-22T23:55:22.330Z — **source_review_submitted** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: a9676a2e8022cafe8468ff3351e38a450561e21564d0fb7fc66a7cda0317ffde
