@@ -4623,8 +4623,8 @@
     },
     "policySha256": "sha256:9fc14a5f75f2d57ffe34ca111e49220be10d4c1509c92264e243e6287781c014"
   },
-  "status": "in_progress",
-  "currentPhase": "release",
+  "status": "closed",
+  "currentPhase": null,
   "phaseOrder": [
     "specification",
     "planning",
@@ -9514,7 +9514,7 @@
       "label": "Release",
       "order": 5,
       "defaultAgent": "qa",
-      "status": "awaiting_approval",
+      "status": "approved",
       "requiredArtifact": {
         "kind": "conformance-report",
         "path": "artifacts/release/conformance.md",
@@ -9598,7 +9598,7 @@
       "qualityCommands": [],
       "startedAt": "2026-11-23T04:14:03.768Z",
       "submittedAt": "2026-11-23T08:47:16.186Z",
-      "approvedAt": null,
+      "approvedAt": "2026-11-23T08:47:33.749Z",
       "approvedBy": null,
       "rejectedAt": "2026-11-23T08:43:22.801Z",
       "rejectedBy": "ashokraj2011",
@@ -10140,12 +10140,14 @@
         {
           "path": "singularity/work-items/d-story/artifacts/release/conformance.md",
           "kind": "document",
-          "status": "pending",
+          "status": "approved",
           "exists": true,
-          "size": 26395,
-          "sha256": "d7a2dd289ccd9bf29ebff633ff1f1ba762e71799ecaff6b8dcbb31a094935b45",
+          "size": 26386,
+          "sha256": "919f822c89790d8132ff99c220d7516db026845d593b8a499fd9bb44abec6113",
           "registeredAt": "2026-11-23T03:46:38.915Z",
-          "updatedAt": "2026-11-23T08:47:16.187Z"
+          "updatedAt": "2026-11-23T08:47:33.751Z",
+          "approvedAt": "2026-11-23T08:47:33.749Z",
+          "approvedBy": null
         },
         {
           "path": "singularity/work-items/d-story/artifacts/release/verification/evidence-index.md",
@@ -10296,7 +10298,37 @@
             "githubLookup": "resolved"
           }
         }
-      ]
+      ],
+      "approvalDisposition": "approved_automatically",
+      "automaticApproval": {
+        "rule": "when-ready-v1",
+        "predicates": {
+          "reviewReady": true,
+          "checksPassed": true,
+          "nothingOpen": true,
+          "selfApprovalAllowed": true,
+          "outcomeNext": true,
+          "noSourceChange": true,
+          "noSignatureRequired": true
+        },
+        "checked": [
+          "the reviewer said ready",
+          "its checks passed",
+          "nothing was open for it"
+        ],
+        "review": {
+          "status": "ready",
+          "reportSha256": "ba6488ebe70506edbf2748ec85cfb4cd0d6e0a3c698d3f252acce58b98415cfb",
+          "reportPath": "singularity/work-items/d-story/context/reviews/release/gen-5/ba6488ebe70506edbf2748ec85cfb4cd0d6e0a3c698d3f252acce58b98415cfb.json"
+        },
+        "checksSha256": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "decisionListSha256": "sha256:71a79d4900835b8b1f419eb284e9cbb1dad342d6e4bae2ace3148c093fe97b47",
+        "ranBy": "ashokraj2011",
+        "generation": 5,
+        "at": "2026-11-23T08:47:33.749Z",
+        "reviewPacketSha256": "1651eae17e501b9e03e1de9b574b298f64a07c00b9959353a68674496e6b9168",
+        "evidenceCommit": "693d6830b7d3c9f862b44e285b50b4277d3fe6bb"
+      }
     }
   },
   "usage": {
@@ -14224,7 +14256,7 @@
     {
       "schemaVersion": 1,
       "id": "CR-002",
-      "status": "open",
+      "status": "resolved",
       "sourcePhase": "release",
       "sourceGeneration": 4,
       "targetPhase": "release",
@@ -14252,7 +14284,21 @@
         }
       ],
       "reviewPacketSha256": "d58d48b0982ea1e7722eb50c82e73930c772af010746acd659ed68e4917943e4",
-      "resolution": null,
+      "resolution": {
+        "phase": "release",
+        "generation": 5,
+        "artifactSha256": [
+          {
+            "path": "singularity/work-items/d-story/artifacts/release/conformance.md",
+            "sha256": "d7a2dd289ccd9bf29ebff633ff1f1ba762e71799ecaff6b8dcbb31a094935b45"
+          },
+          {
+            "path": "singularity/work-items/d-story/artifacts/release/verification/evidence-index.md",
+            "sha256": "4d2a73049680875d1aaced8a680202d49d5a0a5a964ae7a4e2d217c678288eb2"
+          }
+        ],
+        "approvalDecisionAt": "2026-11-23T08:47:33.749Z"
+      },
       "forwardCheckpoint": {
         "schemaVersion": 2,
         "id": "RFW-CR-002",
@@ -17346,7 +17392,9 @@
         "integrity": {
           "sha256": "sha256:73342b34be6cb3fa3b7ecf755e157f60acffb745559ea351480288085f58dfaf"
         }
-      }
+      },
+      "resolvedAt": "2026-11-23T08:47:33.749Z",
+      "resolvedBy": "sflow-approved-automatically"
     }
   ],
   "history": [
@@ -18309,6 +18357,26 @@
       "event": "phase_submitted",
       "phase": "release",
       "detail": "2 artifacts"
+    },
+    {
+      "at": "2026-11-23T08:47:33.749Z",
+      "actor": "sflow-approved-automatically",
+      "agent": null,
+      "event": "phase-approved-automatically",
+      "phase": "release",
+      "generation": 5,
+      "rule": "when-ready-v1",
+      "reviewPacketSha256": "1651eae17e501b9e03e1de9b574b298f64a07c00b9959353a68674496e6b9168",
+      "predicates": {
+        "reviewReady": true,
+        "checksPassed": true,
+        "nothingOpen": true,
+        "selfApprovalAllowed": true,
+        "outcomeNext": true,
+        "noSourceChange": true,
+        "noSignatureRequired": true
+      },
+      "detail": "approved automatically: the reviewer said ready; its checks passed; nothing was open for it; closed"
     }
   ],
   "measurement": {
@@ -33397,6 +33465,140 @@
         },
         "createdAt": "2026-11-23T08:47:11.842Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "a0e646b6-8b7b-4a03-9bc6-6790ddd9a2d5",
+        "type": "phase-approved",
+        "subject": {
+          "kind": "story",
+          "id": "d-story",
+          "branch": "d-story"
+        },
+        "phaseId": "release",
+        "generation": 5,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": null,
+        "authorityGroup": null,
+        "payload": {
+          "decision": "approved",
+          "reviewPacketSha256": "1651eae17e501b9e03e1de9b574b298f64a07c00b9959353a68674496e6b9168",
+          "automatic": true,
+          "rule": "when-ready-v1"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-23T08:47:29.049Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "a0e646b6-8b7b-4a03-9bc6-6790ddd9a2d5",
+        "eventType": "phase-approved",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "d-story"
+          ],
+          "branch": "d-story",
+          "canonicalBranch": "d-story",
+          "createdAt": "2026-11-22T06:44:06.662Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": null,
+          "generation": 5,
+          "phase": "release",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 6,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 0,
+              "awaiting_approval": 0,
+              "approved": 6,
+              "cancelled": 0
+            },
+            "current": {
+              "id": null,
+              "status": null,
+              "generation": null
+            },
+            "reason": null
+          },
+          "status": "closed",
+          "title": "graph (copy)",
+          "updatedAt": "2026-11-23T08:47:33.749Z",
+          "workId": "d-story",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "automatic"
+        },
+        "agent": null,
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "77dab191fa78ebdbe6f777cf68da8827f2447b711edc65a73b81e12b1b5fb8d2",
+          "lifecycleEventId": "a0e646b6-8b7b-4a03-9bc6-6790ddd9a2d5",
+          "lifecyclePayload": {
+            "decision": "approved",
+            "reviewPacketSha256": "1651eae17e501b9e03e1de9b574b298f64a07c00b9959353a68674496e6b9168",
+            "automatic": true,
+            "rule": "when-ready-v1"
+          },
+          "templateSha256": "8f7c0be1d576e781de1724a50bc906ad8f511807e665328e753bf40fd4e881a6",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "a0e646b6-8b7b-4a03-9bc6-6790ddd9a2d5",
+            "type": "phase-approved",
+            "subject": {
+              "kind": "story",
+              "id": "d-story",
+              "branch": "d-story"
+            },
+            "phaseId": "release",
+            "generation": 5,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": null,
+            "authorityGroup": null,
+            "payload": {
+              "decision": "approved",
+              "reviewPacketSha256": "1651eae17e501b9e03e1de9b574b298f64a07c00b9959353a68674496e6b9168",
+              "automatic": true,
+              "rule": "when-ready-v1"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-23T08:47:29.049Z"
+          }
+        },
+        "createdAt": "2026-11-23T08:47:29.053Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -34278,5 +34480,17 @@
       "surface": "card",
       "at": "2026-11-23T05:01:18.908Z"
     }
-  ]
+  ],
+  "completion": {
+    "label": "Complete",
+    "kind": "complete",
+    "mode": "decision",
+    "boundary": "terminal",
+    "decision": {
+      "gate": "allow"
+    },
+    "inputSha256": "sha256:c0f84ec30afe4b120961bc38098185309c622e99fbf40585acd3188d3844737e",
+    "assuranceFloor": "source-bound",
+    "evaluatedAt": "2026-11-23T08:47:37.781Z"
+  }
 }
