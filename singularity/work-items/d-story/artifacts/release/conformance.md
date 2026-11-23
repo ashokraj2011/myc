@@ -4,7 +4,7 @@
   "workId": "d-story",
   "workType": "spec-driven-standard",
   "phase": "release",
-  "generation": 4,
+  "generation": 5,
   "status": "in_progress",
   "generatedBy": {
     "name": "Ashok Raj",
@@ -45,10 +45,10 @@
       "sha256": "cd08987c2c5cbbb0d44fb92e4f47ce223f8578649a04ee300f07b755ae336da7",
       "bytes": 4829
     },
-    "generation": 4,
-    "publishedAt": "2026-11-23T04:40:12.916Z"
+    "generation": 5,
+    "publishedAt": "2026-11-23T08:45:42.500Z"
   },
-  "sourceCommit": "e8a23ffa5c037ee2aae3a8fab386840ce60c59c2",
+  "sourceCommit": "916e88d718581ecdd4701765aba73e532c8e734a",
   "generationCommit": "96afbfe3265944805f19b248962f4a35fac90c43",
   "publicationCommit": "96afbfe3265944805f19b248962f4a35fac90c43",
   "configSha256": "77dab191fa78ebdbe6f777cf68da8827f2447b711edc65a73b81e12b1b5fb8d2",
@@ -60,9 +60,9 @@
     "sourcePath": "singularity/templates/spec-driven/release.md"
   },
   "inputs": {
-    "generation": 4,
-    "path": "singularity/work-items/d-story/context/inputs-release-gen4.json",
-    "sha256": "81fd042f7e52b05e1f98e83a433612965bcfae5209d7379d12b03974c8144618",
+    "generation": 5,
+    "path": "singularity/work-items/d-story/context/inputs-release-gen5.json",
+    "sha256": "067ef32d8adca6760aeb45027ca656c55662eab705fe2f5a7fb4bad738c50301",
     "renderedSha256": "d0796319da1e8757fb3fb412f08b4823f5070f609b8b47742cdb172e2390b99a",
     "mode": "enforce"
   },
@@ -71,21 +71,7 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": {
-    "generation": 4,
-    "path": "singularity/work-items/d-story/context/clarifications-release-gen4.json",
-    "sha256": "b0222d3016ba985412e6d691842bf29a01520a7241aa3c7c575a2e4a98ad893f",
-    "promptSha256": "5fb7b4f061497874bc326b2b14eb20dc76285d84d650a3f9249846a4dc7316fd",
-    "responses": 1,
-    "markers": [],
-    "recordedAt": "2026-11-23T04:39:11.438Z",
-    "recordedBy": {
-      "name": "Ashok Raj",
-      "email": "88361104+ashokraj2011@users.noreply.github.com",
-      "login": "ashokraj2011",
-      "githubLookup": "resolved"
-    }
-  },
+  "clarification": null,
   "telemetry": [
     {
       "generation": 1,
@@ -163,6 +149,26 @@
         "maximumEstimatedTokens": 18000,
         "budgetMode": "observe",
         "originalBytes": 49812,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    },
+    {
+      "generation": 5,
+      "path": "singularity/work-items/d-story/telemetry/release-gen5.json",
+      "sha256": "fb251b8e65393cb09b6bcb973de539a61c73439225888b0f2305960e2ea26a2e",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 50761,
+        "estimatedTokens": 12691,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 50761,
         "omittedSections": 0
       },
       "captureGap": "no-metered-session"
@@ -253,6 +259,27 @@
       "completedAt": "2026-11-23T04:40:12.916Z",
       "agent": "qa",
       "generation": 4
+    },
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-23T08:45:42.500Z",
+      "completedAt": "2026-11-23T08:45:42.500Z",
+      "agent": "qa",
+      "generation": 5
     }
   ],
   "sequenceOverrides": [],
@@ -290,6 +317,39 @@
       "artifactSet": "spec-driven-verification",
       "bundleSha256": "3a5594822a5254e34e51e97c6a7acb40b01af1b7b4f0592f3168d5f657616ef6",
       "invalidatedAt": "2026-11-23T08:43:22.801Z"
+    },
+    {
+      "decision": "rejected",
+      "phase": "release",
+      "target": "release",
+      "reason": "i dont need this i will go",
+      "changeRequestId": "CR-002",
+      "clauseIds": [],
+      "at": "2026-11-23T08:43:22.801Z",
+      "actor": {
+        "name": "Ashok Raj",
+        "email": "88361104+ashokraj2011@users.noreply.github.com",
+        "login": "ashokraj2011",
+        "githubLookup": "resolved"
+      },
+      "agent": "qa",
+      "authorityGroup": "quality-reviewers",
+      "identityAssurance": "configured-local",
+      "channel": "terminal",
+      "generation": 4,
+      "artifactSha256": [
+        {
+          "path": "singularity/work-items/d-story/artifacts/release/conformance.md",
+          "sha256": "539e40d4c753dc205467677d76f1bb0249efffc04a46a8fbbc6b35fc8407d775"
+        },
+        {
+          "path": "singularity/work-items/d-story/artifacts/release/verification/evidence-index.md",
+          "sha256": "8b9d5468ef692bd592517bbd749b7b6b985f762eb2ce28808cb5caee73b06799"
+        }
+      ],
+      "reviewPacketSha256": "d58d48b0982ea1e7722eb50c82e73930c772af010746acd659ed68e4917943e4",
+      "artifactSet": "spec-driven-verification",
+      "bundleSha256": "cf13a6c4f544fa7da0ba902d19a0ca4d2b3daaef11811490462402036c5821f4"
     }
   ],
   "selfApproval": false,
@@ -462,13 +522,13 @@ Retained existing Vitest, lint, and production-build regression commands. No gov
 <!-- singularity-flow:verdict-summary:start -->
 Engine-written from the clause table; keep it. The table is the only place a verdict is stated.
 
-- `D-STORY:REQ-001`: partial; no issue raised yet; implementation owns it.
-- `D-STORY:REQ-002`: partial; no issue raised yet; implementation owns it.
-- `D-STORY:REQ-003`: partial; no issue raised yet; implementation owns it.
-- `D-STORY:REQ-004`: missing; no issue raised yet; implementation owns it.
+- `D-STORY:REQ-001`: partial; covered by UPI-003 (accepted risk until 2027-01-21).
+- `D-STORY:REQ-002`: partial; covered by UPI-003 (accepted risk until 2027-01-21).
+- `D-STORY:REQ-003`: partial; covered by UPI-003 (accepted risk until 2027-01-21).
+- `D-STORY:REQ-004`: missing; covered by UPI-003 (accepted risk until 2027-01-21).
 - `D-STORY:REQ-005`: missing; covered by UPI-002 (accepted risk until 2027-01-29).
-- `D-STORY:AC-001`: partial; no issue raised yet; implementation owns it.
+- `D-STORY:AC-001`: partial; covered by UPI-003 (accepted risk until 2027-01-21).
 - `D-STORY:AC-002`: missing; covered by UPI-002 (accepted risk until 2027-01-29).
-- `D-STORY:AC-003`: partial; no issue raised yet; implementation owns it.
-- `D-STORY:AC-004`: missing; no issue raised yet; implementation owns it.
+- `D-STORY:AC-003`: partial; covered by UPI-003 (accepted risk until 2027-01-21).
+- `D-STORY:AC-004`: missing; covered by UPI-003 (accepted risk until 2027-01-21).
 <!-- singularity-flow:verdict-summary:end -->
