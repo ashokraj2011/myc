@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "phase": "verification",
+  "generation": 14,
+  "reportSha256": "e370463de12db01e73e9b3c663d7f83062ad647353185c7bc178deb913c14618",
+  "lifecycleEventId": "98a505b5-fa19-42b1-91ae-cc749c1b0912",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "document",
+    "binding": {
+      "workId": "d-story",
+      "phase": "verification",
+      "generation": 14,
+      "sources": [
+        {
+          "id": "input:implementation",
+          "path": "singularity/work-items/d-story/artifacts/implementation/implementation-summary.md",
+          "textSha256": "72df2c9a0b5c9eb3ceed12b9671e8b6266dc77ba16c71e2eca65a9c0055fb25d"
+        },
+        {
+          "id": "input:planning",
+          "path": "singularity/work-items/d-story/artifacts/planning/plan.md",
+          "textSha256": "ffbf4b00964dbad9fe4ff2127ebd73f0b1b9148fd113589d021e2a5e1054fa76"
+        },
+        {
+          "id": "input:specification",
+          "path": "singularity/work-items/d-story/artifacts/specification/spec.md",
+          "textSha256": "90f952d110a076303ac5ab84dc97d419cc104a90046fa86d2fc1202ea4ebe14a"
+        },
+        {
+          "id": "story",
+          "path": "singularity/work-items/d-story/USER-STORY.md",
+          "textSha256": "cff0beeb0d7b1e2eef41bfbf587a0bd0b222553331c39a52d8facbd53fa059b9",
+          "originalSha256": "2144a9c6d40147352ce812ef0edef66a750fee5ba927b75b0b653da837ea52f6"
+        }
+      ],
+      "visualSources": [
+        {
+          "id": "DOC-001",
+          "path": "local-document:DOC-001",
+          "originalSha256": "1ada26c12db04745df29790dfe06d518025152113392d7fadbfd533a0a9032ab",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-001",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-001-initial-screen-e32e79604a69a83a.png",
+          "originalSha256": "9fbfc8f1c0cb19a94b4470d0caa3f50a39277c6fcd3e821bf1b1383cc626576a",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-002",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-002-circle-screen-e32e79604a69a83a.png",
+          "originalSha256": "97b75975669d471d20ebd3ad7893c93a4d9e09f8d0f756ee9c3eb8d8f0228312",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-003",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-003-updated-screen-e32e79604a69a83a.png",
+          "originalSha256": "97b75975669d471d20ebd3ad7893c93a4d9e09f8d0f756ee9c3eb8d8f0228312",
+          "mimeType": "image/png"
+        },
+        {
+          "id": "WIT-004",
+          "path": "singularity/work-items/d-story/evidence/visual-sign-offs/D-STORY-AC-004-responsive-screen-e32e79604a69a83a.png",
+          "originalSha256": "0382feb43813082bfbb60c19ed10da4918d3c906747be84c2c04792235c7ee66",
+          "mimeType": "image/png"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/d-story/artifacts/verification/test-evidence.md",
+        "sha256": "9fba14e9d34cfdd9a86387ab1fced12da3e0b808303e392666c6795d2851843e"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story",
+      "input:specification",
+      "input:planning",
+      "input:implementation",
+      "DOC-001",
+      "WIT-001",
+      "WIT-002",
+      "WIT-003",
+      "WIT-004"
+    ],
+    "visualSourcesReviewed": [
+      {
+        "sourceId": "DOC-001",
+        "method": "image-tool",
+        "locator": "Full screenshot",
+        "observations": "Shows a Desmos-style graph with expression panel containing sin(x), Cartesian axes, and a visible grid; supports the pinned visual reference."
+      },
+      {
+        "sourceId": "WIT-001",
+        "method": "image-tool",
+        "locator": "Full screenshot",
+        "observations": "Shows the calculator grapher with cos(x) * x in the expression field, not the required initial sin(x) state."
+      },
+      {
+        "sourceId": "WIT-002",
+        "method": "image-tool",
+        "locator": "Full screenshot",
+        "observations": "Shows the calculator's standard numeric mode, not the radius-six circle graph."
+      },
+      {
+        "sourceId": "WIT-003",
+        "method": "image-tool",
+        "locator": "Full screenshot",
+        "observations": "Shows the calculator's standard numeric mode, not a graph updated to a replacement expression."
+      },
+      {
+        "sourceId": "WIT-004",
+        "method": "image-tool",
+        "locator": "Full screenshot",
+        "observations": "Shows calculator numeric mode at two layouts, not responsive grapher usability."
+      }
+    ],
+    "rows": [
+      {
+        "id": "story-original-request",
+        "sourceId": "story",
+        "line": 8,
+        "quote": "Create graph plotter like the one attached",
+        "outcome": "consistent"
+      },
+      {
+        "id": "spec-local-graph-and-circle",
+        "sourceId": "input:specification",
+        "line": 5,
+        "quote": "Build a local browser graph plotter that uses the pinned screenshot as visual evidence:",
+        "outcome": "consistent"
+      },
+      {
+        "id": "plan-test-and-evidence-status",
+        "sourceId": "input:planning",
+        "line": 30,
+        "quote": "Visual acceptance remains a separate inspection against the pinned screenshot and at representative desktop/tablet sizes; automated success does not establish visual acceptance.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "implementation-tests-not-governed",
+        "sourceId": "input:implementation",
+        "line": 21,
+        "quote": "No governed test execution is retained yet; fresh publication checks may establish them.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "doc-001-visual-reference",
+        "sourceId": "DOC-001",
+        "attestation": "Full screenshot: expression panel shows sin(x) alongside a Cartesian graph with axes and grid.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "wit-001-initial-state",
+        "sourceId": "WIT-001",
+        "attestation": "Full screenshot: the grapher input displays cos(x) * x instead of the required initial sin(x). The artifact explicitly reports this witness as rejected.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "wit-002-circle",
+        "sourceId": "WIT-002",
+        "attestation": "Full screenshot: calculator numeric mode is shown, not the circle graph. The artifact reports that this witness was rejected and that circle visualization is unestablished.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "wit-003-update",
+        "sourceId": "WIT-003",
+        "attestation": "Full screenshot: calculator numeric mode is shown, not an updated graph. The artifact reports that this witness was rejected.",
+        "outcome": "consistent"
+      },
+      {
+        "id": "wit-004-responsive",
+        "sourceId": "WIT-004",
+        "attestation": "Full image shows calculator numeric mode in two layouts, not responsive grapher usability. The artifact reports responsive evidence remains absent.",
+        "outcome": "consistent"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "d25cdfe714c96433440b83db9b5860333d72fcf82827f952f1ef364d89285e8d",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "qa",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-23T04:13:39.000Z",
+  "recordSha256": "6fd30fbe65c77ee7f31cd930399c117509a1b798a26d97f8c5b8de96924cdb60"
+}
