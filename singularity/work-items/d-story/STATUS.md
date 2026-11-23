@@ -25,6 +25,7 @@
 
 ## Recent history
 
+- 2026-11-23T04:03:12.418Z — **version_opened** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent qa: version 14 opened (rework) on the person's yes (question-tool)
 - 2026-11-23T03:59:32.683Z — **upstream_issue_decided** (verification) by ashokraj2011 · agent qa: UPI-002: accept-risk. i have tested it is ifine
 - 2026-11-23T03:56:13.120Z — **upstream_issue_decided** (verification) by ashokraj2011 · agent qa: UPI-001: return (CR-001). The sign-off screenshots show the wrong screens (keypad, cos(x)·x); retake them and verify again
 - 2026-11-23T03:56:13.057Z — **phase_rejected** (release) by ashokraj2011 · agent qa: CR-001 returned to verification: The sign-off screenshots show the wrong screens (keypad, cos(x)·x); retake them and verify again
@@ -39,4 +40,3 @@
 - 2026-11-23T03:46:39.854Z — **phase_generated** (release) by ashokraj2011 · agent qa: generation 1
 - 2026-11-23T03:38:43.373Z — **phase-approved-automatically** (verification) by sflow-approved-automatically: approved automatically: the reviewer said ready; its checks passed; nothing was open for it; advanced to release
 - 2026-11-23T03:38:36.586Z — **phase_submitted** (verification) by ashokraj2011 · agent qa: 1 artifacts
-- 2026-11-23T03:38:23.021Z — **source_review_submitted** (verification) by 88361104+ashokraj2011@users.noreply.github.com · agent sflow-source-reviewer: cdb962b4c58fe1752aabf9eec0e7fe377b614b85baf67b8bb4cd3d9df8fb3c61
