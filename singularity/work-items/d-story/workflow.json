@@ -9379,22 +9379,23 @@
         "invalidatedAt": "2026-11-23T03:56:13.057Z"
       },
       "versionOpening": {
-        "operationId": "vo-448c097e5e59ae81b5cbfb9201c35f20",
-        "version": 2,
-        "highWatermark": 2,
-        "reason": "review-corrections",
-        "path": "singularity/work-items/d-story/context/version-openings/release-v2.json",
-        "sha256": "sha256:24b3d7c6eff695cc83ac9e10834aa17c19608223f479fd44b3b20848264205ee",
+        "operationId": "vo-3e44c52d9d2c08bccdb10ad7074f8751",
+        "version": 3,
+        "highWatermark": 3,
+        "reason": "rework",
+        "path": "singularity/work-items/d-story/context/version-openings/release-v3.json",
+        "sha256": "sha256:f0278ae05ec92019ccedb759ebdd5de555efaa063f445fca0347f40c45458b2f",
         "consent": {
-          "settled": "STL-012",
-          "surface": "settled"
+          "receiptId": "180f1d44-109d-4043-be47-ddc7fb48dafb",
+          "surface": "question-tool",
+          "assurance": "host-answer"
         },
         "writer": {
-          "fence": 1,
+          "fence": 2,
           "writerId": "vw-0e09b156361c6f8ce6a22622518c00b4",
-          "operationId": "vo-448c097e5e59ae81b5cbfb9201c35f20"
+          "operationId": "vo-3e44c52d9d2c08bccdb10ad7074f8751"
         },
-        "openedAt": "2026-11-23T03:47:59.410Z"
+        "openedAt": "2026-11-23T04:29:04.799Z"
       },
       "generationCommit": "22b2963153ba23ccb9aad295405c8fdd4eb7c7c0",
       "publicationCommit": "22b2963153ba23ccb9aad295405c8fdd4eb7c7c0",
@@ -14164,6 +14165,14 @@
         "noSignatureRequired": true
       },
       "detail": "approved automatically: the reviewer said ready; its checks passed; nothing was open for it; advanced to release"
+    },
+    {
+      "at": "2026-11-23T04:29:04.799Z",
+      "actor": "88361104+ashokraj2011@users.noreply.github.com",
+      "agent": "qa",
+      "event": "version_opened",
+      "phase": "release",
+      "detail": "version 3 opened (rework) on the person's yes (question-tool)"
     }
   ],
   "measurement": {
@@ -27121,6 +27130,155 @@
           }
         },
         "createdAt": "2026-11-23T04:14:01.657Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "1b5e6316-295b-4a3f-8f6d-169759c4663b",
+        "type": "version-opened",
+        "subject": {
+          "kind": "story",
+          "id": "d-story",
+          "branch": "d-story"
+        },
+        "phaseId": "release",
+        "generation": 3,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "qa",
+        "authorityGroup": "quality-reviewers",
+        "payload": {
+          "operationId": "vo-3e44c52d9d2c08bccdb10ad7074f8751",
+          "version": 3,
+          "from": 2,
+          "reason": "rework",
+          "proposalDigest": "sha256:5f7cf805e10fee770b64d31416613e0dd56c89c5becaf7e5de268b9b0b68c095",
+          "consentReceiptId": "180f1d44-109d-4043-be47-ddc7fb48dafb",
+          "writerFence": 2,
+          "decision": "rejected",
+          "reviewPacketSha256": "be149d5c431caa1b01cd08569581ef805456f6bbe76d5f544fdfcbc875a01518"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-23T04:29:04.879Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "1b5e6316-295b-4a3f-8f6d-169759c4663b",
+        "eventType": "version-opened",
+        "capabilityId": "raj-calc",
+        "subject": {
+          "aliases": [
+            "d-story"
+          ],
+          "branch": "d-story",
+          "canonicalBranch": "d-story",
+          "createdAt": "2026-11-22T06:44:06.662Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "release",
+          "generation": 3,
+          "phase": "release",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 5,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 0,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 5,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "release",
+              "status": "in_progress",
+              "generation": 2
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "graph (copy)",
+          "updatedAt": "2026-11-23T04:29:04.799Z",
+          "workId": "d-story",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "qa",
+        "authorityGroup": "quality-reviewers",
+        "payload": {
+          "capabilityMapSha256": "a88c3599a496f4c24da66e589bf57024927ccc8f080eab72cacfbb8af0391d5d",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "77dab191fa78ebdbe6f777cf68da8827f2447b711edc65a73b81e12b1b5fb8d2",
+          "lifecycleEventId": "1b5e6316-295b-4a3f-8f6d-169759c4663b",
+          "lifecyclePayload": {
+            "consentReceiptId": "180f1d44-109d-4043-be47-ddc7fb48dafb",
+            "decision": "rejected",
+            "from": 2,
+            "operationId": "vo-3e44c52d9d2c08bccdb10ad7074f8751",
+            "proposalDigest": "sha256:5f7cf805e10fee770b64d31416613e0dd56c89c5becaf7e5de268b9b0b68c095",
+            "reason": "rework",
+            "reviewPacketSha256": "be149d5c431caa1b01cd08569581ef805456f6bbe76d5f544fdfcbc875a01518",
+            "version": 3,
+            "writerFence": 2
+          },
+          "templateSha256": "8f7c0be1d576e781de1724a50bc906ad8f511807e665328e753bf40fd4e881a6",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "1b5e6316-295b-4a3f-8f6d-169759c4663b",
+            "type": "version-opened",
+            "subject": {
+              "kind": "story",
+              "id": "d-story",
+              "branch": "d-story"
+            },
+            "phaseId": "release",
+            "generation": 3,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "qa",
+            "authorityGroup": "quality-reviewers",
+            "payload": {
+              "operationId": "vo-3e44c52d9d2c08bccdb10ad7074f8751",
+              "version": 3,
+              "from": 2,
+              "reason": "rework",
+              "proposalDigest": "sha256:5f7cf805e10fee770b64d31416613e0dd56c89c5becaf7e5de268b9b0b68c095",
+              "consentReceiptId": "180f1d44-109d-4043-be47-ddc7fb48dafb",
+              "writerFence": 2,
+              "decision": "rejected",
+              "reviewPacketSha256": "be149d5c431caa1b01cd08569581ef805456f6bbe76d5f544fdfcbc875a01518"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-23T04:29:04.879Z"
+          }
+        },
+        "createdAt": "2026-11-23T04:29:04.886Z"
       }
     }
   ],
